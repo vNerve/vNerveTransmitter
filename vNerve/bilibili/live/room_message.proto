@@ -2,37 +2,53 @@ syntax = "proto3";
 
 package vNerve.bilibili.live;
 
-import "vNerve/bilibili/live/room_user_message.proto";
+import "vNerve/bilibili/live/user_message.proto";
 
 message RoomMessage {
   uint32 room_id = 1;
   oneof payload {
-  	UserMessage user_message = 2;
-    RoomInfoChangedMessage info_change = 3;
-    SuperChatDeleteMessage superchat_remove = 4;
+    UserMessage user_message = 2;
+    LiveStatusChangedMessage live_status = 3;
+    RoomInfoChangedMessage info_change = 4;
     RoomLockedMessage room_locked = 5;
     RoomWarningMessage room_warning = 6;
     RoomLimitedMessage room_limited = 7;
-    LiveStatusChangedMessage live_status = 8;
-  }
-}
-
-message SuperChatDeleteMessage {
-  repeated uint32 id = 1;
-}
-
-message RoomInfoChangedMessage {
-  oneof changed {
-    string background_url = 1;
-    uint32 skin_id = 2;
-    RoomAdminInfo admin = 3;
-    RoomBaseInfo base_info = 4;
-    // RoomShieldInfo shield_info = 5;
+    SuperChatDeleteMessage superchat_remove = 8;
   }
 }
 
 message LiveStatusChangedMessage {
   LiveStatus status = 1;
+}
+
+enum LiveStatus {
+  PREPARING = 0;
+  LIVE = 1;
+  ROUND = 2;
+  CUT_OFF = 3;
+}
+
+message RoomInfoChangedMessage {
+  oneof changed {
+    RoomBaseInfo base_info = 1;
+    string background_url = 2;
+    uint32 skin_id = 3;
+    RoomAdminInfo admin = 4;
+    // RoomShieldInfo shield_info = 5;
+  }
+}
+
+message RoomBaseInfo {
+  string title = 1;
+
+  uint32 area_id = 2;
+  string area_name = 3;
+  uint32 parent_area_id = 4;
+  uint32 parent_area_name = 5;
+}
+
+message RoomAdminInfo {
+  repeated uint64 uid = 1;
 }
 
 message RoomLockedMessage {
@@ -48,22 +64,6 @@ message RoomLimitedMessage {
   uint32 delay_range = 2;
 }
 
-message RoomBaseInfo {
-  string title = 1;
-  uint32 area_id = 2;
-  string area_name = 3;
-
-  uint32 parent_area_id = 4;
-  uint32 parent_area_name = 5;
-}
-
-message RoomAdminInfo {
-  repeated uint64 uid = 1;
-}
-
-enum LiveStatus {
-  PREPARING = 0;
-  LIVE = 1;
-  ROUND = 2;
-  CUT_OFF = 3;
+message SuperChatDeleteMessage {
+  repeated uint32 id = 1;
 }
