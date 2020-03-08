@@ -8,9 +8,9 @@ message RoomMessage {
   uint32 room_id = 1;
   oneof payload {
   	UserMessage user_message = 2;
-    RoomInfoChangedMessage new_info = 3;
-    SuperChatDeleteMessage delete_superchat = 4;
-    RoomLockedMessage room_locker = 5;
+    RoomInfoChangedMessage info_change = 3;
+    SuperChatDeleteMessage superchat_remove = 4;
+    RoomLockedMessage room_locked = 5;
     RoomWarningMessage room_warning = 6;
     RoomLimitedMessage room_limited = 7;
     LiveStatusChangedMessage live_status = 8;
@@ -23,11 +23,11 @@ message SuperChatDeleteMessage {
 
 message RoomInfoChangedMessage {
   oneof changed {
-    string new_background_url = 1;
-    uint32 new_skin_id = 2;
-    RoomAdminInfo new_admin = 3;
-    RoomBaseInfo new_base_info = 4;
-    //RoomShieldInfo new_shield_info = 5;
+    string background_url = 1;
+    uint32 skin_id = 2;
+    RoomAdminInfo admin = 3;
+    RoomBaseInfo base_info = 4;
+    // RoomShieldInfo shield_info = 5;
   }
 }
 
@@ -36,7 +36,7 @@ message LiveStatusChangedMessage {
 }
 
 message RoomLockedMessage {
-  uint64 until = 1;
+  uint64 unlock_timestamp = 1;
 }
 
 message RoomWarningMessage {
@@ -50,8 +50,8 @@ message RoomLimitedMessage {
 
 message RoomBaseInfo {
   string title = 1;
-  uint32 subarea_id = 2;
-  string subarea_name = 3;
+  uint32 area_id = 2;
+  string area_name = 3;
 
   uint32 parent_area_id = 4;
   uint32 parent_area_name = 5;

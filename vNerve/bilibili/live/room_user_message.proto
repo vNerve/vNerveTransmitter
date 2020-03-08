@@ -19,7 +19,7 @@ message UserMessage {
 
 message DanmakuMessage {
   string message = 1;
-  LotteryDanmakuType lottery_danmaku = 2;
+  LotteryDanmakuType lottery_type = 2;
   bool from_guard = 3;
 }
 
@@ -29,7 +29,7 @@ message SuperChatMessage {
   uint32 id = 3;
   string token = 4;
   uint32 price_cny = 5;
-  uint32 price_seeds = 6;
+  uint32 price_coin = 6;
 
   uint32 lasting_time_sec = 7;
   uint64 start_time = 8;
@@ -37,7 +37,7 @@ message SuperChatMessage {
 }
 
 message GiftMessage {
-  bool isGoldSeed = 1;
+  bool is_gold = 1;
   uint32 total_coin = 2;
 
   uint32 gift_id = 3;
@@ -64,12 +64,12 @@ message UserKickedOutMessage {
 }
 
 message UserInfo {
-  uint64 user_id = 1;
-  string user_name = 2;
+  uint64 id = 1;
+  string name = 2;
   int32 user_level = 3;
   string avatar_url = 4;
 
-  bool big_vip = 5;
+  bool main_vip = 5;
   bool admin = 6;
   LiveVipLevel vip_level = 7;
 
@@ -97,7 +97,7 @@ enum LiveVipLevel {
 }
 
 enum GuardLevel {
-  NO_GUARD = 0;
+  NONE = 0;
   LEVEL1 = 1;
   LEVEL2 = 2;
   LEVEL3 = 3;
@@ -109,7 +109,7 @@ enum WelcomeType {
 }
 
 enum LotteryDanmakuType {
-  NORMAL = 0;
+  NONE = 0;
   STORM = 1;
   LOTTERY = 2;
 }
