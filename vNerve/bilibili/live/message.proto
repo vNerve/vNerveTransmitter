@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package vNerve.bilibili.live;
+
+import "vNerve/bilibili/live/room_message.proto";
+
+message Message {
+  uint64 timestamp = 1;
+  oneof payload {
+    RoomMessage room_message = 2;
+  }
+}

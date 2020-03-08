@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+package vNerve.bilibili.live;
+
+message UserMessage {
+  UserInfo user = 1;
+  oneof payload {
+    DanmakuMessage danmaku = 2;
+    GiftMessage gift = 3;
+  	//GuardMessage guard = 4;
+    SuperChatMessage super_chat = 5;
+    WelcomeMessage welcome = 6;
+    NewGuardMessage new_guard = 7;
+    UserBlockedMessage user_blocked = 8;
+    UserKickedOutMessage user_kicked_out = 9;
+  }
+}
+
+
+message DanmakuMessage {
+  string message = 1;
+  LotteryDanmakuType lottery_danmaku = 2;
+  bool from_guard = 3;
+}
+
+message SuperChatMessage {
+  string message = 1;
+	uint32 price = 2;
+  uint32 id = 3;
+  string token = 4;
+  uint32 price_cny = 5;
+  uint32 price_seeds = 6;
+
+  uint32 lasting_time_sec = 7;
+  uint64 start_time = 8;
+  uint64 endtime = 9;
+}
+
+message GiftMessage {
+  bool isGoldSeed = 1;
+  uint32 total_coin = 2;
+
+  uint32 gift_id = 3;
+  string gift_name = 4;
+  uint32 gift_single_coin = 5;
+}
+
+message WelcomeMessage {
+  WelcomeType type = 1;
+  bool admin = 2;
+}
+
+message NewGuardMessage {
+  GuardLevel level = 1;
+  uint32 coin = 2;
+}
+
+message UserBlockedMessage {
+  // Just empty.
+}
+
+message UserKickedOutMessage {
+  // Just empty.
+}
+
+message UserInfo {
+  uint64 user_id = 1;
+  string user_name = 2;
+  int32 user_level = 3;
+  string avatar_url = 4;
+
+  bool big_vip = 5;
+  bool admin = 6;
+  LiveVipLevel vip_level = 7;
+
+  string title = 8;
+  MedalInfo medal = 9;
+
+  int64 user_exp = 10;
+  fixed32 user_level_border_color = 11;
+  bool phone_verified = 12;
+  bool regular_user = 13;
+}
+
+message MedalInfo {
+  string medal_name = 1;
+  uint32 medal_level = 2;
+
+  uint64 streamer_uid = 3;
+  fixed32 medal_color = 4;
+}
+
+enum LiveVipLevel {
+  NONE = 0;
+  VIP = 1;
+  SVIP = 2;
+}
+
+enum GuardLevel {
+  NO_GUARD = 0;
+  LEVEL1 = 1;
+  LEVEL2 = 2;
+  LEVEL3 = 3;
+}
+
+enum WelcomeType {
+  LIVE_VIP = 0;
+  GUARD = 1;
+}
+
+enum LotteryDanmakuType {
+  NORMAL = 0;
+  STORM = 1;
+  LOTTERY = 2;
+}

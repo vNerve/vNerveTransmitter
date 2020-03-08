@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package vNerve.bilibili.live;
+
+import "vNerve/bilibili/live/room_user_message.proto";
+
+message RoomMessage {
+  uint32 room_id = 1;
+  oneof payload {
+  	UserMessage user_message = 2;
+    RoomInfoChangedMessage new_info = 3;
+    SuperChatDeleteMessage delete_superchat = 4;
+    RoomLockedMessage room_locker = 5;
+    RoomWarningMessage room_warning = 6;
+    RoomLimitedMessage room_limited = 7;
+    LiveStatusChangedMessage live_status = 8;
+  }
+}
+
+message SuperChatDeleteMessage {
+  repeated uint32 id = 1;
+}
+
+message RoomInfoChangedMessage {
+  oneof changed {
+    string new_background_url = 1;
+    uint32 new_skin_id = 2;
+    RoomAdminInfo new_admin = 3;
+    RoomBaseInfo new_base_info = 4;
+    //RoomShieldInfo new_shield_info = 5;
+  }
+}
+
+message LiveStatusChangedMessage {
+  LiveStatus status = 1;
+}
+
+message RoomLockedMessage {
+  uint64 until = 1;
+}
+
+message RoomWarningMessage {
+  string reason = 1;
+}
+
+message RoomLimitedMessage {
+  string type = 1;
+  uint32 delay_range = 2;
+}
+
+message RoomBaseInfo {
+  string title = 1;
+  uint32 subarea_id = 2;
+  string subarea_name = 3;
+
+  uint32 parent_area_id = 4;
+  uint32 parent_area_name = 5;
+}
+
+message RoomAdminInfo {
+  repeated uint64 uid = 1;
+}
+
+enum LiveStatus {
+  PREPARING = 0;
+  LIVE = 1;
+  ROUND = 2;
+  CUT_OFF = 3;
+}
