@@ -16,7 +16,7 @@ message UserMessage {
 }
 
 message UserInfo {
-  uint64 id = 1;
+  uint64 uid = 1;
   string name = 2;
   string avatar_url = 3;
 
@@ -43,9 +43,9 @@ message MedalInfo {
 }
 
 enum LiveVipLevel {
-  NONE = 0;
-  VIP = 1;
-  SVIP = 2;
+  NO_VIP = 0;
+  MONTHLY = 1;
+  YEARLY = 2;
 }
 
 message DanmakuMessage {
@@ -55,7 +55,7 @@ message DanmakuMessage {
 }
 
 enum LotteryDanmakuType {
-  NONE = 0;
+  NO_LOTTERY = 0;
   STORM = 1;
   LOTTERY = 2;
 }
@@ -72,7 +72,7 @@ message SuperChatMessage {
 
   uint32 lasting_time_sec = 7;
   uint64 start_time = 8;
-  uint64 endtime = 9;
+  uint64 end_time = 9;
 }
 
 message GiftMessage {
@@ -100,7 +100,7 @@ message NewGuardMessage {
 }
 
 enum GuardLevel {
-  NONE = 0;
+  NO_GUARD = 0;
   LEVEL1 = 1;
   LEVEL2 = 2;
   LEVEL3 = 3;

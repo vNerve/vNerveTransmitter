@@ -52,7 +52,7 @@ message RoomAdminInfo {
 }
 
 message RoomLockedMessage {
-  uint64 unlock_timestamp = 1;
+  uint64 locked_until = 1;
 }
 
 message RoomWarningMessage {
