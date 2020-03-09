@@ -9,9 +9,10 @@ message UserMessage {
     GiftMessage gift = 3;
     SuperChatMessage super_chat = 4;
     NewGuardMessage new_guard = 5;
-    WelcomeMessage welcome = 6;
-    UserBlockedMessage user_blocked = 7;
-    UserKickedOutMessage user_kicked_out = 8;
+    WelcomeVIPMessage welcome_vip = 6;
+    WelcomeGuardMessage welcome_guard = 7;
+    UserBlockedMessage user_blocked = 8;
+    UserKickedOutMessage user_kicked_out = 9;
   }
 }
 
@@ -84,19 +85,13 @@ message GiftMessage {
   uint32 gift_single_coin = 5;
 }
 
-message WelcomeMessage {
-  WelcomeType type = 1;
+message WelcomeVIPMessage {
+  LiveVIPLevel vip = 1;
   bool admin = 2;
 }
 
-enum WelcomeType {
-  LIVE_VIP = 0;
-  GUARD = 1;
-}
-
-message NewGuardMessage {
-  GuardLevel level = 1;
-  uint32 coin = 2;
+message WelcomeGuardMessage {
+  GuardLevel guard = 1;
 }
 
 enum GuardLevel {
@@ -104,6 +99,11 @@ enum GuardLevel {
   LEVEL1 = 1;
   LEVEL2 = 2;
   LEVEL3 = 3;
+}
+
+message NewGuardMessage {
+  GuardLevel level = 1;
+  uint32 coin = 2;
 }
 
 message UserBlockedMessage {
