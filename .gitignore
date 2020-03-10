@@ -1,2 +1,3 @@
 # Dist files
-dist
+# The dist files should also be included.
+# dist

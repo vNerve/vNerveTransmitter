@@ -1,0 +1,43 @@
+name: ProtobufCompile
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install tools
+      run: |
+        choco install protoc
+      shell: powershell
+
+    - name: Setup folders
+      run: |
+        New-Item -Path 'dist\cpp' -ItemType Directory
+        New-Item -Path 'dist\cs' -ItemType Directory
+        New-Item -Path 'dist\js-commonjs' -ItemType Directory
+        New-Item -Path 'dist\python' -ItemType Directory
+        New-Item -Path 'dist\java' -ItemType Directory
+      shell: powershell
+
+    - name: Generate protobuf codes
+      run: |
+        $files = (Get-Childitem 'vNerve' -Recurse -File -Filter "*.proto" | foreach { $_.FullName}) -join ' '
+        $proto_path = (Resolve-Path .).ToString()
+        protoc --proto_path=$proto_path --cpp_out=dist/cpp --csharp_out=dist/cs --java_out=dist/java --python_out=dist/python --js_out=import_style=commonjs,binary:dist/js-commonjs $files
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Generate protobuf files" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
+        branch: 'generated'
