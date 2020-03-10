@@ -1,17 +1,22 @@
-name: ProtobufCompile
+name: Distribute
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - "master"
+    paths:
+    - "**.proto"
+    - ".github/workflows/**"
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Pull source
+      uses: actions/checkout@v2
 
-    - name: Install tools
+    - name: Prepare build environment
       run: |
         choco install -y protoc
       shell: powershell
@@ -23,25 +28,20 @@ jobs:
         New-Item -Path 'dist\js-commonjs' -ItemType Directory
         New-Item -Path 'dist\python' -ItemType Directory
         New-Item -Path 'dist\java' -ItemType Directory
-      shell: powershell
+      shell: pwsh
 
-    - name: Generate protobuf codes
+    - name: Build protobuf library
       run: |
         $files = Get-Childitem 'vNerve' -Recurse -File -Filter "*.proto" | foreach { $_.FullName}
         $proto_path = (Resolve-Path .).ToString()
         protoc --proto_path=$proto_path --cpp_out=dist/cpp --csharp_out=dist/cs --java_out=dist/java --python_out=dist/python --js_out=import_style=commonjs,binary:dist/js-commonjs $files
-      shell: powershell
+      shell: pwsh
 
-    - name: Commit files
-      run: |
-        git add dist
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Generate protobuf files"
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Distribute
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
-        branch: 'generated'
+        user_name: "GitHub Actions"
+        user_email: "actions@github.com"
+        publish_branch: "dist"
+        publish_dir: ./dist
