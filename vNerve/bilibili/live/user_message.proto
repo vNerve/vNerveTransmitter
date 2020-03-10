@@ -86,7 +86,7 @@ message GiftMessage {
 }
 
 message WelcomeVIPMessage {
-  LiveVIPLevel vip = 1;
+  LiveVipLevel vip = 1;
   bool admin = 2;
 }
 
