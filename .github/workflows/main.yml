@@ -13,7 +13,7 @@ jobs:
 
     - name: Install tools
       run: |
-        choco install protoc
+        choco install -y protoc
       shell: powershell
 
     - name: Setup folders
@@ -27,7 +27,7 @@ jobs:
 
     - name: Generate protobuf codes
       run: |
-        $files = (Get-Childitem 'vNerve' -Recurse -File -Filter "*.proto" | foreach { $_.FullName}) -join ' '
+        $files = Get-Childitem 'vNerve' -Recurse -File -Filter "*.proto" | foreach { $_.FullName}
         $proto_path = (Resolve-Path .).ToString()
         protoc --proto_path=$proto_path --cpp_out=dist/cpp --csharp_out=dist/cs --java_out=dist/java --python_out=dist/python --js_out=import_style=commonjs,binary:dist/js-commonjs $files
     - name: Commit files
