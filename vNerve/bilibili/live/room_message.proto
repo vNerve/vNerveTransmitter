@@ -53,7 +53,7 @@ message RoomBaseInfo {
 }
 
 message RoomAdminInfo {
-  uint64 uid = 1;
+  repeated uint64 uid = 1;
 }
 
 message RoomLockedMessage {
@@ -70,5 +70,5 @@ message RoomLimitedMessage {
 }
 
 message SuperChatDeleteMessage {
-  uint32 id = 1;
+  repeated uint32 id = 1;
 }
