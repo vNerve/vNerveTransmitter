@@ -8,6 +8,7 @@ message RoomMessage {
   uint32 room_id = 1;
   oneof payload {
     UserMessage user_message = 2;
+    PopularityChangedMessage popularity_change = 3;
     LiveStatusChangedMessage live_status = 16;
     RoomInfoChangedMessage info_change = 17;
     RoomLockedMessage room_locked = 18;
@@ -15,6 +16,10 @@ message RoomMessage {
     RoomLimitedMessage room_limited = 20;
     SuperChatDeleteMessage superchat_remove = 21;
   }
+}
+
+message PopularityChangedMessage {
+  uint32 popularity = 1;
 }
 
 message LiveStatusChangedMessage {
