@@ -267,7 +267,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.vNerve.bilibili.live.UserMessage.oneofGroups_ = [[2,3,4,5,6,7,8,9]];
+proto.vNerve.bilibili.live.UserMessage.oneofGroups_ = [[2,3,4,5,6,7,16,17]];
 
 /**
  * @enum {number}
@@ -280,8 +280,8 @@ proto.vNerve.bilibili.live.UserMessage.PayloadCase = {
   NEW_GUARD: 5,
   WELCOME_VIP: 6,
   WELCOME_GUARD: 7,
-  USER_BLOCKED: 8,
-  USER_KICKED_OUT: 9
+  USER_BLOCKED: 16,
+  USER_KICKED_OUT: 17
 };
 
 /**
@@ -402,12 +402,12 @@ proto.vNerve.bilibili.live.UserMessage.deserializeBinaryFromReader = function(ms
       reader.readMessage(value,proto.vNerve.bilibili.live.WelcomeGuardMessage.deserializeBinaryFromReader);
       msg.setWelcomeGuard(value);
       break;
-    case 8:
+    case 16:
       var value = new proto.vNerve.bilibili.live.UserBlockedMessage;
       reader.readMessage(value,proto.vNerve.bilibili.live.UserBlockedMessage.deserializeBinaryFromReader);
       msg.setUserBlocked(value);
       break;
-    case 9:
+    case 17:
       var value = new proto.vNerve.bilibili.live.UserKickedOutMessage;
       reader.readMessage(value,proto.vNerve.bilibili.live.UserKickedOutMessage.deserializeBinaryFromReader);
       msg.setUserKickedOut(value);
@@ -500,7 +500,7 @@ proto.vNerve.bilibili.live.UserMessage.serializeBinaryToWriter = function(messag
   f = message.getUserBlocked();
   if (f != null) {
     writer.writeMessage(
-      8,
+      16,
       f,
       proto.vNerve.bilibili.live.UserBlockedMessage.serializeBinaryToWriter
     );
@@ -508,7 +508,7 @@ proto.vNerve.bilibili.live.UserMessage.serializeBinaryToWriter = function(messag
   f = message.getUserKickedOut();
   if (f != null) {
     writer.writeMessage(
-      9,
+      17,
       f,
       proto.vNerve.bilibili.live.UserKickedOutMessage.serializeBinaryToWriter
     );
@@ -776,12 +776,12 @@ proto.vNerve.bilibili.live.UserMessage.prototype.hasWelcomeGuard = function() {
 
 
 /**
- * optional UserBlockedMessage user_blocked = 8;
+ * optional UserBlockedMessage user_blocked = 16;
  * @return {?proto.vNerve.bilibili.live.UserBlockedMessage}
  */
 proto.vNerve.bilibili.live.UserMessage.prototype.getUserBlocked = function() {
   return /** @type{?proto.vNerve.bilibili.live.UserBlockedMessage} */ (
-    jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.UserBlockedMessage, 8));
+    jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.UserBlockedMessage, 16));
 };
 
 
@@ -790,7 +790,7 @@ proto.vNerve.bilibili.live.UserMessage.prototype.getUserBlocked = function() {
  * @return {!proto.vNerve.bilibili.live.UserMessage} returns this
 */
 proto.vNerve.bilibili.live.UserMessage.prototype.setUserBlocked = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 8, proto.vNerve.bilibili.live.UserMessage.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 16, proto.vNerve.bilibili.live.UserMessage.oneofGroups_[0], value);
 };
 
 
@@ -808,17 +808,17 @@ proto.vNerve.bilibili.live.UserMessage.prototype.clearUserBlocked = function() {
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserMessage.prototype.hasUserBlocked = function() {
-  return jspb.Message.getField(this, 8) != null;
+  return jspb.Message.getField(this, 16) != null;
 };
 
 
 /**
- * optional UserKickedOutMessage user_kicked_out = 9;
+ * optional UserKickedOutMessage user_kicked_out = 17;
  * @return {?proto.vNerve.bilibili.live.UserKickedOutMessage}
  */
 proto.vNerve.bilibili.live.UserMessage.prototype.getUserKickedOut = function() {
   return /** @type{?proto.vNerve.bilibili.live.UserKickedOutMessage} */ (
-    jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.UserKickedOutMessage, 9));
+    jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.UserKickedOutMessage, 17));
 };
 
 
@@ -827,7 +827,7 @@ proto.vNerve.bilibili.live.UserMessage.prototype.getUserKickedOut = function() {
  * @return {!proto.vNerve.bilibili.live.UserMessage} returns this
 */
 proto.vNerve.bilibili.live.UserMessage.prototype.setUserKickedOut = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 9, proto.vNerve.bilibili.live.UserMessage.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 17, proto.vNerve.bilibili.live.UserMessage.oneofGroups_[0], value);
 };
 
 
@@ -845,7 +845,7 @@ proto.vNerve.bilibili.live.UserMessage.prototype.clearUserKickedOut = function()
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserMessage.prototype.hasUserKickedOut = function() {
-  return jspb.Message.getField(this, 9) != null;
+  return jspb.Message.getField(this, 17) != null;
 };
 
 

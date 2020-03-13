@@ -35,8 +35,8 @@ namespace VNerve.Bilibili.Live {
             "ZWxjb21lX3ZpcBgGIAEoCzInLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLldlbGNv",
             "bWVWSVBNZXNzYWdlSAASQgoNd2VsY29tZV9ndWFyZBgHIAEoCzIpLnZOZXJ2",
             "ZS5iaWxpYmlsaS5saXZlLldlbGNvbWVHdWFyZE1lc3NhZ2VIABJACgx1c2Vy",
-            "X2Jsb2NrZWQYCCABKAsyKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Vc2VyQmxv",
-            "Y2tlZE1lc3NhZ2VIABJFCg91c2VyX2tpY2tlZF9vdXQYCSABKAsyKi52TmVy",
+            "X2Jsb2NrZWQYECABKAsyKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Vc2VyQmxv",
+            "Y2tlZE1lc3NhZ2VIABJFCg91c2VyX2tpY2tlZF9vdXQYESABKAsyKi52TmVy",
             "dmUuYmlsaWJpbGkubGl2ZS5Vc2VyS2lja2VkT3V0TWVzc2FnZUgAQgkKB3Bh",
             "eWxvYWQixQIKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
             "EhIKCmF2YXRhcl91cmwYAyABKAkSEgoKdXNlcl9sZXZlbBgEIAEoBRIQCgh1",
@@ -249,7 +249,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "user_blocked" field.</summary>
-    public const int UserBlockedFieldNumber = 8;
+    public const int UserBlockedFieldNumber = 16;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.UserBlockedMessage UserBlocked {
       get { return payloadCase_ == PayloadOneofCase.UserBlocked ? (global::VNerve.Bilibili.Live.UserBlockedMessage) payload_ : null; }
@@ -260,7 +260,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "user_kicked_out" field.</summary>
-    public const int UserKickedOutFieldNumber = 9;
+    public const int UserKickedOutFieldNumber = 17;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.UserKickedOutMessage UserKickedOut {
       get { return payloadCase_ == PayloadOneofCase.UserKickedOut ? (global::VNerve.Bilibili.Live.UserKickedOutMessage) payload_ : null; }
@@ -280,8 +280,8 @@ namespace VNerve.Bilibili.Live {
       NewGuard = 5,
       WelcomeVip = 6,
       WelcomeGuard = 7,
-      UserBlocked = 8,
-      UserKickedOut = 9,
+      UserBlocked = 16,
+      UserKickedOut = 17,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -376,11 +376,11 @@ namespace VNerve.Bilibili.Live {
         output.WriteMessage(WelcomeGuard);
       }
       if (payloadCase_ == PayloadOneofCase.UserBlocked) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(130, 1);
         output.WriteMessage(UserBlocked);
       }
       if (payloadCase_ == PayloadOneofCase.UserKickedOut) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(138, 1);
         output.WriteMessage(UserKickedOut);
       }
       if (_unknownFields != null) {
@@ -413,10 +413,10 @@ namespace VNerve.Bilibili.Live {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WelcomeGuard);
       }
       if (payloadCase_ == PayloadOneofCase.UserBlocked) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserBlocked);
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UserBlocked);
       }
       if (payloadCase_ == PayloadOneofCase.UserKickedOut) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserKickedOut);
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UserKickedOut);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -558,7 +558,7 @@ namespace VNerve.Bilibili.Live {
             WelcomeGuard = subBuilder;
             break;
           }
-          case 66: {
+          case 130: {
             global::VNerve.Bilibili.Live.UserBlockedMessage subBuilder = new global::VNerve.Bilibili.Live.UserBlockedMessage();
             if (payloadCase_ == PayloadOneofCase.UserBlocked) {
               subBuilder.MergeFrom(UserBlocked);
@@ -567,7 +567,7 @@ namespace VNerve.Bilibili.Live {
             UserBlocked = subBuilder;
             break;
           }
-          case 74: {
+          case 138: {
             global::VNerve.Bilibili.Live.UserKickedOutMessage subBuilder = new global::VNerve.Bilibili.Live.UserKickedOutMessage();
             if (payloadCase_ == PayloadOneofCase.UserKickedOut) {
               subBuilder.MergeFrom(UserKickedOut);

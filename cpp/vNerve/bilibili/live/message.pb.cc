@@ -14,7 +14,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<7> scc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<8> scc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 namespace vNerve {
 namespace bilibili {
 namespace live {

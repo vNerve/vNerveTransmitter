@@ -15,6 +15,7 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoomAdminInfo_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoomBaseInfo_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_RoomInfoChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
@@ -30,6 +31,7 @@ class RoomMessageDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoomMessage> _instance;
   const ::vNerve::bilibili::live::UserMessage* user_message_;
+  const ::vNerve::bilibili::live::PopularityChangedMessage* popularity_change_;
   const ::vNerve::bilibili::live::LiveStatusChangedMessage* live_status_;
   const ::vNerve::bilibili::live::RoomInfoChangedMessage* info_change_;
   const ::vNerve::bilibili::live::RoomLockedMessage* room_locked_;
@@ -37,6 +39,10 @@ class RoomMessageDefaultTypeInternal {
   const ::vNerve::bilibili::live::RoomLimitedMessage* room_limited_;
   const ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove_;
 } _RoomMessage_default_instance_;
+class PopularityChangedMessageDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PopularityChangedMessage> _instance;
+} _PopularityChangedMessage_default_instance_;
 class LiveStatusChangedMessageDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LiveStatusChangedMessage> _instance;
@@ -89,6 +95,20 @@ static void InitDefaultsscc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2fli
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto}, {}};
+
+static void InitDefaultsscc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vNerve::bilibili::live::_PopularityChangedMessage_default_instance_;
+    new (ptr) ::vNerve::bilibili::live::PopularityChangedMessage();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vNerve::bilibili::live::PopularityChangedMessage::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto}, {}};
 
 static void InitDefaultsscc_info_RoomAdminInfo_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -173,9 +193,10 @@ static void InitDefaultsscc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fm
   ::vNerve::bilibili::live::RoomMessage::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<7> scc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 7, 0, InitDefaultsscc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<8> scc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 8, 0, InitDefaultsscc_info_RoomMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto}, {
       &scc_info_UserMessage_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto.base,
+      &scc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
       &scc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
       &scc_info_RoomInfoChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
       &scc_info_RoomLockedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
@@ -211,7 +232,7 @@ static void InitDefaultsscc_info_SuperChatDeleteMessage_vNerve_2fbilibili_2flive
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SuperChatDeleteMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SuperChatDeleteMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto[9];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto[10];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto = nullptr;
 
@@ -223,6 +244,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2froo
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomMessage, room_id_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, user_message_),
+  offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, popularity_change_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, live_status_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, info_change_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, room_locked_),
@@ -230,6 +252,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2froo
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, room_limited_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, superchat_remove_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomMessage, payload_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::PopularityChangedMessage, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::PopularityChangedMessage, popularity_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::LiveStatusChangedMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -290,18 +318,20 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2froo
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::vNerve::bilibili::live::RoomMessage)},
-  { 14, -1, sizeof(::vNerve::bilibili::live::LiveStatusChangedMessage)},
-  { 20, -1, sizeof(::vNerve::bilibili::live::RoomInfoChangedMessage)},
-  { 30, -1, sizeof(::vNerve::bilibili::live::RoomBaseInfo)},
-  { 40, -1, sizeof(::vNerve::bilibili::live::RoomAdminInfo)},
-  { 46, -1, sizeof(::vNerve::bilibili::live::RoomLockedMessage)},
-  { 52, -1, sizeof(::vNerve::bilibili::live::RoomWarningMessage)},
-  { 58, -1, sizeof(::vNerve::bilibili::live::RoomLimitedMessage)},
-  { 65, -1, sizeof(::vNerve::bilibili::live::SuperChatDeleteMessage)},
+  { 15, -1, sizeof(::vNerve::bilibili::live::PopularityChangedMessage)},
+  { 21, -1, sizeof(::vNerve::bilibili::live::LiveStatusChangedMessage)},
+  { 27, -1, sizeof(::vNerve::bilibili::live::RoomInfoChangedMessage)},
+  { 37, -1, sizeof(::vNerve::bilibili::live::RoomBaseInfo)},
+  { 47, -1, sizeof(::vNerve::bilibili::live::RoomAdminInfo)},
+  { 53, -1, sizeof(::vNerve::bilibili::live::RoomLockedMessage)},
+  { 59, -1, sizeof(::vNerve::bilibili::live::RoomWarningMessage)},
+  { 65, -1, sizeof(::vNerve::bilibili::live::RoomLimitedMessage)},
+  { 72, -1, sizeof(::vNerve::bilibili::live::SuperChatDeleteMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::bilibili::live::_RoomMessage_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::bilibili::live::_PopularityChangedMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::bilibili::live::_LiveStatusChangedMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::bilibili::live::_RoomInfoChangedMessage_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::bilibili::live::_RoomBaseInfo_default_instance_),
@@ -315,43 +345,47 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\'vNerve/bilibili/live/room_message.prot"
   "o\022\024vNerve.bilibili.live\032\'vNerve/bilibili"
-  "/live/user_message.proto\"\376\003\n\013RoomMessage"
+  "/live/user_message.proto\"\313\004\n\013RoomMessage"
   "\022\017\n\007room_id\030\001 \001(\r\0229\n\014user_message\030\002 \001(\0132"
-  "!.vNerve.bilibili.live.UserMessageH\000\022E\n\013"
-  "live_status\030\003 \001(\0132..vNerve.bilibili.live"
-  ".LiveStatusChangedMessageH\000\022C\n\013info_chan"
-  "ge\030\004 \001(\0132,.vNerve.bilibili.live.RoomInfo"
-  "ChangedMessageH\000\022>\n\013room_locked\030\005 \001(\0132\'."
-  "vNerve.bilibili.live.RoomLockedMessageH\000"
-  "\022@\n\014room_warning\030\006 \001(\0132(.vNerve.bilibili"
-  ".live.RoomWarningMessageH\000\022@\n\014room_limit"
-  "ed\030\007 \001(\0132(.vNerve.bilibili.live.RoomLimi"
-  "tedMessageH\000\022H\n\020superchat_remove\030\010 \001(\0132,"
-  ".vNerve.bilibili.live.SuperChatDeleteMes"
-  "sageH\000B\t\n\007payload\"L\n\030LiveStatusChangedMe"
-  "ssage\0220\n\006status\030\001 \001(\0162 .vNerve.bilibili."
-  "live.LiveStatus\"\277\001\n\026RoomInfoChangedMessa"
-  "ge\0227\n\tbase_info\030\001 \001(\0132\".vNerve.bilibili."
-  "live.RoomBaseInfoH\000\022\030\n\016background_url\030\002 "
-  "\001(\tH\000\022\021\n\007skin_id\030\003 \001(\rH\000\0224\n\005admin\030\004 \001(\0132"
-  "#.vNerve.bilibili.live.RoomAdminInfoH\000B\t"
-  "\n\007changed\"s\n\014RoomBaseInfo\022\r\n\005title\030\001 \001(\t"
-  "\022\017\n\007area_id\030\002 \001(\r\022\021\n\tarea_name\030\003 \001(\t\022\026\n\016"
-  "parent_area_id\030\004 \001(\r\022\030\n\020parent_area_name"
-  "\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \003(\004\")\n\021"
-  "RoomLockedMessage\022\024\n\014locked_until\030\001 \001(\004\""
-  "$\n\022RoomWarningMessage\022\016\n\006reason\030\001 \001(\t\"7\n"
-  "\022RoomLimitedMessage\022\014\n\004type\030\001 \001(\t\022\023\n\013del"
-  "ay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMessage"
-  "\022\n\n\002id\030\001 \003(\r*=\n\nLiveStatus\022\r\n\tPREPARING\020"
-  "\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003b\006pro"
-  "to3"
+  "!.vNerve.bilibili.live.UserMessageH\000\022K\n\021"
+  "popularity_change\030\003 \001(\0132..vNerve.bilibil"
+  "i.live.PopularityChangedMessageH\000\022E\n\013liv"
+  "e_status\030\020 \001(\0132..vNerve.bilibili.live.Li"
+  "veStatusChangedMessageH\000\022C\n\013info_change\030"
+  "\021 \001(\0132,.vNerve.bilibili.live.RoomInfoCha"
+  "ngedMessageH\000\022>\n\013room_locked\030\022 \001(\0132\'.vNe"
+  "rve.bilibili.live.RoomLockedMessageH\000\022@\n"
+  "\014room_warning\030\023 \001(\0132(.vNerve.bilibili.li"
+  "ve.RoomWarningMessageH\000\022@\n\014room_limited\030"
+  "\024 \001(\0132(.vNerve.bilibili.live.RoomLimited"
+  "MessageH\000\022H\n\020superchat_remove\030\025 \001(\0132,.vN"
+  "erve.bilibili.live.SuperChatDeleteMessag"
+  "eH\000B\t\n\007payload\".\n\030PopularityChangedMessa"
+  "ge\022\022\n\npopularity\030\001 \001(\r\"L\n\030LiveStatusChan"
+  "gedMessage\0220\n\006status\030\001 \001(\0162 .vNerve.bili"
+  "bili.live.LiveStatus\"\277\001\n\026RoomInfoChanged"
+  "Message\0227\n\tbase_info\030\001 \001(\0132\".vNerve.bili"
+  "bili.live.RoomBaseInfoH\000\022\030\n\016background_u"
+  "rl\030\002 \001(\tH\000\022\021\n\007skin_id\030\003 \001(\rH\000\0224\n\005admin\030\004"
+  " \001(\0132#.vNerve.bilibili.live.RoomAdminInf"
+  "oH\000B\t\n\007changed\"s\n\014RoomBaseInfo\022\r\n\005title\030"
+  "\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022\021\n\tarea_name\030\003 \001("
+  "\t\022\026\n\016parent_area_id\030\004 \001(\r\022\030\n\020parent_area"
+  "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \001("
+  "\004\")\n\021RoomLockedMessage\022\024\n\014locked_until\030\001"
+  " \001(\004\"$\n\022RoomWarningMessage\022\016\n\006reason\030\001 \001"
+  "(\t\"7\n\022RoomLimitedMessage\022\014\n\004type\030\001 \001(\t\022\023"
+  "\n\013delay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMe"
+  "ssage\022\n\n\002id\030\001 \001(\r*=\n\nLiveStatus\022\r\n\tPREPA"
+  "RING\020\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003"
+  "b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_deps[1] = {
   &::descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_sccs[9] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_sccs[10] = {
   &scc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
+  &scc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
   &scc_info_RoomAdminInfo_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
   &scc_info_RoomBaseInfo_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
   &scc_info_RoomInfoChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base,
@@ -364,10 +398,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, "vNerve/bilibili/live/room_message.proto", 1283,
-  &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_deps, 9, 1,
+  &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, "vNerve/bilibili/live/room_message.proto", 1408,
+  &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_deps, 10, 1,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto::offsets,
-  file_level_metadata_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, 9, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto,
+  file_level_metadata_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, 10, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -397,6 +431,8 @@ bool LiveStatus_IsValid(int value) {
 void RoomMessage::InitAsDefaultInstance() {
   ::vNerve::bilibili::live::_RoomMessage_default_instance_.user_message_ = const_cast< ::vNerve::bilibili::live::UserMessage*>(
       ::vNerve::bilibili::live::UserMessage::internal_default_instance());
+  ::vNerve::bilibili::live::_RoomMessage_default_instance_.popularity_change_ = const_cast< ::vNerve::bilibili::live::PopularityChangedMessage*>(
+      ::vNerve::bilibili::live::PopularityChangedMessage::internal_default_instance());
   ::vNerve::bilibili::live::_RoomMessage_default_instance_.live_status_ = const_cast< ::vNerve::bilibili::live::LiveStatusChangedMessage*>(
       ::vNerve::bilibili::live::LiveStatusChangedMessage::internal_default_instance());
   ::vNerve::bilibili::live::_RoomMessage_default_instance_.info_change_ = const_cast< ::vNerve::bilibili::live::RoomInfoChangedMessage*>(
@@ -413,6 +449,7 @@ void RoomMessage::InitAsDefaultInstance() {
 class RoomMessage::_Internal {
  public:
   static const ::vNerve::bilibili::live::UserMessage& user_message(const RoomMessage* msg);
+  static const ::vNerve::bilibili::live::PopularityChangedMessage& popularity_change(const RoomMessage* msg);
   static const ::vNerve::bilibili::live::LiveStatusChangedMessage& live_status(const RoomMessage* msg);
   static const ::vNerve::bilibili::live::RoomInfoChangedMessage& info_change(const RoomMessage* msg);
   static const ::vNerve::bilibili::live::RoomLockedMessage& room_locked(const RoomMessage* msg);
@@ -424,6 +461,10 @@ class RoomMessage::_Internal {
 const ::vNerve::bilibili::live::UserMessage&
 RoomMessage::_Internal::user_message(const RoomMessage* msg) {
   return *msg->payload_.user_message_;
+}
+const ::vNerve::bilibili::live::PopularityChangedMessage&
+RoomMessage::_Internal::popularity_change(const RoomMessage* msg) {
+  return *msg->payload_.popularity_change_;
 }
 const ::vNerve::bilibili::live::LiveStatusChangedMessage&
 RoomMessage::_Internal::live_status(const RoomMessage* msg) {
@@ -468,6 +509,20 @@ void RoomMessage::clear_user_message() {
     delete payload_.user_message_;
     clear_has_payload();
   }
+}
+void RoomMessage::set_allocated_popularity_change(::vNerve::bilibili::live::PopularityChangedMessage* popularity_change) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  clear_payload();
+  if (popularity_change) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      popularity_change = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, popularity_change, submessage_arena);
+    }
+    set_has_popularity_change();
+    payload_.popularity_change_ = popularity_change;
+  }
+  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomMessage.popularity_change)
 }
 void RoomMessage::set_allocated_live_status(::vNerve::bilibili::live::LiveStatusChangedMessage* live_status) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -569,6 +624,10 @@ RoomMessage::RoomMessage(const RoomMessage& from)
       _internal_mutable_user_message()->::vNerve::bilibili::live::UserMessage::MergeFrom(from._internal_user_message());
       break;
     }
+    case kPopularityChange: {
+      _internal_mutable_popularity_change()->::vNerve::bilibili::live::PopularityChangedMessage::MergeFrom(from._internal_popularity_change());
+      break;
+    }
     case kLiveStatus: {
       _internal_mutable_live_status()->::vNerve::bilibili::live::LiveStatusChangedMessage::MergeFrom(from._internal_live_status());
       break;
@@ -631,6 +690,10 @@ void RoomMessage::clear_payload() {
   switch (payload_case()) {
     case kUserMessage: {
       delete payload_.user_message_;
+      break;
+    }
+    case kPopularityChange: {
+      delete payload_.popularity_change_;
       break;
     }
     case kLiveStatus: {
@@ -697,44 +760,51 @@ const char* RoomMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.LiveStatusChangedMessage live_status = 3;
+      // .vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_popularity_change(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_live_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.RoomInfoChangedMessage info_change = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+      // .vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_info_change(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.RoomLockedMessage room_locked = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+      // .vNerve.bilibili.live.RoomLockedMessage room_locked = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
           ptr = ctx->ParseMessage(_internal_mutable_room_locked(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.RoomWarningMessage room_warning = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+      // .vNerve.bilibili.live.RoomWarningMessage room_warning = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_room_warning(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.RoomLimitedMessage room_limited = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+      // .vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
           ptr = ctx->ParseMessage(_internal_mutable_room_limited(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+      // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
           ptr = ctx->ParseMessage(_internal_mutable_superchat_remove(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -779,52 +849,60 @@ failure:
         2, _Internal::user_message(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.LiveStatusChangedMessage live_status = 3;
+  // .vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;
+  if (_internal_has_popularity_change()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::popularity_change(this), target, stream);
+  }
+
+  // .vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;
   if (_internal_has_live_status()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        3, _Internal::live_status(this), target, stream);
+        16, _Internal::live_status(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.RoomInfoChangedMessage info_change = 4;
+  // .vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;
   if (_internal_has_info_change()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        4, _Internal::info_change(this), target, stream);
+        17, _Internal::info_change(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.RoomLockedMessage room_locked = 5;
+  // .vNerve.bilibili.live.RoomLockedMessage room_locked = 18;
   if (_internal_has_room_locked()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        5, _Internal::room_locked(this), target, stream);
+        18, _Internal::room_locked(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.RoomWarningMessage room_warning = 6;
+  // .vNerve.bilibili.live.RoomWarningMessage room_warning = 19;
   if (_internal_has_room_warning()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        6, _Internal::room_warning(this), target, stream);
+        19, _Internal::room_warning(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.RoomLimitedMessage room_limited = 7;
+  // .vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;
   if (_internal_has_room_limited()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        7, _Internal::room_limited(this), target, stream);
+        20, _Internal::room_limited(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 8;
+  // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
   if (_internal_has_superchat_remove()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        8, _Internal::superchat_remove(this), target, stream);
+        21, _Internal::superchat_remove(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -858,44 +936,51 @@ size_t RoomMessage::ByteSizeLong() const {
           *payload_.user_message_);
       break;
     }
-    // .vNerve.bilibili.live.LiveStatusChangedMessage live_status = 3;
-    case kLiveStatus: {
+    // .vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;
+    case kPopularityChange: {
       total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *payload_.popularity_change_);
+      break;
+    }
+    // .vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;
+    case kLiveStatus: {
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.live_status_);
       break;
     }
-    // .vNerve.bilibili.live.RoomInfoChangedMessage info_change = 4;
+    // .vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;
     case kInfoChange: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.info_change_);
       break;
     }
-    // .vNerve.bilibili.live.RoomLockedMessage room_locked = 5;
+    // .vNerve.bilibili.live.RoomLockedMessage room_locked = 18;
     case kRoomLocked: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.room_locked_);
       break;
     }
-    // .vNerve.bilibili.live.RoomWarningMessage room_warning = 6;
+    // .vNerve.bilibili.live.RoomWarningMessage room_warning = 19;
     case kRoomWarning: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.room_warning_);
       break;
     }
-    // .vNerve.bilibili.live.RoomLimitedMessage room_limited = 7;
+    // .vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;
     case kRoomLimited: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.room_limited_);
       break;
     }
-    // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 8;
+    // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
     case kSuperchatRemove: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.superchat_remove_);
       break;
@@ -941,6 +1026,10 @@ void RoomMessage::MergeFrom(const RoomMessage& from) {
   switch (from.payload_case()) {
     case kUserMessage: {
       _internal_mutable_user_message()->::vNerve::bilibili::live::UserMessage::MergeFrom(from._internal_user_message());
+      break;
+    }
+    case kPopularityChange: {
+      _internal_mutable_popularity_change()->::vNerve::bilibili::live::PopularityChangedMessage::MergeFrom(from._internal_popularity_change());
       break;
     }
     case kLiveStatus: {
@@ -1000,6 +1089,192 @@ void RoomMessage::InternalSwap(RoomMessage* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoomMessage::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void PopularityChangedMessage::InitAsDefaultInstance() {
+}
+class PopularityChangedMessage::_Internal {
+ public:
+};
+
+PopularityChangedMessage::PopularityChangedMessage()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vNerve.bilibili.live.PopularityChangedMessage)
+}
+PopularityChangedMessage::PopularityChangedMessage(const PopularityChangedMessage& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  popularity_ = from.popularity_;
+  // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.PopularityChangedMessage)
+}
+
+void PopularityChangedMessage::SharedCtor() {
+  popularity_ = 0u;
+}
+
+PopularityChangedMessage::~PopularityChangedMessage() {
+  // @@protoc_insertion_point(destructor:vNerve.bilibili.live.PopularityChangedMessage)
+  SharedDtor();
+}
+
+void PopularityChangedMessage::SharedDtor() {
+}
+
+void PopularityChangedMessage::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PopularityChangedMessage& PopularityChangedMessage::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PopularityChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PopularityChangedMessage::Clear() {
+// @@protoc_insertion_point(message_clear_start:vNerve.bilibili.live.PopularityChangedMessage)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  popularity_ = 0u;
+  _internal_metadata_.Clear();
+}
+
+const char* PopularityChangedMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint32 popularity = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          popularity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* PopularityChangedMessage::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vNerve.bilibili.live.PopularityChangedMessage)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint32 popularity = 1;
+  if (this->popularity() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_popularity(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vNerve.bilibili.live.PopularityChangedMessage)
+  return target;
+}
+
+size_t PopularityChangedMessage::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vNerve.bilibili.live.PopularityChangedMessage)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // uint32 popularity = 1;
+  if (this->popularity() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_popularity());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PopularityChangedMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vNerve.bilibili.live.PopularityChangedMessage)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PopularityChangedMessage* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PopularityChangedMessage>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vNerve.bilibili.live.PopularityChangedMessage)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vNerve.bilibili.live.PopularityChangedMessage)
+    MergeFrom(*source);
+  }
+}
+
+void PopularityChangedMessage::MergeFrom(const PopularityChangedMessage& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vNerve.bilibili.live.PopularityChangedMessage)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.popularity() != 0) {
+    _internal_set_popularity(from._internal_popularity());
+  }
+}
+
+void PopularityChangedMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vNerve.bilibili.live.PopularityChangedMessage)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PopularityChangedMessage::CopyFrom(const PopularityChangedMessage& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vNerve.bilibili.live.PopularityChangedMessage)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PopularityChangedMessage::IsInitialized() const {
+  return true;
+}
+
+void PopularityChangedMessage::InternalSwap(PopularityChangedMessage* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(popularity_, other->popularity_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PopularityChangedMessage::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1902,13 +2177,14 @@ RoomAdminInfo::RoomAdminInfo()
 }
 RoomAdminInfo::RoomAdminInfo(const RoomAdminInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
-      uid_(from.uid_) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  uid_ = from.uid_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.RoomAdminInfo)
 }
 
 void RoomAdminInfo::SharedCtor() {
+  uid_ = PROTOBUF_ULONGLONG(0);
 }
 
 RoomAdminInfo::~RoomAdminInfo() {
@@ -1934,7 +2210,7 @@ void RoomAdminInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  uid_.Clear();
+  uid_ = PROTOBUF_ULONGLONG(0);
   _internal_metadata_.Clear();
 }
 
@@ -1945,13 +2221,10 @@ const char* RoomAdminInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated uint64 uid = 1;
+      // uint64 uid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_uid(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
-          _internal_add_uid(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          uid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1981,13 +2254,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint64 uid = 1;
-  {
-    int byte_size = _uid_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt64Packed(
-          1, _internal_uid(), byte_size, target);
-    }
+  // uint64 uid = 1;
+  if (this->uid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_uid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2006,19 +2276,11 @@ size_t RoomAdminInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint64 uid = 1;
-  {
-    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      UInt64Size(this->uid_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
-    }
-    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
-    _uid_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
-    total_size += data_size;
+  // uint64 uid = 1;
+  if (this->uid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_uid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2052,7 +2314,9 @@ void RoomAdminInfo::MergeFrom(const RoomAdminInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  uid_.MergeFrom(from.uid_);
+  if (from.uid() != 0) {
+    _internal_set_uid(from._internal_uid());
+  }
 }
 
 void RoomAdminInfo::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -2076,7 +2340,7 @@ bool RoomAdminInfo::IsInitialized() const {
 void RoomAdminInfo::InternalSwap(RoomAdminInfo* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  uid_.InternalSwap(&other->uid_);
+  swap(uid_, other->uid_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoomAdminInfo::GetMetadata() const {
@@ -2710,13 +2974,14 @@ SuperChatDeleteMessage::SuperChatDeleteMessage()
 }
 SuperChatDeleteMessage::SuperChatDeleteMessage(const SuperChatDeleteMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
-      id_(from.id_) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.SuperChatDeleteMessage)
 }
 
 void SuperChatDeleteMessage::SharedCtor() {
+  id_ = 0u;
 }
 
 SuperChatDeleteMessage::~SuperChatDeleteMessage() {
@@ -2742,7 +3007,7 @@ void SuperChatDeleteMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  id_.Clear();
+  id_ = 0u;
   _internal_metadata_.Clear();
 }
 
@@ -2753,13 +3018,10 @@ const char* SuperChatDeleteMessage::_InternalParse(const char* ptr, ::PROTOBUF_N
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated uint32 id = 1;
+      // uint32 id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_id(), ptr, ctx);
-          CHK_(ptr);
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
-          _internal_add_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2789,13 +3051,10 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 id = 1;
-  {
-    int byte_size = _id_cached_byte_size_.load(std::memory_order_relaxed);
-    if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
-          1, _internal_id(), byte_size, target);
-    }
+  // uint32 id = 1;
+  if (this->id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2814,19 +3073,11 @@ size_t SuperChatDeleteMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 id = 1;
-  {
-    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      UInt32Size(this->id_);
-    if (data_size > 0) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
-    }
-    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
-    _id_cached_byte_size_.store(cached_size,
-                                    std::memory_order_relaxed);
-    total_size += data_size;
+  // uint32 id = 1;
+  if (this->id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_id());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2860,7 +3111,9 @@ void SuperChatDeleteMessage::MergeFrom(const SuperChatDeleteMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  id_.MergeFrom(from.id_);
+  if (from.id() != 0) {
+    _internal_set_id(from._internal_id());
+  }
 }
 
 void SuperChatDeleteMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -2884,7 +3137,7 @@ bool SuperChatDeleteMessage::IsInitialized() const {
 void SuperChatDeleteMessage::InternalSwap(SuperChatDeleteMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  id_.InternalSwap(&other->id_);
+  swap(id_, other->id_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SuperChatDeleteMessage::GetMetadata() const {
@@ -2899,6 +3152,9 @@ void SuperChatDeleteMessage::InternalSwap(SuperChatDeleteMessage* other) {
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::RoomMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::RoomMessage >(Arena* arena) {
   return Arena::CreateInternal< ::vNerve::bilibili::live::RoomMessage >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::PopularityChangedMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::PopularityChangedMessage >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::bilibili::live::PopularityChangedMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::LiveStatusChangedMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::LiveStatusChangedMessage >(Arena* arena) {
   return Arena::CreateInternal< ::vNerve::bilibili::live::LiveStatusChangedMessage >(arena);

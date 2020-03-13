@@ -235,8 +235,8 @@ class UserMessage :
     kNewGuard = 5,
     kWelcomeVip = 6,
     kWelcomeGuard = 7,
-    kUserBlocked = 8,
-    kUserKickedOut = 9,
+    kUserBlocked = 16,
+    kUserKickedOut = 17,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -317,8 +317,8 @@ class UserMessage :
     kNewGuardFieldNumber = 5,
     kWelcomeVipFieldNumber = 6,
     kWelcomeGuardFieldNumber = 7,
-    kUserBlockedFieldNumber = 8,
-    kUserKickedOutFieldNumber = 9,
+    kUserBlockedFieldNumber = 16,
+    kUserKickedOutFieldNumber = 17,
   };
   // .vNerve.bilibili.live.UserInfo user = 1;
   bool has_user() const;
@@ -425,7 +425,7 @@ class UserMessage :
   ::vNerve::bilibili::live::WelcomeGuardMessage* _internal_mutable_welcome_guard();
   public:
 
-  // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;
+  // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;
   bool has_user_blocked() const;
   private:
   bool _internal_has_user_blocked() const;
@@ -440,7 +440,7 @@ class UserMessage :
   ::vNerve::bilibili::live::UserBlockedMessage* _internal_mutable_user_blocked();
   public:
 
-  // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;
+  // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
   bool has_user_kicked_out() const;
   private:
   bool _internal_has_user_kicked_out() const;
@@ -2518,7 +2518,7 @@ inline ::vNerve::bilibili::live::WelcomeGuardMessage* UserMessage::mutable_welco
   return _internal_mutable_welcome_guard();
 }
 
-// .vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;
+// .vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;
 inline bool UserMessage::_internal_has_user_blocked() const {
   return payload_case() == kUserBlocked;
 }
@@ -2568,7 +2568,7 @@ inline ::vNerve::bilibili::live::UserBlockedMessage* UserMessage::mutable_user_b
   return _internal_mutable_user_blocked();
 }
 
-// .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;
+// .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
 inline bool UserMessage::_internal_has_user_kicked_out() const {
   return payload_case() == kUserKickedOut;
 }

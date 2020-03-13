@@ -472,32 +472,32 @@ public final class UserMessageOuterClass {
     vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessageOrBuilder getWelcomeGuardOrBuilder();
 
     /**
-     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return Whether the userBlocked field is set.
      */
     boolean hasUserBlocked();
     /**
-     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return The userBlocked.
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage getUserBlocked();
     /**
-     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder();
 
     /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
      * @return Whether the userKickedOut field is set.
      */
     boolean hasUserKickedOut();
     /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
      * @return The userKickedOut.
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getUserKickedOut();
     /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder getUserKickedOutOrBuilder();
 
@@ -645,9 +645,9 @@ public final class UserMessageOuterClass {
               payloadCase_ = 7;
               break;
             }
-            case 66: {
+            case 130: {
               vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder subBuilder = null;
-              if (payloadCase_ == 8) {
+              if (payloadCase_ == 16) {
                 subBuilder = ((vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_).toBuilder();
               }
               payload_ =
@@ -656,12 +656,12 @@ public final class UserMessageOuterClass {
                 subBuilder.mergeFrom((vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
                 payload_ = subBuilder.buildPartial();
               }
-              payloadCase_ = 8;
+              payloadCase_ = 16;
               break;
             }
-            case 74: {
+            case 138: {
               vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder subBuilder = null;
-              if (payloadCase_ == 9) {
+              if (payloadCase_ == 17) {
                 subBuilder = ((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_).toBuilder();
               }
               payload_ =
@@ -670,7 +670,7 @@ public final class UserMessageOuterClass {
                 subBuilder.mergeFrom((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
                 payload_ = subBuilder.buildPartial();
               }
-              payloadCase_ = 9;
+              payloadCase_ = 17;
               break;
             }
             default: {
@@ -716,8 +716,8 @@ public final class UserMessageOuterClass {
       NEW_GUARD(5),
       WELCOME_VIP(6),
       WELCOME_GUARD(7),
-      USER_BLOCKED(8),
-      USER_KICKED_OUT(9),
+      USER_BLOCKED(16),
+      USER_KICKED_OUT(17),
       PAYLOAD_NOT_SET(0);
       private final int value;
       private PayloadCase(int value) {
@@ -741,8 +741,8 @@ public final class UserMessageOuterClass {
           case 5: return NEW_GUARD;
           case 6: return WELCOME_VIP;
           case 7: return WELCOME_GUARD;
-          case 8: return USER_BLOCKED;
-          case 9: return USER_KICKED_OUT;
+          case 16: return USER_BLOCKED;
+          case 17: return USER_KICKED_OUT;
           case 0: return PAYLOAD_NOT_SET;
           default: return null;
         }
@@ -949,57 +949,57 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.getDefaultInstance();
     }
 
-    public static final int USER_BLOCKED_FIELD_NUMBER = 8;
+    public static final int USER_BLOCKED_FIELD_NUMBER = 16;
     /**
-     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return Whether the userBlocked field is set.
      */
     public boolean hasUserBlocked() {
-      return payloadCase_ == 8;
+      return payloadCase_ == 16;
     }
     /**
-     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return The userBlocked.
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage getUserBlocked() {
-      if (payloadCase_ == 8) {
+      if (payloadCase_ == 16) {
          return (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_;
       }
       return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
     }
     /**
-     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+     * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder() {
-      if (payloadCase_ == 8) {
+      if (payloadCase_ == 16) {
          return (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_;
       }
       return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
     }
 
-    public static final int USER_KICKED_OUT_FIELD_NUMBER = 9;
+    public static final int USER_KICKED_OUT_FIELD_NUMBER = 17;
     /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
      * @return Whether the userKickedOut field is set.
      */
     public boolean hasUserKickedOut() {
-      return payloadCase_ == 9;
+      return payloadCase_ == 17;
     }
     /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
      * @return The userKickedOut.
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getUserKickedOut() {
-      if (payloadCase_ == 9) {
+      if (payloadCase_ == 17) {
          return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
       }
       return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
     }
     /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder getUserKickedOutOrBuilder() {
-      if (payloadCase_ == 9) {
+      if (payloadCase_ == 17) {
          return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
       }
       return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
@@ -1040,11 +1040,11 @@ public final class UserMessageOuterClass {
       if (payloadCase_ == 7) {
         output.writeMessage(7, (vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage) payload_);
       }
-      if (payloadCase_ == 8) {
-        output.writeMessage(8, (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
+      if (payloadCase_ == 16) {
+        output.writeMessage(16, (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
       }
-      if (payloadCase_ == 9) {
-        output.writeMessage(9, (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
+      if (payloadCase_ == 17) {
+        output.writeMessage(17, (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
       }
       unknownFields.writeTo(output);
     }
@@ -1083,13 +1083,13 @@ public final class UserMessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage) payload_);
       }
-      if (payloadCase_ == 8) {
+      if (payloadCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
+          .computeMessageSize(16, (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
       }
-      if (payloadCase_ == 9) {
+      if (payloadCase_ == 17) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
+          .computeMessageSize(17, (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1137,11 +1137,11 @@ public final class UserMessageOuterClass {
           if (!getWelcomeGuard()
               .equals(other.getWelcomeGuard())) return false;
           break;
-        case 8:
+        case 16:
           if (!getUserBlocked()
               .equals(other.getUserBlocked())) return false;
           break;
-        case 9:
+        case 17:
           if (!getUserKickedOut()
               .equals(other.getUserKickedOut())) return false;
           break;
@@ -1188,11 +1188,11 @@ public final class UserMessageOuterClass {
           hash = (37 * hash) + WELCOME_GUARD_FIELD_NUMBER;
           hash = (53 * hash) + getWelcomeGuard().hashCode();
           break;
-        case 8:
+        case 16:
           hash = (37 * hash) + USER_BLOCKED_FIELD_NUMBER;
           hash = (53 * hash) + getUserBlocked().hashCode();
           break;
-        case 9:
+        case 17:
           hash = (37 * hash) + USER_KICKED_OUT_FIELD_NUMBER;
           hash = (53 * hash) + getUserKickedOut().hashCode();
           break;
@@ -1413,14 +1413,14 @@ public final class UserMessageOuterClass {
             result.payload_ = welcomeGuardBuilder_.build();
           }
         }
-        if (payloadCase_ == 8) {
+        if (payloadCase_ == 16) {
           if (userBlockedBuilder_ == null) {
             result.payload_ = payload_;
           } else {
             result.payload_ = userBlockedBuilder_.build();
           }
         }
-        if (payloadCase_ == 9) {
+        if (payloadCase_ == 17) {
           if (userKickedOutBuilder_ == null) {
             result.payload_ = payload_;
           } else {
@@ -2510,31 +2510,31 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage, vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder> userBlockedBuilder_;
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        * @return Whether the userBlocked field is set.
        */
       public boolean hasUserBlocked() {
-        return payloadCase_ == 8;
+        return payloadCase_ == 16;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        * @return The userBlocked.
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage getUserBlocked() {
         if (userBlockedBuilder_ == null) {
-          if (payloadCase_ == 8) {
+          if (payloadCase_ == 16) {
             return (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_;
           }
           return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
         } else {
-          if (payloadCase_ == 8) {
+          if (payloadCase_ == 16) {
             return userBlockedBuilder_.getMessage();
           }
           return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
         }
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder setUserBlocked(vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage value) {
         if (userBlockedBuilder_ == null) {
@@ -2546,11 +2546,11 @@ public final class UserMessageOuterClass {
         } else {
           userBlockedBuilder_.setMessage(value);
         }
-        payloadCase_ = 8;
+        payloadCase_ = 16;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder setUserBlocked(
           vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder builderForValue) {
@@ -2560,15 +2560,15 @@ public final class UserMessageOuterClass {
         } else {
           userBlockedBuilder_.setMessage(builderForValue.build());
         }
-        payloadCase_ = 8;
+        payloadCase_ = 16;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder mergeUserBlocked(vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage value) {
         if (userBlockedBuilder_ == null) {
-          if (payloadCase_ == 8 &&
+          if (payloadCase_ == 16 &&
               payload_ != vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance()) {
             payload_ = vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.newBuilder((vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_)
                 .mergeFrom(value).buildPartial();
@@ -2577,26 +2577,26 @@ public final class UserMessageOuterClass {
           }
           onChanged();
         } else {
-          if (payloadCase_ == 8) {
+          if (payloadCase_ == 16) {
             userBlockedBuilder_.mergeFrom(value);
           }
           userBlockedBuilder_.setMessage(value);
         }
-        payloadCase_ = 8;
+        payloadCase_ = 16;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder clearUserBlocked() {
         if (userBlockedBuilder_ == null) {
-          if (payloadCase_ == 8) {
+          if (payloadCase_ == 16) {
             payloadCase_ = 0;
             payload_ = null;
             onChanged();
           }
         } else {
-          if (payloadCase_ == 8) {
+          if (payloadCase_ == 16) {
             payloadCase_ = 0;
             payload_ = null;
           }
@@ -2605,32 +2605,32 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder getUserBlockedBuilder() {
         return getUserBlockedFieldBuilder().getBuilder();
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder() {
-        if ((payloadCase_ == 8) && (userBlockedBuilder_ != null)) {
+        if ((payloadCase_ == 16) && (userBlockedBuilder_ != null)) {
           return userBlockedBuilder_.getMessageOrBuilder();
         } else {
-          if (payloadCase_ == 8) {
+          if (payloadCase_ == 16) {
             return (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_;
           }
           return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
         }
       }
       /**
-       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;</code>
+       * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage, vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder> 
           getUserBlockedFieldBuilder() {
         if (userBlockedBuilder_ == null) {
-          if (!(payloadCase_ == 8)) {
+          if (!(payloadCase_ == 16)) {
             payload_ = vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
           }
           userBlockedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2640,7 +2640,7 @@ public final class UserMessageOuterClass {
                   isClean());
           payload_ = null;
         }
-        payloadCase_ = 8;
+        payloadCase_ = 16;
         onChanged();;
         return userBlockedBuilder_;
       }
@@ -2648,31 +2648,31 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder> userKickedOutBuilder_;
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        * @return Whether the userKickedOut field is set.
        */
       public boolean hasUserKickedOut() {
-        return payloadCase_ == 9;
+        return payloadCase_ == 17;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        * @return The userKickedOut.
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getUserKickedOut() {
         if (userKickedOutBuilder_ == null) {
-          if (payloadCase_ == 9) {
+          if (payloadCase_ == 17) {
             return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
           }
           return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
         } else {
-          if (payloadCase_ == 9) {
+          if (payloadCase_ == 17) {
             return userKickedOutBuilder_.getMessage();
           }
           return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
         }
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       public Builder setUserKickedOut(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage value) {
         if (userKickedOutBuilder_ == null) {
@@ -2684,11 +2684,11 @@ public final class UserMessageOuterClass {
         } else {
           userKickedOutBuilder_.setMessage(value);
         }
-        payloadCase_ = 9;
+        payloadCase_ = 17;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       public Builder setUserKickedOut(
           vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder builderForValue) {
@@ -2698,15 +2698,15 @@ public final class UserMessageOuterClass {
         } else {
           userKickedOutBuilder_.setMessage(builderForValue.build());
         }
-        payloadCase_ = 9;
+        payloadCase_ = 17;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       public Builder mergeUserKickedOut(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage value) {
         if (userKickedOutBuilder_ == null) {
-          if (payloadCase_ == 9 &&
+          if (payloadCase_ == 17 &&
               payload_ != vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance()) {
             payload_ = vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.newBuilder((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_)
                 .mergeFrom(value).buildPartial();
@@ -2715,26 +2715,26 @@ public final class UserMessageOuterClass {
           }
           onChanged();
         } else {
-          if (payloadCase_ == 9) {
+          if (payloadCase_ == 17) {
             userKickedOutBuilder_.mergeFrom(value);
           }
           userKickedOutBuilder_.setMessage(value);
         }
-        payloadCase_ = 9;
+        payloadCase_ = 17;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       public Builder clearUserKickedOut() {
         if (userKickedOutBuilder_ == null) {
-          if (payloadCase_ == 9) {
+          if (payloadCase_ == 17) {
             payloadCase_ = 0;
             payload_ = null;
             onChanged();
           }
         } else {
-          if (payloadCase_ == 9) {
+          if (payloadCase_ == 17) {
             payloadCase_ = 0;
             payload_ = null;
           }
@@ -2743,32 +2743,32 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder getUserKickedOutBuilder() {
         return getUserKickedOutFieldBuilder().getBuilder();
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder getUserKickedOutOrBuilder() {
-        if ((payloadCase_ == 9) && (userKickedOutBuilder_ != null)) {
+        if ((payloadCase_ == 17) && (userKickedOutBuilder_ != null)) {
           return userKickedOutBuilder_.getMessageOrBuilder();
         } else {
-          if (payloadCase_ == 9) {
+          if (payloadCase_ == 17) {
             return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
           }
           return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
         }
       }
       /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;</code>
+       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder> 
           getUserKickedOutFieldBuilder() {
         if (userKickedOutBuilder_ == null) {
-          if (!(payloadCase_ == 9)) {
+          if (!(payloadCase_ == 17)) {
             payload_ = vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
           }
           userKickedOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2778,7 +2778,7 @@ public final class UserMessageOuterClass {
                   isClean());
           payload_ = null;
         }
-        payloadCase_ = 9;
+        payloadCase_ = 17;
         onChanged();;
         return userKickedOutBuilder_;
       }
@@ -10728,9 +10728,9 @@ public final class UserMessageOuterClass {
       "elcome_vip\030\006 \001(\0132\'.vNerve.bilibili.live." +
       "WelcomeVIPMessageH\000\022B\n\rwelcome_guard\030\007 \001" +
       "(\0132).vNerve.bilibili.live.WelcomeGuardMe" +
-      "ssageH\000\022@\n\014user_blocked\030\010 \001(\0132(.vNerve.b" +
+      "ssageH\000\022@\n\014user_blocked\030\020 \001(\0132(.vNerve.b" +
       "ilibili.live.UserBlockedMessageH\000\022E\n\017use" +
-      "r_kicked_out\030\t \001(\0132*.vNerve.bilibili.liv" +
+      "r_kicked_out\030\021 \001(\0132*.vNerve.bilibili.liv" +
       "e.UserKickedOutMessageH\000B\t\n\007payload\"\305\002\n\010" +
       "UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002 \001(\t\022\022\n\na" +
       "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\020\n\010u" +

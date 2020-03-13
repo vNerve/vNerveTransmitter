@@ -397,9 +397,9 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "elcome_vip\030\006 \001(\0132\'.vNerve.bilibili.live."
   "WelcomeVIPMessageH\000\022B\n\rwelcome_guard\030\007 \001"
   "(\0132).vNerve.bilibili.live.WelcomeGuardMe"
-  "ssageH\000\022@\n\014user_blocked\030\010 \001(\0132(.vNerve.b"
+  "ssageH\000\022@\n\014user_blocked\030\020 \001(\0132(.vNerve.b"
   "ilibili.live.UserBlockedMessageH\000\022E\n\017use"
-  "r_kicked_out\030\t \001(\0132*.vNerve.bilibili.liv"
+  "r_kicked_out\030\021 \001(\0132*.vNerve.bilibili.liv"
   "e.UserKickedOutMessageH\000B\t\n\007payload\"\305\002\n\010"
   "UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002 \001(\t\022\022\n\na"
   "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\020\n\010u"
@@ -889,16 +889,16 @@ const char* UserMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+      // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_user_blocked(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+      // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_user_kicked_out(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -985,20 +985,20 @@ failure:
         7, _Internal::welcome_guard(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;
+  // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;
   if (_internal_has_user_blocked()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        8, _Internal::user_blocked(this), target, stream);
+        16, _Internal::user_blocked(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;
+  // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
   if (_internal_has_user_kicked_out()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        9, _Internal::user_kicked_out(this), target, stream);
+        17, _Internal::user_kicked_out(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1067,16 +1067,16 @@ size_t UserMessage::ByteSizeLong() const {
           *payload_.welcome_guard_);
       break;
     }
-    // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 8;
+    // .vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;
     case kUserBlocked: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.user_blocked_);
       break;
     }
-    // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 9;
+    // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
     case kUserKickedOut: {
-      total_size += 1 +
+      total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *payload_.user_kicked_out_);
       break;
