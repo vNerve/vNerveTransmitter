@@ -8,12 +8,12 @@ message RoomMessage {
   uint32 room_id = 1;
   oneof payload {
     UserMessage user_message = 2;
-    LiveStatusChangedMessage live_status = 3;
-    RoomInfoChangedMessage info_change = 4;
-    RoomLockedMessage room_locked = 5;
-    RoomWarningMessage room_warning = 6;
-    RoomLimitedMessage room_limited = 7;
-    SuperChatDeleteMessage superchat_remove = 8;
+    LiveStatusChangedMessage live_status = 16;
+    RoomInfoChangedMessage info_change = 17;
+    RoomLockedMessage room_locked = 18;
+    RoomWarningMessage room_warning = 19;
+    RoomLimitedMessage room_limited = 20;
+    SuperChatDeleteMessage superchat_remove = 21;
   }
 }
 
