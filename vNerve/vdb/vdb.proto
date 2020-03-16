@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package vNerve.vdb;
+
+service VtuberDatabase {
+    rpc GetAllVtubers(GetVtbsRequest) returns(VtuberCollection){}
+    rpc GetAllGroups(GetVtbsRequest) returns(VtuberCollection){}
+    rpc GetAllFans(GetVtbsRequest) returns(VtuberCollection){}
+}
+
+message GetVtbsRequest{
+
+}
+
+message VtuberCollection {
+    repeated Vtuber vtubers = 1;
+}
+
+message Vtuber {
+    string uuid = 1;
+    VtuberType type = 2;
+    bool bot= 3;
+    repeated Account accounts = 4;
+    string group_uuid = 5;
+    bool model_2d = 6;
+    bool model_3d = 7;
+    string model_2d_artist_uuid = 8;
+    string model_3d_artist_uuid = 9;
+}
+
+enum VtuberType {
+    UNKNOWN_VTUBER_TYPE = 0;
+    VTUBER = 1;
+    GROUP = 2;
+    FAN = 3;
+}
+
+message Account{
+    string id = 1;
+    AccountType account_type = 2;
+    AccountPlatform account_platform = 3;
+    repeated string extra = 4;
+    string name = 5;
+    map<string,string> name_translation= 6;
+}
+
+enum AccountType{
+    UNKNOWN_ACCOUNT_TYPE = 0;
+    OFFICIAL = 1;
+    RELAY = 2;
+}
+
+enum AccountPlatform {
+    UNKNOWN_PLATFORM = 0;
+    BILIBILI = 1;
+    TWITTER = 2;
+    YOUTUBE = 3;
+    USERLOCAL = 4;
+    PEING = 5;
+    MARSHMALLOW = 6;
+    PIXIV = 7;
+    WEIBO = 8;
+    BOOTH = 9;
+    AFDIAN = 10;
+    WEB = 11;
+    EMAIL = 12;
+    INSTAGRAM = 13;
+    POPIASK = 14;
+    AMAZON_CO_JP = 15;
+    TWITCH = 16;
+    NICONICO = 17;
+    FACEBOOK = 18;
+    TEESPRING = 19;
+    PATREON = 20;
+    JVCMUSIC = 21;
+    CI_EN = 22;
+    GITHUB = 23;
+    LINE = 24;
+    TIKTOK = 25;
+    FANTIA = 26;
+    SHOWROOM = 27;
+    TELEGRAM = 28;
+}
+
