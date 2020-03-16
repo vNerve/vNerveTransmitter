@@ -143,7 +143,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.vNerve.bilibili.live.RoomAdminInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.vNerve.bilibili.live.RoomAdminInfo.repeatedFields_, null);
 };
 goog.inherits(proto.vNerve.bilibili.live.RoomAdminInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -227,7 +227,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.vNerve.bilibili.live.SuperChatDeleteMessage = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.vNerve.bilibili.live.SuperChatDeleteMessage.repeatedFields_, null);
 };
 goog.inherits(proto.vNerve.bilibili.live.SuperChatDeleteMessage, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1644,6 +1644,13 @@ proto.vNerve.bilibili.live.RoomBaseInfo.prototype.setParentAreaName = function(v
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.vNerve.bilibili.live.RoomAdminInfo.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1675,7 +1682,7 @@ proto.vNerve.bilibili.live.RoomAdminInfo.prototype.toObject = function(opt_inclu
  */
 proto.vNerve.bilibili.live.RoomAdminInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    uid: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    uidList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -1713,8 +1720,8 @@ proto.vNerve.bilibili.live.RoomAdminInfo.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setUid(value);
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
+      msg.setUidList(value);
       break;
     default:
       reader.skipField();
@@ -1745,9 +1752,9 @@ proto.vNerve.bilibili.live.RoomAdminInfo.prototype.serializeBinary = function() 
  */
 proto.vNerve.bilibili.live.RoomAdminInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getUid();
-  if (f !== 0) {
-    writer.writeUint64(
+  f = message.getUidList();
+  if (f.length > 0) {
+    writer.writePackedUint64(
       1,
       f
     );
@@ -1756,20 +1763,39 @@ proto.vNerve.bilibili.live.RoomAdminInfo.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional uint64 uid = 1;
- * @return {number}
+ * repeated uint64 uid = 1;
+ * @return {!Array<number>}
  */
-proto.vNerve.bilibili.live.RoomAdminInfo.prototype.getUid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.vNerve.bilibili.live.RoomAdminInfo.prototype.getUidList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.vNerve.bilibili.live.RoomAdminInfo} returns this
+ */
+proto.vNerve.bilibili.live.RoomAdminInfo.prototype.setUidList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
 };
 
 
 /**
  * @param {number} value
+ * @param {number=} opt_index
  * @return {!proto.vNerve.bilibili.live.RoomAdminInfo} returns this
  */
-proto.vNerve.bilibili.live.RoomAdminInfo.prototype.setUid = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+proto.vNerve.bilibili.live.RoomAdminInfo.prototype.addUid = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.vNerve.bilibili.live.RoomAdminInfo} returns this
+ */
+proto.vNerve.bilibili.live.RoomAdminInfo.prototype.clearUidList = function() {
+  return this.setUidList([]);
 };
 
 
@@ -2194,6 +2220,13 @@ proto.vNerve.bilibili.live.RoomLimitedMessage.prototype.setDelayRange = function
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.vNerve.bilibili.live.SuperChatDeleteMessage.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2225,7 +2258,7 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.toObject = function(
  */
 proto.vNerve.bilibili.live.SuperChatDeleteMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    idList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -2263,8 +2296,8 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setId(value);
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint32());
+      msg.setIdList(value);
       break;
     default:
       reader.skipField();
@@ -2295,9 +2328,9 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.serializeBinary = fu
  */
 proto.vNerve.bilibili.live.SuperChatDeleteMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getId();
-  if (f !== 0) {
-    writer.writeUint32(
+  f = message.getIdList();
+  if (f.length > 0) {
+    writer.writePackedUint32(
       1,
       f
     );
@@ -2306,20 +2339,39 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.serializeBinaryToWriter = func
 
 
 /**
- * optional uint32 id = 1;
- * @return {number}
+ * repeated uint32 id = 1;
+ * @return {!Array<number>}
  */
-proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.getId = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.getIdList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.vNerve.bilibili.live.SuperChatDeleteMessage} returns this
+ */
+proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.setIdList = function(value) {
+  return jspb.Message.setField(this, 1, value || []);
 };
 
 
 /**
  * @param {number} value
+ * @param {number=} opt_index
  * @return {!proto.vNerve.bilibili.live.SuperChatDeleteMessage} returns this
  */
-proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.setId = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.addId = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.vNerve.bilibili.live.SuperChatDeleteMessage} returns this
+ */
+proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.clearIdList = function() {
+  return this.setIdList([]);
 };
 
 

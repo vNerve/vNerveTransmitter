@@ -49,11 +49,11 @@ namespace VNerve.Bilibili.Live {
             "b21BZG1pbkluZm9IAEIJCgdjaGFuZ2VkInMKDFJvb21CYXNlSW5mbxINCgV0",
             "aXRsZRgBIAEoCRIPCgdhcmVhX2lkGAIgASgNEhEKCWFyZWFfbmFtZRgDIAEo",
             "CRIWCg5wYXJlbnRfYXJlYV9pZBgEIAEoDRIYChBwYXJlbnRfYXJlYV9uYW1l",
-            "GAUgASgNIhwKDVJvb21BZG1pbkluZm8SCwoDdWlkGAEgASgEIikKEVJvb21M",
+            "GAUgASgNIhwKDVJvb21BZG1pbkluZm8SCwoDdWlkGAEgAygEIikKEVJvb21M",
             "b2NrZWRNZXNzYWdlEhQKDGxvY2tlZF91bnRpbBgBIAEoBCIkChJSb29tV2Fy",
             "bmluZ01lc3NhZ2USDgoGcmVhc29uGAEgASgJIjcKElJvb21MaW1pdGVkTWVz",
             "c2FnZRIMCgR0eXBlGAEgASgJEhMKC2RlbGF5X3JhbmdlGAIgASgNIiQKFlN1",
-            "cGVyQ2hhdERlbGV0ZU1lc3NhZ2USCgoCaWQYASABKA0qPQoKTGl2ZVN0YXR1",
+            "cGVyQ2hhdERlbGV0ZU1lc3NhZ2USCgoCaWQYASADKA0qPQoKTGl2ZVN0YXR1",
             "cxINCglQUkVQQVJJTkcQABIICgRMSVZFEAESCQoFUk9VTkQQAhILCgdDVVRf",
             "T0ZGEANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -1344,7 +1344,7 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RoomAdminInfo(RoomAdminInfo other) : this() {
-      uid_ = other.uid_;
+      uid_ = other.uid_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1355,13 +1355,12 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "uid" field.</summary>
     public const int UidFieldNumber = 1;
-    private ulong uid_;
+    private static readonly pb::FieldCodec<ulong> _repeated_uid_codec
+        = pb::FieldCodec.ForUInt64(10);
+    private readonly pbc::RepeatedField<ulong> uid_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Uid {
+    public pbc::RepeatedField<ulong> Uid {
       get { return uid_; }
-      set {
-        uid_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1377,14 +1376,14 @@ namespace VNerve.Bilibili.Live {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Uid != other.Uid) return false;
+      if(!uid_.Equals(other.uid_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uid != 0UL) hash ^= Uid.GetHashCode();
+      hash ^= uid_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1398,10 +1397,7 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Uid != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(Uid);
-      }
+      uid_.WriteTo(output, _repeated_uid_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1410,9 +1406,7 @@ namespace VNerve.Bilibili.Live {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Uid != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Uid);
-      }
+      size += uid_.CalculateSize(_repeated_uid_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1424,9 +1418,7 @@ namespace VNerve.Bilibili.Live {
       if (other == null) {
         return;
       }
-      if (other.Uid != 0UL) {
-        Uid = other.Uid;
-      }
+      uid_.Add(other.uid_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1438,8 +1430,9 @@ namespace VNerve.Bilibili.Live {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
           case 8: {
-            Uid = input.ReadUInt64();
+            uid_.AddEntriesFrom(input, _repeated_uid_codec);
             break;
           }
         }
@@ -1888,7 +1881,7 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SuperChatDeleteMessage(SuperChatDeleteMessage other) : this() {
-      id_ = other.id_;
+      id_ = other.id_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1899,13 +1892,12 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private uint id_;
+    private static readonly pb::FieldCodec<uint> _repeated_id_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> id_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Id {
+    public pbc::RepeatedField<uint> Id {
       get { return id_; }
-      set {
-        id_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1921,14 +1913,14 @@ namespace VNerve.Bilibili.Live {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
+      if(!id_.Equals(other.id_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      hash ^= id_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1942,10 +1934,7 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Id);
-      }
+      id_.WriteTo(output, _repeated_id_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1954,9 +1943,7 @@ namespace VNerve.Bilibili.Live {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
+      size += id_.CalculateSize(_repeated_id_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1968,9 +1955,7 @@ namespace VNerve.Bilibili.Live {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
+      id_.Add(other.id_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1982,8 +1967,9 @@ namespace VNerve.Bilibili.Live {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
           case 8: {
-            Id = input.ReadUInt32();
+            id_.AddEntriesFrom(input, _repeated_id_codec);
             break;
           }
         }

@@ -5662,10 +5662,21 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint64 uid = 1;</code>
-     * @return The uid.
+     * <code>repeated uint64 uid = 1;</code>
+     * @return A list containing the uid.
      */
-    long getUid();
+    java.util.List<java.lang.Long> getUidList();
+    /**
+     * <code>repeated uint64 uid = 1;</code>
+     * @return The count of uid.
+     */
+    int getUidCount();
+    /**
+     * <code>repeated uint64 uid = 1;</code>
+     * @param index The index of the element to return.
+     * @return The uid at the given index.
+     */
+    long getUid(int index);
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.RoomAdminInfo}
@@ -5680,6 +5691,7 @@ public final class RoomMessageOuterClass {
       super(builder);
     }
     private RoomAdminInfo() {
+      uid_ = emptyLongList();
     }
 
     @java.lang.Override
@@ -5702,6 +5714,7 @@ public final class RoomMessageOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5713,8 +5726,24 @@ public final class RoomMessageOuterClass {
               done = true;
               break;
             case 8: {
-
-              uid_ = input.readUInt64();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                uid_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              uid_.addLong(input.readUInt64());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                uid_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                uid_.addLong(input.readUInt64());
+              }
+              input.popLimit(limit);
               break;
             }
             default: {
@@ -5732,6 +5761,9 @@ public final class RoomMessageOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          uid_.makeImmutable(); // C
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -5750,14 +5782,31 @@ public final class RoomMessageOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 1;
-    private long uid_;
+    private com.google.protobuf.Internal.LongList uid_;
     /**
-     * <code>uint64 uid = 1;</code>
-     * @return The uid.
+     * <code>repeated uint64 uid = 1;</code>
+     * @return A list containing the uid.
      */
-    public long getUid() {
+    public java.util.List<java.lang.Long>
+        getUidList() {
       return uid_;
     }
+    /**
+     * <code>repeated uint64 uid = 1;</code>
+     * @return The count of uid.
+     */
+    public int getUidCount() {
+      return uid_.size();
+    }
+    /**
+     * <code>repeated uint64 uid = 1;</code>
+     * @param index The index of the element to return.
+     * @return The uid at the given index.
+     */
+    public long getUid(int index) {
+      return uid_.getLong(index);
+    }
+    private int uidMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -5773,8 +5822,13 @@ public final class RoomMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (uid_ != 0L) {
-        output.writeUInt64(1, uid_);
+      getSerializedSize();
+      if (getUidList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(uidMemoizedSerializedSize);
+      }
+      for (int i = 0; i < uid_.size(); i++) {
+        output.writeUInt64NoTag(uid_.getLong(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5785,9 +5839,19 @@ public final class RoomMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (uid_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1, uid_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < uid_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(uid_.getLong(i));
+        }
+        size += dataSize;
+        if (!getUidList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        uidMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5804,8 +5868,8 @@ public final class RoomMessageOuterClass {
       }
       vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo other = (vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo) obj;
 
-      if (getUid()
-          != other.getUid()) return false;
+      if (!getUidList()
+          .equals(other.getUidList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5817,9 +5881,10 @@ public final class RoomMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UID_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getUid());
+      if (getUidCount() > 0) {
+        hash = (37 * hash) + UID_FIELD_NUMBER;
+        hash = (53 * hash) + getUidList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5953,8 +6018,8 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        uid_ = 0L;
-
+        uid_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -5981,6 +6046,11 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo buildPartial() {
         vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo result = new vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          uid_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
         result.uid_ = uid_;
         onBuilt();
         return result;
@@ -6030,8 +6100,15 @@ public final class RoomMessageOuterClass {
 
       public Builder mergeFrom(vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo other) {
         if (other == vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo.getDefaultInstance()) return this;
-        if (other.getUid() != 0L) {
-          setUid(other.getUid());
+        if (!other.uid_.isEmpty()) {
+          if (uid_.isEmpty()) {
+            uid_ = other.uid_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureUidIsMutable();
+            uid_.addAll(other.uid_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6061,33 +6138,83 @@ public final class RoomMessageOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
-      private long uid_ ;
-      /**
-       * <code>uint64 uid = 1;</code>
-       * @return The uid.
-       */
-      public long getUid() {
-        return uid_;
+      private com.google.protobuf.Internal.LongList uid_ = emptyLongList();
+      private void ensureUidIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          uid_ = mutableCopy(uid_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>uint64 uid = 1;</code>
+       * <code>repeated uint64 uid = 1;</code>
+       * @return A list containing the uid.
+       */
+      public java.util.List<java.lang.Long>
+          getUidList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(uid_) : uid_;
+      }
+      /**
+       * <code>repeated uint64 uid = 1;</code>
+       * @return The count of uid.
+       */
+      public int getUidCount() {
+        return uid_.size();
+      }
+      /**
+       * <code>repeated uint64 uid = 1;</code>
+       * @param index The index of the element to return.
+       * @return The uid at the given index.
+       */
+      public long getUid(int index) {
+        return uid_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 uid = 1;</code>
+       * @param index The index to set the value at.
        * @param value The uid to set.
        * @return This builder for chaining.
        */
-      public Builder setUid(long value) {
-        
-        uid_ = value;
+      public Builder setUid(
+          int index, long value) {
+        ensureUidIsMutable();
+        uid_.setLong(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 uid = 1;</code>
+       * <code>repeated uint64 uid = 1;</code>
+       * @param value The uid to add.
+       * @return This builder for chaining.
+       */
+      public Builder addUid(long value) {
+        ensureUidIsMutable();
+        uid_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 uid = 1;</code>
+       * @param values The uid to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllUid(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureUidIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, uid_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 uid = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
-        uid_ = 0L;
+        uid_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7836,10 +7963,21 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 id = 1;</code>
-     * @return The id.
+     * <code>repeated uint32 id = 1;</code>
+     * @return A list containing the id.
      */
-    int getId();
+    java.util.List<java.lang.Integer> getIdList();
+    /**
+     * <code>repeated uint32 id = 1;</code>
+     * @return The count of id.
+     */
+    int getIdCount();
+    /**
+     * <code>repeated uint32 id = 1;</code>
+     * @param index The index of the element to return.
+     * @return The id at the given index.
+     */
+    int getId(int index);
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.SuperChatDeleteMessage}
@@ -7854,6 +7992,7 @@ public final class RoomMessageOuterClass {
       super(builder);
     }
     private SuperChatDeleteMessage() {
+      id_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -7876,6 +8015,7 @@ public final class RoomMessageOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7887,8 +8027,24 @@ public final class RoomMessageOuterClass {
               done = true;
               break;
             case 8: {
-
-              id_ = input.readUInt32();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                id_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              id_.addInt(input.readUInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                id_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                id_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
               break;
             }
             default: {
@@ -7906,6 +8062,9 @@ public final class RoomMessageOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          id_.makeImmutable(); // C
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -7924,14 +8083,31 @@ public final class RoomMessageOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private com.google.protobuf.Internal.IntList id_;
     /**
-     * <code>uint32 id = 1;</code>
-     * @return The id.
+     * <code>repeated uint32 id = 1;</code>
+     * @return A list containing the id.
      */
-    public int getId() {
+    public java.util.List<java.lang.Integer>
+        getIdList() {
       return id_;
     }
+    /**
+     * <code>repeated uint32 id = 1;</code>
+     * @return The count of id.
+     */
+    public int getIdCount() {
+      return id_.size();
+    }
+    /**
+     * <code>repeated uint32 id = 1;</code>
+     * @param index The index of the element to return.
+     * @return The id at the given index.
+     */
+    public int getId(int index) {
+      return id_.getInt(index);
+    }
+    private int idMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -7947,8 +8123,13 @@ public final class RoomMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeUInt32(1, id_);
+      getSerializedSize();
+      if (getIdList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(idMemoizedSerializedSize);
+      }
+      for (int i = 0; i < id_.size(); i++) {
+        output.writeUInt32NoTag(id_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -7959,9 +8140,19 @@ public final class RoomMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, id_);
+      {
+        int dataSize = 0;
+        for (int i = 0; i < id_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(id_.getInt(i));
+        }
+        size += dataSize;
+        if (!getIdList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        idMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7978,8 +8169,8 @@ public final class RoomMessageOuterClass {
       }
       vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage other = (vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) obj;
 
-      if (getId()
-          != other.getId()) return false;
+      if (!getIdList()
+          .equals(other.getIdList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7991,8 +8182,10 @@ public final class RoomMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      if (getIdCount() > 0) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getIdList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8126,8 +8319,8 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
-
+        id_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -8154,6 +8347,11 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage buildPartial() {
         vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage result = new vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          id_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
         result.id_ = id_;
         onBuilt();
         return result;
@@ -8203,8 +8401,15 @@ public final class RoomMessageOuterClass {
 
       public Builder mergeFrom(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage other) {
         if (other == vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
-          setId(other.getId());
+        if (!other.id_.isEmpty()) {
+          if (id_.isEmpty()) {
+            id_ = other.id_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIdIsMutable();
+            id_.addAll(other.id_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8234,33 +8439,83 @@ public final class RoomMessageOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
-      private int id_ ;
-      /**
-       * <code>uint32 id = 1;</code>
-       * @return The id.
-       */
-      public int getId() {
-        return id_;
+      private com.google.protobuf.Internal.IntList id_ = emptyIntList();
+      private void ensureIdIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          id_ = mutableCopy(id_);
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
-       * <code>uint32 id = 1;</code>
+       * <code>repeated uint32 id = 1;</code>
+       * @return A list containing the id.
+       */
+      public java.util.List<java.lang.Integer>
+          getIdList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(id_) : id_;
+      }
+      /**
+       * <code>repeated uint32 id = 1;</code>
+       * @return The count of id.
+       */
+      public int getIdCount() {
+        return id_.size();
+      }
+      /**
+       * <code>repeated uint32 id = 1;</code>
+       * @param index The index of the element to return.
+       * @return The id at the given index.
+       */
+      public int getId(int index) {
+        return id_.getInt(index);
+      }
+      /**
+       * <code>repeated uint32 id = 1;</code>
+       * @param index The index to set the value at.
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(int value) {
-        
-        id_ = value;
+      public Builder setId(
+          int index, int value) {
+        ensureIdIsMutable();
+        id_.setInt(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 id = 1;</code>
+       * <code>repeated uint32 id = 1;</code>
+       * @param value The id to add.
+       * @return This builder for chaining.
+       */
+      public Builder addId(int value) {
+        ensureIdIsMutable();
+        id_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 id = 1;</code>
+       * @param values The id to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllId(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, id_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
-        id_ = 0;
+        id_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8404,12 +8659,12 @@ public final class RoomMessageOuterClass {
       "oH\000B\t\n\007changed\"s\n\014RoomBaseInfo\022\r\n\005title\030" +
       "\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022\021\n\tarea_name\030\003 \001(" +
       "\t\022\026\n\016parent_area_id\030\004 \001(\r\022\030\n\020parent_area" +
-      "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \001(" +
+      "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \003(" +
       "\004\")\n\021RoomLockedMessage\022\024\n\014locked_until\030\001" +
       " \001(\004\"$\n\022RoomWarningMessage\022\016\n\006reason\030\001 \001" +
       "(\t\"7\n\022RoomLimitedMessage\022\014\n\004type\030\001 \001(\t\022\023" +
       "\n\013delay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMe" +
-      "ssage\022\n\n\002id\030\001 \001(\r*=\n\nLiveStatus\022\r\n\tPREPA" +
+      "ssage\022\n\n\002id\030\001 \003(\r*=\n\nLiveStatus\022\r\n\tPREPA" +
       "RING\020\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003" +
       "b\006proto3"
     };

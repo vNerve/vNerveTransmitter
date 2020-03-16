@@ -371,12 +371,12 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2
   "oH\000B\t\n\007changed\"s\n\014RoomBaseInfo\022\r\n\005title\030"
   "\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022\021\n\tarea_name\030\003 \001("
   "\t\022\026\n\016parent_area_id\030\004 \001(\r\022\030\n\020parent_area"
-  "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \001("
+  "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \003("
   "\004\")\n\021RoomLockedMessage\022\024\n\014locked_until\030\001"
   " \001(\004\"$\n\022RoomWarningMessage\022\016\n\006reason\030\001 \001"
   "(\t\"7\n\022RoomLimitedMessage\022\014\n\004type\030\001 \001(\t\022\023"
   "\n\013delay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMe"
-  "ssage\022\n\n\002id\030\001 \001(\r*=\n\nLiveStatus\022\r\n\tPREPA"
+  "ssage\022\n\n\002id\030\001 \003(\r*=\n\nLiveStatus\022\r\n\tPREPA"
   "RING\020\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003"
   "b\006proto3"
   ;
@@ -2177,14 +2177,13 @@ RoomAdminInfo::RoomAdminInfo()
 }
 RoomAdminInfo::RoomAdminInfo(const RoomAdminInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      uid_(from.uid_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  uid_ = from.uid_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.RoomAdminInfo)
 }
 
 void RoomAdminInfo::SharedCtor() {
-  uid_ = PROTOBUF_ULONGLONG(0);
 }
 
 RoomAdminInfo::~RoomAdminInfo() {
@@ -2210,7 +2209,7 @@ void RoomAdminInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  uid_ = PROTOBUF_ULONGLONG(0);
+  uid_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -2221,10 +2220,13 @@ const char* RoomAdminInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // uint64 uid = 1;
+      // repeated uint64 uid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          uid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_uid(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
+          _internal_add_uid(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2254,10 +2256,13 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint64 uid = 1;
-  if (this->uid() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_uid(), target);
+  // repeated uint64 uid = 1;
+  {
+    int byte_size = _uid_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt64Packed(
+          1, _internal_uid(), byte_size, target);
+    }
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2276,11 +2281,19 @@ size_t RoomAdminInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // uint64 uid = 1;
-  if (this->uid() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
-        this->_internal_uid());
+  // repeated uint64 uid = 1;
+  {
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      UInt64Size(this->uid_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _uid_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2314,9 +2327,7 @@ void RoomAdminInfo::MergeFrom(const RoomAdminInfo& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.uid() != 0) {
-    _internal_set_uid(from._internal_uid());
-  }
+  uid_.MergeFrom(from.uid_);
 }
 
 void RoomAdminInfo::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -2340,7 +2351,7 @@ bool RoomAdminInfo::IsInitialized() const {
 void RoomAdminInfo::InternalSwap(RoomAdminInfo* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(uid_, other->uid_);
+  uid_.InternalSwap(&other->uid_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoomAdminInfo::GetMetadata() const {
@@ -2974,14 +2985,13 @@ SuperChatDeleteMessage::SuperChatDeleteMessage()
 }
 SuperChatDeleteMessage::SuperChatDeleteMessage(const SuperChatDeleteMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      id_(from.id_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.SuperChatDeleteMessage)
 }
 
 void SuperChatDeleteMessage::SharedCtor() {
-  id_ = 0u;
 }
 
 SuperChatDeleteMessage::~SuperChatDeleteMessage() {
@@ -3007,7 +3017,7 @@ void SuperChatDeleteMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  id_ = 0u;
+  id_.Clear();
   _internal_metadata_.Clear();
 }
 
@@ -3018,10 +3028,13 @@ const char* SuperChatDeleteMessage::_InternalParse(const char* ptr, ::PROTOBUF_N
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // uint32 id = 1;
+      // repeated uint32 id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_id(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
+          _internal_add_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3051,10 +3064,13 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 id = 1;
-  if (this->id() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_id(), target);
+  // repeated uint32 id = 1;
+  {
+    int byte_size = _id_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          1, _internal_id(), byte_size, target);
+    }
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3073,11 +3089,19 @@ size_t SuperChatDeleteMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // uint32 id = 1;
-  if (this->id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_id());
+  // repeated uint32 id = 1;
+  {
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      UInt32Size(this->id_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _id_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3111,9 +3135,7 @@ void SuperChatDeleteMessage::MergeFrom(const SuperChatDeleteMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.id() != 0) {
-    _internal_set_id(from._internal_id());
-  }
+  id_.MergeFrom(from.id_);
 }
 
 void SuperChatDeleteMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -3137,7 +3159,7 @@ bool SuperChatDeleteMessage::IsInitialized() const {
 void SuperChatDeleteMessage::InternalSwap(SuperChatDeleteMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(id_, other->id_);
+  id_.InternalSwap(&other->id_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SuperChatDeleteMessage::GetMetadata() const {

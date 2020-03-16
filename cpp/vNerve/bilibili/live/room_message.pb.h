@@ -1189,21 +1189,35 @@ class RoomAdminInfo :
   enum : int {
     kUidFieldNumber = 1,
   };
-  // uint64 uid = 1;
-  void clear_uid();
-  ::PROTOBUF_NAMESPACE_ID::uint64 uid() const;
-  void set_uid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  // repeated uint64 uid = 1;
+  int uid_size() const;
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_uid() const;
-  void _internal_set_uid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  int _internal_uid_size() const;
   public:
+  void clear_uid();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_uid(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      _internal_uid() const;
+  void _internal_add_uid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      _internal_mutable_uid();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint64 uid(int index) const;
+  void set_uid(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_uid(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+      uid() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+      mutable_uid();
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.RoomAdminInfo)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 uid_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > uid_;
+  mutable std::atomic<int> _uid_cached_byte_size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 };
@@ -1726,21 +1740,35 @@ class SuperChatDeleteMessage :
   enum : int {
     kIdFieldNumber = 1,
   };
-  // uint32 id = 1;
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // repeated uint32 id = 1;
+  int id_size() const;
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  int _internal_id_size() const;
   public:
+  void clear_id();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+      _internal_id() const;
+  void _internal_add_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+      _internal_mutable_id();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint32 id(int index) const;
+  void set_id(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void add_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+      id() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+      mutable_id();
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.SuperChatDeleteMessage)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 > id_;
+  mutable std::atomic<int> _id_cached_byte_size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 };
@@ -2660,24 +2688,51 @@ inline void RoomBaseInfo::set_parent_area_name(::PROTOBUF_NAMESPACE_ID::uint32 v
 
 // RoomAdminInfo
 
-// uint64 uid = 1;
-inline void RoomAdminInfo::clear_uid() {
-  uid_ = PROTOBUF_ULONGLONG(0);
+// repeated uint64 uid = 1;
+inline int RoomAdminInfo::_internal_uid_size() const {
+  return uid_.size();
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 RoomAdminInfo::_internal_uid() const {
+inline int RoomAdminInfo::uid_size() const {
+  return _internal_uid_size();
+}
+inline void RoomAdminInfo::clear_uid() {
+  uid_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 RoomAdminInfo::_internal_uid(int index) const {
+  return uid_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 RoomAdminInfo::uid(int index) const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomAdminInfo.uid)
+  return _internal_uid(index);
+}
+inline void RoomAdminInfo::set_uid(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  uid_.Set(index, value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.RoomAdminInfo.uid)
+}
+inline void RoomAdminInfo::_internal_add_uid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  uid_.Add(value);
+}
+inline void RoomAdminInfo::add_uid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_add_uid(value);
+  // @@protoc_insertion_point(field_add:vNerve.bilibili.live.RoomAdminInfo.uid)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+RoomAdminInfo::_internal_uid() const {
   return uid_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 RoomAdminInfo::uid() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomAdminInfo.uid)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
+RoomAdminInfo::uid() const {
+  // @@protoc_insertion_point(field_list:vNerve.bilibili.live.RoomAdminInfo.uid)
   return _internal_uid();
 }
-inline void RoomAdminInfo::_internal_set_uid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  
-  uid_ = value;
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+RoomAdminInfo::_internal_mutable_uid() {
+  return &uid_;
 }
-inline void RoomAdminInfo::set_uid(::PROTOBUF_NAMESPACE_ID::uint64 value) {
-  _internal_set_uid(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.RoomAdminInfo.uid)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
+RoomAdminInfo::mutable_uid() {
+  // @@protoc_insertion_point(field_mutable_list:vNerve.bilibili.live.RoomAdminInfo.uid)
+  return _internal_mutable_uid();
 }
 
 // -------------------------------------------------------------------
@@ -2856,24 +2911,51 @@ inline void RoomLimitedMessage::set_delay_range(::PROTOBUF_NAMESPACE_ID::uint32 
 
 // SuperChatDeleteMessage
 
-// uint32 id = 1;
-inline void SuperChatDeleteMessage::clear_id() {
-  id_ = 0u;
+// repeated uint32 id = 1;
+inline int SuperChatDeleteMessage::_internal_id_size() const {
+  return id_.size();
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatDeleteMessage::_internal_id() const {
+inline int SuperChatDeleteMessage::id_size() const {
+  return _internal_id_size();
+}
+inline void SuperChatDeleteMessage::clear_id() {
+  id_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatDeleteMessage::_internal_id(int index) const {
+  return id_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatDeleteMessage::id(int index) const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.SuperChatDeleteMessage.id)
+  return _internal_id(index);
+}
+inline void SuperChatDeleteMessage::set_id(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  id_.Set(index, value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.SuperChatDeleteMessage.id)
+}
+inline void SuperChatDeleteMessage::_internal_add_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  id_.Add(value);
+}
+inline void SuperChatDeleteMessage::add_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_add_id(value);
+  // @@protoc_insertion_point(field_add:vNerve.bilibili.live.SuperChatDeleteMessage.id)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+SuperChatDeleteMessage::_internal_id() const {
   return id_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatDeleteMessage::id() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.SuperChatDeleteMessage.id)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+SuperChatDeleteMessage::id() const {
+  // @@protoc_insertion_point(field_list:vNerve.bilibili.live.SuperChatDeleteMessage.id)
   return _internal_id();
 }
-inline void SuperChatDeleteMessage::_internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  id_ = value;
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+SuperChatDeleteMessage::_internal_mutable_id() {
+  return &id_;
 }
-inline void SuperChatDeleteMessage::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.SuperChatDeleteMessage.id)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+SuperChatDeleteMessage::mutable_id() {
+  // @@protoc_insertion_point(field_mutable_list:vNerve.bilibili.live.SuperChatDeleteMessage.id)
+  return _internal_mutable_id();
 }
 
 #ifdef __GNUC__
