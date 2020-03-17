@@ -1,4 +1,4 @@
-// source: vNerve/bilibili/info/info.proto
+// source: vNerve/bilibili/bilibili_info.proto
 /**
  * @fileoverview
  * @enhanceable
