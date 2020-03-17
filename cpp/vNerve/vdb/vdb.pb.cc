@@ -14,27 +14,48 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Account_vNerve_2fvdb_2fvdb_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Account_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Account_vNerve_2fvdb_2fvdb_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_vNerve_2fvdb_2fvdb_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Vtuber_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto;
 namespace vNerve {
 namespace vdb {
 class GetVtbsRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetVtbsRequest> _instance;
 } _GetVtbsRequest_default_instance_;
+class GetLinkSyntaxsRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetLinkSyntaxsRequest> _instance;
+} _GetLinkSyntaxsRequest_default_instance_;
+class LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse> _instance;
+} _LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_default_instance_;
+class LinkSyntaxCollectionDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LinkSyntaxCollection> _instance;
+} _LinkSyntaxCollection_default_instance_;
 class VtuberCollectionDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VtuberCollection> _instance;
 } _VtuberCollection_default_instance_;
+class GroupCollectionDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GroupCollection> _instance;
+} _GroupCollection_default_instance_;
+class FanCollectionDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FanCollection> _instance;
+} _FanCollection_default_instance_;
+class Vtuber_NameTranslationEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Vtuber_NameTranslationEntry_DoNotUse> _instance;
+} _Vtuber_NameTranslationEntry_DoNotUse_default_instance_;
 class VtuberDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Vtuber> _instance;
 } _Vtuber_default_instance_;
-class Account_NameTranslationEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Account_NameTranslationEntry_DoNotUse> _instance;
-} _Account_NameTranslationEntry_DoNotUse_default_instance_;
 class AccountDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Account> _instance;
@@ -52,22 +73,37 @@ static void InitDefaultsscc_info_Account_vNerve_2fvdb_2fvdb_2eproto() {
   ::vNerve::vdb::Account::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Account_vNerve_2fvdb_2fvdb_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Account_vNerve_2fvdb_2fvdb_2eproto}, {
-      &scc_info_Account_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Account_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Account_vNerve_2fvdb_2fvdb_2eproto}, {}};
 
-static void InitDefaultsscc_info_Account_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto() {
+static void InitDefaultsscc_info_FanCollection_vNerve_2fvdb_2fvdb_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::vNerve::vdb::_Account_NameTranslationEntry_DoNotUse_default_instance_;
-    new (ptr) ::vNerve::vdb::Account_NameTranslationEntry_DoNotUse();
+    void* ptr = &::vNerve::vdb::_FanCollection_default_instance_;
+    new (ptr) ::vNerve::vdb::FanCollection();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::vNerve::vdb::Account_NameTranslationEntry_DoNotUse::InitAsDefaultInstance();
+  ::vNerve::vdb::FanCollection::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Account_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Account_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_FanCollection_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_FanCollection_vNerve_2fvdb_2fvdb_2eproto}, {
+      &scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto.base,}};
+
+static void InitDefaultsscc_info_GetLinkSyntaxsRequest_vNerve_2fvdb_2fvdb_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vNerve::vdb::_GetLinkSyntaxsRequest_default_instance_;
+    new (ptr) ::vNerve::vdb::GetLinkSyntaxsRequest();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vNerve::vdb::GetLinkSyntaxsRequest::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetLinkSyntaxsRequest_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetLinkSyntaxsRequest_vNerve_2fvdb_2fvdb_2eproto}, {}};
 
 static void InitDefaultsscc_info_GetVtbsRequest_vNerve_2fvdb_2fvdb_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -83,6 +119,49 @@ static void InitDefaultsscc_info_GetVtbsRequest_vNerve_2fvdb_2fvdb_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetVtbsRequest_vNerve_2fvdb_2fvdb_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetVtbsRequest_vNerve_2fvdb_2fvdb_2eproto}, {}};
 
+static void InitDefaultsscc_info_GroupCollection_vNerve_2fvdb_2fvdb_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vNerve::vdb::_GroupCollection_default_instance_;
+    new (ptr) ::vNerve::vdb::GroupCollection();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vNerve::vdb::GroupCollection::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GroupCollection_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_GroupCollection_vNerve_2fvdb_2fvdb_2eproto}, {
+      &scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto.base,}};
+
+static void InitDefaultsscc_info_LinkSyntaxCollection_vNerve_2fvdb_2fvdb_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vNerve::vdb::_LinkSyntaxCollection_default_instance_;
+    new (ptr) ::vNerve::vdb::LinkSyntaxCollection();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::vNerve::vdb::LinkSyntaxCollection::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_LinkSyntaxCollection_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_LinkSyntaxCollection_vNerve_2fvdb_2fvdb_2eproto}, {
+      &scc_info_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto.base,}};
+
+static void InitDefaultsscc_info_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vNerve::vdb::_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_default_instance_;
+    new (ptr) ::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse();
+  }
+  ::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto}, {}};
+
 static void InitDefaultsscc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -94,9 +173,23 @@ static void InitDefaultsscc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto() {
   ::vNerve::vdb::Vtuber::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto}, {
-      &scc_info_Account_vNerve_2fvdb_2fvdb_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto}, {
+      &scc_info_Account_vNerve_2fvdb_2fvdb_2eproto.base,
+      &scc_info_Vtuber_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto.base,}};
+
+static void InitDefaultsscc_info_Vtuber_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::vNerve::vdb::_Vtuber_NameTranslationEntry_DoNotUse_default_instance_;
+    new (ptr) ::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse();
+  }
+  ::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Vtuber_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Vtuber_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto}, {}};
 
 static void InitDefaultsscc_info_VtuberCollection_vNerve_2fvdb_2fvdb_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -113,7 +206,7 @@ static void InitDefaultsscc_info_VtuberCollection_vNerve_2fvdb_2fvdb_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_VtuberCollection_vNerve_2fvdb_2fvdb_2eproto}, {
       &scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_vNerve_2fvdb_2fvdb_2eproto[5];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_vNerve_2fvdb_2fvdb_2eproto[10];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_vNerve_2fvdb_2fvdb_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_vNerve_2fvdb_2fvdb_2eproto = nullptr;
 
@@ -124,11 +217,52 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fvdb_2fvdb_2eproto::of
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::GetLinkSyntaxsRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse, value_),
+  0,
+  1,
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::LinkSyntaxCollection, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::LinkSyntaxCollection, link_syntaxs_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::VtuberCollection, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::VtuberCollection, vtubers_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::GroupCollection, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::GroupCollection, groups_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::FanCollection, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::FanCollection, fans_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse, value_),
+  0,
+  1,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -138,20 +272,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fvdb_2fvdb_2eproto::of
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, type_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, bot_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, accounts_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, name_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, name_extra_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, name_translation_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, group_uuid_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, model_2d_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, model_3d_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, model_2d_artist_uuid_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Vtuber, model_3d_artist_uuid_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account_NameTranslationEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account_NameTranslationEntry_DoNotUse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account_NameTranslationEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account_NameTranslationEntry_DoNotUse, value_),
-  0,
-  1,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -160,80 +288,101 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fvdb_2fvdb_2eproto::of
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, id_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, account_type_),
   PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, account_platform_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, extra_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, name_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::vdb::Account, name_translation_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::vNerve::vdb::GetVtbsRequest)},
-  { 5, -1, sizeof(::vNerve::vdb::VtuberCollection)},
-  { 11, -1, sizeof(::vNerve::vdb::Vtuber)},
-  { 25, 32, sizeof(::vNerve::vdb::Account_NameTranslationEntry_DoNotUse)},
-  { 34, -1, sizeof(::vNerve::vdb::Account)},
+  { 5, -1, sizeof(::vNerve::vdb::GetLinkSyntaxsRequest)},
+  { 10, 17, sizeof(::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse)},
+  { 19, -1, sizeof(::vNerve::vdb::LinkSyntaxCollection)},
+  { 25, -1, sizeof(::vNerve::vdb::VtuberCollection)},
+  { 31, -1, sizeof(::vNerve::vdb::GroupCollection)},
+  { 37, -1, sizeof(::vNerve::vdb::FanCollection)},
+  { 43, 50, sizeof(::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse)},
+  { 52, -1, sizeof(::vNerve::vdb::Vtuber)},
+  { 69, -1, sizeof(::vNerve::vdb::Account)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_GetVtbsRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_GetLinkSyntaxsRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_LinkSyntaxCollection_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_VtuberCollection_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_GroupCollection_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_FanCollection_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_Vtuber_NameTranslationEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_Vtuber_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_Account_NameTranslationEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::vNerve::vdb::_Account_default_instance_),
 };
 
 const char descriptor_table_protodef_vNerve_2fvdb_2fvdb_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\024vNerve/vdb/vdb.proto\022\nvNerve.vdb\"\020\n\016Ge"
-  "tVtbsRequest\"7\n\020VtuberCollection\022#\n\007vtub"
-  "ers\030\001 \003(\0132\022.vNerve.vdb.Vtuber\"\344\001\n\006Vtuber"
-  "\022\014\n\004uuid\030\001 \001(\t\022$\n\004type\030\002 \001(\0162\026.vNerve.vd"
-  "b.VtuberType\022\013\n\003bot\030\003 \001(\010\022%\n\010accounts\030\004 "
-  "\003(\0132\023.vNerve.vdb.Account\022\022\n\ngroup_uuid\030\005"
-  " \001(\t\022\020\n\010model_2d\030\006 \001(\010\022\020\n\010model_3d\030\007 \001(\010"
-  "\022\034\n\024model_2d_artist_uuid\030\010 \001(\t\022\034\n\024model_"
-  "3d_artist_uuid\030\t \001(\t\"\224\002\n\007Account\022\n\n\002id\030\001"
-  " \001(\t\022-\n\014account_type\030\002 \001(\0162\027.vNerve.vdb."
-  "AccountType\0225\n\020account_platform\030\003 \001(\0162\033."
-  "vNerve.vdb.AccountPlatform\022\r\n\005extra\030\004 \003("
-  "\t\022\014\n\004name\030\005 \001(\t\022B\n\020name_translation\030\006 \003("
-  "\0132(.vNerve.vdb.Account.NameTranslationEn"
-  "try\0326\n\024NameTranslationEntry\022\013\n\003key\030\001 \001(\t"
-  "\022\r\n\005value\030\002 \001(\t:\0028\001*E\n\nVtuberType\022\027\n\023UNK"
-  "NOWN_VTUBER_TYPE\020\000\022\n\n\006VTUBER\020\001\022\t\n\005GROUP\020"
-  "\002\022\007\n\003FAN\020\003*@\n\013AccountType\022\030\n\024UNKNOWN_ACC"
-  "OUNT_TYPE\020\000\022\014\n\010OFFICIAL\020\001\022\t\n\005RELAY\020\002*\220\003\n"
-  "\017AccountPlatform\022\024\n\020UNKNOWN_PLATFORM\020\000\022\014"
-  "\n\010BILIBILI\020\001\022\013\n\007TWITTER\020\002\022\013\n\007YOUTUBE\020\003\022\r"
-  "\n\tUSERLOCAL\020\004\022\t\n\005PEING\020\005\022\017\n\013MARSHMALLOW\020"
-  "\006\022\t\n\005PIXIV\020\007\022\t\n\005WEIBO\020\010\022\t\n\005BOOTH\020\t\022\n\n\006AF"
-  "DIAN\020\n\022\007\n\003WEB\020\013\022\t\n\005EMAIL\020\014\022\r\n\tINSTAGRAM\020"
-  "\r\022\013\n\007POPIASK\020\016\022\020\n\014AMAZON_CO_JP\020\017\022\n\n\006TWIT"
-  "CH\020\020\022\014\n\010NICONICO\020\021\022\014\n\010FACEBOOK\020\022\022\r\n\tTEES"
-  "PRING\020\023\022\013\n\007PATREON\020\024\022\014\n\010JVCMUSIC\020\025\022\t\n\005CI"
-  "_EN\020\026\022\n\n\006GITHUB\020\027\022\010\n\004LINE\020\030\022\n\n\006TIKTOK\020\031\022"
-  "\n\n\006FANTIA\020\032\022\014\n\010SHOWROOM\020\033\022\014\n\010TELEGRAM\020\0342"
-  "\363\001\n\016VtuberDatabase\022K\n\rGetAllVtubers\022\032.vN"
-  "erve.vdb.GetVtbsRequest\032\034.vNerve.vdb.Vtu"
-  "berCollection\"\000\022J\n\014GetAllGroups\022\032.vNerve"
-  ".vdb.GetVtbsRequest\032\034.vNerve.vdb.VtuberC"
-  "ollection\"\000\022H\n\nGetAllFans\022\032.vNerve.vdb.G"
-  "etVtbsRequest\032\034.vNerve.vdb.VtuberCollect"
-  "ion\"\000b\006proto3"
+  "tVtbsRequest\"\027\n\025GetLinkSyntaxsRequest\"\223\001"
+  "\n\024LinkSyntaxCollection\022G\n\014link_syntaxs\030\001"
+  " \003(\01321.vNerve.vdb.LinkSyntaxCollection.L"
+  "inkSyntaxsEntry\0322\n\020LinkSyntaxsEntry\022\013\n\003k"
+  "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\020VtuberCol"
+  "lection\022#\n\007vtubers\030\001 \003(\0132\022.vNerve.vdb.Vt"
+  "uber\"5\n\017GroupCollection\022\"\n\006groups\030\001 \003(\0132"
+  "\022.vNerve.vdb.Vtuber\"1\n\rFanCollection\022 \n\004"
+  "fans\030\001 \003(\0132\022.vNerve.vdb.Vtuber\"\201\003\n\006Vtube"
+  "r\022\014\n\004uuid\030\001 \001(\t\022$\n\004type\030\002 \001(\0162\026.vNerve.v"
+  "db.VtuberType\022\013\n\003bot\030\003 \001(\010\022%\n\010accounts\030\004"
+  " \003(\0132\023.vNerve.vdb.Account\022\014\n\004name\030\005 \001(\t\022"
+  "\022\n\nname_extra\030\006 \003(\t\022A\n\020name_translation\030"
+  "\007 \003(\0132\'.vNerve.vdb.Vtuber.NameTranslatio"
+  "nEntry\022\022\n\ngroup_uuid\030\010 \001(\t\022\020\n\010model_2d\030\t"
+  " \001(\010\022\020\n\010model_3d\030\n \001(\010\022\034\n\024model_2d_artis"
+  "t_uuid\030\013 \001(\t\022\034\n\024model_3d_artist_uuid\030\014 \001"
+  "(\t\0326\n\024NameTranslationEntry\022\013\n\003key\030\001 \001(\t\022"
+  "\r\n\005value\030\002 \001(\t:\0028\001\"{\n\007Account\022\n\n\002id\030\001 \001("
+  "\t\022-\n\014account_type\030\002 \001(\0162\027.vNerve.vdb.Acc"
+  "ountType\0225\n\020account_platform\030\003 \001(\0162\033.vNe"
+  "rve.vdb.AccountPlatform*E\n\nVtuberType\022\027\n"
+  "\023UNKNOWN_VTUBER_TYPE\020\000\022\n\n\006VTUBER\020\001\022\t\n\005GR"
+  "OUP\020\002\022\007\n\003FAN\020\003*@\n\013AccountType\022\030\n\024UNKNOWN"
+  "_ACCOUNT_TYPE\020\000\022\014\n\010OFFICIAL\020\001\022\t\n\005RELAY\020\002"
+  "*\220\003\n\017AccountPlatform\022\024\n\020UNKNOWN_PLATFORM"
+  "\020\000\022\014\n\010BILIBILI\020\001\022\013\n\007TWITTER\020\002\022\013\n\007YOUTUBE"
+  "\020\003\022\r\n\tUSERLOCAL\020\004\022\t\n\005PEING\020\005\022\017\n\013MARSHMAL"
+  "LOW\020\006\022\t\n\005PIXIV\020\007\022\t\n\005WEIBO\020\010\022\t\n\005BOOTH\020\t\022\n"
+  "\n\006AFDIAN\020\n\022\007\n\003WEB\020\013\022\t\n\005EMAIL\020\014\022\r\n\tINSTAG"
+  "RAM\020\r\022\013\n\007POPIASK\020\016\022\020\n\014AMAZON_CO_JP\020\017\022\n\n\006"
+  "TWITCH\020\020\022\014\n\010NICONICO\020\021\022\014\n\010FACEBOOK\020\022\022\r\n\t"
+  "TEESPRING\020\023\022\013\n\007PATREON\020\024\022\014\n\010JVCMUSIC\020\025\022\t"
+  "\n\005CI_EN\020\026\022\n\n\006GITHUB\020\027\022\010\n\004LINE\020\030\022\n\n\006TIKTO"
+  "K\020\031\022\n\n\006FANTIA\020\032\022\014\n\010SHOWROOM\020\033\022\014\n\010TELEGRA"
+  "M\020\0342\310\002\n\016VtuberDatabase\022K\n\rGetAllVtubers\022"
+  "\032.vNerve.vdb.GetVtbsRequest\032\034.vNerve.vdb"
+  ".VtuberCollection\"\000\022I\n\014GetAllGroups\022\032.vN"
+  "erve.vdb.GetVtbsRequest\032\033.vNerve.vdb.Gro"
+  "upCollection\"\000\022E\n\nGetAllFans\022\032.vNerve.vd"
+  "b.GetVtbsRequest\032\031.vNerve.vdb.FanCollect"
+  "ion\"\000\022W\n\016GetLinkSyntaxs\022!.vNerve.vdb.Get"
+  "LinkSyntaxsRequest\032 .vNerve.vdb.LinkSynt"
+  "axCollection\"\000b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fvdb_2fvdb_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNerve_2fvdb_2fvdb_2eproto_sccs[5] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNerve_2fvdb_2fvdb_2eproto_sccs[10] = {
   &scc_info_Account_vNerve_2fvdb_2fvdb_2eproto.base,
-  &scc_info_Account_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto.base,
+  &scc_info_FanCollection_vNerve_2fvdb_2fvdb_2eproto.base,
+  &scc_info_GetLinkSyntaxsRequest_vNerve_2fvdb_2fvdb_2eproto.base,
   &scc_info_GetVtbsRequest_vNerve_2fvdb_2fvdb_2eproto.base,
+  &scc_info_GroupCollection_vNerve_2fvdb_2fvdb_2eproto.base,
+  &scc_info_LinkSyntaxCollection_vNerve_2fvdb_2fvdb_2eproto.base,
+  &scc_info_LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto.base,
   &scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto.base,
+  &scc_info_Vtuber_NameTranslationEntry_DoNotUse_vNerve_2fvdb_2fvdb_2eproto.base,
   &scc_info_VtuberCollection_vNerve_2fvdb_2fvdb_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fvdb_2fvdb_2eproto_once;
 static bool descriptor_table_vNerve_2fvdb_2fvdb_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fvdb_2fvdb_2eproto = {
-  &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_initialized, descriptor_table_protodef_vNerve_2fvdb_2fvdb_2eproto, "vNerve/vdb/vdb.proto", 1413,
-  &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_once, descriptor_table_vNerve_2fvdb_2fvdb_2eproto_sccs, descriptor_table_vNerve_2fvdb_2fvdb_2eproto_deps, 5, 0,
+  &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_initialized, descriptor_table_protodef_vNerve_2fvdb_2fvdb_2eproto, "vNerve/vdb/vdb.proto", 1782,
+  &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_once, descriptor_table_vNerve_2fvdb_2fvdb_2eproto_sccs, descriptor_table_vNerve_2fvdb_2fvdb_2eproto_deps, 10, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fvdb_2fvdb_2eproto::offsets,
-  file_level_metadata_vNerve_2fvdb_2fvdb_2eproto, 5, file_level_enum_descriptors_vNerve_2fvdb_2fvdb_2eproto, file_level_service_descriptors_vNerve_2fvdb_2fvdb_2eproto,
+  file_level_metadata_vNerve_2fvdb_2fvdb_2eproto, 10, file_level_enum_descriptors_vNerve_2fvdb_2fvdb_2eproto, file_level_service_descriptors_vNerve_2fvdb_2fvdb_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -469,6 +618,407 @@ void GetVtbsRequest::InternalSwap(GetVtbsRequest* other) {
 
 // ===================================================================
 
+void GetLinkSyntaxsRequest::InitAsDefaultInstance() {
+}
+class GetLinkSyntaxsRequest::_Internal {
+ public:
+};
+
+GetLinkSyntaxsRequest::GetLinkSyntaxsRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vNerve.vdb.GetLinkSyntaxsRequest)
+}
+GetLinkSyntaxsRequest::GetLinkSyntaxsRequest(const GetLinkSyntaxsRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:vNerve.vdb.GetLinkSyntaxsRequest)
+}
+
+void GetLinkSyntaxsRequest::SharedCtor() {
+}
+
+GetLinkSyntaxsRequest::~GetLinkSyntaxsRequest() {
+  // @@protoc_insertion_point(destructor:vNerve.vdb.GetLinkSyntaxsRequest)
+  SharedDtor();
+}
+
+void GetLinkSyntaxsRequest::SharedDtor() {
+}
+
+void GetLinkSyntaxsRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const GetLinkSyntaxsRequest& GetLinkSyntaxsRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetLinkSyntaxsRequest_vNerve_2fvdb_2fvdb_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void GetLinkSyntaxsRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
+}
+
+const char* GetLinkSyntaxsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* GetLinkSyntaxsRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vNerve.vdb.GetLinkSyntaxsRequest)
+  return target;
+}
+
+size_t GetLinkSyntaxsRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GetLinkSyntaxsRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GetLinkSyntaxsRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetLinkSyntaxsRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vNerve.vdb.GetLinkSyntaxsRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vNerve.vdb.GetLinkSyntaxsRequest)
+    MergeFrom(*source);
+  }
+}
+
+void GetLinkSyntaxsRequest::MergeFrom(const GetLinkSyntaxsRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void GetLinkSyntaxsRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GetLinkSyntaxsRequest::CopyFrom(const GetLinkSyntaxsRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vNerve.vdb.GetLinkSyntaxsRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GetLinkSyntaxsRequest::IsInitialized() const {
+  return true;
+}
+
+void GetLinkSyntaxsRequest::InternalSwap(GetLinkSyntaxsRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GetLinkSyntaxsRequest::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse() {}
+LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+    : SuperType(arena) {}
+void LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::MergeFrom(const LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::PROTOBUF_NAMESPACE_ID::Metadata LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+void LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::MergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
+}
+
+
+// ===================================================================
+
+void LinkSyntaxCollection::InitAsDefaultInstance() {
+}
+class LinkSyntaxCollection::_Internal {
+ public:
+};
+
+LinkSyntaxCollection::LinkSyntaxCollection()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vNerve.vdb.LinkSyntaxCollection)
+}
+LinkSyntaxCollection::LinkSyntaxCollection(const LinkSyntaxCollection& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  link_syntaxs_.MergeFrom(from.link_syntaxs_);
+  // @@protoc_insertion_point(copy_constructor:vNerve.vdb.LinkSyntaxCollection)
+}
+
+void LinkSyntaxCollection::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LinkSyntaxCollection_vNerve_2fvdb_2fvdb_2eproto.base);
+}
+
+LinkSyntaxCollection::~LinkSyntaxCollection() {
+  // @@protoc_insertion_point(destructor:vNerve.vdb.LinkSyntaxCollection)
+  SharedDtor();
+}
+
+void LinkSyntaxCollection::SharedDtor() {
+}
+
+void LinkSyntaxCollection::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const LinkSyntaxCollection& LinkSyntaxCollection::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LinkSyntaxCollection_vNerve_2fvdb_2fvdb_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void LinkSyntaxCollection::Clear() {
+// @@protoc_insertion_point(message_clear_start:vNerve.vdb.LinkSyntaxCollection)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  link_syntaxs_.Clear();
+  _internal_metadata_.Clear();
+}
+
+const char* LinkSyntaxCollection::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // map<string, string> link_syntaxs = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&link_syntaxs_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* LinkSyntaxCollection::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vNerve.vdb.LinkSyntaxCollection)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // map<string, string> link_syntaxs = 1;
+  if (!this->_internal_link_syntaxs().empty()) {
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry.key");
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry.value");
+      }
+    };
+
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_link_syntaxs().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->_internal_link_syntaxs().size()]);
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
+      size_type n = 0;
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+          it = this->_internal_link_syntaxs().begin();
+          it != this->_internal_link_syntaxs().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        target = LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::Funcs::InternalSerialize(1, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+          it = this->_internal_link_syntaxs().begin();
+          it != this->_internal_link_syntaxs().end(); ++it) {
+        target = LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::Funcs::InternalSerialize(1, it->first, it->second, target, stream);
+        Utf8Check::Check(&(*it));
+      }
+    }
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vNerve.vdb.LinkSyntaxCollection)
+  return target;
+}
+
+size_t LinkSyntaxCollection::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vNerve.vdb.LinkSyntaxCollection)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // map<string, string> link_syntaxs = 1;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_link_syntaxs_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+      it = this->_internal_link_syntaxs().begin();
+      it != this->_internal_link_syntaxs().end(); ++it) {
+    total_size += LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void LinkSyntaxCollection::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vNerve.vdb.LinkSyntaxCollection)
+  GOOGLE_DCHECK_NE(&from, this);
+  const LinkSyntaxCollection* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LinkSyntaxCollection>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vNerve.vdb.LinkSyntaxCollection)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vNerve.vdb.LinkSyntaxCollection)
+    MergeFrom(*source);
+  }
+}
+
+void LinkSyntaxCollection::MergeFrom(const LinkSyntaxCollection& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vNerve.vdb.LinkSyntaxCollection)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  link_syntaxs_.MergeFrom(from.link_syntaxs_);
+}
+
+void LinkSyntaxCollection::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vNerve.vdb.LinkSyntaxCollection)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void LinkSyntaxCollection::CopyFrom(const LinkSyntaxCollection& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vNerve.vdb.LinkSyntaxCollection)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LinkSyntaxCollection::IsInitialized() const {
+  return true;
+}
+
+void LinkSyntaxCollection::InternalSwap(LinkSyntaxCollection* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  link_syntaxs_.Swap(&other->link_syntaxs_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LinkSyntaxCollection::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void VtuberCollection::InitAsDefaultInstance() {
 }
 class VtuberCollection::_Internal {
@@ -660,6 +1210,405 @@ void VtuberCollection::InternalSwap(VtuberCollection* other) {
 
 // ===================================================================
 
+void GroupCollection::InitAsDefaultInstance() {
+}
+class GroupCollection::_Internal {
+ public:
+};
+
+GroupCollection::GroupCollection()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vNerve.vdb.GroupCollection)
+}
+GroupCollection::GroupCollection(const GroupCollection& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      groups_(from.groups_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:vNerve.vdb.GroupCollection)
+}
+
+void GroupCollection::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GroupCollection_vNerve_2fvdb_2fvdb_2eproto.base);
+}
+
+GroupCollection::~GroupCollection() {
+  // @@protoc_insertion_point(destructor:vNerve.vdb.GroupCollection)
+  SharedDtor();
+}
+
+void GroupCollection::SharedDtor() {
+}
+
+void GroupCollection::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const GroupCollection& GroupCollection::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GroupCollection_vNerve_2fvdb_2fvdb_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void GroupCollection::Clear() {
+// @@protoc_insertion_point(message_clear_start:vNerve.vdb.GroupCollection)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  groups_.Clear();
+  _internal_metadata_.Clear();
+}
+
+const char* GroupCollection::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .vNerve.vdb.Vtuber groups = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_groups(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* GroupCollection::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vNerve.vdb.GroupCollection)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .vNerve.vdb.Vtuber groups = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_groups_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_groups(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vNerve.vdb.GroupCollection)
+  return target;
+}
+
+size_t GroupCollection::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vNerve.vdb.GroupCollection)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .vNerve.vdb.Vtuber groups = 1;
+  total_size += 1UL * this->_internal_groups_size();
+  for (const auto& msg : this->groups_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void GroupCollection::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vNerve.vdb.GroupCollection)
+  GOOGLE_DCHECK_NE(&from, this);
+  const GroupCollection* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GroupCollection>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vNerve.vdb.GroupCollection)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vNerve.vdb.GroupCollection)
+    MergeFrom(*source);
+  }
+}
+
+void GroupCollection::MergeFrom(const GroupCollection& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vNerve.vdb.GroupCollection)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  groups_.MergeFrom(from.groups_);
+}
+
+void GroupCollection::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vNerve.vdb.GroupCollection)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void GroupCollection::CopyFrom(const GroupCollection& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vNerve.vdb.GroupCollection)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool GroupCollection::IsInitialized() const {
+  return true;
+}
+
+void GroupCollection::InternalSwap(GroupCollection* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  groups_.InternalSwap(&other->groups_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata GroupCollection::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void FanCollection::InitAsDefaultInstance() {
+}
+class FanCollection::_Internal {
+ public:
+};
+
+FanCollection::FanCollection()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:vNerve.vdb.FanCollection)
+}
+FanCollection::FanCollection(const FanCollection& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      fans_(from.fans_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:vNerve.vdb.FanCollection)
+}
+
+void FanCollection::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_FanCollection_vNerve_2fvdb_2fvdb_2eproto.base);
+}
+
+FanCollection::~FanCollection() {
+  // @@protoc_insertion_point(destructor:vNerve.vdb.FanCollection)
+  SharedDtor();
+}
+
+void FanCollection::SharedDtor() {
+}
+
+void FanCollection::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const FanCollection& FanCollection::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FanCollection_vNerve_2fvdb_2fvdb_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void FanCollection::Clear() {
+// @@protoc_insertion_point(message_clear_start:vNerve.vdb.FanCollection)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  fans_.Clear();
+  _internal_metadata_.Clear();
+}
+
+const char* FanCollection::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .vNerve.vdb.Vtuber fans = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_fans(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* FanCollection::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:vNerve.vdb.FanCollection)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .vNerve.vdb.Vtuber fans = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_fans_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_fans(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:vNerve.vdb.FanCollection)
+  return target;
+}
+
+size_t FanCollection::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:vNerve.vdb.FanCollection)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .vNerve.vdb.Vtuber fans = 1;
+  total_size += 1UL * this->_internal_fans_size();
+  for (const auto& msg : this->fans_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void FanCollection::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:vNerve.vdb.FanCollection)
+  GOOGLE_DCHECK_NE(&from, this);
+  const FanCollection* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FanCollection>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:vNerve.vdb.FanCollection)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:vNerve.vdb.FanCollection)
+    MergeFrom(*source);
+  }
+}
+
+void FanCollection::MergeFrom(const FanCollection& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:vNerve.vdb.FanCollection)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  fans_.MergeFrom(from.fans_);
+}
+
+void FanCollection::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:vNerve.vdb.FanCollection)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void FanCollection::CopyFrom(const FanCollection& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:vNerve.vdb.FanCollection)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool FanCollection::IsInitialized() const {
+  return true;
+}
+
+void FanCollection::InternalSwap(FanCollection* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  fans_.InternalSwap(&other->fans_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata FanCollection::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+Vtuber_NameTranslationEntry_DoNotUse::Vtuber_NameTranslationEntry_DoNotUse() {}
+Vtuber_NameTranslationEntry_DoNotUse::Vtuber_NameTranslationEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+    : SuperType(arena) {}
+void Vtuber_NameTranslationEntry_DoNotUse::MergeFrom(const Vtuber_NameTranslationEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::PROTOBUF_NAMESPACE_ID::Metadata Vtuber_NameTranslationEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+void Vtuber_NameTranslationEntry_DoNotUse::MergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
+}
+
+
+// ===================================================================
+
 void Vtuber::InitAsDefaultInstance() {
 }
 class Vtuber::_Internal {
@@ -674,11 +1623,17 @@ Vtuber::Vtuber()
 Vtuber::Vtuber(const Vtuber& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
-      accounts_(from.accounts_) {
+      accounts_(from.accounts_),
+      name_extra_(from.name_extra_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  name_translation_.MergeFrom(from.name_translation_);
   uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_uuid().empty()) {
     uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  }
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   group_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_group_uuid().empty()) {
@@ -701,6 +1656,7 @@ Vtuber::Vtuber(const Vtuber& from)
 void Vtuber::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Vtuber_vNerve_2fvdb_2fvdb_2eproto.base);
   uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   group_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   model_2d_artist_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   model_3d_artist_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -716,6 +1672,7 @@ Vtuber::~Vtuber() {
 
 void Vtuber::SharedDtor() {
   uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   group_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   model_2d_artist_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   model_3d_artist_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -737,7 +1694,10 @@ void Vtuber::Clear() {
   (void) cached_has_bits;
 
   accounts_.Clear();
+  name_extra_.Clear();
+  name_translation_.Clear();
   uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   group_uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   model_2d_artist_uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   model_3d_artist_uuid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -790,41 +1750,76 @@ const char* Vtuber::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
-      // string group_uuid = 5;
+      // string name = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Vtuber.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string name_extra = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_name_extra();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Vtuber.name_extra"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // map<string, string> name_translation = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&name_translation_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // string group_uuid = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           auto str = _internal_mutable_group_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Vtuber.group_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool model_2d = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+      // bool model_2d = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 72)) {
           model_2d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool model_3d = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+      // bool model_3d = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
           model_3d_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string model_2d_artist_uuid = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+      // string model_2d_artist_uuid = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           auto str = _internal_mutable_model_2d_artist_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Vtuber.model_2d_artist_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string model_3d_artist_uuid = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+      // string model_3d_artist_uuid = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
           auto str = _internal_mutable_model_3d_artist_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Vtuber.model_3d_artist_uuid"));
@@ -888,46 +1883,111 @@ failure:
       InternalWriteMessage(4, this->_internal_accounts(i), target, stream);
   }
 
-  // string group_uuid = 5;
+  // string name = 5;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vNerve.vdb.Vtuber.name");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_name(), target);
+  }
+
+  // repeated string name_extra = 6;
+  for (int i = 0, n = this->_internal_name_extra_size(); i < n; i++) {
+    const auto& s = this->_internal_name_extra(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vNerve.vdb.Vtuber.name_extra");
+    target = stream->WriteString(6, s, target);
+  }
+
+  // map<string, string> name_translation = 7;
+  if (!this->_internal_name_translation().empty()) {
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "vNerve.vdb.Vtuber.NameTranslationEntry.key");
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "vNerve.vdb.Vtuber.NameTranslationEntry.value");
+      }
+    };
+
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_name_translation().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->_internal_name_translation().size()]);
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
+      size_type n = 0;
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+          it = this->_internal_name_translation().begin();
+          it != this->_internal_name_translation().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        target = Vtuber_NameTranslationEntry_DoNotUse::Funcs::InternalSerialize(7, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+          it = this->_internal_name_translation().begin();
+          it != this->_internal_name_translation().end(); ++it) {
+        target = Vtuber_NameTranslationEntry_DoNotUse::Funcs::InternalSerialize(7, it->first, it->second, target, stream);
+        Utf8Check::Check(&(*it));
+      }
+    }
+  }
+
+  // string group_uuid = 8;
   if (this->group_uuid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_group_uuid().data(), static_cast<int>(this->_internal_group_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "vNerve.vdb.Vtuber.group_uuid");
     target = stream->WriteStringMaybeAliased(
-        5, this->_internal_group_uuid(), target);
+        8, this->_internal_group_uuid(), target);
   }
 
-  // bool model_2d = 6;
+  // bool model_2d = 9;
   if (this->model_2d() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_model_2d(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(9, this->_internal_model_2d(), target);
   }
 
-  // bool model_3d = 7;
+  // bool model_3d = 10;
   if (this->model_3d() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->_internal_model_3d(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(10, this->_internal_model_3d(), target);
   }
 
-  // string model_2d_artist_uuid = 8;
+  // string model_2d_artist_uuid = 11;
   if (this->model_2d_artist_uuid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_model_2d_artist_uuid().data(), static_cast<int>(this->_internal_model_2d_artist_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "vNerve.vdb.Vtuber.model_2d_artist_uuid");
     target = stream->WriteStringMaybeAliased(
-        8, this->_internal_model_2d_artist_uuid(), target);
+        11, this->_internal_model_2d_artist_uuid(), target);
   }
 
-  // string model_3d_artist_uuid = 9;
+  // string model_3d_artist_uuid = 12;
   if (this->model_3d_artist_uuid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_model_3d_artist_uuid().data(), static_cast<int>(this->_internal_model_3d_artist_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "vNerve.vdb.Vtuber.model_3d_artist_uuid");
     target = stream->WriteStringMaybeAliased(
-        9, this->_internal_model_3d_artist_uuid(), target);
+        12, this->_internal_model_3d_artist_uuid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -953,6 +2013,23 @@ size_t Vtuber::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // repeated string name_extra = 6;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(name_extra_.size());
+  for (int i = 0, n = name_extra_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      name_extra_.Get(i));
+  }
+
+  // map<string, string> name_translation = 7;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_name_translation_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+      it = this->_internal_name_translation().begin();
+      it != this->_internal_name_translation().end(); ++it) {
+    total_size += Vtuber_NameTranslationEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
+  }
+
   // string uuid = 1;
   if (this->uuid().size() > 0) {
     total_size += 1 +
@@ -960,21 +2037,28 @@ size_t Vtuber::ByteSizeLong() const {
         this->_internal_uuid());
   }
 
-  // string group_uuid = 5;
+  // string name = 5;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // string group_uuid = 8;
   if (this->group_uuid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_group_uuid());
   }
 
-  // string model_2d_artist_uuid = 8;
+  // string model_2d_artist_uuid = 11;
   if (this->model_2d_artist_uuid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_model_2d_artist_uuid());
   }
 
-  // string model_3d_artist_uuid = 9;
+  // string model_3d_artist_uuid = 12;
   if (this->model_3d_artist_uuid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -992,12 +2076,12 @@ size_t Vtuber::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  // bool model_2d = 6;
+  // bool model_2d = 9;
   if (this->model_2d() != 0) {
     total_size += 1 + 1;
   }
 
-  // bool model_3d = 7;
+  // bool model_3d = 10;
   if (this->model_3d() != 0) {
     total_size += 1 + 1;
   }
@@ -1034,9 +2118,15 @@ void Vtuber::MergeFrom(const Vtuber& from) {
   (void) cached_has_bits;
 
   accounts_.MergeFrom(from.accounts_);
+  name_extra_.MergeFrom(from.name_extra_);
+  name_translation_.MergeFrom(from.name_translation_);
   if (from.uuid().size() > 0) {
 
     uuid_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  }
+  if (from.name().size() > 0) {
+
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   if (from.group_uuid().size() > 0) {
 
@@ -1086,7 +2176,11 @@ void Vtuber::InternalSwap(Vtuber* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   accounts_.InternalSwap(&other->accounts_);
+  name_extra_.InternalSwap(&other->name_extra_);
+  name_translation_.Swap(&other->name_translation_);
   uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   group_uuid_.Swap(&other->group_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
@@ -1107,23 +2201,6 @@ void Vtuber::InternalSwap(Vtuber* other) {
 
 // ===================================================================
 
-Account_NameTranslationEntry_DoNotUse::Account_NameTranslationEntry_DoNotUse() {}
-Account_NameTranslationEntry_DoNotUse::Account_NameTranslationEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-    : SuperType(arena) {}
-void Account_NameTranslationEntry_DoNotUse::MergeFrom(const Account_NameTranslationEntry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
-::PROTOBUF_NAMESPACE_ID::Metadata Account_NameTranslationEntry_DoNotUse::GetMetadata() const {
-  return GetMetadataStatic();
-}
-void Account_NameTranslationEntry_DoNotUse::MergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
-  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
-}
-
-
-// ===================================================================
-
 void Account::InitAsDefaultInstance() {
 }
 class Account::_Internal {
@@ -1137,17 +2214,11 @@ Account::Account()
 }
 Account::Account(const Account& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr),
-      extra_(from.extra_) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_translation_.MergeFrom(from.name_translation_);
   id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_id().empty()) {
     id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_name().empty()) {
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   ::memcpy(&account_type_, &from.account_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&account_platform_) -
@@ -1158,7 +2229,6 @@ Account::Account(const Account& from)
 void Account::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Account_vNerve_2fvdb_2fvdb_2eproto.base);
   id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&account_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&account_platform_) -
       reinterpret_cast<char*>(&account_type_)) + sizeof(account_platform_));
@@ -1171,7 +2241,6 @@ Account::~Account() {
 
 void Account::SharedDtor() {
   id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void Account::SetCachedSize(int size) const {
@@ -1189,10 +2258,7 @@ void Account::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  extra_.Clear();
-  name_translation_.Clear();
   id_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&account_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&account_platform_) -
       reinterpret_cast<char*>(&account_type_)) + sizeof(account_platform_));
@@ -1229,41 +2295,6 @@ const char* Account::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
           _internal_set_account_platform(static_cast<::vNerve::vdb::AccountPlatform>(val));
-        } else goto handle_unusual;
-        continue;
-      // repeated string extra = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            auto str = _internal_add_extra();
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Account.extra"));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // string name = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.vdb.Account.name"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // map<string, string> name_translation = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(&name_translation_, ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1316,71 +2347,6 @@ failure:
       3, this->_internal_account_platform(), target);
   }
 
-  // repeated string extra = 4;
-  for (int i = 0, n = this->_internal_extra_size(); i < n; i++) {
-    const auto& s = this->_internal_extra(i);
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      s.data(), static_cast<int>(s.length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vNerve.vdb.Account.extra");
-    target = stream->WriteString(4, s, target);
-  }
-
-  // string name = 5;
-  if (this->name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vNerve.vdb.Account.name");
-    target = stream->WriteStringMaybeAliased(
-        5, this->_internal_name(), target);
-  }
-
-  // map<string, string> name_translation = 6;
-  if (!this->_internal_name_translation().empty()) {
-    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "vNerve.vdb.Account.NameTranslationEntry.key");
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->second.data(), static_cast<int>(p->second.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "vNerve.vdb.Account.NameTranslationEntry.value");
-      }
-    };
-
-    if (stream->IsSerializationDeterministic() &&
-        this->_internal_name_translation().size() > 1) {
-      ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->_internal_name_translation().size()]);
-      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
-      size_type n = 0;
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->_internal_name_translation().begin();
-          it != this->_internal_name_translation().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      for (size_type i = 0; i < n; i++) {
-        target = Account_NameTranslationEntry_DoNotUse::Funcs::InternalSerialize(6, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
-        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
-      }
-    } else {
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->_internal_name_translation().begin();
-          it != this->_internal_name_translation().end(); ++it) {
-        target = Account_NameTranslationEntry_DoNotUse::Funcs::InternalSerialize(6, it->first, it->second, target, stream);
-        Utf8Check::Check(&(*it));
-      }
-    }
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -1397,35 +2363,11 @@ size_t Account::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string extra = 4;
-  total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(extra_.size());
-  for (int i = 0, n = extra_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      extra_.Get(i));
-  }
-
-  // map<string, string> name_translation = 6;
-  total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_name_translation_size());
-  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-      it = this->_internal_name_translation().begin();
-      it != this->_internal_name_translation().end(); ++it) {
-    total_size += Account_NameTranslationEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
-  }
-
   // string id = 1;
   if (this->id().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_id());
-  }
-
-  // string name = 5;
-  if (this->name().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_name());
   }
 
   // .vNerve.vdb.AccountType account_type = 2;
@@ -1471,15 +2413,9 @@ void Account::MergeFrom(const Account& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  extra_.MergeFrom(from.extra_);
-  name_translation_.MergeFrom(from.name_translation_);
   if (from.id().size() > 0) {
 
     id_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.id_);
-  }
-  if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
   if (from.account_type() != 0) {
     _internal_set_account_type(from._internal_account_type());
@@ -1510,11 +2446,7 @@ bool Account::IsInitialized() const {
 void Account::InternalSwap(Account* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  extra_.InternalSwap(&other->extra_);
-  name_translation_.Swap(&other->name_translation_);
   id_.Swap(&other->id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(account_type_, other->account_type_);
   swap(account_platform_, other->account_platform_);
@@ -1532,14 +2464,29 @@ PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::vNerve::vdb::GetVtbsRequest* Arena::CreateMaybeMessage< ::vNerve::vdb::GetVtbsRequest >(Arena* arena) {
   return Arena::CreateInternal< ::vNerve::vdb::GetVtbsRequest >(arena);
 }
+template<> PROTOBUF_NOINLINE ::vNerve::vdb::GetLinkSyntaxsRequest* Arena::CreateMaybeMessage< ::vNerve::vdb::GetLinkSyntaxsRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::vdb::GetLinkSyntaxsRequest >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse* Arena::CreateMaybeMessage< ::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::vdb::LinkSyntaxCollection_LinkSyntaxsEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vNerve::vdb::LinkSyntaxCollection* Arena::CreateMaybeMessage< ::vNerve::vdb::LinkSyntaxCollection >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::vdb::LinkSyntaxCollection >(arena);
+}
 template<> PROTOBUF_NOINLINE ::vNerve::vdb::VtuberCollection* Arena::CreateMaybeMessage< ::vNerve::vdb::VtuberCollection >(Arena* arena) {
   return Arena::CreateInternal< ::vNerve::vdb::VtuberCollection >(arena);
 }
+template<> PROTOBUF_NOINLINE ::vNerve::vdb::GroupCollection* Arena::CreateMaybeMessage< ::vNerve::vdb::GroupCollection >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::vdb::GroupCollection >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vNerve::vdb::FanCollection* Arena::CreateMaybeMessage< ::vNerve::vdb::FanCollection >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::vdb::FanCollection >(arena);
+}
+template<> PROTOBUF_NOINLINE ::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse* Arena::CreateMaybeMessage< ::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::vNerve::vdb::Vtuber_NameTranslationEntry_DoNotUse >(arena);
+}
 template<> PROTOBUF_NOINLINE ::vNerve::vdb::Vtuber* Arena::CreateMaybeMessage< ::vNerve::vdb::Vtuber >(Arena* arena) {
   return Arena::CreateInternal< ::vNerve::vdb::Vtuber >(arena);
-}
-template<> PROTOBUF_NOINLINE ::vNerve::vdb::Account_NameTranslationEntry_DoNotUse* Arena::CreateMaybeMessage< ::vNerve::vdb::Account_NameTranslationEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::vdb::Account_NameTranslationEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::vdb::Account* Arena::CreateMaybeMessage< ::vNerve::vdb::Account >(Arena* arena) {
   return Arena::CreateInternal< ::vNerve::vdb::Account >(arena);

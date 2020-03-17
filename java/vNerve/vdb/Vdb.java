@@ -1014,6 +1014,1152 @@ public final class Vdb {
 
   }
 
+  public interface GetLinkSyntaxsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:vNerve.vdb.GetLinkSyntaxsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code vNerve.vdb.GetLinkSyntaxsRequest}
+   */
+  public  static final class GetLinkSyntaxsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:vNerve.vdb.GetLinkSyntaxsRequest)
+      GetLinkSyntaxsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetLinkSyntaxsRequest.newBuilder() to construct.
+    private GetLinkSyntaxsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetLinkSyntaxsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetLinkSyntaxsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetLinkSyntaxsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GetLinkSyntaxsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GetLinkSyntaxsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              vNerve.vdb.Vdb.GetLinkSyntaxsRequest.class, vNerve.vdb.Vdb.GetLinkSyntaxsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof vNerve.vdb.Vdb.GetLinkSyntaxsRequest)) {
+        return super.equals(obj);
+      }
+      vNerve.vdb.Vdb.GetLinkSyntaxsRequest other = (vNerve.vdb.Vdb.GetLinkSyntaxsRequest) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(vNerve.vdb.Vdb.GetLinkSyntaxsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code vNerve.vdb.GetLinkSyntaxsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:vNerve.vdb.GetLinkSyntaxsRequest)
+        vNerve.vdb.Vdb.GetLinkSyntaxsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GetLinkSyntaxsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GetLinkSyntaxsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                vNerve.vdb.Vdb.GetLinkSyntaxsRequest.class, vNerve.vdb.Vdb.GetLinkSyntaxsRequest.Builder.class);
+      }
+
+      // Construct using vNerve.vdb.Vdb.GetLinkSyntaxsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GetLinkSyntaxsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.GetLinkSyntaxsRequest getDefaultInstanceForType() {
+        return vNerve.vdb.Vdb.GetLinkSyntaxsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.GetLinkSyntaxsRequest build() {
+        vNerve.vdb.Vdb.GetLinkSyntaxsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.GetLinkSyntaxsRequest buildPartial() {
+        vNerve.vdb.Vdb.GetLinkSyntaxsRequest result = new vNerve.vdb.Vdb.GetLinkSyntaxsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof vNerve.vdb.Vdb.GetLinkSyntaxsRequest) {
+          return mergeFrom((vNerve.vdb.Vdb.GetLinkSyntaxsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(vNerve.vdb.Vdb.GetLinkSyntaxsRequest other) {
+        if (other == vNerve.vdb.Vdb.GetLinkSyntaxsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        vNerve.vdb.Vdb.GetLinkSyntaxsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (vNerve.vdb.Vdb.GetLinkSyntaxsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:vNerve.vdb.GetLinkSyntaxsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:vNerve.vdb.GetLinkSyntaxsRequest)
+    private static final vNerve.vdb.Vdb.GetLinkSyntaxsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new vNerve.vdb.Vdb.GetLinkSyntaxsRequest();
+    }
+
+    public static vNerve.vdb.Vdb.GetLinkSyntaxsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetLinkSyntaxsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetLinkSyntaxsRequest>() {
+      @java.lang.Override
+      public GetLinkSyntaxsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetLinkSyntaxsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetLinkSyntaxsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetLinkSyntaxsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public vNerve.vdb.Vdb.GetLinkSyntaxsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LinkSyntaxCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:vNerve.vdb.LinkSyntaxCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+    int getLinkSyntaxsCount();
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+    boolean containsLinkSyntaxs(
+        java.lang.String key);
+    /**
+     * Use {@link #getLinkSyntaxsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLinkSyntaxs();
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLinkSyntaxsMap();
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+
+    java.lang.String getLinkSyntaxsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+
+    java.lang.String getLinkSyntaxsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code vNerve.vdb.LinkSyntaxCollection}
+   */
+  public  static final class LinkSyntaxCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:vNerve.vdb.LinkSyntaxCollection)
+      LinkSyntaxCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LinkSyntaxCollection.newBuilder() to construct.
+    private LinkSyntaxCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LinkSyntaxCollection() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LinkSyntaxCollection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LinkSyntaxCollection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                linkSyntaxs_ = com.google.protobuf.MapField.newMapField(
+                    LinkSyntaxsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              linkSyntaxs__ = input.readMessage(
+                  LinkSyntaxsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              linkSyntaxs_.getMutableMap().put(
+                  linkSyntaxs__.getKey(), linkSyntaxs__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 1:
+          return internalGetLinkSyntaxs();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_LinkSyntaxCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              vNerve.vdb.Vdb.LinkSyntaxCollection.class, vNerve.vdb.Vdb.LinkSyntaxCollection.Builder.class);
+    }
+
+    public static final int LINK_SYNTAXS_FIELD_NUMBER = 1;
+    private static final class LinkSyntaxsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  vNerve.vdb.Vdb.internal_static_vNerve_vdb_LinkSyntaxCollection_LinkSyntaxsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> linkSyntaxs_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLinkSyntaxs() {
+      if (linkSyntaxs_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LinkSyntaxsDefaultEntryHolder.defaultEntry);
+      }
+      return linkSyntaxs_;
+    }
+
+    public int getLinkSyntaxsCount() {
+      return internalGetLinkSyntaxs().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+
+    public boolean containsLinkSyntaxs(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLinkSyntaxs().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLinkSyntaxsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLinkSyntaxs() {
+      return getLinkSyntaxsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLinkSyntaxsMap() {
+      return internalGetLinkSyntaxs().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+
+    public java.lang.String getLinkSyntaxsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLinkSyntaxs().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+     */
+
+    public java.lang.String getLinkSyntaxsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLinkSyntaxs().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLinkSyntaxs(),
+          LinkSyntaxsDefaultEntryHolder.defaultEntry,
+          1);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLinkSyntaxs().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        linkSyntaxs__ = LinkSyntaxsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, linkSyntaxs__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof vNerve.vdb.Vdb.LinkSyntaxCollection)) {
+        return super.equals(obj);
+      }
+      vNerve.vdb.Vdb.LinkSyntaxCollection other = (vNerve.vdb.Vdb.LinkSyntaxCollection) obj;
+
+      if (!internalGetLinkSyntaxs().equals(
+          other.internalGetLinkSyntaxs())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (!internalGetLinkSyntaxs().getMap().isEmpty()) {
+        hash = (37 * hash) + LINK_SYNTAXS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLinkSyntaxs().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(vNerve.vdb.Vdb.LinkSyntaxCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code vNerve.vdb.LinkSyntaxCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:vNerve.vdb.LinkSyntaxCollection)
+        vNerve.vdb.Vdb.LinkSyntaxCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetLinkSyntaxs();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 1:
+            return internalGetMutableLinkSyntaxs();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_LinkSyntaxCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                vNerve.vdb.Vdb.LinkSyntaxCollection.class, vNerve.vdb.Vdb.LinkSyntaxCollection.Builder.class);
+      }
+
+      // Construct using vNerve.vdb.Vdb.LinkSyntaxCollection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        internalGetMutableLinkSyntaxs().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.LinkSyntaxCollection getDefaultInstanceForType() {
+        return vNerve.vdb.Vdb.LinkSyntaxCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.LinkSyntaxCollection build() {
+        vNerve.vdb.Vdb.LinkSyntaxCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.LinkSyntaxCollection buildPartial() {
+        vNerve.vdb.Vdb.LinkSyntaxCollection result = new vNerve.vdb.Vdb.LinkSyntaxCollection(this);
+        int from_bitField0_ = bitField0_;
+        result.linkSyntaxs_ = internalGetLinkSyntaxs();
+        result.linkSyntaxs_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof vNerve.vdb.Vdb.LinkSyntaxCollection) {
+          return mergeFrom((vNerve.vdb.Vdb.LinkSyntaxCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(vNerve.vdb.Vdb.LinkSyntaxCollection other) {
+        if (other == vNerve.vdb.Vdb.LinkSyntaxCollection.getDefaultInstance()) return this;
+        internalGetMutableLinkSyntaxs().mergeFrom(
+            other.internalGetLinkSyntaxs());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        vNerve.vdb.Vdb.LinkSyntaxCollection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (vNerve.vdb.Vdb.LinkSyntaxCollection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> linkSyntaxs_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLinkSyntaxs() {
+        if (linkSyntaxs_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LinkSyntaxsDefaultEntryHolder.defaultEntry);
+        }
+        return linkSyntaxs_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLinkSyntaxs() {
+        onChanged();;
+        if (linkSyntaxs_ == null) {
+          linkSyntaxs_ = com.google.protobuf.MapField.newMapField(
+              LinkSyntaxsDefaultEntryHolder.defaultEntry);
+        }
+        if (!linkSyntaxs_.isMutable()) {
+          linkSyntaxs_ = linkSyntaxs_.copy();
+        }
+        return linkSyntaxs_;
+      }
+
+      public int getLinkSyntaxsCount() {
+        return internalGetLinkSyntaxs().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+
+      public boolean containsLinkSyntaxs(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLinkSyntaxs().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLinkSyntaxsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLinkSyntaxs() {
+        return getLinkSyntaxsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLinkSyntaxsMap() {
+        return internalGetLinkSyntaxs().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+
+      public java.lang.String getLinkSyntaxsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLinkSyntaxs().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+
+      public java.lang.String getLinkSyntaxsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLinkSyntaxs().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLinkSyntaxs() {
+        internalGetMutableLinkSyntaxs().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+
+      public Builder removeLinkSyntaxs(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLinkSyntaxs().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLinkSyntaxs() {
+        return internalGetMutableLinkSyntaxs().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+      public Builder putLinkSyntaxs(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLinkSyntaxs().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; link_syntaxs = 1;</code>
+       */
+
+      public Builder putAllLinkSyntaxs(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLinkSyntaxs().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:vNerve.vdb.LinkSyntaxCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:vNerve.vdb.LinkSyntaxCollection)
+    private static final vNerve.vdb.Vdb.LinkSyntaxCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new vNerve.vdb.Vdb.LinkSyntaxCollection();
+    }
+
+    public static vNerve.vdb.Vdb.LinkSyntaxCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LinkSyntaxCollection>
+        PARSER = new com.google.protobuf.AbstractParser<LinkSyntaxCollection>() {
+      @java.lang.Override
+      public LinkSyntaxCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LinkSyntaxCollection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LinkSyntaxCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LinkSyntaxCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public vNerve.vdb.Vdb.LinkSyntaxCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface VtuberCollectionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:vNerve.vdb.VtuberCollection)
       com.google.protobuf.MessageOrBuilder {
@@ -1802,6 +2948,1582 @@ public final class Vdb {
 
   }
 
+  public interface GroupCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:vNerve.vdb.GroupCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    java.util.List<vNerve.vdb.Vdb.Vtuber> 
+        getGroupsList();
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    vNerve.vdb.Vdb.Vtuber getGroups(int index);
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    int getGroupsCount();
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    java.util.List<? extends vNerve.vdb.Vdb.VtuberOrBuilder> 
+        getGroupsOrBuilderList();
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    vNerve.vdb.Vdb.VtuberOrBuilder getGroupsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code vNerve.vdb.GroupCollection}
+   */
+  public  static final class GroupCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:vNerve.vdb.GroupCollection)
+      GroupCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GroupCollection.newBuilder() to construct.
+    private GroupCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GroupCollection() {
+      groups_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GroupCollection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GroupCollection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                groups_ = new java.util.ArrayList<vNerve.vdb.Vdb.Vtuber>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              groups_.add(
+                  input.readMessage(vNerve.vdb.Vdb.Vtuber.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          groups_ = java.util.Collections.unmodifiableList(groups_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GroupCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GroupCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              vNerve.vdb.Vdb.GroupCollection.class, vNerve.vdb.Vdb.GroupCollection.Builder.class);
+    }
+
+    public static final int GROUPS_FIELD_NUMBER = 1;
+    private java.util.List<vNerve.vdb.Vdb.Vtuber> groups_;
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    public java.util.List<vNerve.vdb.Vdb.Vtuber> getGroupsList() {
+      return groups_;
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    public java.util.List<? extends vNerve.vdb.Vdb.VtuberOrBuilder> 
+        getGroupsOrBuilderList() {
+      return groups_;
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    public int getGroupsCount() {
+      return groups_.size();
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    public vNerve.vdb.Vdb.Vtuber getGroups(int index) {
+      return groups_.get(index);
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+     */
+    public vNerve.vdb.Vdb.VtuberOrBuilder getGroupsOrBuilder(
+        int index) {
+      return groups_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < groups_.size(); i++) {
+        output.writeMessage(1, groups_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < groups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, groups_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof vNerve.vdb.Vdb.GroupCollection)) {
+        return super.equals(obj);
+      }
+      vNerve.vdb.Vdb.GroupCollection other = (vNerve.vdb.Vdb.GroupCollection) obj;
+
+      if (!getGroupsList()
+          .equals(other.getGroupsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getGroupsCount() > 0) {
+        hash = (37 * hash) + GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getGroupsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.GroupCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(vNerve.vdb.Vdb.GroupCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code vNerve.vdb.GroupCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:vNerve.vdb.GroupCollection)
+        vNerve.vdb.Vdb.GroupCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GroupCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GroupCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                vNerve.vdb.Vdb.GroupCollection.class, vNerve.vdb.Vdb.GroupCollection.Builder.class);
+      }
+
+      // Construct using vNerve.vdb.Vdb.GroupCollection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getGroupsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          groupsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_GroupCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.GroupCollection getDefaultInstanceForType() {
+        return vNerve.vdb.Vdb.GroupCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.GroupCollection build() {
+        vNerve.vdb.Vdb.GroupCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.GroupCollection buildPartial() {
+        vNerve.vdb.Vdb.GroupCollection result = new vNerve.vdb.Vdb.GroupCollection(this);
+        int from_bitField0_ = bitField0_;
+        if (groupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            groups_ = java.util.Collections.unmodifiableList(groups_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.groups_ = groups_;
+        } else {
+          result.groups_ = groupsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof vNerve.vdb.Vdb.GroupCollection) {
+          return mergeFrom((vNerve.vdb.Vdb.GroupCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(vNerve.vdb.Vdb.GroupCollection other) {
+        if (other == vNerve.vdb.Vdb.GroupCollection.getDefaultInstance()) return this;
+        if (groupsBuilder_ == null) {
+          if (!other.groups_.isEmpty()) {
+            if (groups_.isEmpty()) {
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureGroupsIsMutable();
+              groups_.addAll(other.groups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.groups_.isEmpty()) {
+            if (groupsBuilder_.isEmpty()) {
+              groupsBuilder_.dispose();
+              groupsBuilder_ = null;
+              groups_ = other.groups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              groupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGroupsFieldBuilder() : null;
+            } else {
+              groupsBuilder_.addAllMessages(other.groups_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        vNerve.vdb.Vdb.GroupCollection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (vNerve.vdb.Vdb.GroupCollection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<vNerve.vdb.Vdb.Vtuber> groups_ =
+        java.util.Collections.emptyList();
+      private void ensureGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          groups_ = new java.util.ArrayList<vNerve.vdb.Vdb.Vtuber>(groups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          vNerve.vdb.Vdb.Vtuber, vNerve.vdb.Vdb.Vtuber.Builder, vNerve.vdb.Vdb.VtuberOrBuilder> groupsBuilder_;
+
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public java.util.List<vNerve.vdb.Vdb.Vtuber> getGroupsList() {
+        if (groupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(groups_);
+        } else {
+          return groupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public int getGroupsCount() {
+        if (groupsBuilder_ == null) {
+          return groups_.size();
+        } else {
+          return groupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber getGroups(int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);
+        } else {
+          return groupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder setGroups(
+          int index, vNerve.vdb.Vdb.Vtuber value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.set(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder setGroups(
+          int index, vNerve.vdb.Vdb.Vtuber.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder addGroups(vNerve.vdb.Vdb.Vtuber value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder addGroups(
+          int index, vNerve.vdb.Vdb.Vtuber value) {
+        if (groupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGroupsIsMutable();
+          groups_.add(index, value);
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder addGroups(
+          vNerve.vdb.Vdb.Vtuber.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder addGroups(
+          int index, vNerve.vdb.Vdb.Vtuber.Builder builderForValue) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          groupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder addAllGroups(
+          java.lang.Iterable<? extends vNerve.vdb.Vdb.Vtuber> values) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, groups_);
+          onChanged();
+        } else {
+          groupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder clearGroups() {
+        if (groupsBuilder_ == null) {
+          groups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          groupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public Builder removeGroups(int index) {
+        if (groupsBuilder_ == null) {
+          ensureGroupsIsMutable();
+          groups_.remove(index);
+          onChanged();
+        } else {
+          groupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber.Builder getGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public vNerve.vdb.Vdb.VtuberOrBuilder getGroupsOrBuilder(
+          int index) {
+        if (groupsBuilder_ == null) {
+          return groups_.get(index);  } else {
+          return groupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public java.util.List<? extends vNerve.vdb.Vdb.VtuberOrBuilder> 
+           getGroupsOrBuilderList() {
+        if (groupsBuilder_ != null) {
+          return groupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(groups_);
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber.Builder addGroupsBuilder() {
+        return getGroupsFieldBuilder().addBuilder(
+            vNerve.vdb.Vdb.Vtuber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber.Builder addGroupsBuilder(
+          int index) {
+        return getGroupsFieldBuilder().addBuilder(
+            index, vNerve.vdb.Vdb.Vtuber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber groups = 1;</code>
+       */
+      public java.util.List<vNerve.vdb.Vdb.Vtuber.Builder> 
+           getGroupsBuilderList() {
+        return getGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          vNerve.vdb.Vdb.Vtuber, vNerve.vdb.Vdb.Vtuber.Builder, vNerve.vdb.Vdb.VtuberOrBuilder> 
+          getGroupsFieldBuilder() {
+        if (groupsBuilder_ == null) {
+          groupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              vNerve.vdb.Vdb.Vtuber, vNerve.vdb.Vdb.Vtuber.Builder, vNerve.vdb.Vdb.VtuberOrBuilder>(
+                  groups_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          groups_ = null;
+        }
+        return groupsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:vNerve.vdb.GroupCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:vNerve.vdb.GroupCollection)
+    private static final vNerve.vdb.Vdb.GroupCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new vNerve.vdb.Vdb.GroupCollection();
+    }
+
+    public static vNerve.vdb.Vdb.GroupCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GroupCollection>
+        PARSER = new com.google.protobuf.AbstractParser<GroupCollection>() {
+      @java.lang.Override
+      public GroupCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GroupCollection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GroupCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GroupCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public vNerve.vdb.Vdb.GroupCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FanCollectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:vNerve.vdb.FanCollection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    java.util.List<vNerve.vdb.Vdb.Vtuber> 
+        getFansList();
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    vNerve.vdb.Vdb.Vtuber getFans(int index);
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    int getFansCount();
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    java.util.List<? extends vNerve.vdb.Vdb.VtuberOrBuilder> 
+        getFansOrBuilderList();
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    vNerve.vdb.Vdb.VtuberOrBuilder getFansOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code vNerve.vdb.FanCollection}
+   */
+  public  static final class FanCollection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:vNerve.vdb.FanCollection)
+      FanCollectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FanCollection.newBuilder() to construct.
+    private FanCollection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FanCollection() {
+      fans_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new FanCollection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FanCollection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fans_ = new java.util.ArrayList<vNerve.vdb.Vdb.Vtuber>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fans_.add(
+                  input.readMessage(vNerve.vdb.Vdb.Vtuber.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fans_ = java.util.Collections.unmodifiableList(fans_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_FanCollection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return vNerve.vdb.Vdb.internal_static_vNerve_vdb_FanCollection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              vNerve.vdb.Vdb.FanCollection.class, vNerve.vdb.Vdb.FanCollection.Builder.class);
+    }
+
+    public static final int FANS_FIELD_NUMBER = 1;
+    private java.util.List<vNerve.vdb.Vdb.Vtuber> fans_;
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    public java.util.List<vNerve.vdb.Vdb.Vtuber> getFansList() {
+      return fans_;
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    public java.util.List<? extends vNerve.vdb.Vdb.VtuberOrBuilder> 
+        getFansOrBuilderList() {
+      return fans_;
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    public int getFansCount() {
+      return fans_.size();
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    public vNerve.vdb.Vdb.Vtuber getFans(int index) {
+      return fans_.get(index);
+    }
+    /**
+     * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+     */
+    public vNerve.vdb.Vdb.VtuberOrBuilder getFansOrBuilder(
+        int index) {
+      return fans_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fans_.size(); i++) {
+        output.writeMessage(1, fans_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fans_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, fans_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof vNerve.vdb.Vdb.FanCollection)) {
+        return super.equals(obj);
+      }
+      vNerve.vdb.Vdb.FanCollection other = (vNerve.vdb.Vdb.FanCollection) obj;
+
+      if (!getFansList()
+          .equals(other.getFansList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFansCount() > 0) {
+        hash = (37 * hash) + FANS_FIELD_NUMBER;
+        hash = (53 * hash) + getFansList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.vdb.Vdb.FanCollection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(vNerve.vdb.Vdb.FanCollection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code vNerve.vdb.FanCollection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:vNerve.vdb.FanCollection)
+        vNerve.vdb.Vdb.FanCollectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_FanCollection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_FanCollection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                vNerve.vdb.Vdb.FanCollection.class, vNerve.vdb.Vdb.FanCollection.Builder.class);
+      }
+
+      // Construct using vNerve.vdb.Vdb.FanCollection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFansFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (fansBuilder_ == null) {
+          fans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          fansBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return vNerve.vdb.Vdb.internal_static_vNerve_vdb_FanCollection_descriptor;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.FanCollection getDefaultInstanceForType() {
+        return vNerve.vdb.Vdb.FanCollection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.FanCollection build() {
+        vNerve.vdb.Vdb.FanCollection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public vNerve.vdb.Vdb.FanCollection buildPartial() {
+        vNerve.vdb.Vdb.FanCollection result = new vNerve.vdb.Vdb.FanCollection(this);
+        int from_bitField0_ = bitField0_;
+        if (fansBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fans_ = java.util.Collections.unmodifiableList(fans_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fans_ = fans_;
+        } else {
+          result.fans_ = fansBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof vNerve.vdb.Vdb.FanCollection) {
+          return mergeFrom((vNerve.vdb.Vdb.FanCollection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(vNerve.vdb.Vdb.FanCollection other) {
+        if (other == vNerve.vdb.Vdb.FanCollection.getDefaultInstance()) return this;
+        if (fansBuilder_ == null) {
+          if (!other.fans_.isEmpty()) {
+            if (fans_.isEmpty()) {
+              fans_ = other.fans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFansIsMutable();
+              fans_.addAll(other.fans_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fans_.isEmpty()) {
+            if (fansBuilder_.isEmpty()) {
+              fansBuilder_.dispose();
+              fansBuilder_ = null;
+              fans_ = other.fans_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              fansBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFansFieldBuilder() : null;
+            } else {
+              fansBuilder_.addAllMessages(other.fans_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        vNerve.vdb.Vdb.FanCollection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (vNerve.vdb.Vdb.FanCollection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<vNerve.vdb.Vdb.Vtuber> fans_ =
+        java.util.Collections.emptyList();
+      private void ensureFansIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fans_ = new java.util.ArrayList<vNerve.vdb.Vdb.Vtuber>(fans_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          vNerve.vdb.Vdb.Vtuber, vNerve.vdb.Vdb.Vtuber.Builder, vNerve.vdb.Vdb.VtuberOrBuilder> fansBuilder_;
+
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public java.util.List<vNerve.vdb.Vdb.Vtuber> getFansList() {
+        if (fansBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fans_);
+        } else {
+          return fansBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public int getFansCount() {
+        if (fansBuilder_ == null) {
+          return fans_.size();
+        } else {
+          return fansBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber getFans(int index) {
+        if (fansBuilder_ == null) {
+          return fans_.get(index);
+        } else {
+          return fansBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder setFans(
+          int index, vNerve.vdb.Vdb.Vtuber value) {
+        if (fansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFansIsMutable();
+          fans_.set(index, value);
+          onChanged();
+        } else {
+          fansBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder setFans(
+          int index, vNerve.vdb.Vdb.Vtuber.Builder builderForValue) {
+        if (fansBuilder_ == null) {
+          ensureFansIsMutable();
+          fans_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fansBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder addFans(vNerve.vdb.Vdb.Vtuber value) {
+        if (fansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFansIsMutable();
+          fans_.add(value);
+          onChanged();
+        } else {
+          fansBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder addFans(
+          int index, vNerve.vdb.Vdb.Vtuber value) {
+        if (fansBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFansIsMutable();
+          fans_.add(index, value);
+          onChanged();
+        } else {
+          fansBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder addFans(
+          vNerve.vdb.Vdb.Vtuber.Builder builderForValue) {
+        if (fansBuilder_ == null) {
+          ensureFansIsMutable();
+          fans_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fansBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder addFans(
+          int index, vNerve.vdb.Vdb.Vtuber.Builder builderForValue) {
+        if (fansBuilder_ == null) {
+          ensureFansIsMutable();
+          fans_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fansBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder addAllFans(
+          java.lang.Iterable<? extends vNerve.vdb.Vdb.Vtuber> values) {
+        if (fansBuilder_ == null) {
+          ensureFansIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fans_);
+          onChanged();
+        } else {
+          fansBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder clearFans() {
+        if (fansBuilder_ == null) {
+          fans_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          fansBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public Builder removeFans(int index) {
+        if (fansBuilder_ == null) {
+          ensureFansIsMutable();
+          fans_.remove(index);
+          onChanged();
+        } else {
+          fansBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber.Builder getFansBuilder(
+          int index) {
+        return getFansFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public vNerve.vdb.Vdb.VtuberOrBuilder getFansOrBuilder(
+          int index) {
+        if (fansBuilder_ == null) {
+          return fans_.get(index);  } else {
+          return fansBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public java.util.List<? extends vNerve.vdb.Vdb.VtuberOrBuilder> 
+           getFansOrBuilderList() {
+        if (fansBuilder_ != null) {
+          return fansBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fans_);
+        }
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber.Builder addFansBuilder() {
+        return getFansFieldBuilder().addBuilder(
+            vNerve.vdb.Vdb.Vtuber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public vNerve.vdb.Vdb.Vtuber.Builder addFansBuilder(
+          int index) {
+        return getFansFieldBuilder().addBuilder(
+            index, vNerve.vdb.Vdb.Vtuber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .vNerve.vdb.Vtuber fans = 1;</code>
+       */
+      public java.util.List<vNerve.vdb.Vdb.Vtuber.Builder> 
+           getFansBuilderList() {
+        return getFansFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          vNerve.vdb.Vdb.Vtuber, vNerve.vdb.Vdb.Vtuber.Builder, vNerve.vdb.Vdb.VtuberOrBuilder> 
+          getFansFieldBuilder() {
+        if (fansBuilder_ == null) {
+          fansBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              vNerve.vdb.Vdb.Vtuber, vNerve.vdb.Vdb.Vtuber.Builder, vNerve.vdb.Vdb.VtuberOrBuilder>(
+                  fans_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fans_ = null;
+        }
+        return fansBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:vNerve.vdb.FanCollection)
+    }
+
+    // @@protoc_insertion_point(class_scope:vNerve.vdb.FanCollection)
+    private static final vNerve.vdb.Vdb.FanCollection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new vNerve.vdb.Vdb.FanCollection();
+    }
+
+    public static vNerve.vdb.Vdb.FanCollection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FanCollection>
+        PARSER = new com.google.protobuf.AbstractParser<FanCollection>() {
+      @java.lang.Override
+      public FanCollection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FanCollection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FanCollection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FanCollection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public vNerve.vdb.Vdb.FanCollection getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface VtuberOrBuilder extends
       // @@protoc_insertion_point(interface_extends:vNerve.vdb.Vtuber)
       com.google.protobuf.MessageOrBuilder {
@@ -1860,48 +4582,119 @@ public final class Vdb {
         int index);
 
     /**
-     * <code>string group_uuid = 5;</code>
+     * <code>string name = 5;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 5;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @return A list containing the nameExtra.
+     */
+    java.util.List<java.lang.String>
+        getNameExtraList();
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @return The count of nameExtra.
+     */
+    int getNameExtraCount();
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @param index The index of the element to return.
+     * @return The nameExtra at the given index.
+     */
+    java.lang.String getNameExtra(int index);
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nameExtra at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNameExtraBytes(int index);
+
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+    int getNameTranslationCount();
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+    boolean containsNameTranslation(
+        java.lang.String key);
+    /**
+     * Use {@link #getNameTranslationMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getNameTranslation();
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getNameTranslationMap();
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+
+    java.lang.String getNameTranslationOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+
+    java.lang.String getNameTranslationOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>string group_uuid = 8;</code>
      * @return The groupUuid.
      */
     java.lang.String getGroupUuid();
     /**
-     * <code>string group_uuid = 5;</code>
+     * <code>string group_uuid = 8;</code>
      * @return The bytes for groupUuid.
      */
     com.google.protobuf.ByteString
         getGroupUuidBytes();
 
     /**
-     * <code>bool model_2d = 6;</code>
+     * <code>bool model_2d = 9;</code>
      * @return The model2d.
      */
     boolean getModel2D();
 
     /**
-     * <code>bool model_3d = 7;</code>
+     * <code>bool model_3d = 10;</code>
      * @return The model3d.
      */
     boolean getModel3D();
 
     /**
-     * <code>string model_2d_artist_uuid = 8;</code>
+     * <code>string model_2d_artist_uuid = 11;</code>
      * @return The model2dArtistUuid.
      */
     java.lang.String getModel2DArtistUuid();
     /**
-     * <code>string model_2d_artist_uuid = 8;</code>
+     * <code>string model_2d_artist_uuid = 11;</code>
      * @return The bytes for model2dArtistUuid.
      */
     com.google.protobuf.ByteString
         getModel2DArtistUuidBytes();
 
     /**
-     * <code>string model_3d_artist_uuid = 9;</code>
+     * <code>string model_3d_artist_uuid = 12;</code>
      * @return The model3dArtistUuid.
      */
     java.lang.String getModel3DArtistUuid();
     /**
-     * <code>string model_3d_artist_uuid = 9;</code>
+     * <code>string model_3d_artist_uuid = 12;</code>
      * @return The bytes for model3dArtistUuid.
      */
     com.google.protobuf.ByteString
@@ -1923,6 +4716,8 @@ public final class Vdb {
       uuid_ = "";
       type_ = 0;
       accounts_ = java.util.Collections.emptyList();
+      name_ = "";
+      nameExtra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       groupUuid_ = "";
       model2DArtistUuid_ = "";
       model3DArtistUuid_ = "";
@@ -1988,26 +4783,54 @@ public final class Vdb {
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              groupUuid_ = s;
+              name_ = s;
               break;
             }
-            case 48: {
-
-              model2D_ = input.readBool();
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                nameExtra_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              nameExtra_.add(s);
               break;
             }
-            case 56: {
-
-              model3D_ = input.readBool();
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                nameTranslation_ = com.google.protobuf.MapField.newMapField(
+                    NameTranslationDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              nameTranslation__ = input.readMessage(
+                  NameTranslationDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              nameTranslation_.getMutableMap().put(
+                  nameTranslation__.getKey(), nameTranslation__.getValue());
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
 
+              groupUuid_ = s;
+              break;
+            }
+            case 72: {
+
+              model2D_ = input.readBool();
+              break;
+            }
+            case 80: {
+
+              model3D_ = input.readBool();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
               model2DArtistUuid_ = s;
               break;
             }
-            case 74: {
+            case 98: {
               java.lang.String s = input.readStringRequireUtf8();
 
               model3DArtistUuid_ = s;
@@ -2031,6 +4854,9 @@ public final class Vdb {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           accounts_ = java.util.Collections.unmodifiableList(accounts_);
         }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          nameExtra_ = nameExtra_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2040,6 +4866,18 @@ public final class Vdb {
       return vNerve.vdb.Vdb.internal_static_vNerve_vdb_Vtuber_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 7:
+          return internalGetNameTranslation();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2148,10 +4986,157 @@ public final class Vdb {
       return accounts_.get(index);
     }
 
-    public static final int GROUP_UUID_FIELD_NUMBER = 5;
+    public static final int NAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 5;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 5;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_EXTRA_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList nameExtra_;
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @return A list containing the nameExtra.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNameExtraList() {
+      return nameExtra_;
+    }
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @return The count of nameExtra.
+     */
+    public int getNameExtraCount() {
+      return nameExtra_.size();
+    }
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @param index The index of the element to return.
+     * @return The nameExtra at the given index.
+     */
+    public java.lang.String getNameExtra(int index) {
+      return nameExtra_.get(index);
+    }
+    /**
+     * <code>repeated string name_extra = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the nameExtra at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNameExtraBytes(int index) {
+      return nameExtra_.getByteString(index);
+    }
+
+    public static final int NAME_TRANSLATION_FIELD_NUMBER = 7;
+    private static final class NameTranslationDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  vNerve.vdb.Vdb.internal_static_vNerve_vdb_Vtuber_NameTranslationEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> nameTranslation_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetNameTranslation() {
+      if (nameTranslation_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            NameTranslationDefaultEntryHolder.defaultEntry);
+      }
+      return nameTranslation_;
+    }
+
+    public int getNameTranslationCount() {
+      return internalGetNameTranslation().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+
+    public boolean containsNameTranslation(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetNameTranslation().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getNameTranslationMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getNameTranslation() {
+      return getNameTranslationMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getNameTranslationMap() {
+      return internalGetNameTranslation().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+
+    public java.lang.String getNameTranslationOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNameTranslation().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; name_translation = 7;</code>
+     */
+
+    public java.lang.String getNameTranslationOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNameTranslation().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int GROUP_UUID_FIELD_NUMBER = 8;
     private volatile java.lang.Object groupUuid_;
     /**
-     * <code>string group_uuid = 5;</code>
+     * <code>string group_uuid = 8;</code>
      * @return The groupUuid.
      */
     public java.lang.String getGroupUuid() {
@@ -2167,7 +5152,7 @@ public final class Vdb {
       }
     }
     /**
-     * <code>string group_uuid = 5;</code>
+     * <code>string group_uuid = 8;</code>
      * @return The bytes for groupUuid.
      */
     public com.google.protobuf.ByteString
@@ -2184,30 +5169,30 @@ public final class Vdb {
       }
     }
 
-    public static final int MODEL_2D_FIELD_NUMBER = 6;
+    public static final int MODEL_2D_FIELD_NUMBER = 9;
     private boolean model2D_;
     /**
-     * <code>bool model_2d = 6;</code>
+     * <code>bool model_2d = 9;</code>
      * @return The model2d.
      */
     public boolean getModel2D() {
       return model2D_;
     }
 
-    public static final int MODEL_3D_FIELD_NUMBER = 7;
+    public static final int MODEL_3D_FIELD_NUMBER = 10;
     private boolean model3D_;
     /**
-     * <code>bool model_3d = 7;</code>
+     * <code>bool model_3d = 10;</code>
      * @return The model3d.
      */
     public boolean getModel3D() {
       return model3D_;
     }
 
-    public static final int MODEL_2D_ARTIST_UUID_FIELD_NUMBER = 8;
+    public static final int MODEL_2D_ARTIST_UUID_FIELD_NUMBER = 11;
     private volatile java.lang.Object model2DArtistUuid_;
     /**
-     * <code>string model_2d_artist_uuid = 8;</code>
+     * <code>string model_2d_artist_uuid = 11;</code>
      * @return The model2dArtistUuid.
      */
     public java.lang.String getModel2DArtistUuid() {
@@ -2223,7 +5208,7 @@ public final class Vdb {
       }
     }
     /**
-     * <code>string model_2d_artist_uuid = 8;</code>
+     * <code>string model_2d_artist_uuid = 11;</code>
      * @return The bytes for model2dArtistUuid.
      */
     public com.google.protobuf.ByteString
@@ -2240,10 +5225,10 @@ public final class Vdb {
       }
     }
 
-    public static final int MODEL_3D_ARTIST_UUID_FIELD_NUMBER = 9;
+    public static final int MODEL_3D_ARTIST_UUID_FIELD_NUMBER = 12;
     private volatile java.lang.Object model3DArtistUuid_;
     /**
-     * <code>string model_3d_artist_uuid = 9;</code>
+     * <code>string model_3d_artist_uuid = 12;</code>
      * @return The model3dArtistUuid.
      */
     public java.lang.String getModel3DArtistUuid() {
@@ -2259,7 +5244,7 @@ public final class Vdb {
       }
     }
     /**
-     * <code>string model_3d_artist_uuid = 9;</code>
+     * <code>string model_3d_artist_uuid = 12;</code>
      * @return The bytes for model3dArtistUuid.
      */
     public com.google.protobuf.ByteString
@@ -2302,20 +5287,32 @@ public final class Vdb {
       for (int i = 0; i < accounts_.size(); i++) {
         output.writeMessage(4, accounts_.get(i));
       }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
+      }
+      for (int i = 0; i < nameExtra_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, nameExtra_.getRaw(i));
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetNameTranslation(),
+          NameTranslationDefaultEntryHolder.defaultEntry,
+          7);
       if (!getGroupUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, groupUuid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, groupUuid_);
       }
       if (model2D_ != false) {
-        output.writeBool(6, model2D_);
+        output.writeBool(9, model2D_);
       }
       if (model3D_ != false) {
-        output.writeBool(7, model3D_);
+        output.writeBool(10, model3D_);
       }
       if (!getModel2DArtistUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, model2DArtistUuid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, model2DArtistUuid_);
       }
       if (!getModel3DArtistUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, model3DArtistUuid_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, model3DArtistUuid_);
       }
       unknownFields.writeTo(output);
     }
@@ -2341,22 +5338,43 @@ public final class Vdb {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, accounts_.get(i));
       }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < nameExtra_.size(); i++) {
+          dataSize += computeStringSizeNoTag(nameExtra_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNameExtraList().size();
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetNameTranslation().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        nameTranslation__ = NameTranslationDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, nameTranslation__);
+      }
       if (!getGroupUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, groupUuid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, groupUuid_);
       }
       if (model2D_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, model2D_);
+          .computeBoolSize(9, model2D_);
       }
       if (model3D_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, model3D_);
+          .computeBoolSize(10, model3D_);
       }
       if (!getModel2DArtistUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, model2DArtistUuid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, model2DArtistUuid_);
       }
       if (!getModel3DArtistUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, model3DArtistUuid_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, model3DArtistUuid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2380,6 +5398,12 @@ public final class Vdb {
           != other.getBot()) return false;
       if (!getAccountsList()
           .equals(other.getAccountsList())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getNameExtraList()
+          .equals(other.getNameExtraList())) return false;
+      if (!internalGetNameTranslation().equals(
+          other.internalGetNameTranslation())) return false;
       if (!getGroupUuid()
           .equals(other.getGroupUuid())) return false;
       if (getModel2D()
@@ -2411,6 +5435,16 @@ public final class Vdb {
       if (getAccountsCount() > 0) {
         hash = (37 * hash) + ACCOUNTS_FIELD_NUMBER;
         hash = (53 * hash) + getAccountsList().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (getNameExtraCount() > 0) {
+        hash = (37 * hash) + NAME_EXTRA_FIELD_NUMBER;
+        hash = (53 * hash) + getNameExtraList().hashCode();
+      }
+      if (!internalGetNameTranslation().getMap().isEmpty()) {
+        hash = (37 * hash) + NAME_TRANSLATION_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetNameTranslation().hashCode();
       }
       hash = (37 * hash) + GROUP_UUID_FIELD_NUMBER;
       hash = (53 * hash) + getGroupUuid().hashCode();
@@ -2531,6 +5565,28 @@ public final class Vdb {
         return vNerve.vdb.Vdb.internal_static_vNerve_vdb_Vtuber_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 7:
+            return internalGetNameTranslation();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 7:
+            return internalGetMutableNameTranslation();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -2570,6 +5626,11 @@ public final class Vdb {
         } else {
           accountsBuilder_.clear();
         }
+        name_ = "";
+
+        nameExtra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        internalGetMutableNameTranslation().clear();
         groupUuid_ = "";
 
         model2D_ = false;
@@ -2619,6 +5680,14 @@ public final class Vdb {
         } else {
           result.accounts_ = accountsBuilder_.build();
         }
+        result.name_ = name_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          nameExtra_ = nameExtra_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.nameExtra_ = nameExtra_;
+        result.nameTranslation_ = internalGetNameTranslation();
+        result.nameTranslation_.makeImmutable();
         result.groupUuid_ = groupUuid_;
         result.model2D_ = model2D_;
         result.model3D_ = model3D_;
@@ -2708,6 +5777,22 @@ public final class Vdb {
             }
           }
         }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.nameExtra_.isEmpty()) {
+          if (nameExtra_.isEmpty()) {
+            nameExtra_ = other.nameExtra_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureNameExtraIsMutable();
+            nameExtra_.addAll(other.nameExtra_);
+          }
+          onChanged();
+        }
+        internalGetMutableNameTranslation().mergeFrom(
+            other.internalGetNameTranslation());
         if (!other.getGroupUuid().isEmpty()) {
           groupUuid_ = other.groupUuid_;
           onChanged();
@@ -3154,9 +6239,318 @@ public final class Vdb {
         return accountsBuilder_;
       }
 
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 5;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 5;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList nameExtra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureNameExtraIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          nameExtra_ = new com.google.protobuf.LazyStringArrayList(nameExtra_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @return A list containing the nameExtra.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNameExtraList() {
+        return nameExtra_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @return The count of nameExtra.
+       */
+      public int getNameExtraCount() {
+        return nameExtra_.size();
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @param index The index of the element to return.
+       * @return The nameExtra at the given index.
+       */
+      public java.lang.String getNameExtra(int index) {
+        return nameExtra_.get(index);
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the nameExtra at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNameExtraBytes(int index) {
+        return nameExtra_.getByteString(index);
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The nameExtra to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameExtra(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameExtraIsMutable();
+        nameExtra_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @param value The nameExtra to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNameExtra(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureNameExtraIsMutable();
+        nameExtra_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @param values The nameExtra to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllNameExtra(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNameExtraIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, nameExtra_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNameExtra() {
+        nameExtra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name_extra = 6;</code>
+       * @param value The bytes of the nameExtra to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNameExtraBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureNameExtraIsMutable();
+        nameExtra_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> nameTranslation_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetNameTranslation() {
+        if (nameTranslation_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              NameTranslationDefaultEntryHolder.defaultEntry);
+        }
+        return nameTranslation_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableNameTranslation() {
+        onChanged();;
+        if (nameTranslation_ == null) {
+          nameTranslation_ = com.google.protobuf.MapField.newMapField(
+              NameTranslationDefaultEntryHolder.defaultEntry);
+        }
+        if (!nameTranslation_.isMutable()) {
+          nameTranslation_ = nameTranslation_.copy();
+        }
+        return nameTranslation_;
+      }
+
+      public int getNameTranslationCount() {
+        return internalGetNameTranslation().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+
+      public boolean containsNameTranslation(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetNameTranslation().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getNameTranslationMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getNameTranslation() {
+        return getNameTranslationMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getNameTranslationMap() {
+        return internalGetNameTranslation().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+
+      public java.lang.String getNameTranslationOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNameTranslation().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+
+      public java.lang.String getNameTranslationOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNameTranslation().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearNameTranslation() {
+        internalGetMutableNameTranslation().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+
+      public Builder removeNameTranslation(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNameTranslation().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableNameTranslation() {
+        return internalGetMutableNameTranslation().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+      public Builder putNameTranslation(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNameTranslation().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; name_translation = 7;</code>
+       */
+
+      public Builder putAllNameTranslation(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableNameTranslation().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
       private java.lang.Object groupUuid_ = "";
       /**
-       * <code>string group_uuid = 5;</code>
+       * <code>string group_uuid = 8;</code>
        * @return The groupUuid.
        */
       public java.lang.String getGroupUuid() {
@@ -3172,7 +6566,7 @@ public final class Vdb {
         }
       }
       /**
-       * <code>string group_uuid = 5;</code>
+       * <code>string group_uuid = 8;</code>
        * @return The bytes for groupUuid.
        */
       public com.google.protobuf.ByteString
@@ -3189,7 +6583,7 @@ public final class Vdb {
         }
       }
       /**
-       * <code>string group_uuid = 5;</code>
+       * <code>string group_uuid = 8;</code>
        * @param value The groupUuid to set.
        * @return This builder for chaining.
        */
@@ -3204,7 +6598,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>string group_uuid = 5;</code>
+       * <code>string group_uuid = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearGroupUuid() {
@@ -3214,7 +6608,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>string group_uuid = 5;</code>
+       * <code>string group_uuid = 8;</code>
        * @param value The bytes for groupUuid to set.
        * @return This builder for chaining.
        */
@@ -3232,14 +6626,14 @@ public final class Vdb {
 
       private boolean model2D_ ;
       /**
-       * <code>bool model_2d = 6;</code>
+       * <code>bool model_2d = 9;</code>
        * @return The model2d.
        */
       public boolean getModel2D() {
         return model2D_;
       }
       /**
-       * <code>bool model_2d = 6;</code>
+       * <code>bool model_2d = 9;</code>
        * @param value The model2d to set.
        * @return This builder for chaining.
        */
@@ -3250,7 +6644,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>bool model_2d = 6;</code>
+       * <code>bool model_2d = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearModel2D() {
@@ -3262,14 +6656,14 @@ public final class Vdb {
 
       private boolean model3D_ ;
       /**
-       * <code>bool model_3d = 7;</code>
+       * <code>bool model_3d = 10;</code>
        * @return The model3d.
        */
       public boolean getModel3D() {
         return model3D_;
       }
       /**
-       * <code>bool model_3d = 7;</code>
+       * <code>bool model_3d = 10;</code>
        * @param value The model3d to set.
        * @return This builder for chaining.
        */
@@ -3280,7 +6674,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>bool model_3d = 7;</code>
+       * <code>bool model_3d = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearModel3D() {
@@ -3292,7 +6686,7 @@ public final class Vdb {
 
       private java.lang.Object model2DArtistUuid_ = "";
       /**
-       * <code>string model_2d_artist_uuid = 8;</code>
+       * <code>string model_2d_artist_uuid = 11;</code>
        * @return The model2dArtistUuid.
        */
       public java.lang.String getModel2DArtistUuid() {
@@ -3308,7 +6702,7 @@ public final class Vdb {
         }
       }
       /**
-       * <code>string model_2d_artist_uuid = 8;</code>
+       * <code>string model_2d_artist_uuid = 11;</code>
        * @return The bytes for model2dArtistUuid.
        */
       public com.google.protobuf.ByteString
@@ -3325,7 +6719,7 @@ public final class Vdb {
         }
       }
       /**
-       * <code>string model_2d_artist_uuid = 8;</code>
+       * <code>string model_2d_artist_uuid = 11;</code>
        * @param value The model2dArtistUuid to set.
        * @return This builder for chaining.
        */
@@ -3340,7 +6734,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>string model_2d_artist_uuid = 8;</code>
+       * <code>string model_2d_artist_uuid = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearModel2DArtistUuid() {
@@ -3350,7 +6744,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>string model_2d_artist_uuid = 8;</code>
+       * <code>string model_2d_artist_uuid = 11;</code>
        * @param value The bytes for model2dArtistUuid to set.
        * @return This builder for chaining.
        */
@@ -3368,7 +6762,7 @@ public final class Vdb {
 
       private java.lang.Object model3DArtistUuid_ = "";
       /**
-       * <code>string model_3d_artist_uuid = 9;</code>
+       * <code>string model_3d_artist_uuid = 12;</code>
        * @return The model3dArtistUuid.
        */
       public java.lang.String getModel3DArtistUuid() {
@@ -3384,7 +6778,7 @@ public final class Vdb {
         }
       }
       /**
-       * <code>string model_3d_artist_uuid = 9;</code>
+       * <code>string model_3d_artist_uuid = 12;</code>
        * @return The bytes for model3dArtistUuid.
        */
       public com.google.protobuf.ByteString
@@ -3401,7 +6795,7 @@ public final class Vdb {
         }
       }
       /**
-       * <code>string model_3d_artist_uuid = 9;</code>
+       * <code>string model_3d_artist_uuid = 12;</code>
        * @param value The model3dArtistUuid to set.
        * @return This builder for chaining.
        */
@@ -3416,7 +6810,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>string model_3d_artist_uuid = 9;</code>
+       * <code>string model_3d_artist_uuid = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearModel3DArtistUuid() {
@@ -3426,7 +6820,7 @@ public final class Vdb {
         return this;
       }
       /**
-       * <code>string model_3d_artist_uuid = 9;</code>
+       * <code>string model_3d_artist_uuid = 12;</code>
        * @param value The bytes for model3dArtistUuid to set.
        * @return This builder for chaining.
        */
@@ -3531,77 +6925,6 @@ public final class Vdb {
      * @return The accountPlatform.
      */
     vNerve.vdb.Vdb.AccountPlatform getAccountPlatform();
-
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @return A list containing the extra.
-     */
-    java.util.List<java.lang.String>
-        getExtraList();
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @return The count of extra.
-     */
-    int getExtraCount();
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @param index The index of the element to return.
-     * @return The extra at the given index.
-     */
-    java.lang.String getExtra(int index);
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the extra at the given index.
-     */
-    com.google.protobuf.ByteString
-        getExtraBytes(int index);
-
-    /**
-     * <code>string name = 5;</code>
-     * @return The name.
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 5;</code>
-     * @return The bytes for name.
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-    int getNameTranslationCount();
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-    boolean containsNameTranslation(
-        java.lang.String key);
-    /**
-     * Use {@link #getNameTranslationMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getNameTranslation();
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getNameTranslationMap();
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-
-    java.lang.String getNameTranslationOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue);
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-
-    java.lang.String getNameTranslationOrThrow(
-        java.lang.String key);
   }
   /**
    * Protobuf type {@code vNerve.vdb.Account}
@@ -3619,8 +6942,6 @@ public final class Vdb {
       id_ = "";
       accountType_ = 0;
       accountPlatform_ = 0;
-      extra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      name_ = "";
     }
 
     @java.lang.Override
@@ -3643,7 +6964,6 @@ public final class Vdb {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3672,34 +6992,6 @@ public final class Vdb {
               accountPlatform_ = rawValue;
               break;
             }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                extra_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              extra_.add(s);
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                nameTranslation_ = com.google.protobuf.MapField.newMapField(
-                    NameTranslationDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              nameTranslation__ = input.readMessage(
-                  NameTranslationDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              nameTranslation_.getMutableMap().put(
-                  nameTranslation__.getKey(), nameTranslation__.getValue());
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3715,9 +7007,6 @@ public final class Vdb {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          extra_ = extra_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -3727,18 +7016,6 @@ public final class Vdb {
       return vNerve.vdb.Vdb.internal_static_vNerve_vdb_Account_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 6:
-          return internalGetNameTranslation();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3821,153 +7098,6 @@ public final class Vdb {
       return result == null ? vNerve.vdb.Vdb.AccountPlatform.UNRECOGNIZED : result;
     }
 
-    public static final int EXTRA_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList extra_;
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @return A list containing the extra.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getExtraList() {
-      return extra_;
-    }
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @return The count of extra.
-     */
-    public int getExtraCount() {
-      return extra_.size();
-    }
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @param index The index of the element to return.
-     * @return The extra at the given index.
-     */
-    public java.lang.String getExtra(int index) {
-      return extra_.get(index);
-    }
-    /**
-     * <code>repeated string extra = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the extra at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getExtraBytes(int index) {
-      return extra_.getByteString(index);
-    }
-
-    public static final int NAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 5;</code>
-     * @return The name.
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 5;</code>
-     * @return The bytes for name.
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NAME_TRANSLATION_FIELD_NUMBER = 6;
-    private static final class NameTranslationDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  vNerve.vdb.Vdb.internal_static_vNerve_vdb_Account_NameTranslationEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
-    }
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> nameTranslation_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetNameTranslation() {
-      if (nameTranslation_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            NameTranslationDefaultEntryHolder.defaultEntry);
-      }
-      return nameTranslation_;
-    }
-
-    public int getNameTranslationCount() {
-      return internalGetNameTranslation().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-
-    public boolean containsNameTranslation(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetNameTranslation().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getNameTranslationMap()} instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getNameTranslation() {
-      return getNameTranslationMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-
-    public java.util.Map<java.lang.String, java.lang.String> getNameTranslationMap() {
-      return internalGetNameTranslation().getMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-
-    public java.lang.String getNameTranslationOrDefault(
-        java.lang.String key,
-        java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetNameTranslation().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, string&gt; name_translation = 6;</code>
-     */
-
-    public java.lang.String getNameTranslationOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetNameTranslation().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3991,18 +7121,6 @@ public final class Vdb {
       if (accountPlatform_ != vNerve.vdb.Vdb.AccountPlatform.UNKNOWN_PLATFORM.getNumber()) {
         output.writeEnum(3, accountPlatform_);
       }
-      for (int i = 0; i < extra_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, extra_.getRaw(i));
-      }
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
-      }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetNameTranslation(),
-          NameTranslationDefaultEntryHolder.defaultEntry,
-          6);
       unknownFields.writeTo(output);
     }
 
@@ -4023,27 +7141,6 @@ public final class Vdb {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, accountPlatform_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < extra_.size(); i++) {
-          dataSize += computeStringSizeNoTag(extra_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getExtraList().size();
-      }
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetNameTranslation().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        nameTranslation__ = NameTranslationDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, nameTranslation__);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4063,12 +7160,6 @@ public final class Vdb {
           .equals(other.getId())) return false;
       if (accountType_ != other.accountType_) return false;
       if (accountPlatform_ != other.accountPlatform_) return false;
-      if (!getExtraList()
-          .equals(other.getExtraList())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!internalGetNameTranslation().equals(
-          other.internalGetNameTranslation())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4086,16 +7177,6 @@ public final class Vdb {
       hash = (53 * hash) + accountType_;
       hash = (37 * hash) + ACCOUNT_PLATFORM_FIELD_NUMBER;
       hash = (53 * hash) + accountPlatform_;
-      if (getExtraCount() > 0) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtraList().hashCode();
-      }
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (!internalGetNameTranslation().getMap().isEmpty()) {
-        hash = (37 * hash) + NAME_TRANSLATION_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetNameTranslation().hashCode();
-      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4203,28 +7284,6 @@ public final class Vdb {
         return vNerve.vdb.Vdb.internal_static_vNerve_vdb_Account_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 6:
-            return internalGetNameTranslation();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 6:
-            return internalGetMutableNameTranslation();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -4257,11 +7316,6 @@ public final class Vdb {
 
         accountPlatform_ = 0;
 
-        extra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = "";
-
-        internalGetMutableNameTranslation().clear();
         return this;
       }
 
@@ -4288,18 +7342,9 @@ public final class Vdb {
       @java.lang.Override
       public vNerve.vdb.Vdb.Account buildPartial() {
         vNerve.vdb.Vdb.Account result = new vNerve.vdb.Vdb.Account(this);
-        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.accountType_ = accountType_;
         result.accountPlatform_ = accountPlatform_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          extra_ = extra_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.extra_ = extra_;
-        result.name_ = name_;
-        result.nameTranslation_ = internalGetNameTranslation();
-        result.nameTranslation_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -4358,22 +7403,6 @@ public final class Vdb {
         if (other.accountPlatform_ != 0) {
           setAccountPlatformValue(other.getAccountPlatformValue());
         }
-        if (!other.extra_.isEmpty()) {
-          if (extra_.isEmpty()) {
-            extra_ = other.extra_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureExtraIsMutable();
-            extra_.addAll(other.extra_);
-          }
-          onChanged();
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        internalGetMutableNameTranslation().mergeFrom(
-            other.internalGetNameTranslation());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4402,7 +7431,6 @@ public final class Vdb {
         }
         return this;
       }
-      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -4583,315 +7611,6 @@ public final class Vdb {
         onChanged();
         return this;
       }
-
-      private com.google.protobuf.LazyStringList extra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureExtraIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          extra_ = new com.google.protobuf.LazyStringArrayList(extra_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @return A list containing the extra.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getExtraList() {
-        return extra_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @return The count of extra.
-       */
-      public int getExtraCount() {
-        return extra_.size();
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @param index The index of the element to return.
-       * @return The extra at the given index.
-       */
-      public java.lang.String getExtra(int index) {
-        return extra_.get(index);
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the extra at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getExtraBytes(int index) {
-        return extra_.getByteString(index);
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The extra to set.
-       * @return This builder for chaining.
-       */
-      public Builder setExtra(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExtraIsMutable();
-        extra_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @param value The extra to add.
-       * @return This builder for chaining.
-       */
-      public Builder addExtra(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExtraIsMutable();
-        extra_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @param values The extra to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllExtra(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureExtraIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, extra_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearExtra() {
-        extra_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string extra = 4;</code>
-       * @param value The bytes of the extra to add.
-       * @return This builder for chaining.
-       */
-      public Builder addExtraBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureExtraIsMutable();
-        extra_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 5;</code>
-       * @return The name.
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 5;</code>
-       * @return The bytes for name.
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 5;</code>
-       * @param value The name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 5;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> nameTranslation_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetNameTranslation() {
-        if (nameTranslation_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              NameTranslationDefaultEntryHolder.defaultEntry);
-        }
-        return nameTranslation_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableNameTranslation() {
-        onChanged();;
-        if (nameTranslation_ == null) {
-          nameTranslation_ = com.google.protobuf.MapField.newMapField(
-              NameTranslationDefaultEntryHolder.defaultEntry);
-        }
-        if (!nameTranslation_.isMutable()) {
-          nameTranslation_ = nameTranslation_.copy();
-        }
-        return nameTranslation_;
-      }
-
-      public int getNameTranslationCount() {
-        return internalGetNameTranslation().getMap().size();
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-
-      public boolean containsNameTranslation(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetNameTranslation().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getNameTranslationMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getNameTranslation() {
-        return getNameTranslationMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-
-      public java.util.Map<java.lang.String, java.lang.String> getNameTranslationMap() {
-        return internalGetNameTranslation().getMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-
-      public java.lang.String getNameTranslationOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetNameTranslation().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-
-      public java.lang.String getNameTranslationOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetNameTranslation().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearNameTranslation() {
-        internalGetMutableNameTranslation().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-
-      public Builder removeNameTranslation(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableNameTranslation().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableNameTranslation() {
-        return internalGetMutableNameTranslation().getMutableMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-      public Builder putNameTranslation(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableNameTranslation().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <code>map&lt;string, string&gt; name_translation = 6;</code>
-       */
-
-      public Builder putAllNameTranslation(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableNameTranslation().getMutableMap()
-            .putAll(values);
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4951,25 +7670,50 @@ public final class Vdb {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_vdb_GetVtbsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_vdb_GetLinkSyntaxsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_vdb_GetLinkSyntaxsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_vdb_LinkSyntaxCollection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_vdb_LinkSyntaxCollection_LinkSyntaxsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_vdb_LinkSyntaxCollection_LinkSyntaxsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_vNerve_vdb_VtuberCollection_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_vdb_VtuberCollection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_vdb_GroupCollection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_vdb_GroupCollection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_vdb_FanCollection_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_vdb_FanCollection_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_vNerve_vdb_Vtuber_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_vdb_Vtuber_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_vdb_Vtuber_NameTranslationEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_vdb_Vtuber_NameTranslationEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_vNerve_vdb_Account_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_vdb_Account_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_vNerve_vdb_Account_NameTranslationEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_vNerve_vdb_Account_NameTranslationEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4980,41 +7724,50 @@ public final class Vdb {
   static {
     java.lang.String[] descriptorData = {
       "\n\024vNerve/vdb/vdb.proto\022\nvNerve.vdb\"\020\n\016Ge" +
-      "tVtbsRequest\"7\n\020VtuberCollection\022#\n\007vtub" +
-      "ers\030\001 \003(\0132\022.vNerve.vdb.Vtuber\"\344\001\n\006Vtuber" +
-      "\022\014\n\004uuid\030\001 \001(\t\022$\n\004type\030\002 \001(\0162\026.vNerve.vd" +
-      "b.VtuberType\022\013\n\003bot\030\003 \001(\010\022%\n\010accounts\030\004 " +
-      "\003(\0132\023.vNerve.vdb.Account\022\022\n\ngroup_uuid\030\005" +
-      " \001(\t\022\020\n\010model_2d\030\006 \001(\010\022\020\n\010model_3d\030\007 \001(\010" +
-      "\022\034\n\024model_2d_artist_uuid\030\010 \001(\t\022\034\n\024model_" +
-      "3d_artist_uuid\030\t \001(\t\"\224\002\n\007Account\022\n\n\002id\030\001" +
-      " \001(\t\022-\n\014account_type\030\002 \001(\0162\027.vNerve.vdb." +
-      "AccountType\0225\n\020account_platform\030\003 \001(\0162\033." +
-      "vNerve.vdb.AccountPlatform\022\r\n\005extra\030\004 \003(" +
-      "\t\022\014\n\004name\030\005 \001(\t\022B\n\020name_translation\030\006 \003(" +
-      "\0132(.vNerve.vdb.Account.NameTranslationEn" +
-      "try\0326\n\024NameTranslationEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001*E\n\nVtuberType\022\027\n\023UNK" +
-      "NOWN_VTUBER_TYPE\020\000\022\n\n\006VTUBER\020\001\022\t\n\005GROUP\020" +
-      "\002\022\007\n\003FAN\020\003*@\n\013AccountType\022\030\n\024UNKNOWN_ACC" +
-      "OUNT_TYPE\020\000\022\014\n\010OFFICIAL\020\001\022\t\n\005RELAY\020\002*\220\003\n" +
-      "\017AccountPlatform\022\024\n\020UNKNOWN_PLATFORM\020\000\022\014" +
-      "\n\010BILIBILI\020\001\022\013\n\007TWITTER\020\002\022\013\n\007YOUTUBE\020\003\022\r" +
-      "\n\tUSERLOCAL\020\004\022\t\n\005PEING\020\005\022\017\n\013MARSHMALLOW\020" +
-      "\006\022\t\n\005PIXIV\020\007\022\t\n\005WEIBO\020\010\022\t\n\005BOOTH\020\t\022\n\n\006AF" +
-      "DIAN\020\n\022\007\n\003WEB\020\013\022\t\n\005EMAIL\020\014\022\r\n\tINSTAGRAM\020" +
-      "\r\022\013\n\007POPIASK\020\016\022\020\n\014AMAZON_CO_JP\020\017\022\n\n\006TWIT" +
-      "CH\020\020\022\014\n\010NICONICO\020\021\022\014\n\010FACEBOOK\020\022\022\r\n\tTEES" +
-      "PRING\020\023\022\013\n\007PATREON\020\024\022\014\n\010JVCMUSIC\020\025\022\t\n\005CI" +
-      "_EN\020\026\022\n\n\006GITHUB\020\027\022\010\n\004LINE\020\030\022\n\n\006TIKTOK\020\031\022" +
-      "\n\n\006FANTIA\020\032\022\014\n\010SHOWROOM\020\033\022\014\n\010TELEGRAM\020\0342" +
-      "\363\001\n\016VtuberDatabase\022K\n\rGetAllVtubers\022\032.vN" +
-      "erve.vdb.GetVtbsRequest\032\034.vNerve.vdb.Vtu" +
-      "berCollection\"\000\022J\n\014GetAllGroups\022\032.vNerve" +
-      ".vdb.GetVtbsRequest\032\034.vNerve.vdb.VtuberC" +
-      "ollection\"\000\022H\n\nGetAllFans\022\032.vNerve.vdb.G" +
-      "etVtbsRequest\032\034.vNerve.vdb.VtuberCollect" +
-      "ion\"\000b\006proto3"
+      "tVtbsRequest\"\027\n\025GetLinkSyntaxsRequest\"\223\001" +
+      "\n\024LinkSyntaxCollection\022G\n\014link_syntaxs\030\001" +
+      " \003(\01321.vNerve.vdb.LinkSyntaxCollection.L" +
+      "inkSyntaxsEntry\0322\n\020LinkSyntaxsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\020VtuberCol" +
+      "lection\022#\n\007vtubers\030\001 \003(\0132\022.vNerve.vdb.Vt" +
+      "uber\"5\n\017GroupCollection\022\"\n\006groups\030\001 \003(\0132" +
+      "\022.vNerve.vdb.Vtuber\"1\n\rFanCollection\022 \n\004" +
+      "fans\030\001 \003(\0132\022.vNerve.vdb.Vtuber\"\201\003\n\006Vtube" +
+      "r\022\014\n\004uuid\030\001 \001(\t\022$\n\004type\030\002 \001(\0162\026.vNerve.v" +
+      "db.VtuberType\022\013\n\003bot\030\003 \001(\010\022%\n\010accounts\030\004" +
+      " \003(\0132\023.vNerve.vdb.Account\022\014\n\004name\030\005 \001(\t\022" +
+      "\022\n\nname_extra\030\006 \003(\t\022A\n\020name_translation\030" +
+      "\007 \003(\0132\'.vNerve.vdb.Vtuber.NameTranslatio" +
+      "nEntry\022\022\n\ngroup_uuid\030\010 \001(\t\022\020\n\010model_2d\030\t" +
+      " \001(\010\022\020\n\010model_3d\030\n \001(\010\022\034\n\024model_2d_artis" +
+      "t_uuid\030\013 \001(\t\022\034\n\024model_3d_artist_uuid\030\014 \001" +
+      "(\t\0326\n\024NameTranslationEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"{\n\007Account\022\n\n\002id\030\001 \001(" +
+      "\t\022-\n\014account_type\030\002 \001(\0162\027.vNerve.vdb.Acc" +
+      "ountType\0225\n\020account_platform\030\003 \001(\0162\033.vNe" +
+      "rve.vdb.AccountPlatform*E\n\nVtuberType\022\027\n" +
+      "\023UNKNOWN_VTUBER_TYPE\020\000\022\n\n\006VTUBER\020\001\022\t\n\005GR" +
+      "OUP\020\002\022\007\n\003FAN\020\003*@\n\013AccountType\022\030\n\024UNKNOWN" +
+      "_ACCOUNT_TYPE\020\000\022\014\n\010OFFICIAL\020\001\022\t\n\005RELAY\020\002" +
+      "*\220\003\n\017AccountPlatform\022\024\n\020UNKNOWN_PLATFORM" +
+      "\020\000\022\014\n\010BILIBILI\020\001\022\013\n\007TWITTER\020\002\022\013\n\007YOUTUBE" +
+      "\020\003\022\r\n\tUSERLOCAL\020\004\022\t\n\005PEING\020\005\022\017\n\013MARSHMAL" +
+      "LOW\020\006\022\t\n\005PIXIV\020\007\022\t\n\005WEIBO\020\010\022\t\n\005BOOTH\020\t\022\n" +
+      "\n\006AFDIAN\020\n\022\007\n\003WEB\020\013\022\t\n\005EMAIL\020\014\022\r\n\tINSTAG" +
+      "RAM\020\r\022\013\n\007POPIASK\020\016\022\020\n\014AMAZON_CO_JP\020\017\022\n\n\006" +
+      "TWITCH\020\020\022\014\n\010NICONICO\020\021\022\014\n\010FACEBOOK\020\022\022\r\n\t" +
+      "TEESPRING\020\023\022\013\n\007PATREON\020\024\022\014\n\010JVCMUSIC\020\025\022\t" +
+      "\n\005CI_EN\020\026\022\n\n\006GITHUB\020\027\022\010\n\004LINE\020\030\022\n\n\006TIKTO" +
+      "K\020\031\022\n\n\006FANTIA\020\032\022\014\n\010SHOWROOM\020\033\022\014\n\010TELEGRA" +
+      "M\020\0342\310\002\n\016VtuberDatabase\022K\n\rGetAllVtubers\022" +
+      "\032.vNerve.vdb.GetVtbsRequest\032\034.vNerve.vdb" +
+      ".VtuberCollection\"\000\022I\n\014GetAllGroups\022\032.vN" +
+      "erve.vdb.GetVtbsRequest\032\033.vNerve.vdb.Gro" +
+      "upCollection\"\000\022E\n\nGetAllFans\022\032.vNerve.vd" +
+      "b.GetVtbsRequest\032\031.vNerve.vdb.FanCollect" +
+      "ion\"\000\022W\n\016GetLinkSyntaxs\022!.vNerve.vdb.Get" +
+      "LinkSyntaxsRequest\032 .vNerve.vdb.LinkSynt" +
+      "axCollection\"\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5026,30 +7779,60 @@ public final class Vdb {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_vdb_GetVtbsRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_vNerve_vdb_VtuberCollection_descriptor =
+    internal_static_vNerve_vdb_GetLinkSyntaxsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_vNerve_vdb_GetLinkSyntaxsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_vdb_GetLinkSyntaxsRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_vNerve_vdb_LinkSyntaxCollection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor,
+        new java.lang.String[] { "LinkSyntaxs", });
+    internal_static_vNerve_vdb_LinkSyntaxCollection_LinkSyntaxsEntry_descriptor =
+      internal_static_vNerve_vdb_LinkSyntaxCollection_descriptor.getNestedTypes().get(0);
+    internal_static_vNerve_vdb_LinkSyntaxCollection_LinkSyntaxsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_vdb_LinkSyntaxCollection_LinkSyntaxsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_vNerve_vdb_VtuberCollection_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_vNerve_vdb_VtuberCollection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_vdb_VtuberCollection_descriptor,
         new java.lang.String[] { "Vtubers", });
+    internal_static_vNerve_vdb_GroupCollection_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_vNerve_vdb_GroupCollection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_vdb_GroupCollection_descriptor,
+        new java.lang.String[] { "Groups", });
+    internal_static_vNerve_vdb_FanCollection_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_vNerve_vdb_FanCollection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_vdb_FanCollection_descriptor,
+        new java.lang.String[] { "Fans", });
     internal_static_vNerve_vdb_Vtuber_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_vNerve_vdb_Vtuber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_vdb_Vtuber_descriptor,
-        new java.lang.String[] { "Uuid", "Type", "Bot", "Accounts", "GroupUuid", "Model2D", "Model3D", "Model2DArtistUuid", "Model3DArtistUuid", });
+        new java.lang.String[] { "Uuid", "Type", "Bot", "Accounts", "Name", "NameExtra", "NameTranslation", "GroupUuid", "Model2D", "Model3D", "Model2DArtistUuid", "Model3DArtistUuid", });
+    internal_static_vNerve_vdb_Vtuber_NameTranslationEntry_descriptor =
+      internal_static_vNerve_vdb_Vtuber_descriptor.getNestedTypes().get(0);
+    internal_static_vNerve_vdb_Vtuber_NameTranslationEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_vdb_Vtuber_NameTranslationEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_vNerve_vdb_Account_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_vNerve_vdb_Account_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_vdb_Account_descriptor,
-        new java.lang.String[] { "Id", "AccountType", "AccountPlatform", "Extra", "Name", "NameTranslation", });
-    internal_static_vNerve_vdb_Account_NameTranslationEntry_descriptor =
-      internal_static_vNerve_vdb_Account_descriptor.getNestedTypes().get(0);
-    internal_static_vNerve_vdb_Account_NameTranslationEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_vNerve_vdb_Account_NameTranslationEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "Id", "AccountType", "AccountPlatform", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

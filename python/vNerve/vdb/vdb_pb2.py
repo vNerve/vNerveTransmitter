@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='vNerve.vdb',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\x14vNerve/vdb/vdb.proto\x12\nvNerve.vdb\"\x10\n\x0eGetVtbsRequest\"7\n\x10VtuberCollection\x12#\n\x07vtubers\x18\x01 \x03(\x0b\x32\x12.vNerve.vdb.Vtuber\"\xe4\x01\n\x06Vtuber\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12$\n\x04type\x18\x02 \x01(\x0e\x32\x16.vNerve.vdb.VtuberType\x12\x0b\n\x03\x62ot\x18\x03 \x01(\x08\x12%\n\x08\x61\x63\x63ounts\x18\x04 \x03(\x0b\x32\x13.vNerve.vdb.Account\x12\x12\n\ngroup_uuid\x18\x05 \x01(\t\x12\x10\n\x08model_2d\x18\x06 \x01(\x08\x12\x10\n\x08model_3d\x18\x07 \x01(\x08\x12\x1c\n\x14model_2d_artist_uuid\x18\x08 \x01(\t\x12\x1c\n\x14model_3d_artist_uuid\x18\t \x01(\t\"\x94\x02\n\x07\x41\x63\x63ount\x12\n\n\x02id\x18\x01 \x01(\t\x12-\n\x0c\x61\x63\x63ount_type\x18\x02 \x01(\x0e\x32\x17.vNerve.vdb.AccountType\x12\x35\n\x10\x61\x63\x63ount_platform\x18\x03 \x01(\x0e\x32\x1b.vNerve.vdb.AccountPlatform\x12\r\n\x05\x65xtra\x18\x04 \x03(\t\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x42\n\x10name_translation\x18\x06 \x03(\x0b\x32(.vNerve.vdb.Account.NameTranslationEntry\x1a\x36\n\x14NameTranslationEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*E\n\nVtuberType\x12\x17\n\x13UNKNOWN_VTUBER_TYPE\x10\x00\x12\n\n\x06VTUBER\x10\x01\x12\t\n\x05GROUP\x10\x02\x12\x07\n\x03\x46\x41N\x10\x03*@\n\x0b\x41\x63\x63ountType\x12\x18\n\x14UNKNOWN_ACCOUNT_TYPE\x10\x00\x12\x0c\n\x08OFFICIAL\x10\x01\x12\t\n\x05RELAY\x10\x02*\x90\x03\n\x0f\x41\x63\x63ountPlatform\x12\x14\n\x10UNKNOWN_PLATFORM\x10\x00\x12\x0c\n\x08\x42ILIBILI\x10\x01\x12\x0b\n\x07TWITTER\x10\x02\x12\x0b\n\x07YOUTUBE\x10\x03\x12\r\n\tUSERLOCAL\x10\x04\x12\t\n\x05PEING\x10\x05\x12\x0f\n\x0bMARSHMALLOW\x10\x06\x12\t\n\x05PIXIV\x10\x07\x12\t\n\x05WEIBO\x10\x08\x12\t\n\x05\x42OOTH\x10\t\x12\n\n\x06\x41\x46\x44IAN\x10\n\x12\x07\n\x03WEB\x10\x0b\x12\t\n\x05\x45MAIL\x10\x0c\x12\r\n\tINSTAGRAM\x10\r\x12\x0b\n\x07POPIASK\x10\x0e\x12\x10\n\x0c\x41MAZON_CO_JP\x10\x0f\x12\n\n\x06TWITCH\x10\x10\x12\x0c\n\x08NICONICO\x10\x11\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x12\x12\r\n\tTEESPRING\x10\x13\x12\x0b\n\x07PATREON\x10\x14\x12\x0c\n\x08JVCMUSIC\x10\x15\x12\t\n\x05\x43I_EN\x10\x16\x12\n\n\x06GITHUB\x10\x17\x12\x08\n\x04LINE\x10\x18\x12\n\n\x06TIKTOK\x10\x19\x12\n\n\x06\x46\x41NTIA\x10\x1a\x12\x0c\n\x08SHOWROOM\x10\x1b\x12\x0c\n\x08TELEGRAM\x10\x1c\x32\xf3\x01\n\x0eVtuberDatabase\x12K\n\rGetAllVtubers\x12\x1a.vNerve.vdb.GetVtbsRequest\x1a\x1c.vNerve.vdb.VtuberCollection\"\x00\x12J\n\x0cGetAllGroups\x12\x1a.vNerve.vdb.GetVtbsRequest\x1a\x1c.vNerve.vdb.VtuberCollection\"\x00\x12H\n\nGetAllFans\x12\x1a.vNerve.vdb.GetVtbsRequest\x1a\x1c.vNerve.vdb.VtuberCollection\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x14vNerve/vdb/vdb.proto\x12\nvNerve.vdb\"\x10\n\x0eGetVtbsRequest\"\x17\n\x15GetLinkSyntaxsRequest\"\x93\x01\n\x14LinkSyntaxCollection\x12G\n\x0clink_syntaxs\x18\x01 \x03(\x0b\x32\x31.vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry\x1a\x32\n\x10LinkSyntaxsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"7\n\x10VtuberCollection\x12#\n\x07vtubers\x18\x01 \x03(\x0b\x32\x12.vNerve.vdb.Vtuber\"5\n\x0fGroupCollection\x12\"\n\x06groups\x18\x01 \x03(\x0b\x32\x12.vNerve.vdb.Vtuber\"1\n\rFanCollection\x12 \n\x04\x66\x61ns\x18\x01 \x03(\x0b\x32\x12.vNerve.vdb.Vtuber\"\x81\x03\n\x06Vtuber\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12$\n\x04type\x18\x02 \x01(\x0e\x32\x16.vNerve.vdb.VtuberType\x12\x0b\n\x03\x62ot\x18\x03 \x01(\x08\x12%\n\x08\x61\x63\x63ounts\x18\x04 \x03(\x0b\x32\x13.vNerve.vdb.Account\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x12\n\nname_extra\x18\x06 \x03(\t\x12\x41\n\x10name_translation\x18\x07 \x03(\x0b\x32\'.vNerve.vdb.Vtuber.NameTranslationEntry\x12\x12\n\ngroup_uuid\x18\x08 \x01(\t\x12\x10\n\x08model_2d\x18\t \x01(\x08\x12\x10\n\x08model_3d\x18\n \x01(\x08\x12\x1c\n\x14model_2d_artist_uuid\x18\x0b \x01(\t\x12\x1c\n\x14model_3d_artist_uuid\x18\x0c \x01(\t\x1a\x36\n\x14NameTranslationEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"{\n\x07\x41\x63\x63ount\x12\n\n\x02id\x18\x01 \x01(\t\x12-\n\x0c\x61\x63\x63ount_type\x18\x02 \x01(\x0e\x32\x17.vNerve.vdb.AccountType\x12\x35\n\x10\x61\x63\x63ount_platform\x18\x03 \x01(\x0e\x32\x1b.vNerve.vdb.AccountPlatform*E\n\nVtuberType\x12\x17\n\x13UNKNOWN_VTUBER_TYPE\x10\x00\x12\n\n\x06VTUBER\x10\x01\x12\t\n\x05GROUP\x10\x02\x12\x07\n\x03\x46\x41N\x10\x03*@\n\x0b\x41\x63\x63ountType\x12\x18\n\x14UNKNOWN_ACCOUNT_TYPE\x10\x00\x12\x0c\n\x08OFFICIAL\x10\x01\x12\t\n\x05RELAY\x10\x02*\x90\x03\n\x0f\x41\x63\x63ountPlatform\x12\x14\n\x10UNKNOWN_PLATFORM\x10\x00\x12\x0c\n\x08\x42ILIBILI\x10\x01\x12\x0b\n\x07TWITTER\x10\x02\x12\x0b\n\x07YOUTUBE\x10\x03\x12\r\n\tUSERLOCAL\x10\x04\x12\t\n\x05PEING\x10\x05\x12\x0f\n\x0bMARSHMALLOW\x10\x06\x12\t\n\x05PIXIV\x10\x07\x12\t\n\x05WEIBO\x10\x08\x12\t\n\x05\x42OOTH\x10\t\x12\n\n\x06\x41\x46\x44IAN\x10\n\x12\x07\n\x03WEB\x10\x0b\x12\t\n\x05\x45MAIL\x10\x0c\x12\r\n\tINSTAGRAM\x10\r\x12\x0b\n\x07POPIASK\x10\x0e\x12\x10\n\x0c\x41MAZON_CO_JP\x10\x0f\x12\n\n\x06TWITCH\x10\x10\x12\x0c\n\x08NICONICO\x10\x11\x12\x0c\n\x08\x46\x41\x43\x45\x42OOK\x10\x12\x12\r\n\tTEESPRING\x10\x13\x12\x0b\n\x07PATREON\x10\x14\x12\x0c\n\x08JVCMUSIC\x10\x15\x12\t\n\x05\x43I_EN\x10\x16\x12\n\n\x06GITHUB\x10\x17\x12\x08\n\x04LINE\x10\x18\x12\n\n\x06TIKTOK\x10\x19\x12\n\n\x06\x46\x41NTIA\x10\x1a\x12\x0c\n\x08SHOWROOM\x10\x1b\x12\x0c\n\x08TELEGRAM\x10\x1c\x32\xc8\x02\n\x0eVtuberDatabase\x12K\n\rGetAllVtubers\x12\x1a.vNerve.vdb.GetVtbsRequest\x1a\x1c.vNerve.vdb.VtuberCollection\"\x00\x12I\n\x0cGetAllGroups\x12\x1a.vNerve.vdb.GetVtbsRequest\x1a\x1b.vNerve.vdb.GroupCollection\"\x00\x12\x45\n\nGetAllFans\x12\x1a.vNerve.vdb.GetVtbsRequest\x1a\x19.vNerve.vdb.FanCollection\"\x00\x12W\n\x0eGetLinkSyntaxs\x12!.vNerve.vdb.GetLinkSyntaxsRequest\x1a .vNerve.vdb.LinkSyntaxCollection\"\x00\x62\x06proto3'
 )
 
 _VTUBERTYPE = _descriptor.EnumDescriptor(
@@ -47,8 +47,8 @@ _VTUBERTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=621,
-  serialized_end=690,
+  serialized_start=905,
+  serialized_end=974,
 )
 _sym_db.RegisterEnumDescriptor(_VTUBERTYPE)
 
@@ -74,8 +74,8 @@ _ACCOUNTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=692,
-  serialized_end=756,
+  serialized_start=976,
+  serialized_end=1040,
 )
 _sym_db.RegisterEnumDescriptor(_ACCOUNTTYPE)
 
@@ -205,8 +205,8 @@ _ACCOUNTPLATFORM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=759,
-  serialized_end=1159,
+  serialized_start=1043,
+  serialized_end=1443,
 )
 _sym_db.RegisterEnumDescriptor(_ACCOUNTPLATFORM)
 
@@ -274,6 +274,98 @@ _GETVTBSREQUEST = _descriptor.Descriptor(
 )
 
 
+_GETLINKSYNTAXSREQUEST = _descriptor.Descriptor(
+  name='GetLinkSyntaxsRequest',
+  full_name='vNerve.vdb.GetLinkSyntaxsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=54,
+  serialized_end=77,
+)
+
+
+_LINKSYNTAXCOLLECTION_LINKSYNTAXSENTRY = _descriptor.Descriptor(
+  name='LinkSyntaxsEntry',
+  full_name='vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=177,
+  serialized_end=227,
+)
+
+_LINKSYNTAXCOLLECTION = _descriptor.Descriptor(
+  name='LinkSyntaxCollection',
+  full_name='vNerve.vdb.LinkSyntaxCollection',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='link_syntaxs', full_name='vNerve.vdb.LinkSyntaxCollection.link_syntaxs', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_LINKSYNTAXCOLLECTION_LINKSYNTAXSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=80,
+  serialized_end=227,
+)
+
+
 _VTUBERCOLLECTION = _descriptor.Descriptor(
   name='VtuberCollection',
   full_name='vNerve.vdb.VtuberCollection',
@@ -300,10 +392,109 @@ _VTUBERCOLLECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54,
-  serialized_end=109,
+  serialized_start=229,
+  serialized_end=284,
 )
 
+
+_GROUPCOLLECTION = _descriptor.Descriptor(
+  name='GroupCollection',
+  full_name='vNerve.vdb.GroupCollection',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='groups', full_name='vNerve.vdb.GroupCollection.groups', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=286,
+  serialized_end=339,
+)
+
+
+_FANCOLLECTION = _descriptor.Descriptor(
+  name='FanCollection',
+  full_name='vNerve.vdb.FanCollection',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='fans', full_name='vNerve.vdb.FanCollection.fans', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=341,
+  serialized_end=390,
+)
+
+
+_VTUBER_NAMETRANSLATIONENTRY = _descriptor.Descriptor(
+  name='NameTranslationEntry',
+  full_name='vNerve.vdb.Vtuber.NameTranslationEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='vNerve.vdb.Vtuber.NameTranslationEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='vNerve.vdb.Vtuber.NameTranslationEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=724,
+  serialized_end=778,
+)
 
 _VTUBER = _descriptor.Descriptor(
   name='Vtuber',
@@ -341,36 +532,57 @@ _VTUBER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='group_uuid', full_name='vNerve.vdb.Vtuber.group_uuid', index=4,
+      name='name', full_name='vNerve.vdb.Vtuber.name', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_2d', full_name='vNerve.vdb.Vtuber.model_2d', index=5,
-      number=6, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='name_extra', full_name='vNerve.vdb.Vtuber.name_extra', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_3d', full_name='vNerve.vdb.Vtuber.model_3d', index=6,
-      number=7, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      name='name_translation', full_name='vNerve.vdb.Vtuber.name_translation', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_2d_artist_uuid', full_name='vNerve.vdb.Vtuber.model_2d_artist_uuid', index=7,
+      name='group_uuid', full_name='vNerve.vdb.Vtuber.group_uuid', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_3d_artist_uuid', full_name='vNerve.vdb.Vtuber.model_3d_artist_uuid', index=8,
-      number=9, type=9, cpp_type=9, label=1,
+      name='model_2d', full_name='vNerve.vdb.Vtuber.model_2d', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_3d', full_name='vNerve.vdb.Vtuber.model_3d', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_2d_artist_uuid', full_name='vNerve.vdb.Vtuber.model_2d_artist_uuid', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_3d_artist_uuid', full_name='vNerve.vdb.Vtuber.model_3d_artist_uuid', index=11,
+      number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -378,7 +590,7 @@ _VTUBER = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_VTUBER_NAMETRANSLATIONENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -387,47 +599,10 @@ _VTUBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=112,
-  serialized_end=340,
+  serialized_start=393,
+  serialized_end=778,
 )
 
-
-_ACCOUNT_NAMETRANSLATIONENTRY = _descriptor.Descriptor(
-  name='NameTranslationEntry',
-  full_name='vNerve.vdb.Account.NameTranslationEntry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='vNerve.vdb.Account.NameTranslationEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='vNerve.vdb.Account.NameTranslationEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=b'8\001',
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=565,
-  serialized_end=619,
-)
 
 _ACCOUNT = _descriptor.Descriptor(
   name='Account',
@@ -457,31 +632,10 @@ _ACCOUNT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='extra', full_name='vNerve.vdb.Account.extra', index=3,
-      number=4, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='vNerve.vdb.Account.name', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='name_translation', full_name='vNerve.vdb.Account.name_translation', index=5,
-      number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[_ACCOUNT_NAMETRANSLATIONENTRY, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -490,19 +644,27 @@ _ACCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=343,
-  serialized_end=619,
+  serialized_start=780,
+  serialized_end=903,
 )
 
+_LINKSYNTAXCOLLECTION_LINKSYNTAXSENTRY.containing_type = _LINKSYNTAXCOLLECTION
+_LINKSYNTAXCOLLECTION.fields_by_name['link_syntaxs'].message_type = _LINKSYNTAXCOLLECTION_LINKSYNTAXSENTRY
 _VTUBERCOLLECTION.fields_by_name['vtubers'].message_type = _VTUBER
+_GROUPCOLLECTION.fields_by_name['groups'].message_type = _VTUBER
+_FANCOLLECTION.fields_by_name['fans'].message_type = _VTUBER
+_VTUBER_NAMETRANSLATIONENTRY.containing_type = _VTUBER
 _VTUBER.fields_by_name['type'].enum_type = _VTUBERTYPE
 _VTUBER.fields_by_name['accounts'].message_type = _ACCOUNT
-_ACCOUNT_NAMETRANSLATIONENTRY.containing_type = _ACCOUNT
+_VTUBER.fields_by_name['name_translation'].message_type = _VTUBER_NAMETRANSLATIONENTRY
 _ACCOUNT.fields_by_name['account_type'].enum_type = _ACCOUNTTYPE
 _ACCOUNT.fields_by_name['account_platform'].enum_type = _ACCOUNTPLATFORM
-_ACCOUNT.fields_by_name['name_translation'].message_type = _ACCOUNT_NAMETRANSLATIONENTRY
 DESCRIPTOR.message_types_by_name['GetVtbsRequest'] = _GETVTBSREQUEST
+DESCRIPTOR.message_types_by_name['GetLinkSyntaxsRequest'] = _GETLINKSYNTAXSREQUEST
+DESCRIPTOR.message_types_by_name['LinkSyntaxCollection'] = _LINKSYNTAXCOLLECTION
 DESCRIPTOR.message_types_by_name['VtuberCollection'] = _VTUBERCOLLECTION
+DESCRIPTOR.message_types_by_name['GroupCollection'] = _GROUPCOLLECTION
+DESCRIPTOR.message_types_by_name['FanCollection'] = _FANCOLLECTION
 DESCRIPTOR.message_types_by_name['Vtuber'] = _VTUBER
 DESCRIPTOR.message_types_by_name['Account'] = _ACCOUNT
 DESCRIPTOR.enum_types_by_name['VtuberType'] = _VTUBERTYPE
@@ -517,6 +679,28 @@ GetVtbsRequest = _reflection.GeneratedProtocolMessageType('GetVtbsRequest', (_me
   })
 _sym_db.RegisterMessage(GetVtbsRequest)
 
+GetLinkSyntaxsRequest = _reflection.GeneratedProtocolMessageType('GetLinkSyntaxsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETLINKSYNTAXSREQUEST,
+  '__module__' : 'vNerve.vdb.vdb_pb2'
+  # @@protoc_insertion_point(class_scope:vNerve.vdb.GetLinkSyntaxsRequest)
+  })
+_sym_db.RegisterMessage(GetLinkSyntaxsRequest)
+
+LinkSyntaxCollection = _reflection.GeneratedProtocolMessageType('LinkSyntaxCollection', (_message.Message,), {
+
+  'LinkSyntaxsEntry' : _reflection.GeneratedProtocolMessageType('LinkSyntaxsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _LINKSYNTAXCOLLECTION_LINKSYNTAXSENTRY,
+    '__module__' : 'vNerve.vdb.vdb_pb2'
+    # @@protoc_insertion_point(class_scope:vNerve.vdb.LinkSyntaxCollection.LinkSyntaxsEntry)
+    })
+  ,
+  'DESCRIPTOR' : _LINKSYNTAXCOLLECTION,
+  '__module__' : 'vNerve.vdb.vdb_pb2'
+  # @@protoc_insertion_point(class_scope:vNerve.vdb.LinkSyntaxCollection)
+  })
+_sym_db.RegisterMessage(LinkSyntaxCollection)
+_sym_db.RegisterMessage(LinkSyntaxCollection.LinkSyntaxsEntry)
+
 VtuberCollection = _reflection.GeneratedProtocolMessageType('VtuberCollection', (_message.Message,), {
   'DESCRIPTOR' : _VTUBERCOLLECTION,
   '__module__' : 'vNerve.vdb.vdb_pb2'
@@ -524,30 +708,45 @@ VtuberCollection = _reflection.GeneratedProtocolMessageType('VtuberCollection', 
   })
 _sym_db.RegisterMessage(VtuberCollection)
 
+GroupCollection = _reflection.GeneratedProtocolMessageType('GroupCollection', (_message.Message,), {
+  'DESCRIPTOR' : _GROUPCOLLECTION,
+  '__module__' : 'vNerve.vdb.vdb_pb2'
+  # @@protoc_insertion_point(class_scope:vNerve.vdb.GroupCollection)
+  })
+_sym_db.RegisterMessage(GroupCollection)
+
+FanCollection = _reflection.GeneratedProtocolMessageType('FanCollection', (_message.Message,), {
+  'DESCRIPTOR' : _FANCOLLECTION,
+  '__module__' : 'vNerve.vdb.vdb_pb2'
+  # @@protoc_insertion_point(class_scope:vNerve.vdb.FanCollection)
+  })
+_sym_db.RegisterMessage(FanCollection)
+
 Vtuber = _reflection.GeneratedProtocolMessageType('Vtuber', (_message.Message,), {
+
+  'NameTranslationEntry' : _reflection.GeneratedProtocolMessageType('NameTranslationEntry', (_message.Message,), {
+    'DESCRIPTOR' : _VTUBER_NAMETRANSLATIONENTRY,
+    '__module__' : 'vNerve.vdb.vdb_pb2'
+    # @@protoc_insertion_point(class_scope:vNerve.vdb.Vtuber.NameTranslationEntry)
+    })
+  ,
   'DESCRIPTOR' : _VTUBER,
   '__module__' : 'vNerve.vdb.vdb_pb2'
   # @@protoc_insertion_point(class_scope:vNerve.vdb.Vtuber)
   })
 _sym_db.RegisterMessage(Vtuber)
+_sym_db.RegisterMessage(Vtuber.NameTranslationEntry)
 
 Account = _reflection.GeneratedProtocolMessageType('Account', (_message.Message,), {
-
-  'NameTranslationEntry' : _reflection.GeneratedProtocolMessageType('NameTranslationEntry', (_message.Message,), {
-    'DESCRIPTOR' : _ACCOUNT_NAMETRANSLATIONENTRY,
-    '__module__' : 'vNerve.vdb.vdb_pb2'
-    # @@protoc_insertion_point(class_scope:vNerve.vdb.Account.NameTranslationEntry)
-    })
-  ,
   'DESCRIPTOR' : _ACCOUNT,
   '__module__' : 'vNerve.vdb.vdb_pb2'
   # @@protoc_insertion_point(class_scope:vNerve.vdb.Account)
   })
 _sym_db.RegisterMessage(Account)
-_sym_db.RegisterMessage(Account.NameTranslationEntry)
 
 
-_ACCOUNT_NAMETRANSLATIONENTRY._options = None
+_LINKSYNTAXCOLLECTION_LINKSYNTAXSENTRY._options = None
+_VTUBER_NAMETRANSLATIONENTRY._options = None
 
 _VTUBERDATABASE = _descriptor.ServiceDescriptor(
   name='VtuberDatabase',
@@ -555,8 +754,8 @@ _VTUBERDATABASE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1162,
-  serialized_end=1405,
+  serialized_start=1446,
+  serialized_end=1774,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAllVtubers',
@@ -573,7 +772,7 @@ _VTUBERDATABASE = _descriptor.ServiceDescriptor(
     index=1,
     containing_service=None,
     input_type=_GETVTBSREQUEST,
-    output_type=_VTUBERCOLLECTION,
+    output_type=_GROUPCOLLECTION,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
@@ -582,7 +781,16 @@ _VTUBERDATABASE = _descriptor.ServiceDescriptor(
     index=2,
     containing_service=None,
     input_type=_GETVTBSREQUEST,
-    output_type=_VTUBERCOLLECTION,
+    output_type=_FANCOLLECTION,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetLinkSyntaxs',
+    full_name='vNerve.vdb.VtuberDatabase.GetLinkSyntaxs',
+    index=3,
+    containing_service=None,
+    input_type=_GETLINKSYNTAXSREQUEST,
+    output_type=_LINKSYNTAXCOLLECTION,
     serialized_options=None,
   ),
 ])

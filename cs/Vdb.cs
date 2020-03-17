@@ -25,44 +25,56 @@ namespace VNerve.Vdb {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChR2TmVydmUvdmRiL3ZkYi5wcm90bxIKdk5lcnZlLnZkYiIQCg5HZXRWdGJz",
-            "UmVxdWVzdCI3ChBWdHViZXJDb2xsZWN0aW9uEiMKB3Z0dWJlcnMYASADKAsy",
-            "Ei52TmVydmUudmRiLlZ0dWJlciLkAQoGVnR1YmVyEgwKBHV1aWQYASABKAkS",
-            "JAoEdHlwZRgCIAEoDjIWLnZOZXJ2ZS52ZGIuVnR1YmVyVHlwZRILCgNib3QY",
-            "AyABKAgSJQoIYWNjb3VudHMYBCADKAsyEy52TmVydmUudmRiLkFjY291bnQS",
-            "EgoKZ3JvdXBfdXVpZBgFIAEoCRIQCghtb2RlbF8yZBgGIAEoCBIQCghtb2Rl",
-            "bF8zZBgHIAEoCBIcChRtb2RlbF8yZF9hcnRpc3RfdXVpZBgIIAEoCRIcChRt",
-            "b2RlbF8zZF9hcnRpc3RfdXVpZBgJIAEoCSKUAgoHQWNjb3VudBIKCgJpZBgB",
-            "IAEoCRItCgxhY2NvdW50X3R5cGUYAiABKA4yFy52TmVydmUudmRiLkFjY291",
-            "bnRUeXBlEjUKEGFjY291bnRfcGxhdGZvcm0YAyABKA4yGy52TmVydmUudmRi",
-            "LkFjY291bnRQbGF0Zm9ybRINCgVleHRyYRgEIAMoCRIMCgRuYW1lGAUgASgJ",
-            "EkIKEG5hbWVfdHJhbnNsYXRpb24YBiADKAsyKC52TmVydmUudmRiLkFjY291",
-            "bnQuTmFtZVRyYW5zbGF0aW9uRW50cnkaNgoUTmFtZVRyYW5zbGF0aW9uRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASpFCgpWdHViZXJU",
-            "eXBlEhcKE1VOS05PV05fVlRVQkVSX1RZUEUQABIKCgZWVFVCRVIQARIJCgVH",
-            "Uk9VUBACEgcKA0ZBThADKkAKC0FjY291bnRUeXBlEhgKFFVOS05PV05fQUND",
-            "T1VOVF9UWVBFEAASDAoIT0ZGSUNJQUwQARIJCgVSRUxBWRACKpADCg9BY2Nv",
-            "dW50UGxhdGZvcm0SFAoQVU5LTk9XTl9QTEFURk9STRAAEgwKCEJJTElCSUxJ",
-            "EAESCwoHVFdJVFRFUhACEgsKB1lPVVRVQkUQAxINCglVU0VSTE9DQUwQBBIJ",
-            "CgVQRUlORxAFEg8KC01BUlNITUFMTE9XEAYSCQoFUElYSVYQBxIJCgVXRUlC",
-            "TxAIEgkKBUJPT1RIEAkSCgoGQUZESUFOEAoSBwoDV0VCEAsSCQoFRU1BSUwQ",
-            "DBINCglJTlNUQUdSQU0QDRILCgdQT1BJQVNLEA4SEAoMQU1BWk9OX0NPX0pQ",
-            "EA8SCgoGVFdJVENIEBASDAoITklDT05JQ08QERIMCghGQUNFQk9PSxASEg0K",
-            "CVRFRVNQUklORxATEgsKB1BBVFJFT04QFBIMCghKVkNNVVNJQxAVEgkKBUNJ",
-            "X0VOEBYSCgoGR0lUSFVCEBcSCAoETElORRAYEgoKBlRJS1RPSxAZEgoKBkZB",
-            "TlRJQRAaEgwKCFNIT1dST09NEBsSDAoIVEVMRUdSQU0QHDLzAQoOVnR1YmVy",
-            "RGF0YWJhc2USSwoNR2V0QWxsVnR1YmVycxIaLnZOZXJ2ZS52ZGIuR2V0VnRi",
-            "c1JlcXVlc3QaHC52TmVydmUudmRiLlZ0dWJlckNvbGxlY3Rpb24iABJKCgxH",
-            "ZXRBbGxHcm91cHMSGi52TmVydmUudmRiLkdldFZ0YnNSZXF1ZXN0Ghwudk5l",
-            "cnZlLnZkYi5WdHViZXJDb2xsZWN0aW9uIgASSAoKR2V0QWxsRmFucxIaLnZO",
-            "ZXJ2ZS52ZGIuR2V0VnRic1JlcXVlc3QaHC52TmVydmUudmRiLlZ0dWJlckNv",
-            "bGxlY3Rpb24iAGIGcHJvdG8z"));
+            "UmVxdWVzdCIXChVHZXRMaW5rU3ludGF4c1JlcXVlc3QikwEKFExpbmtTeW50",
+            "YXhDb2xsZWN0aW9uEkcKDGxpbmtfc3ludGF4cxgBIAMoCzIxLnZOZXJ2ZS52",
+            "ZGIuTGlua1N5bnRheENvbGxlY3Rpb24uTGlua1N5bnRheHNFbnRyeRoyChBM",
+            "aW5rU3ludGF4c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEiNwoQVnR1YmVyQ29sbGVjdGlvbhIjCgd2dHViZXJzGAEgAygLMhIudk5l",
+            "cnZlLnZkYi5WdHViZXIiNQoPR3JvdXBDb2xsZWN0aW9uEiIKBmdyb3VwcxgB",
+            "IAMoCzISLnZOZXJ2ZS52ZGIuVnR1YmVyIjEKDUZhbkNvbGxlY3Rpb24SIAoE",
+            "ZmFucxgBIAMoCzISLnZOZXJ2ZS52ZGIuVnR1YmVyIoEDCgZWdHViZXISDAoE",
+            "dXVpZBgBIAEoCRIkCgR0eXBlGAIgASgOMhYudk5lcnZlLnZkYi5WdHViZXJU",
+            "eXBlEgsKA2JvdBgDIAEoCBIlCghhY2NvdW50cxgEIAMoCzITLnZOZXJ2ZS52",
+            "ZGIuQWNjb3VudBIMCgRuYW1lGAUgASgJEhIKCm5hbWVfZXh0cmEYBiADKAkS",
+            "QQoQbmFtZV90cmFuc2xhdGlvbhgHIAMoCzInLnZOZXJ2ZS52ZGIuVnR1YmVy",
+            "Lk5hbWVUcmFuc2xhdGlvbkVudHJ5EhIKCmdyb3VwX3V1aWQYCCABKAkSEAoI",
+            "bW9kZWxfMmQYCSABKAgSEAoIbW9kZWxfM2QYCiABKAgSHAoUbW9kZWxfMmRf",
+            "YXJ0aXN0X3V1aWQYCyABKAkSHAoUbW9kZWxfM2RfYXJ0aXN0X3V1aWQYDCAB",
+            "KAkaNgoUTmFtZVRyYW5zbGF0aW9uRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ASJ7CgdBY2NvdW50EgoKAmlkGAEgASgJEi0KDGFjY291",
+            "bnRfdHlwZRgCIAEoDjIXLnZOZXJ2ZS52ZGIuQWNjb3VudFR5cGUSNQoQYWNj",
+            "b3VudF9wbGF0Zm9ybRgDIAEoDjIbLnZOZXJ2ZS52ZGIuQWNjb3VudFBsYXRm",
+            "b3JtKkUKClZ0dWJlclR5cGUSFwoTVU5LTk9XTl9WVFVCRVJfVFlQRRAAEgoK",
+            "BlZUVUJFUhABEgkKBUdST1VQEAISBwoDRkFOEAMqQAoLQWNjb3VudFR5cGUS",
+            "GAoUVU5LTk9XTl9BQ0NPVU5UX1RZUEUQABIMCghPRkZJQ0lBTBABEgkKBVJF",
+            "TEFZEAIqkAMKD0FjY291bnRQbGF0Zm9ybRIUChBVTktOT1dOX1BMQVRGT1JN",
+            "EAASDAoIQklMSUJJTEkQARILCgdUV0lUVEVSEAISCwoHWU9VVFVCRRADEg0K",
+            "CVVTRVJMT0NBTBAEEgkKBVBFSU5HEAUSDwoLTUFSU0hNQUxMT1cQBhIJCgVQ",
+            "SVhJVhAHEgkKBVdFSUJPEAgSCQoFQk9PVEgQCRIKCgZBRkRJQU4QChIHCgNX",
+            "RUIQCxIJCgVFTUFJTBAMEg0KCUlOU1RBR1JBTRANEgsKB1BPUElBU0sQDhIQ",
+            "CgxBTUFaT05fQ09fSlAQDxIKCgZUV0lUQ0gQEBIMCghOSUNPTklDTxAREgwK",
+            "CEZBQ0VCT09LEBISDQoJVEVFU1BSSU5HEBMSCwoHUEFUUkVPThAUEgwKCEpW",
+            "Q01VU0lDEBUSCQoFQ0lfRU4QFhIKCgZHSVRIVUIQFxIICgRMSU5FEBgSCgoG",
+            "VElLVE9LEBkSCgoGRkFOVElBEBoSDAoIU0hPV1JPT00QGxIMCghURUxFR1JB",
+            "TRAcMsgCCg5WdHViZXJEYXRhYmFzZRJLCg1HZXRBbGxWdHViZXJzEhoudk5l",
+            "cnZlLnZkYi5HZXRWdGJzUmVxdWVzdBocLnZOZXJ2ZS52ZGIuVnR1YmVyQ29s",
+            "bGVjdGlvbiIAEkkKDEdldEFsbEdyb3VwcxIaLnZOZXJ2ZS52ZGIuR2V0VnRi",
+            "c1JlcXVlc3QaGy52TmVydmUudmRiLkdyb3VwQ29sbGVjdGlvbiIAEkUKCkdl",
+            "dEFsbEZhbnMSGi52TmVydmUudmRiLkdldFZ0YnNSZXF1ZXN0Ghkudk5lcnZl",
+            "LnZkYi5GYW5Db2xsZWN0aW9uIgASVwoOR2V0TGlua1N5bnRheHMSIS52TmVy",
+            "dmUudmRiLkdldExpbmtTeW50YXhzUmVxdWVzdBogLnZOZXJ2ZS52ZGIuTGlu",
+            "a1N5bnRheENvbGxlY3Rpb24iAGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Vdb.VtuberType), typeof(global::VNerve.Vdb.AccountType), typeof(global::VNerve.Vdb.AccountPlatform), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.GetVtbsRequest), global::VNerve.Vdb.GetVtbsRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.GetLinkSyntaxsRequest), global::VNerve.Vdb.GetLinkSyntaxsRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.LinkSyntaxCollection), global::VNerve.Vdb.LinkSyntaxCollection.Parser, new[]{ "LinkSyntaxs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.VtuberCollection), global::VNerve.Vdb.VtuberCollection.Parser, new[]{ "Vtubers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.Vtuber), global::VNerve.Vdb.Vtuber.Parser, new[]{ "Uuid", "Type", "Bot", "Accounts", "GroupUuid", "Model2D", "Model3D", "Model2DArtistUuid", "Model3DArtistUuid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.Account), global::VNerve.Vdb.Account.Parser, new[]{ "Id", "AccountType", "AccountPlatform", "Extra", "Name", "NameTranslation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.GroupCollection), global::VNerve.Vdb.GroupCollection.Parser, new[]{ "Groups" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.FanCollection), global::VNerve.Vdb.FanCollection.Parser, new[]{ "Fans" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.Vtuber), global::VNerve.Vdb.Vtuber.Parser, new[]{ "Uuid", "Type", "Bot", "Accounts", "Name", "NameExtra", "NameTranslation", "GroupUuid", "Model2D", "Model3D", "Model2DArtistUuid", "Model3DArtistUuid" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Vdb.Account), global::VNerve.Vdb.Account.Parser, new[]{ "Id", "AccountType", "AccountPlatform" }, null, null, null, null)
           }));
     }
     #endregion
@@ -218,6 +230,228 @@ namespace VNerve.Vdb {
 
   }
 
+  public sealed partial class GetLinkSyntaxsRequest : pb::IMessage<GetLinkSyntaxsRequest> {
+    private static readonly pb::MessageParser<GetLinkSyntaxsRequest> _parser = new pb::MessageParser<GetLinkSyntaxsRequest>(() => new GetLinkSyntaxsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetLinkSyntaxsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLinkSyntaxsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLinkSyntaxsRequest(GetLinkSyntaxsRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetLinkSyntaxsRequest Clone() {
+      return new GetLinkSyntaxsRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetLinkSyntaxsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetLinkSyntaxsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetLinkSyntaxsRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class LinkSyntaxCollection : pb::IMessage<LinkSyntaxCollection> {
+    private static readonly pb::MessageParser<LinkSyntaxCollection> _parser = new pb::MessageParser<LinkSyntaxCollection>(() => new LinkSyntaxCollection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LinkSyntaxCollection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LinkSyntaxCollection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LinkSyntaxCollection(LinkSyntaxCollection other) : this() {
+      linkSyntaxs_ = other.linkSyntaxs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LinkSyntaxCollection Clone() {
+      return new LinkSyntaxCollection(this);
+    }
+
+    /// <summary>Field number for the "link_syntaxs" field.</summary>
+    public const int LinkSyntaxsFieldNumber = 1;
+    private static readonly pbc::MapField<string, string>.Codec _map_linkSyntaxs_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
+    private readonly pbc::MapField<string, string> linkSyntaxs_ = new pbc::MapField<string, string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> LinkSyntaxs {
+      get { return linkSyntaxs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LinkSyntaxCollection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LinkSyntaxCollection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!LinkSyntaxs.Equals(other.LinkSyntaxs)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= LinkSyntaxs.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      linkSyntaxs_.WriteTo(output, _map_linkSyntaxs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += linkSyntaxs_.CalculateSize(_map_linkSyntaxs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LinkSyntaxCollection other) {
+      if (other == null) {
+        return;
+      }
+      linkSyntaxs_.Add(other.linkSyntaxs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            linkSyntaxs_.AddEntriesFrom(input, _map_linkSyntaxs_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class VtuberCollection : pb::IMessage<VtuberCollection> {
     private static readonly pb::MessageParser<VtuberCollection> _parser = new pb::MessageParser<VtuberCollection>(() => new VtuberCollection());
     private pb::UnknownFieldSet _unknownFields;
@@ -226,7 +460,7 @@ namespace VNerve.Vdb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[1]; }
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -339,6 +573,248 @@ namespace VNerve.Vdb {
 
   }
 
+  public sealed partial class GroupCollection : pb::IMessage<GroupCollection> {
+    private static readonly pb::MessageParser<GroupCollection> _parser = new pb::MessageParser<GroupCollection>(() => new GroupCollection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GroupCollection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GroupCollection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GroupCollection(GroupCollection other) : this() {
+      groups_ = other.groups_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GroupCollection Clone() {
+      return new GroupCollection(this);
+    }
+
+    /// <summary>Field number for the "groups" field.</summary>
+    public const int GroupsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::VNerve.Vdb.Vtuber> _repeated_groups_codec
+        = pb::FieldCodec.ForMessage(10, global::VNerve.Vdb.Vtuber.Parser);
+    private readonly pbc::RepeatedField<global::VNerve.Vdb.Vtuber> groups_ = new pbc::RepeatedField<global::VNerve.Vdb.Vtuber>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::VNerve.Vdb.Vtuber> Groups {
+      get { return groups_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GroupCollection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GroupCollection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!groups_.Equals(other.groups_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= groups_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      groups_.WriteTo(output, _repeated_groups_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += groups_.CalculateSize(_repeated_groups_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GroupCollection other) {
+      if (other == null) {
+        return;
+      }
+      groups_.Add(other.groups_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            groups_.AddEntriesFrom(input, _repeated_groups_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class FanCollection : pb::IMessage<FanCollection> {
+    private static readonly pb::MessageParser<FanCollection> _parser = new pb::MessageParser<FanCollection>(() => new FanCollection());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FanCollection> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FanCollection() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FanCollection(FanCollection other) : this() {
+      fans_ = other.fans_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FanCollection Clone() {
+      return new FanCollection(this);
+    }
+
+    /// <summary>Field number for the "fans" field.</summary>
+    public const int FansFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::VNerve.Vdb.Vtuber> _repeated_fans_codec
+        = pb::FieldCodec.ForMessage(10, global::VNerve.Vdb.Vtuber.Parser);
+    private readonly pbc::RepeatedField<global::VNerve.Vdb.Vtuber> fans_ = new pbc::RepeatedField<global::VNerve.Vdb.Vtuber>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::VNerve.Vdb.Vtuber> Fans {
+      get { return fans_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FanCollection);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FanCollection other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!fans_.Equals(other.fans_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= fans_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      fans_.WriteTo(output, _repeated_fans_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += fans_.CalculateSize(_repeated_fans_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FanCollection other) {
+      if (other == null) {
+        return;
+      }
+      fans_.Add(other.fans_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            fans_.AddEntriesFrom(input, _repeated_fans_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class Vtuber : pb::IMessage<Vtuber> {
     private static readonly pb::MessageParser<Vtuber> _parser = new pb::MessageParser<Vtuber>(() => new Vtuber());
     private pb::UnknownFieldSet _unknownFields;
@@ -347,7 +823,7 @@ namespace VNerve.Vdb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[2]; }
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -368,6 +844,9 @@ namespace VNerve.Vdb {
       type_ = other.type_;
       bot_ = other.bot_;
       accounts_ = other.accounts_.Clone();
+      name_ = other.name_;
+      nameExtra_ = other.nameExtra_.Clone();
+      nameTranslation_ = other.nameTranslation_.Clone();
       groupUuid_ = other.groupUuid_;
       model2D_ = other.model2D_;
       model3D_ = other.model3D_;
@@ -424,8 +903,39 @@ namespace VNerve.Vdb {
       get { return accounts_; }
     }
 
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 5;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name_extra" field.</summary>
+    public const int NameExtraFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_nameExtra_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> nameExtra_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> NameExtra {
+      get { return nameExtra_; }
+    }
+
+    /// <summary>Field number for the "name_translation" field.</summary>
+    public const int NameTranslationFieldNumber = 7;
+    private static readonly pbc::MapField<string, string>.Codec _map_nameTranslation_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 58);
+    private readonly pbc::MapField<string, string> nameTranslation_ = new pbc::MapField<string, string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> NameTranslation {
+      get { return nameTranslation_; }
+    }
+
     /// <summary>Field number for the "group_uuid" field.</summary>
-    public const int GroupUuidFieldNumber = 5;
+    public const int GroupUuidFieldNumber = 8;
     private string groupUuid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupUuid {
@@ -436,7 +946,7 @@ namespace VNerve.Vdb {
     }
 
     /// <summary>Field number for the "model_2d" field.</summary>
-    public const int Model2DFieldNumber = 6;
+    public const int Model2DFieldNumber = 9;
     private bool model2D_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Model2D {
@@ -447,7 +957,7 @@ namespace VNerve.Vdb {
     }
 
     /// <summary>Field number for the "model_3d" field.</summary>
-    public const int Model3DFieldNumber = 7;
+    public const int Model3DFieldNumber = 10;
     private bool model3D_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Model3D {
@@ -458,7 +968,7 @@ namespace VNerve.Vdb {
     }
 
     /// <summary>Field number for the "model_2d_artist_uuid" field.</summary>
-    public const int Model2DArtistUuidFieldNumber = 8;
+    public const int Model2DArtistUuidFieldNumber = 11;
     private string model2DArtistUuid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Model2DArtistUuid {
@@ -469,7 +979,7 @@ namespace VNerve.Vdb {
     }
 
     /// <summary>Field number for the "model_3d_artist_uuid" field.</summary>
-    public const int Model3DArtistUuidFieldNumber = 9;
+    public const int Model3DArtistUuidFieldNumber = 12;
     private string model3DArtistUuid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Model3DArtistUuid {
@@ -496,6 +1006,9 @@ namespace VNerve.Vdb {
       if (Type != other.Type) return false;
       if (Bot != other.Bot) return false;
       if(!accounts_.Equals(other.accounts_)) return false;
+      if (Name != other.Name) return false;
+      if(!nameExtra_.Equals(other.nameExtra_)) return false;
+      if (!NameTranslation.Equals(other.NameTranslation)) return false;
       if (GroupUuid != other.GroupUuid) return false;
       if (Model2D != other.Model2D) return false;
       if (Model3D != other.Model3D) return false;
@@ -511,6 +1024,9 @@ namespace VNerve.Vdb {
       if (Type != global::VNerve.Vdb.VtuberType.UnknownVtuberType) hash ^= Type.GetHashCode();
       if (Bot != false) hash ^= Bot.GetHashCode();
       hash ^= accounts_.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= nameExtra_.GetHashCode();
+      hash ^= NameTranslation.GetHashCode();
       if (GroupUuid.Length != 0) hash ^= GroupUuid.GetHashCode();
       if (Model2D != false) hash ^= Model2D.GetHashCode();
       if (Model3D != false) hash ^= Model3D.GetHashCode();
@@ -542,24 +1058,30 @@ namespace VNerve.Vdb {
         output.WriteBool(Bot);
       }
       accounts_.WriteTo(output, _repeated_accounts_codec);
-      if (GroupUuid.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(42);
+        output.WriteString(Name);
+      }
+      nameExtra_.WriteTo(output, _repeated_nameExtra_codec);
+      nameTranslation_.WriteTo(output, _map_nameTranslation_codec);
+      if (GroupUuid.Length != 0) {
+        output.WriteRawTag(66);
         output.WriteString(GroupUuid);
       }
       if (Model2D != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteBool(Model2D);
       }
       if (Model3D != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteBool(Model3D);
       }
       if (Model2DArtistUuid.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(90);
         output.WriteString(Model2DArtistUuid);
       }
       if (Model3DArtistUuid.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteString(Model3DArtistUuid);
       }
       if (_unknownFields != null) {
@@ -580,6 +1102,11 @@ namespace VNerve.Vdb {
         size += 1 + 1;
       }
       size += accounts_.CalculateSize(_repeated_accounts_codec);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += nameExtra_.CalculateSize(_repeated_nameExtra_codec);
+      size += nameTranslation_.CalculateSize(_map_nameTranslation_codec);
       if (GroupUuid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GroupUuid);
       }
@@ -616,6 +1143,11 @@ namespace VNerve.Vdb {
         Bot = other.Bot;
       }
       accounts_.Add(other.accounts_);
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      nameExtra_.Add(other.nameExtra_);
+      nameTranslation_.Add(other.nameTranslation_);
       if (other.GroupUuid.Length != 0) {
         GroupUuid = other.GroupUuid;
       }
@@ -659,22 +1191,34 @@ namespace VNerve.Vdb {
             break;
           }
           case 42: {
-            GroupUuid = input.ReadString();
+            Name = input.ReadString();
             break;
           }
-          case 48: {
-            Model2D = input.ReadBool();
+          case 50: {
+            nameExtra_.AddEntriesFrom(input, _repeated_nameExtra_codec);
             break;
           }
-          case 56: {
-            Model3D = input.ReadBool();
+          case 58: {
+            nameTranslation_.AddEntriesFrom(input, _map_nameTranslation_codec);
             break;
           }
           case 66: {
+            GroupUuid = input.ReadString();
+            break;
+          }
+          case 72: {
+            Model2D = input.ReadBool();
+            break;
+          }
+          case 80: {
+            Model3D = input.ReadBool();
+            break;
+          }
+          case 90: {
             Model2DArtistUuid = input.ReadString();
             break;
           }
-          case 74: {
+          case 98: {
             Model3DArtistUuid = input.ReadString();
             break;
           }
@@ -692,7 +1236,7 @@ namespace VNerve.Vdb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[3]; }
+      get { return global::VNerve.Vdb.VdbReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -712,9 +1256,6 @@ namespace VNerve.Vdb {
       id_ = other.id_;
       accountType_ = other.accountType_;
       accountPlatform_ = other.accountPlatform_;
-      extra_ = other.extra_.Clone();
-      name_ = other.name_;
-      nameTranslation_ = other.nameTranslation_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -756,37 +1297,6 @@ namespace VNerve.Vdb {
       }
     }
 
-    /// <summary>Field number for the "extra" field.</summary>
-    public const int ExtraFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_extra_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> extra_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Extra {
-      get { return extra_; }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 5;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "name_translation" field.</summary>
-    public const int NameTranslationFieldNumber = 6;
-    private static readonly pbc::MapField<string, string>.Codec _map_nameTranslation_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
-    private readonly pbc::MapField<string, string> nameTranslation_ = new pbc::MapField<string, string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, string> NameTranslation {
-      get { return nameTranslation_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Account);
@@ -803,9 +1313,6 @@ namespace VNerve.Vdb {
       if (Id != other.Id) return false;
       if (AccountType != other.AccountType) return false;
       if (AccountPlatform != other.AccountPlatform) return false;
-      if(!extra_.Equals(other.extra_)) return false;
-      if (Name != other.Name) return false;
-      if (!NameTranslation.Equals(other.NameTranslation)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -815,9 +1322,6 @@ namespace VNerve.Vdb {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (AccountType != global::VNerve.Vdb.AccountType.UnknownAccountType) hash ^= AccountType.GetHashCode();
       if (AccountPlatform != global::VNerve.Vdb.AccountPlatform.UnknownPlatform) hash ^= AccountPlatform.GetHashCode();
-      hash ^= extra_.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      hash ^= NameTranslation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -843,12 +1347,6 @@ namespace VNerve.Vdb {
         output.WriteRawTag(24);
         output.WriteEnum((int) AccountPlatform);
       }
-      extra_.WriteTo(output, _repeated_extra_codec);
-      if (Name.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteString(Name);
-      }
-      nameTranslation_.WriteTo(output, _map_nameTranslation_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -866,11 +1364,6 @@ namespace VNerve.Vdb {
       if (AccountPlatform != global::VNerve.Vdb.AccountPlatform.UnknownPlatform) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AccountPlatform);
       }
-      size += extra_.CalculateSize(_repeated_extra_codec);
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      size += nameTranslation_.CalculateSize(_map_nameTranslation_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -891,11 +1384,6 @@ namespace VNerve.Vdb {
       if (other.AccountPlatform != global::VNerve.Vdb.AccountPlatform.UnknownPlatform) {
         AccountPlatform = other.AccountPlatform;
       }
-      extra_.Add(other.extra_);
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      nameTranslation_.Add(other.nameTranslation_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -917,18 +1405,6 @@ namespace VNerve.Vdb {
           }
           case 24: {
             AccountPlatform = (global::VNerve.Vdb.AccountPlatform) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            extra_.AddEntriesFrom(input, _repeated_extra_codec);
-            break;
-          }
-          case 42: {
-            Name = input.ReadString();
-            break;
-          }
-          case 50: {
-            nameTranslation_.AddEntriesFrom(input, _map_nameTranslation_codec);
             break;
           }
         }
