@@ -7759,15 +7759,15 @@ public final class Vdb {
       "TEESPRING\020\023\022\013\n\007PATREON\020\024\022\014\n\010JVCMUSIC\020\025\022\t" +
       "\n\005CI_EN\020\026\022\n\n\006GITHUB\020\027\022\010\n\004LINE\020\030\022\n\n\006TIKTO" +
       "K\020\031\022\n\n\006FANTIA\020\032\022\014\n\010SHOWROOM\020\033\022\014\n\010TELEGRA" +
-      "M\020\0342\310\002\n\016VtuberDatabase\022K\n\rGetAllVtubers\022" +
+      "M\020\0342\300\002\n\016VtuberDatabase\022I\n\rGetAllVtubers\022" +
       "\032.vNerve.vdb.GetVtbsRequest\032\034.vNerve.vdb" +
-      ".VtuberCollection\"\000\022I\n\014GetAllGroups\022\032.vN" +
-      "erve.vdb.GetVtbsRequest\032\033.vNerve.vdb.Gro" +
-      "upCollection\"\000\022E\n\nGetAllFans\022\032.vNerve.vd" +
-      "b.GetVtbsRequest\032\031.vNerve.vdb.FanCollect" +
-      "ion\"\000\022W\n\016GetLinkSyntaxs\022!.vNerve.vdb.Get" +
-      "LinkSyntaxsRequest\032 .vNerve.vdb.LinkSynt" +
-      "axCollection\"\000b\006proto3"
+      ".VtuberCollection\022G\n\014GetAllGroups\022\032.vNer" +
+      "ve.vdb.GetVtbsRequest\032\033.vNerve.vdb.Group" +
+      "Collection\022C\n\nGetAllFans\022\032.vNerve.vdb.Ge" +
+      "tVtbsRequest\032\031.vNerve.vdb.FanCollection\022" +
+      "U\n\016GetLinkSyntaxs\022!.vNerve.vdb.GetLinkSy" +
+      "ntaxsRequest\032 .vNerve.vdb.LinkSyntaxColl" +
+      "ectionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -56,14 +56,14 @@ namespace VNerve.Vdb {
             "CEZBQ0VCT09LEBISDQoJVEVFU1BSSU5HEBMSCwoHUEFUUkVPThAUEgwKCEpW",
             "Q01VU0lDEBUSCQoFQ0lfRU4QFhIKCgZHSVRIVUIQFxIICgRMSU5FEBgSCgoG",
             "VElLVE9LEBkSCgoGRkFOVElBEBoSDAoIU0hPV1JPT00QGxIMCghURUxFR1JB",
-            "TRAcMsgCCg5WdHViZXJEYXRhYmFzZRJLCg1HZXRBbGxWdHViZXJzEhoudk5l",
+            "TRAcMsACCg5WdHViZXJEYXRhYmFzZRJJCg1HZXRBbGxWdHViZXJzEhoudk5l",
             "cnZlLnZkYi5HZXRWdGJzUmVxdWVzdBocLnZOZXJ2ZS52ZGIuVnR1YmVyQ29s",
-            "bGVjdGlvbiIAEkkKDEdldEFsbEdyb3VwcxIaLnZOZXJ2ZS52ZGIuR2V0VnRi",
-            "c1JlcXVlc3QaGy52TmVydmUudmRiLkdyb3VwQ29sbGVjdGlvbiIAEkUKCkdl",
-            "dEFsbEZhbnMSGi52TmVydmUudmRiLkdldFZ0YnNSZXF1ZXN0Ghkudk5lcnZl",
-            "LnZkYi5GYW5Db2xsZWN0aW9uIgASVwoOR2V0TGlua1N5bnRheHMSIS52TmVy",
-            "dmUudmRiLkdldExpbmtTeW50YXhzUmVxdWVzdBogLnZOZXJ2ZS52ZGIuTGlu",
-            "a1N5bnRheENvbGxlY3Rpb24iAGIGcHJvdG8z"));
+            "bGVjdGlvbhJHCgxHZXRBbGxHcm91cHMSGi52TmVydmUudmRiLkdldFZ0YnNS",
+            "ZXF1ZXN0Ghsudk5lcnZlLnZkYi5Hcm91cENvbGxlY3Rpb24SQwoKR2V0QWxs",
+            "RmFucxIaLnZOZXJ2ZS52ZGIuR2V0VnRic1JlcXVlc3QaGS52TmVydmUudmRi",
+            "LkZhbkNvbGxlY3Rpb24SVQoOR2V0TGlua1N5bnRheHMSIS52TmVydmUudmRi",
+            "LkdldExpbmtTeW50YXhzUmVxdWVzdBogLnZOZXJ2ZS52ZGIuTGlua1N5bnRh",
+            "eENvbGxlY3Rpb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Vdb.VtuberType), typeof(global::VNerve.Vdb.AccountType), typeof(global::VNerve.Vdb.AccountPlatform), }, null, new pbr::GeneratedClrTypeInfo[] {

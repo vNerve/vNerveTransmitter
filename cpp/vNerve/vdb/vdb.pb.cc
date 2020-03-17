@@ -352,15 +352,15 @@ const char descriptor_table_protodef_vNerve_2fvdb_2fvdb_2eproto[] PROTOBUF_SECTI
   "TEESPRING\020\023\022\013\n\007PATREON\020\024\022\014\n\010JVCMUSIC\020\025\022\t"
   "\n\005CI_EN\020\026\022\n\n\006GITHUB\020\027\022\010\n\004LINE\020\030\022\n\n\006TIKTO"
   "K\020\031\022\n\n\006FANTIA\020\032\022\014\n\010SHOWROOM\020\033\022\014\n\010TELEGRA"
-  "M\020\0342\310\002\n\016VtuberDatabase\022K\n\rGetAllVtubers\022"
+  "M\020\0342\300\002\n\016VtuberDatabase\022I\n\rGetAllVtubers\022"
   "\032.vNerve.vdb.GetVtbsRequest\032\034.vNerve.vdb"
-  ".VtuberCollection\"\000\022I\n\014GetAllGroups\022\032.vN"
-  "erve.vdb.GetVtbsRequest\032\033.vNerve.vdb.Gro"
-  "upCollection\"\000\022E\n\nGetAllFans\022\032.vNerve.vd"
-  "b.GetVtbsRequest\032\031.vNerve.vdb.FanCollect"
-  "ion\"\000\022W\n\016GetLinkSyntaxs\022!.vNerve.vdb.Get"
-  "LinkSyntaxsRequest\032 .vNerve.vdb.LinkSynt"
-  "axCollection\"\000b\006proto3"
+  ".VtuberCollection\022G\n\014GetAllGroups\022\032.vNer"
+  "ve.vdb.GetVtbsRequest\032\033.vNerve.vdb.Group"
+  "Collection\022C\n\nGetAllFans\022\032.vNerve.vdb.Ge"
+  "tVtbsRequest\032\031.vNerve.vdb.FanCollection\022"
+  "U\n\016GetLinkSyntaxs\022!.vNerve.vdb.GetLinkSy"
+  "ntaxsRequest\032 .vNerve.vdb.LinkSyntaxColl"
+  "ectionb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fvdb_2fvdb_2eproto_deps[1] = {
 };
@@ -379,7 +379,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fvdb_2fvdb_2eproto_once;
 static bool descriptor_table_vNerve_2fvdb_2fvdb_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fvdb_2fvdb_2eproto = {
-  &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_initialized, descriptor_table_protodef_vNerve_2fvdb_2fvdb_2eproto, "vNerve/vdb/vdb.proto", 1782,
+  &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_initialized, descriptor_table_protodef_vNerve_2fvdb_2fvdb_2eproto, "vNerve/vdb/vdb.proto", 1774,
   &descriptor_table_vNerve_2fvdb_2fvdb_2eproto_once, descriptor_table_vNerve_2fvdb_2fvdb_2eproto_sccs, descriptor_table_vNerve_2fvdb_2fvdb_2eproto_deps, 10, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fvdb_2fvdb_2eproto::offsets,
   file_level_metadata_vNerve_2fvdb_2fvdb_2eproto, 10, file_level_enum_descriptors_vNerve_2fvdb_2fvdb_2eproto, file_level_service_descriptors_vNerve_2fvdb_2fvdb_2eproto,
