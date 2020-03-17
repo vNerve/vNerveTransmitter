@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package vNerve.bilibili;
+
+service Bilibili {
+  rpc GetAllBilibiliInfos(GetAllBilibiliInfosRequest) returns(BilibiliCollection);
+  rpc GetBilibiliInfoByUid(GetBilibiliInfoByUidRequest) returns (BilibiliInfo);
+}
+
+message GetAllBilibiliInfosRequest {
+  bool static_only = 1;
+}
+
+message GetBilibiliInfoByUidRequest {
+  uint32 uid = 1;
+  bool static_only = 2;
+}
+
+message BilibiliCollection {
+  repeated BilibiliInfo bilibili_infos = 1;
+}
+
+message BilibiliInfo {
+  uint32 uid = 1; /*static*/
+  string uuid = 2; /*static*/
+  string uname = 3; /*static*/
+  uint32 room_id = 4; /*static*/
+  uint32 follower = 5;
+  int32 follower_daily_increment = 6;
+  string room_title = 7;
+  LiveStatus live_status = 8;
+  uint32 popularity = 9;
+  uint32 rank_area = 10;
+  string description = 11; /*static*/
+  string room_notice = 12; /*static*/
+  string avatar_url = 13; /*static*/
+  string banner_image_url = 14; /*static*/
+  uint32 video_count = 15;
+  uint32 video_total_views = 16;
+  uint32 guard_count = 17;
+  uint32 guard_level1 = 18;
+  uint32 guard_level2 = 19;
+  uint32 guard_level3 = 20;
+}
+
+enum LiveStatus {
+  PREPARING = 0;
+  LIVE = 1;
+  ROUND = 2;
+  CUT_OFF = 3;
+  }
