@@ -4,16 +4,31 @@ package vNerve.vdb;
 
 service VtuberDatabase {
     rpc GetAllVtubers(GetVtbsRequest) returns(VtuberCollection){}
-    rpc GetAllGroups(GetVtbsRequest) returns(VtuberCollection){}
-    rpc GetAllFans(GetVtbsRequest) returns(VtuberCollection){}
+    rpc GetAllGroups(GetVtbsRequest) returns(GroupCollection){}
+    rpc GetAllFans(GetVtbsRequest) returns(FanCollection){}
+    rpc GetLinkSyntaxs(GetLinkSyntaxsRequest) returns(LinkSyntaxCollection){}
 }
 
-message GetVtbsRequest{
+message GetVtbsRequest {
 
+}
+
+message GetLinkSyntaxsRequest {
+
+}
+
+message LinkSyntaxCollection {
+    map<string,string> link_syntaxs = 1;
 }
 
 message VtuberCollection {
     repeated Vtuber vtubers = 1;
+}
+message GroupCollection {
+    repeated Vtuber groups = 1;
+}
+message FanCollection {
+    repeated Vtuber fans = 1;
 }
 
 message Vtuber {
@@ -21,11 +36,14 @@ message Vtuber {
     VtuberType type = 2;
     bool bot= 3;
     repeated Account accounts = 4;
-    string group_uuid = 5;
-    bool model_2d = 6;
-    bool model_3d = 7;
-    string model_2d_artist_uuid = 8;
-    string model_3d_artist_uuid = 9;
+    string name = 5;
+    repeated string name_extra = 6;
+    map<string,string> name_translation= 7;
+    string group_uuid = 8;
+    bool model_2d = 9;
+    bool model_3d = 10;
+    string model_2d_artist_uuid = 11;
+    string model_3d_artist_uuid = 12;
 }
 
 enum VtuberType {
@@ -39,9 +57,6 @@ message Account{
     string id = 1;
     AccountType account_type = 2;
     AccountPlatform account_platform = 3;
-    repeated string extra = 4;
-    string name = 5;
-    map<string,string> name_translation= 6;
 }
 
 enum AccountType{
