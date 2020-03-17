@@ -18,7 +18,7 @@ jobs:
 
     - name: Prepare build environment
       run: |
-        choco install -y protoc
+        choco install -y protoc --version=3.11.4
       shell: powershell
 
     - name: Setup folders
