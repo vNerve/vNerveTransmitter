@@ -30,11 +30,16 @@ jobs:
         New-Item -Path 'dist\java' -ItemType Directory
       shell: pwsh
 
+    - name: Download gRPC protoc plugin
+      run: |
+        $exePath = ./grpc_protoc_inst.ps1
+        echo "::set-output name=plugin_path::$exePath"
+
     - name: Build protobuf library
       run: |
         $files = Get-Childitem 'vNerve' -Recurse -File -Filter "*.proto" | foreach { $_.FullName}
         $proto_path = (Resolve-Path .).ToString()
-        protoc --proto_path=$proto_path --cpp_out=dist/cpp --csharp_out=dist/cs --java_out=dist/java --python_out=dist/python --js_out=import_style=commonjs,binary:dist/js-commonjs $files
+        protoc --proto_path=$proto_path --cpp_out=dist/cpp --grpc_out=dist/cpp --plugin=protoc-gen-grpc=${{ steps.vars.outputs.plugin_path }} --csharp_out=dist/cs --java_out=dist/java --python_out=dist/python --js_out=import_style=commonjs,binary:dist/js-commonjs $files
       shell: pwsh
 
     - name: Distribute
