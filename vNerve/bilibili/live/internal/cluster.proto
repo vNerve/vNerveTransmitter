@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package vNerve.bilibili.live.internal;
+
+message ClusterWorkerMessage {
+  oneof operation {
+    WorkerReadyMessage worker_ready = 1;
+    WorkerExitingMessage worker_exiting = 2;
+    RoomFailedMessage room_failed = 3;
+  }
+}
+
+message WorkerReadyMessage {
+  string worker_id = 1;
+  uint32 max_rooms = 2;
+}
+
+message RoomFailedMessage {
+  uint32 room_id = 1;
+}
+
+message WorkerExitingMessage {
+
+}
+
+message ClusterSupervisorMessage {
+  oneof operation {
+    AssignRoomMessage assign = 1;
+    UnassignRoomMessage unassign = 2;
+  }
+}
+
+message AssignRoomMessage {
+  uint32 room_id = 1;
+}
+
+message UnassignRoomMessage {
+  uint32 room_id = 1;
+}
