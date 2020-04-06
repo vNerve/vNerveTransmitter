@@ -873,8 +873,8 @@ public final class MessageOuterClass {
       "erve.bilibili.live\032\'vNerve/bilibili/live" +
       "/room_message.proto\"b\n\007Message\022\021\n\ttimest" +
       "amp\030\001 \001(\004\0229\n\014room_message\030\002 \001(\0132!.vNerve" +
-      ".bilibili.live.RoomMessageH\000B\t\n\007payloadb" +
-      "\006proto3"
+      ".bilibili.live.RoomMessageH\000B\t\n\007payloadB" +
+      "\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -68,8 +68,8 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fmessage_2eproto[
   "erve.bilibili.live\032\'vNerve/bilibili/live"
   "/room_message.proto\"b\n\007Message\022\021\n\ttimest"
   "amp\030\001 \001(\004\0229\n\014room_message\030\002 \001(\0132!.vNerve"
-  ".bilibili.live.RoomMessageH\000B\t\n\007payloadb"
-  "\006proto3"
+  ".bilibili.live.RoomMessageH\000B\t\n\007payloadB"
+  "\003\370\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_deps[1] = {
   &::descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto,
@@ -80,7 +80,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fmessage_2eproto, "vNerve/bilibili/live/message.proto", 207,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fmessage_2eproto, "vNerve/bilibili/live/message.proto", 212,
   &descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fmessage_2eproto_deps, 1, 1,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fmessage_2eproto, 1, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fmessage_2eproto,
@@ -123,7 +123,9 @@ void Message::set_allocated_room_message(::vNerve::bilibili::live::RoomMessage* 
 }
 void Message::clear_room_message() {
   if (_internal_has_room_message()) {
-    delete payload_.room_message_;
+    if (GetArenaNoVirtual() == nullptr) {
+      delete payload_.room_message_;
+    }
     clear_has_payload();
   }
 }
@@ -131,6 +133,13 @@ Message::Message()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.Message)
+}
+Message::Message(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.Message)
 }
 Message::Message(const Message& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -162,11 +171,18 @@ Message::~Message() {
 }
 
 void Message::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   if (has_payload()) {
     clear_payload();
   }
 }
 
+void Message::ArenaDtor(void* object) {
+  Message* _this = reinterpret_cast< Message* >(object);
+  (void)_this;
+}
+void Message::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Message::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -180,7 +196,9 @@ void Message::clear_payload() {
 // @@protoc_insertion_point(one_of_clear_start:vNerve.bilibili.live.Message)
   switch (payload_case()) {
     case kRoomMessage: {
-      delete payload_.room_message_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.room_message_;
+      }
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -204,6 +222,7 @@ void Message::Clear() {
 
 const char* Message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -380,7 +399,7 @@ void Message::InternalSwap(Message* other) {
 }  // namespace vNerve
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::Message* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::Message >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::Message >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::Message >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

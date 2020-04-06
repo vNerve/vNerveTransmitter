@@ -18,8 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='vNerve/bilibili/live/message.proto',
   package='vNerve.bilibili.live',
   syntax='proto3',
-  serialized_options=None,
-  serialized_pb=b'\n\"vNerve/bilibili/live/message.proto\x12\x14vNerve.bilibili.live\x1a\'vNerve/bilibili/live/room_message.proto\"b\n\x07Message\x12\x11\n\ttimestamp\x18\x01 \x01(\x04\x12\x39\n\x0croom_message\x18\x02 \x01(\x0b\x32!.vNerve.bilibili.live.RoomMessageH\x00\x42\t\n\x07payloadb\x06proto3'
+  serialized_options=b'\370\001\001',
+  serialized_pb=b'\n\"vNerve/bilibili/live/message.proto\x12\x14vNerve.bilibili.live\x1a\'vNerve/bilibili/live/room_message.proto\"b\n\x07Message\x12\x11\n\ttimestamp\x18\x01 \x01(\x04\x12\x39\n\x0croom_message\x18\x02 \x01(\x0b\x32!.vNerve.bilibili.live.RoomMessageH\x00\x42\t\n\x07payloadB\x03\xf8\x01\x01\x62\x06proto3'
   ,
   dependencies=[vNerve_dot_bilibili_dot_live_dot_room__message__pb2.DESCRIPTOR,])
 
@@ -81,4 +81,5 @@ Message = _reflection.GeneratedProtocolMessageType('Message', (_message.Message,
 _sym_db.RegisterMessage(Message)
 
 
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)

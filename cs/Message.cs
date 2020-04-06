@@ -28,7 +28,7 @@ namespace VNerve.Bilibili.Live {
             "YmlsaWJpbGkubGl2ZRondk5lcnZlL2JpbGliaWxpL2xpdmUvcm9vbV9tZXNz",
             "YWdlLnByb3RvImIKB01lc3NhZ2USEQoJdGltZXN0YW1wGAEgASgEEjkKDHJv",
             "b21fbWVzc2FnZRgCIAEoCzIhLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLlJvb21N",
-            "ZXNzYWdlSABCCQoHcGF5bG9hZGIGcHJvdG8z"));
+            "ZXNzYWdlSABCCQoHcGF5bG9hZEID+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::VNerve.Bilibili.Live.RoomMessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
