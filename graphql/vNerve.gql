@@ -1,60 +1,66 @@
 type Query{
-	linkSyntaxs: [LinkSyntax!]
-	vdb: VDB
-	bilibiliInfoEntrys: [BiliBiliInfo!]
+	linkSyntaxs: [LinkSyntax!]!
+	vdb: VDB!
+	allBiliBiliInfo: [BiliBiliInfo!]!
+	bilibiliInfoByUids(
+		uids: [ID!]!
+	): [BiliBiliInfo!]!
+	bilibiliInfoByUserNames(
+		userNames: [String!]!
+	): [BiliBiliInfo!]!
 }
 
 type LinkSyntax{
-	platform: String
-	url: String
+	platform: String!
+	url: String!
 }
 
 type VDB{
-	vtubers: [VTuber!]
-	groups: [Group!]
-	fans: [Fan!]
+	vtubers: [VTuber!]!
+	groups: [Group!]!
+	fans: [Fan!]!
 }
 
 interface VdbEntry{
-	uuid: ID
-	accounts: [Account!]
-	name: String
+	uuid: ID!
+	accounts: [Account!]!
+	name: String!
 	nameExtra: String
-	nameTranslations: [NameTranslation!]
+	nameTranslations: [NameTranslation!]!
 }
 
 type VTuber implements VdbEntry{
-	uuid: ID
+	uuid: ID!
 	bot: Boolean
-	accounts: [Account!]
-	name: String
+	accounts: [Account!]!
+	name: String!
 	nameExtra: String
-	nameTranslations: [NameTranslation!]
+	nameTranslations: [NameTranslation!]!
 	group: Group
 	model2d: Boolean
 	model3d: Boolean
 }
 
 type Group implements VdbEntry{
-	uuid: ID
-	accounts: [Account!]
-	name: String
+	uuid: ID!
+	accounts: [Account!]!
+	name: String!
 	nameExtra: String
-	nameTranslations: [NameTranslation!]
+	nameTranslations: [NameTranslation!]!
 }
 
 type Fan implements VdbEntry{
-	uuid: ID
-	accounts: [Account!]
-	name: String
+	uuid: ID!
+	accounts: [Account!]!
+	name: String!
 	nameExtra: String
-	nameTranslations: [NameTranslation!]
+	nameTranslations: [NameTranslation!]!
 }
 
 type Account{
-	id: ID
-	accountType: AccountType
-	accountPlatform: AccountPlatform
+	id: ID!
+	accountType: AccountType!
+	accountPlatform: AccountPlatform!
 }
 
 type NameTranslation{
@@ -101,26 +107,30 @@ enum AccountPlatform{
 }
 
 type BiliBiliInfo{
-	uuid: String
-	uid: Int
-	userName: String
-	roomId: Int
-	follow: Int
-	followDailyIncrement: Int
-	roomTitle: String
-	liveStatus: LiveStatus
-	popularity: Int
-	rankArea: Int
-	description: String
-	roomNotice: String
-	avatarUrl: String
-	bannerImageUrl: String
-	videoCount: Int
-	videoTotalViews: Int
-	guardCount: Int
-	guardLevel1: Int
-	guardLevel2: Int
-	guardLevel3: Int
+	uuid: String!
+	uid: Int!
+	userName: String!
+	roomId: Int!
+	follow: Int!
+	followDailyIncrement: Int!
+	description: String!
+	avatarUrl: String!
+	bannerImageUrl: String!
+	videoCount: Int!
+	videoTotalViews: Int!
+	bilibiliLiveInfo: BilibiliLiveInfo
+}
+
+type BilibiliLiveInfo{
+	roomTitle: String!
+	liveStatus: LiveStatus!
+	popularity: Int!
+	rankArea: Int!
+	roomNotice: String!
+	guardCount: Int!
+	guardLevel1: Int!
+	guardLevel2: Int!
+	guardLevel3: Int!
 }
 
 enum LiveStatus{
