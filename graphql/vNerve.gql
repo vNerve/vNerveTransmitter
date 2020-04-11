@@ -1,0 +1,134 @@
+type Query{
+	linkSyntaxs: [LinkSyntax!]
+	vdb: VDB
+	bilibiliInfoEntrys: [BiliBiliInfo!]
+}
+
+type LinkSyntax{
+	platform: String
+	url: String
+}
+
+type VDB{
+	vtubers: [VTuber!]
+	groups: [Group!]
+	fans: [Fan!]
+}
+
+interface VdbEntry{
+	uuid: ID
+	accounts: [Account!]
+	name: String
+	nameExtra: String
+	nameTranslations: [NameTranslation!]
+}
+
+type VTuber implements VdbEntry{
+	uuid: ID
+	bot: Boolean
+	accounts: [Account!]
+	name: String
+	nameExtra: String
+	nameTranslations: [NameTranslation!]
+	group: Group
+	model2d: Boolean
+	model3d: Boolean
+}
+
+type Group implements VdbEntry{
+	uuid: ID
+	accounts: [Account!]
+	name: String
+	nameExtra: String
+	nameTranslations: [NameTranslation!]
+}
+
+type Fan implements VdbEntry{
+	uuid: ID
+	accounts: [Account!]
+	name: String
+	nameExtra: String
+	nameTranslations: [NameTranslation!]
+}
+
+type Account{
+	id: ID
+	accountType: AccountType
+	accountPlatform: AccountPlatform
+}
+
+type NameTranslation{
+	language: String!
+	translation: String!
+}
+
+enum AccountType{
+	UNKNOWN_ACCOUNT_TYPE
+	OFFICIAL
+	RELAY
+}
+
+enum AccountPlatform{
+	UNKNOWN_PLATFORM
+	BILIBILI
+	TWITTER
+	YOUTUBE
+	USERLOCAL
+	PEING
+	MARSHMALLOW
+	PIXIV
+	WEIBO
+	BOOTH
+	AFDIAN
+	WEB
+	EMAIL
+	INSTAGRAM
+	POPIASK
+	AMAZON_CO_JP
+	TWITCH
+	NICONICO
+	FACEBOOK
+	TEESPRING
+	PATREON
+	JVCMUSIC
+	CI_EN
+	GITHUB
+	LINE
+	TIKTOK
+	FANTIA
+	SHOWROOM
+	TELEGRAM
+}
+
+type BiliBiliInfo{
+	uuid: String
+	uid: Int
+	userName: String
+	roomId: Int
+	follow: Int
+	followDailyIncrement: Int
+	roomTitle: String
+	liveStatus: LiveStatus
+	popularity: Int
+	rankArea: Int
+	description: String
+	roomNotice: String
+	avatarUrl: String
+	bannerImageUrl: String
+	videoCount: Int
+	videoTotalViews: Int
+	guardCount: Int
+	guardLevel1: Int
+	guardLevel2: Int
+	guardLevel3: Int
+}
+
+enum LiveStatus{
+	PREPARING
+	LIVE
+	ROUND
+	CUT_OFF
+}
+schema{
+	query: Query
+}
