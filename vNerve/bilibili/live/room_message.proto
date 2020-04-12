@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package vNerve.bilibili.live;
 
+option cc_enable_arenas = true;
+
 import "vNerve/bilibili/live/user_message.proto";
 
 message RoomMessage {
