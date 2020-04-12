@@ -8666,7 +8666,7 @@ public final class RoomMessageOuterClass {
       "\n\013delay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMe" +
       "ssage\022\n\n\002id\030\001 \003(\r*=\n\nLiveStatus\022\r\n\tPREPA" +
       "RING\020\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003" +
-      "b\006proto3"
+      "B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
