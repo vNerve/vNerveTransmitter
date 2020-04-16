@@ -52,7 +52,7 @@ enum LiveVipLevel {
 message DanmakuMessage {
   string message = 1;
   LotteryDanmakuType lottery_type = 2;
-  bool from_guard = 3;
+  GuardLevel guard_level = 3;
 }
 
 enum LotteryDanmakuType {
