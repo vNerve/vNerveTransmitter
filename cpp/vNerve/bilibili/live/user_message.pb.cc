@@ -300,7 +300,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2fuse
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::DanmakuMessage, message_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::DanmakuMessage, lottery_type_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::DanmakuMessage, from_guard_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::DanmakuMessage, guard_level_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::SuperChatMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -411,29 +411,30 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "\016phone_verified\030\014 \001(\010\022\024\n\014regular_user\030\r "
   "\001(\010\"_\n\tMedalInfo\022\022\n\nmedal_name\030\001 \001(\t\022\023\n\013"
   "medal_level\030\002 \001(\r\022\023\n\013medal_color\030\003 \001(\007\022\024"
-  "\n\014streamer_uid\030\004 \001(\004\"u\n\016DanmakuMessage\022\017"
-  "\n\007message\030\001 \001(\t\022>\n\014lottery_type\030\002 \001(\0162(."
-  "vNerve.bilibili.live.LotteryDanmakuType\022"
-  "\022\n\nfrom_guard\030\003 \001(\010\"\264\001\n\020SuperChatMessage"
-  "\022\017\n\007message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002id\030\003"
-  " \001(\r\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022"
-  "\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007"
-  " \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time\030\t \001"
-  "(\004\"p\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\nto"
-  "tal_coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_"
-  "name\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r\"S\n\021"
-  "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve."
-  "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001("
-  "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162"
-  " .vNerve.bilibili.live.GuardLevel\"P\n\017New"
-  "GuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bil"
-  "ibili.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\"\024\n\022U"
-  "serBlockedMessage\"\026\n\024UserKickedOutMessag"
-  "e*3\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MONTHLY"
-  "\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuType\022\016\n\n"
-  "NO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\n"
-  "GuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006"
-  "LEVEL2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
+  "\n\014streamer_uid\030\004 \001(\004\"\230\001\n\016DanmakuMessage\022"
+  "\017\n\007message\030\001 \001(\t\022>\n\014lottery_type\030\002 \001(\0162("
+  ".vNerve.bilibili.live.LotteryDanmakuType"
+  "\0225\n\013guard_level\030\003 \001(\0162 .vNerve.bilibili."
+  "live.GuardLevel\"\264\001\n\020SuperChatMessage\022\017\n\007"
+  "message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002id\030\003 \001(\r"
+  "\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\npr"
+  "ice_coin\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r"
+  "\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"p"
+  "\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\ntotal_"
+  "coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_name"
+  "\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r\"S\n\021Welc"
+  "omeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve.bili"
+  "bili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(\010\"F\n"
+  "\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162 .vN"
+  "erve.bilibili.live.GuardLevel\"P\n\017NewGuar"
+  "dMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bilibil"
+  "i.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\"\024\n\022UserB"
+  "lockedMessage\"\026\n\024UserKickedOutMessage*3\n"
+  "\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MONTHLY\020\001\022\n"
+  "\n\006YEARLY\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_L"
+  "OTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuar"
+  "dLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVE"
+  "L2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps[1] = {
 };
@@ -453,7 +454,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 1948,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 1984,
   &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, 11, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -2025,8 +2026,8 @@ DanmakuMessage::DanmakuMessage(const DanmakuMessage& from)
     message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
   }
   ::memcpy(&lottery_type_, &from.lottery_type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&from_guard_) -
-    reinterpret_cast<char*>(&lottery_type_)) + sizeof(from_guard_));
+    static_cast<size_t>(reinterpret_cast<char*>(&guard_level_) -
+    reinterpret_cast<char*>(&lottery_type_)) + sizeof(guard_level_));
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.DanmakuMessage)
 }
 
@@ -2034,8 +2035,8 @@ void DanmakuMessage::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DanmakuMessage_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto.base);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&lottery_type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&from_guard_) -
-      reinterpret_cast<char*>(&lottery_type_)) + sizeof(from_guard_));
+      reinterpret_cast<char*>(&guard_level_) -
+      reinterpret_cast<char*>(&lottery_type_)) + sizeof(guard_level_));
 }
 
 DanmakuMessage::~DanmakuMessage() {
@@ -2064,8 +2065,8 @@ void DanmakuMessage::Clear() {
 
   message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&lottery_type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&from_guard_) -
-      reinterpret_cast<char*>(&lottery_type_)) + sizeof(from_guard_));
+      reinterpret_cast<char*>(&guard_level_) -
+      reinterpret_cast<char*>(&lottery_type_)) + sizeof(guard_level_));
   _internal_metadata_.Clear();
 }
 
@@ -2093,11 +2094,12 @@ const char* DanmakuMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           _internal_set_lottery_type(static_cast<::vNerve::bilibili::live::LotteryDanmakuType>(val));
         } else goto handle_unusual;
         continue;
-      // bool from_guard = 3;
+      // .vNerve.bilibili.live.GuardLevel guard_level = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          from_guard_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
+          _internal_set_guard_level(static_cast<::vNerve::bilibili::live::GuardLevel>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -2143,10 +2145,11 @@ failure:
       2, this->_internal_lottery_type(), target);
   }
 
-  // bool from_guard = 3;
-  if (this->from_guard() != 0) {
+  // .vNerve.bilibili.live.GuardLevel guard_level = 3;
+  if (this->guard_level() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(3, this->_internal_from_guard(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_guard_level(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2178,9 +2181,10 @@ size_t DanmakuMessage::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_lottery_type());
   }
 
-  // bool from_guard = 3;
-  if (this->from_guard() != 0) {
-    total_size += 1 + 1;
+  // .vNerve.bilibili.live.GuardLevel guard_level = 3;
+  if (this->guard_level() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_guard_level());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2221,8 +2225,8 @@ void DanmakuMessage::MergeFrom(const DanmakuMessage& from) {
   if (from.lottery_type() != 0) {
     _internal_set_lottery_type(from._internal_lottery_type());
   }
-  if (from.from_guard() != 0) {
-    _internal_set_from_guard(from._internal_from_guard());
+  if (from.guard_level() != 0) {
+    _internal_set_guard_level(from._internal_guard_level());
   }
 }
 
@@ -2250,7 +2254,7 @@ void DanmakuMessage::InternalSwap(DanmakuMessage* other) {
   message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(lottery_type_, other->lottery_type_);
-  swap(from_guard_, other->from_guard_);
+  swap(guard_level_, other->guard_level_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DanmakuMessage::GetMetadata() const {

@@ -1055,7 +1055,7 @@ class DanmakuMessage :
   enum : int {
     kMessageFieldNumber = 1,
     kLotteryTypeFieldNumber = 2,
-    kFromGuardFieldNumber = 3,
+    kGuardLevelFieldNumber = 3,
   };
   // string message = 1;
   void clear_message();
@@ -1082,13 +1082,13 @@ class DanmakuMessage :
   void _internal_set_lottery_type(::vNerve::bilibili::live::LotteryDanmakuType value);
   public:
 
-  // bool from_guard = 3;
-  void clear_from_guard();
-  bool from_guard() const;
-  void set_from_guard(bool value);
+  // .vNerve.bilibili.live.GuardLevel guard_level = 3;
+  void clear_guard_level();
+  ::vNerve::bilibili::live::GuardLevel guard_level() const;
+  void set_guard_level(::vNerve::bilibili::live::GuardLevel value);
   private:
-  bool _internal_from_guard() const;
-  void _internal_set_from_guard(bool value);
+  ::vNerve::bilibili::live::GuardLevel _internal_guard_level() const;
+  void _internal_set_guard_level(::vNerve::bilibili::live::GuardLevel value);
   public:
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.DanmakuMessage)
@@ -1098,7 +1098,7 @@ class DanmakuMessage :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   int lottery_type_;
-  bool from_guard_;
+  int guard_level_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
 };
@@ -3259,24 +3259,24 @@ inline void DanmakuMessage::set_lottery_type(::vNerve::bilibili::live::LotteryDa
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.DanmakuMessage.lottery_type)
 }
 
-// bool from_guard = 3;
-inline void DanmakuMessage::clear_from_guard() {
-  from_guard_ = false;
+// .vNerve.bilibili.live.GuardLevel guard_level = 3;
+inline void DanmakuMessage::clear_guard_level() {
+  guard_level_ = 0;
 }
-inline bool DanmakuMessage::_internal_from_guard() const {
-  return from_guard_;
+inline ::vNerve::bilibili::live::GuardLevel DanmakuMessage::_internal_guard_level() const {
+  return static_cast< ::vNerve::bilibili::live::GuardLevel >(guard_level_);
 }
-inline bool DanmakuMessage::from_guard() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.DanmakuMessage.from_guard)
-  return _internal_from_guard();
+inline ::vNerve::bilibili::live::GuardLevel DanmakuMessage::guard_level() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.DanmakuMessage.guard_level)
+  return _internal_guard_level();
 }
-inline void DanmakuMessage::_internal_set_from_guard(bool value) {
+inline void DanmakuMessage::_internal_set_guard_level(::vNerve::bilibili::live::GuardLevel value) {
   
-  from_guard_ = value;
+  guard_level_ = value;
 }
-inline void DanmakuMessage::set_from_guard(bool value) {
-  _internal_set_from_guard(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.DanmakuMessage.from_guard)
+inline void DanmakuMessage::set_guard_level(::vNerve::bilibili::live::GuardLevel value) {
+  _internal_set_guard_level(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.DanmakuMessage.guard_level)
 }
 
 // -------------------------------------------------------------------

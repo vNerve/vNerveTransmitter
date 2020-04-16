@@ -1614,7 +1614,7 @@ proto.vNerve.bilibili.live.DanmakuMessage.toObject = function(includeInstance, m
   var f, obj = {
     message: jspb.Message.getFieldWithDefault(msg, 1, ""),
     lotteryType: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    fromGuard: jspb.Message.getBooleanFieldWithDefault(msg, 3, false)
+    guardLevel: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -1660,8 +1660,8 @@ proto.vNerve.bilibili.live.DanmakuMessage.deserializeBinaryFromReader = function
       msg.setLotteryType(value);
       break;
     case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setFromGuard(value);
+      var value = /** @type {!proto.vNerve.bilibili.live.GuardLevel} */ (reader.readEnum());
+      msg.setGuardLevel(value);
       break;
     default:
       reader.skipField();
@@ -1706,9 +1706,9 @@ proto.vNerve.bilibili.live.DanmakuMessage.serializeBinaryToWriter = function(mes
       f
     );
   }
-  f = message.getFromGuard();
-  if (f) {
-    writer.writeBool(
+  f = message.getGuardLevel();
+  if (f !== 0.0) {
+    writer.writeEnum(
       3,
       f
     );
@@ -1753,20 +1753,20 @@ proto.vNerve.bilibili.live.DanmakuMessage.prototype.setLotteryType = function(va
 
 
 /**
- * optional bool from_guard = 3;
- * @return {boolean}
+ * optional GuardLevel guard_level = 3;
+ * @return {!proto.vNerve.bilibili.live.GuardLevel}
  */
-proto.vNerve.bilibili.live.DanmakuMessage.prototype.getFromGuard = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
+proto.vNerve.bilibili.live.DanmakuMessage.prototype.getGuardLevel = function() {
+  return /** @type {!proto.vNerve.bilibili.live.GuardLevel} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
- * @param {boolean} value
+ * @param {!proto.vNerve.bilibili.live.GuardLevel} value
  * @return {!proto.vNerve.bilibili.live.DanmakuMessage} returns this
  */
-proto.vNerve.bilibili.live.DanmakuMessage.prototype.setFromGuard = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 3, value);
+proto.vNerve.bilibili.live.DanmakuMessage.prototype.setGuardLevel = function(value) {
+  return jspb.Message.setProto3EnumField(this, 3, value);
 };
 
 

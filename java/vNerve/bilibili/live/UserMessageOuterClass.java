@@ -5351,10 +5351,15 @@ public final class UserMessageOuterClass {
     vNerve.bilibili.live.UserMessageOuterClass.LotteryDanmakuType getLotteryType();
 
     /**
-     * <code>bool from_guard = 3;</code>
-     * @return The fromGuard.
+     * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+     * @return The enum numeric value on the wire for guardLevel.
      */
-    boolean getFromGuard();
+    int getGuardLevelValue();
+    /**
+     * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+     * @return The guardLevel.
+     */
+    vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuardLevel();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.DanmakuMessage}
@@ -5371,6 +5376,7 @@ public final class UserMessageOuterClass {
     private DanmakuMessage() {
       message_ = "";
       lotteryType_ = 0;
+      guardLevel_ = 0;
     }
 
     @java.lang.Override
@@ -5416,8 +5422,9 @@ public final class UserMessageOuterClass {
               break;
             }
             case 24: {
+              int rawValue = input.readEnum();
 
-              fromGuard_ = input.readBool();
+              guardLevel_ = rawValue;
               break;
             }
             default: {
@@ -5507,14 +5514,23 @@ public final class UserMessageOuterClass {
       return result == null ? vNerve.bilibili.live.UserMessageOuterClass.LotteryDanmakuType.UNRECOGNIZED : result;
     }
 
-    public static final int FROM_GUARD_FIELD_NUMBER = 3;
-    private boolean fromGuard_;
+    public static final int GUARD_LEVEL_FIELD_NUMBER = 3;
+    private int guardLevel_;
     /**
-     * <code>bool from_guard = 3;</code>
-     * @return The fromGuard.
+     * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+     * @return The enum numeric value on the wire for guardLevel.
      */
-    public boolean getFromGuard() {
-      return fromGuard_;
+    public int getGuardLevelValue() {
+      return guardLevel_;
+    }
+    /**
+     * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+     * @return The guardLevel.
+     */
+    public vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuardLevel() {
+      @SuppressWarnings("deprecation")
+      vNerve.bilibili.live.UserMessageOuterClass.GuardLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.valueOf(guardLevel_);
+      return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5537,8 +5553,8 @@ public final class UserMessageOuterClass {
       if (lotteryType_ != vNerve.bilibili.live.UserMessageOuterClass.LotteryDanmakuType.NO_LOTTERY.getNumber()) {
         output.writeEnum(2, lotteryType_);
       }
-      if (fromGuard_ != false) {
-        output.writeBool(3, fromGuard_);
+      if (guardLevel_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
+        output.writeEnum(3, guardLevel_);
       }
       unknownFields.writeTo(output);
     }
@@ -5556,9 +5572,9 @@ public final class UserMessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, lotteryType_);
       }
-      if (fromGuard_ != false) {
+      if (guardLevel_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, fromGuard_);
+          .computeEnumSize(3, guardLevel_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5578,8 +5594,7 @@ public final class UserMessageOuterClass {
       if (!getMessage()
           .equals(other.getMessage())) return false;
       if (lotteryType_ != other.lotteryType_) return false;
-      if (getFromGuard()
-          != other.getFromGuard()) return false;
+      if (guardLevel_ != other.guardLevel_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5595,9 +5610,8 @@ public final class UserMessageOuterClass {
       hash = (53 * hash) + getMessage().hashCode();
       hash = (37 * hash) + LOTTERY_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + lotteryType_;
-      hash = (37 * hash) + FROM_GUARD_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getFromGuard());
+      hash = (37 * hash) + GUARD_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + guardLevel_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5735,7 +5749,7 @@ public final class UserMessageOuterClass {
 
         lotteryType_ = 0;
 
-        fromGuard_ = false;
+        guardLevel_ = 0;
 
         return this;
       }
@@ -5765,7 +5779,7 @@ public final class UserMessageOuterClass {
         vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage result = new vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage(this);
         result.message_ = message_;
         result.lotteryType_ = lotteryType_;
-        result.fromGuard_ = fromGuard_;
+        result.guardLevel_ = guardLevel_;
         onBuilt();
         return result;
       }
@@ -5821,8 +5835,8 @@ public final class UserMessageOuterClass {
         if (other.lotteryType_ != 0) {
           setLotteryTypeValue(other.getLotteryTypeValue());
         }
-        if (other.getFromGuard() != false) {
-          setFromGuard(other.getFromGuard());
+        if (other.guardLevel_ != 0) {
+          setGuardLevelValue(other.getGuardLevelValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5981,32 +5995,54 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private boolean fromGuard_ ;
+      private int guardLevel_ = 0;
       /**
-       * <code>bool from_guard = 3;</code>
-       * @return The fromGuard.
+       * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+       * @return The enum numeric value on the wire for guardLevel.
        */
-      public boolean getFromGuard() {
-        return fromGuard_;
+      public int getGuardLevelValue() {
+        return guardLevel_;
       }
       /**
-       * <code>bool from_guard = 3;</code>
-       * @param value The fromGuard to set.
+       * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+       * @param value The enum numeric value on the wire for guardLevel to set.
        * @return This builder for chaining.
        */
-      public Builder setFromGuard(boolean value) {
-        
-        fromGuard_ = value;
+      public Builder setGuardLevelValue(int value) {
+        guardLevel_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool from_guard = 3;</code>
+       * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+       * @return The guardLevel.
+       */
+      public vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuardLevel() {
+        @SuppressWarnings("deprecation")
+        vNerve.bilibili.live.UserMessageOuterClass.GuardLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.valueOf(guardLevel_);
+        return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+       * @param value The guardLevel to set.
        * @return This builder for chaining.
        */
-      public Builder clearFromGuard() {
+      public Builder setGuardLevel(vNerve.bilibili.live.UserMessageOuterClass.GuardLevel value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
         
-        fromGuard_ = false;
+        guardLevel_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardLevel guard_level = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGuardLevel() {
+        
+        guardLevel_ = 0;
         onChanged();
         return this;
       }
@@ -10742,29 +10778,30 @@ public final class UserMessageOuterClass {
       "\016phone_verified\030\014 \001(\010\022\024\n\014regular_user\030\r " +
       "\001(\010\"_\n\tMedalInfo\022\022\n\nmedal_name\030\001 \001(\t\022\023\n\013" +
       "medal_level\030\002 \001(\r\022\023\n\013medal_color\030\003 \001(\007\022\024" +
-      "\n\014streamer_uid\030\004 \001(\004\"u\n\016DanmakuMessage\022\017" +
-      "\n\007message\030\001 \001(\t\022>\n\014lottery_type\030\002 \001(\0162(." +
-      "vNerve.bilibili.live.LotteryDanmakuType\022" +
-      "\022\n\nfrom_guard\030\003 \001(\010\"\264\001\n\020SuperChatMessage" +
-      "\022\017\n\007message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002id\030\003" +
-      " \001(\r\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022" +
-      "\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007" +
-      " \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time\030\t \001" +
-      "(\004\"p\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\nto" +
-      "tal_coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_" +
-      "name\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r\"S\n\021" +
-      "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve." +
-      "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(" +
-      "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162" +
-      " .vNerve.bilibili.live.GuardLevel\"P\n\017New" +
-      "GuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bil" +
-      "ibili.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\"\024\n\022U" +
-      "serBlockedMessage\"\026\n\024UserKickedOutMessag" +
-      "e*3\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MONTHLY" +
-      "\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuType\022\016\n\n" +
-      "NO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\n" +
-      "GuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006" +
-      "LEVEL2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
+      "\n\014streamer_uid\030\004 \001(\004\"\230\001\n\016DanmakuMessage\022" +
+      "\017\n\007message\030\001 \001(\t\022>\n\014lottery_type\030\002 \001(\0162(" +
+      ".vNerve.bilibili.live.LotteryDanmakuType" +
+      "\0225\n\013guard_level\030\003 \001(\0162 .vNerve.bilibili." +
+      "live.GuardLevel\"\264\001\n\020SuperChatMessage\022\017\n\007" +
+      "message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002id\030\003 \001(\r" +
+      "\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\npr" +
+      "ice_coin\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r" +
+      "\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"p" +
+      "\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\ntotal_" +
+      "coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_name" +
+      "\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r\"S\n\021Welc" +
+      "omeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve.bili" +
+      "bili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(\010\"F\n" +
+      "\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162 .vN" +
+      "erve.bilibili.live.GuardLevel\"P\n\017NewGuar" +
+      "dMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bilibil" +
+      "i.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\"\024\n\022UserB" +
+      "lockedMessage\"\026\n\024UserKickedOutMessage*3\n" +
+      "\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MONTHLY\020\001\022\n" +
+      "\n\006YEARLY\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_L" +
+      "OTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuar" +
+      "dLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVE" +
+      "L2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10793,7 +10830,7 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_DanmakuMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_DanmakuMessage_descriptor,
-        new java.lang.String[] { "Message", "LotteryType", "FromGuard", });
+        new java.lang.String[] { "Message", "LotteryType", "GuardLevel", });
     internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_vNerve_bilibili_live_SuperChatMessage_fieldAccessorTable = new
