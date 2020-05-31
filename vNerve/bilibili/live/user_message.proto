@@ -82,7 +82,8 @@ message GiftMessage {
 
   uint32 gift_id = 3;
   string gift_name = 4;
-  uint32 gift_single_coin = 5;
+  uint32 price = 5;
+  uint32 num=6;
 }
 
 message WelcomeVIPMessage {
@@ -101,9 +102,24 @@ enum GuardLevel {
   LEVEL3 = 3;
 }
 
+enum GuardBuyType {
+  None=0;
+  Buy=1;
+  Renew=2;
+}
+
+enum GuardUnit {
+  None=0;
+  Month=1;
+  Week=2;
+}
+
 message NewGuardMessage {
   GuardLevel level = 1;
-  uint32 coin = 2;
+  uint32 total_coin = 2;
+  uint32 num = 3;
+  GuardUnit unit = 4;
+  GuardBuyType buy_type=5;
 }
 
 message UserBlockedMessage {
