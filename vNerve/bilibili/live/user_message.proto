@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package vNerve.bilibili.live;
 
+option cc_enable_arenas = true;
+
 message UserMessage {
   UserInfo user = 1;
   oneof payload {
