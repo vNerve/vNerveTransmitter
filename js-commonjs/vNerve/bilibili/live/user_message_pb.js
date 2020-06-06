@@ -22,6 +22,7 @@ goog.exportSymbol('proto.vNerve.bilibili.live.NewGuardMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.SuperChatMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserBlockedMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserInfo', null, global);
+goog.exportSymbol('proto.vNerve.bilibili.live.UserInfo.MainvipCase', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserKickedOutMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserMessage.PayloadCase', null, global);
@@ -59,7 +60,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.vNerve.bilibili.live.UserInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.vNerve.bilibili.live.UserInfo.oneofGroups_);
 };
 goog.inherits(proto.vNerve.bilibili.live.UserInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -850,6 +851,31 @@ proto.vNerve.bilibili.live.UserMessage.prototype.hasUserKickedOut = function() {
 
 
 
+/**
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
+ * @const
+ */
+proto.vNerve.bilibili.live.UserInfo.oneofGroups_ = [[7]];
+
+/**
+ * @enum {number}
+ */
+proto.vNerve.bilibili.live.UserInfo.MainvipCase = {
+  MAINVIP_NOT_SET: 0,
+  MAIN_VIP: 7
+};
+
+/**
+ * @return {proto.vNerve.bilibili.live.UserInfo.MainvipCase}
+ */
+proto.vNerve.bilibili.live.UserInfo.prototype.getMainvipCase = function() {
+  return /** @type {proto.vNerve.bilibili.live.UserInfo.MainvipCase} */(jspb.Message.computeOneofCase(this, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0]));
+};
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -885,15 +911,14 @@ proto.vNerve.bilibili.live.UserInfo.toObject = function(includeInstance, msg) {
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     avatarUrl: jspb.Message.getFieldWithDefault(msg, 3, ""),
     userLevel: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    userExp: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    userLevelBorderColor: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    admin: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
-    mainVip: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
-    vipLevel: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    title: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    userLevelBorderColor: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    admin: jspb.Message.getBooleanFieldWithDefault(msg, 6, false),
+    mainVip: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
+    liveVipLevel: jspb.Message.getFieldWithDefault(msg, 8, 0),
+    title: jspb.Message.getFieldWithDefault(msg, 9, ""),
     medal: (f = msg.getMedal()) && proto.vNerve.bilibili.live.MedalInfo.toObject(includeInstance, f),
-    phoneVerified: jspb.Message.getBooleanFieldWithDefault(msg, 12, false),
-    regularUser: jspb.Message.getBooleanFieldWithDefault(msg, 13, false)
+    phoneVerified: jspb.Message.getBooleanFieldWithDefault(msg, 11, false),
+    regularUser: jspb.Message.getBooleanFieldWithDefault(msg, 12, false)
   };
 
   if (includeInstance) {
@@ -947,39 +972,35 @@ proto.vNerve.bilibili.live.UserInfo.deserializeBinaryFromReader = function(msg, 
       msg.setUserLevel(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setUserExp(value);
-      break;
-    case 6:
       var value = /** @type {number} */ (reader.readFixed32());
       msg.setUserLevelBorderColor(value);
       break;
-    case 7:
+    case 6:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setAdmin(value);
       break;
-    case 8:
+    case 7:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setMainVip(value);
       break;
-    case 9:
+    case 8:
       var value = /** @type {!proto.vNerve.bilibili.live.LiveVipLevel} */ (reader.readEnum());
-      msg.setVipLevel(value);
+      msg.setLiveVipLevel(value);
       break;
-    case 10:
+    case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setTitle(value);
       break;
-    case 11:
+    case 10:
       var value = new proto.vNerve.bilibili.live.MedalInfo;
       reader.readMessage(value,proto.vNerve.bilibili.live.MedalInfo.deserializeBinaryFromReader);
       msg.setMedal(value);
       break;
-    case 12:
+    case 11:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setPhoneVerified(value);
       break;
-    case 13:
+    case 12:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setRegularUser(value);
       break;
@@ -1040,52 +1061,45 @@ proto.vNerve.bilibili.live.UserInfo.serializeBinaryToWriter = function(message, 
       f
     );
   }
-  f = message.getUserExp();
-  if (f !== 0) {
-    writer.writeInt64(
-      5,
-      f
-    );
-  }
   f = message.getUserLevelBorderColor();
   if (f !== 0) {
     writer.writeFixed32(
-      6,
+      5,
       f
     );
   }
   f = message.getAdmin();
   if (f) {
     writer.writeBool(
+      6,
+      f
+    );
+  }
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 7));
+  if (f != null) {
+    writer.writeBool(
       7,
       f
     );
   }
-  f = message.getMainVip();
-  if (f) {
-    writer.writeBool(
-      8,
-      f
-    );
-  }
-  f = message.getVipLevel();
+  f = message.getLiveVipLevel();
   if (f !== 0.0) {
     writer.writeEnum(
-      9,
+      8,
       f
     );
   }
   f = message.getTitle();
   if (f.length > 0) {
     writer.writeString(
-      10,
+      9,
       f
     );
   }
   f = message.getMedal();
   if (f != null) {
     writer.writeMessage(
-      11,
+      10,
       f,
       proto.vNerve.bilibili.live.MedalInfo.serializeBinaryToWriter
     );
@@ -1093,14 +1107,14 @@ proto.vNerve.bilibili.live.UserInfo.serializeBinaryToWriter = function(message, 
   f = message.getPhoneVerified();
   if (f) {
     writer.writeBool(
-      12,
+      11,
       f
     );
   }
   f = message.getRegularUser();
   if (f) {
     writer.writeBool(
-      13,
+      12,
       f
     );
   }
@@ -1180,10 +1194,10 @@ proto.vNerve.bilibili.live.UserInfo.prototype.setUserLevel = function(value) {
 
 
 /**
- * optional int64 user_exp = 5;
+ * optional fixed32 user_level_border_color = 5;
  * @return {number}
  */
-proto.vNerve.bilibili.live.UserInfo.prototype.getUserExp = function() {
+proto.vNerve.bilibili.live.UserInfo.prototype.getUserLevelBorderColor = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
@@ -1192,35 +1206,17 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getUserExp = function() {
  * @param {number} value
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
-proto.vNerve.bilibili.live.UserInfo.prototype.setUserExp = function(value) {
+proto.vNerve.bilibili.live.UserInfo.prototype.setUserLevelBorderColor = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 
 /**
- * optional fixed32 user_level_border_color = 6;
- * @return {number}
- */
-proto.vNerve.bilibili.live.UserInfo.prototype.getUserLevelBorderColor = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
- */
-proto.vNerve.bilibili.live.UserInfo.prototype.setUserLevelBorderColor = function(value) {
-  return jspb.Message.setProto3IntField(this, 6, value);
-};
-
-
-/**
- * optional bool admin = 7;
+ * optional bool admin = 6;
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getAdmin = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 6, false));
 };
 
 
@@ -1229,16 +1225,16 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getAdmin = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setAdmin = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 7, value);
+  return jspb.Message.setProto3BooleanField(this, 6, value);
 };
 
 
 /**
- * optional bool main_vip = 8;
+ * optional bool main_vip = 7;
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getMainVip = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
 };
 
 
@@ -1247,16 +1243,34 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getMainVip = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setMainVip = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 8, value);
+  return jspb.Message.setOneofField(this, 7, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0], value);
 };
 
 
 /**
- * optional LiveVipLevel vip_level = 9;
+ * Clears the field making it undefined.
+ * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
+ */
+proto.vNerve.bilibili.live.UserInfo.prototype.clearMainVip = function() {
+  return jspb.Message.setOneofField(this, 7, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.vNerve.bilibili.live.UserInfo.prototype.hasMainVip = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional LiveVipLevel live_vip_level = 8;
  * @return {!proto.vNerve.bilibili.live.LiveVipLevel}
  */
-proto.vNerve.bilibili.live.UserInfo.prototype.getVipLevel = function() {
-  return /** @type {!proto.vNerve.bilibili.live.LiveVipLevel} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
+proto.vNerve.bilibili.live.UserInfo.prototype.getLiveVipLevel = function() {
+  return /** @type {!proto.vNerve.bilibili.live.LiveVipLevel} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
@@ -1264,17 +1278,17 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getVipLevel = function() {
  * @param {!proto.vNerve.bilibili.live.LiveVipLevel} value
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
-proto.vNerve.bilibili.live.UserInfo.prototype.setVipLevel = function(value) {
-  return jspb.Message.setProto3EnumField(this, 9, value);
+proto.vNerve.bilibili.live.UserInfo.prototype.setLiveVipLevel = function(value) {
+  return jspb.Message.setProto3EnumField(this, 8, value);
 };
 
 
 /**
- * optional string title = 10;
+ * optional string title = 9;
  * @return {string}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getTitle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
@@ -1283,17 +1297,17 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getTitle = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setTitle = function(value) {
-  return jspb.Message.setProto3StringField(this, 10, value);
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
 /**
- * optional MedalInfo medal = 11;
+ * optional MedalInfo medal = 10;
  * @return {?proto.vNerve.bilibili.live.MedalInfo}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getMedal = function() {
   return /** @type{?proto.vNerve.bilibili.live.MedalInfo} */ (
-    jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.MedalInfo, 11));
+    jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.MedalInfo, 10));
 };
 
 
@@ -1302,7 +1316,7 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getMedal = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
 */
 proto.vNerve.bilibili.live.UserInfo.prototype.setMedal = function(value) {
-  return jspb.Message.setWrapperField(this, 11, value);
+  return jspb.Message.setWrapperField(this, 10, value);
 };
 
 
@@ -1320,16 +1334,16 @@ proto.vNerve.bilibili.live.UserInfo.prototype.clearMedal = function() {
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.hasMedal = function() {
-  return jspb.Message.getField(this, 11) != null;
+  return jspb.Message.getField(this, 10) != null;
 };
 
 
 /**
- * optional bool phone_verified = 12;
+ * optional bool phone_verified = 11;
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getPhoneVerified = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 12, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 11, false));
 };
 
 
@@ -1338,16 +1352,16 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getPhoneVerified = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setPhoneVerified = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 12, value);
+  return jspb.Message.setProto3BooleanField(this, 11, value);
 };
 
 
 /**
- * optional bool regular_user = 13;
+ * optional bool regular_user = 12;
  * @return {boolean}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getRegularUser = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 13, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 12, false));
 };
 
 
@@ -1356,7 +1370,7 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getRegularUser = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setRegularUser = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 13, value);
+  return jspb.Message.setProto3BooleanField(this, 12, value);
 };
 
 
@@ -1395,7 +1409,9 @@ proto.vNerve.bilibili.live.MedalInfo.toObject = function(includeInstance, msg) {
     medalName: jspb.Message.getFieldWithDefault(msg, 1, ""),
     medalLevel: jspb.Message.getFieldWithDefault(msg, 2, 0),
     medalColor: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    streamerUid: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    streamerUid: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    streamerName: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    streamerRoomid: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -1447,6 +1463,14 @@ proto.vNerve.bilibili.live.MedalInfo.deserializeBinaryFromReader = function(msg,
     case 4:
       var value = /** @type {number} */ (reader.readUint64());
       msg.setStreamerUid(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setStreamerName(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setStreamerRoomid(value);
       break;
     default:
       reader.skipField();
@@ -1502,6 +1526,20 @@ proto.vNerve.bilibili.live.MedalInfo.serializeBinaryToWriter = function(message,
   if (f !== 0) {
     writer.writeUint64(
       4,
+      f
+    );
+  }
+  f = message.getStreamerName();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getStreamerRoomid();
+  if (f !== 0) {
+    writer.writeUint32(
+      6,
       f
     );
   }
@@ -1577,6 +1615,42 @@ proto.vNerve.bilibili.live.MedalInfo.prototype.getStreamerUid = function() {
  */
 proto.vNerve.bilibili.live.MedalInfo.prototype.setStreamerUid = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional string streamer_name = 5;
+ * @return {string}
+ */
+proto.vNerve.bilibili.live.MedalInfo.prototype.getStreamerName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.vNerve.bilibili.live.MedalInfo} returns this
+ */
+proto.vNerve.bilibili.live.MedalInfo.prototype.setStreamerName = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional uint32 streamer_roomid = 6;
+ * @return {number}
+ */
+proto.vNerve.bilibili.live.MedalInfo.prototype.getStreamerRoomid = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.vNerve.bilibili.live.MedalInfo} returns this
+ */
+proto.vNerve.bilibili.live.MedalInfo.prototype.setStreamerRoomid = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 

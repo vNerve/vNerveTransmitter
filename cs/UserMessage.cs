@@ -39,42 +39,43 @@ namespace VNerve.Bilibili.Live {
             "Y2tlZE1lc3NhZ2VIABJFCg91c2VyX2tpY2tlZF9vdXQYESABKAsyKi52TmVy",
             "dmUuYmlsaWJpbGkubGl2ZS5Vc2VyS2lja2VkT3V0TWVzc2FnZUgAQgkKB3Bh",
             "eWxvYWQixQIKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
-            "EhIKCmF2YXRhcl91cmwYAyABKAkSEgoKdXNlcl9sZXZlbBgEIAEoBRIQCgh1",
-            "c2VyX2V4cBgFIAEoAxIfChd1c2VyX2xldmVsX2JvcmRlcl9jb2xvchgGIAEo",
-            "BxINCgVhZG1pbhgHIAEoCBIQCghtYWluX3ZpcBgIIAEoCBI1Cgl2aXBfbGV2",
-            "ZWwYCSABKA4yIi52TmVydmUuYmlsaWJpbGkubGl2ZS5MaXZlVmlwTGV2ZWwS",
-            "DQoFdGl0bGUYCiABKAkSLgoFbWVkYWwYCyABKAsyHy52TmVydmUuYmlsaWJp",
-            "bGkubGl2ZS5NZWRhbEluZm8SFgoOcGhvbmVfdmVyaWZpZWQYDCABKAgSFAoM",
-            "cmVndWxhcl91c2VyGA0gASgIIl8KCU1lZGFsSW5mbxISCgptZWRhbF9uYW1l",
-            "GAEgASgJEhMKC21lZGFsX2xldmVsGAIgASgNEhMKC21lZGFsX2NvbG9yGAMg",
-            "ASgHEhQKDHN0cmVhbWVyX3VpZBgEIAEoBCKYAQoORGFubWFrdU1lc3NhZ2US",
-            "DwoHbWVzc2FnZRgBIAEoCRI+Cgxsb3R0ZXJ5X3R5cGUYAiABKA4yKC52TmVy",
-            "dmUuYmlsaWJpbGkubGl2ZS5Mb3R0ZXJ5RGFubWFrdVR5cGUSNQoLZ3VhcmRf",
-            "bGV2ZWwYAyABKA4yIC52TmVydmUuYmlsaWJpbGkubGl2ZS5HdWFyZExldmVs",
-            "IrQBChBTdXBlckNoYXRNZXNzYWdlEg8KB21lc3NhZ2UYASABKAkSDQoFcHJp",
-            "Y2UYAiABKA0SCgoCaWQYAyABKA0SDQoFdG9rZW4YBCABKAkSEQoJcHJpY2Vf",
-            "Y255GAUgASgNEhIKCnByaWNlX2NvaW4YBiABKA0SGAoQbGFzdGluZ190aW1l",
-            "X3NlYxgHIAEoDRISCgpzdGFydF90aW1lGAggASgEEhAKCGVuZF90aW1lGAkg",
-            "ASgEInAKC0dpZnRNZXNzYWdlEg8KB2lzX2dvbGQYASABKAgSEgoKdG90YWxf",
-            "Y29pbhgCIAEoDRIPCgdnaWZ0X2lkGAMgASgNEhEKCWdpZnRfbmFtZRgEIAEo",
-            "CRIYChBnaWZ0X3NpbmdsZV9jb2luGAUgASgNIlMKEVdlbGNvbWVWSVBNZXNz",
-            "YWdlEi8KA3ZpcBgBIAEoDjIiLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkxpdmVW",
-            "aXBMZXZlbBINCgVhZG1pbhgCIAEoCCJGChNXZWxjb21lR3VhcmRNZXNzYWdl",
-            "Ei8KBWd1YXJkGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRM",
-            "ZXZlbCJQCg9OZXdHdWFyZE1lc3NhZ2USLwoFbGV2ZWwYASABKA4yIC52TmVy",
-            "dmUuYmlsaWJpbGkubGl2ZS5HdWFyZExldmVsEgwKBGNvaW4YAiABKA0iFAoS",
-            "VXNlckJsb2NrZWRNZXNzYWdlIhYKFFVzZXJLaWNrZWRPdXRNZXNzYWdlKjMK",
-            "DExpdmVWaXBMZXZlbBIKCgZOT19WSVAQABILCgdNT05USExZEAESCgoGWUVB",
-            "UkxZEAIqPAoSTG90dGVyeURhbm1ha3VUeXBlEg4KCk5PX0xPVFRFUlkQABIJ",
-            "CgVTVE9STRABEgsKB0xPVFRFUlkQAio+CgpHdWFyZExldmVsEgwKCE5PX0dV",
-            "QVJEEAASCgoGTEVWRUwxEAESCgoGTEVWRUwyEAISCgoGTEVWRUwzEANiBnBy",
-            "b3RvMw=="));
+            "EhIKCmF2YXRhcl91cmwYAyABKAkSEgoKdXNlcl9sZXZlbBgEIAEoBRIfChd1",
+            "c2VyX2xldmVsX2JvcmRlcl9jb2xvchgFIAEoBxINCgVhZG1pbhgGIAEoCBIS",
+            "CghtYWluX3ZpcBgHIAEoCEgAEjoKDmxpdmVfdmlwX2xldmVsGAggASgOMiIu",
+            "dk5lcnZlLmJpbGliaWxpLmxpdmUuTGl2ZVZpcExldmVsEg0KBXRpdGxlGAkg",
+            "ASgJEi4KBW1lZGFsGAogASgLMh8udk5lcnZlLmJpbGliaWxpLmxpdmUuTWVk",
+            "YWxJbmZvEhYKDnBob25lX3ZlcmlmaWVkGAsgASgIEhQKDHJlZ3VsYXJfdXNl",
+            "chgMIAEoCEIJCgdtYWludmlwIo8BCglNZWRhbEluZm8SEgoKbWVkYWxfbmFt",
+            "ZRgBIAEoCRITCgttZWRhbF9sZXZlbBgCIAEoDRITCgttZWRhbF9jb2xvchgD",
+            "IAEoBxIUCgxzdHJlYW1lcl91aWQYBCABKAQSFQoNc3RyZWFtZXJfbmFtZRgF",
+            "IAEoCRIXCg9zdHJlYW1lcl9yb29taWQYBiABKA0imAEKDkRhbm1ha3VNZXNz",
+            "YWdlEg8KB21lc3NhZ2UYASABKAkSPgoMbG90dGVyeV90eXBlGAIgASgOMigu",
+            "dk5lcnZlLmJpbGliaWxpLmxpdmUuTG90dGVyeURhbm1ha3VUeXBlEjUKC2d1",
+            "YXJkX2xldmVsGAMgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRM",
+            "ZXZlbCK0AQoQU3VwZXJDaGF0TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJEg0K",
+            "BXByaWNlGAIgASgNEgoKAmlkGAMgASgNEg0KBXRva2VuGAQgASgJEhEKCXBy",
+            "aWNlX2NueRgFIAEoDRISCgpwcmljZV9jb2luGAYgASgNEhgKEGxhc3Rpbmdf",
+            "dGltZV9zZWMYByABKA0SEgoKc3RhcnRfdGltZRgIIAEoBBIQCghlbmRfdGlt",
+            "ZRgJIAEoBCJwCgtHaWZ0TWVzc2FnZRIPCgdpc19nb2xkGAEgASgIEhIKCnRv",
+            "dGFsX2NvaW4YAiABKA0SDwoHZ2lmdF9pZBgDIAEoDRIRCglnaWZ0X25hbWUY",
+            "BCABKAkSGAoQZ2lmdF9zaW5nbGVfY29pbhgFIAEoDSJTChFXZWxjb21lVklQ",
+            "TWVzc2FnZRIvCgN2aXAYASABKA4yIi52TmVydmUuYmlsaWJpbGkubGl2ZS5M",
+            "aXZlVmlwTGV2ZWwSDQoFYWRtaW4YAiABKAgiRgoTV2VsY29tZUd1YXJkTWVz",
+            "c2FnZRIvCgVndWFyZBgBIAEoDjIgLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkd1",
+            "YXJkTGV2ZWwiUAoPTmV3R3VhcmRNZXNzYWdlEi8KBWxldmVsGAEgASgOMiAu",
+            "dk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRMZXZlbBIMCgRjb2luGAIgASgN",
+            "IhQKElVzZXJCbG9ja2VkTWVzc2FnZSIWChRVc2VyS2lja2VkT3V0TWVzc2Fn",
+            "ZSozCgxMaXZlVmlwTGV2ZWwSCgoGTk9fVklQEAASCwoHTU9OVEhMWRABEgoK",
+            "BllFQVJMWRACKjwKEkxvdHRlcnlEYW5tYWt1VHlwZRIOCgpOT19MT1RURVJZ",
+            "EAASCQoFU1RPUk0QARILCgdMT1RURVJZEAIqPgoKR3VhcmRMZXZlbBIMCghO",
+            "T19HVUFSRBAAEgoKBkxFVkVMMRABEgoKBkxFVkVMMhACEgoKBkxFVkVMMxAD",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserMessage), global::VNerve.Bilibili.Live.UserMessage.Parser, new[]{ "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked", "UserKickedOut" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserInfo), global::VNerve.Bilibili.Live.UserInfo.Parser, new[]{ "Uid", "Name", "AvatarUrl", "UserLevel", "UserExp", "UserLevelBorderColor", "Admin", "MainVip", "VipLevel", "Title", "Medal", "PhoneVerified", "RegularUser" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.MedalInfo), global::VNerve.Bilibili.Live.MedalInfo.Parser, new[]{ "MedalName", "MedalLevel", "MedalColor", "StreamerUid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserInfo), global::VNerve.Bilibili.Live.UserInfo.Parser, new[]{ "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "PhoneVerified", "RegularUser" }, new[]{ "Mainvip" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.MedalInfo), global::VNerve.Bilibili.Live.MedalInfo.Parser, new[]{ "MedalName", "MedalLevel", "MedalColor", "StreamerUid", "StreamerName", "StreamerRoomid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.DanmakuMessage), global::VNerve.Bilibili.Live.DanmakuMessage.Parser, new[]{ "Message", "LotteryType", "GuardLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.SuperChatMessage), global::VNerve.Bilibili.Live.SuperChatMessage.Parser, new[]{ "Message", "Price", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.GiftMessage), global::VNerve.Bilibili.Live.GiftMessage.Parser, new[]{ "IsGold", "TotalCoin", "GiftId", "GiftName", "GiftSingleCoin" }, null, null, null, null),
@@ -612,15 +613,19 @@ namespace VNerve.Bilibili.Live {
       name_ = other.name_;
       avatarUrl_ = other.avatarUrl_;
       userLevel_ = other.userLevel_;
-      userExp_ = other.userExp_;
       userLevelBorderColor_ = other.userLevelBorderColor_;
       admin_ = other.admin_;
-      mainVip_ = other.mainVip_;
-      vipLevel_ = other.vipLevel_;
+      liveVipLevel_ = other.liveVipLevel_;
       title_ = other.title_;
       medal_ = other.medal_ != null ? other.medal_.Clone() : null;
       phoneVerified_ = other.phoneVerified_;
       regularUser_ = other.regularUser_;
+      switch (other.MainvipCase) {
+        case MainvipOneofCase.MainVip:
+          MainVip = other.MainVip;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -673,19 +678,8 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
-    /// <summary>Field number for the "user_exp" field.</summary>
-    public const int UserExpFieldNumber = 5;
-    private long userExp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long UserExp {
-      get { return userExp_; }
-      set {
-        userExp_ = value;
-      }
-    }
-
     /// <summary>Field number for the "user_level_border_color" field.</summary>
-    public const int UserLevelBorderColorFieldNumber = 6;
+    public const int UserLevelBorderColorFieldNumber = 5;
     private uint userLevelBorderColor_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint UserLevelBorderColor {
@@ -696,7 +690,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "admin" field.</summary>
-    public const int AdminFieldNumber = 7;
+    public const int AdminFieldNumber = 6;
     private bool admin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Admin {
@@ -707,29 +701,29 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "main_vip" field.</summary>
-    public const int MainVipFieldNumber = 8;
-    private bool mainVip_;
+    public const int MainVipFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool MainVip {
-      get { return mainVip_; }
+      get { return mainvipCase_ == MainvipOneofCase.MainVip ? (bool) mainvip_ : false; }
       set {
-        mainVip_ = value;
+        mainvip_ = value;
+        mainvipCase_ = MainvipOneofCase.MainVip;
       }
     }
 
-    /// <summary>Field number for the "vip_level" field.</summary>
-    public const int VipLevelFieldNumber = 9;
-    private global::VNerve.Bilibili.Live.LiveVipLevel vipLevel_ = global::VNerve.Bilibili.Live.LiveVipLevel.NoVip;
+    /// <summary>Field number for the "live_vip_level" field.</summary>
+    public const int LiveVipLevelFieldNumber = 8;
+    private global::VNerve.Bilibili.Live.LiveVipLevel liveVipLevel_ = global::VNerve.Bilibili.Live.LiveVipLevel.NoVip;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::VNerve.Bilibili.Live.LiveVipLevel VipLevel {
-      get { return vipLevel_; }
+    public global::VNerve.Bilibili.Live.LiveVipLevel LiveVipLevel {
+      get { return liveVipLevel_; }
       set {
-        vipLevel_ = value;
+        liveVipLevel_ = value;
       }
     }
 
     /// <summary>Field number for the "title" field.</summary>
-    public const int TitleFieldNumber = 10;
+    public const int TitleFieldNumber = 9;
     private string title_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Title {
@@ -740,7 +734,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "medal" field.</summary>
-    public const int MedalFieldNumber = 11;
+    public const int MedalFieldNumber = 10;
     private global::VNerve.Bilibili.Live.MedalInfo medal_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.MedalInfo Medal {
@@ -751,7 +745,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "phone_verified" field.</summary>
-    public const int PhoneVerifiedFieldNumber = 12;
+    public const int PhoneVerifiedFieldNumber = 11;
     private bool phoneVerified_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PhoneVerified {
@@ -762,7 +756,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "regular_user" field.</summary>
-    public const int RegularUserFieldNumber = 13;
+    public const int RegularUserFieldNumber = 12;
     private bool regularUser_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RegularUser {
@@ -770,6 +764,24 @@ namespace VNerve.Bilibili.Live {
       set {
         regularUser_ = value;
       }
+    }
+
+    private object mainvip_;
+    /// <summary>Enum of possible cases for the "mainvip" oneof.</summary>
+    public enum MainvipOneofCase {
+      None = 0,
+      MainVip = 7,
+    }
+    private MainvipOneofCase mainvipCase_ = MainvipOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MainvipOneofCase MainvipCase {
+      get { return mainvipCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearMainvip() {
+      mainvipCase_ = MainvipOneofCase.None;
+      mainvip_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -789,15 +801,15 @@ namespace VNerve.Bilibili.Live {
       if (Name != other.Name) return false;
       if (AvatarUrl != other.AvatarUrl) return false;
       if (UserLevel != other.UserLevel) return false;
-      if (UserExp != other.UserExp) return false;
       if (UserLevelBorderColor != other.UserLevelBorderColor) return false;
       if (Admin != other.Admin) return false;
       if (MainVip != other.MainVip) return false;
-      if (VipLevel != other.VipLevel) return false;
+      if (LiveVipLevel != other.LiveVipLevel) return false;
       if (Title != other.Title) return false;
       if (!object.Equals(Medal, other.Medal)) return false;
       if (PhoneVerified != other.PhoneVerified) return false;
       if (RegularUser != other.RegularUser) return false;
+      if (MainvipCase != other.MainvipCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -808,15 +820,15 @@ namespace VNerve.Bilibili.Live {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (AvatarUrl.Length != 0) hash ^= AvatarUrl.GetHashCode();
       if (UserLevel != 0) hash ^= UserLevel.GetHashCode();
-      if (UserExp != 0L) hash ^= UserExp.GetHashCode();
       if (UserLevelBorderColor != 0) hash ^= UserLevelBorderColor.GetHashCode();
       if (Admin != false) hash ^= Admin.GetHashCode();
-      if (MainVip != false) hash ^= MainVip.GetHashCode();
-      if (VipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) hash ^= VipLevel.GetHashCode();
+      if (mainvipCase_ == MainvipOneofCase.MainVip) hash ^= MainVip.GetHashCode();
+      if (LiveVipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) hash ^= LiveVipLevel.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (medal_ != null) hash ^= Medal.GetHashCode();
       if (PhoneVerified != false) hash ^= PhoneVerified.GetHashCode();
       if (RegularUser != false) hash ^= RegularUser.GetHashCode();
+      hash ^= (int) mainvipCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -846,40 +858,36 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(32);
         output.WriteInt32(UserLevel);
       }
-      if (UserExp != 0L) {
-        output.WriteRawTag(40);
-        output.WriteInt64(UserExp);
-      }
       if (UserLevelBorderColor != 0) {
-        output.WriteRawTag(53);
+        output.WriteRawTag(45);
         output.WriteFixed32(UserLevelBorderColor);
       }
       if (Admin != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteBool(Admin);
       }
-      if (MainVip != false) {
-        output.WriteRawTag(64);
+      if (mainvipCase_ == MainvipOneofCase.MainVip) {
+        output.WriteRawTag(56);
         output.WriteBool(MainVip);
       }
-      if (VipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) VipLevel);
+      if (LiveVipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) LiveVipLevel);
       }
       if (Title.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteString(Title);
       }
       if (medal_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(Medal);
       }
       if (PhoneVerified != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteBool(PhoneVerified);
       }
       if (RegularUser != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteBool(RegularUser);
       }
       if (_unknownFields != null) {
@@ -902,20 +910,17 @@ namespace VNerve.Bilibili.Live {
       if (UserLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserLevel);
       }
-      if (UserExp != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(UserExp);
-      }
       if (UserLevelBorderColor != 0) {
         size += 1 + 4;
       }
       if (Admin != false) {
         size += 1 + 1;
       }
-      if (MainVip != false) {
+      if (mainvipCase_ == MainvipOneofCase.MainVip) {
         size += 1 + 1;
       }
-      if (VipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VipLevel);
+      if (LiveVipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LiveVipLevel);
       }
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
@@ -952,20 +957,14 @@ namespace VNerve.Bilibili.Live {
       if (other.UserLevel != 0) {
         UserLevel = other.UserLevel;
       }
-      if (other.UserExp != 0L) {
-        UserExp = other.UserExp;
-      }
       if (other.UserLevelBorderColor != 0) {
         UserLevelBorderColor = other.UserLevelBorderColor;
       }
       if (other.Admin != false) {
         Admin = other.Admin;
       }
-      if (other.MainVip != false) {
-        MainVip = other.MainVip;
-      }
-      if (other.VipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) {
-        VipLevel = other.VipLevel;
+      if (other.LiveVipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) {
+        LiveVipLevel = other.LiveVipLevel;
       }
       if (other.Title.Length != 0) {
         Title = other.Title;
@@ -982,6 +981,12 @@ namespace VNerve.Bilibili.Live {
       if (other.RegularUser != false) {
         RegularUser = other.RegularUser;
       }
+      switch (other.MainvipCase) {
+        case MainvipOneofCase.MainVip:
+          MainVip = other.MainVip;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1009,42 +1014,38 @@ namespace VNerve.Bilibili.Live {
             UserLevel = input.ReadInt32();
             break;
           }
-          case 40: {
-            UserExp = input.ReadInt64();
-            break;
-          }
-          case 53: {
+          case 45: {
             UserLevelBorderColor = input.ReadFixed32();
             break;
           }
-          case 56: {
+          case 48: {
             Admin = input.ReadBool();
             break;
           }
-          case 64: {
+          case 56: {
             MainVip = input.ReadBool();
             break;
           }
-          case 72: {
-            VipLevel = (global::VNerve.Bilibili.Live.LiveVipLevel) input.ReadEnum();
+          case 64: {
+            LiveVipLevel = (global::VNerve.Bilibili.Live.LiveVipLevel) input.ReadEnum();
             break;
           }
-          case 82: {
+          case 74: {
             Title = input.ReadString();
             break;
           }
-          case 90: {
+          case 82: {
             if (medal_ == null) {
               Medal = new global::VNerve.Bilibili.Live.MedalInfo();
             }
             input.ReadMessage(Medal);
             break;
           }
-          case 96: {
+          case 88: {
             PhoneVerified = input.ReadBool();
             break;
           }
-          case 104: {
+          case 96: {
             RegularUser = input.ReadBool();
             break;
           }
@@ -1083,6 +1084,8 @@ namespace VNerve.Bilibili.Live {
       medalLevel_ = other.medalLevel_;
       medalColor_ = other.medalColor_;
       streamerUid_ = other.streamerUid_;
+      streamerName_ = other.streamerName_;
+      streamerRoomid_ = other.streamerRoomid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1135,6 +1138,28 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
+    /// <summary>Field number for the "streamer_name" field.</summary>
+    public const int StreamerNameFieldNumber = 5;
+    private string streamerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string StreamerName {
+      get { return streamerName_; }
+      set {
+        streamerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "streamer_roomid" field.</summary>
+    public const int StreamerRoomidFieldNumber = 6;
+    private uint streamerRoomid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint StreamerRoomid {
+      get { return streamerRoomid_; }
+      set {
+        streamerRoomid_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MedalInfo);
@@ -1152,6 +1177,8 @@ namespace VNerve.Bilibili.Live {
       if (MedalLevel != other.MedalLevel) return false;
       if (MedalColor != other.MedalColor) return false;
       if (StreamerUid != other.StreamerUid) return false;
+      if (StreamerName != other.StreamerName) return false;
+      if (StreamerRoomid != other.StreamerRoomid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1162,6 +1189,8 @@ namespace VNerve.Bilibili.Live {
       if (MedalLevel != 0) hash ^= MedalLevel.GetHashCode();
       if (MedalColor != 0) hash ^= MedalColor.GetHashCode();
       if (StreamerUid != 0UL) hash ^= StreamerUid.GetHashCode();
+      if (StreamerName.Length != 0) hash ^= StreamerName.GetHashCode();
+      if (StreamerRoomid != 0) hash ^= StreamerRoomid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1191,6 +1220,14 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(32);
         output.WriteUInt64(StreamerUid);
       }
+      if (StreamerName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StreamerName);
+      }
+      if (StreamerRoomid != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(StreamerRoomid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1210,6 +1247,12 @@ namespace VNerve.Bilibili.Live {
       }
       if (StreamerUid != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StreamerUid);
+      }
+      if (StreamerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamerName);
+      }
+      if (StreamerRoomid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StreamerRoomid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1233,6 +1276,12 @@ namespace VNerve.Bilibili.Live {
       }
       if (other.StreamerUid != 0UL) {
         StreamerUid = other.StreamerUid;
+      }
+      if (other.StreamerName.Length != 0) {
+        StreamerName = other.StreamerName;
+      }
+      if (other.StreamerRoomid != 0) {
+        StreamerRoomid = other.StreamerRoomid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1259,6 +1308,14 @@ namespace VNerve.Bilibili.Live {
           }
           case 32: {
             StreamerUid = input.ReadUInt64();
+            break;
+          }
+          case 42: {
+            StreamerName = input.ReadString();
+            break;
+          }
+          case 48: {
+            StreamerRoomid = input.ReadUInt32();
             break;
           }
         }

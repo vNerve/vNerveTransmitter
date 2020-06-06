@@ -42,6 +42,7 @@ class UserMessageDefaultTypeInternal {
 class UserInfoDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UserInfo> _instance;
+  bool main_vip_;
 } _UserInfo_default_instance_;
 class MedalInfoDefaultTypeInternal {
  public:
@@ -269,21 +270,21 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2fuse
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, _internal_metadata_),
   ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, uid_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, name_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, avatar_url_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, user_level_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, user_exp_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, user_level_border_color_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, admin_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, main_vip_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, vip_level_),
+  offsetof(::vNerve::bilibili::live::UserInfoDefaultTypeInternal, main_vip_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, live_vip_level_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, title_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, medal_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, phone_verified_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, regular_user_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::UserInfo, mainvip_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::MedalInfo, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -293,6 +294,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2fuse
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::MedalInfo, medal_level_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::MedalInfo, medal_color_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::MedalInfo, streamer_uid_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::MedalInfo, streamer_name_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::MedalInfo, streamer_roomid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::DanmakuMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -360,14 +363,14 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, -1, sizeof(::vNerve::bilibili::live::UserMessage)},
   { 15, -1, sizeof(::vNerve::bilibili::live::UserInfo)},
   { 33, -1, sizeof(::vNerve::bilibili::live::MedalInfo)},
-  { 42, -1, sizeof(::vNerve::bilibili::live::DanmakuMessage)},
-  { 50, -1, sizeof(::vNerve::bilibili::live::SuperChatMessage)},
-  { 64, -1, sizeof(::vNerve::bilibili::live::GiftMessage)},
-  { 74, -1, sizeof(::vNerve::bilibili::live::WelcomeVIPMessage)},
-  { 81, -1, sizeof(::vNerve::bilibili::live::WelcomeGuardMessage)},
-  { 87, -1, sizeof(::vNerve::bilibili::live::NewGuardMessage)},
-  { 94, -1, sizeof(::vNerve::bilibili::live::UserBlockedMessage)},
-  { 99, -1, sizeof(::vNerve::bilibili::live::UserKickedOutMessage)},
+  { 44, -1, sizeof(::vNerve::bilibili::live::DanmakuMessage)},
+  { 52, -1, sizeof(::vNerve::bilibili::live::SuperChatMessage)},
+  { 66, -1, sizeof(::vNerve::bilibili::live::GiftMessage)},
+  { 76, -1, sizeof(::vNerve::bilibili::live::WelcomeVIPMessage)},
+  { 83, -1, sizeof(::vNerve::bilibili::live::WelcomeGuardMessage)},
+  { 89, -1, sizeof(::vNerve::bilibili::live::NewGuardMessage)},
+  { 96, -1, sizeof(::vNerve::bilibili::live::UserBlockedMessage)},
+  { 101, -1, sizeof(::vNerve::bilibili::live::UserKickedOutMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -402,39 +405,40 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "r_kicked_out\030\021 \001(\0132*.vNerve.bilibili.liv"
   "e.UserKickedOutMessageH\000B\t\n\007payload\"\305\002\n\010"
   "UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002 \001(\t\022\022\n\na"
-  "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\020\n\010u"
-  "ser_exp\030\005 \001(\003\022\037\n\027user_level_border_color"
-  "\030\006 \001(\007\022\r\n\005admin\030\007 \001(\010\022\020\n\010main_vip\030\010 \001(\010\022"
-  "5\n\tvip_level\030\t \001(\0162\".vNerve.bilibili.liv"
-  "e.LiveVipLevel\022\r\n\005title\030\n \001(\t\022.\n\005medal\030\013"
-  " \001(\0132\037.vNerve.bilibili.live.MedalInfo\022\026\n"
-  "\016phone_verified\030\014 \001(\010\022\024\n\014regular_user\030\r "
-  "\001(\010\"_\n\tMedalInfo\022\022\n\nmedal_name\030\001 \001(\t\022\023\n\013"
-  "medal_level\030\002 \001(\r\022\023\n\013medal_color\030\003 \001(\007\022\024"
-  "\n\014streamer_uid\030\004 \001(\004\"\230\001\n\016DanmakuMessage\022"
-  "\017\n\007message\030\001 \001(\t\022>\n\014lottery_type\030\002 \001(\0162("
-  ".vNerve.bilibili.live.LotteryDanmakuType"
-  "\0225\n\013guard_level\030\003 \001(\0162 .vNerve.bilibili."
-  "live.GuardLevel\"\264\001\n\020SuperChatMessage\022\017\n\007"
-  "message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002id\030\003 \001(\r"
-  "\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\npr"
-  "ice_coin\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r"
-  "\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"p"
-  "\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\ntotal_"
-  "coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_name"
-  "\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r\"S\n\021Welc"
-  "omeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve.bili"
-  "bili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(\010\"F\n"
-  "\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162 .vN"
-  "erve.bilibili.live.GuardLevel\"P\n\017NewGuar"
-  "dMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bilibil"
-  "i.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\"\024\n\022UserB"
-  "lockedMessage\"\026\n\024UserKickedOutMessage*3\n"
-  "\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MONTHLY\020\001\022\n"
-  "\n\006YEARLY\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_L"
-  "OTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuar"
-  "dLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVE"
-  "L2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
+  "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\037\n\027u"
+  "ser_level_border_color\030\005 \001(\007\022\r\n\005admin\030\006 "
+  "\001(\010\022\022\n\010main_vip\030\007 \001(\010H\000\022:\n\016live_vip_leve"
+  "l\030\010 \001(\0162\".vNerve.bilibili.live.LiveVipLe"
+  "vel\022\r\n\005title\030\t \001(\t\022.\n\005medal\030\n \001(\0132\037.vNer"
+  "ve.bilibili.live.MedalInfo\022\026\n\016phone_veri"
+  "fied\030\013 \001(\010\022\024\n\014regular_user\030\014 \001(\010B\t\n\007main"
+  "vip\"\217\001\n\tMedalInfo\022\022\n\nmedal_name\030\001 \001(\t\022\023\n"
+  "\013medal_level\030\002 \001(\r\022\023\n\013medal_color\030\003 \001(\007\022"
+  "\024\n\014streamer_uid\030\004 \001(\004\022\025\n\rstreamer_name\030\005"
+  " \001(\t\022\027\n\017streamer_roomid\030\006 \001(\r\"\230\001\n\016Danmak"
+  "uMessage\022\017\n\007message\030\001 \001(\t\022>\n\014lottery_typ"
+  "e\030\002 \001(\0162(.vNerve.bilibili.live.LotteryDa"
+  "nmakuType\0225\n\013guard_level\030\003 \001(\0162 .vNerve."
+  "bilibili.live.GuardLevel\"\264\001\n\020SuperChatMe"
+  "ssage\022\017\n\007message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n"
+  "\002id\030\003 \001(\r\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 "
+  "\001(\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_time_"
+  "sec\030\007 \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_tim"
+  "e\030\t \001(\004\"p\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022"
+  "\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\t"
+  "gift_name\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001("
+  "\r\"S\n\021WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vN"
+  "erve.bilibili.live.LiveVipLevel\022\r\n\005admin"
+  "\030\002 \001(\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001"
+  " \001(\0162 .vNerve.bilibili.live.GuardLevel\"P"
+  "\n\017NewGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerv"
+  "e.bilibili.live.GuardLevel\022\014\n\004coin\030\002 \001(\r"
+  "\"\024\n\022UserBlockedMessage\"\026\n\024UserKickedOutM"
+  "essage*3\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MO"
+  "NTHLY\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuTyp"
+  "e\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020"
+  "\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020"
+  "\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps[1] = {
 };
@@ -454,7 +458,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 1984,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2033,
   &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, 11, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -1193,6 +1197,7 @@ void UserMessage::InternalSwap(UserMessage* other) {
 // ===================================================================
 
 void UserInfo::InitAsDefaultInstance() {
+  ::vNerve::bilibili::live::_UserInfo_default_instance_.main_vip_ = false;
   ::vNerve::bilibili::live::_UserInfo_default_instance_._instance.get_mutable()->medal_ = const_cast< ::vNerve::bilibili::live::MedalInfo*>(
       ::vNerve::bilibili::live::MedalInfo::internal_default_instance());
 }
@@ -1234,6 +1239,16 @@ UserInfo::UserInfo(const UserInfo& from)
   ::memcpy(&uid_, &from.uid_,
     static_cast<size_t>(reinterpret_cast<char*>(&regular_user_) -
     reinterpret_cast<char*>(&uid_)) + sizeof(regular_user_));
+  clear_has_mainvip();
+  switch (from.mainvip_case()) {
+    case kMainVip: {
+      _internal_set_main_vip(from._internal_main_vip());
+      break;
+    }
+    case MAINVIP_NOT_SET: {
+      break;
+    }
+  }
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.UserInfo)
 }
 
@@ -1245,6 +1260,7 @@ void UserInfo::SharedCtor() {
   ::memset(&medal_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&regular_user_) -
       reinterpret_cast<char*>(&medal_)) + sizeof(regular_user_));
+  clear_has_mainvip();
 }
 
 UserInfo::~UserInfo() {
@@ -1257,6 +1273,9 @@ void UserInfo::SharedDtor() {
   avatar_url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   title_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete medal_;
+  if (has_mainvip()) {
+    clear_mainvip();
+  }
 }
 
 void UserInfo::SetCachedSize(int size) const {
@@ -1265,6 +1284,21 @@ void UserInfo::SetCachedSize(int size) const {
 const UserInfo& UserInfo::default_instance() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UserInfo_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto.base);
   return *internal_default_instance();
+}
+
+
+void UserInfo::clear_mainvip() {
+// @@protoc_insertion_point(one_of_clear_start:vNerve.bilibili.live.UserInfo)
+  switch (mainvip_case()) {
+    case kMainVip: {
+      // No need to clear
+      break;
+    }
+    case MAINVIP_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = MAINVIP_NOT_SET;
 }
 
 
@@ -1284,6 +1318,7 @@ void UserInfo::Clear() {
   ::memset(&uid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&regular_user_) -
       reinterpret_cast<char*>(&uid_)) + sizeof(regular_user_));
+  clear_mainvip();
   _internal_metadata_.Clear();
 }
 
@@ -1326,68 +1361,61 @@ const char* UserInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int64 user_exp = 5;
+      // fixed32 user_level_border_color = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          user_exp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // fixed32 user_level_border_color = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 53)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 45)) {
           user_level_border_color_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint32>(ptr);
           ptr += sizeof(::PROTOBUF_NAMESPACE_ID::uint32);
         } else goto handle_unusual;
         continue;
-      // bool admin = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+      // bool admin = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
           admin_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool main_vip = 8;
+      // bool main_vip = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+          _internal_set_main_vip(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
-          main_vip_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .vNerve.bilibili.live.LiveVipLevel vip_level = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 72)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          _internal_set_vip_level(static_cast<::vNerve::bilibili::live::LiveVipLevel>(val));
+          _internal_set_live_vip_level(static_cast<::vNerve::bilibili::live::LiveVipLevel>(val));
         } else goto handle_unusual;
         continue;
-      // string title = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+      // string title = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           auto str = _internal_mutable_title();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.bilibili.live.UserInfo.title"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.MedalInfo medal = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+      // .vNerve.bilibili.live.MedalInfo medal = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_medal(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool phone_verified = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96)) {
+      // bool phone_verified = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 88)) {
           phone_verified_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // bool regular_user = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 104)) {
+      // bool regular_user = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 96)) {
           regular_user_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -1450,65 +1478,59 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_user_level(), target);
   }
 
-  // int64 user_exp = 5;
-  if (this->user_exp() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(5, this->_internal_user_exp(), target);
-  }
-
-  // fixed32 user_level_border_color = 6;
+  // fixed32 user_level_border_color = 5;
   if (this->user_level_border_color() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFixed32ToArray(6, this->_internal_user_level_border_color(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFixed32ToArray(5, this->_internal_user_level_border_color(), target);
   }
 
-  // bool admin = 7;
+  // bool admin = 6;
   if (this->admin() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->_internal_admin(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(6, this->_internal_admin(), target);
   }
 
-  // bool main_vip = 8;
-  if (this->main_vip() != 0) {
+  // bool main_vip = 7;
+  if (_internal_has_main_vip()) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(8, this->_internal_main_vip(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(7, this->_internal_main_vip(), target);
   }
 
-  // .vNerve.bilibili.live.LiveVipLevel vip_level = 9;
-  if (this->vip_level() != 0) {
+  // .vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;
+  if (this->live_vip_level() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      9, this->_internal_vip_level(), target);
+      8, this->_internal_live_vip_level(), target);
   }
 
-  // string title = 10;
+  // string title = 9;
   if (this->title().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_title().data(), static_cast<int>(this->_internal_title().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "vNerve.bilibili.live.UserInfo.title");
     target = stream->WriteStringMaybeAliased(
-        10, this->_internal_title(), target);
+        9, this->_internal_title(), target);
   }
 
-  // .vNerve.bilibili.live.MedalInfo medal = 11;
+  // .vNerve.bilibili.live.MedalInfo medal = 10;
   if (this->has_medal()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        11, _Internal::medal(this), target, stream);
+        10, _Internal::medal(this), target, stream);
   }
 
-  // bool phone_verified = 12;
+  // bool phone_verified = 11;
   if (this->phone_verified() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->_internal_phone_verified(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(11, this->_internal_phone_verified(), target);
   }
 
-  // bool regular_user = 13;
+  // bool regular_user = 12;
   if (this->regular_user() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(13, this->_internal_regular_user(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(12, this->_internal_regular_user(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1541,14 +1563,14 @@ size_t UserInfo::ByteSizeLong() const {
         this->_internal_avatar_url());
   }
 
-  // string title = 10;
+  // string title = 9;
   if (this->title().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_title());
   }
 
-  // .vNerve.bilibili.live.MedalInfo medal = 11;
+  // .vNerve.bilibili.live.MedalInfo medal = 10;
   if (this->has_medal()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1562,13 +1584,6 @@ size_t UserInfo::ByteSizeLong() const {
         this->_internal_uid());
   }
 
-  // int64 user_exp = 5;
-  if (this->user_exp() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
-        this->_internal_user_exp());
-  }
-
   // int32 user_level = 4;
   if (this->user_level() != 0) {
     total_size += 1 +
@@ -1576,37 +1591,42 @@ size_t UserInfo::ByteSizeLong() const {
         this->_internal_user_level());
   }
 
-  // fixed32 user_level_border_color = 6;
+  // fixed32 user_level_border_color = 5;
   if (this->user_level_border_color() != 0) {
     total_size += 1 + 4;
   }
 
-  // .vNerve.bilibili.live.LiveVipLevel vip_level = 9;
-  if (this->vip_level() != 0) {
+  // .vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;
+  if (this->live_vip_level() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_vip_level());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_live_vip_level());
   }
 
-  // bool admin = 7;
+  // bool admin = 6;
   if (this->admin() != 0) {
     total_size += 1 + 1;
   }
 
-  // bool main_vip = 8;
-  if (this->main_vip() != 0) {
-    total_size += 1 + 1;
-  }
-
-  // bool phone_verified = 12;
+  // bool phone_verified = 11;
   if (this->phone_verified() != 0) {
     total_size += 1 + 1;
   }
 
-  // bool regular_user = 13;
+  // bool regular_user = 12;
   if (this->regular_user() != 0) {
     total_size += 1 + 1;
   }
 
+  switch (mainvip_case()) {
+    // bool main_vip = 7;
+    case kMainVip: {
+      total_size += 1 + 1;
+      break;
+    }
+    case MAINVIP_NOT_SET: {
+      break;
+    }
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -1656,29 +1676,32 @@ void UserInfo::MergeFrom(const UserInfo& from) {
   if (from.uid() != 0) {
     _internal_set_uid(from._internal_uid());
   }
-  if (from.user_exp() != 0) {
-    _internal_set_user_exp(from._internal_user_exp());
-  }
   if (from.user_level() != 0) {
     _internal_set_user_level(from._internal_user_level());
   }
   if (from.user_level_border_color() != 0) {
     _internal_set_user_level_border_color(from._internal_user_level_border_color());
   }
-  if (from.vip_level() != 0) {
-    _internal_set_vip_level(from._internal_vip_level());
+  if (from.live_vip_level() != 0) {
+    _internal_set_live_vip_level(from._internal_live_vip_level());
   }
   if (from.admin() != 0) {
     _internal_set_admin(from._internal_admin());
-  }
-  if (from.main_vip() != 0) {
-    _internal_set_main_vip(from._internal_main_vip());
   }
   if (from.phone_verified() != 0) {
     _internal_set_phone_verified(from._internal_phone_verified());
   }
   if (from.regular_user() != 0) {
     _internal_set_regular_user(from._internal_regular_user());
+  }
+  switch (from.mainvip_case()) {
+    case kMainVip: {
+      _internal_set_main_vip(from._internal_main_vip());
+      break;
+    }
+    case MAINVIP_NOT_SET: {
+      break;
+    }
   }
 }
 
@@ -1711,14 +1734,14 @@ void UserInfo::InternalSwap(UserInfo* other) {
     GetArenaNoVirtual());
   swap(medal_, other->medal_);
   swap(uid_, other->uid_);
-  swap(user_exp_, other->user_exp_);
   swap(user_level_, other->user_level_);
   swap(user_level_border_color_, other->user_level_border_color_);
-  swap(vip_level_, other->vip_level_);
+  swap(live_vip_level_, other->live_vip_level_);
   swap(admin_, other->admin_);
-  swap(main_vip_, other->main_vip_);
   swap(phone_verified_, other->phone_verified_);
   swap(regular_user_, other->regular_user_);
+  swap(mainvip_, other->mainvip_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UserInfo::GetMetadata() const {
@@ -1747,18 +1770,23 @@ MedalInfo::MedalInfo(const MedalInfo& from)
   if (!from._internal_medal_name().empty()) {
     medal_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.medal_name_);
   }
+  streamer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_streamer_name().empty()) {
+    streamer_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamer_name_);
+  }
   ::memcpy(&medal_level_, &from.medal_level_,
-    static_cast<size_t>(reinterpret_cast<char*>(&streamer_uid_) -
-    reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_uid_));
+    static_cast<size_t>(reinterpret_cast<char*>(&streamer_roomid_) -
+    reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_roomid_));
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.MedalInfo)
 }
 
 void MedalInfo::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_MedalInfo_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto.base);
   medal_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  streamer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&medal_level_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&streamer_uid_) -
-      reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_uid_));
+      reinterpret_cast<char*>(&streamer_roomid_) -
+      reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_roomid_));
 }
 
 MedalInfo::~MedalInfo() {
@@ -1768,6 +1796,7 @@ MedalInfo::~MedalInfo() {
 
 void MedalInfo::SharedDtor() {
   medal_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  streamer_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void MedalInfo::SetCachedSize(int size) const {
@@ -1786,9 +1815,10 @@ void MedalInfo::Clear() {
   (void) cached_has_bits;
 
   medal_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  streamer_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&medal_level_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&streamer_uid_) -
-      reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_uid_));
+      reinterpret_cast<char*>(&streamer_roomid_) -
+      reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_roomid_));
   _internal_metadata_.Clear();
 }
 
@@ -1826,6 +1856,22 @@ const char* MedalInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
           streamer_uid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string streamer_name = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_streamer_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.bilibili.live.MedalInfo.streamer_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 streamer_roomid = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          streamer_roomid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1883,6 +1929,22 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(4, this->_internal_streamer_uid(), target);
   }
 
+  // string streamer_name = 5;
+  if (this->streamer_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_streamer_name().data(), static_cast<int>(this->_internal_streamer_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vNerve.bilibili.live.MedalInfo.streamer_name");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_streamer_name(), target);
+  }
+
+  // uint32 streamer_roomid = 6;
+  if (this->streamer_roomid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(6, this->_internal_streamer_roomid(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -1906,6 +1968,13 @@ size_t MedalInfo::ByteSizeLong() const {
         this->_internal_medal_name());
   }
 
+  // string streamer_name = 5;
+  if (this->streamer_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_streamer_name());
+  }
+
   // uint32 medal_level = 2;
   if (this->medal_level() != 0) {
     total_size += 1 +
@@ -1923,6 +1992,13 @@ size_t MedalInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
         this->_internal_streamer_uid());
+  }
+
+  // uint32 streamer_roomid = 6;
+  if (this->streamer_roomid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_streamer_roomid());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1960,6 +2036,10 @@ void MedalInfo::MergeFrom(const MedalInfo& from) {
 
     medal_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.medal_name_);
   }
+  if (from.streamer_name().size() > 0) {
+
+    streamer_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamer_name_);
+  }
   if (from.medal_level() != 0) {
     _internal_set_medal_level(from._internal_medal_level());
   }
@@ -1968,6 +2048,9 @@ void MedalInfo::MergeFrom(const MedalInfo& from) {
   }
   if (from.streamer_uid() != 0) {
     _internal_set_streamer_uid(from._internal_streamer_uid());
+  }
+  if (from.streamer_roomid() != 0) {
+    _internal_set_streamer_roomid(from._internal_streamer_roomid());
   }
 }
 
@@ -1994,9 +2077,12 @@ void MedalInfo::InternalSwap(MedalInfo* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   medal_name_.Swap(&other->medal_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  streamer_name_.Swap(&other->streamer_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(medal_level_, other->medal_level_);
   swap(medal_color_, other->medal_color_);
   swap(streamer_uid_, other->streamer_uid_);
+  swap(streamer_roomid_, other->streamer_roomid_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MedalInfo::GetMetadata() const {
