@@ -11035,7 +11035,7 @@ public final class UserMessageOuterClass {
       "NTHLY\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuTyp" +
       "e\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020" +
       "\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020" +
-      "\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
+      "\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

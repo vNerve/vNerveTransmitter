@@ -494,7 +494,8 @@ void RoomMessage::set_allocated_user_message(::vNerve::bilibili::live::UserMessa
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (user_message) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(user_message)->GetArena();
     if (message_arena != submessage_arena) {
       user_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, user_message, submessage_arena);

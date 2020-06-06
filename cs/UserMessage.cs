@@ -69,7 +69,7 @@ namespace VNerve.Bilibili.Live {
             "BllFQVJMWRACKjwKEkxvdHRlcnlEYW5tYWt1VHlwZRIOCgpOT19MT1RURVJZ",
             "EAASCQoFU1RPUk0QARILCgdMT1RURVJZEAIqPgoKR3VhcmRMZXZlbBIMCghO",
             "T19HVUFSRBAAEgoKBkxFVkVMMRABEgoKBkxFVkVMMhACEgoKBkxFVkVMMxAD",
-            "YgZwcm90bzM="));
+            "QgP4AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), }, null, new pbr::GeneratedClrTypeInfo[] {

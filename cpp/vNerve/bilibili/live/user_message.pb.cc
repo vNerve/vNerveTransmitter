@@ -438,7 +438,7 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "NTHLY\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuTyp"
   "e\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020"
   "\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020"
-  "\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003b\006proto3"
+  "\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003B\003\370\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps[1] = {
 };
@@ -458,7 +458,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2033,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2038,
   &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, 11, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -587,11 +587,25 @@ const ::vNerve::bilibili::live::UserKickedOutMessage&
 UserMessage::_Internal::user_kicked_out(const UserMessage* msg) {
   return *msg->payload_.user_kicked_out_;
 }
+void UserMessage::unsafe_arena_set_allocated_user(
+    ::vNerve::bilibili::live::UserInfo* user) {
+  if (GetArenaNoVirtual() == nullptr) {
+    delete user_;
+  }
+  user_ = user;
+  if (user) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.UserMessage.user)
+}
 void UserMessage::set_allocated_danmaku(::vNerve::bilibili::live::DanmakuMessage* danmaku) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (danmaku) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(danmaku);
     if (message_arena != submessage_arena) {
       danmaku = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, danmaku, submessage_arena);
@@ -605,7 +619,8 @@ void UserMessage::set_allocated_gift(::vNerve::bilibili::live::GiftMessage* gift
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (gift) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(gift);
     if (message_arena != submessage_arena) {
       gift = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, gift, submessage_arena);
@@ -619,7 +634,8 @@ void UserMessage::set_allocated_super_chat(::vNerve::bilibili::live::SuperChatMe
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (super_chat) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(super_chat);
     if (message_arena != submessage_arena) {
       super_chat = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, super_chat, submessage_arena);
@@ -633,7 +649,8 @@ void UserMessage::set_allocated_new_guard(::vNerve::bilibili::live::NewGuardMess
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (new_guard) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(new_guard);
     if (message_arena != submessage_arena) {
       new_guard = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, new_guard, submessage_arena);
@@ -647,7 +664,8 @@ void UserMessage::set_allocated_welcome_vip(::vNerve::bilibili::live::WelcomeVIP
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (welcome_vip) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(welcome_vip);
     if (message_arena != submessage_arena) {
       welcome_vip = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, welcome_vip, submessage_arena);
@@ -661,7 +679,8 @@ void UserMessage::set_allocated_welcome_guard(::vNerve::bilibili::live::WelcomeG
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (welcome_guard) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(welcome_guard);
     if (message_arena != submessage_arena) {
       welcome_guard = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, welcome_guard, submessage_arena);
@@ -675,7 +694,8 @@ void UserMessage::set_allocated_user_blocked(::vNerve::bilibili::live::UserBlock
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (user_blocked) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(user_blocked);
     if (message_arena != submessage_arena) {
       user_blocked = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, user_blocked, submessage_arena);
@@ -689,7 +709,8 @@ void UserMessage::set_allocated_user_kicked_out(::vNerve::bilibili::live::UserKi
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
   if (user_kicked_out) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(user_kicked_out);
     if (message_arena != submessage_arena) {
       user_kicked_out = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, user_kicked_out, submessage_arena);
@@ -703,6 +724,13 @@ UserMessage::UserMessage()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.UserMessage)
+}
+UserMessage::UserMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.UserMessage)
 }
 UserMessage::UserMessage(const UserMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -766,12 +794,19 @@ UserMessage::~UserMessage() {
 }
 
 void UserMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   if (this != internal_default_instance()) delete user_;
   if (has_payload()) {
     clear_payload();
   }
 }
 
+void UserMessage::ArenaDtor(void* object) {
+  UserMessage* _this = reinterpret_cast< UserMessage* >(object);
+  (void)_this;
+}
+void UserMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void UserMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -785,35 +820,51 @@ void UserMessage::clear_payload() {
 // @@protoc_insertion_point(one_of_clear_start:vNerve.bilibili.live.UserMessage)
   switch (payload_case()) {
     case kDanmaku: {
-      delete payload_.danmaku_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.danmaku_;
+      }
       break;
     }
     case kGift: {
-      delete payload_.gift_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.gift_;
+      }
       break;
     }
     case kSuperChat: {
-      delete payload_.super_chat_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.super_chat_;
+      }
       break;
     }
     case kNewGuard: {
-      delete payload_.new_guard_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.new_guard_;
+      }
       break;
     }
     case kWelcomeVip: {
-      delete payload_.welcome_vip_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.welcome_vip_;
+      }
       break;
     }
     case kWelcomeGuard: {
-      delete payload_.welcome_guard_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.welcome_guard_;
+      }
       break;
     }
     case kUserBlocked: {
-      delete payload_.user_blocked_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.user_blocked_;
+      }
       break;
     }
     case kUserKickedOut: {
-      delete payload_.user_kicked_out_;
+      if (GetArenaNoVirtual() == nullptr) {
+        delete payload_.user_kicked_out_;
+      }
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -840,6 +891,7 @@ void UserMessage::Clear() {
 
 const char* UserMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1210,10 +1262,30 @@ const ::vNerve::bilibili::live::MedalInfo&
 UserInfo::_Internal::medal(const UserInfo* msg) {
   return *msg->medal_;
 }
+void UserInfo::unsafe_arena_set_allocated_medal(
+    ::vNerve::bilibili::live::MedalInfo* medal) {
+  if (GetArenaNoVirtual() == nullptr) {
+    delete medal_;
+  }
+  medal_ = medal;
+  if (medal) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.UserInfo.medal)
+}
 UserInfo::UserInfo()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.UserInfo)
+}
+UserInfo::UserInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.UserInfo)
 }
 UserInfo::UserInfo(const UserInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -1221,15 +1293,18 @@ UserInfo::UserInfo(const UserInfo& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArenaNoVirtual());
   }
   avatar_url_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_avatar_url().empty()) {
-    avatar_url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.avatar_url_);
+    avatar_url_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_avatar_url(),
+      GetArenaNoVirtual());
   }
   title_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_title().empty()) {
-    title_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.title_);
+    title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_title(),
+      GetArenaNoVirtual());
   }
   if (from._internal_has_medal()) {
     medal_ = new ::vNerve::bilibili::live::MedalInfo(*from.medal_);
@@ -1269,6 +1344,7 @@ UserInfo::~UserInfo() {
 }
 
 void UserInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   avatar_url_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   title_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1278,6 +1354,12 @@ void UserInfo::SharedDtor() {
   }
 }
 
+void UserInfo::ArenaDtor(void* object) {
+  UserInfo* _this = reinterpret_cast< UserInfo* >(object);
+  (void)_this;
+}
+void UserInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void UserInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -1308,9 +1390,9 @@ void UserInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  avatar_url_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  title_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  avatar_url_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  title_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   if (GetArenaNoVirtual() == nullptr && medal_ != nullptr) {
     delete medal_;
   }
@@ -1324,6 +1406,7 @@ void UserInfo::Clear() {
 
 const char* UserInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1659,16 +1742,13 @@ void UserInfo::MergeFrom(const UserInfo& from) {
   (void) cached_has_bits;
 
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.avatar_url().size() > 0) {
-
-    avatar_url_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.avatar_url_);
+    _internal_set_avatar_url(from._internal_avatar_url());
   }
   if (from.title().size() > 0) {
-
-    title_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.title_);
+    _internal_set_title(from._internal_title());
   }
   if (from.has_medal()) {
     _internal_mutable_medal()->::vNerve::bilibili::live::MedalInfo::MergeFrom(from._internal_medal());
@@ -1762,17 +1842,26 @@ MedalInfo::MedalInfo()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.MedalInfo)
 }
+MedalInfo::MedalInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.MedalInfo)
+}
 MedalInfo::MedalInfo(const MedalInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   medal_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_medal_name().empty()) {
-    medal_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.medal_name_);
+    medal_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_medal_name(),
+      GetArenaNoVirtual());
   }
   streamer_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_streamer_name().empty()) {
-    streamer_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamer_name_);
+    streamer_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_streamer_name(),
+      GetArenaNoVirtual());
   }
   ::memcpy(&medal_level_, &from.medal_level_,
     static_cast<size_t>(reinterpret_cast<char*>(&streamer_roomid_) -
@@ -1795,10 +1884,17 @@ MedalInfo::~MedalInfo() {
 }
 
 void MedalInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   medal_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   streamer_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void MedalInfo::ArenaDtor(void* object) {
+  MedalInfo* _this = reinterpret_cast< MedalInfo* >(object);
+  (void)_this;
+}
+void MedalInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void MedalInfo::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -1814,8 +1910,8 @@ void MedalInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  medal_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  streamer_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  medal_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  streamer_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   ::memset(&medal_level_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&streamer_roomid_) -
       reinterpret_cast<char*>(&medal_level_)) + sizeof(streamer_roomid_));
@@ -1824,6 +1920,7 @@ void MedalInfo::Clear() {
 
 const char* MedalInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2033,12 +2130,10 @@ void MedalInfo::MergeFrom(const MedalInfo& from) {
   (void) cached_has_bits;
 
   if (from.medal_name().size() > 0) {
-
-    medal_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.medal_name_);
+    _internal_set_medal_name(from._internal_medal_name());
   }
   if (from.streamer_name().size() > 0) {
-
-    streamer_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.streamer_name_);
+    _internal_set_streamer_name(from._internal_streamer_name());
   }
   if (from.medal_level() != 0) {
     _internal_set_medal_level(from._internal_medal_level());
@@ -2103,13 +2198,21 @@ DanmakuMessage::DanmakuMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.DanmakuMessage)
 }
+DanmakuMessage::DanmakuMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.DanmakuMessage)
+}
 DanmakuMessage::DanmakuMessage(const DanmakuMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+      GetArenaNoVirtual());
   }
   ::memcpy(&lottery_type_, &from.lottery_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&guard_level_) -
@@ -2131,9 +2234,16 @@ DanmakuMessage::~DanmakuMessage() {
 }
 
 void DanmakuMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void DanmakuMessage::ArenaDtor(void* object) {
+  DanmakuMessage* _this = reinterpret_cast< DanmakuMessage* >(object);
+  (void)_this;
+}
+void DanmakuMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void DanmakuMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2149,7 +2259,7 @@ void DanmakuMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   ::memset(&lottery_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&guard_level_) -
       reinterpret_cast<char*>(&lottery_type_)) + sizeof(guard_level_));
@@ -2158,6 +2268,7 @@ void DanmakuMessage::Clear() {
 
 const char* DanmakuMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2305,8 +2416,7 @@ void DanmakuMessage::MergeFrom(const DanmakuMessage& from) {
   (void) cached_has_bits;
 
   if (from.message().size() > 0) {
-
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+    _internal_set_message(from._internal_message());
   }
   if (from.lottery_type() != 0) {
     _internal_set_lottery_type(from._internal_lottery_type());
@@ -2361,17 +2471,26 @@ SuperChatMessage::SuperChatMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.SuperChatMessage)
 }
+SuperChatMessage::SuperChatMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.SuperChatMessage)
+}
 SuperChatMessage::SuperChatMessage(const SuperChatMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+      GetArenaNoVirtual());
   }
   token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_token().empty()) {
-    token_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.token_);
+    token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
+      GetArenaNoVirtual());
   }
   ::memcpy(&price_, &from.price_,
     static_cast<size_t>(reinterpret_cast<char*>(&lasting_time_sec_) -
@@ -2394,10 +2513,17 @@ SuperChatMessage::~SuperChatMessage() {
 }
 
 void SuperChatMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void SuperChatMessage::ArenaDtor(void* object) {
+  SuperChatMessage* _this = reinterpret_cast< SuperChatMessage* >(object);
+  (void)_this;
+}
+void SuperChatMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SuperChatMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2413,8 +2539,8 @@ void SuperChatMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  token_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   ::memset(&price_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&lasting_time_sec_) -
       reinterpret_cast<char*>(&price_)) + sizeof(lasting_time_sec_));
@@ -2423,6 +2549,7 @@ void SuperChatMessage::Clear() {
 
 const char* SuperChatMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -2694,12 +2821,10 @@ void SuperChatMessage::MergeFrom(const SuperChatMessage& from) {
   (void) cached_has_bits;
 
   if (from.message().size() > 0) {
-
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
+    _internal_set_message(from._internal_message());
   }
   if (from.token().size() > 0) {
-
-    token_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.token_);
+    _internal_set_token(from._internal_token());
   }
   if (from.price() != 0) {
     _internal_set_price(from._internal_price());
@@ -2776,13 +2901,21 @@ GiftMessage::GiftMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.GiftMessage)
 }
+GiftMessage::GiftMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.GiftMessage)
+}
 GiftMessage::GiftMessage(const GiftMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   gift_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_gift_name().empty()) {
-    gift_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.gift_name_);
+    gift_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_gift_name(),
+      GetArenaNoVirtual());
   }
   ::memcpy(&is_gold_, &from.is_gold_,
     static_cast<size_t>(reinterpret_cast<char*>(&gift_single_coin_) -
@@ -2804,9 +2937,16 @@ GiftMessage::~GiftMessage() {
 }
 
 void GiftMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   gift_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void GiftMessage::ArenaDtor(void* object) {
+  GiftMessage* _this = reinterpret_cast< GiftMessage* >(object);
+  (void)_this;
+}
+void GiftMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void GiftMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -2822,7 +2962,7 @@ void GiftMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  gift_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  gift_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   ::memset(&is_gold_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&gift_single_coin_) -
       reinterpret_cast<char*>(&is_gold_)) + sizeof(gift_single_coin_));
@@ -2831,6 +2971,7 @@ void GiftMessage::Clear() {
 
 const char* GiftMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3014,8 +3155,7 @@ void GiftMessage::MergeFrom(const GiftMessage& from) {
   (void) cached_has_bits;
 
   if (from.gift_name().size() > 0) {
-
-    gift_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.gift_name_);
+    _internal_set_gift_name(from._internal_gift_name());
   }
   if (from.is_gold() != 0) {
     _internal_set_is_gold(from._internal_is_gold());
@@ -3078,6 +3218,13 @@ WelcomeVIPMessage::WelcomeVIPMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.WelcomeVIPMessage)
 }
+WelcomeVIPMessage::WelcomeVIPMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.WelcomeVIPMessage)
+}
 WelcomeVIPMessage::WelcomeVIPMessage(const WelcomeVIPMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
@@ -3100,8 +3247,15 @@ WelcomeVIPMessage::~WelcomeVIPMessage() {
 }
 
 void WelcomeVIPMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
 }
 
+void WelcomeVIPMessage::ArenaDtor(void* object) {
+  WelcomeVIPMessage* _this = reinterpret_cast< WelcomeVIPMessage* >(object);
+  (void)_this;
+}
+void WelcomeVIPMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void WelcomeVIPMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3125,6 +3279,7 @@ void WelcomeVIPMessage::Clear() {
 
 const char* WelcomeVIPMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3293,6 +3448,13 @@ WelcomeGuardMessage::WelcomeGuardMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.WelcomeGuardMessage)
 }
+WelcomeGuardMessage::WelcomeGuardMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.WelcomeGuardMessage)
+}
 WelcomeGuardMessage::WelcomeGuardMessage(const WelcomeGuardMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
@@ -3311,8 +3473,15 @@ WelcomeGuardMessage::~WelcomeGuardMessage() {
 }
 
 void WelcomeGuardMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
 }
 
+void WelcomeGuardMessage::ArenaDtor(void* object) {
+  WelcomeGuardMessage* _this = reinterpret_cast< WelcomeGuardMessage* >(object);
+  (void)_this;
+}
+void WelcomeGuardMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void WelcomeGuardMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3334,6 +3503,7 @@ void WelcomeGuardMessage::Clear() {
 
 const char* WelcomeGuardMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3480,6 +3650,13 @@ NewGuardMessage::NewGuardMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.NewGuardMessage)
 }
+NewGuardMessage::NewGuardMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.NewGuardMessage)
+}
 NewGuardMessage::NewGuardMessage(const NewGuardMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
@@ -3502,8 +3679,15 @@ NewGuardMessage::~NewGuardMessage() {
 }
 
 void NewGuardMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
 }
 
+void NewGuardMessage::ArenaDtor(void* object) {
+  NewGuardMessage* _this = reinterpret_cast< NewGuardMessage* >(object);
+  (void)_this;
+}
+void NewGuardMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void NewGuardMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3527,6 +3711,7 @@ void NewGuardMessage::Clear() {
 
 const char* NewGuardMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3697,6 +3882,13 @@ UserBlockedMessage::UserBlockedMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.UserBlockedMessage)
 }
+UserBlockedMessage::UserBlockedMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.UserBlockedMessage)
+}
 UserBlockedMessage::UserBlockedMessage(const UserBlockedMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
@@ -3713,8 +3905,15 @@ UserBlockedMessage::~UserBlockedMessage() {
 }
 
 void UserBlockedMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
 }
 
+void UserBlockedMessage::ArenaDtor(void* object) {
+  UserBlockedMessage* _this = reinterpret_cast< UserBlockedMessage* >(object);
+  (void)_this;
+}
+void UserBlockedMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void UserBlockedMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3735,6 +3934,7 @@ void UserBlockedMessage::Clear() {
 
 const char* UserBlockedMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3851,6 +4051,13 @@ UserKickedOutMessage::UserKickedOutMessage()
   SharedCtor();
   // @@protoc_insertion_point(constructor:vNerve.bilibili.live.UserKickedOutMessage)
 }
+UserKickedOutMessage::UserKickedOutMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  _internal_metadata_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:vNerve.bilibili.live.UserKickedOutMessage)
+}
 UserKickedOutMessage::UserKickedOutMessage(const UserKickedOutMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
@@ -3867,8 +4074,15 @@ UserKickedOutMessage::~UserKickedOutMessage() {
 }
 
 void UserKickedOutMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
 }
 
+void UserKickedOutMessage::ArenaDtor(void* object) {
+  UserKickedOutMessage* _this = reinterpret_cast< UserKickedOutMessage* >(object);
+  (void)_this;
+}
+void UserKickedOutMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void UserKickedOutMessage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
@@ -3889,6 +4103,7 @@ void UserKickedOutMessage::Clear() {
 
 const char* UserKickedOutMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArenaNoVirtual(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3998,37 +4213,37 @@ void UserKickedOutMessage::InternalSwap(UserKickedOutMessage* other) {
 }  // namespace vNerve
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::UserMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::UserMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::UserMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::UserMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::UserInfo* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::UserInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::UserInfo >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::UserInfo >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::MedalInfo* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::MedalInfo >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::MedalInfo >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::MedalInfo >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::DanmakuMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::DanmakuMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::DanmakuMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::DanmakuMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::SuperChatMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::SuperChatMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::SuperChatMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::SuperChatMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::GiftMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::GiftMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::GiftMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::GiftMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::WelcomeVIPMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::WelcomeVIPMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::WelcomeVIPMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::WelcomeVIPMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::WelcomeGuardMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::WelcomeGuardMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::WelcomeGuardMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::WelcomeGuardMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::NewGuardMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::NewGuardMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::NewGuardMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::NewGuardMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::UserBlockedMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::UserBlockedMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::UserBlockedMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::UserBlockedMessage >(arena);
 }
 template<> PROTOBUF_NOINLINE ::vNerve::bilibili::live::UserKickedOutMessage* Arena::CreateMaybeMessage< ::vNerve::bilibili::live::UserKickedOutMessage >(Arena* arena) {
-  return Arena::CreateInternal< ::vNerve::bilibili::live::UserKickedOutMessage >(arena);
+  return Arena::CreateMessageInternal< ::vNerve::bilibili::live::UserKickedOutMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
