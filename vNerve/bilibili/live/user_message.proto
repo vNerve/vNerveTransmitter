@@ -108,7 +108,7 @@ enum GuardBuyType {
   Renew= 2;
 }
 
-enum GuardUnit {
+enum GuardDuration {
   None = 0;
   Month = 1;
   Week = 2;
@@ -118,7 +118,7 @@ message NewGuardMessage {
   GuardLevel level = 1;
   uint32 total_coin = 2;
   uint32 num = 3;
-  GuardUnit unit = 4;
+  GuardDuration duration = 4;
   GuardBuyType buy_type = 5;
 }
 
