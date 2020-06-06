@@ -22,18 +22,19 @@ message UserInfo {
   string avatar_url = 3;
 
   int32 user_level = 4;
-  int64 user_exp = 5;
-  fixed32 user_level_border_color = 6;
+  fixed32 user_level_border_color = 5;
 
-  bool admin = 7;
-  bool main_vip = 8;
-  LiveVipLevel vip_level = 9;
+  bool admin = 6;
+  oneof mainvip {
+    bool main_vip = 7;
+  }
+  LiveVipLevel live_vip_level = 8;
 
-  string title = 10;
-  MedalInfo medal = 11;
+  string title = 9;
+  MedalInfo medal = 10;
 
-  bool phone_verified = 12;
-  bool regular_user = 13;
+  bool phone_verified = 11;
+  bool regular_user = 12;
 }
 
 message MedalInfo {
@@ -41,6 +42,8 @@ message MedalInfo {
   uint32 medal_level = 2;
   fixed32 medal_color = 3;
   uint64 streamer_uid = 4;
+  string streamer_name = 5;
+  uint32 streamer_roomid = 6;
 }
 
 enum LiveVipLevel {
