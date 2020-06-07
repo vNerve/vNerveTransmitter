@@ -82,8 +82,8 @@ message GiftMessage {
 
   uint32 gift_id = 3;
   string gift_name = 4;
-  uint32 price_coin = 5;
-  uint32 num = 6;
+  uint32 single_price_coin_raw = 5;
+  uint32 count = 6;
 }
 
 message WelcomeVIPMessage {
@@ -108,17 +108,17 @@ enum GuardBuyType {
   Renew = 2;
 }
 
-enum GuardDuration {
+enum GuardDurationLevel {
   None = 0;
-  Month = 1;
-  Week = 2;
+  Monthly = 1;
+  Weekly = 2;
 }
 
 message NewGuardMessage {
   GuardLevel level = 1;
   uint32 total_coin = 2;
   uint32 num = 3;
-  GuardDuration duration = 4;
+  GuardDurationLevel duration_level = 4;
   GuardBuyType buy_type = 5;
 }
 
