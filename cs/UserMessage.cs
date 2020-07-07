@@ -38,37 +38,38 @@ namespace VNerve.Bilibili.Live {
             "X2Jsb2NrZWQYECABKAsyKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Vc2VyQmxv",
             "Y2tlZE1lc3NhZ2VIABJFCg91c2VyX2tpY2tlZF9vdXQYESABKAsyKi52TmVy",
             "dmUuYmlsaWJpbGkubGl2ZS5Vc2VyS2lja2VkT3V0TWVzc2FnZUgAQgkKB3Bh",
-            "eWxvYWQi2gIKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
+            "eWxvYWQi/AIKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
             "EhIKCmF2YXRhcl91cmwYAyABKAkSEgoKdXNlcl9sZXZlbBgEIAEoBRIfChd1",
             "c2VyX2xldmVsX2JvcmRlcl9jb2xvchgFIAEoBxINCgVhZG1pbhgGIAEoCBIS",
             "CghtYWluX3ZpcBgHIAEoCEgAEjoKDmxpdmVfdmlwX2xldmVsGAggASgOMiIu",
             "dk5lcnZlLmJpbGliaWxpLmxpdmUuTGl2ZVZpcExldmVsEg0KBXRpdGxlGAkg",
             "ASgJEi4KBW1lZGFsGAogASgLMh8udk5lcnZlLmJpbGliaWxpLmxpdmUuTWVk",
-            "YWxJbmZvEhMKC2d1YXJkX2xldmVsGAsgASgFEhYKDnBob25lX3ZlcmlmaWVk",
-            "GAwgASgIEhQKDHJlZ3VsYXJfdXNlchgNIAEoCEIJCgdtYWludmlwIo8BCglN",
-            "ZWRhbEluZm8SEgoKbWVkYWxfbmFtZRgBIAEoCRITCgttZWRhbF9sZXZlbBgC",
-            "IAEoDRITCgttZWRhbF9jb2xvchgDIAEoBxIUCgxzdHJlYW1lcl91aWQYBCAB",
-            "KAQSFQoNc3RyZWFtZXJfbmFtZRgFIAEoCRIXCg9zdHJlYW1lcl9yb29taWQY",
-            "BiABKA0iYQoORGFubWFrdU1lc3NhZ2USDwoHbWVzc2FnZRgBIAEoCRI+Cgxs",
-            "b3R0ZXJ5X3R5cGUYAiABKA4yKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Mb3R0",
-            "ZXJ5RGFubWFrdVR5cGUitAEKEFN1cGVyQ2hhdE1lc3NhZ2USDwoHbWVzc2Fn",
-            "ZRgBIAEoCRINCgVwcmljZRgCIAEoDRIKCgJpZBgDIAEoDRINCgV0b2tlbhgE",
-            "IAEoCRIRCglwcmljZV9jbnkYBSABKA0SEgoKcHJpY2VfY29pbhgGIAEoDRIY",
-            "ChBsYXN0aW5nX3RpbWVfc2VjGAcgASgNEhIKCnN0YXJ0X3RpbWUYCCABKAQS",
-            "EAoIZW5kX3RpbWUYCSABKAQicAoLR2lmdE1lc3NhZ2USDwoHaXNfZ29sZBgB",
-            "IAEoCBISCgp0b3RhbF9jb2luGAIgASgNEg8KB2dpZnRfaWQYAyABKA0SEQoJ",
-            "Z2lmdF9uYW1lGAQgASgJEhgKEGdpZnRfc2luZ2xlX2NvaW4YBSABKA0iUwoR",
-            "V2VsY29tZVZJUE1lc3NhZ2USLwoDdmlwGAEgASgOMiIudk5lcnZlLmJpbGli",
-            "aWxpLmxpdmUuTGl2ZVZpcExldmVsEg0KBWFkbWluGAIgASgIIkYKE1dlbGNv",
-            "bWVHdWFyZE1lc3NhZ2USLwoFZ3VhcmQYASABKA4yIC52TmVydmUuYmlsaWJp",
-            "bGkubGl2ZS5HdWFyZExldmVsIlAKD05ld0d1YXJkTWVzc2FnZRIvCgVsZXZl",
-            "bBgBIAEoDjIgLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkd1YXJkTGV2ZWwSDAoE",
-            "Y29pbhgCIAEoDSIUChJVc2VyQmxvY2tlZE1lc3NhZ2UiFgoUVXNlcktpY2tl",
-            "ZE91dE1lc3NhZ2UqMwoMTGl2ZVZpcExldmVsEgoKBk5PX1ZJUBAAEgsKB01P",
-            "TlRITFkQARIKCgZZRUFSTFkQAio8ChJMb3R0ZXJ5RGFubWFrdVR5cGUSDgoK",
-            "Tk9fTE9UVEVSWRAAEgkKBVNUT1JNEAESCwoHTE9UVEVSWRACKj4KCkd1YXJk",
-            "TGV2ZWwSDAoITk9fR1VBUkQQABIKCgZMRVZFTDEQARIKCgZMRVZFTDIQAhIK",
-            "CgZMRVZFTDMQA0ID+AEBYgZwcm90bzM="));
+            "YWxJbmZvEjUKC2d1YXJkX2xldmVsGAsgASgOMiAudk5lcnZlLmJpbGliaWxp",
+            "LmxpdmUuR3VhcmRMZXZlbBIWCg5waG9uZV92ZXJpZmllZBgMIAEoCBIUCgxy",
+            "ZWd1bGFyX3VzZXIYDSABKAhCCQoHbWFpbnZpcCKPAQoJTWVkYWxJbmZvEhIK",
+            "Cm1lZGFsX25hbWUYASABKAkSEwoLbWVkYWxfbGV2ZWwYAiABKA0SEwoLbWVk",
+            "YWxfY29sb3IYAyABKAcSFAoMc3RyZWFtZXJfdWlkGAQgASgEEhUKDXN0cmVh",
+            "bWVyX25hbWUYBSABKAkSFwoPc3RyZWFtZXJfcm9vbWlkGAYgASgNImEKDkRh",
+            "bm1ha3VNZXNzYWdlEg8KB21lc3NhZ2UYASABKAkSPgoMbG90dGVyeV90eXBl",
+            "GAIgASgOMigudk5lcnZlLmJpbGliaWxpLmxpdmUuTG90dGVyeURhbm1ha3VU",
+            "eXBlIrQBChBTdXBlckNoYXRNZXNzYWdlEg8KB21lc3NhZ2UYASABKAkSDQoF",
+            "cHJpY2UYAiABKA0SCgoCaWQYAyABKA0SDQoFdG9rZW4YBCABKAkSEQoJcHJp",
+            "Y2VfY255GAUgASgNEhIKCnByaWNlX2NvaW4YBiABKA0SGAoQbGFzdGluZ190",
+            "aW1lX3NlYxgHIAEoDRISCgpzdGFydF90aW1lGAggASgEEhAKCGVuZF90aW1l",
+            "GAkgASgEInAKC0dpZnRNZXNzYWdlEg8KB2lzX2dvbGQYASABKAgSEgoKdG90",
+            "YWxfY29pbhgCIAEoDRIPCgdnaWZ0X2lkGAMgASgNEhEKCWdpZnRfbmFtZRgE",
+            "IAEoCRIYChBnaWZ0X3NpbmdsZV9jb2luGAUgASgNIlMKEVdlbGNvbWVWSVBN",
+            "ZXNzYWdlEi8KA3ZpcBgBIAEoDjIiLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkxp",
+            "dmVWaXBMZXZlbBINCgVhZG1pbhgCIAEoCCJGChNXZWxjb21lR3VhcmRNZXNz",
+            "YWdlEi8KBWd1YXJkGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3Vh",
+            "cmRMZXZlbCJQCg9OZXdHdWFyZE1lc3NhZ2USLwoFbGV2ZWwYASABKA4yIC52",
+            "TmVydmUuYmlsaWJpbGkubGl2ZS5HdWFyZExldmVsEgwKBGNvaW4YAiABKA0i",
+            "FAoSVXNlckJsb2NrZWRNZXNzYWdlIhYKFFVzZXJLaWNrZWRPdXRNZXNzYWdl",
+            "KjMKDExpdmVWaXBMZXZlbBIKCgZOT19WSVAQABILCgdNT05USExZEAESCgoG",
+            "WUVBUkxZEAIqPAoSTG90dGVyeURhbm1ha3VUeXBlEg4KCk5PX0xPVFRFUlkQ",
+            "ABIJCgVTVE9STRABEgsKB0xPVFRFUlkQAio+CgpHdWFyZExldmVsEgwKCE5P",
+            "X0dVQVJEEAASCgoGTEVWRUwxEAESCgoGTEVWRUwyEAISCgoGTEVWRUwzEANC",
+            "A/gBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -746,9 +747,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "guard_level" field.</summary>
     public const int GuardLevelFieldNumber = 11;
-    private int guardLevel_;
+    private global::VNerve.Bilibili.Live.GuardLevel guardLevel_ = global::VNerve.Bilibili.Live.GuardLevel.NoGuard;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int GuardLevel {
+    public global::VNerve.Bilibili.Live.GuardLevel GuardLevel {
       get { return guardLevel_; }
       set {
         guardLevel_ = value;
@@ -838,7 +839,7 @@ namespace VNerve.Bilibili.Live {
       if (LiveVipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) hash ^= LiveVipLevel.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (medal_ != null) hash ^= Medal.GetHashCode();
-      if (GuardLevel != 0) hash ^= GuardLevel.GetHashCode();
+      if (GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) hash ^= GuardLevel.GetHashCode();
       if (PhoneVerified != false) hash ^= PhoneVerified.GetHashCode();
       if (RegularUser != false) hash ^= RegularUser.GetHashCode();
       hash ^= (int) mainvipCase_;
@@ -895,9 +896,9 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(82);
         output.WriteMessage(Medal);
       }
-      if (GuardLevel != 0) {
+      if (GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) {
         output.WriteRawTag(88);
-        output.WriteInt32(GuardLevel);
+        output.WriteEnum((int) GuardLevel);
       }
       if (PhoneVerified != false) {
         output.WriteRawTag(96);
@@ -945,8 +946,8 @@ namespace VNerve.Bilibili.Live {
       if (medal_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Medal);
       }
-      if (GuardLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GuardLevel);
+      if (GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GuardLevel);
       }
       if (PhoneVerified != false) {
         size += 1 + 1;
@@ -995,7 +996,7 @@ namespace VNerve.Bilibili.Live {
         }
         Medal.MergeFrom(other.Medal);
       }
-      if (other.GuardLevel != 0) {
+      if (other.GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) {
         GuardLevel = other.GuardLevel;
       }
       if (other.PhoneVerified != false) {
@@ -1065,7 +1066,7 @@ namespace VNerve.Bilibili.Live {
             break;
           }
           case 88: {
-            GuardLevel = input.ReadInt32();
+            GuardLevel = (global::VNerve.Bilibili.Live.GuardLevel) input.ReadEnum();
             break;
           }
           case 96: {

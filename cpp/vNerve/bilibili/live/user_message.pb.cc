@@ -403,42 +403,42 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "ssageH\000\022@\n\014user_blocked\030\020 \001(\0132(.vNerve.b"
   "ilibili.live.UserBlockedMessageH\000\022E\n\017use"
   "r_kicked_out\030\021 \001(\0132*.vNerve.bilibili.liv"
-  "e.UserKickedOutMessageH\000B\t\n\007payload\"\332\002\n\010"
+  "e.UserKickedOutMessageH\000B\t\n\007payload\"\374\002\n\010"
   "UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002 \001(\t\022\022\n\na"
   "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\037\n\027u"
   "ser_level_border_color\030\005 \001(\007\022\r\n\005admin\030\006 "
   "\001(\010\022\022\n\010main_vip\030\007 \001(\010H\000\022:\n\016live_vip_leve"
   "l\030\010 \001(\0162\".vNerve.bilibili.live.LiveVipLe"
   "vel\022\r\n\005title\030\t \001(\t\022.\n\005medal\030\n \001(\0132\037.vNer"
-  "ve.bilibili.live.MedalInfo\022\023\n\013guard_leve"
-  "l\030\013 \001(\005\022\026\n\016phone_verified\030\014 \001(\010\022\024\n\014regul"
-  "ar_user\030\r \001(\010B\t\n\007mainvip\"\217\001\n\tMedalInfo\022\022"
-  "\n\nmedal_name\030\001 \001(\t\022\023\n\013medal_level\030\002 \001(\r\022"
-  "\023\n\013medal_color\030\003 \001(\007\022\024\n\014streamer_uid\030\004 \001"
-  "(\004\022\025\n\rstreamer_name\030\005 \001(\t\022\027\n\017streamer_ro"
-  "omid\030\006 \001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030"
-  "\001 \001(\t\022>\n\014lottery_type\030\002 \001(\0162(.vNerve.bil"
-  "ibili.live.LotteryDanmakuType\"\264\001\n\020SuperC"
-  "hatMessage\022\017\n\007message\030\001 \001(\t\022\r\n\005price\030\002 \001"
-  "(\r\022\n\n\002id\030\003 \001(\r\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_c"
-  "ny\030\005 \001(\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_"
-  "time_sec\030\007 \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010en"
-  "d_time\030\t \001(\004\"p\n\013GiftMessage\022\017\n\007is_gold\030\001"
-  " \001(\010\022\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001("
-  "\r\022\021\n\tgift_name\030\004 \001(\t\022\030\n\020gift_single_coin"
-  "\030\005 \001(\r\"S\n\021WelcomeVIPMessage\022/\n\003vip\030\001 \001(\016"
-  "2\".vNerve.bilibili.live.LiveVipLevel\022\r\n\005"
-  "admin\030\002 \001(\010\"F\n\023WelcomeGuardMessage\022/\n\005gu"
-  "ard\030\001 \001(\0162 .vNerve.bilibili.live.GuardLe"
-  "vel\"P\n\017NewGuardMessage\022/\n\005level\030\001 \001(\0162 ."
-  "vNerve.bilibili.live.GuardLevel\022\014\n\004coin\030"
-  "\002 \001(\r\"\024\n\022UserBlockedMessage\"\026\n\024UserKicke"
-  "dOutMessage*3\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022"
-  "\013\n\007MONTHLY\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanma"
-  "kuType\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOT"
-  "TERY\020\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LE"
-  "VEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003B\003\370\001\001b\006pro"
-  "to3"
+  "ve.bilibili.live.MedalInfo\0225\n\013guard_leve"
+  "l\030\013 \001(\0162 .vNerve.bilibili.live.GuardLeve"
+  "l\022\026\n\016phone_verified\030\014 \001(\010\022\024\n\014regular_use"
+  "r\030\r \001(\010B\t\n\007mainvip\"\217\001\n\tMedalInfo\022\022\n\nmeda"
+  "l_name\030\001 \001(\t\022\023\n\013medal_level\030\002 \001(\r\022\023\n\013med"
+  "al_color\030\003 \001(\007\022\024\n\014streamer_uid\030\004 \001(\004\022\025\n\r"
+  "streamer_name\030\005 \001(\t\022\027\n\017streamer_roomid\030\006"
+  " \001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030\001 \001(\t\022"
+  ">\n\014lottery_type\030\002 \001(\0162(.vNerve.bilibili."
+  "live.LotteryDanmakuType\"\264\001\n\020SuperChatMes"
+  "sage\022\017\n\007message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002"
+  "id\030\003 \001(\r\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001"
+  "(\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_time_s"
+  "ec\030\007 \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time"
+  "\030\t \001(\004\"p\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022"
+  "\n\ntotal_coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tg"
+  "ift_name\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r"
+  "\"S\n\021WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNe"
+  "rve.bilibili.live.LiveVipLevel\022\r\n\005admin\030"
+  "\002 \001(\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 "
+  "\001(\0162 .vNerve.bilibili.live.GuardLevel\"P\n"
+  "\017NewGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve"
+  ".bilibili.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\""
+  "\024\n\022UserBlockedMessage\"\026\n\024UserKickedOutMe"
+  "ssage*3\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MON"
+  "THLY\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuType"
+  "\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002"
+  "*>\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001"
+  "\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003B\003\370\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps[1] = {
 };
@@ -458,7 +458,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2003,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2037,
   &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, 11, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -1489,11 +1489,12 @@ const char* UserInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::i
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 guard_level = 11;
+      // .vNerve.bilibili.live.GuardLevel guard_level = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 88)) {
-          guard_level_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
+          _internal_set_guard_level(static_cast<::vNerve::bilibili::live::GuardLevel>(val));
         } else goto handle_unusual;
         continue;
       // bool phone_verified = 12;
@@ -1611,10 +1612,11 @@ failure:
         10, _Internal::medal(this), target, stream);
   }
 
-  // int32 guard_level = 11;
+  // .vNerve.bilibili.live.GuardLevel guard_level = 11;
   if (this->guard_level() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(11, this->_internal_guard_level(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      11, this->_internal_guard_level(), target);
   }
 
   // bool phone_verified = 12;
@@ -1713,11 +1715,10 @@ size_t UserInfo::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  // int32 guard_level = 11;
+  // .vNerve.bilibili.live.GuardLevel guard_level = 11;
   if (this->guard_level() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_guard_level());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_guard_level());
   }
 
   switch (mainvip_case()) {

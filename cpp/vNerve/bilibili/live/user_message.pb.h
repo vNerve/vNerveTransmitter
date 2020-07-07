@@ -843,13 +843,13 @@ class UserInfo :
   void _internal_set_regular_user(bool value);
   public:
 
-  // int32 guard_level = 11;
+  // .vNerve.bilibili.live.GuardLevel guard_level = 11;
   void clear_guard_level();
-  ::PROTOBUF_NAMESPACE_ID::int32 guard_level() const;
-  void set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::vNerve::bilibili::live::GuardLevel guard_level() const;
+  void set_guard_level(::vNerve::bilibili::live::GuardLevel value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_guard_level() const;
-  void _internal_set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::vNerve::bilibili::live::GuardLevel _internal_guard_level() const;
+  void _internal_set_guard_level(::vNerve::bilibili::live::GuardLevel value);
   public:
 
   // bool main_vip = 7;
@@ -889,7 +889,7 @@ class UserInfo :
   bool admin_;
   bool phone_verified_;
   bool regular_user_;
-  ::PROTOBUF_NAMESPACE_ID::int32 guard_level_;
+  int guard_level_;
   union MainvipUnion {
     MainvipUnion() {}
     bool main_vip_;
@@ -3681,22 +3681,22 @@ inline void UserInfo::set_allocated_medal(::vNerve::bilibili::live::MedalInfo* m
   // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.UserInfo.medal)
 }
 
-// int32 guard_level = 11;
+// .vNerve.bilibili.live.GuardLevel guard_level = 11;
 inline void UserInfo::clear_guard_level() {
   guard_level_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 UserInfo::_internal_guard_level() const {
-  return guard_level_;
+inline ::vNerve::bilibili::live::GuardLevel UserInfo::_internal_guard_level() const {
+  return static_cast< ::vNerve::bilibili::live::GuardLevel >(guard_level_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 UserInfo::guard_level() const {
+inline ::vNerve::bilibili::live::GuardLevel UserInfo::guard_level() const {
   // @@protoc_insertion_point(field_get:vNerve.bilibili.live.UserInfo.guard_level)
   return _internal_guard_level();
 }
-inline void UserInfo::_internal_set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void UserInfo::_internal_set_guard_level(::vNerve::bilibili::live::GuardLevel value) {
   
   guard_level_ = value;
 }
-inline void UserInfo::set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void UserInfo::set_guard_level(::vNerve::bilibili::live::GuardLevel value) {
   _internal_set_guard_level(value);
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.UserInfo.guard_level)
 }

@@ -998,7 +998,7 @@ proto.vNerve.bilibili.live.UserInfo.deserializeBinaryFromReader = function(msg, 
       msg.setMedal(value);
       break;
     case 11:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {!proto.vNerve.bilibili.live.GuardLevel} */ (reader.readEnum());
       msg.setGuardLevel(value);
       break;
     case 12:
@@ -1110,8 +1110,8 @@ proto.vNerve.bilibili.live.UserInfo.serializeBinaryToWriter = function(message, 
     );
   }
   f = message.getGuardLevel();
-  if (f !== 0) {
-    writer.writeInt32(
+  if (f !== 0.0) {
+    writer.writeEnum(
       11,
       f
     );
@@ -1351,20 +1351,20 @@ proto.vNerve.bilibili.live.UserInfo.prototype.hasMedal = function() {
 
 
 /**
- * optional int32 guard_level = 11;
- * @return {number}
+ * optional GuardLevel guard_level = 11;
+ * @return {!proto.vNerve.bilibili.live.GuardLevel}
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.getGuardLevel = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
+  return /** @type {!proto.vNerve.bilibili.live.GuardLevel} */ (jspb.Message.getFieldWithDefault(this, 11, 0));
 };
 
 
 /**
- * @param {number} value
+ * @param {!proto.vNerve.bilibili.live.GuardLevel} value
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setGuardLevel = function(value) {
-  return jspb.Message.setProto3IntField(this, 11, value);
+  return jspb.Message.setProto3EnumField(this, 11, value);
 };
 
 
