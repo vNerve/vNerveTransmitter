@@ -63,7 +63,6 @@ enum LotteryDanmakuType {
 
 message SuperChatMessage {
   string message = 1;
-  uint32 price = 2;
 
   uint32 id = 3;
   string token = 4;
