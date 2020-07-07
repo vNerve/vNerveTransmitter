@@ -26,10 +26,10 @@ message UserInfo {
   int32 user_level = 4;
   fixed32 user_level_border_color = 5;
 
-  oneof admin {
+  oneof admin_optional {
     bool admin = 6;
   }
-  oneof mainvip {
+  oneof main_vip_optional {
     bool main_vip = 7;
   }
   LiveVipLevel live_vip_level = 8;
@@ -109,15 +109,15 @@ enum GuardLevel {
 }
 
 enum GuardBuyType {
-  None = 0;
-  Buy = 1;
-  Renew = 2;
+  NO_TYPE = 0;
+  BUY = 1;
+  RENEW = 2;
 }
 
 enum GuardDurationLevel {
-  None = 0;
-  Monthly = 1;
-  Weekly = 2;
+  NO_DURATION = 0;
+  MONTHLY = 1;
+  WEEKLY = 2;
 }
 
 message NewGuardMessage {
