@@ -34,9 +34,10 @@ message UserInfo {
 
   string title = 9;
   MedalInfo medal = 10;
+  int32 guard_level = 11;
 
-  bool phone_verified = 11;
-  bool regular_user = 12;
+  bool phone_verified = 12;
+  bool regular_user = 13;
 }
 
 message MedalInfo {
@@ -57,7 +58,6 @@ enum LiveVipLevel {
 message DanmakuMessage {
   string message = 1;
   LotteryDanmakuType lottery_type = 2;
-  GuardLevel guard_level = 3;
 }
 
 enum LotteryDanmakuType {
