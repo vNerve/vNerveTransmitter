@@ -24,13 +24,13 @@ public final class UserMessageOuterClass {
      */
     NO_VIP(0),
     /**
-     * <code>MONTHLY = 1;</code>
+     * <code>MONTHLY_VIP = 1;</code>
      */
-    MONTHLY(1),
+    MONTHLY_VIP(1),
     /**
-     * <code>YEARLY = 2;</code>
+     * <code>YEARLY_VIP = 2;</code>
      */
-    YEARLY(2),
+    YEARLY_VIP(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -39,13 +39,13 @@ public final class UserMessageOuterClass {
      */
     public static final int NO_VIP_VALUE = 0;
     /**
-     * <code>MONTHLY = 1;</code>
+     * <code>MONTHLY_VIP = 1;</code>
      */
-    public static final int MONTHLY_VALUE = 1;
+    public static final int MONTHLY_VIP_VALUE = 1;
     /**
-     * <code>YEARLY = 2;</code>
+     * <code>YEARLY_VIP = 2;</code>
      */
-    public static final int YEARLY_VALUE = 2;
+    public static final int YEARLY_VIP_VALUE = 2;
 
 
     public final int getNumber() {
@@ -73,8 +73,8 @@ public final class UserMessageOuterClass {
     public static LiveVipLevel forNumber(int value) {
       switch (value) {
         case 0: return NO_VIP;
-        case 1: return MONTHLY;
-        case 2: return YEARLY;
+        case 1: return MONTHLY_VIP;
+        case 2: return YEARLY_VIP;
         default: return null;
       }
     }
@@ -360,6 +360,232 @@ public final class UserMessageOuterClass {
     }
 
     // @@protoc_insertion_point(enum_scope:vNerve.bilibili.live.GuardLevel)
+  }
+
+  /**
+   * Protobuf enum {@code vNerve.bilibili.live.GuardBuyType}
+   */
+  public enum GuardBuyType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NO_TYPE = 0;</code>
+     */
+    NO_TYPE(0),
+    /**
+     * <code>BUY = 1;</code>
+     */
+    BUY(1),
+    /**
+     * <code>RENEW = 2;</code>
+     */
+    RENEW(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NO_TYPE = 0;</code>
+     */
+    public static final int NO_TYPE_VALUE = 0;
+    /**
+     * <code>BUY = 1;</code>
+     */
+    public static final int BUY_VALUE = 1;
+    /**
+     * <code>RENEW = 2;</code>
+     */
+    public static final int RENEW_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GuardBuyType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GuardBuyType forNumber(int value) {
+      switch (value) {
+        case 0: return NO_TYPE;
+        case 1: return BUY;
+        case 2: return RENEW;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GuardBuyType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GuardBuyType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GuardBuyType>() {
+            public GuardBuyType findValueByNumber(int number) {
+              return GuardBuyType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return vNerve.bilibili.live.UserMessageOuterClass.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final GuardBuyType[] VALUES = values();
+
+    public static GuardBuyType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GuardBuyType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:vNerve.bilibili.live.GuardBuyType)
+  }
+
+  /**
+   * Protobuf enum {@code vNerve.bilibili.live.GuardDurationLevel}
+   */
+  public enum GuardDurationLevel
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>NO_DURATION = 0;</code>
+     */
+    NO_DURATION(0),
+    /**
+     * <code>MONTHLY_GUARD = 1;</code>
+     */
+    MONTHLY_GUARD(1),
+    /**
+     * <code>WEEKLY_GUARD = 2;</code>
+     */
+    WEEKLY_GUARD(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>NO_DURATION = 0;</code>
+     */
+    public static final int NO_DURATION_VALUE = 0;
+    /**
+     * <code>MONTHLY_GUARD = 1;</code>
+     */
+    public static final int MONTHLY_GUARD_VALUE = 1;
+    /**
+     * <code>WEEKLY_GUARD = 2;</code>
+     */
+    public static final int WEEKLY_GUARD_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static GuardDurationLevel valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static GuardDurationLevel forNumber(int value) {
+      switch (value) {
+        case 0: return NO_DURATION;
+        case 1: return MONTHLY_GUARD;
+        case 2: return WEEKLY_GUARD;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<GuardDurationLevel>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        GuardDurationLevel> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<GuardDurationLevel>() {
+            public GuardDurationLevel findValueByNumber(int number) {
+              return GuardDurationLevel.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return vNerve.bilibili.live.UserMessageOuterClass.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final GuardDurationLevel[] VALUES = values();
+
+    public static GuardDurationLevel valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private GuardDurationLevel(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:vNerve.bilibili.live.GuardDurationLevel)
   }
 
   public interface UserMessageOrBuilder extends
@@ -2954,7 +3180,9 @@ public final class UserMessageOuterClass {
      */
     boolean getRegularUser();
 
-    public vNerve.bilibili.live.UserMessageOuterClass.UserInfo.MainvipCase getMainvipCase();
+    public vNerve.bilibili.live.UserMessageOuterClass.UserInfo.AdminOptionalCase getAdminOptionalCase();
+
+    public vNerve.bilibili.live.UserMessageOuterClass.UserInfo.MainVipOptionalCase getMainVipOptionalCase();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.UserInfo}
@@ -3034,13 +3262,13 @@ public final class UserMessageOuterClass {
               break;
             }
             case 48: {
-
-              admin_ = input.readBool();
+              adminOptionalCase_ = 6;
+              adminOptional_ = input.readBool();
               break;
             }
             case 56: {
-              mainvipCase_ = 7;
-              mainvip_ = input.readBool();
+              mainVipOptionalCase_ = 7;
+              mainVipOptional_ = input.readBool();
               break;
             }
             case 64: {
@@ -3116,15 +3344,15 @@ public final class UserMessageOuterClass {
               vNerve.bilibili.live.UserMessageOuterClass.UserInfo.class, vNerve.bilibili.live.UserMessageOuterClass.UserInfo.Builder.class);
     }
 
-    private int mainvipCase_ = 0;
-    private java.lang.Object mainvip_;
-    public enum MainvipCase
+    private int adminOptionalCase_ = 0;
+    private java.lang.Object adminOptional_;
+    public enum AdminOptionalCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      MAIN_VIP(7),
-      MAINVIP_NOT_SET(0);
+      ADMIN(6),
+      ADMINOPTIONAL_NOT_SET(0);
       private final int value;
-      private MainvipCase(int value) {
+      private AdminOptionalCase(int value) {
         this.value = value;
       }
       /**
@@ -3133,14 +3361,14 @@ public final class UserMessageOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static MainvipCase valueOf(int value) {
+      public static AdminOptionalCase valueOf(int value) {
         return forNumber(value);
       }
 
-      public static MainvipCase forNumber(int value) {
+      public static AdminOptionalCase forNumber(int value) {
         switch (value) {
-          case 7: return MAIN_VIP;
-          case 0: return MAINVIP_NOT_SET;
+          case 6: return ADMIN;
+          case 0: return ADMINOPTIONAL_NOT_SET;
           default: return null;
         }
       }
@@ -3149,10 +3377,49 @@ public final class UserMessageOuterClass {
       }
     };
 
-    public MainvipCase
-    getMainvipCase() {
-      return MainvipCase.forNumber(
-          mainvipCase_);
+    public AdminOptionalCase
+    getAdminOptionalCase() {
+      return AdminOptionalCase.forNumber(
+          adminOptionalCase_);
+    }
+
+    private int mainVipOptionalCase_ = 0;
+    private java.lang.Object mainVipOptional_;
+    public enum MainVipOptionalCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      MAIN_VIP(7),
+      MAINVIPOPTIONAL_NOT_SET(0);
+      private final int value;
+      private MainVipOptionalCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MainVipOptionalCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MainVipOptionalCase forNumber(int value) {
+        switch (value) {
+          case 7: return MAIN_VIP;
+          case 0: return MAINVIPOPTIONAL_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public MainVipOptionalCase
+    getMainVipOptionalCase() {
+      return MainVipOptionalCase.forNumber(
+          mainVipOptionalCase_);
     }
 
     public static final int UID_FIELD_NUMBER = 1;
@@ -3258,13 +3525,15 @@ public final class UserMessageOuterClass {
     }
 
     public static final int ADMIN_FIELD_NUMBER = 6;
-    private boolean admin_;
     /**
      * <code>bool admin = 6;</code>
      * @return The admin.
      */
     public boolean getAdmin() {
-      return admin_;
+      if (adminOptionalCase_ == 6) {
+        return (java.lang.Boolean) adminOptional_;
+      }
+      return false;
     }
 
     public static final int MAIN_VIP_FIELD_NUMBER = 7;
@@ -3273,8 +3542,8 @@ public final class UserMessageOuterClass {
      * @return The mainVip.
      */
     public boolean getMainVip() {
-      if (mainvipCase_ == 7) {
-        return (java.lang.Boolean) mainvip_;
+      if (mainVipOptionalCase_ == 7) {
+        return (java.lang.Boolean) mainVipOptional_;
       }
       return false;
     }
@@ -3425,12 +3694,13 @@ public final class UserMessageOuterClass {
       if (userLevelBorderColor_ != 0) {
         output.writeFixed32(5, userLevelBorderColor_);
       }
-      if (admin_ != false) {
-        output.writeBool(6, admin_);
-      }
-      if (mainvipCase_ == 7) {
+      if (adminOptionalCase_ == 6) {
         output.writeBool(
-            7, (boolean)((java.lang.Boolean) mainvip_));
+            6, (boolean)((java.lang.Boolean) adminOptional_));
+      }
+      if (mainVipOptionalCase_ == 7) {
+        output.writeBool(
+            7, (boolean)((java.lang.Boolean) mainVipOptional_));
       }
       if (liveVipLevel_ != vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.NO_VIP.getNumber()) {
         output.writeEnum(8, liveVipLevel_);
@@ -3477,14 +3747,15 @@ public final class UserMessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(5, userLevelBorderColor_);
       }
-      if (admin_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, admin_);
-      }
-      if (mainvipCase_ == 7) {
+      if (adminOptionalCase_ == 6) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(
-              7, (boolean)((java.lang.Boolean) mainvip_));
+              6, (boolean)((java.lang.Boolean) adminOptional_));
+      }
+      if (mainVipOptionalCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              7, (boolean)((java.lang.Boolean) mainVipOptional_));
       }
       if (liveVipLevel_ != vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.NO_VIP.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -3534,8 +3805,6 @@ public final class UserMessageOuterClass {
           != other.getUserLevel()) return false;
       if (getUserLevelBorderColor()
           != other.getUserLevelBorderColor()) return false;
-      if (getAdmin()
-          != other.getAdmin()) return false;
       if (liveVipLevel_ != other.liveVipLevel_) return false;
       if (!getTitle()
           .equals(other.getTitle())) return false;
@@ -3549,8 +3818,17 @@ public final class UserMessageOuterClass {
           != other.getPhoneVerified()) return false;
       if (getRegularUser()
           != other.getRegularUser()) return false;
-      if (!getMainvipCase().equals(other.getMainvipCase())) return false;
-      switch (mainvipCase_) {
+      if (!getAdminOptionalCase().equals(other.getAdminOptionalCase())) return false;
+      switch (adminOptionalCase_) {
+        case 6:
+          if (getAdmin()
+              != other.getAdmin()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getMainVipOptionalCase().equals(other.getMainVipOptionalCase())) return false;
+      switch (mainVipOptionalCase_) {
         case 7:
           if (getMainVip()
               != other.getMainVip()) return false;
@@ -3580,9 +3858,6 @@ public final class UserMessageOuterClass {
       hash = (53 * hash) + getUserLevel();
       hash = (37 * hash) + USER_LEVEL_BORDER_COLOR_FIELD_NUMBER;
       hash = (53 * hash) + getUserLevelBorderColor();
-      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getAdmin());
       hash = (37 * hash) + LIVE_VIP_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + liveVipLevel_;
       hash = (37 * hash) + TITLE_FIELD_NUMBER;
@@ -3599,7 +3874,16 @@ public final class UserMessageOuterClass {
       hash = (37 * hash) + REGULAR_USER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRegularUser());
-      switch (mainvipCase_) {
+      switch (adminOptionalCase_) {
+        case 6:
+          hash = (37 * hash) + ADMIN_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getAdmin());
+          break;
+        case 0:
+        default:
+      }
+      switch (mainVipOptionalCase_) {
         case 7:
           hash = (37 * hash) + MAIN_VIP_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -3751,8 +4035,6 @@ public final class UserMessageOuterClass {
 
         userLevelBorderColor_ = 0;
 
-        admin_ = false;
-
         liveVipLevel_ = 0;
 
         title_ = "";
@@ -3769,8 +4051,10 @@ public final class UserMessageOuterClass {
 
         regularUser_ = false;
 
-        mainvipCase_ = 0;
-        mainvip_ = null;
+        adminOptionalCase_ = 0;
+        adminOptional_ = null;
+        mainVipOptionalCase_ = 0;
+        mainVipOptional_ = null;
         return this;
       }
 
@@ -3802,9 +4086,11 @@ public final class UserMessageOuterClass {
         result.avatarUrl_ = avatarUrl_;
         result.userLevel_ = userLevel_;
         result.userLevelBorderColor_ = userLevelBorderColor_;
-        result.admin_ = admin_;
-        if (mainvipCase_ == 7) {
-          result.mainvip_ = mainvip_;
+        if (adminOptionalCase_ == 6) {
+          result.adminOptional_ = adminOptional_;
+        }
+        if (mainVipOptionalCase_ == 7) {
+          result.mainVipOptional_ = mainVipOptional_;
         }
         result.liveVipLevel_ = liveVipLevel_;
         result.title_ = title_;
@@ -3816,7 +4102,8 @@ public final class UserMessageOuterClass {
         result.guardLevel_ = guardLevel_;
         result.phoneVerified_ = phoneVerified_;
         result.regularUser_ = regularUser_;
-        result.mainvipCase_ = mainvipCase_;
+        result.adminOptionalCase_ = adminOptionalCase_;
+        result.mainVipOptionalCase_ = mainVipOptionalCase_;
         onBuilt();
         return result;
       }
@@ -3882,9 +4169,6 @@ public final class UserMessageOuterClass {
         if (other.getUserLevelBorderColor() != 0) {
           setUserLevelBorderColor(other.getUserLevelBorderColor());
         }
-        if (other.getAdmin() != false) {
-          setAdmin(other.getAdmin());
-        }
         if (other.liveVipLevel_ != 0) {
           setLiveVipLevelValue(other.getLiveVipLevelValue());
         }
@@ -3904,12 +4188,21 @@ public final class UserMessageOuterClass {
         if (other.getRegularUser() != false) {
           setRegularUser(other.getRegularUser());
         }
-        switch (other.getMainvipCase()) {
+        switch (other.getAdminOptionalCase()) {
+          case ADMIN: {
+            setAdmin(other.getAdmin());
+            break;
+          }
+          case ADMINOPTIONAL_NOT_SET: {
+            break;
+          }
+        }
+        switch (other.getMainVipOptionalCase()) {
           case MAIN_VIP: {
             setMainVip(other.getMainVip());
             break;
           }
-          case MAINVIP_NOT_SET: {
+          case MAINVIPOPTIONAL_NOT_SET: {
             break;
           }
         }
@@ -3941,17 +4234,32 @@ public final class UserMessageOuterClass {
         }
         return this;
       }
-      private int mainvipCase_ = 0;
-      private java.lang.Object mainvip_;
-      public MainvipCase
-          getMainvipCase() {
-        return MainvipCase.forNumber(
-            mainvipCase_);
+      private int adminOptionalCase_ = 0;
+      private java.lang.Object adminOptional_;
+      public AdminOptionalCase
+          getAdminOptionalCase() {
+        return AdminOptionalCase.forNumber(
+            adminOptionalCase_);
       }
 
-      public Builder clearMainvip() {
-        mainvipCase_ = 0;
-        mainvip_ = null;
+      public Builder clearAdminOptional() {
+        adminOptionalCase_ = 0;
+        adminOptional_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int mainVipOptionalCase_ = 0;
+      private java.lang.Object mainVipOptional_;
+      public MainVipOptionalCase
+          getMainVipOptionalCase() {
+        return MainVipOptionalCase.forNumber(
+            mainVipOptionalCase_);
+      }
+
+      public Builder clearMainVipOptional() {
+        mainVipOptionalCase_ = 0;
+        mainVipOptional_ = null;
         onChanged();
         return this;
       }
@@ -4199,13 +4507,15 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private boolean admin_ ;
       /**
        * <code>bool admin = 6;</code>
        * @return The admin.
        */
       public boolean getAdmin() {
-        return admin_;
+        if (adminOptionalCase_ == 6) {
+          return (java.lang.Boolean) adminOptional_;
+        }
+        return false;
       }
       /**
        * <code>bool admin = 6;</code>
@@ -4213,8 +4523,8 @@ public final class UserMessageOuterClass {
        * @return This builder for chaining.
        */
       public Builder setAdmin(boolean value) {
-        
-        admin_ = value;
+        adminOptionalCase_ = 6;
+        adminOptional_ = value;
         onChanged();
         return this;
       }
@@ -4223,9 +4533,11 @@ public final class UserMessageOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAdmin() {
-        
-        admin_ = false;
-        onChanged();
+        if (adminOptionalCase_ == 6) {
+          adminOptionalCase_ = 0;
+          adminOptional_ = null;
+          onChanged();
+        }
         return this;
       }
 
@@ -4234,8 +4546,8 @@ public final class UserMessageOuterClass {
        * @return The mainVip.
        */
       public boolean getMainVip() {
-        if (mainvipCase_ == 7) {
-          return (java.lang.Boolean) mainvip_;
+        if (mainVipOptionalCase_ == 7) {
+          return (java.lang.Boolean) mainVipOptional_;
         }
         return false;
       }
@@ -4245,8 +4557,8 @@ public final class UserMessageOuterClass {
        * @return This builder for chaining.
        */
       public Builder setMainVip(boolean value) {
-        mainvipCase_ = 7;
-        mainvip_ = value;
+        mainVipOptionalCase_ = 7;
+        mainVipOptional_ = value;
         onChanged();
         return this;
       }
@@ -4255,9 +4567,9 @@ public final class UserMessageOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMainVip() {
-        if (mainvipCase_ == 7) {
-          mainvipCase_ = 0;
-          mainvip_ = null;
+        if (mainVipOptionalCase_ == 7) {
+          mainVipOptionalCase_ = 0;
+          mainVipOptional_ = null;
           onChanged();
         }
         return this;
@@ -6349,12 +6661,6 @@ public final class UserMessageOuterClass {
         getMessageBytes();
 
     /**
-     * <code>uint32 price = 2;</code>
-     * @return The price.
-     */
-    int getPrice();
-
-    /**
      * <code>uint32 id = 3;</code>
      * @return The id.
      */
@@ -6453,11 +6759,6 @@ public final class UserMessageOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               message_ = s;
-              break;
-            }
-            case 16: {
-
-              price_ = input.readUInt32();
               break;
             }
             case 24: {
@@ -6562,16 +6863,6 @@ public final class UserMessageOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int PRICE_FIELD_NUMBER = 2;
-    private int price_;
-    /**
-     * <code>uint32 price = 2;</code>
-     * @return The price.
-     */
-    public int getPrice() {
-      return price_;
     }
 
     public static final int ID_FIELD_NUMBER = 3;
@@ -6687,9 +6978,6 @@ public final class UserMessageOuterClass {
       if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
-      if (price_ != 0) {
-        output.writeUInt32(2, price_);
-      }
       if (id_ != 0) {
         output.writeUInt32(3, id_);
       }
@@ -6722,10 +7010,6 @@ public final class UserMessageOuterClass {
       size = 0;
       if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
-      }
-      if (price_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, price_);
       }
       if (id_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -6771,8 +7055,6 @@ public final class UserMessageOuterClass {
 
       if (!getMessage()
           .equals(other.getMessage())) return false;
-      if (getPrice()
-          != other.getPrice()) return false;
       if (getId()
           != other.getId()) return false;
       if (!getToken()
@@ -6800,8 +7082,6 @@ public final class UserMessageOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
-      hash = (37 * hash) + PRICE_FIELD_NUMBER;
-      hash = (53 * hash) + getPrice();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
@@ -6953,8 +7233,6 @@ public final class UserMessageOuterClass {
         super.clear();
         message_ = "";
 
-        price_ = 0;
-
         id_ = 0;
 
         token_ = "";
@@ -6996,7 +7274,6 @@ public final class UserMessageOuterClass {
       public vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage buildPartial() {
         vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage result = new vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage(this);
         result.message_ = message_;
-        result.price_ = price_;
         result.id_ = id_;
         result.token_ = token_;
         result.priceCny_ = priceCny_;
@@ -7055,9 +7332,6 @@ public final class UserMessageOuterClass {
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
-        }
-        if (other.getPrice() != 0) {
-          setPrice(other.getPrice());
         }
         if (other.getId() != 0) {
           setId(other.getId());
@@ -7182,36 +7456,6 @@ public final class UserMessageOuterClass {
   checkByteStringIsUtf8(value);
         
         message_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int price_ ;
-      /**
-       * <code>uint32 price = 2;</code>
-       * @return The price.
-       */
-      public int getPrice() {
-        return price_;
-      }
-      /**
-       * <code>uint32 price = 2;</code>
-       * @param value The price to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrice(int value) {
-        
-        price_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 price = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPrice() {
-        
-        price_ = 0;
         onChanged();
         return this;
       }
@@ -7559,10 +7803,16 @@ public final class UserMessageOuterClass {
         getGiftNameBytes();
 
     /**
-     * <code>uint32 gift_single_coin = 5;</code>
-     * @return The giftSingleCoin.
+     * <code>uint32 single_price_coin_raw = 5;</code>
+     * @return The singlePriceCoinRaw.
      */
-    int getGiftSingleCoin();
+    int getSinglePriceCoinRaw();
+
+    /**
+     * <code>uint32 count = 6;</code>
+     * @return The count.
+     */
+    int getCount();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.GiftMessage}
@@ -7633,7 +7883,12 @@ public final class UserMessageOuterClass {
             }
             case 40: {
 
-              giftSingleCoin_ = input.readUInt32();
+              singlePriceCoinRaw_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              count_ = input.readUInt32();
               break;
             }
             default: {
@@ -7734,14 +7989,24 @@ public final class UserMessageOuterClass {
       }
     }
 
-    public static final int GIFT_SINGLE_COIN_FIELD_NUMBER = 5;
-    private int giftSingleCoin_;
+    public static final int SINGLE_PRICE_COIN_RAW_FIELD_NUMBER = 5;
+    private int singlePriceCoinRaw_;
     /**
-     * <code>uint32 gift_single_coin = 5;</code>
-     * @return The giftSingleCoin.
+     * <code>uint32 single_price_coin_raw = 5;</code>
+     * @return The singlePriceCoinRaw.
      */
-    public int getGiftSingleCoin() {
-      return giftSingleCoin_;
+    public int getSinglePriceCoinRaw() {
+      return singlePriceCoinRaw_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 6;
+    private int count_;
+    /**
+     * <code>uint32 count = 6;</code>
+     * @return The count.
+     */
+    public int getCount() {
+      return count_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7770,8 +8035,11 @@ public final class UserMessageOuterClass {
       if (!getGiftNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, giftName_);
       }
-      if (giftSingleCoin_ != 0) {
-        output.writeUInt32(5, giftSingleCoin_);
+      if (singlePriceCoinRaw_ != 0) {
+        output.writeUInt32(5, singlePriceCoinRaw_);
+      }
+      if (count_ != 0) {
+        output.writeUInt32(6, count_);
       }
       unknownFields.writeTo(output);
     }
@@ -7797,9 +8065,13 @@ public final class UserMessageOuterClass {
       if (!getGiftNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, giftName_);
       }
-      if (giftSingleCoin_ != 0) {
+      if (singlePriceCoinRaw_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, giftSingleCoin_);
+          .computeUInt32Size(5, singlePriceCoinRaw_);
+      }
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, count_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7824,8 +8096,10 @@ public final class UserMessageOuterClass {
           != other.getGiftId()) return false;
       if (!getGiftName()
           .equals(other.getGiftName())) return false;
-      if (getGiftSingleCoin()
-          != other.getGiftSingleCoin()) return false;
+      if (getSinglePriceCoinRaw()
+          != other.getSinglePriceCoinRaw()) return false;
+      if (getCount()
+          != other.getCount()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7846,8 +8120,10 @@ public final class UserMessageOuterClass {
       hash = (53 * hash) + getGiftId();
       hash = (37 * hash) + GIFT_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getGiftName().hashCode();
-      hash = (37 * hash) + GIFT_SINGLE_COIN_FIELD_NUMBER;
-      hash = (53 * hash) + getGiftSingleCoin();
+      hash = (37 * hash) + SINGLE_PRICE_COIN_RAW_FIELD_NUMBER;
+      hash = (53 * hash) + getSinglePriceCoinRaw();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7989,7 +8265,9 @@ public final class UserMessageOuterClass {
 
         giftName_ = "";
 
-        giftSingleCoin_ = 0;
+        singlePriceCoinRaw_ = 0;
+
+        count_ = 0;
 
         return this;
       }
@@ -8021,7 +8299,8 @@ public final class UserMessageOuterClass {
         result.totalCoin_ = totalCoin_;
         result.giftId_ = giftId_;
         result.giftName_ = giftName_;
-        result.giftSingleCoin_ = giftSingleCoin_;
+        result.singlePriceCoinRaw_ = singlePriceCoinRaw_;
+        result.count_ = count_;
         onBuilt();
         return result;
       }
@@ -8083,8 +8362,11 @@ public final class UserMessageOuterClass {
           giftName_ = other.giftName_;
           onChanged();
         }
-        if (other.getGiftSingleCoin() != 0) {
-          setGiftSingleCoin(other.getGiftSingleCoin());
+        if (other.getSinglePriceCoinRaw() != 0) {
+          setSinglePriceCoinRaw(other.getSinglePriceCoinRaw());
+        }
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8281,32 +8563,62 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private int giftSingleCoin_ ;
+      private int singlePriceCoinRaw_ ;
       /**
-       * <code>uint32 gift_single_coin = 5;</code>
-       * @return The giftSingleCoin.
+       * <code>uint32 single_price_coin_raw = 5;</code>
+       * @return The singlePriceCoinRaw.
        */
-      public int getGiftSingleCoin() {
-        return giftSingleCoin_;
+      public int getSinglePriceCoinRaw() {
+        return singlePriceCoinRaw_;
       }
       /**
-       * <code>uint32 gift_single_coin = 5;</code>
-       * @param value The giftSingleCoin to set.
+       * <code>uint32 single_price_coin_raw = 5;</code>
+       * @param value The singlePriceCoinRaw to set.
        * @return This builder for chaining.
        */
-      public Builder setGiftSingleCoin(int value) {
+      public Builder setSinglePriceCoinRaw(int value) {
         
-        giftSingleCoin_ = value;
+        singlePriceCoinRaw_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 gift_single_coin = 5;</code>
+       * <code>uint32 single_price_coin_raw = 5;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGiftSingleCoin() {
+      public Builder clearSinglePriceCoinRaw() {
         
-        giftSingleCoin_ = 0;
+        singlePriceCoinRaw_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <code>uint32 count = 6;</code>
+       * @return The count.
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>uint32 count = 6;</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 count = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
         onChanged();
         return this;
       }
@@ -9494,10 +9806,38 @@ public final class UserMessageOuterClass {
     vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getLevel();
 
     /**
-     * <code>uint32 coin = 2;</code>
-     * @return The coin.
+     * <code>uint32 total_coin = 2;</code>
+     * @return The totalCoin.
      */
-    int getCoin();
+    int getTotalCoin();
+
+    /**
+     * <code>uint32 num = 3;</code>
+     * @return The num.
+     */
+    int getNum();
+
+    /**
+     * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+     * @return The enum numeric value on the wire for durationLevel.
+     */
+    int getDurationLevelValue();
+    /**
+     * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+     * @return The durationLevel.
+     */
+    vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel getDurationLevel();
+
+    /**
+     * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+     * @return The enum numeric value on the wire for buyType.
+     */
+    int getBuyTypeValue();
+    /**
+     * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+     * @return The buyType.
+     */
+    vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType getBuyType();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.NewGuardMessage}
@@ -9513,6 +9853,8 @@ public final class UserMessageOuterClass {
     }
     private NewGuardMessage() {
       level_ = 0;
+      durationLevel_ = 0;
+      buyType_ = 0;
     }
 
     @java.lang.Override
@@ -9553,7 +9895,24 @@ public final class UserMessageOuterClass {
             }
             case 16: {
 
-              coin_ = input.readUInt32();
+              totalCoin_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              num_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              durationLevel_ = rawValue;
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              buyType_ = rawValue;
               break;
             }
             default: {
@@ -9607,14 +9966,62 @@ public final class UserMessageOuterClass {
       return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
     }
 
-    public static final int COIN_FIELD_NUMBER = 2;
-    private int coin_;
+    public static final int TOTAL_COIN_FIELD_NUMBER = 2;
+    private int totalCoin_;
     /**
-     * <code>uint32 coin = 2;</code>
-     * @return The coin.
+     * <code>uint32 total_coin = 2;</code>
+     * @return The totalCoin.
      */
-    public int getCoin() {
-      return coin_;
+    public int getTotalCoin() {
+      return totalCoin_;
+    }
+
+    public static final int NUM_FIELD_NUMBER = 3;
+    private int num_;
+    /**
+     * <code>uint32 num = 3;</code>
+     * @return The num.
+     */
+    public int getNum() {
+      return num_;
+    }
+
+    public static final int DURATION_LEVEL_FIELD_NUMBER = 4;
+    private int durationLevel_;
+    /**
+     * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+     * @return The enum numeric value on the wire for durationLevel.
+     */
+    public int getDurationLevelValue() {
+      return durationLevel_;
+    }
+    /**
+     * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+     * @return The durationLevel.
+     */
+    public vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel getDurationLevel() {
+      @SuppressWarnings("deprecation")
+      vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.valueOf(durationLevel_);
+      return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.UNRECOGNIZED : result;
+    }
+
+    public static final int BUY_TYPE_FIELD_NUMBER = 5;
+    private int buyType_;
+    /**
+     * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+     * @return The enum numeric value on the wire for buyType.
+     */
+    public int getBuyTypeValue() {
+      return buyType_;
+    }
+    /**
+     * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+     * @return The buyType.
+     */
+    public vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType getBuyType() {
+      @SuppressWarnings("deprecation")
+      vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType result = vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.valueOf(buyType_);
+      return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9634,8 +10041,17 @@ public final class UserMessageOuterClass {
       if (level_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
         output.writeEnum(1, level_);
       }
-      if (coin_ != 0) {
-        output.writeUInt32(2, coin_);
+      if (totalCoin_ != 0) {
+        output.writeUInt32(2, totalCoin_);
+      }
+      if (num_ != 0) {
+        output.writeUInt32(3, num_);
+      }
+      if (durationLevel_ != vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.NO_DURATION.getNumber()) {
+        output.writeEnum(4, durationLevel_);
+      }
+      if (buyType_ != vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.NO_TYPE.getNumber()) {
+        output.writeEnum(5, buyType_);
       }
       unknownFields.writeTo(output);
     }
@@ -9650,9 +10066,21 @@ public final class UserMessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, level_);
       }
-      if (coin_ != 0) {
+      if (totalCoin_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, coin_);
+          .computeUInt32Size(2, totalCoin_);
+      }
+      if (num_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, num_);
+      }
+      if (durationLevel_ != vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.NO_DURATION.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, durationLevel_);
+      }
+      if (buyType_ != vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.NO_TYPE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, buyType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9670,8 +10098,12 @@ public final class UserMessageOuterClass {
       vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage other = (vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage) obj;
 
       if (level_ != other.level_) return false;
-      if (getCoin()
-          != other.getCoin()) return false;
+      if (getTotalCoin()
+          != other.getTotalCoin()) return false;
+      if (getNum()
+          != other.getNum()) return false;
+      if (durationLevel_ != other.durationLevel_) return false;
+      if (buyType_ != other.buyType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9685,8 +10117,14 @@ public final class UserMessageOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + level_;
-      hash = (37 * hash) + COIN_FIELD_NUMBER;
-      hash = (53 * hash) + getCoin();
+      hash = (37 * hash) + TOTAL_COIN_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalCoin();
+      hash = (37 * hash) + NUM_FIELD_NUMBER;
+      hash = (53 * hash) + getNum();
+      hash = (37 * hash) + DURATION_LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + durationLevel_;
+      hash = (37 * hash) + BUY_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + buyType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9822,7 +10260,13 @@ public final class UserMessageOuterClass {
         super.clear();
         level_ = 0;
 
-        coin_ = 0;
+        totalCoin_ = 0;
+
+        num_ = 0;
+
+        durationLevel_ = 0;
+
+        buyType_ = 0;
 
         return this;
       }
@@ -9851,7 +10295,10 @@ public final class UserMessageOuterClass {
       public vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage buildPartial() {
         vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage result = new vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage(this);
         result.level_ = level_;
-        result.coin_ = coin_;
+        result.totalCoin_ = totalCoin_;
+        result.num_ = num_;
+        result.durationLevel_ = durationLevel_;
+        result.buyType_ = buyType_;
         onBuilt();
         return result;
       }
@@ -9903,8 +10350,17 @@ public final class UserMessageOuterClass {
         if (other.level_ != 0) {
           setLevelValue(other.getLevelValue());
         }
-        if (other.getCoin() != 0) {
-          setCoin(other.getCoin());
+        if (other.getTotalCoin() != 0) {
+          setTotalCoin(other.getTotalCoin());
+        }
+        if (other.getNum() != 0) {
+          setNum(other.getNum());
+        }
+        if (other.durationLevel_ != 0) {
+          setDurationLevelValue(other.getDurationLevelValue());
+        }
+        if (other.buyType_ != 0) {
+          setBuyTypeValue(other.getBuyTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9987,32 +10443,166 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private int coin_ ;
+      private int totalCoin_ ;
       /**
-       * <code>uint32 coin = 2;</code>
-       * @return The coin.
+       * <code>uint32 total_coin = 2;</code>
+       * @return The totalCoin.
        */
-      public int getCoin() {
-        return coin_;
+      public int getTotalCoin() {
+        return totalCoin_;
       }
       /**
-       * <code>uint32 coin = 2;</code>
-       * @param value The coin to set.
+       * <code>uint32 total_coin = 2;</code>
+       * @param value The totalCoin to set.
        * @return This builder for chaining.
        */
-      public Builder setCoin(int value) {
+      public Builder setTotalCoin(int value) {
         
-        coin_ = value;
+        totalCoin_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 coin = 2;</code>
+       * <code>uint32 total_coin = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCoin() {
+      public Builder clearTotalCoin() {
         
-        coin_ = 0;
+        totalCoin_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int num_ ;
+      /**
+       * <code>uint32 num = 3;</code>
+       * @return The num.
+       */
+      public int getNum() {
+        return num_;
+      }
+      /**
+       * <code>uint32 num = 3;</code>
+       * @param value The num to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNum(int value) {
+        
+        num_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 num = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNum() {
+        
+        num_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int durationLevel_ = 0;
+      /**
+       * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+       * @return The enum numeric value on the wire for durationLevel.
+       */
+      public int getDurationLevelValue() {
+        return durationLevel_;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+       * @param value The enum numeric value on the wire for durationLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationLevelValue(int value) {
+        durationLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+       * @return The durationLevel.
+       */
+      public vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel getDurationLevel() {
+        @SuppressWarnings("deprecation")
+        vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.valueOf(durationLevel_);
+        return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+       * @param value The durationLevel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationLevel(vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        durationLevel_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationLevel() {
+        
+        durationLevel_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int buyType_ = 0;
+      /**
+       * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+       * @return The enum numeric value on the wire for buyType.
+       */
+      public int getBuyTypeValue() {
+        return buyType_;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+       * @param value The enum numeric value on the wire for buyType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyTypeValue(int value) {
+        buyType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+       * @return The buyType.
+       */
+      public vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType getBuyType() {
+        @SuppressWarnings("deprecation")
+        vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType result = vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.valueOf(buyType_);
+        return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+       * @param value The buyType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBuyType(vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        buyType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBuyType() {
+        
+        buyType_ = 0;
         onChanged();
         return this;
       }
@@ -11000,42 +11590,50 @@ public final class UserMessageOuterClass {
       "ssageH\000\022@\n\014user_blocked\030\020 \001(\0132(.vNerve.b" +
       "ilibili.live.UserBlockedMessageH\000\022E\n\017use" +
       "r_kicked_out\030\021 \001(\0132*.vNerve.bilibili.liv" +
-      "e.UserKickedOutMessageH\000B\t\n\007payload\"\374\002\n\010" +
+      "e.UserKickedOutMessageH\000B\t\n\007payload\"\232\003\n\010" +
       "UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002 \001(\t\022\022\n\na" +
       "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\037\n\027u" +
-      "ser_level_border_color\030\005 \001(\007\022\r\n\005admin\030\006 " +
-      "\001(\010\022\022\n\010main_vip\030\007 \001(\010H\000\022:\n\016live_vip_leve" +
-      "l\030\010 \001(\0162\".vNerve.bilibili.live.LiveVipLe" +
-      "vel\022\r\n\005title\030\t \001(\t\022.\n\005medal\030\n \001(\0132\037.vNer" +
-      "ve.bilibili.live.MedalInfo\0225\n\013guard_leve" +
-      "l\030\013 \001(\0162 .vNerve.bilibili.live.GuardLeve" +
-      "l\022\026\n\016phone_verified\030\014 \001(\010\022\024\n\014regular_use" +
-      "r\030\r \001(\010B\t\n\007mainvip\"\217\001\n\tMedalInfo\022\022\n\nmeda" +
-      "l_name\030\001 \001(\t\022\023\n\013medal_level\030\002 \001(\r\022\023\n\013med" +
-      "al_color\030\003 \001(\007\022\024\n\014streamer_uid\030\004 \001(\004\022\025\n\r" +
-      "streamer_name\030\005 \001(\t\022\027\n\017streamer_roomid\030\006" +
-      " \001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030\001 \001(\t\022" +
-      ">\n\014lottery_type\030\002 \001(\0162(.vNerve.bilibili." +
-      "live.LotteryDanmakuType\"\264\001\n\020SuperChatMes" +
-      "sage\022\017\n\007message\030\001 \001(\t\022\r\n\005price\030\002 \001(\r\022\n\n\002" +
-      "id\030\003 \001(\r\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001" +
-      "(\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_time_s" +
-      "ec\030\007 \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time" +
-      "\030\t \001(\004\"p\n\013GiftMessage\022\017\n\007is_gold\030\001 \001(\010\022\022" +
-      "\n\ntotal_coin\030\002 \001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tg" +
-      "ift_name\030\004 \001(\t\022\030\n\020gift_single_coin\030\005 \001(\r" +
-      "\"S\n\021WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNe" +
-      "rve.bilibili.live.LiveVipLevel\022\r\n\005admin\030" +
-      "\002 \001(\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 " +
-      "\001(\0162 .vNerve.bilibili.live.GuardLevel\"P\n" +
-      "\017NewGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve" +
-      ".bilibili.live.GuardLevel\022\014\n\004coin\030\002 \001(\r\"" +
-      "\024\n\022UserBlockedMessage\"\026\n\024UserKickedOutMe" +
-      "ssage*3\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\013\n\007MON" +
-      "THLY\020\001\022\n\n\006YEARLY\020\002*<\n\022LotteryDanmakuType" +
-      "\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002" +
-      "*>\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001" +
-      "\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003B\003\370\001\001b\006proto3"
+      "ser_level_border_color\030\005 \001(\007\022\017\n\005admin\030\006 " +
+      "\001(\010H\000\022\022\n\010main_vip\030\007 \001(\010H\001\022:\n\016live_vip_le" +
+      "vel\030\010 \001(\0162\".vNerve.bilibili.live.LiveVip" +
+      "Level\022\r\n\005title\030\t \001(\t\022.\n\005medal\030\n \001(\0132\037.vN" +
+      "erve.bilibili.live.MedalInfo\0225\n\013guard_le" +
+      "vel\030\013 \001(\0162 .vNerve.bilibili.live.GuardLe" +
+      "vel\022\026\n\016phone_verified\030\014 \001(\010\022\024\n\014regular_u" +
+      "ser\030\r \001(\010B\020\n\016admin_optionalB\023\n\021main_vip_" +
+      "optional\"\217\001\n\tMedalInfo\022\022\n\nmedal_name\030\001 \001" +
+      "(\t\022\023\n\013medal_level\030\002 \001(\r\022\023\n\013medal_color\030\003" +
+      " \001(\007\022\024\n\014streamer_uid\030\004 \001(\004\022\025\n\rstreamer_n" +
+      "ame\030\005 \001(\t\022\027\n\017streamer_roomid\030\006 \001(\r\"a\n\016Da" +
+      "nmakuMessage\022\017\n\007message\030\001 \001(\t\022>\n\014lottery" +
+      "_type\030\002 \001(\0162(.vNerve.bilibili.live.Lotte" +
+      "ryDanmakuType\"\245\001\n\020SuperChatMessage\022\017\n\007me" +
+      "ssage\030\001 \001(\t\022\n\n\002id\030\003 \001(\r\022\r\n\005token\030\004 \001(\t\022\021" +
+      "\n\tprice_cny\030\005 \001(\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n" +
+      "\020lasting_time_sec\030\007 \001(\r\022\022\n\nstart_time\030\010 " +
+      "\001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftMessage\022\017\n" +
+      "\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007gi" +
+      "ft_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022\035\n\025single" +
+      "_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"S\n\021" +
+      "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve." +
+      "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(" +
+      "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162" +
+      " .vNerve.bilibili.live.GuardLevel\"\333\001\n\017Ne" +
+      "wGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bi" +
+      "libili.live.GuardLevel\022\022\n\ntotal_coin\030\002 \001" +
+      "(\r\022\013\n\003num\030\003 \001(\r\022@\n\016duration_level\030\004 \001(\0162" +
+      "(.vNerve.bilibili.live.GuardDurationLeve" +
+      "l\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili.li" +
+      "ve.GuardBuyType\"\024\n\022UserBlockedMessage\"\026\n" +
+      "\024UserKickedOutMessage*;\n\014LiveVipLevel\022\n\n" +
+      "\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_VIP" +
+      "\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY\020\000" +
+      "\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel\022\014" +
+      "\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006" +
+      "LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022\007\n" +
+      "\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLevel\022" +
+      "\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n\014W" +
+      "EEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11052,7 +11650,7 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_UserInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_UserInfo_descriptor,
-        new java.lang.String[] { "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "GuardLevel", "PhoneVerified", "RegularUser", "Mainvip", });
+        new java.lang.String[] { "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "GuardLevel", "PhoneVerified", "RegularUser", "AdminOptional", "MainVipOptional", });
     internal_static_vNerve_bilibili_live_MedalInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_vNerve_bilibili_live_MedalInfo_fieldAccessorTable = new
@@ -11070,13 +11668,13 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_SuperChatMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor,
-        new java.lang.String[] { "Message", "Price", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime", });
+        new java.lang.String[] { "Message", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime", });
     internal_static_vNerve_bilibili_live_GiftMessage_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_GiftMessage_descriptor,
-        new java.lang.String[] { "IsGold", "TotalCoin", "GiftId", "GiftName", "GiftSingleCoin", });
+        new java.lang.String[] { "IsGold", "TotalCoin", "GiftId", "GiftName", "SinglePriceCoinRaw", "Count", });
     internal_static_vNerve_bilibili_live_WelcomeVIPMessage_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_vNerve_bilibili_live_WelcomeVIPMessage_fieldAccessorTable = new
@@ -11094,7 +11692,7 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_NewGuardMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_NewGuardMessage_descriptor,
-        new java.lang.String[] { "Level", "Coin", });
+        new java.lang.String[] { "Level", "TotalCoin", "Num", "DurationLevel", "BuyType", });
     internal_static_vNerve_bilibili_live_UserBlockedMessage_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_vNerve_bilibili_live_UserBlockedMessage_fieldAccessorTable = new

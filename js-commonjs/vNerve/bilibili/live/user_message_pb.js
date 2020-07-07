@@ -14,6 +14,8 @@ var global = Function('return this')();
 
 goog.exportSymbol('proto.vNerve.bilibili.live.DanmakuMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.GiftMessage', null, global);
+goog.exportSymbol('proto.vNerve.bilibili.live.GuardBuyType', null, global);
+goog.exportSymbol('proto.vNerve.bilibili.live.GuardDurationLevel', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.GuardLevel', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.LiveVipLevel', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.LotteryDanmakuType', null, global);
@@ -22,7 +24,8 @@ goog.exportSymbol('proto.vNerve.bilibili.live.NewGuardMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.SuperChatMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserBlockedMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserInfo', null, global);
-goog.exportSymbol('proto.vNerve.bilibili.live.UserInfo.MainvipCase', null, global);
+goog.exportSymbol('proto.vNerve.bilibili.live.UserInfo.AdminOptionalCase', null, global);
+goog.exportSymbol('proto.vNerve.bilibili.live.UserInfo.MainVipOptionalCase', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserKickedOutMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserMessage', null, global);
 goog.exportSymbol('proto.vNerve.bilibili.live.UserMessage.PayloadCase', null, global);
@@ -859,21 +862,36 @@ proto.vNerve.bilibili.live.UserMessage.prototype.hasUserKickedOut = function() {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.vNerve.bilibili.live.UserInfo.oneofGroups_ = [[7]];
+proto.vNerve.bilibili.live.UserInfo.oneofGroups_ = [[6],[7]];
 
 /**
  * @enum {number}
  */
-proto.vNerve.bilibili.live.UserInfo.MainvipCase = {
-  MAINVIP_NOT_SET: 0,
+proto.vNerve.bilibili.live.UserInfo.AdminOptionalCase = {
+  ADMIN_OPTIONAL_NOT_SET: 0,
+  ADMIN: 6
+};
+
+/**
+ * @return {proto.vNerve.bilibili.live.UserInfo.AdminOptionalCase}
+ */
+proto.vNerve.bilibili.live.UserInfo.prototype.getAdminOptionalCase = function() {
+  return /** @type {proto.vNerve.bilibili.live.UserInfo.AdminOptionalCase} */(jspb.Message.computeOneofCase(this, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0]));
+};
+
+/**
+ * @enum {number}
+ */
+proto.vNerve.bilibili.live.UserInfo.MainVipOptionalCase = {
+  MAIN_VIP_OPTIONAL_NOT_SET: 0,
   MAIN_VIP: 7
 };
 
 /**
- * @return {proto.vNerve.bilibili.live.UserInfo.MainvipCase}
+ * @return {proto.vNerve.bilibili.live.UserInfo.MainVipOptionalCase}
  */
-proto.vNerve.bilibili.live.UserInfo.prototype.getMainvipCase = function() {
-  return /** @type {proto.vNerve.bilibili.live.UserInfo.MainvipCase} */(jspb.Message.computeOneofCase(this, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0]));
+proto.vNerve.bilibili.live.UserInfo.prototype.getMainVipOptionalCase = function() {
+  return /** @type {proto.vNerve.bilibili.live.UserInfo.MainVipOptionalCase} */(jspb.Message.computeOneofCase(this, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[1]));
 };
 
 
@@ -1073,8 +1091,8 @@ proto.vNerve.bilibili.live.UserInfo.serializeBinaryToWriter = function(message, 
       f
     );
   }
-  f = message.getAdmin();
-  if (f) {
+  f = /** @type {boolean} */ (jspb.Message.getField(message, 6));
+  if (f != null) {
     writer.writeBool(
       6,
       f
@@ -1237,7 +1255,25 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getAdmin = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setAdmin = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 6, value);
+  return jspb.Message.setOneofField(this, 6, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0], value);
+};
+
+
+/**
+ * Clears the field making it undefined.
+ * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
+ */
+proto.vNerve.bilibili.live.UserInfo.prototype.clearAdmin = function() {
+  return jspb.Message.setOneofField(this, 6, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.vNerve.bilibili.live.UserInfo.prototype.hasAdmin = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -1255,7 +1291,7 @@ proto.vNerve.bilibili.live.UserInfo.prototype.getMainVip = function() {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.setMainVip = function(value) {
-  return jspb.Message.setOneofField(this, 7, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0], value);
+  return jspb.Message.setOneofField(this, 7, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[1], value);
 };
 
 
@@ -1264,7 +1300,7 @@ proto.vNerve.bilibili.live.UserInfo.prototype.setMainVip = function(value) {
  * @return {!proto.vNerve.bilibili.live.UserInfo} returns this
  */
 proto.vNerve.bilibili.live.UserInfo.prototype.clearMainVip = function() {
-  return jspb.Message.setOneofField(this, 7, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[0], undefined);
+  return jspb.Message.setOneofField(this, 7, proto.vNerve.bilibili.live.UserInfo.oneofGroups_[1], undefined);
 };
 
 
@@ -1877,7 +1913,6 @@ proto.vNerve.bilibili.live.SuperChatMessage.prototype.toObject = function(opt_in
 proto.vNerve.bilibili.live.SuperChatMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
     message: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    price: jspb.Message.getFieldWithDefault(msg, 2, 0),
     id: jspb.Message.getFieldWithDefault(msg, 3, 0),
     token: jspb.Message.getFieldWithDefault(msg, 4, ""),
     priceCny: jspb.Message.getFieldWithDefault(msg, 5, 0),
@@ -1924,10 +1959,6 @@ proto.vNerve.bilibili.live.SuperChatMessage.deserializeBinaryFromReader = functi
     case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.setMessage(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setPrice(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readUint32());
@@ -1990,13 +2021,6 @@ proto.vNerve.bilibili.live.SuperChatMessage.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
-    );
-  }
-  f = message.getPrice();
-  if (f !== 0) {
-    writer.writeUint32(
-      2,
       f
     );
   }
@@ -2067,24 +2091,6 @@ proto.vNerve.bilibili.live.SuperChatMessage.prototype.getMessage = function() {
  */
 proto.vNerve.bilibili.live.SuperChatMessage.prototype.setMessage = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional uint32 price = 2;
- * @return {number}
- */
-proto.vNerve.bilibili.live.SuperChatMessage.prototype.getPrice = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/**
- * @param {number} value
- * @return {!proto.vNerve.bilibili.live.SuperChatMessage} returns this
- */
-proto.vNerve.bilibili.live.SuperChatMessage.prototype.setPrice = function(value) {
-  return jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -2250,7 +2256,8 @@ proto.vNerve.bilibili.live.GiftMessage.toObject = function(includeInstance, msg)
     totalCoin: jspb.Message.getFieldWithDefault(msg, 2, 0),
     giftId: jspb.Message.getFieldWithDefault(msg, 3, 0),
     giftName: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    giftSingleCoin: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    singlePriceCoinRaw: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    count: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -2305,7 +2312,11 @@ proto.vNerve.bilibili.live.GiftMessage.deserializeBinaryFromReader = function(ms
       break;
     case 5:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setGiftSingleCoin(value);
+      msg.setSinglePriceCoinRaw(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setCount(value);
       break;
     default:
       reader.skipField();
@@ -2364,10 +2375,17 @@ proto.vNerve.bilibili.live.GiftMessage.serializeBinaryToWriter = function(messag
       f
     );
   }
-  f = message.getGiftSingleCoin();
+  f = message.getSinglePriceCoinRaw();
   if (f !== 0) {
     writer.writeUint32(
       5,
+      f
+    );
+  }
+  f = message.getCount();
+  if (f !== 0) {
+    writer.writeUint32(
+      6,
       f
     );
   }
@@ -2447,10 +2465,10 @@ proto.vNerve.bilibili.live.GiftMessage.prototype.setGiftName = function(value) {
 
 
 /**
- * optional uint32 gift_single_coin = 5;
+ * optional uint32 single_price_coin_raw = 5;
  * @return {number}
  */
-proto.vNerve.bilibili.live.GiftMessage.prototype.getGiftSingleCoin = function() {
+proto.vNerve.bilibili.live.GiftMessage.prototype.getSinglePriceCoinRaw = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
@@ -2459,8 +2477,26 @@ proto.vNerve.bilibili.live.GiftMessage.prototype.getGiftSingleCoin = function() 
  * @param {number} value
  * @return {!proto.vNerve.bilibili.live.GiftMessage} returns this
  */
-proto.vNerve.bilibili.live.GiftMessage.prototype.setGiftSingleCoin = function(value) {
+proto.vNerve.bilibili.live.GiftMessage.prototype.setSinglePriceCoinRaw = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional uint32 count = 6;
+ * @return {number}
+ */
+proto.vNerve.bilibili.live.GiftMessage.prototype.getCount = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.vNerve.bilibili.live.GiftMessage} returns this
+ */
+proto.vNerve.bilibili.live.GiftMessage.prototype.setCount = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
@@ -2787,7 +2823,10 @@ proto.vNerve.bilibili.live.NewGuardMessage.prototype.toObject = function(opt_inc
 proto.vNerve.bilibili.live.NewGuardMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
     level: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    coin: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    totalCoin: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    num: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    durationLevel: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    buyType: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -2830,7 +2869,19 @@ proto.vNerve.bilibili.live.NewGuardMessage.deserializeBinaryFromReader = functio
       break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setCoin(value);
+      msg.setTotalCoin(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setNum(value);
+      break;
+    case 4:
+      var value = /** @type {!proto.vNerve.bilibili.live.GuardDurationLevel} */ (reader.readEnum());
+      msg.setDurationLevel(value);
+      break;
+    case 5:
+      var value = /** @type {!proto.vNerve.bilibili.live.GuardBuyType} */ (reader.readEnum());
+      msg.setBuyType(value);
       break;
     default:
       reader.skipField();
@@ -2868,10 +2919,31 @@ proto.vNerve.bilibili.live.NewGuardMessage.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getCoin();
+  f = message.getTotalCoin();
   if (f !== 0) {
     writer.writeUint32(
       2,
+      f
+    );
+  }
+  f = message.getNum();
+  if (f !== 0) {
+    writer.writeUint32(
+      3,
+      f
+    );
+  }
+  f = message.getDurationLevel();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      4,
+      f
+    );
+  }
+  f = message.getBuyType();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      5,
       f
     );
   }
@@ -2897,10 +2969,10 @@ proto.vNerve.bilibili.live.NewGuardMessage.prototype.setLevel = function(value) 
 
 
 /**
- * optional uint32 coin = 2;
+ * optional uint32 total_coin = 2;
  * @return {number}
  */
-proto.vNerve.bilibili.live.NewGuardMessage.prototype.getCoin = function() {
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.getTotalCoin = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
@@ -2909,8 +2981,62 @@ proto.vNerve.bilibili.live.NewGuardMessage.prototype.getCoin = function() {
  * @param {number} value
  * @return {!proto.vNerve.bilibili.live.NewGuardMessage} returns this
  */
-proto.vNerve.bilibili.live.NewGuardMessage.prototype.setCoin = function(value) {
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.setTotalCoin = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
+};
+
+
+/**
+ * optional uint32 num = 3;
+ * @return {number}
+ */
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.getNum = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.vNerve.bilibili.live.NewGuardMessage} returns this
+ */
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.setNum = function(value) {
+  return jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional GuardDurationLevel duration_level = 4;
+ * @return {!proto.vNerve.bilibili.live.GuardDurationLevel}
+ */
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.getDurationLevel = function() {
+  return /** @type {!proto.vNerve.bilibili.live.GuardDurationLevel} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {!proto.vNerve.bilibili.live.GuardDurationLevel} value
+ * @return {!proto.vNerve.bilibili.live.NewGuardMessage} returns this
+ */
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.setDurationLevel = function(value) {
+  return jspb.Message.setProto3EnumField(this, 4, value);
+};
+
+
+/**
+ * optional GuardBuyType buy_type = 5;
+ * @return {!proto.vNerve.bilibili.live.GuardBuyType}
+ */
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.getBuyType = function() {
+  return /** @type {!proto.vNerve.bilibili.live.GuardBuyType} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {!proto.vNerve.bilibili.live.GuardBuyType} value
+ * @return {!proto.vNerve.bilibili.live.NewGuardMessage} returns this
+ */
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.setBuyType = function(value) {
+  return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 
@@ -3121,8 +3247,8 @@ proto.vNerve.bilibili.live.UserKickedOutMessage.serializeBinaryToWriter = functi
  */
 proto.vNerve.bilibili.live.LiveVipLevel = {
   NO_VIP: 0,
-  MONTHLY: 1,
-  YEARLY: 2
+  MONTHLY_VIP: 1,
+  YEARLY_VIP: 2
 };
 
 /**
@@ -3142,6 +3268,24 @@ proto.vNerve.bilibili.live.GuardLevel = {
   LEVEL1: 1,
   LEVEL2: 2,
   LEVEL3: 3
+};
+
+/**
+ * @enum {number}
+ */
+proto.vNerve.bilibili.live.GuardBuyType = {
+  NO_TYPE: 0,
+  BUY: 1,
+  RENEW: 2
+};
+
+/**
+ * @enum {number}
+ */
+proto.vNerve.bilibili.live.GuardDurationLevel = {
+  NO_DURATION: 0,
+  MONTHLY_GUARD: 1,
+  WEEKLY_GUARD: 2
 };
 
 goog.object.extend(exports, proto.vNerve.bilibili.live);
