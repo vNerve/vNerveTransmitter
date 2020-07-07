@@ -68,7 +68,6 @@ enum LotteryDanmakuType {
 
 message SuperChatMessage {
   string message = 1;
-  uint32 price = 2;
 
   uint32 id = 3;
   string token = 4;
@@ -87,7 +86,8 @@ message GiftMessage {
 
   uint32 gift_id = 3;
   string gift_name = 4;
-  uint32 gift_single_coin = 5;
+  uint32 single_price_coin_raw = 5;
+  uint32 count = 6;
 }
 
 message WelcomeVIPMessage {
@@ -106,9 +106,24 @@ enum GuardLevel {
   LEVEL3 = 3;
 }
 
+enum GuardBuyType {
+  None = 0;
+  Buy = 1;
+  Renew = 2;
+}
+
+enum GuardDurationLevel {
+  None = 0;
+  Monthly = 1;
+  Weekly = 2;
+}
+
 message NewGuardMessage {
   GuardLevel level = 1;
-  uint32 coin = 2;
+  uint32 total_coin = 2;
+  uint32 num = 3;
+  GuardDurationLevel duration_level = 4;
+  GuardBuyType buy_type = 5;
 }
 
 message UserBlockedMessage {
