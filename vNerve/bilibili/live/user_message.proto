@@ -34,7 +34,7 @@ message UserInfo {
 
   string title = 9;
   MedalInfo medal = 10;
-  int32 guard_level = 11;
+  GuardLevel guard_level = 11;
 
   bool phone_verified = 12;
   bool regular_user = 13;
