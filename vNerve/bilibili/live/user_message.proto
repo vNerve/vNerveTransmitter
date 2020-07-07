@@ -53,8 +53,8 @@ message MedalInfo {
 
 enum LiveVipLevel {
   NO_VIP = 0;
-  MONTHLY = 1;
-  YEARLY = 2;
+  MONTHLY_VIP = 1;
+  YEARLY_VIP = 2;
 }
 
 message DanmakuMessage {
@@ -116,8 +116,8 @@ enum GuardBuyType {
 
 enum GuardDurationLevel {
   NO_DURATION = 0;
-  MONTHLY = 1;
-  WEEKLY = 2;
+  MONTHLY_GUARD = 1;
+  WEEKLY_GUARD = 2;
 }
 
 message NewGuardMessage {
