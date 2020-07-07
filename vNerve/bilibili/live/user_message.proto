@@ -26,7 +26,9 @@ message UserInfo {
   int32 user_level = 4;
   fixed32 user_level_border_color = 5;
 
-  bool admin = 6;
+  oneof admin {
+    bool admin = 6;
+  }
   oneof mainvip {
     bool main_vip = 7;
   }
