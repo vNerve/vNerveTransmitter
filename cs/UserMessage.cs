@@ -38,45 +38,44 @@ namespace VNerve.Bilibili.Live {
             "X2Jsb2NrZWQYECABKAsyKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Vc2VyQmxv",
             "Y2tlZE1lc3NhZ2VIABJFCg91c2VyX2tpY2tlZF9vdXQYESABKAsyKi52TmVy",
             "dmUuYmlsaWJpbGkubGl2ZS5Vc2VyS2lja2VkT3V0TWVzc2FnZUgAQgkKB3Bh",
-            "eWxvYWQixQIKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
+            "eWxvYWQi2gIKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
             "EhIKCmF2YXRhcl91cmwYAyABKAkSEgoKdXNlcl9sZXZlbBgEIAEoBRIfChd1",
             "c2VyX2xldmVsX2JvcmRlcl9jb2xvchgFIAEoBxINCgVhZG1pbhgGIAEoCBIS",
             "CghtYWluX3ZpcBgHIAEoCEgAEjoKDmxpdmVfdmlwX2xldmVsGAggASgOMiIu",
             "dk5lcnZlLmJpbGliaWxpLmxpdmUuTGl2ZVZpcExldmVsEg0KBXRpdGxlGAkg",
             "ASgJEi4KBW1lZGFsGAogASgLMh8udk5lcnZlLmJpbGliaWxpLmxpdmUuTWVk",
-            "YWxJbmZvEhYKDnBob25lX3ZlcmlmaWVkGAsgASgIEhQKDHJlZ3VsYXJfdXNl",
-            "chgMIAEoCEIJCgdtYWludmlwIo8BCglNZWRhbEluZm8SEgoKbWVkYWxfbmFt",
-            "ZRgBIAEoCRITCgttZWRhbF9sZXZlbBgCIAEoDRITCgttZWRhbF9jb2xvchgD",
-            "IAEoBxIUCgxzdHJlYW1lcl91aWQYBCABKAQSFQoNc3RyZWFtZXJfbmFtZRgF",
-            "IAEoCRIXCg9zdHJlYW1lcl9yb29taWQYBiABKA0imAEKDkRhbm1ha3VNZXNz",
-            "YWdlEg8KB21lc3NhZ2UYASABKAkSPgoMbG90dGVyeV90eXBlGAIgASgOMigu",
-            "dk5lcnZlLmJpbGliaWxpLmxpdmUuTG90dGVyeURhbm1ha3VUeXBlEjUKC2d1",
-            "YXJkX2xldmVsGAMgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRM",
-            "ZXZlbCK0AQoQU3VwZXJDaGF0TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJEg0K",
-            "BXByaWNlGAIgASgNEgoKAmlkGAMgASgNEg0KBXRva2VuGAQgASgJEhEKCXBy",
-            "aWNlX2NueRgFIAEoDRISCgpwcmljZV9jb2luGAYgASgNEhgKEGxhc3Rpbmdf",
-            "dGltZV9zZWMYByABKA0SEgoKc3RhcnRfdGltZRgIIAEoBBIQCghlbmRfdGlt",
-            "ZRgJIAEoBCJwCgtHaWZ0TWVzc2FnZRIPCgdpc19nb2xkGAEgASgIEhIKCnRv",
-            "dGFsX2NvaW4YAiABKA0SDwoHZ2lmdF9pZBgDIAEoDRIRCglnaWZ0X25hbWUY",
-            "BCABKAkSGAoQZ2lmdF9zaW5nbGVfY29pbhgFIAEoDSJTChFXZWxjb21lVklQ",
-            "TWVzc2FnZRIvCgN2aXAYASABKA4yIi52TmVydmUuYmlsaWJpbGkubGl2ZS5M",
-            "aXZlVmlwTGV2ZWwSDQoFYWRtaW4YAiABKAgiRgoTV2VsY29tZUd1YXJkTWVz",
-            "c2FnZRIvCgVndWFyZBgBIAEoDjIgLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkd1",
-            "YXJkTGV2ZWwiUAoPTmV3R3VhcmRNZXNzYWdlEi8KBWxldmVsGAEgASgOMiAu",
-            "dk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRMZXZlbBIMCgRjb2luGAIgASgN",
-            "IhQKElVzZXJCbG9ja2VkTWVzc2FnZSIWChRVc2VyS2lja2VkT3V0TWVzc2Fn",
-            "ZSozCgxMaXZlVmlwTGV2ZWwSCgoGTk9fVklQEAASCwoHTU9OVEhMWRABEgoK",
-            "BllFQVJMWRACKjwKEkxvdHRlcnlEYW5tYWt1VHlwZRIOCgpOT19MT1RURVJZ",
-            "EAASCQoFU1RPUk0QARILCgdMT1RURVJZEAIqPgoKR3VhcmRMZXZlbBIMCghO",
-            "T19HVUFSRBAAEgoKBkxFVkVMMRABEgoKBkxFVkVMMhACEgoKBkxFVkVMMxAD",
-            "QgP4AQFiBnByb3RvMw=="));
+            "YWxJbmZvEhMKC2d1YXJkX2xldmVsGAsgASgFEhYKDnBob25lX3ZlcmlmaWVk",
+            "GAwgASgIEhQKDHJlZ3VsYXJfdXNlchgNIAEoCEIJCgdtYWludmlwIo8BCglN",
+            "ZWRhbEluZm8SEgoKbWVkYWxfbmFtZRgBIAEoCRITCgttZWRhbF9sZXZlbBgC",
+            "IAEoDRITCgttZWRhbF9jb2xvchgDIAEoBxIUCgxzdHJlYW1lcl91aWQYBCAB",
+            "KAQSFQoNc3RyZWFtZXJfbmFtZRgFIAEoCRIXCg9zdHJlYW1lcl9yb29taWQY",
+            "BiABKA0iYQoORGFubWFrdU1lc3NhZ2USDwoHbWVzc2FnZRgBIAEoCRI+Cgxs",
+            "b3R0ZXJ5X3R5cGUYAiABKA4yKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Mb3R0",
+            "ZXJ5RGFubWFrdVR5cGUitAEKEFN1cGVyQ2hhdE1lc3NhZ2USDwoHbWVzc2Fn",
+            "ZRgBIAEoCRINCgVwcmljZRgCIAEoDRIKCgJpZBgDIAEoDRINCgV0b2tlbhgE",
+            "IAEoCRIRCglwcmljZV9jbnkYBSABKA0SEgoKcHJpY2VfY29pbhgGIAEoDRIY",
+            "ChBsYXN0aW5nX3RpbWVfc2VjGAcgASgNEhIKCnN0YXJ0X3RpbWUYCCABKAQS",
+            "EAoIZW5kX3RpbWUYCSABKAQicAoLR2lmdE1lc3NhZ2USDwoHaXNfZ29sZBgB",
+            "IAEoCBISCgp0b3RhbF9jb2luGAIgASgNEg8KB2dpZnRfaWQYAyABKA0SEQoJ",
+            "Z2lmdF9uYW1lGAQgASgJEhgKEGdpZnRfc2luZ2xlX2NvaW4YBSABKA0iUwoR",
+            "V2VsY29tZVZJUE1lc3NhZ2USLwoDdmlwGAEgASgOMiIudk5lcnZlLmJpbGli",
+            "aWxpLmxpdmUuTGl2ZVZpcExldmVsEg0KBWFkbWluGAIgASgIIkYKE1dlbGNv",
+            "bWVHdWFyZE1lc3NhZ2USLwoFZ3VhcmQYASABKA4yIC52TmVydmUuYmlsaWJp",
+            "bGkubGl2ZS5HdWFyZExldmVsIlAKD05ld0d1YXJkTWVzc2FnZRIvCgVsZXZl",
+            "bBgBIAEoDjIgLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkd1YXJkTGV2ZWwSDAoE",
+            "Y29pbhgCIAEoDSIUChJVc2VyQmxvY2tlZE1lc3NhZ2UiFgoUVXNlcktpY2tl",
+            "ZE91dE1lc3NhZ2UqMwoMTGl2ZVZpcExldmVsEgoKBk5PX1ZJUBAAEgsKB01P",
+            "TlRITFkQARIKCgZZRUFSTFkQAio8ChJMb3R0ZXJ5RGFubWFrdVR5cGUSDgoK",
+            "Tk9fTE9UVEVSWRAAEgkKBVNUT1JNEAESCwoHTE9UVEVSWRACKj4KCkd1YXJk",
+            "TGV2ZWwSDAoITk9fR1VBUkQQABIKCgZMRVZFTDEQARIKCgZMRVZFTDIQAhIK",
+            "CgZMRVZFTDMQA0ID+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserMessage), global::VNerve.Bilibili.Live.UserMessage.Parser, new[]{ "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked", "UserKickedOut" }, new[]{ "Payload" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserInfo), global::VNerve.Bilibili.Live.UserInfo.Parser, new[]{ "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "PhoneVerified", "RegularUser" }, new[]{ "Mainvip" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserInfo), global::VNerve.Bilibili.Live.UserInfo.Parser, new[]{ "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "GuardLevel", "PhoneVerified", "RegularUser" }, new[]{ "Mainvip" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.MedalInfo), global::VNerve.Bilibili.Live.MedalInfo.Parser, new[]{ "MedalName", "MedalLevel", "MedalColor", "StreamerUid", "StreamerName", "StreamerRoomid" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.DanmakuMessage), global::VNerve.Bilibili.Live.DanmakuMessage.Parser, new[]{ "Message", "LotteryType", "GuardLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.DanmakuMessage), global::VNerve.Bilibili.Live.DanmakuMessage.Parser, new[]{ "Message", "LotteryType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.SuperChatMessage), global::VNerve.Bilibili.Live.SuperChatMessage.Parser, new[]{ "Message", "Price", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.GiftMessage), global::VNerve.Bilibili.Live.GiftMessage.Parser, new[]{ "IsGold", "TotalCoin", "GiftId", "GiftName", "GiftSingleCoin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeVIPMessage), global::VNerve.Bilibili.Live.WelcomeVIPMessage.Parser, new[]{ "Vip", "Admin" }, null, null, null, null),
@@ -618,6 +617,7 @@ namespace VNerve.Bilibili.Live {
       liveVipLevel_ = other.liveVipLevel_;
       title_ = other.title_;
       medal_ = other.medal_ != null ? other.medal_.Clone() : null;
+      guardLevel_ = other.guardLevel_;
       phoneVerified_ = other.phoneVerified_;
       regularUser_ = other.regularUser_;
       switch (other.MainvipCase) {
@@ -744,8 +744,19 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
+    /// <summary>Field number for the "guard_level" field.</summary>
+    public const int GuardLevelFieldNumber = 11;
+    private int guardLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int GuardLevel {
+      get { return guardLevel_; }
+      set {
+        guardLevel_ = value;
+      }
+    }
+
     /// <summary>Field number for the "phone_verified" field.</summary>
-    public const int PhoneVerifiedFieldNumber = 11;
+    public const int PhoneVerifiedFieldNumber = 12;
     private bool phoneVerified_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PhoneVerified {
@@ -756,7 +767,7 @@ namespace VNerve.Bilibili.Live {
     }
 
     /// <summary>Field number for the "regular_user" field.</summary>
-    public const int RegularUserFieldNumber = 12;
+    public const int RegularUserFieldNumber = 13;
     private bool regularUser_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RegularUser {
@@ -807,6 +818,7 @@ namespace VNerve.Bilibili.Live {
       if (LiveVipLevel != other.LiveVipLevel) return false;
       if (Title != other.Title) return false;
       if (!object.Equals(Medal, other.Medal)) return false;
+      if (GuardLevel != other.GuardLevel) return false;
       if (PhoneVerified != other.PhoneVerified) return false;
       if (RegularUser != other.RegularUser) return false;
       if (MainvipCase != other.MainvipCase) return false;
@@ -826,6 +838,7 @@ namespace VNerve.Bilibili.Live {
       if (LiveVipLevel != global::VNerve.Bilibili.Live.LiveVipLevel.NoVip) hash ^= LiveVipLevel.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (medal_ != null) hash ^= Medal.GetHashCode();
+      if (GuardLevel != 0) hash ^= GuardLevel.GetHashCode();
       if (PhoneVerified != false) hash ^= PhoneVerified.GetHashCode();
       if (RegularUser != false) hash ^= RegularUser.GetHashCode();
       hash ^= (int) mainvipCase_;
@@ -882,12 +895,16 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(82);
         output.WriteMessage(Medal);
       }
-      if (PhoneVerified != false) {
+      if (GuardLevel != 0) {
         output.WriteRawTag(88);
+        output.WriteInt32(GuardLevel);
+      }
+      if (PhoneVerified != false) {
+        output.WriteRawTag(96);
         output.WriteBool(PhoneVerified);
       }
       if (RegularUser != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(RegularUser);
       }
       if (_unknownFields != null) {
@@ -927,6 +944,9 @@ namespace VNerve.Bilibili.Live {
       }
       if (medal_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Medal);
+      }
+      if (GuardLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GuardLevel);
       }
       if (PhoneVerified != false) {
         size += 1 + 1;
@@ -974,6 +994,9 @@ namespace VNerve.Bilibili.Live {
           Medal = new global::VNerve.Bilibili.Live.MedalInfo();
         }
         Medal.MergeFrom(other.Medal);
+      }
+      if (other.GuardLevel != 0) {
+        GuardLevel = other.GuardLevel;
       }
       if (other.PhoneVerified != false) {
         PhoneVerified = other.PhoneVerified;
@@ -1042,10 +1065,14 @@ namespace VNerve.Bilibili.Live {
             break;
           }
           case 88: {
-            PhoneVerified = input.ReadBool();
+            GuardLevel = input.ReadInt32();
             break;
           }
           case 96: {
+            PhoneVerified = input.ReadBool();
+            break;
+          }
+          case 104: {
             RegularUser = input.ReadBool();
             break;
           }
@@ -1351,7 +1378,6 @@ namespace VNerve.Bilibili.Live {
     public DanmakuMessage(DanmakuMessage other) : this() {
       message_ = other.message_;
       lotteryType_ = other.lotteryType_;
-      guardLevel_ = other.guardLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1382,17 +1408,6 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
-    /// <summary>Field number for the "guard_level" field.</summary>
-    public const int GuardLevelFieldNumber = 3;
-    private global::VNerve.Bilibili.Live.GuardLevel guardLevel_ = global::VNerve.Bilibili.Live.GuardLevel.NoGuard;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::VNerve.Bilibili.Live.GuardLevel GuardLevel {
-      get { return guardLevel_; }
-      set {
-        guardLevel_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DanmakuMessage);
@@ -1408,7 +1423,6 @@ namespace VNerve.Bilibili.Live {
       }
       if (Message != other.Message) return false;
       if (LotteryType != other.LotteryType) return false;
-      if (GuardLevel != other.GuardLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1417,7 +1431,6 @@ namespace VNerve.Bilibili.Live {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (LotteryType != global::VNerve.Bilibili.Live.LotteryDanmakuType.NoLottery) hash ^= LotteryType.GetHashCode();
-      if (GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) hash ^= GuardLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1439,10 +1452,6 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(16);
         output.WriteEnum((int) LotteryType);
       }
-      if (GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) GuardLevel);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1456,9 +1465,6 @@ namespace VNerve.Bilibili.Live {
       }
       if (LotteryType != global::VNerve.Bilibili.Live.LotteryDanmakuType.NoLottery) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LotteryType);
-      }
-      if (GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GuardLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1477,9 +1483,6 @@ namespace VNerve.Bilibili.Live {
       if (other.LotteryType != global::VNerve.Bilibili.Live.LotteryDanmakuType.NoLottery) {
         LotteryType = other.LotteryType;
       }
-      if (other.GuardLevel != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) {
-        GuardLevel = other.GuardLevel;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1497,10 +1500,6 @@ namespace VNerve.Bilibili.Live {
           }
           case 16: {
             LotteryType = (global::VNerve.Bilibili.Live.LotteryDanmakuType) input.ReadEnum();
-            break;
-          }
-          case 24: {
-            GuardLevel = (global::VNerve.Bilibili.Live.GuardLevel) input.ReadEnum();
             break;
           }
         }

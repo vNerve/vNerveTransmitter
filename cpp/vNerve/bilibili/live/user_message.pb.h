@@ -682,8 +682,9 @@ class UserInfo :
     kUserLevelBorderColorFieldNumber = 5,
     kLiveVipLevelFieldNumber = 8,
     kAdminFieldNumber = 6,
-    kPhoneVerifiedFieldNumber = 11,
-    kRegularUserFieldNumber = 12,
+    kPhoneVerifiedFieldNumber = 12,
+    kRegularUserFieldNumber = 13,
+    kGuardLevelFieldNumber = 11,
     kMainVipFieldNumber = 7,
   };
   // string name = 2;
@@ -824,7 +825,7 @@ class UserInfo :
   void _internal_set_admin(bool value);
   public:
 
-  // bool phone_verified = 11;
+  // bool phone_verified = 12;
   void clear_phone_verified();
   bool phone_verified() const;
   void set_phone_verified(bool value);
@@ -833,13 +834,22 @@ class UserInfo :
   void _internal_set_phone_verified(bool value);
   public:
 
-  // bool regular_user = 12;
+  // bool regular_user = 13;
   void clear_regular_user();
   bool regular_user() const;
   void set_regular_user(bool value);
   private:
   bool _internal_regular_user() const;
   void _internal_set_regular_user(bool value);
+  public:
+
+  // int32 guard_level = 11;
+  void clear_guard_level();
+  ::PROTOBUF_NAMESPACE_ID::int32 guard_level() const;
+  void set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_guard_level() const;
+  void _internal_set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
   // bool main_vip = 7;
@@ -879,6 +889,7 @@ class UserInfo :
   bool admin_;
   bool phone_verified_;
   bool regular_user_;
+  ::PROTOBUF_NAMESPACE_ID::int32 guard_level_;
   union MainvipUnion {
     MainvipUnion() {}
     bool main_vip_;
@@ -1256,7 +1267,6 @@ class DanmakuMessage :
   enum : int {
     kMessageFieldNumber = 1,
     kLotteryTypeFieldNumber = 2,
-    kGuardLevelFieldNumber = 3,
   };
   // string message = 1;
   void clear_message();
@@ -1292,15 +1302,6 @@ class DanmakuMessage :
   void _internal_set_lottery_type(::vNerve::bilibili::live::LotteryDanmakuType value);
   public:
 
-  // .vNerve.bilibili.live.GuardLevel guard_level = 3;
-  void clear_guard_level();
-  ::vNerve::bilibili::live::GuardLevel guard_level() const;
-  void set_guard_level(::vNerve::bilibili::live::GuardLevel value);
-  private:
-  ::vNerve::bilibili::live::GuardLevel _internal_guard_level() const;
-  void _internal_set_guard_level(::vNerve::bilibili::live::GuardLevel value);
-  public:
-
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.DanmakuMessage)
  private:
   class _Internal;
@@ -1311,7 +1312,6 @@ class DanmakuMessage :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   int lottery_type_;
-  int guard_level_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
 };
@@ -3681,7 +3681,27 @@ inline void UserInfo::set_allocated_medal(::vNerve::bilibili::live::MedalInfo* m
   // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.UserInfo.medal)
 }
 
-// bool phone_verified = 11;
+// int32 guard_level = 11;
+inline void UserInfo::clear_guard_level() {
+  guard_level_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 UserInfo::_internal_guard_level() const {
+  return guard_level_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 UserInfo::guard_level() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.UserInfo.guard_level)
+  return _internal_guard_level();
+}
+inline void UserInfo::_internal_set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  guard_level_ = value;
+}
+inline void UserInfo::set_guard_level(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_guard_level(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.UserInfo.guard_level)
+}
+
+// bool phone_verified = 12;
 inline void UserInfo::clear_phone_verified() {
   phone_verified_ = false;
 }
@@ -3701,7 +3721,7 @@ inline void UserInfo::set_phone_verified(bool value) {
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.UserInfo.phone_verified)
 }
 
-// bool regular_user = 12;
+// bool regular_user = 13;
 inline void UserInfo::clear_regular_user() {
   regular_user_ = false;
 }
@@ -4082,26 +4102,6 @@ inline void DanmakuMessage::_internal_set_lottery_type(::vNerve::bilibili::live:
 inline void DanmakuMessage::set_lottery_type(::vNerve::bilibili::live::LotteryDanmakuType value) {
   _internal_set_lottery_type(value);
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.DanmakuMessage.lottery_type)
-}
-
-// .vNerve.bilibili.live.GuardLevel guard_level = 3;
-inline void DanmakuMessage::clear_guard_level() {
-  guard_level_ = 0;
-}
-inline ::vNerve::bilibili::live::GuardLevel DanmakuMessage::_internal_guard_level() const {
-  return static_cast< ::vNerve::bilibili::live::GuardLevel >(guard_level_);
-}
-inline ::vNerve::bilibili::live::GuardLevel DanmakuMessage::guard_level() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.DanmakuMessage.guard_level)
-  return _internal_guard_level();
-}
-inline void DanmakuMessage::_internal_set_guard_level(::vNerve::bilibili::live::GuardLevel value) {
-  
-  guard_level_ = value;
-}
-inline void DanmakuMessage::set_guard_level(::vNerve::bilibili::live::GuardLevel value) {
-  _internal_set_guard_level(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.DanmakuMessage.guard_level)
 }
 
 // -------------------------------------------------------------------
