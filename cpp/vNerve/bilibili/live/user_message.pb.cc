@@ -335,14 +335,13 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2fuse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::WelcomeVIPMessage, vip_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::WelcomeVIPMessage, admin_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::WelcomeVIPMessage, level_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::WelcomeGuardMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::WelcomeGuardMessage, guard_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::WelcomeGuardMessage, level_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -372,10 +371,10 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 53, -1, sizeof(::vNerve::bilibili::live::SuperChatMessage)},
   { 66, -1, sizeof(::vNerve::bilibili::live::GiftMessage)},
   { 77, -1, sizeof(::vNerve::bilibili::live::WelcomeVIPMessage)},
-  { 84, -1, sizeof(::vNerve::bilibili::live::WelcomeGuardMessage)},
-  { 90, -1, sizeof(::vNerve::bilibili::live::NewGuardMessage)},
-  { 100, -1, sizeof(::vNerve::bilibili::live::UserBlockedMessage)},
-  { 105, -1, sizeof(::vNerve::bilibili::live::UserKickedOutMessage)},
+  { 83, -1, sizeof(::vNerve::bilibili::live::WelcomeGuardMessage)},
+  { 89, -1, sizeof(::vNerve::bilibili::live::NewGuardMessage)},
+  { 99, -1, sizeof(::vNerve::bilibili::live::UserBlockedMessage)},
+  { 104, -1, sizeof(::vNerve::bilibili::live::UserKickedOutMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -432,26 +431,26 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "\001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftMessage\022\017\n"
   "\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007gi"
   "ft_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022\035\n\025single"
-  "_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"S\n\021"
-  "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve."
-  "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001("
-  "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162"
-  " .vNerve.bilibili.live.GuardLevel\"\335\001\n\017Ne"
-  "wGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bi"
-  "libili.live.GuardLevel\022\022\n\ntotal_coin\030\002 \001"
-  "(\r\022\r\n\005count\030\003 \001(\r\022@\n\016duration_level\030\004 \001("
-  "\0162(.vNerve.bilibili.live.GuardDurationLe"
-  "vel\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili."
-  "live.GuardBuyType\"\024\n\022UserBlockedMessage\""
-  "\026\n\024UserKickedOutMessage*;\n\014LiveVipLevel\022"
-  "\n\n\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_V"
-  "IP\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY"
-  "\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel"
-  "\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n"
-  "\n\006LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022"
-  "\007\n\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLeve"
-  "l\022\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n"
-  "\014WEEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
+  "_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"F\n\021"
+  "WelcomeVIPMessage\0221\n\005level\030\001 \001(\0162\".vNerv"
+  "e.bilibili.live.LiveVipLevel\"F\n\023WelcomeG"
+  "uardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bili"
+  "bili.live.GuardLevel\"\335\001\n\017NewGuardMessage"
+  "\022/\n\005level\030\001 \001(\0162 .vNerve.bilibili.live.G"
+  "uardLevel\022\022\n\ntotal_coin\030\002 \001(\r\022\r\n\005count\030\003"
+  " \001(\r\022@\n\016duration_level\030\004 \001(\0162(.vNerve.bi"
+  "libili.live.GuardDurationLevel\0224\n\010buy_ty"
+  "pe\030\005 \001(\0162\".vNerve.bilibili.live.GuardBuy"
+  "Type\"\024\n\022UserBlockedMessage\"\026\n\024UserKicked"
+  "OutMessage*;\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\017"
+  "\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_VIP\020\002*<\n\022Lotte"
+  "ryDanmakuType\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001"
+  "\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020"
+  "\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003*/\n"
+  "\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022\007\n\003BUY\020\001\022\t\n\005R"
+  "ENEW\020\002*J\n\022GuardDurationLevel\022\017\n\013NO_DURAT"
+  "ION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n\014WEEKLY_GUARD"
+  "\020\002B\003\370\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps[1] = {
 };
@@ -471,7 +470,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2348,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2335,
   &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, 11, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -3308,16 +3307,12 @@ WelcomeVIPMessage::WelcomeVIPMessage(const WelcomeVIPMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&vip_, &from.vip_,
-    static_cast<size_t>(reinterpret_cast<char*>(&admin_) -
-    reinterpret_cast<char*>(&vip_)) + sizeof(admin_));
+  level_ = from.level_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.WelcomeVIPMessage)
 }
 
 void WelcomeVIPMessage::SharedCtor() {
-  ::memset(&vip_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&admin_) -
-      reinterpret_cast<char*>(&vip_)) + sizeof(admin_));
+  level_ = 0;
 }
 
 WelcomeVIPMessage::~WelcomeVIPMessage() {
@@ -3350,9 +3345,7 @@ void WelcomeVIPMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&vip_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&admin_) -
-      reinterpret_cast<char*>(&vip_)) + sizeof(admin_));
+  level_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -3364,19 +3357,12 @@ const char* WelcomeVIPMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .vNerve.bilibili.live.LiveVipLevel vip = 1;
+      // .vNerve.bilibili.live.LiveVipLevel level = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          _internal_set_vip(static_cast<::vNerve::bilibili::live::LiveVipLevel>(val));
-        } else goto handle_unusual;
-        continue;
-      // bool admin = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          admin_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
+          _internal_set_level(static_cast<::vNerve::bilibili::live::LiveVipLevel>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -3405,17 +3391,11 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .vNerve.bilibili.live.LiveVipLevel vip = 1;
-  if (this->vip() != 0) {
+  // .vNerve.bilibili.live.LiveVipLevel level = 1;
+  if (this->level() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_vip(), target);
-  }
-
-  // bool admin = 2;
-  if (this->admin() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_admin(), target);
+      1, this->_internal_level(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3434,15 +3414,10 @@ size_t WelcomeVIPMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .vNerve.bilibili.live.LiveVipLevel vip = 1;
-  if (this->vip() != 0) {
+  // .vNerve.bilibili.live.LiveVipLevel level = 1;
+  if (this->level() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_vip());
-  }
-
-  // bool admin = 2;
-  if (this->admin() != 0) {
-    total_size += 1 + 1;
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_level());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3476,11 +3451,8 @@ void WelcomeVIPMessage::MergeFrom(const WelcomeVIPMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.vip() != 0) {
-    _internal_set_vip(from._internal_vip());
-  }
-  if (from.admin() != 0) {
-    _internal_set_admin(from._internal_admin());
+  if (from.level() != 0) {
+    _internal_set_level(from._internal_level());
   }
 }
 
@@ -3505,8 +3477,7 @@ bool WelcomeVIPMessage::IsInitialized() const {
 void WelcomeVIPMessage::InternalSwap(WelcomeVIPMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(vip_, other->vip_);
-  swap(admin_, other->admin_);
+  swap(level_, other->level_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata WelcomeVIPMessage::GetMetadata() const {
@@ -3538,12 +3509,12 @@ WelcomeGuardMessage::WelcomeGuardMessage(const WelcomeGuardMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  guard_ = from.guard_;
+  level_ = from.level_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.WelcomeGuardMessage)
 }
 
 void WelcomeGuardMessage::SharedCtor() {
-  guard_ = 0;
+  level_ = 0;
 }
 
 WelcomeGuardMessage::~WelcomeGuardMessage() {
@@ -3576,7 +3547,7 @@ void WelcomeGuardMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  guard_ = 0;
+  level_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -3588,12 +3559,12 @@ const char* WelcomeGuardMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAME
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .vNerve.bilibili.live.GuardLevel guard = 1;
+      // .vNerve.bilibili.live.GuardLevel level = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
-          _internal_set_guard(static_cast<::vNerve::bilibili::live::GuardLevel>(val));
+          _internal_set_level(static_cast<::vNerve::bilibili::live::GuardLevel>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -3622,11 +3593,11 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .vNerve.bilibili.live.GuardLevel guard = 1;
-  if (this->guard() != 0) {
+  // .vNerve.bilibili.live.GuardLevel level = 1;
+  if (this->level() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_guard(), target);
+      1, this->_internal_level(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3645,10 +3616,10 @@ size_t WelcomeGuardMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .vNerve.bilibili.live.GuardLevel guard = 1;
-  if (this->guard() != 0) {
+  // .vNerve.bilibili.live.GuardLevel level = 1;
+  if (this->level() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_guard());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_level());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3682,8 +3653,8 @@ void WelcomeGuardMessage::MergeFrom(const WelcomeGuardMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.guard() != 0) {
-    _internal_set_guard(from._internal_guard());
+  if (from.level() != 0) {
+    _internal_set_level(from._internal_level());
   }
 }
 
@@ -3708,7 +3679,7 @@ bool WelcomeGuardMessage::IsInitialized() const {
 void WelcomeGuardMessage::InternalSwap(WelcomeGuardMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(guard_, other->guard_);
+  swap(level_, other->level_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata WelcomeGuardMessage::GetMetadata() const {

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='vNerve.bilibili.live',
   syntax='proto3',
   serialized_options=b'\370\001\001',
-  serialized_pb=b'\n\'vNerve/bilibili/live/user_message.proto\x12\x14vNerve.bilibili.live\"\xb9\x04\n\x0bUserMessage\x12,\n\x04user\x18\x01 \x01(\x0b\x32\x1e.vNerve.bilibili.live.UserInfo\x12\x37\n\x07\x64\x61nmaku\x18\x02 \x01(\x0b\x32$.vNerve.bilibili.live.DanmakuMessageH\x00\x12\x31\n\x04gift\x18\x03 \x01(\x0b\x32!.vNerve.bilibili.live.GiftMessageH\x00\x12<\n\nsuper_chat\x18\x04 \x01(\x0b\x32&.vNerve.bilibili.live.SuperChatMessageH\x00\x12:\n\tnew_guard\x18\x05 \x01(\x0b\x32%.vNerve.bilibili.live.NewGuardMessageH\x00\x12>\n\x0bwelcome_vip\x18\x06 \x01(\x0b\x32\'.vNerve.bilibili.live.WelcomeVIPMessageH\x00\x12\x42\n\rwelcome_guard\x18\x07 \x01(\x0b\x32).vNerve.bilibili.live.WelcomeGuardMessageH\x00\x12@\n\x0cuser_blocked\x18\x10 \x01(\x0b\x32(.vNerve.bilibili.live.UserBlockedMessageH\x00\x12\x45\n\x0fuser_kicked_out\x18\x11 \x01(\x0b\x32*.vNerve.bilibili.live.UserKickedOutMessageH\x00\x42\t\n\x07payload\"\x9a\x03\n\x08UserInfo\x12\x0b\n\x03uid\x18\x01 \x01(\x04\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\navatar_url\x18\x03 \x01(\t\x12\x12\n\nuser_level\x18\x04 \x01(\x05\x12\x1f\n\x17user_level_border_color\x18\x05 \x01(\x07\x12\x0f\n\x05\x61\x64min\x18\x06 \x01(\x08H\x00\x12\x12\n\x08main_vip\x18\x07 \x01(\x08H\x01\x12:\n\x0elive_vip_level\x18\x08 \x01(\x0e\x32\".vNerve.bilibili.live.LiveVipLevel\x12\r\n\x05title\x18\t \x01(\t\x12.\n\x05medal\x18\n \x01(\x0b\x32\x1f.vNerve.bilibili.live.MedalInfo\x12\x35\n\x0bguard_level\x18\x0b \x01(\x0e\x32 .vNerve.bilibili.live.GuardLevel\x12\x16\n\x0ephone_verified\x18\x0c \x01(\x08\x12\x14\n\x0cregular_user\x18\r \x01(\x08\x42\x10\n\x0e\x61\x64min_optionalB\x13\n\x11main_vip_optional\"\x8f\x01\n\tMedalInfo\x12\x12\n\nmedal_name\x18\x01 \x01(\t\x12\x13\n\x0bmedal_level\x18\x02 \x01(\r\x12\x13\n\x0bmedal_color\x18\x03 \x01(\x07\x12\x14\n\x0cstreamer_uid\x18\x04 \x01(\x04\x12\x15\n\rstreamer_name\x18\x05 \x01(\t\x12\x17\n\x0fstreamer_roomid\x18\x06 \x01(\r\"a\n\x0e\x44\x61nmakuMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12>\n\x0clottery_type\x18\x02 \x01(\x0e\x32(.vNerve.bilibili.live.LotteryDanmakuType\"\xa5\x01\n\x10SuperChatMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\r\x12\r\n\x05token\x18\x04 \x01(\t\x12\x11\n\tprice_cny\x18\x05 \x01(\r\x12\x12\n\nprice_coin\x18\x06 \x01(\r\x12\x18\n\x10lasting_time_sec\x18\x07 \x01(\r\x12\x12\n\nstart_time\x18\x08 \x01(\x04\x12\x10\n\x08\x65nd_time\x18\t \x01(\x04\"\x84\x01\n\x0bGiftMessage\x12\x0f\n\x07is_gold\x18\x01 \x01(\x08\x12\x12\n\ntotal_coin\x18\x02 \x01(\r\x12\x0f\n\x07gift_id\x18\x03 \x01(\r\x12\x11\n\tgift_name\x18\x04 \x01(\t\x12\x1d\n\x15single_price_coin_raw\x18\x05 \x01(\r\x12\r\n\x05\x63ount\x18\x06 \x01(\r\"S\n\x11WelcomeVIPMessage\x12/\n\x03vip\x18\x01 \x01(\x0e\x32\".vNerve.bilibili.live.LiveVipLevel\x12\r\n\x05\x61\x64min\x18\x02 \x01(\x08\"F\n\x13WelcomeGuardMessage\x12/\n\x05guard\x18\x01 \x01(\x0e\x32 .vNerve.bilibili.live.GuardLevel\"\xdd\x01\n\x0fNewGuardMessage\x12/\n\x05level\x18\x01 \x01(\x0e\x32 .vNerve.bilibili.live.GuardLevel\x12\x12\n\ntotal_coin\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\x12@\n\x0e\x64uration_level\x18\x04 \x01(\x0e\x32(.vNerve.bilibili.live.GuardDurationLevel\x12\x34\n\x08\x62uy_type\x18\x05 \x01(\x0e\x32\".vNerve.bilibili.live.GuardBuyType\"\x14\n\x12UserBlockedMessage\"\x16\n\x14UserKickedOutMessage*;\n\x0cLiveVipLevel\x12\n\n\x06NO_VIP\x10\x00\x12\x0f\n\x0bMONTHLY_VIP\x10\x01\x12\x0e\n\nYEARLY_VIP\x10\x02*<\n\x12LotteryDanmakuType\x12\x0e\n\nNO_LOTTERY\x10\x00\x12\t\n\x05STORM\x10\x01\x12\x0b\n\x07LOTTERY\x10\x02*>\n\nGuardLevel\x12\x0c\n\x08NO_GUARD\x10\x00\x12\n\n\x06LEVEL1\x10\x01\x12\n\n\x06LEVEL2\x10\x02\x12\n\n\x06LEVEL3\x10\x03*/\n\x0cGuardBuyType\x12\x0b\n\x07NO_TYPE\x10\x00\x12\x07\n\x03\x42UY\x10\x01\x12\t\n\x05RENEW\x10\x02*J\n\x12GuardDurationLevel\x12\x0f\n\x0bNO_DURATION\x10\x00\x12\x11\n\rMONTHLY_GUARD\x10\x01\x12\x10\n\x0cWEEKLY_GUARD\x10\x02\x42\x03\xf8\x01\x01\x62\x06proto3'
+  serialized_pb=b'\n\'vNerve/bilibili/live/user_message.proto\x12\x14vNerve.bilibili.live\"\xb9\x04\n\x0bUserMessage\x12,\n\x04user\x18\x01 \x01(\x0b\x32\x1e.vNerve.bilibili.live.UserInfo\x12\x37\n\x07\x64\x61nmaku\x18\x02 \x01(\x0b\x32$.vNerve.bilibili.live.DanmakuMessageH\x00\x12\x31\n\x04gift\x18\x03 \x01(\x0b\x32!.vNerve.bilibili.live.GiftMessageH\x00\x12<\n\nsuper_chat\x18\x04 \x01(\x0b\x32&.vNerve.bilibili.live.SuperChatMessageH\x00\x12:\n\tnew_guard\x18\x05 \x01(\x0b\x32%.vNerve.bilibili.live.NewGuardMessageH\x00\x12>\n\x0bwelcome_vip\x18\x06 \x01(\x0b\x32\'.vNerve.bilibili.live.WelcomeVIPMessageH\x00\x12\x42\n\rwelcome_guard\x18\x07 \x01(\x0b\x32).vNerve.bilibili.live.WelcomeGuardMessageH\x00\x12@\n\x0cuser_blocked\x18\x10 \x01(\x0b\x32(.vNerve.bilibili.live.UserBlockedMessageH\x00\x12\x45\n\x0fuser_kicked_out\x18\x11 \x01(\x0b\x32*.vNerve.bilibili.live.UserKickedOutMessageH\x00\x42\t\n\x07payload\"\x9a\x03\n\x08UserInfo\x12\x0b\n\x03uid\x18\x01 \x01(\x04\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\navatar_url\x18\x03 \x01(\t\x12\x12\n\nuser_level\x18\x04 \x01(\x05\x12\x1f\n\x17user_level_border_color\x18\x05 \x01(\x07\x12\x0f\n\x05\x61\x64min\x18\x06 \x01(\x08H\x00\x12\x12\n\x08main_vip\x18\x07 \x01(\x08H\x01\x12:\n\x0elive_vip_level\x18\x08 \x01(\x0e\x32\".vNerve.bilibili.live.LiveVipLevel\x12\r\n\x05title\x18\t \x01(\t\x12.\n\x05medal\x18\n \x01(\x0b\x32\x1f.vNerve.bilibili.live.MedalInfo\x12\x35\n\x0bguard_level\x18\x0b \x01(\x0e\x32 .vNerve.bilibili.live.GuardLevel\x12\x16\n\x0ephone_verified\x18\x0c \x01(\x08\x12\x14\n\x0cregular_user\x18\r \x01(\x08\x42\x10\n\x0e\x61\x64min_optionalB\x13\n\x11main_vip_optional\"\x8f\x01\n\tMedalInfo\x12\x12\n\nmedal_name\x18\x01 \x01(\t\x12\x13\n\x0bmedal_level\x18\x02 \x01(\r\x12\x13\n\x0bmedal_color\x18\x03 \x01(\x07\x12\x14\n\x0cstreamer_uid\x18\x04 \x01(\x04\x12\x15\n\rstreamer_name\x18\x05 \x01(\t\x12\x17\n\x0fstreamer_roomid\x18\x06 \x01(\r\"a\n\x0e\x44\x61nmakuMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12>\n\x0clottery_type\x18\x02 \x01(\x0e\x32(.vNerve.bilibili.live.LotteryDanmakuType\"\xa5\x01\n\x10SuperChatMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\r\x12\r\n\x05token\x18\x04 \x01(\t\x12\x11\n\tprice_cny\x18\x05 \x01(\r\x12\x12\n\nprice_coin\x18\x06 \x01(\r\x12\x18\n\x10lasting_time_sec\x18\x07 \x01(\r\x12\x12\n\nstart_time\x18\x08 \x01(\x04\x12\x10\n\x08\x65nd_time\x18\t \x01(\x04\"\x84\x01\n\x0bGiftMessage\x12\x0f\n\x07is_gold\x18\x01 \x01(\x08\x12\x12\n\ntotal_coin\x18\x02 \x01(\r\x12\x0f\n\x07gift_id\x18\x03 \x01(\r\x12\x11\n\tgift_name\x18\x04 \x01(\t\x12\x1d\n\x15single_price_coin_raw\x18\x05 \x01(\r\x12\r\n\x05\x63ount\x18\x06 \x01(\r\"F\n\x11WelcomeVIPMessage\x12\x31\n\x05level\x18\x01 \x01(\x0e\x32\".vNerve.bilibili.live.LiveVipLevel\"F\n\x13WelcomeGuardMessage\x12/\n\x05level\x18\x01 \x01(\x0e\x32 .vNerve.bilibili.live.GuardLevel\"\xdd\x01\n\x0fNewGuardMessage\x12/\n\x05level\x18\x01 \x01(\x0e\x32 .vNerve.bilibili.live.GuardLevel\x12\x12\n\ntotal_coin\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\x12@\n\x0e\x64uration_level\x18\x04 \x01(\x0e\x32(.vNerve.bilibili.live.GuardDurationLevel\x12\x34\n\x08\x62uy_type\x18\x05 \x01(\x0e\x32\".vNerve.bilibili.live.GuardBuyType\"\x14\n\x12UserBlockedMessage\"\x16\n\x14UserKickedOutMessage*;\n\x0cLiveVipLevel\x12\n\n\x06NO_VIP\x10\x00\x12\x0f\n\x0bMONTHLY_VIP\x10\x01\x12\x0e\n\nYEARLY_VIP\x10\x02*<\n\x12LotteryDanmakuType\x12\x0e\n\nNO_LOTTERY\x10\x00\x12\t\n\x05STORM\x10\x01\x12\x0b\n\x07LOTTERY\x10\x02*>\n\nGuardLevel\x12\x0c\n\x08NO_GUARD\x10\x00\x12\n\n\x06LEVEL1\x10\x01\x12\n\n\x06LEVEL2\x10\x02\x12\n\n\x06LEVEL3\x10\x03*/\n\x0cGuardBuyType\x12\x0b\n\x07NO_TYPE\x10\x00\x12\x07\n\x03\x42UY\x10\x01\x12\t\n\x05RENEW\x10\x02*J\n\x12GuardDurationLevel\x12\x0f\n\x0bNO_DURATION\x10\x00\x12\x11\n\rMONTHLY_GUARD\x10\x01\x12\x10\n\x0cWEEKLY_GUARD\x10\x02\x42\x03\xf8\x01\x01\x62\x06proto3'
 )
 
 _LIVEVIPLEVEL = _descriptor.EnumDescriptor(
@@ -43,8 +43,8 @@ _LIVEVIPLEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2025,
-  serialized_end=2084,
+  serialized_start=2012,
+  serialized_end=2071,
 )
 _sym_db.RegisterEnumDescriptor(_LIVEVIPLEVEL)
 
@@ -70,8 +70,8 @@ _LOTTERYDANMAKUTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2086,
-  serialized_end=2146,
+  serialized_start=2073,
+  serialized_end=2133,
 )
 _sym_db.RegisterEnumDescriptor(_LOTTERYDANMAKUTYPE)
 
@@ -101,8 +101,8 @@ _GUARDLEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2148,
-  serialized_end=2210,
+  serialized_start=2135,
+  serialized_end=2197,
 )
 _sym_db.RegisterEnumDescriptor(_GUARDLEVEL)
 
@@ -128,8 +128,8 @@ _GUARDBUYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2212,
-  serialized_end=2259,
+  serialized_start=2199,
+  serialized_end=2246,
 )
 _sym_db.RegisterEnumDescriptor(_GUARDBUYTYPE)
 
@@ -155,8 +155,8 @@ _GUARDDURATIONLEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2261,
-  serialized_end=2335,
+  serialized_start=2248,
+  serialized_end=2322,
 )
 _sym_db.RegisterEnumDescriptor(_GUARDDURATIONLEVEL)
 
@@ -649,16 +649,9 @@ _WELCOMEVIPMESSAGE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='vip', full_name='vNerve.bilibili.live.WelcomeVIPMessage.vip', index=0,
+      name='level', full_name='vNerve.bilibili.live.WelcomeVIPMessage.level', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='admin', full_name='vNerve.bilibili.live.WelcomeVIPMessage.admin', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -675,7 +668,7 @@ _WELCOMEVIPMESSAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1598,
-  serialized_end=1681,
+  serialized_end=1668,
 )
 
 
@@ -687,7 +680,7 @@ _WELCOMEGUARDMESSAGE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='guard', full_name='vNerve.bilibili.live.WelcomeGuardMessage.guard', index=0,
+      name='level', full_name='vNerve.bilibili.live.WelcomeGuardMessage.level', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -705,8 +698,8 @@ _WELCOMEGUARDMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1683,
-  serialized_end=1753,
+  serialized_start=1670,
+  serialized_end=1740,
 )
 
 
@@ -764,8 +757,8 @@ _NEWGUARDMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1756,
-  serialized_end=1977,
+  serialized_start=1743,
+  serialized_end=1964,
 )
 
 
@@ -788,8 +781,8 @@ _USERBLOCKEDMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1979,
-  serialized_end=1999,
+  serialized_start=1966,
+  serialized_end=1986,
 )
 
 
@@ -812,8 +805,8 @@ _USERKICKEDOUTMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2001,
-  serialized_end=2023,
+  serialized_start=1988,
+  serialized_end=2010,
 )
 
 _USERMESSAGE.fields_by_name['user'].message_type = _USERINFO
@@ -859,8 +852,8 @@ _USERINFO.oneofs_by_name['main_vip_optional'].fields.append(
   _USERINFO.fields_by_name['main_vip'])
 _USERINFO.fields_by_name['main_vip'].containing_oneof = _USERINFO.oneofs_by_name['main_vip_optional']
 _DANMAKUMESSAGE.fields_by_name['lottery_type'].enum_type = _LOTTERYDANMAKUTYPE
-_WELCOMEVIPMESSAGE.fields_by_name['vip'].enum_type = _LIVEVIPLEVEL
-_WELCOMEGUARDMESSAGE.fields_by_name['guard'].enum_type = _GUARDLEVEL
+_WELCOMEVIPMESSAGE.fields_by_name['level'].enum_type = _LIVEVIPLEVEL
+_WELCOMEGUARDMESSAGE.fields_by_name['level'].enum_type = _GUARDLEVEL
 _NEWGUARDMESSAGE.fields_by_name['level'].enum_type = _GUARDLEVEL
 _NEWGUARDMESSAGE.fields_by_name['duration_level'].enum_type = _GUARDDURATIONLEVEL
 _NEWGUARDMESSAGE.fields_by_name['buy_type'].enum_type = _GUARDBUYTYPE

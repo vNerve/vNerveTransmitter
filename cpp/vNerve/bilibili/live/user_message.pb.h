@@ -1994,25 +1994,15 @@ class WelcomeVIPMessage :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kVipFieldNumber = 1,
-    kAdminFieldNumber = 2,
+    kLevelFieldNumber = 1,
   };
-  // .vNerve.bilibili.live.LiveVipLevel vip = 1;
-  void clear_vip();
-  ::vNerve::bilibili::live::LiveVipLevel vip() const;
-  void set_vip(::vNerve::bilibili::live::LiveVipLevel value);
+  // .vNerve.bilibili.live.LiveVipLevel level = 1;
+  void clear_level();
+  ::vNerve::bilibili::live::LiveVipLevel level() const;
+  void set_level(::vNerve::bilibili::live::LiveVipLevel value);
   private:
-  ::vNerve::bilibili::live::LiveVipLevel _internal_vip() const;
-  void _internal_set_vip(::vNerve::bilibili::live::LiveVipLevel value);
-  public:
-
-  // bool admin = 2;
-  void clear_admin();
-  bool admin() const;
-  void set_admin(bool value);
-  private:
-  bool _internal_admin() const;
-  void _internal_set_admin(bool value);
+  ::vNerve::bilibili::live::LiveVipLevel _internal_level() const;
+  void _internal_set_level(::vNerve::bilibili::live::LiveVipLevel value);
   public:
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.WelcomeVIPMessage)
@@ -2023,8 +2013,7 @@ class WelcomeVIPMessage :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  int vip_;
-  bool admin_;
+  int level_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
 };
@@ -2156,15 +2145,15 @@ class WelcomeGuardMessage :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGuardFieldNumber = 1,
+    kLevelFieldNumber = 1,
   };
-  // .vNerve.bilibili.live.GuardLevel guard = 1;
-  void clear_guard();
-  ::vNerve::bilibili::live::GuardLevel guard() const;
-  void set_guard(::vNerve::bilibili::live::GuardLevel value);
+  // .vNerve.bilibili.live.GuardLevel level = 1;
+  void clear_level();
+  ::vNerve::bilibili::live::GuardLevel level() const;
+  void set_level(::vNerve::bilibili::live::GuardLevel value);
   private:
-  ::vNerve::bilibili::live::GuardLevel _internal_guard() const;
-  void _internal_set_guard(::vNerve::bilibili::live::GuardLevel value);
+  ::vNerve::bilibili::live::GuardLevel _internal_level() const;
+  void _internal_set_level(::vNerve::bilibili::live::GuardLevel value);
   public:
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.WelcomeGuardMessage)
@@ -2175,7 +2164,7 @@ class WelcomeGuardMessage :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  int guard_;
+  int level_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
 };
@@ -4708,68 +4697,48 @@ inline void GiftMessage::set_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
 
 // WelcomeVIPMessage
 
-// .vNerve.bilibili.live.LiveVipLevel vip = 1;
-inline void WelcomeVIPMessage::clear_vip() {
-  vip_ = 0;
+// .vNerve.bilibili.live.LiveVipLevel level = 1;
+inline void WelcomeVIPMessage::clear_level() {
+  level_ = 0;
 }
-inline ::vNerve::bilibili::live::LiveVipLevel WelcomeVIPMessage::_internal_vip() const {
-  return static_cast< ::vNerve::bilibili::live::LiveVipLevel >(vip_);
+inline ::vNerve::bilibili::live::LiveVipLevel WelcomeVIPMessage::_internal_level() const {
+  return static_cast< ::vNerve::bilibili::live::LiveVipLevel >(level_);
 }
-inline ::vNerve::bilibili::live::LiveVipLevel WelcomeVIPMessage::vip() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.WelcomeVIPMessage.vip)
-  return _internal_vip();
+inline ::vNerve::bilibili::live::LiveVipLevel WelcomeVIPMessage::level() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.WelcomeVIPMessage.level)
+  return _internal_level();
 }
-inline void WelcomeVIPMessage::_internal_set_vip(::vNerve::bilibili::live::LiveVipLevel value) {
+inline void WelcomeVIPMessage::_internal_set_level(::vNerve::bilibili::live::LiveVipLevel value) {
   
-  vip_ = value;
+  level_ = value;
 }
-inline void WelcomeVIPMessage::set_vip(::vNerve::bilibili::live::LiveVipLevel value) {
-  _internal_set_vip(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.WelcomeVIPMessage.vip)
-}
-
-// bool admin = 2;
-inline void WelcomeVIPMessage::clear_admin() {
-  admin_ = false;
-}
-inline bool WelcomeVIPMessage::_internal_admin() const {
-  return admin_;
-}
-inline bool WelcomeVIPMessage::admin() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.WelcomeVIPMessage.admin)
-  return _internal_admin();
-}
-inline void WelcomeVIPMessage::_internal_set_admin(bool value) {
-  
-  admin_ = value;
-}
-inline void WelcomeVIPMessage::set_admin(bool value) {
-  _internal_set_admin(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.WelcomeVIPMessage.admin)
+inline void WelcomeVIPMessage::set_level(::vNerve::bilibili::live::LiveVipLevel value) {
+  _internal_set_level(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.WelcomeVIPMessage.level)
 }
 
 // -------------------------------------------------------------------
 
 // WelcomeGuardMessage
 
-// .vNerve.bilibili.live.GuardLevel guard = 1;
-inline void WelcomeGuardMessage::clear_guard() {
-  guard_ = 0;
+// .vNerve.bilibili.live.GuardLevel level = 1;
+inline void WelcomeGuardMessage::clear_level() {
+  level_ = 0;
 }
-inline ::vNerve::bilibili::live::GuardLevel WelcomeGuardMessage::_internal_guard() const {
-  return static_cast< ::vNerve::bilibili::live::GuardLevel >(guard_);
+inline ::vNerve::bilibili::live::GuardLevel WelcomeGuardMessage::_internal_level() const {
+  return static_cast< ::vNerve::bilibili::live::GuardLevel >(level_);
 }
-inline ::vNerve::bilibili::live::GuardLevel WelcomeGuardMessage::guard() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.WelcomeGuardMessage.guard)
-  return _internal_guard();
+inline ::vNerve::bilibili::live::GuardLevel WelcomeGuardMessage::level() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.WelcomeGuardMessage.level)
+  return _internal_level();
 }
-inline void WelcomeGuardMessage::_internal_set_guard(::vNerve::bilibili::live::GuardLevel value) {
+inline void WelcomeGuardMessage::_internal_set_level(::vNerve::bilibili::live::GuardLevel value) {
   
-  guard_ = value;
+  level_ = value;
 }
-inline void WelcomeGuardMessage::set_guard(::vNerve::bilibili::live::GuardLevel value) {
-  _internal_set_guard(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.WelcomeGuardMessage.guard)
+inline void WelcomeGuardMessage::set_level(::vNerve::bilibili::live::GuardLevel value) {
+  _internal_set_level(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.WelcomeGuardMessage.level)
 }
 
 // -------------------------------------------------------------------

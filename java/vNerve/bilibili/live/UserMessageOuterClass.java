@@ -8680,21 +8680,15 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-     * @return The enum numeric value on the wire for vip.
+     * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    int getVipValue();
+    int getLevelValue();
     /**
-     * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-     * @return The vip.
+     * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+     * @return The level.
      */
-    vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getVip();
-
-    /**
-     * <code>bool admin = 2;</code>
-     * @return The admin.
-     */
-    boolean getAdmin();
+    vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getLevel();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.WelcomeVIPMessage}
@@ -8709,7 +8703,7 @@ public final class UserMessageOuterClass {
       super(builder);
     }
     private WelcomeVIPMessage() {
-      vip_ = 0;
+      level_ = 0;
     }
 
     @java.lang.Override
@@ -8745,12 +8739,7 @@ public final class UserMessageOuterClass {
             case 8: {
               int rawValue = input.readEnum();
 
-              vip_ = rawValue;
-              break;
-            }
-            case 16: {
-
-              admin_ = input.readBool();
+              level_ = rawValue;
               break;
             }
             default: {
@@ -8785,33 +8774,23 @@ public final class UserMessageOuterClass {
               vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage.class, vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage.Builder.class);
     }
 
-    public static final int VIP_FIELD_NUMBER = 1;
-    private int vip_;
+    public static final int LEVEL_FIELD_NUMBER = 1;
+    private int level_;
     /**
-     * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-     * @return The enum numeric value on the wire for vip.
+     * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getVipValue() {
-      return vip_;
+    public int getLevelValue() {
+      return level_;
     }
     /**
-     * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-     * @return The vip.
+     * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+     * @return The level.
      */
-    public vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getVip() {
+    public vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getLevel() {
       @SuppressWarnings("deprecation")
-      vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel result = vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.valueOf(vip_);
+      vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel result = vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.valueOf(level_);
       return result == null ? vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.UNRECOGNIZED : result;
-    }
-
-    public static final int ADMIN_FIELD_NUMBER = 2;
-    private boolean admin_;
-    /**
-     * <code>bool admin = 2;</code>
-     * @return The admin.
-     */
-    public boolean getAdmin() {
-      return admin_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8828,11 +8807,8 @@ public final class UserMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (vip_ != vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.NO_VIP.getNumber()) {
-        output.writeEnum(1, vip_);
-      }
-      if (admin_ != false) {
-        output.writeBool(2, admin_);
+      if (level_ != vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.NO_VIP.getNumber()) {
+        output.writeEnum(1, level_);
       }
       unknownFields.writeTo(output);
     }
@@ -8843,13 +8819,9 @@ public final class UserMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (vip_ != vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.NO_VIP.getNumber()) {
+      if (level_ != vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.NO_VIP.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, vip_);
-      }
-      if (admin_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, admin_);
+          .computeEnumSize(1, level_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8866,9 +8838,7 @@ public final class UserMessageOuterClass {
       }
       vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage other = (vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage) obj;
 
-      if (vip_ != other.vip_) return false;
-      if (getAdmin()
-          != other.getAdmin()) return false;
+      if (level_ != other.level_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8880,11 +8850,8 @@ public final class UserMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VIP_FIELD_NUMBER;
-      hash = (53 * hash) + vip_;
-      hash = (37 * hash) + ADMIN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getAdmin());
+      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + level_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9018,9 +8985,7 @@ public final class UserMessageOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        vip_ = 0;
-
-        admin_ = false;
+        level_ = 0;
 
         return this;
       }
@@ -9048,8 +9013,7 @@ public final class UserMessageOuterClass {
       @java.lang.Override
       public vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage buildPartial() {
         vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage result = new vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage(this);
-        result.vip_ = vip_;
-        result.admin_ = admin_;
+        result.level_ = level_;
         onBuilt();
         return result;
       }
@@ -9098,11 +9062,8 @@ public final class UserMessageOuterClass {
 
       public Builder mergeFrom(vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage other) {
         if (other == vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage.getDefaultInstance()) return this;
-        if (other.vip_ != 0) {
-          setVipValue(other.getVipValue());
-        }
-        if (other.getAdmin() != false) {
-          setAdmin(other.getAdmin());
+        if (other.level_ != 0) {
+          setLevelValue(other.getLevelValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9133,84 +9094,54 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private int vip_ = 0;
+      private int level_ = 0;
       /**
-       * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-       * @return The enum numeric value on the wire for vip.
+       * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getVipValue() {
-        return vip_;
+      public int getLevelValue() {
+        return level_;
       }
       /**
-       * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-       * @param value The enum numeric value on the wire for vip to set.
+       * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+       * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
        */
-      public Builder setVipValue(int value) {
-        vip_ = value;
+      public Builder setLevelValue(int value) {
+        level_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-       * @return The vip.
+       * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+       * @return The level.
        */
-      public vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getVip() {
+      public vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getLevel() {
         @SuppressWarnings("deprecation")
-        vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel result = vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.valueOf(vip_);
+        vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel result = vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.valueOf(level_);
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.UNRECOGNIZED : result;
       }
       /**
-       * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
-       * @param value The vip to set.
+       * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
+       * @param value The level to set.
        * @return This builder for chaining.
        */
-      public Builder setVip(vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel value) {
+      public Builder setLevel(vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        vip_ = value.getNumber();
+        level_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.LiveVipLevel vip = 1;</code>
+       * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearVip() {
+      public Builder clearLevel() {
         
-        vip_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean admin_ ;
-      /**
-       * <code>bool admin = 2;</code>
-       * @return The admin.
-       */
-      public boolean getAdmin() {
-        return admin_;
-      }
-      /**
-       * <code>bool admin = 2;</code>
-       * @param value The admin to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAdmin(boolean value) {
-        
-        admin_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool admin = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearAdmin() {
-        
-        admin_ = false;
+        level_ = 0;
         onChanged();
         return this;
       }
@@ -9272,15 +9203,15 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-     * @return The enum numeric value on the wire for guard.
+     * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    int getGuardValue();
+    int getLevelValue();
     /**
-     * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-     * @return The guard.
+     * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+     * @return The level.
      */
-    vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuard();
+    vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getLevel();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.WelcomeGuardMessage}
@@ -9295,7 +9226,7 @@ public final class UserMessageOuterClass {
       super(builder);
     }
     private WelcomeGuardMessage() {
-      guard_ = 0;
+      level_ = 0;
     }
 
     @java.lang.Override
@@ -9331,7 +9262,7 @@ public final class UserMessageOuterClass {
             case 8: {
               int rawValue = input.readEnum();
 
-              guard_ = rawValue;
+              level_ = rawValue;
               break;
             }
             default: {
@@ -9366,22 +9297,22 @@ public final class UserMessageOuterClass {
               vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.class, vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.Builder.class);
     }
 
-    public static final int GUARD_FIELD_NUMBER = 1;
-    private int guard_;
+    public static final int LEVEL_FIELD_NUMBER = 1;
+    private int level_;
     /**
-     * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-     * @return The enum numeric value on the wire for guard.
+     * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+     * @return The enum numeric value on the wire for level.
      */
-    public int getGuardValue() {
-      return guard_;
+    public int getLevelValue() {
+      return level_;
     }
     /**
-     * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-     * @return The guard.
+     * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+     * @return The level.
      */
-    public vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuard() {
+    public vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getLevel() {
       @SuppressWarnings("deprecation")
-      vNerve.bilibili.live.UserMessageOuterClass.GuardLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.valueOf(guard_);
+      vNerve.bilibili.live.UserMessageOuterClass.GuardLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.valueOf(level_);
       return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
     }
 
@@ -9399,8 +9330,8 @@ public final class UserMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (guard_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
-        output.writeEnum(1, guard_);
+      if (level_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
+        output.writeEnum(1, level_);
       }
       unknownFields.writeTo(output);
     }
@@ -9411,9 +9342,9 @@ public final class UserMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (guard_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
+      if (level_ != vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.NO_GUARD.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, guard_);
+          .computeEnumSize(1, level_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9430,7 +9361,7 @@ public final class UserMessageOuterClass {
       }
       vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage other = (vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage) obj;
 
-      if (guard_ != other.guard_) return false;
+      if (level_ != other.level_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9442,8 +9373,8 @@ public final class UserMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + GUARD_FIELD_NUMBER;
-      hash = (53 * hash) + guard_;
+      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + level_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9577,7 +9508,7 @@ public final class UserMessageOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        guard_ = 0;
+        level_ = 0;
 
         return this;
       }
@@ -9605,7 +9536,7 @@ public final class UserMessageOuterClass {
       @java.lang.Override
       public vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage buildPartial() {
         vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage result = new vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage(this);
-        result.guard_ = guard_;
+        result.level_ = level_;
         onBuilt();
         return result;
       }
@@ -9654,8 +9585,8 @@ public final class UserMessageOuterClass {
 
       public Builder mergeFrom(vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage other) {
         if (other == vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.getDefaultInstance()) return this;
-        if (other.guard_ != 0) {
-          setGuardValue(other.getGuardValue());
+        if (other.level_ != 0) {
+          setLevelValue(other.getLevelValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9686,54 +9617,54 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private int guard_ = 0;
+      private int level_ = 0;
       /**
-       * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-       * @return The enum numeric value on the wire for guard.
+       * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+       * @return The enum numeric value on the wire for level.
        */
-      public int getGuardValue() {
-        return guard_;
+      public int getLevelValue() {
+        return level_;
       }
       /**
-       * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-       * @param value The enum numeric value on the wire for guard to set.
+       * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+       * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
        */
-      public Builder setGuardValue(int value) {
-        guard_ = value;
+      public Builder setLevelValue(int value) {
+        level_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-       * @return The guard.
+       * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+       * @return The level.
        */
-      public vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuard() {
+      public vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getLevel() {
         @SuppressWarnings("deprecation")
-        vNerve.bilibili.live.UserMessageOuterClass.GuardLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.valueOf(guard_);
+        vNerve.bilibili.live.UserMessageOuterClass.GuardLevel result = vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.valueOf(level_);
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
       }
       /**
-       * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
-       * @param value The guard to set.
+       * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
+       * @param value The level to set.
        * @return This builder for chaining.
        */
-      public Builder setGuard(vNerve.bilibili.live.UserMessageOuterClass.GuardLevel value) {
+      public Builder setLevel(vNerve.bilibili.live.UserMessageOuterClass.GuardLevel value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        guard_ = value.getNumber();
+        level_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.GuardLevel guard = 1;</code>
+       * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGuard() {
+      public Builder clearLevel() {
         
-        guard_ = 0;
+        level_ = 0;
         onChanged();
         return this;
       }
@@ -11614,26 +11545,26 @@ public final class UserMessageOuterClass {
       "\001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftMessage\022\017\n" +
       "\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007gi" +
       "ft_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022\035\n\025single" +
-      "_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"S\n\021" +
-      "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve." +
-      "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(" +
-      "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162" +
-      " .vNerve.bilibili.live.GuardLevel\"\335\001\n\017Ne" +
-      "wGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bi" +
-      "libili.live.GuardLevel\022\022\n\ntotal_coin\030\002 \001" +
-      "(\r\022\r\n\005count\030\003 \001(\r\022@\n\016duration_level\030\004 \001(" +
-      "\0162(.vNerve.bilibili.live.GuardDurationLe" +
-      "vel\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili." +
-      "live.GuardBuyType\"\024\n\022UserBlockedMessage\"" +
-      "\026\n\024UserKickedOutMessage*;\n\014LiveVipLevel\022" +
-      "\n\n\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_V" +
-      "IP\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY" +
-      "\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel" +
-      "\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n" +
-      "\n\006LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022" +
-      "\007\n\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLeve" +
-      "l\022\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n" +
-      "\014WEEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
+      "_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"F\n\021" +
+      "WelcomeVIPMessage\0221\n\005level\030\001 \001(\0162\".vNerv" +
+      "e.bilibili.live.LiveVipLevel\"F\n\023WelcomeG" +
+      "uardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bili" +
+      "bili.live.GuardLevel\"\335\001\n\017NewGuardMessage" +
+      "\022/\n\005level\030\001 \001(\0162 .vNerve.bilibili.live.G" +
+      "uardLevel\022\022\n\ntotal_coin\030\002 \001(\r\022\r\n\005count\030\003" +
+      " \001(\r\022@\n\016duration_level\030\004 \001(\0162(.vNerve.bi" +
+      "libili.live.GuardDurationLevel\0224\n\010buy_ty" +
+      "pe\030\005 \001(\0162\".vNerve.bilibili.live.GuardBuy" +
+      "Type\"\024\n\022UserBlockedMessage\"\026\n\024UserKicked" +
+      "OutMessage*;\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\017" +
+      "\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_VIP\020\002*<\n\022Lotte" +
+      "ryDanmakuType\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001" +
+      "\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020" +
+      "\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003*/\n" +
+      "\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022\007\n\003BUY\020\001\022\t\n\005R" +
+      "ENEW\020\002*J\n\022GuardDurationLevel\022\017\n\013NO_DURAT" +
+      "ION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n\014WEEKLY_GUARD" +
+      "\020\002B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11680,13 +11611,13 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_WelcomeVIPMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_WelcomeVIPMessage_descriptor,
-        new java.lang.String[] { "Vip", "Admin", });
+        new java.lang.String[] { "Level", });
     internal_static_vNerve_bilibili_live_WelcomeGuardMessage_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_vNerve_bilibili_live_WelcomeGuardMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_WelcomeGuardMessage_descriptor,
-        new java.lang.String[] { "Guard", });
+        new java.lang.String[] { "Level", });
     internal_static_vNerve_bilibili_live_NewGuardMessage_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_vNerve_bilibili_live_NewGuardMessage_fieldAccessorTable = new

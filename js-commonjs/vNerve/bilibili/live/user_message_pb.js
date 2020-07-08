@@ -2532,8 +2532,7 @@ proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.toObject = function(opt_i
  */
 proto.vNerve.bilibili.live.WelcomeVIPMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    vip: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    admin: jspb.Message.getBooleanFieldWithDefault(msg, 2, false)
+    level: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -2572,11 +2571,7 @@ proto.vNerve.bilibili.live.WelcomeVIPMessage.deserializeBinaryFromReader = funct
     switch (field) {
     case 1:
       var value = /** @type {!proto.vNerve.bilibili.live.LiveVipLevel} */ (reader.readEnum());
-      msg.setVip(value);
-      break;
-    case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
-      msg.setAdmin(value);
+      msg.setLevel(value);
       break;
     default:
       reader.skipField();
@@ -2607,17 +2602,10 @@ proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.serializeBinary = functio
  */
 proto.vNerve.bilibili.live.WelcomeVIPMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getVip();
+  f = message.getLevel();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
-      f
-    );
-  }
-  f = message.getAdmin();
-  if (f) {
-    writer.writeBool(
-      2,
       f
     );
   }
@@ -2625,10 +2613,10 @@ proto.vNerve.bilibili.live.WelcomeVIPMessage.serializeBinaryToWriter = function(
 
 
 /**
- * optional LiveVipLevel vip = 1;
+ * optional LiveVipLevel level = 1;
  * @return {!proto.vNerve.bilibili.live.LiveVipLevel}
  */
-proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.getVip = function() {
+proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.getLevel = function() {
   return /** @type {!proto.vNerve.bilibili.live.LiveVipLevel} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -2637,26 +2625,8 @@ proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.getVip = function() {
  * @param {!proto.vNerve.bilibili.live.LiveVipLevel} value
  * @return {!proto.vNerve.bilibili.live.WelcomeVIPMessage} returns this
  */
-proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.setVip = function(value) {
+proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.setLevel = function(value) {
   return jspb.Message.setProto3EnumField(this, 1, value);
-};
-
-
-/**
- * optional bool admin = 2;
- * @return {boolean}
- */
-proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.getAdmin = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 2, false));
-};
-
-
-/**
- * @param {boolean} value
- * @return {!proto.vNerve.bilibili.live.WelcomeVIPMessage} returns this
- */
-proto.vNerve.bilibili.live.WelcomeVIPMessage.prototype.setAdmin = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 2, value);
 };
 
 
@@ -2692,7 +2662,7 @@ proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.toObject = function(opt
  */
 proto.vNerve.bilibili.live.WelcomeGuardMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    guard: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    level: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -2731,7 +2701,7 @@ proto.vNerve.bilibili.live.WelcomeGuardMessage.deserializeBinaryFromReader = fun
     switch (field) {
     case 1:
       var value = /** @type {!proto.vNerve.bilibili.live.GuardLevel} */ (reader.readEnum());
-      msg.setGuard(value);
+      msg.setLevel(value);
       break;
     default:
       reader.skipField();
@@ -2762,7 +2732,7 @@ proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.serializeBinary = funct
  */
 proto.vNerve.bilibili.live.WelcomeGuardMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getGuard();
+  f = message.getLevel();
   if (f !== 0.0) {
     writer.writeEnum(
       1,
@@ -2773,10 +2743,10 @@ proto.vNerve.bilibili.live.WelcomeGuardMessage.serializeBinaryToWriter = functio
 
 
 /**
- * optional GuardLevel guard = 1;
+ * optional GuardLevel level = 1;
  * @return {!proto.vNerve.bilibili.live.GuardLevel}
  */
-proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.getGuard = function() {
+proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.getLevel = function() {
   return /** @type {!proto.vNerve.bilibili.live.GuardLevel} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
@@ -2785,7 +2755,7 @@ proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.getGuard = function() {
  * @param {!proto.vNerve.bilibili.live.GuardLevel} value
  * @return {!proto.vNerve.bilibili.live.WelcomeGuardMessage} returns this
  */
-proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.setGuard = function(value) {
+proto.vNerve.bilibili.live.WelcomeGuardMessage.prototype.setLevel = function(value) {
   return jspb.Message.setProto3EnumField(this, 1, value);
 };
 
