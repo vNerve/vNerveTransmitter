@@ -93,12 +93,11 @@ message GiftMessage {
 }
 
 message WelcomeVIPMessage {
-  LiveVipLevel vip = 1;
-  bool admin = 2;
+  LiveVipLevel level = 1;
 }
 
 message WelcomeGuardMessage {
-  GuardLevel guard = 1;
+  GuardLevel level = 1;
 }
 
 enum GuardLevel {
