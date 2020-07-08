@@ -14,7 +14,6 @@ message UserMessage {
     WelcomeVIPMessage welcome_vip = 6;
     WelcomeGuardMessage welcome_guard = 7;
     UserBlockedMessage user_blocked = 16;
-    UserKickedOutMessage user_kicked_out = 17;
   }
 }
 
@@ -128,9 +127,5 @@ message NewGuardMessage {
 }
 
 message UserBlockedMessage {
-  // Just empty.
-}
-
-message UserKickedOutMessage {
   // Just empty.
 }
