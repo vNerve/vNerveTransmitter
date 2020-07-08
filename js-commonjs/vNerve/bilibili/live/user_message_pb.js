@@ -2824,7 +2824,7 @@ proto.vNerve.bilibili.live.NewGuardMessage.toObject = function(includeInstance, 
   var f, obj = {
     level: jspb.Message.getFieldWithDefault(msg, 1, 0),
     totalCoin: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    num: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    count: jspb.Message.getFieldWithDefault(msg, 3, 0),
     durationLevel: jspb.Message.getFieldWithDefault(msg, 4, 0),
     buyType: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
@@ -2873,7 +2873,7 @@ proto.vNerve.bilibili.live.NewGuardMessage.deserializeBinaryFromReader = functio
       break;
     case 3:
       var value = /** @type {number} */ (reader.readUint32());
-      msg.setNum(value);
+      msg.setCount(value);
       break;
     case 4:
       var value = /** @type {!proto.vNerve.bilibili.live.GuardDurationLevel} */ (reader.readEnum());
@@ -2926,7 +2926,7 @@ proto.vNerve.bilibili.live.NewGuardMessage.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getNum();
+  f = message.getCount();
   if (f !== 0) {
     writer.writeUint32(
       3,
@@ -2987,10 +2987,10 @@ proto.vNerve.bilibili.live.NewGuardMessage.prototype.setTotalCoin = function(val
 
 
 /**
- * optional uint32 num = 3;
+ * optional uint32 count = 3;
  * @return {number}
  */
-proto.vNerve.bilibili.live.NewGuardMessage.prototype.getNum = function() {
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.getCount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
@@ -2999,7 +2999,7 @@ proto.vNerve.bilibili.live.NewGuardMessage.prototype.getNum = function() {
  * @param {number} value
  * @return {!proto.vNerve.bilibili.live.NewGuardMessage} returns this
  */
-proto.vNerve.bilibili.live.NewGuardMessage.prototype.setNum = function(value) {
+proto.vNerve.bilibili.live.NewGuardMessage.prototype.setCount = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 

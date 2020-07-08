@@ -350,7 +350,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2fuse
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, level_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, total_coin_),
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, num_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, count_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, duration_level_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::NewGuardMessage, buy_type_),
   ~0u,  // no _has_bits_
@@ -436,22 +436,22 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve."
   "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001("
   "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162"
-  " .vNerve.bilibili.live.GuardLevel\"\333\001\n\017Ne"
+  " .vNerve.bilibili.live.GuardLevel\"\335\001\n\017Ne"
   "wGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bi"
   "libili.live.GuardLevel\022\022\n\ntotal_coin\030\002 \001"
-  "(\r\022\013\n\003num\030\003 \001(\r\022@\n\016duration_level\030\004 \001(\0162"
-  "(.vNerve.bilibili.live.GuardDurationLeve"
-  "l\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili.li"
-  "ve.GuardBuyType\"\024\n\022UserBlockedMessage\"\026\n"
-  "\024UserKickedOutMessage*;\n\014LiveVipLevel\022\n\n"
-  "\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_VIP"
-  "\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY\020\000"
-  "\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel\022\014"
-  "\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006"
-  "LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022\007\n"
-  "\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLevel\022"
-  "\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n\014W"
-  "EEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
+  "(\r\022\r\n\005count\030\003 \001(\r\022@\n\016duration_level\030\004 \001("
+  "\0162(.vNerve.bilibili.live.GuardDurationLe"
+  "vel\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili."
+  "live.GuardBuyType\"\024\n\022UserBlockedMessage\""
+  "\026\n\024UserKickedOutMessage*;\n\014LiveVipLevel\022"
+  "\n\n\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_V"
+  "IP\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY"
+  "\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel"
+  "\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n"
+  "\n\006LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022"
+  "\007\n\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLeve"
+  "l\022\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n"
+  "\014WEEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps[1] = {
 };
@@ -471,7 +471,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2346,
+  &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, "vNerve/bilibili/live/user_message.proto", 2348,
   &descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto_deps, 11, 0,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, 11, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -3811,10 +3811,10 @@ const char* NewGuardMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 num = 3;
+      // uint32 count = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          num_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3873,10 +3873,10 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_total_coin(), target);
   }
 
-  // uint32 num = 3;
-  if (this->num() != 0) {
+  // uint32 count = 3;
+  if (this->count() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_num(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_count(), target);
   }
 
   // .vNerve.bilibili.live.GuardDurationLevel duration_level = 4;
@@ -3922,11 +3922,11 @@ size_t NewGuardMessage::ByteSizeLong() const {
         this->_internal_total_coin());
   }
 
-  // uint32 num = 3;
-  if (this->num() != 0) {
+  // uint32 count = 3;
+  if (this->count() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_num());
+        this->_internal_count());
   }
 
   // .vNerve.bilibili.live.GuardDurationLevel duration_level = 4;
@@ -3978,8 +3978,8 @@ void NewGuardMessage::MergeFrom(const NewGuardMessage& from) {
   if (from.total_coin() != 0) {
     _internal_set_total_coin(from._internal_total_coin());
   }
-  if (from.num() != 0) {
-    _internal_set_num(from._internal_num());
+  if (from.count() != 0) {
+    _internal_set_count(from._internal_count());
   }
   if (from.duration_level() != 0) {
     _internal_set_duration_level(from._internal_duration_level());
@@ -4012,7 +4012,7 @@ void NewGuardMessage::InternalSwap(NewGuardMessage* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(level_, other->level_);
   swap(total_coin_, other->total_coin_);
-  swap(num_, other->num_);
+  swap(count_, other->count_);
   swap(duration_level_, other->duration_level_);
   swap(buy_type_, other->buy_type_);
 }

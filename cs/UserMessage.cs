@@ -62,21 +62,21 @@ namespace VNerve.Bilibili.Live {
             "GAUgASgNEg0KBWNvdW50GAYgASgNIlMKEVdlbGNvbWVWSVBNZXNzYWdlEi8K",
             "A3ZpcBgBIAEoDjIiLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkxpdmVWaXBMZXZl",
             "bBINCgVhZG1pbhgCIAEoCCJGChNXZWxjb21lR3VhcmRNZXNzYWdlEi8KBWd1",
-            "YXJkGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRMZXZlbCLb",
+            "YXJkGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRMZXZlbCLd",
             "AQoPTmV3R3VhcmRNZXNzYWdlEi8KBWxldmVsGAEgASgOMiAudk5lcnZlLmJp",
-            "bGliaWxpLmxpdmUuR3VhcmRMZXZlbBISCgp0b3RhbF9jb2luGAIgASgNEgsK",
-            "A251bRgDIAEoDRJACg5kdXJhdGlvbl9sZXZlbBgEIAEoDjIoLnZOZXJ2ZS5i",
-            "aWxpYmlsaS5saXZlLkd1YXJkRHVyYXRpb25MZXZlbBI0CghidXlfdHlwZRgF",
-            "IAEoDjIiLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkd1YXJkQnV5VHlwZSIUChJV",
-            "c2VyQmxvY2tlZE1lc3NhZ2UiFgoUVXNlcktpY2tlZE91dE1lc3NhZ2UqOwoM",
-            "TGl2ZVZpcExldmVsEgoKBk5PX1ZJUBAAEg8KC01PTlRITFlfVklQEAESDgoK",
-            "WUVBUkxZX1ZJUBACKjwKEkxvdHRlcnlEYW5tYWt1VHlwZRIOCgpOT19MT1RU",
-            "RVJZEAASCQoFU1RPUk0QARILCgdMT1RURVJZEAIqPgoKR3VhcmRMZXZlbBIM",
-            "CghOT19HVUFSRBAAEgoKBkxFVkVMMRABEgoKBkxFVkVMMhACEgoKBkxFVkVM",
-            "MxADKi8KDEd1YXJkQnV5VHlwZRILCgdOT19UWVBFEAASBwoDQlVZEAESCQoF",
-            "UkVORVcQAipKChJHdWFyZER1cmF0aW9uTGV2ZWwSDwoLTk9fRFVSQVRJT04Q",
-            "ABIRCg1NT05USExZX0dVQVJEEAESEAoMV0VFS0xZX0dVQVJEEAJCA/gBAWIG",
-            "cHJvdG8z"));
+            "bGliaWxpLmxpdmUuR3VhcmRMZXZlbBISCgp0b3RhbF9jb2luGAIgASgNEg0K",
+            "BWNvdW50GAMgASgNEkAKDmR1cmF0aW9uX2xldmVsGAQgASgOMigudk5lcnZl",
+            "LmJpbGliaWxpLmxpdmUuR3VhcmREdXJhdGlvbkxldmVsEjQKCGJ1eV90eXBl",
+            "GAUgASgOMiIudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRCdXlUeXBlIhQK",
+            "ElVzZXJCbG9ja2VkTWVzc2FnZSIWChRVc2VyS2lja2VkT3V0TWVzc2FnZSo7",
+            "CgxMaXZlVmlwTGV2ZWwSCgoGTk9fVklQEAASDwoLTU9OVEhMWV9WSVAQARIO",
+            "CgpZRUFSTFlfVklQEAIqPAoSTG90dGVyeURhbm1ha3VUeXBlEg4KCk5PX0xP",
+            "VFRFUlkQABIJCgVTVE9STRABEgsKB0xPVFRFUlkQAio+CgpHdWFyZExldmVs",
+            "EgwKCE5PX0dVQVJEEAASCgoGTEVWRUwxEAESCgoGTEVWRUwyEAISCgoGTEVW",
+            "RUwzEAMqLwoMR3VhcmRCdXlUeXBlEgsKB05PX1RZUEUQABIHCgNCVVkQARIJ",
+            "CgVSRU5FVxACKkoKEkd1YXJkRHVyYXRpb25MZXZlbBIPCgtOT19EVVJBVElP",
+            "ThAAEhEKDU1PTlRITFlfR1VBUkQQARIQCgxXRUVLTFlfR1VBUkQQAkID+AEB",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), typeof(global::VNerve.Bilibili.Live.GuardBuyType), typeof(global::VNerve.Bilibili.Live.GuardDurationLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -88,7 +88,7 @@ namespace VNerve.Bilibili.Live {
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.GiftMessage), global::VNerve.Bilibili.Live.GiftMessage.Parser, new[]{ "IsGold", "TotalCoin", "GiftId", "GiftName", "SinglePriceCoinRaw", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeVIPMessage), global::VNerve.Bilibili.Live.WelcomeVIPMessage.Parser, new[]{ "Vip", "Admin" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeGuardMessage), global::VNerve.Bilibili.Live.WelcomeGuardMessage.Parser, new[]{ "Guard" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.NewGuardMessage), global::VNerve.Bilibili.Live.NewGuardMessage.Parser, new[]{ "Level", "TotalCoin", "Num", "DurationLevel", "BuyType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.NewGuardMessage), global::VNerve.Bilibili.Live.NewGuardMessage.Parser, new[]{ "Level", "TotalCoin", "Count", "DurationLevel", "BuyType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserBlockedMessage), global::VNerve.Bilibili.Live.UserBlockedMessage.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserKickedOutMessage), global::VNerve.Bilibili.Live.UserKickedOutMessage.Parser, null, null, null, null, null)
           }));
@@ -2463,7 +2463,7 @@ namespace VNerve.Bilibili.Live {
     public NewGuardMessage(NewGuardMessage other) : this() {
       level_ = other.level_;
       totalCoin_ = other.totalCoin_;
-      num_ = other.num_;
+      count_ = other.count_;
       durationLevel_ = other.durationLevel_;
       buyType_ = other.buyType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2496,14 +2496,14 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
-    /// <summary>Field number for the "num" field.</summary>
-    public const int NumFieldNumber = 3;
-    private uint num_;
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 3;
+    private uint count_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Num {
-      get { return num_; }
+    public uint Count {
+      get { return count_; }
       set {
-        num_ = value;
+        count_ = value;
       }
     }
 
@@ -2544,7 +2544,7 @@ namespace VNerve.Bilibili.Live {
       }
       if (Level != other.Level) return false;
       if (TotalCoin != other.TotalCoin) return false;
-      if (Num != other.Num) return false;
+      if (Count != other.Count) return false;
       if (DurationLevel != other.DurationLevel) return false;
       if (BuyType != other.BuyType) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2555,7 +2555,7 @@ namespace VNerve.Bilibili.Live {
       int hash = 1;
       if (Level != global::VNerve.Bilibili.Live.GuardLevel.NoGuard) hash ^= Level.GetHashCode();
       if (TotalCoin != 0) hash ^= TotalCoin.GetHashCode();
-      if (Num != 0) hash ^= Num.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
       if (DurationLevel != global::VNerve.Bilibili.Live.GuardDurationLevel.NoDuration) hash ^= DurationLevel.GetHashCode();
       if (BuyType != global::VNerve.Bilibili.Live.GuardBuyType.NoType) hash ^= BuyType.GetHashCode();
       if (_unknownFields != null) {
@@ -2579,9 +2579,9 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(16);
         output.WriteUInt32(TotalCoin);
       }
-      if (Num != 0) {
+      if (Count != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(Num);
+        output.WriteUInt32(Count);
       }
       if (DurationLevel != global::VNerve.Bilibili.Live.GuardDurationLevel.NoDuration) {
         output.WriteRawTag(32);
@@ -2605,8 +2605,8 @@ namespace VNerve.Bilibili.Live {
       if (TotalCoin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalCoin);
       }
-      if (Num != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Num);
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
       if (DurationLevel != global::VNerve.Bilibili.Live.GuardDurationLevel.NoDuration) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DurationLevel);
@@ -2631,8 +2631,8 @@ namespace VNerve.Bilibili.Live {
       if (other.TotalCoin != 0) {
         TotalCoin = other.TotalCoin;
       }
-      if (other.Num != 0) {
-        Num = other.Num;
+      if (other.Count != 0) {
+        Count = other.Count;
       }
       if (other.DurationLevel != global::VNerve.Bilibili.Live.GuardDurationLevel.NoDuration) {
         DurationLevel = other.DurationLevel;
@@ -2660,7 +2660,7 @@ namespace VNerve.Bilibili.Live {
             break;
           }
           case 24: {
-            Num = input.ReadUInt32();
+            Count = input.ReadUInt32();
             break;
           }
           case 32: {

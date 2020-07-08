@@ -2309,7 +2309,7 @@ class NewGuardMessage :
   enum : int {
     kLevelFieldNumber = 1,
     kTotalCoinFieldNumber = 2,
-    kNumFieldNumber = 3,
+    kCountFieldNumber = 3,
     kDurationLevelFieldNumber = 4,
     kBuyTypeFieldNumber = 5,
   };
@@ -2331,13 +2331,13 @@ class NewGuardMessage :
   void _internal_set_total_coin(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // uint32 num = 3;
-  void clear_num();
-  ::PROTOBUF_NAMESPACE_ID::uint32 num() const;
-  void set_num(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  // uint32 count = 3;
+  void clear_count();
+  ::PROTOBUF_NAMESPACE_ID::uint32 count() const;
+  void set_count(::PROTOBUF_NAMESPACE_ID::uint32 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_num() const;
-  void _internal_set_num(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_count() const;
+  void _internal_set_count(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
   // .vNerve.bilibili.live.GuardDurationLevel duration_level = 4;
@@ -2368,7 +2368,7 @@ class NewGuardMessage :
   typedef void DestructorSkippable_;
   int level_;
   ::PROTOBUF_NAMESPACE_ID::uint32 total_coin_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 num_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 count_;
   int duration_level_;
   int buy_type_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4816,24 +4816,24 @@ inline void NewGuardMessage::set_total_coin(::PROTOBUF_NAMESPACE_ID::uint32 valu
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.NewGuardMessage.total_coin)
 }
 
-// uint32 num = 3;
-inline void NewGuardMessage::clear_num() {
-  num_ = 0u;
+// uint32 count = 3;
+inline void NewGuardMessage::clear_count() {
+  count_ = 0u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 NewGuardMessage::_internal_num() const {
-  return num_;
+inline ::PROTOBUF_NAMESPACE_ID::uint32 NewGuardMessage::_internal_count() const {
+  return count_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 NewGuardMessage::num() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.NewGuardMessage.num)
-  return _internal_num();
+inline ::PROTOBUF_NAMESPACE_ID::uint32 NewGuardMessage::count() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.NewGuardMessage.count)
+  return _internal_count();
 }
-inline void NewGuardMessage::_internal_set_num(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void NewGuardMessage::_internal_set_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   
-  num_ = value;
+  count_ = value;
 }
-inline void NewGuardMessage::set_num(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  _internal_set_num(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.NewGuardMessage.num)
+inline void NewGuardMessage::set_count(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_count(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.NewGuardMessage.count)
 }
 
 // .vNerve.bilibili.live.GuardDurationLevel duration_level = 4;

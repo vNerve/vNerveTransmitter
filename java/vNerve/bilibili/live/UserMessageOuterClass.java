@@ -9812,10 +9812,10 @@ public final class UserMessageOuterClass {
     int getTotalCoin();
 
     /**
-     * <code>uint32 num = 3;</code>
-     * @return The num.
+     * <code>uint32 count = 3;</code>
+     * @return The count.
      */
-    int getNum();
+    int getCount();
 
     /**
      * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
@@ -9900,7 +9900,7 @@ public final class UserMessageOuterClass {
             }
             case 24: {
 
-              num_ = input.readUInt32();
+              count_ = input.readUInt32();
               break;
             }
             case 32: {
@@ -9976,14 +9976,14 @@ public final class UserMessageOuterClass {
       return totalCoin_;
     }
 
-    public static final int NUM_FIELD_NUMBER = 3;
-    private int num_;
+    public static final int COUNT_FIELD_NUMBER = 3;
+    private int count_;
     /**
-     * <code>uint32 num = 3;</code>
-     * @return The num.
+     * <code>uint32 count = 3;</code>
+     * @return The count.
      */
-    public int getNum() {
-      return num_;
+    public int getCount() {
+      return count_;
     }
 
     public static final int DURATION_LEVEL_FIELD_NUMBER = 4;
@@ -10044,8 +10044,8 @@ public final class UserMessageOuterClass {
       if (totalCoin_ != 0) {
         output.writeUInt32(2, totalCoin_);
       }
-      if (num_ != 0) {
-        output.writeUInt32(3, num_);
+      if (count_ != 0) {
+        output.writeUInt32(3, count_);
       }
       if (durationLevel_ != vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.NO_DURATION.getNumber()) {
         output.writeEnum(4, durationLevel_);
@@ -10070,9 +10070,9 @@ public final class UserMessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, totalCoin_);
       }
-      if (num_ != 0) {
+      if (count_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, num_);
+          .computeUInt32Size(3, count_);
       }
       if (durationLevel_ != vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.NO_DURATION.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -10100,8 +10100,8 @@ public final class UserMessageOuterClass {
       if (level_ != other.level_) return false;
       if (getTotalCoin()
           != other.getTotalCoin()) return false;
-      if (getNum()
-          != other.getNum()) return false;
+      if (getCount()
+          != other.getCount()) return false;
       if (durationLevel_ != other.durationLevel_) return false;
       if (buyType_ != other.buyType_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -10119,8 +10119,8 @@ public final class UserMessageOuterClass {
       hash = (53 * hash) + level_;
       hash = (37 * hash) + TOTAL_COIN_FIELD_NUMBER;
       hash = (53 * hash) + getTotalCoin();
-      hash = (37 * hash) + NUM_FIELD_NUMBER;
-      hash = (53 * hash) + getNum();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
       hash = (37 * hash) + DURATION_LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + durationLevel_;
       hash = (37 * hash) + BUY_TYPE_FIELD_NUMBER;
@@ -10262,7 +10262,7 @@ public final class UserMessageOuterClass {
 
         totalCoin_ = 0;
 
-        num_ = 0;
+        count_ = 0;
 
         durationLevel_ = 0;
 
@@ -10296,7 +10296,7 @@ public final class UserMessageOuterClass {
         vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage result = new vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage(this);
         result.level_ = level_;
         result.totalCoin_ = totalCoin_;
-        result.num_ = num_;
+        result.count_ = count_;
         result.durationLevel_ = durationLevel_;
         result.buyType_ = buyType_;
         onBuilt();
@@ -10353,8 +10353,8 @@ public final class UserMessageOuterClass {
         if (other.getTotalCoin() != 0) {
           setTotalCoin(other.getTotalCoin());
         }
-        if (other.getNum() != 0) {
-          setNum(other.getNum());
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
         }
         if (other.durationLevel_ != 0) {
           setDurationLevelValue(other.getDurationLevelValue());
@@ -10473,32 +10473,32 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private int num_ ;
+      private int count_ ;
       /**
-       * <code>uint32 num = 3;</code>
-       * @return The num.
+       * <code>uint32 count = 3;</code>
+       * @return The count.
        */
-      public int getNum() {
-        return num_;
+      public int getCount() {
+        return count_;
       }
       /**
-       * <code>uint32 num = 3;</code>
-       * @param value The num to set.
+       * <code>uint32 count = 3;</code>
+       * @param value The count to set.
        * @return This builder for chaining.
        */
-      public Builder setNum(int value) {
+      public Builder setCount(int value) {
         
-        num_ = value;
+        count_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 num = 3;</code>
+       * <code>uint32 count = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNum() {
+      public Builder clearCount() {
         
-        num_ = 0;
+        count_ = 0;
         onChanged();
         return this;
       }
@@ -11618,22 +11618,22 @@ public final class UserMessageOuterClass {
       "WelcomeVIPMessage\022/\n\003vip\030\001 \001(\0162\".vNerve." +
       "bilibili.live.LiveVipLevel\022\r\n\005admin\030\002 \001(" +
       "\010\"F\n\023WelcomeGuardMessage\022/\n\005guard\030\001 \001(\0162" +
-      " .vNerve.bilibili.live.GuardLevel\"\333\001\n\017Ne" +
+      " .vNerve.bilibili.live.GuardLevel\"\335\001\n\017Ne" +
       "wGuardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bi" +
       "libili.live.GuardLevel\022\022\n\ntotal_coin\030\002 \001" +
-      "(\r\022\013\n\003num\030\003 \001(\r\022@\n\016duration_level\030\004 \001(\0162" +
-      "(.vNerve.bilibili.live.GuardDurationLeve" +
-      "l\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili.li" +
-      "ve.GuardBuyType\"\024\n\022UserBlockedMessage\"\026\n" +
-      "\024UserKickedOutMessage*;\n\014LiveVipLevel\022\n\n" +
-      "\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_VIP" +
-      "\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY\020\000" +
-      "\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel\022\014" +
-      "\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006" +
-      "LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022\007\n" +
-      "\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLevel\022" +
-      "\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n\014W" +
-      "EEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
+      "(\r\022\r\n\005count\030\003 \001(\r\022@\n\016duration_level\030\004 \001(" +
+      "\0162(.vNerve.bilibili.live.GuardDurationLe" +
+      "vel\0224\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili." +
+      "live.GuardBuyType\"\024\n\022UserBlockedMessage\"" +
+      "\026\n\024UserKickedOutMessage*;\n\014LiveVipLevel\022" +
+      "\n\n\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_V" +
+      "IP\020\002*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY" +
+      "\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel" +
+      "\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n" +
+      "\n\006LEVEL3\020\003*/\n\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022" +
+      "\007\n\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022GuardDurationLeve" +
+      "l\022\017\n\013NO_DURATION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n" +
+      "\014WEEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11692,7 +11692,7 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_NewGuardMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_NewGuardMessage_descriptor,
-        new java.lang.String[] { "Level", "TotalCoin", "Num", "DurationLevel", "BuyType", });
+        new java.lang.String[] { "Level", "TotalCoin", "Count", "DurationLevel", "BuyType", });
     internal_static_vNerve_bilibili_live_UserBlockedMessage_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_vNerve_bilibili_live_UserBlockedMessage_fieldAccessorTable = new
