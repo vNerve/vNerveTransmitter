@@ -712,21 +712,6 @@ public final class UserMessageOuterClass {
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder();
 
-    /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-     * @return Whether the userKickedOut field is set.
-     */
-    boolean hasUserKickedOut();
-    /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-     * @return The userKickedOut.
-     */
-    vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getUserKickedOut();
-    /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-     */
-    vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder getUserKickedOutOrBuilder();
-
     public vNerve.bilibili.live.UserMessageOuterClass.UserMessage.PayloadCase getPayloadCase();
   }
   /**
@@ -885,20 +870,6 @@ public final class UserMessageOuterClass {
               payloadCase_ = 16;
               break;
             }
-            case 138: {
-              vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder subBuilder = null;
-              if (payloadCase_ == 17) {
-                subBuilder = ((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_).toBuilder();
-              }
-              payload_ =
-                  input.readMessage(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
-                payload_ = subBuilder.buildPartial();
-              }
-              payloadCase_ = 17;
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -943,7 +914,6 @@ public final class UserMessageOuterClass {
       WELCOME_VIP(6),
       WELCOME_GUARD(7),
       USER_BLOCKED(16),
-      USER_KICKED_OUT(17),
       PAYLOAD_NOT_SET(0);
       private final int value;
       private PayloadCase(int value) {
@@ -968,7 +938,6 @@ public final class UserMessageOuterClass {
           case 6: return WELCOME_VIP;
           case 7: return WELCOME_GUARD;
           case 16: return USER_BLOCKED;
-          case 17: return USER_KICKED_OUT;
           case 0: return PAYLOAD_NOT_SET;
           default: return null;
         }
@@ -1203,34 +1172,6 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
     }
 
-    public static final int USER_KICKED_OUT_FIELD_NUMBER = 17;
-    /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-     * @return Whether the userKickedOut field is set.
-     */
-    public boolean hasUserKickedOut() {
-      return payloadCase_ == 17;
-    }
-    /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-     * @return The userKickedOut.
-     */
-    public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getUserKickedOut() {
-      if (payloadCase_ == 17) {
-         return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
-      }
-      return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-    }
-    /**
-     * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-     */
-    public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder getUserKickedOutOrBuilder() {
-      if (payloadCase_ == 17) {
-         return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
-      }
-      return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1268,9 +1209,6 @@ public final class UserMessageOuterClass {
       }
       if (payloadCase_ == 16) {
         output.writeMessage(16, (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
-      }
-      if (payloadCase_ == 17) {
-        output.writeMessage(17, (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
       }
       unknownFields.writeTo(output);
     }
@@ -1312,10 +1250,6 @@ public final class UserMessageOuterClass {
       if (payloadCase_ == 16) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, (vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage) payload_);
-      }
-      if (payloadCase_ == 17) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(17, (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1367,10 +1301,6 @@ public final class UserMessageOuterClass {
           if (!getUserBlocked()
               .equals(other.getUserBlocked())) return false;
           break;
-        case 17:
-          if (!getUserKickedOut()
-              .equals(other.getUserKickedOut())) return false;
-          break;
         case 0:
         default:
       }
@@ -1417,10 +1347,6 @@ public final class UserMessageOuterClass {
         case 16:
           hash = (37 * hash) + USER_BLOCKED_FIELD_NUMBER;
           hash = (53 * hash) + getUserBlocked().hashCode();
-          break;
-        case 17:
-          hash = (37 * hash) + USER_KICKED_OUT_FIELD_NUMBER;
-          hash = (53 * hash) + getUserKickedOut().hashCode();
           break;
         case 0:
         default:
@@ -1646,13 +1572,6 @@ public final class UserMessageOuterClass {
             result.payload_ = userBlockedBuilder_.build();
           }
         }
-        if (payloadCase_ == 17) {
-          if (userKickedOutBuilder_ == null) {
-            result.payload_ = payload_;
-          } else {
-            result.payload_ = userKickedOutBuilder_.build();
-          }
-        }
         result.payloadCase_ = payloadCase_;
         onBuilt();
         return result;
@@ -1732,10 +1651,6 @@ public final class UserMessageOuterClass {
           }
           case USER_BLOCKED: {
             mergeUserBlocked(other.getUserBlocked());
-            break;
-          }
-          case USER_KICKED_OUT: {
-            mergeUserKickedOut(other.getUserKickedOut());
             break;
           }
           case PAYLOAD_NOT_SET: {
@@ -2869,144 +2784,6 @@ public final class UserMessageOuterClass {
         payloadCase_ = 16;
         onChanged();;
         return userBlockedBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder> userKickedOutBuilder_;
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       * @return Whether the userKickedOut field is set.
-       */
-      public boolean hasUserKickedOut() {
-        return payloadCase_ == 17;
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       * @return The userKickedOut.
-       */
-      public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getUserKickedOut() {
-        if (userKickedOutBuilder_ == null) {
-          if (payloadCase_ == 17) {
-            return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
-          }
-          return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-        } else {
-          if (payloadCase_ == 17) {
-            return userKickedOutBuilder_.getMessage();
-          }
-          return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      public Builder setUserKickedOut(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage value) {
-        if (userKickedOutBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          payload_ = value;
-          onChanged();
-        } else {
-          userKickedOutBuilder_.setMessage(value);
-        }
-        payloadCase_ = 17;
-        return this;
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      public Builder setUserKickedOut(
-          vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder builderForValue) {
-        if (userKickedOutBuilder_ == null) {
-          payload_ = builderForValue.build();
-          onChanged();
-        } else {
-          userKickedOutBuilder_.setMessage(builderForValue.build());
-        }
-        payloadCase_ = 17;
-        return this;
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      public Builder mergeUserKickedOut(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage value) {
-        if (userKickedOutBuilder_ == null) {
-          if (payloadCase_ == 17 &&
-              payload_ != vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance()) {
-            payload_ = vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.newBuilder((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            payload_ = value;
-          }
-          onChanged();
-        } else {
-          if (payloadCase_ == 17) {
-            userKickedOutBuilder_.mergeFrom(value);
-          }
-          userKickedOutBuilder_.setMessage(value);
-        }
-        payloadCase_ = 17;
-        return this;
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      public Builder clearUserKickedOut() {
-        if (userKickedOutBuilder_ == null) {
-          if (payloadCase_ == 17) {
-            payloadCase_ = 0;
-            payload_ = null;
-            onChanged();
-          }
-        } else {
-          if (payloadCase_ == 17) {
-            payloadCase_ = 0;
-            payload_ = null;
-          }
-          userKickedOutBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder getUserKickedOutBuilder() {
-        return getUserKickedOutFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder getUserKickedOutOrBuilder() {
-        if ((payloadCase_ == 17) && (userKickedOutBuilder_ != null)) {
-          return userKickedOutBuilder_.getMessageOrBuilder();
-        } else {
-          if (payloadCase_ == 17) {
-            return (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_;
-          }
-          return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder> 
-          getUserKickedOutFieldBuilder() {
-        if (userKickedOutBuilder_ == null) {
-          if (!(payloadCase_ == 17)) {
-            payload_ = vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-          }
-          userKickedOutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder>(
-                  (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) payload_,
-                  getParentForChildren(),
-                  isClean());
-          payload_ = null;
-        }
-        payloadCase_ = 17;
-        onChanged();;
-        return userKickedOutBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11016,432 +10793,6 @@ public final class UserMessageOuterClass {
 
   }
 
-  public interface UserKickedOutMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:vNerve.bilibili.live.UserKickedOutMessage)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * <pre>
-   * Just empty.
-   * </pre>
-   *
-   * Protobuf type {@code vNerve.bilibili.live.UserKickedOutMessage}
-   */
-  public  static final class UserKickedOutMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:vNerve.bilibili.live.UserKickedOutMessage)
-      UserKickedOutMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UserKickedOutMessage.newBuilder() to construct.
-    private UserKickedOutMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private UserKickedOutMessage() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UserKickedOutMessage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private UserKickedOutMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_UserKickedOutMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_UserKickedOutMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.class, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage)) {
-        return super.equals(obj);
-      }
-      vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage other = (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Just empty.
-     * </pre>
-     *
-     * Protobuf type {@code vNerve.bilibili.live.UserKickedOutMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:vNerve.bilibili.live.UserKickedOutMessage)
-        vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_UserKickedOutMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_UserKickedOutMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.class, vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.Builder.class);
-      }
-
-      // Construct using vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_UserKickedOutMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getDefaultInstanceForType() {
-        return vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage build() {
-        vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage buildPartial() {
-        vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage result = new vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) {
-          return mergeFrom((vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage other) {
-        if (other == vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:vNerve.bilibili.live.UserKickedOutMessage)
-    }
-
-    // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.UserKickedOutMessage)
-    private static final vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage();
-    }
-
-    public static vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<UserKickedOutMessage>
-        PARSER = new com.google.protobuf.AbstractParser<UserKickedOutMessage>() {
-      @java.lang.Override
-      public UserKickedOutMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UserKickedOutMessage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<UserKickedOutMessage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UserKickedOutMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public vNerve.bilibili.live.UserMessageOuterClass.UserKickedOutMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_vNerve_bilibili_live_UserMessage_descriptor;
   private static final 
@@ -11492,11 +10843,6 @@ public final class UserMessageOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_bilibili_live_UserBlockedMessage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_vNerve_bilibili_live_UserKickedOutMessage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_vNerve_bilibili_live_UserKickedOutMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11507,7 +10853,7 @@ public final class UserMessageOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'vNerve/bilibili/live/user_message.prot" +
-      "o\022\024vNerve.bilibili.live\"\271\004\n\013UserMessage\022" +
+      "o\022\024vNerve.bilibili.live\"\362\003\n\013UserMessage\022" +
       ",\n\004user\030\001 \001(\0132\036.vNerve.bilibili.live.Use" +
       "rInfo\0227\n\007danmaku\030\002 \001(\0132$.vNerve.bilibili" +
       ".live.DanmakuMessageH\000\0221\n\004gift\030\003 \001(\0132!.v" +
@@ -11519,52 +10865,49 @@ public final class UserMessageOuterClass {
       "WelcomeVIPMessageH\000\022B\n\rwelcome_guard\030\007 \001" +
       "(\0132).vNerve.bilibili.live.WelcomeGuardMe" +
       "ssageH\000\022@\n\014user_blocked\030\020 \001(\0132(.vNerve.b" +
-      "ilibili.live.UserBlockedMessageH\000\022E\n\017use" +
-      "r_kicked_out\030\021 \001(\0132*.vNerve.bilibili.liv" +
-      "e.UserKickedOutMessageH\000B\t\n\007payload\"\232\003\n\010" +
-      "UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002 \001(\t\022\022\n\na" +
-      "vatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004 \001(\005\022\037\n\027u" +
-      "ser_level_border_color\030\005 \001(\007\022\017\n\005admin\030\006 " +
-      "\001(\010H\000\022\022\n\010main_vip\030\007 \001(\010H\001\022:\n\016live_vip_le" +
-      "vel\030\010 \001(\0162\".vNerve.bilibili.live.LiveVip" +
-      "Level\022\r\n\005title\030\t \001(\t\022.\n\005medal\030\n \001(\0132\037.vN" +
-      "erve.bilibili.live.MedalInfo\0225\n\013guard_le" +
-      "vel\030\013 \001(\0162 .vNerve.bilibili.live.GuardLe" +
-      "vel\022\026\n\016phone_verified\030\014 \001(\010\022\024\n\014regular_u" +
-      "ser\030\r \001(\010B\020\n\016admin_optionalB\023\n\021main_vip_" +
-      "optional\"\217\001\n\tMedalInfo\022\022\n\nmedal_name\030\001 \001" +
-      "(\t\022\023\n\013medal_level\030\002 \001(\r\022\023\n\013medal_color\030\003" +
-      " \001(\007\022\024\n\014streamer_uid\030\004 \001(\004\022\025\n\rstreamer_n" +
-      "ame\030\005 \001(\t\022\027\n\017streamer_roomid\030\006 \001(\r\"a\n\016Da" +
-      "nmakuMessage\022\017\n\007message\030\001 \001(\t\022>\n\014lottery" +
-      "_type\030\002 \001(\0162(.vNerve.bilibili.live.Lotte" +
-      "ryDanmakuType\"\245\001\n\020SuperChatMessage\022\017\n\007me" +
-      "ssage\030\001 \001(\t\022\n\n\002id\030\003 \001(\r\022\r\n\005token\030\004 \001(\t\022\021" +
-      "\n\tprice_cny\030\005 \001(\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n" +
-      "\020lasting_time_sec\030\007 \001(\r\022\022\n\nstart_time\030\010 " +
-      "\001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftMessage\022\017\n" +
-      "\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007gi" +
-      "ft_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022\035\n\025single" +
-      "_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"F\n\021" +
-      "WelcomeVIPMessage\0221\n\005level\030\001 \001(\0162\".vNerv" +
-      "e.bilibili.live.LiveVipLevel\"F\n\023WelcomeG" +
-      "uardMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bili" +
-      "bili.live.GuardLevel\"\335\001\n\017NewGuardMessage" +
-      "\022/\n\005level\030\001 \001(\0162 .vNerve.bilibili.live.G" +
-      "uardLevel\022\022\n\ntotal_coin\030\002 \001(\r\022\r\n\005count\030\003" +
-      " \001(\r\022@\n\016duration_level\030\004 \001(\0162(.vNerve.bi" +
-      "libili.live.GuardDurationLevel\0224\n\010buy_ty" +
-      "pe\030\005 \001(\0162\".vNerve.bilibili.live.GuardBuy" +
-      "Type\"\024\n\022UserBlockedMessage\"\026\n\024UserKicked" +
-      "OutMessage*;\n\014LiveVipLevel\022\n\n\006NO_VIP\020\000\022\017" +
-      "\n\013MONTHLY_VIP\020\001\022\016\n\nYEARLY_VIP\020\002*<\n\022Lotte" +
-      "ryDanmakuType\022\016\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001" +
-      "\022\013\n\007LOTTERY\020\002*>\n\nGuardLevel\022\014\n\010NO_GUARD\020" +
-      "\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003*/\n" +
-      "\014GuardBuyType\022\013\n\007NO_TYPE\020\000\022\007\n\003BUY\020\001\022\t\n\005R" +
-      "ENEW\020\002*J\n\022GuardDurationLevel\022\017\n\013NO_DURAT" +
-      "ION\020\000\022\021\n\rMONTHLY_GUARD\020\001\022\020\n\014WEEKLY_GUARD" +
-      "\020\002B\003\370\001\001b\006proto3"
+      "ilibili.live.UserBlockedMessageH\000B\t\n\007pay" +
+      "load\"\232\003\n\010UserInfo\022\013\n\003uid\030\001 \001(\004\022\014\n\004name\030\002" +
+      " \001(\t\022\022\n\navatar_url\030\003 \001(\t\022\022\n\nuser_level\030\004" +
+      " \001(\005\022\037\n\027user_level_border_color\030\005 \001(\007\022\017\n" +
+      "\005admin\030\006 \001(\010H\000\022\022\n\010main_vip\030\007 \001(\010H\001\022:\n\016li" +
+      "ve_vip_level\030\010 \001(\0162\".vNerve.bilibili.liv" +
+      "e.LiveVipLevel\022\r\n\005title\030\t \001(\t\022.\n\005medal\030\n" +
+      " \001(\0132\037.vNerve.bilibili.live.MedalInfo\0225\n" +
+      "\013guard_level\030\013 \001(\0162 .vNerve.bilibili.liv" +
+      "e.GuardLevel\022\026\n\016phone_verified\030\014 \001(\010\022\024\n\014" +
+      "regular_user\030\r \001(\010B\020\n\016admin_optionalB\023\n\021" +
+      "main_vip_optional\"\217\001\n\tMedalInfo\022\022\n\nmedal" +
+      "_name\030\001 \001(\t\022\023\n\013medal_level\030\002 \001(\r\022\023\n\013meda" +
+      "l_color\030\003 \001(\007\022\024\n\014streamer_uid\030\004 \001(\004\022\025\n\rs" +
+      "treamer_name\030\005 \001(\t\022\027\n\017streamer_roomid\030\006 " +
+      "\001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030\001 \001(\t\022>" +
+      "\n\014lottery_type\030\002 \001(\0162(.vNerve.bilibili.l" +
+      "ive.LotteryDanmakuType\"\245\001\n\020SuperChatMess" +
+      "age\022\017\n\007message\030\001 \001(\t\022\n\n\002id\030\003 \001(\r\022\r\n\005toke" +
+      "n\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\nprice_coin" +
+      "\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r\022\022\n\nstar" +
+      "t_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftM" +
+      "essage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 " +
+      "\001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022" +
+      "\035\n\025single_price_coin_raw\030\005 \001(\r\022\r\n\005count\030" +
+      "\006 \001(\r\"F\n\021WelcomeVIPMessage\0221\n\005level\030\001 \001(" +
+      "\0162\".vNerve.bilibili.live.LiveVipLevel\"F\n" +
+      "\023WelcomeGuardMessage\022/\n\005level\030\001 \001(\0162 .vN" +
+      "erve.bilibili.live.GuardLevel\"\335\001\n\017NewGua" +
+      "rdMessage\022/\n\005level\030\001 \001(\0162 .vNerve.bilibi" +
+      "li.live.GuardLevel\022\022\n\ntotal_coin\030\002 \001(\r\022\r" +
+      "\n\005count\030\003 \001(\r\022@\n\016duration_level\030\004 \001(\0162(." +
+      "vNerve.bilibili.live.GuardDurationLevel\022" +
+      "4\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili.live" +
+      ".GuardBuyType\"\024\n\022UserBlockedMessage*;\n\014L" +
+      "iveVipLevel\022\n\n\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001" +
+      "\022\016\n\nYEARLY_VIP\020\002*<\n\022LotteryDanmakuType\022\016" +
+      "\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>" +
+      "\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n" +
+      "\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003*/\n\014GuardBuyType\022\013" +
+      "\n\007NO_TYPE\020\000\022\007\n\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022Guard" +
+      "DurationLevel\022\017\n\013NO_DURATION\020\000\022\021\n\rMONTHL" +
+      "Y_GUARD\020\001\022\020\n\014WEEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11575,7 +10918,7 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_UserMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_UserMessage_descriptor,
-        new java.lang.String[] { "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked", "UserKickedOut", "Payload", });
+        new java.lang.String[] { "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked", "Payload", });
     internal_static_vNerve_bilibili_live_UserInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_vNerve_bilibili_live_UserInfo_fieldAccessorTable = new
@@ -11629,12 +10972,6 @@ public final class UserMessageOuterClass {
     internal_static_vNerve_bilibili_live_UserBlockedMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_UserBlockedMessage_descriptor,
-        new java.lang.String[] { });
-    internal_static_vNerve_bilibili_live_UserKickedOutMessage_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_vNerve_bilibili_live_UserKickedOutMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_vNerve_bilibili_live_UserKickedOutMessage_descriptor,
         new java.lang.String[] { });
   }
 

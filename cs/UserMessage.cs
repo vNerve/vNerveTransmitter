@@ -25,7 +25,7 @@ namespace VNerve.Bilibili.Live {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cid2TmVydmUvYmlsaWJpbGkvbGl2ZS91c2VyX21lc3NhZ2UucHJvdG8SFHZO",
-            "ZXJ2ZS5iaWxpYmlsaS5saXZlIrkECgtVc2VyTWVzc2FnZRIsCgR1c2VyGAEg",
+            "ZXJ2ZS5iaWxpYmlsaS5saXZlIvIDCgtVc2VyTWVzc2FnZRIsCgR1c2VyGAEg",
             "ASgLMh4udk5lcnZlLmJpbGliaWxpLmxpdmUuVXNlckluZm8SNwoHZGFubWFr",
             "dRgCIAEoCzIkLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkRhbm1ha3VNZXNzYWdl",
             "SAASMQoEZ2lmdBgDIAEoCzIhLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkdpZnRN",
@@ -36,50 +36,48 @@ namespace VNerve.Bilibili.Live {
             "bWVWSVBNZXNzYWdlSAASQgoNd2VsY29tZV9ndWFyZBgHIAEoCzIpLnZOZXJ2",
             "ZS5iaWxpYmlsaS5saXZlLldlbGNvbWVHdWFyZE1lc3NhZ2VIABJACgx1c2Vy",
             "X2Jsb2NrZWQYECABKAsyKC52TmVydmUuYmlsaWJpbGkubGl2ZS5Vc2VyQmxv",
-            "Y2tlZE1lc3NhZ2VIABJFCg91c2VyX2tpY2tlZF9vdXQYESABKAsyKi52TmVy",
-            "dmUuYmlsaWJpbGkubGl2ZS5Vc2VyS2lja2VkT3V0TWVzc2FnZUgAQgkKB3Bh",
-            "eWxvYWQimgMKCFVzZXJJbmZvEgsKA3VpZBgBIAEoBBIMCgRuYW1lGAIgASgJ",
-            "EhIKCmF2YXRhcl91cmwYAyABKAkSEgoKdXNlcl9sZXZlbBgEIAEoBRIfChd1",
-            "c2VyX2xldmVsX2JvcmRlcl9jb2xvchgFIAEoBxIPCgVhZG1pbhgGIAEoCEgA",
-            "EhIKCG1haW5fdmlwGAcgASgISAESOgoObGl2ZV92aXBfbGV2ZWwYCCABKA4y",
-            "Ii52TmVydmUuYmlsaWJpbGkubGl2ZS5MaXZlVmlwTGV2ZWwSDQoFdGl0bGUY",
-            "CSABKAkSLgoFbWVkYWwYCiABKAsyHy52TmVydmUuYmlsaWJpbGkubGl2ZS5N",
-            "ZWRhbEluZm8SNQoLZ3VhcmRfbGV2ZWwYCyABKA4yIC52TmVydmUuYmlsaWJp",
-            "bGkubGl2ZS5HdWFyZExldmVsEhYKDnBob25lX3ZlcmlmaWVkGAwgASgIEhQK",
-            "DHJlZ3VsYXJfdXNlchgNIAEoCEIQCg5hZG1pbl9vcHRpb25hbEITChFtYWlu",
-            "X3ZpcF9vcHRpb25hbCKPAQoJTWVkYWxJbmZvEhIKCm1lZGFsX25hbWUYASAB",
-            "KAkSEwoLbWVkYWxfbGV2ZWwYAiABKA0SEwoLbWVkYWxfY29sb3IYAyABKAcS",
-            "FAoMc3RyZWFtZXJfdWlkGAQgASgEEhUKDXN0cmVhbWVyX25hbWUYBSABKAkS",
-            "FwoPc3RyZWFtZXJfcm9vbWlkGAYgASgNImEKDkRhbm1ha3VNZXNzYWdlEg8K",
-            "B21lc3NhZ2UYASABKAkSPgoMbG90dGVyeV90eXBlGAIgASgOMigudk5lcnZl",
-            "LmJpbGliaWxpLmxpdmUuTG90dGVyeURhbm1ha3VUeXBlIqUBChBTdXBlckNo",
-            "YXRNZXNzYWdlEg8KB21lc3NhZ2UYASABKAkSCgoCaWQYAyABKA0SDQoFdG9r",
-            "ZW4YBCABKAkSEQoJcHJpY2VfY255GAUgASgNEhIKCnByaWNlX2NvaW4YBiAB",
-            "KA0SGAoQbGFzdGluZ190aW1lX3NlYxgHIAEoDRISCgpzdGFydF90aW1lGAgg",
-            "ASgEEhAKCGVuZF90aW1lGAkgASgEIoQBCgtHaWZ0TWVzc2FnZRIPCgdpc19n",
-            "b2xkGAEgASgIEhIKCnRvdGFsX2NvaW4YAiABKA0SDwoHZ2lmdF9pZBgDIAEo",
-            "DRIRCglnaWZ0X25hbWUYBCABKAkSHQoVc2luZ2xlX3ByaWNlX2NvaW5fcmF3",
-            "GAUgASgNEg0KBWNvdW50GAYgASgNIkYKEVdlbGNvbWVWSVBNZXNzYWdlEjEK",
-            "BWxldmVsGAEgASgOMiIudk5lcnZlLmJpbGliaWxpLmxpdmUuTGl2ZVZpcExl",
-            "dmVsIkYKE1dlbGNvbWVHdWFyZE1lc3NhZ2USLwoFbGV2ZWwYASABKA4yIC52",
-            "TmVydmUuYmlsaWJpbGkubGl2ZS5HdWFyZExldmVsIt0BCg9OZXdHdWFyZE1l",
-            "c3NhZ2USLwoFbGV2ZWwYASABKA4yIC52TmVydmUuYmlsaWJpbGkubGl2ZS5H",
-            "dWFyZExldmVsEhIKCnRvdGFsX2NvaW4YAiABKA0SDQoFY291bnQYAyABKA0S",
-            "QAoOZHVyYXRpb25fbGV2ZWwYBCABKA4yKC52TmVydmUuYmlsaWJpbGkubGl2",
-            "ZS5HdWFyZER1cmF0aW9uTGV2ZWwSNAoIYnV5X3R5cGUYBSABKA4yIi52TmVy",
-            "dmUuYmlsaWJpbGkubGl2ZS5HdWFyZEJ1eVR5cGUiFAoSVXNlckJsb2NrZWRN",
-            "ZXNzYWdlIhYKFFVzZXJLaWNrZWRPdXRNZXNzYWdlKjsKDExpdmVWaXBMZXZl",
-            "bBIKCgZOT19WSVAQABIPCgtNT05USExZX1ZJUBABEg4KCllFQVJMWV9WSVAQ",
-            "Aio8ChJMb3R0ZXJ5RGFubWFrdVR5cGUSDgoKTk9fTE9UVEVSWRAAEgkKBVNU",
-            "T1JNEAESCwoHTE9UVEVSWRACKj4KCkd1YXJkTGV2ZWwSDAoITk9fR1VBUkQQ",
-            "ABIKCgZMRVZFTDEQARIKCgZMRVZFTDIQAhIKCgZMRVZFTDMQAyovCgxHdWFy",
-            "ZEJ1eVR5cGUSCwoHTk9fVFlQRRAAEgcKA0JVWRABEgkKBVJFTkVXEAIqSgoS",
-            "R3VhcmREdXJhdGlvbkxldmVsEg8KC05PX0RVUkFUSU9OEAASEQoNTU9OVEhM",
-            "WV9HVUFSRBABEhAKDFdFRUtMWV9HVUFSRBACQgP4AQFiBnByb3RvMw=="));
+            "Y2tlZE1lc3NhZ2VIAEIJCgdwYXlsb2FkIpoDCghVc2VySW5mbxILCgN1aWQY",
+            "ASABKAQSDAoEbmFtZRgCIAEoCRISCgphdmF0YXJfdXJsGAMgASgJEhIKCnVz",
+            "ZXJfbGV2ZWwYBCABKAUSHwoXdXNlcl9sZXZlbF9ib3JkZXJfY29sb3IYBSAB",
+            "KAcSDwoFYWRtaW4YBiABKAhIABISCghtYWluX3ZpcBgHIAEoCEgBEjoKDmxp",
+            "dmVfdmlwX2xldmVsGAggASgOMiIudk5lcnZlLmJpbGliaWxpLmxpdmUuTGl2",
+            "ZVZpcExldmVsEg0KBXRpdGxlGAkgASgJEi4KBW1lZGFsGAogASgLMh8udk5l",
+            "cnZlLmJpbGliaWxpLmxpdmUuTWVkYWxJbmZvEjUKC2d1YXJkX2xldmVsGAsg",
+            "ASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRMZXZlbBIWCg5waG9u",
+            "ZV92ZXJpZmllZBgMIAEoCBIUCgxyZWd1bGFyX3VzZXIYDSABKAhCEAoOYWRt",
+            "aW5fb3B0aW9uYWxCEwoRbWFpbl92aXBfb3B0aW9uYWwijwEKCU1lZGFsSW5m",
+            "bxISCgptZWRhbF9uYW1lGAEgASgJEhMKC21lZGFsX2xldmVsGAIgASgNEhMK",
+            "C21lZGFsX2NvbG9yGAMgASgHEhQKDHN0cmVhbWVyX3VpZBgEIAEoBBIVCg1z",
+            "dHJlYW1lcl9uYW1lGAUgASgJEhcKD3N0cmVhbWVyX3Jvb21pZBgGIAEoDSJh",
+            "Cg5EYW5tYWt1TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJEj4KDGxvdHRlcnlf",
+            "dHlwZRgCIAEoDjIoLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkxvdHRlcnlEYW5t",
+            "YWt1VHlwZSKlAQoQU3VwZXJDaGF0TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJ",
+            "EgoKAmlkGAMgASgNEg0KBXRva2VuGAQgASgJEhEKCXByaWNlX2NueRgFIAEo",
+            "DRISCgpwcmljZV9jb2luGAYgASgNEhgKEGxhc3RpbmdfdGltZV9zZWMYByAB",
+            "KA0SEgoKc3RhcnRfdGltZRgIIAEoBBIQCghlbmRfdGltZRgJIAEoBCKEAQoL",
+            "R2lmdE1lc3NhZ2USDwoHaXNfZ29sZBgBIAEoCBISCgp0b3RhbF9jb2luGAIg",
+            "ASgNEg8KB2dpZnRfaWQYAyABKA0SEQoJZ2lmdF9uYW1lGAQgASgJEh0KFXNp",
+            "bmdsZV9wcmljZV9jb2luX3JhdxgFIAEoDRINCgVjb3VudBgGIAEoDSJGChFX",
+            "ZWxjb21lVklQTWVzc2FnZRIxCgVsZXZlbBgBIAEoDjIiLnZOZXJ2ZS5iaWxp",
+            "YmlsaS5saXZlLkxpdmVWaXBMZXZlbCJGChNXZWxjb21lR3VhcmRNZXNzYWdl",
+            "Ei8KBWxldmVsGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRM",
+            "ZXZlbCLdAQoPTmV3R3VhcmRNZXNzYWdlEi8KBWxldmVsGAEgASgOMiAudk5l",
+            "cnZlLmJpbGliaWxpLmxpdmUuR3VhcmRMZXZlbBISCgp0b3RhbF9jb2luGAIg",
+            "ASgNEg0KBWNvdW50GAMgASgNEkAKDmR1cmF0aW9uX2xldmVsGAQgASgOMigu",
+            "dk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmREdXJhdGlvbkxldmVsEjQKCGJ1",
+            "eV90eXBlGAUgASgOMiIudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRCdXlU",
+            "eXBlIhQKElVzZXJCbG9ja2VkTWVzc2FnZSo7CgxMaXZlVmlwTGV2ZWwSCgoG",
+            "Tk9fVklQEAASDwoLTU9OVEhMWV9WSVAQARIOCgpZRUFSTFlfVklQEAIqPAoS",
+            "TG90dGVyeURhbm1ha3VUeXBlEg4KCk5PX0xPVFRFUlkQABIJCgVTVE9STRAB",
+            "EgsKB0xPVFRFUlkQAio+CgpHdWFyZExldmVsEgwKCE5PX0dVQVJEEAASCgoG",
+            "TEVWRUwxEAESCgoGTEVWRUwyEAISCgoGTEVWRUwzEAMqLwoMR3VhcmRCdXlU",
+            "eXBlEgsKB05PX1RZUEUQABIHCgNCVVkQARIJCgVSRU5FVxACKkoKEkd1YXJk",
+            "RHVyYXRpb25MZXZlbBIPCgtOT19EVVJBVElPThAAEhEKDU1PTlRITFlfR1VB",
+            "UkQQARIQCgxXRUVLTFlfR1VBUkQQAkID+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), typeof(global::VNerve.Bilibili.Live.GuardBuyType), typeof(global::VNerve.Bilibili.Live.GuardDurationLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserMessage), global::VNerve.Bilibili.Live.UserMessage.Parser, new[]{ "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked", "UserKickedOut" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserMessage), global::VNerve.Bilibili.Live.UserMessage.Parser, new[]{ "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserInfo), global::VNerve.Bilibili.Live.UserInfo.Parser, new[]{ "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "GuardLevel", "PhoneVerified", "RegularUser" }, new[]{ "AdminOptional", "MainVipOptional" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.MedalInfo), global::VNerve.Bilibili.Live.MedalInfo.Parser, new[]{ "MedalName", "MedalLevel", "MedalColor", "StreamerUid", "StreamerName", "StreamerRoomid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.DanmakuMessage), global::VNerve.Bilibili.Live.DanmakuMessage.Parser, new[]{ "Message", "LotteryType" }, null, null, null, null),
@@ -88,8 +86,7 @@ namespace VNerve.Bilibili.Live {
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeVIPMessage), global::VNerve.Bilibili.Live.WelcomeVIPMessage.Parser, new[]{ "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeGuardMessage), global::VNerve.Bilibili.Live.WelcomeGuardMessage.Parser, new[]{ "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.NewGuardMessage), global::VNerve.Bilibili.Live.NewGuardMessage.Parser, new[]{ "Level", "TotalCoin", "Count", "DurationLevel", "BuyType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserBlockedMessage), global::VNerve.Bilibili.Live.UserBlockedMessage.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserKickedOutMessage), global::VNerve.Bilibili.Live.UserKickedOutMessage.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserBlockedMessage), global::VNerve.Bilibili.Live.UserBlockedMessage.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -177,9 +174,6 @@ namespace VNerve.Bilibili.Live {
           break;
         case PayloadOneofCase.UserBlocked:
           UserBlocked = other.UserBlocked.Clone();
-          break;
-        case PayloadOneofCase.UserKickedOut:
-          UserKickedOut = other.UserKickedOut.Clone();
           break;
       }
 
@@ -279,17 +273,6 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
-    /// <summary>Field number for the "user_kicked_out" field.</summary>
-    public const int UserKickedOutFieldNumber = 17;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::VNerve.Bilibili.Live.UserKickedOutMessage UserKickedOut {
-      get { return payloadCase_ == PayloadOneofCase.UserKickedOut ? (global::VNerve.Bilibili.Live.UserKickedOutMessage) payload_ : null; }
-      set {
-        payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.UserKickedOut;
-      }
-    }
-
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
@@ -301,7 +284,6 @@ namespace VNerve.Bilibili.Live {
       WelcomeVip = 6,
       WelcomeGuard = 7,
       UserBlocked = 16,
-      UserKickedOut = 17,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -336,7 +318,6 @@ namespace VNerve.Bilibili.Live {
       if (!object.Equals(WelcomeVip, other.WelcomeVip)) return false;
       if (!object.Equals(WelcomeGuard, other.WelcomeGuard)) return false;
       if (!object.Equals(UserBlocked, other.UserBlocked)) return false;
-      if (!object.Equals(UserKickedOut, other.UserKickedOut)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -352,7 +333,6 @@ namespace VNerve.Bilibili.Live {
       if (payloadCase_ == PayloadOneofCase.WelcomeVip) hash ^= WelcomeVip.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.WelcomeGuard) hash ^= WelcomeGuard.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.UserBlocked) hash ^= UserBlocked.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.UserKickedOut) hash ^= UserKickedOut.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -399,10 +379,6 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(130, 1);
         output.WriteMessage(UserBlocked);
       }
-      if (payloadCase_ == PayloadOneofCase.UserKickedOut) {
-        output.WriteRawTag(138, 1);
-        output.WriteMessage(UserKickedOut);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -434,9 +410,6 @@ namespace VNerve.Bilibili.Live {
       }
       if (payloadCase_ == PayloadOneofCase.UserBlocked) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(UserBlocked);
-      }
-      if (payloadCase_ == PayloadOneofCase.UserKickedOut) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UserKickedOut);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -497,12 +470,6 @@ namespace VNerve.Bilibili.Live {
             UserBlocked = new global::VNerve.Bilibili.Live.UserBlockedMessage();
           }
           UserBlocked.MergeFrom(other.UserBlocked);
-          break;
-        case PayloadOneofCase.UserKickedOut:
-          if (UserKickedOut == null) {
-            UserKickedOut = new global::VNerve.Bilibili.Live.UserKickedOutMessage();
-          }
-          UserKickedOut.MergeFrom(other.UserKickedOut);
           break;
       }
 
@@ -585,15 +552,6 @@ namespace VNerve.Bilibili.Live {
             }
             input.ReadMessage(subBuilder);
             UserBlocked = subBuilder;
-            break;
-          }
-          case 138: {
-            global::VNerve.Bilibili.Live.UserKickedOutMessage subBuilder = new global::VNerve.Bilibili.Live.UserKickedOutMessage();
-            if (payloadCase_ == PayloadOneofCase.UserKickedOut) {
-              subBuilder.MergeFrom(UserKickedOut);
-            }
-            input.ReadMessage(subBuilder);
-            UserKickedOut = subBuilder;
             break;
           }
         }
@@ -2732,110 +2690,6 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(UserBlockedMessage other) {
-      if (other == null) {
-        return;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// Just empty.
-  /// </summary>
-  public sealed partial class UserKickedOutMessage : pb::IMessage<UserKickedOutMessage> {
-    private static readonly pb::MessageParser<UserKickedOutMessage> _parser = new pb::MessageParser<UserKickedOutMessage>(() => new UserKickedOutMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<UserKickedOutMessage> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::VNerve.Bilibili.Live.UserMessageReflection.Descriptor.MessageTypes[10]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UserKickedOutMessage() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UserKickedOutMessage(UserKickedOutMessage other) : this() {
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UserKickedOutMessage Clone() {
-      return new UserKickedOutMessage(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as UserKickedOutMessage);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(UserKickedOutMessage other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(UserKickedOutMessage other) {
       if (other == null) {
         return;
       }

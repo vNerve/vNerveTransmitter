@@ -48,7 +48,7 @@ struct TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[11]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[10]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -79,9 +79,6 @@ extern UserBlockedMessageDefaultTypeInternal _UserBlockedMessage_default_instanc
 class UserInfo;
 class UserInfoDefaultTypeInternal;
 extern UserInfoDefaultTypeInternal _UserInfo_default_instance_;
-class UserKickedOutMessage;
-class UserKickedOutMessageDefaultTypeInternal;
-extern UserKickedOutMessageDefaultTypeInternal _UserKickedOutMessage_default_instance_;
 class UserMessage;
 class UserMessageDefaultTypeInternal;
 extern UserMessageDefaultTypeInternal _UserMessage_default_instance_;
@@ -102,7 +99,6 @@ template<> ::vNerve::bilibili::live::NewGuardMessage* Arena::CreateMaybeMessage<
 template<> ::vNerve::bilibili::live::SuperChatMessage* Arena::CreateMaybeMessage<::vNerve::bilibili::live::SuperChatMessage>(Arena*);
 template<> ::vNerve::bilibili::live::UserBlockedMessage* Arena::CreateMaybeMessage<::vNerve::bilibili::live::UserBlockedMessage>(Arena*);
 template<> ::vNerve::bilibili::live::UserInfo* Arena::CreateMaybeMessage<::vNerve::bilibili::live::UserInfo>(Arena*);
-template<> ::vNerve::bilibili::live::UserKickedOutMessage* Arena::CreateMaybeMessage<::vNerve::bilibili::live::UserKickedOutMessage>(Arena*);
 template<> ::vNerve::bilibili::live::UserMessage* Arena::CreateMaybeMessage<::vNerve::bilibili::live::UserMessage>(Arena*);
 template<> ::vNerve::bilibili::live::WelcomeGuardMessage* Arena::CreateMaybeMessage<::vNerve::bilibili::live::WelcomeGuardMessage>(Arena*);
 template<> ::vNerve::bilibili::live::WelcomeVIPMessage* Arena::CreateMaybeMessage<::vNerve::bilibili::live::WelcomeVIPMessage>(Arena*);
@@ -294,7 +290,6 @@ class UserMessage :
     kWelcomeVip = 6,
     kWelcomeGuard = 7,
     kUserBlocked = 16,
-    kUserKickedOut = 17,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -390,7 +385,6 @@ class UserMessage :
     kWelcomeVipFieldNumber = 6,
     kWelcomeGuardFieldNumber = 7,
     kUserBlockedFieldNumber = 16,
-    kUserKickedOutFieldNumber = 17,
   };
   // .vNerve.bilibili.live.UserInfo user = 1;
   bool has_user() const;
@@ -536,24 +530,6 @@ class UserMessage :
       ::vNerve::bilibili::live::UserBlockedMessage* user_blocked);
   ::vNerve::bilibili::live::UserBlockedMessage* unsafe_arena_release_user_blocked();
 
-  // .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
-  bool has_user_kicked_out() const;
-  private:
-  bool _internal_has_user_kicked_out() const;
-  public:
-  void clear_user_kicked_out();
-  const ::vNerve::bilibili::live::UserKickedOutMessage& user_kicked_out() const;
-  ::vNerve::bilibili::live::UserKickedOutMessage* release_user_kicked_out();
-  ::vNerve::bilibili::live::UserKickedOutMessage* mutable_user_kicked_out();
-  void set_allocated_user_kicked_out(::vNerve::bilibili::live::UserKickedOutMessage* user_kicked_out);
-  private:
-  const ::vNerve::bilibili::live::UserKickedOutMessage& _internal_user_kicked_out() const;
-  ::vNerve::bilibili::live::UserKickedOutMessage* _internal_mutable_user_kicked_out();
-  public:
-  void unsafe_arena_set_allocated_user_kicked_out(
-      ::vNerve::bilibili::live::UserKickedOutMessage* user_kicked_out);
-  ::vNerve::bilibili::live::UserKickedOutMessage* unsafe_arena_release_user_kicked_out();
-
   void clear_payload();
   PayloadCase payload_case() const;
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.UserMessage)
@@ -566,7 +542,6 @@ class UserMessage :
   void set_has_welcome_vip();
   void set_has_welcome_guard();
   void set_has_user_blocked();
-  void set_has_user_kicked_out();
 
   inline bool has_payload() const;
   inline void clear_has_payload();
@@ -585,7 +560,6 @@ class UserMessage :
     ::vNerve::bilibili::live::WelcomeVIPMessage* welcome_vip_;
     ::vNerve::bilibili::live::WelcomeGuardMessage* welcome_guard_;
     ::vNerve::bilibili::live::UserBlockedMessage* user_blocked_;
-    ::vNerve::bilibili::live::UserKickedOutMessage* user_kicked_out_;
   } payload_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -2501,144 +2475,6 @@ class UserBlockedMessage :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
 };
-// -------------------------------------------------------------------
-
-class UserKickedOutMessage :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:vNerve.bilibili.live.UserKickedOutMessage) */ {
- public:
-  UserKickedOutMessage();
-  virtual ~UserKickedOutMessage();
-
-  UserKickedOutMessage(const UserKickedOutMessage& from);
-  UserKickedOutMessage(UserKickedOutMessage&& from) noexcept
-    : UserKickedOutMessage() {
-    *this = ::std::move(from);
-  }
-
-  inline UserKickedOutMessage& operator=(const UserKickedOutMessage& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline UserKickedOutMessage& operator=(UserKickedOutMessage&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArena() const final {
-    return GetArenaNoVirtual();
-  }
-  inline void* GetMaybeArenaPointer() const final {
-    return MaybeArenaPtr();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const UserKickedOutMessage& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const UserKickedOutMessage* internal_default_instance() {
-    return reinterpret_cast<const UserKickedOutMessage*>(
-               &_UserKickedOutMessage_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    10;
-
-  friend void swap(UserKickedOutMessage& a, UserKickedOutMessage& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(UserKickedOutMessage* other) {
-    if (other == this) return;
-    if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(UserKickedOutMessage* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline UserKickedOutMessage* New() const final {
-    return CreateMaybeMessage<UserKickedOutMessage>(nullptr);
-  }
-
-  UserKickedOutMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<UserKickedOutMessage>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const UserKickedOutMessage& from);
-  void MergeFrom(const UserKickedOutMessage& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(UserKickedOutMessage* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "vNerve.bilibili.live.UserKickedOutMessage";
-  }
-  protected:
-  explicit UserKickedOutMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return _internal_metadata_.arena();
-  }
-  inline void* MaybeArenaPtr() const {
-    return _internal_metadata_.raw_arena_ptr();
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto);
-    return ::descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.UserKickedOutMessage)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
-};
 // ===================================================================
 
 
@@ -3234,80 +3070,6 @@ inline ::vNerve::bilibili::live::UserBlockedMessage* UserMessage::_internal_muta
 inline ::vNerve::bilibili::live::UserBlockedMessage* UserMessage::mutable_user_blocked() {
   // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.UserMessage.user_blocked)
   return _internal_mutable_user_blocked();
-}
-
-// .vNerve.bilibili.live.UserKickedOutMessage user_kicked_out = 17;
-inline bool UserMessage::_internal_has_user_kicked_out() const {
-  return payload_case() == kUserKickedOut;
-}
-inline bool UserMessage::has_user_kicked_out() const {
-  return _internal_has_user_kicked_out();
-}
-inline void UserMessage::set_has_user_kicked_out() {
-  _oneof_case_[0] = kUserKickedOut;
-}
-inline void UserMessage::clear_user_kicked_out() {
-  if (_internal_has_user_kicked_out()) {
-    if (GetArenaNoVirtual() == nullptr) {
-      delete payload_.user_kicked_out_;
-    }
-    clear_has_payload();
-  }
-}
-inline ::vNerve::bilibili::live::UserKickedOutMessage* UserMessage::release_user_kicked_out() {
-  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.UserMessage.user_kicked_out)
-  if (_internal_has_user_kicked_out()) {
-    clear_has_payload();
-      ::vNerve::bilibili::live::UserKickedOutMessage* temp = payload_.user_kicked_out_;
-    if (GetArenaNoVirtual() != nullptr) {
-      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-    }
-    payload_.user_kicked_out_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline const ::vNerve::bilibili::live::UserKickedOutMessage& UserMessage::_internal_user_kicked_out() const {
-  return _internal_has_user_kicked_out()
-      ? *payload_.user_kicked_out_
-      : *reinterpret_cast< ::vNerve::bilibili::live::UserKickedOutMessage*>(&::vNerve::bilibili::live::_UserKickedOutMessage_default_instance_);
-}
-inline const ::vNerve::bilibili::live::UserKickedOutMessage& UserMessage::user_kicked_out() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.UserMessage.user_kicked_out)
-  return _internal_user_kicked_out();
-}
-inline ::vNerve::bilibili::live::UserKickedOutMessage* UserMessage::unsafe_arena_release_user_kicked_out() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.UserMessage.user_kicked_out)
-  if (_internal_has_user_kicked_out()) {
-    clear_has_payload();
-    ::vNerve::bilibili::live::UserKickedOutMessage* temp = payload_.user_kicked_out_;
-    payload_.user_kicked_out_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline void UserMessage::unsafe_arena_set_allocated_user_kicked_out(::vNerve::bilibili::live::UserKickedOutMessage* user_kicked_out) {
-  clear_payload();
-  if (user_kicked_out) {
-    set_has_user_kicked_out();
-    payload_.user_kicked_out_ = user_kicked_out;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.UserMessage.user_kicked_out)
-}
-inline ::vNerve::bilibili::live::UserKickedOutMessage* UserMessage::_internal_mutable_user_kicked_out() {
-  if (!_internal_has_user_kicked_out()) {
-    clear_payload();
-    set_has_user_kicked_out();
-    payload_.user_kicked_out_ = CreateMaybeMessage< ::vNerve::bilibili::live::UserKickedOutMessage >(
-        GetArenaNoVirtual());
-  }
-  return payload_.user_kicked_out_;
-}
-inline ::vNerve::bilibili::live::UserKickedOutMessage* UserMessage::mutable_user_kicked_out() {
-  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.UserMessage.user_kicked_out)
-  return _internal_mutable_user_kicked_out();
 }
 
 inline bool UserMessage::has_payload() const {
@@ -4849,15 +4611,9 @@ inline void NewGuardMessage::set_buy_type(::vNerve::bilibili::live::GuardBuyType
 
 // UserBlockedMessage
 
-// -------------------------------------------------------------------
-
-// UserKickedOutMessage
-
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
