@@ -1887,7 +1887,7 @@ proto.vNerve.bilibili.live.SuperChatMessage.deserializeBinaryFromReader = functi
       msg.setMessage(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readUint32());
+      var value = /** @type {number} */ (reader.readUint64());
       msg.setId(value);
       break;
     case 4:
@@ -1952,7 +1952,7 @@ proto.vNerve.bilibili.live.SuperChatMessage.serializeBinaryToWriter = function(m
   }
   f = message.getId();
   if (f !== 0) {
-    writer.writeUint32(
+    writer.writeUint64(
       3,
       f
     );
@@ -2021,7 +2021,7 @@ proto.vNerve.bilibili.live.SuperChatMessage.prototype.setMessage = function(valu
 
 
 /**
- * optional uint32 id = 3;
+ * optional uint64 id = 3;
  * @return {number}
  */
 proto.vNerve.bilibili.live.SuperChatMessage.prototype.getId = function() {

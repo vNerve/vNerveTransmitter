@@ -1491,9 +1491,9 @@ class SuperChatMessage :
     kIdFieldNumber = 3,
     kPriceCnyFieldNumber = 5,
     kPriceCoinFieldNumber = 6,
-    kLastingTimeSecFieldNumber = 7,
     kStartTimeFieldNumber = 8,
     kEndTimeFieldNumber = 9,
+    kLastingTimeSecFieldNumber = 7,
   };
   // string message = 1;
   void clear_message();
@@ -1545,13 +1545,13 @@ class SuperChatMessage :
   std::string* _internal_mutable_token();
   public:
 
-  // uint32 id = 3;
+  // uint64 id = 3;
   void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::uint32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::uint64 id() const;
+  void set_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_id() const;
+  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
   public:
 
   // uint32 price_cny = 5;
@@ -1572,15 +1572,6 @@ class SuperChatMessage :
   void _internal_set_price_coin(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // uint32 lasting_time_sec = 7;
-  void clear_lasting_time_sec();
-  ::PROTOBUF_NAMESPACE_ID::uint32 lasting_time_sec() const;
-  void set_lasting_time_sec(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_lasting_time_sec() const;
-  void _internal_set_lasting_time_sec(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  public:
-
   // uint64 start_time = 8;
   void clear_start_time();
   ::PROTOBUF_NAMESPACE_ID::uint64 start_time() const;
@@ -1599,6 +1590,15 @@ class SuperChatMessage :
   void _internal_set_end_time(::PROTOBUF_NAMESPACE_ID::uint64 value);
   public:
 
+  // uint32 lasting_time_sec = 7;
+  void clear_lasting_time_sec();
+  ::PROTOBUF_NAMESPACE_ID::uint32 lasting_time_sec() const;
+  void set_lasting_time_sec(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_lasting_time_sec() const;
+  void _internal_set_lasting_time_sec(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.SuperChatMessage)
  private:
   class _Internal;
@@ -1609,12 +1609,12 @@ class SuperChatMessage :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 id_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 id_;
   ::PROTOBUF_NAMESPACE_ID::uint32 price_cny_;
   ::PROTOBUF_NAMESPACE_ID::uint32 price_coin_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 lasting_time_sec_;
   ::PROTOBUF_NAMESPACE_ID::uint64 start_time_;
   ::PROTOBUF_NAMESPACE_ID::uint64 end_time_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 lasting_time_sec_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto;
 };
@@ -4067,22 +4067,22 @@ inline void SuperChatMessage::unsafe_arena_set_allocated_message(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.SuperChatMessage.message)
 }
 
-// uint32 id = 3;
+// uint64 id = 3;
 inline void SuperChatMessage::clear_id() {
-  id_ = 0u;
+  id_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatMessage::_internal_id() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SuperChatMessage::_internal_id() const {
   return id_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatMessage::id() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SuperChatMessage::id() const {
   // @@protoc_insertion_point(field_get:vNerve.bilibili.live.SuperChatMessage.id)
   return _internal_id();
 }
-inline void SuperChatMessage::_internal_set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void SuperChatMessage::_internal_set_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
   id_ = value;
 }
-inline void SuperChatMessage::set_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void SuperChatMessage::set_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_set_id(value);
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.SuperChatMessage.id)
 }

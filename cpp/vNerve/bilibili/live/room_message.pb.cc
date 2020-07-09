@@ -37,7 +37,7 @@ class RoomMessageDefaultTypeInternal {
   const ::vNerve::bilibili::live::RoomLockedMessage* room_locked_;
   const ::vNerve::bilibili::live::RoomWarningMessage* room_warning_;
   const ::vNerve::bilibili::live::RoomLimitedMessage* room_limited_;
-  const ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove_;
+  const ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_delete_;
 } _RoomMessage_default_instance_;
 class PopularityChangedMessageDefaultTypeInternal {
  public:
@@ -250,7 +250,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2froo
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, room_locked_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, room_warning_),
   offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, room_limited_),
-  offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, superchat_remove_),
+  offsetof(::vNerve::bilibili::live::RoomMessageDefaultTypeInternal, superchat_delete_),
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomMessage, payload_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::PopularityChangedMessage, _internal_metadata_),
@@ -264,6 +264,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2froo
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::LiveStatusChangedMessage, status_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::LiveStatusChangedMessage, message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomInfoChangedMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -301,7 +302,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_vNerve_2fbilibili_2flive_2froo
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomWarningMessage, reason_),
+  PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomWarningMessage, message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::vNerve::bilibili::live::RoomLimitedMessage, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -320,13 +321,13 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, -1, sizeof(::vNerve::bilibili::live::RoomMessage)},
   { 15, -1, sizeof(::vNerve::bilibili::live::PopularityChangedMessage)},
   { 21, -1, sizeof(::vNerve::bilibili::live::LiveStatusChangedMessage)},
-  { 27, -1, sizeof(::vNerve::bilibili::live::RoomInfoChangedMessage)},
-  { 37, -1, sizeof(::vNerve::bilibili::live::RoomBaseInfo)},
-  { 47, -1, sizeof(::vNerve::bilibili::live::RoomAdminInfo)},
-  { 53, -1, sizeof(::vNerve::bilibili::live::RoomLockedMessage)},
-  { 59, -1, sizeof(::vNerve::bilibili::live::RoomWarningMessage)},
-  { 65, -1, sizeof(::vNerve::bilibili::live::RoomLimitedMessage)},
-  { 72, -1, sizeof(::vNerve::bilibili::live::SuperChatDeleteMessage)},
+  { 28, -1, sizeof(::vNerve::bilibili::live::RoomInfoChangedMessage)},
+  { 38, -1, sizeof(::vNerve::bilibili::live::RoomBaseInfo)},
+  { 48, -1, sizeof(::vNerve::bilibili::live::RoomAdminInfo)},
+  { 54, -1, sizeof(::vNerve::bilibili::live::RoomLockedMessage)},
+  { 60, -1, sizeof(::vNerve::bilibili::live::RoomWarningMessage)},
+  { 66, -1, sizeof(::vNerve::bilibili::live::RoomLimitedMessage)},
+  { 73, -1, sizeof(::vNerve::bilibili::live::SuperChatDeleteMessage)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -358,27 +359,27 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2
   "\014room_warning\030\023 \001(\0132(.vNerve.bilibili.li"
   "ve.RoomWarningMessageH\000\022@\n\014room_limited\030"
   "\024 \001(\0132(.vNerve.bilibili.live.RoomLimited"
-  "MessageH\000\022H\n\020superchat_remove\030\025 \001(\0132,.vN"
+  "MessageH\000\022H\n\020superchat_delete\030\025 \001(\0132,.vN"
   "erve.bilibili.live.SuperChatDeleteMessag"
   "eH\000B\t\n\007payload\".\n\030PopularityChangedMessa"
-  "ge\022\022\n\npopularity\030\001 \001(\r\"L\n\030LiveStatusChan"
+  "ge\022\022\n\npopularity\030\001 \001(\r\"]\n\030LiveStatusChan"
   "gedMessage\0220\n\006status\030\001 \001(\0162 .vNerve.bili"
-  "bili.live.LiveStatus\"\277\001\n\026RoomInfoChanged"
-  "Message\0227\n\tbase_info\030\001 \001(\0132\".vNerve.bili"
-  "bili.live.RoomBaseInfoH\000\022\030\n\016background_u"
-  "rl\030\002 \001(\tH\000\022\021\n\007skin_id\030\003 \001(\rH\000\0224\n\005admin\030\004"
-  " \001(\0132#.vNerve.bilibili.live.RoomAdminInf"
-  "oH\000B\t\n\007changed\"s\n\014RoomBaseInfo\022\r\n\005title\030"
-  "\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022\021\n\tarea_name\030\003 \001("
-  "\t\022\026\n\016parent_area_id\030\004 \001(\r\022\030\n\020parent_area"
-  "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \003("
-  "\004\")\n\021RoomLockedMessage\022\024\n\014locked_until\030\001"
-  " \001(\004\"$\n\022RoomWarningMessage\022\016\n\006reason\030\001 \001"
-  "(\t\"7\n\022RoomLimitedMessage\022\014\n\004type\030\001 \001(\t\022\023"
-  "\n\013delay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMe"
-  "ssage\022\n\n\002id\030\001 \003(\r*=\n\nLiveStatus\022\r\n\tPREPA"
-  "RING\020\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003"
-  "B\003\370\001\001b\006proto3"
+  "bili.live.LiveStatus\022\017\n\007message\030\002 \001(\t\"\277\001"
+  "\n\026RoomInfoChangedMessage\0227\n\tbase_info\030\001 "
+  "\001(\0132\".vNerve.bilibili.live.RoomBaseInfoH"
+  "\000\022\030\n\016background_url\030\002 \001(\tH\000\022\021\n\007skin_id\030\003"
+  " \001(\rH\000\0224\n\005admin\030\004 \001(\0132#.vNerve.bilibili."
+  "live.RoomAdminInfoH\000B\t\n\007changed\"s\n\014RoomB"
+  "aseInfo\022\r\n\005title\030\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022"
+  "\021\n\tarea_name\030\003 \001(\t\022\026\n\016parent_area_id\030\004 \001"
+  "(\r\022\030\n\020parent_area_name\030\005 \001(\t\"\034\n\rRoomAdmi"
+  "nInfo\022\013\n\003uid\030\001 \003(\004\")\n\021RoomLockedMessage\022"
+  "\024\n\014locked_until\030\001 \001(\004\"%\n\022RoomWarningMess"
+  "age\022\017\n\007message\030\001 \001(\t\"7\n\022RoomLimitedMessa"
+  "ge\022\014\n\004type\030\001 \001(\t\022\023\n\013delay_range\030\002 \001(\r\"$\n"
+  "\026SuperChatDeleteMessage\022\n\n\002id\030\001 \003(\004*=\n\nL"
+  "iveStatus\022\r\n\tPREPARING\020\000\022\010\n\004LIVE\020\001\022\t\n\005RO"
+  "UND\020\002\022\013\n\007CUT_OFF\020\003B\003\370\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_deps[1] = {
   &::descriptor_table_vNerve_2fbilibili_2flive_2fuser_5fmessage_2eproto,
@@ -398,7 +399,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_vNe
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_once;
 static bool descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto = {
-  &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, "vNerve/bilibili/live/room_message.proto", 1413,
+  &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_initialized, descriptor_table_protodef_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, "vNerve/bilibili/live/room_message.proto", 1431,
   &descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_once, descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_sccs, descriptor_table_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto_deps, 10, 1,
   schemas, file_default_instances, TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto::offsets,
   file_level_metadata_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, 10, file_level_enum_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto, file_level_service_descriptors_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto,
@@ -443,7 +444,7 @@ void RoomMessage::InitAsDefaultInstance() {
       ::vNerve::bilibili::live::RoomWarningMessage::internal_default_instance());
   ::vNerve::bilibili::live::_RoomMessage_default_instance_.room_limited_ = const_cast< ::vNerve::bilibili::live::RoomLimitedMessage*>(
       ::vNerve::bilibili::live::RoomLimitedMessage::internal_default_instance());
-  ::vNerve::bilibili::live::_RoomMessage_default_instance_.superchat_remove_ = const_cast< ::vNerve::bilibili::live::SuperChatDeleteMessage*>(
+  ::vNerve::bilibili::live::_RoomMessage_default_instance_.superchat_delete_ = const_cast< ::vNerve::bilibili::live::SuperChatDeleteMessage*>(
       ::vNerve::bilibili::live::SuperChatDeleteMessage::internal_default_instance());
 }
 class RoomMessage::_Internal {
@@ -455,7 +456,7 @@ class RoomMessage::_Internal {
   static const ::vNerve::bilibili::live::RoomLockedMessage& room_locked(const RoomMessage* msg);
   static const ::vNerve::bilibili::live::RoomWarningMessage& room_warning(const RoomMessage* msg);
   static const ::vNerve::bilibili::live::RoomLimitedMessage& room_limited(const RoomMessage* msg);
-  static const ::vNerve::bilibili::live::SuperChatDeleteMessage& superchat_remove(const RoomMessage* msg);
+  static const ::vNerve::bilibili::live::SuperChatDeleteMessage& superchat_delete(const RoomMessage* msg);
 };
 
 const ::vNerve::bilibili::live::UserMessage&
@@ -487,8 +488,8 @@ RoomMessage::_Internal::room_limited(const RoomMessage* msg) {
   return *msg->payload_.room_limited_;
 }
 const ::vNerve::bilibili::live::SuperChatDeleteMessage&
-RoomMessage::_Internal::superchat_remove(const RoomMessage* msg) {
-  return *msg->payload_.superchat_remove_;
+RoomMessage::_Internal::superchat_delete(const RoomMessage* msg) {
+  return *msg->payload_.superchat_delete_;
 }
 void RoomMessage::set_allocated_user_message(::vNerve::bilibili::live::UserMessage* user_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
@@ -603,20 +604,20 @@ void RoomMessage::set_allocated_room_limited(::vNerve::bilibili::live::RoomLimit
   }
   // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomMessage.room_limited)
 }
-void RoomMessage::set_allocated_superchat_remove(::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove) {
+void RoomMessage::set_allocated_superchat_delete(::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_delete) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   clear_payload();
-  if (superchat_remove) {
+  if (superchat_delete) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(superchat_remove);
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(superchat_delete);
     if (message_arena != submessage_arena) {
-      superchat_remove = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, superchat_remove, submessage_arena);
+      superchat_delete = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, superchat_delete, submessage_arena);
     }
-    set_has_superchat_remove();
-    payload_.superchat_remove_ = superchat_remove;
+    set_has_superchat_delete();
+    payload_.superchat_delete_ = superchat_delete;
   }
-  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomMessage.superchat_remove)
+  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomMessage.superchat_delete)
 }
 RoomMessage::RoomMessage()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
@@ -665,8 +666,8 @@ RoomMessage::RoomMessage(const RoomMessage& from)
       _internal_mutable_room_limited()->::vNerve::bilibili::live::RoomLimitedMessage::MergeFrom(from._internal_room_limited());
       break;
     }
-    case kSuperchatRemove: {
-      _internal_mutable_superchat_remove()->::vNerve::bilibili::live::SuperChatDeleteMessage::MergeFrom(from._internal_superchat_remove());
+    case kSuperchatDelete: {
+      _internal_mutable_superchat_delete()->::vNerve::bilibili::live::SuperChatDeleteMessage::MergeFrom(from._internal_superchat_delete());
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -754,9 +755,9 @@ void RoomMessage::clear_payload() {
       }
       break;
     }
-    case kSuperchatRemove: {
+    case kSuperchatDelete: {
       if (GetArenaNoVirtual() == nullptr) {
-        delete payload_.superchat_remove_;
+        delete payload_.superchat_delete_;
       }
       break;
     }
@@ -843,10 +844,10 @@ const char* RoomMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
+      // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;
       case 21:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
-          ptr = ctx->ParseMessage(_internal_mutable_superchat_remove(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_superchat_delete(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -938,12 +939,12 @@ failure:
         20, _Internal::room_limited(this), target, stream);
   }
 
-  // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
-  if (_internal_has_superchat_remove()) {
+  // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;
+  if (_internal_has_superchat_delete()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(
-        21, _Internal::superchat_remove(this), target, stream);
+        21, _Internal::superchat_delete(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1019,11 +1020,11 @@ size_t RoomMessage::ByteSizeLong() const {
           *payload_.room_limited_);
       break;
     }
-    // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
-    case kSuperchatRemove: {
+    // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;
+    case kSuperchatDelete: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *payload_.superchat_remove_);
+          *payload_.superchat_delete_);
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -1093,8 +1094,8 @@ void RoomMessage::MergeFrom(const RoomMessage& from) {
       _internal_mutable_room_limited()->::vNerve::bilibili::live::RoomLimitedMessage::MergeFrom(from._internal_room_limited());
       break;
     }
-    case kSuperchatRemove: {
-      _internal_mutable_superchat_remove()->::vNerve::bilibili::live::SuperChatDeleteMessage::MergeFrom(from._internal_superchat_remove());
+    case kSuperchatDelete: {
+      _internal_mutable_superchat_delete()->::vNerve::bilibili::live::SuperChatDeleteMessage::MergeFrom(from._internal_superchat_delete());
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -1359,11 +1360,18 @@ LiveStatusChangedMessage::LiveStatusChangedMessage(const LiveStatusChangedMessag
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_message().empty()) {
+    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+      GetArenaNoVirtual());
+  }
   status_ = from.status_;
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.LiveStatusChangedMessage)
 }
 
 void LiveStatusChangedMessage::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LiveStatusChangedMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base);
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   status_ = 0;
 }
 
@@ -1374,6 +1382,7 @@ LiveStatusChangedMessage::~LiveStatusChangedMessage() {
 
 void LiveStatusChangedMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
+  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void LiveStatusChangedMessage::ArenaDtor(void* object) {
@@ -1397,6 +1406,7 @@ void LiveStatusChangedMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   status_ = 0;
   _internal_metadata_.Clear();
 }
@@ -1415,6 +1425,15 @@ const char* LiveStatusChangedMessage::_InternalParse(const char* ptr, ::PROTOBUF
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
           _internal_set_status(static_cast<::vNerve::bilibili::live::LiveStatus>(val));
+        } else goto handle_unusual;
+        continue;
+      // string message = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.bilibili.live.LiveStatusChangedMessage.message"));
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
@@ -1450,6 +1469,16 @@ failure:
       1, this->_internal_status(), target);
   }
 
+  // string message = 2;
+  if (this->message().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vNerve.bilibili.live.LiveStatusChangedMessage.message");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_message(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -1465,6 +1494,13 @@ size_t LiveStatusChangedMessage::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // string message = 2;
+  if (this->message().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message());
+  }
 
   // .vNerve.bilibili.live.LiveStatus status = 1;
   if (this->status() != 0) {
@@ -1503,6 +1539,9 @@ void LiveStatusChangedMessage::MergeFrom(const LiveStatusChangedMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.message().size() > 0) {
+    _internal_set_message(from._internal_message());
+  }
   if (from.status() != 0) {
     _internal_set_status(from._internal_status());
   }
@@ -1529,6 +1568,8 @@ bool LiveStatusChangedMessage::IsInitialized() const {
 void LiveStatusChangedMessage::InternalSwap(LiveStatusChangedMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(status_, other->status_);
 }
 
@@ -1970,9 +2011,14 @@ RoomBaseInfo::RoomBaseInfo(const RoomBaseInfo& from)
     area_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_area_name(),
       GetArenaNoVirtual());
   }
+  parent_area_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_parent_area_name().empty()) {
+    parent_area_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_parent_area_name(),
+      GetArenaNoVirtual());
+  }
   ::memcpy(&area_id_, &from.area_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&parent_area_name_) -
-    reinterpret_cast<char*>(&area_id_)) + sizeof(parent_area_name_));
+    static_cast<size_t>(reinterpret_cast<char*>(&parent_area_id_) -
+    reinterpret_cast<char*>(&area_id_)) + sizeof(parent_area_id_));
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.RoomBaseInfo)
 }
 
@@ -1980,9 +2026,10 @@ void RoomBaseInfo::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RoomBaseInfo_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base);
   title_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   area_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  parent_area_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&area_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&parent_area_name_) -
-      reinterpret_cast<char*>(&area_id_)) + sizeof(parent_area_name_));
+      reinterpret_cast<char*>(&parent_area_id_) -
+      reinterpret_cast<char*>(&area_id_)) + sizeof(parent_area_id_));
 }
 
 RoomBaseInfo::~RoomBaseInfo() {
@@ -1994,6 +2041,7 @@ void RoomBaseInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
   title_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   area_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  parent_area_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void RoomBaseInfo::ArenaDtor(void* object) {
@@ -2019,9 +2067,10 @@ void RoomBaseInfo::Clear() {
 
   title_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   area_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  parent_area_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   ::memset(&area_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&parent_area_name_) -
-      reinterpret_cast<char*>(&area_id_)) + sizeof(parent_area_name_));
+      reinterpret_cast<char*>(&parent_area_id_) -
+      reinterpret_cast<char*>(&area_id_)) + sizeof(parent_area_id_));
   _internal_metadata_.Clear();
 }
 
@@ -2065,10 +2114,12 @@ const char* RoomBaseInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 parent_area_name = 5;
+      // string parent_area_name = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          parent_area_name_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_parent_area_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.bilibili.live.RoomBaseInfo.parent_area_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2130,10 +2181,14 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(4, this->_internal_parent_area_id(), target);
   }
 
-  // uint32 parent_area_name = 5;
-  if (this->parent_area_name() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(5, this->_internal_parent_area_name(), target);
+  // string parent_area_name = 5;
+  if (this->parent_area_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_parent_area_name().data(), static_cast<int>(this->_internal_parent_area_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "vNerve.bilibili.live.RoomBaseInfo.parent_area_name");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_parent_area_name(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2166,6 +2221,13 @@ size_t RoomBaseInfo::ByteSizeLong() const {
         this->_internal_area_name());
   }
 
+  // string parent_area_name = 5;
+  if (this->parent_area_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_parent_area_name());
+  }
+
   // uint32 area_id = 2;
   if (this->area_id() != 0) {
     total_size += 1 +
@@ -2178,13 +2240,6 @@ size_t RoomBaseInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_parent_area_id());
-  }
-
-  // uint32 parent_area_name = 5;
-  if (this->parent_area_name() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_parent_area_name());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2224,14 +2279,14 @@ void RoomBaseInfo::MergeFrom(const RoomBaseInfo& from) {
   if (from.area_name().size() > 0) {
     _internal_set_area_name(from._internal_area_name());
   }
+  if (from.parent_area_name().size() > 0) {
+    _internal_set_parent_area_name(from._internal_parent_area_name());
+  }
   if (from.area_id() != 0) {
     _internal_set_area_id(from._internal_area_id());
   }
   if (from.parent_area_id() != 0) {
     _internal_set_parent_area_id(from._internal_parent_area_id());
-  }
-  if (from.parent_area_name() != 0) {
-    _internal_set_parent_area_name(from._internal_parent_area_name());
   }
 }
 
@@ -2260,9 +2315,10 @@ void RoomBaseInfo::InternalSwap(RoomBaseInfo* other) {
     GetArenaNoVirtual());
   area_name_.Swap(&other->area_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  parent_area_name_.Swap(&other->parent_area_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(area_id_, other->area_id_);
   swap(parent_area_id_, other->parent_area_id_);
-  swap(parent_area_name_, other->parent_area_name_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoomBaseInfo::GetMetadata() const {
@@ -2708,9 +2764,9 @@ RoomWarningMessage::RoomWarningMessage(const RoomWarningMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_reason().empty()) {
-    reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_reason(),
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_message().empty()) {
+    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
       GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.RoomWarningMessage)
@@ -2718,7 +2774,7 @@ RoomWarningMessage::RoomWarningMessage(const RoomWarningMessage& from)
 
 void RoomWarningMessage::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RoomWarningMessage_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto.base);
-  reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 RoomWarningMessage::~RoomWarningMessage() {
@@ -2728,7 +2784,7 @@ RoomWarningMessage::~RoomWarningMessage() {
 
 void RoomWarningMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaNoVirtual() == nullptr);
-  reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void RoomWarningMessage::ArenaDtor(void* object) {
@@ -2752,7 +2808,7 @@ void RoomWarningMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   _internal_metadata_.Clear();
 }
 
@@ -2764,12 +2820,12 @@ const char* RoomWarningMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string reason = 1;
+      // string message = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_reason();
+          auto str = _internal_mutable_message();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.bilibili.live.RoomWarningMessage.reason"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "vNerve.bilibili.live.RoomWarningMessage.message"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2799,14 +2855,14 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string reason = 1;
-  if (this->reason().size() > 0) {
+  // string message = 1;
+  if (this->message().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_reason().data(), static_cast<int>(this->_internal_reason().length()),
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "vNerve.bilibili.live.RoomWarningMessage.reason");
+      "vNerve.bilibili.live.RoomWarningMessage.message");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_reason(), target);
+        1, this->_internal_message(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2825,11 +2881,11 @@ size_t RoomWarningMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string reason = 1;
-  if (this->reason().size() > 0) {
+  // string message = 1;
+  if (this->message().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_reason());
+        this->_internal_message());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2863,8 +2919,8 @@ void RoomWarningMessage::MergeFrom(const RoomWarningMessage& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.reason().size() > 0) {
-    _internal_set_reason(from._internal_reason());
+  if (from.message().size() > 0) {
+    _internal_set_message(from._internal_message());
   }
 }
 
@@ -2889,7 +2945,7 @@ bool RoomWarningMessage::IsInitialized() const {
 void RoomWarningMessage::InternalSwap(RoomWarningMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
 
@@ -3213,10 +3269,10 @@ const char* SuperChatDeleteMessage::_InternalParse(const char* ptr, ::PROTOBUF_N
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated uint32 id = 1;
+      // repeated uint64 id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_id(), ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt64Parser(_internal_mutable_id(), ptr, ctx);
           CHK_(ptr);
         } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
           _internal_add_id(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
@@ -3249,11 +3305,11 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated uint32 id = 1;
+  // repeated uint64 id = 1;
   {
     int byte_size = _id_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
-      target = stream->WriteUInt32Packed(
+      target = stream->WriteUInt64Packed(
           1, _internal_id(), byte_size, target);
     }
   }
@@ -3274,10 +3330,10 @@ size_t SuperChatDeleteMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 id = 1;
+  // repeated uint64 id = 1;
   {
     size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      UInt32Size(this->id_);
+      UInt64Size(this->id_);
     if (data_size > 0) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(

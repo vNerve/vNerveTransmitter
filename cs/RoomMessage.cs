@@ -37,36 +37,36 @@ namespace VNerve.Bilibili.Live {
             "bGkubGl2ZS5Sb29tTG9ja2VkTWVzc2FnZUgAEkAKDHJvb21fd2FybmluZxgT",
             "IAEoCzIoLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLlJvb21XYXJuaW5nTWVzc2Fn",
             "ZUgAEkAKDHJvb21fbGltaXRlZBgUIAEoCzIoLnZOZXJ2ZS5iaWxpYmlsaS5s",
-            "aXZlLlJvb21MaW1pdGVkTWVzc2FnZUgAEkgKEHN1cGVyY2hhdF9yZW1vdmUY",
+            "aXZlLlJvb21MaW1pdGVkTWVzc2FnZUgAEkgKEHN1cGVyY2hhdF9kZWxldGUY",
             "FSABKAsyLC52TmVydmUuYmlsaWJpbGkubGl2ZS5TdXBlckNoYXREZWxldGVN",
             "ZXNzYWdlSABCCQoHcGF5bG9hZCIuChhQb3B1bGFyaXR5Q2hhbmdlZE1lc3Nh",
-            "Z2USEgoKcG9wdWxhcml0eRgBIAEoDSJMChhMaXZlU3RhdHVzQ2hhbmdlZE1l",
+            "Z2USEgoKcG9wdWxhcml0eRgBIAEoDSJdChhMaXZlU3RhdHVzQ2hhbmdlZE1l",
             "c3NhZ2USMAoGc3RhdHVzGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUu",
-            "TGl2ZVN0YXR1cyK/AQoWUm9vbUluZm9DaGFuZ2VkTWVzc2FnZRI3CgliYXNl",
-            "X2luZm8YASABKAsyIi52TmVydmUuYmlsaWJpbGkubGl2ZS5Sb29tQmFzZUlu",
-            "Zm9IABIYCg5iYWNrZ3JvdW5kX3VybBgCIAEoCUgAEhEKB3NraW5faWQYAyAB",
-            "KA1IABI0CgVhZG1pbhgEIAEoCzIjLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLlJv",
-            "b21BZG1pbkluZm9IAEIJCgdjaGFuZ2VkInMKDFJvb21CYXNlSW5mbxINCgV0",
-            "aXRsZRgBIAEoCRIPCgdhcmVhX2lkGAIgASgNEhEKCWFyZWFfbmFtZRgDIAEo",
-            "CRIWCg5wYXJlbnRfYXJlYV9pZBgEIAEoDRIYChBwYXJlbnRfYXJlYV9uYW1l",
-            "GAUgASgNIhwKDVJvb21BZG1pbkluZm8SCwoDdWlkGAEgAygEIikKEVJvb21M",
-            "b2NrZWRNZXNzYWdlEhQKDGxvY2tlZF91bnRpbBgBIAEoBCIkChJSb29tV2Fy",
-            "bmluZ01lc3NhZ2USDgoGcmVhc29uGAEgASgJIjcKElJvb21MaW1pdGVkTWVz",
-            "c2FnZRIMCgR0eXBlGAEgASgJEhMKC2RlbGF5X3JhbmdlGAIgASgNIiQKFlN1",
-            "cGVyQ2hhdERlbGV0ZU1lc3NhZ2USCgoCaWQYASADKA0qPQoKTGl2ZVN0YXR1",
-            "cxINCglQUkVQQVJJTkcQABIICgRMSVZFEAESCQoFUk9VTkQQAhILCgdDVVRf",
-            "T0ZGEANCA/gBAWIGcHJvdG8z"));
+            "TGl2ZVN0YXR1cxIPCgdtZXNzYWdlGAIgASgJIr8BChZSb29tSW5mb0NoYW5n",
+            "ZWRNZXNzYWdlEjcKCWJhc2VfaW5mbxgBIAEoCzIiLnZOZXJ2ZS5iaWxpYmls",
+            "aS5saXZlLlJvb21CYXNlSW5mb0gAEhgKDmJhY2tncm91bmRfdXJsGAIgASgJ",
+            "SAASEQoHc2tpbl9pZBgDIAEoDUgAEjQKBWFkbWluGAQgASgLMiMudk5lcnZl",
+            "LmJpbGliaWxpLmxpdmUuUm9vbUFkbWluSW5mb0gAQgkKB2NoYW5nZWQicwoM",
+            "Um9vbUJhc2VJbmZvEg0KBXRpdGxlGAEgASgJEg8KB2FyZWFfaWQYAiABKA0S",
+            "EQoJYXJlYV9uYW1lGAMgASgJEhYKDnBhcmVudF9hcmVhX2lkGAQgASgNEhgK",
+            "EHBhcmVudF9hcmVhX25hbWUYBSABKAkiHAoNUm9vbUFkbWluSW5mbxILCgN1",
+            "aWQYASADKAQiKQoRUm9vbUxvY2tlZE1lc3NhZ2USFAoMbG9ja2VkX3VudGls",
+            "GAEgASgEIiUKElJvb21XYXJuaW5nTWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJ",
+            "IjcKElJvb21MaW1pdGVkTWVzc2FnZRIMCgR0eXBlGAEgASgJEhMKC2RlbGF5",
+            "X3JhbmdlGAIgASgNIiQKFlN1cGVyQ2hhdERlbGV0ZU1lc3NhZ2USCgoCaWQY",
+            "ASADKAQqPQoKTGl2ZVN0YXR1cxINCglQUkVQQVJJTkcQABIICgRMSVZFEAES",
+            "CQoFUk9VTkQQAhILCgdDVVRfT0ZGEANCA/gBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::VNerve.Bilibili.Live.UserMessageReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomMessage), global::VNerve.Bilibili.Live.RoomMessage.Parser, new[]{ "RoomId", "UserMessage", "PopularityChange", "LiveStatus", "InfoChange", "RoomLocked", "RoomWarning", "RoomLimited", "SuperchatRemove" }, new[]{ "Payload" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomMessage), global::VNerve.Bilibili.Live.RoomMessage.Parser, new[]{ "RoomId", "UserMessage", "PopularityChange", "LiveStatus", "InfoChange", "RoomLocked", "RoomWarning", "RoomLimited", "SuperchatDelete" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.PopularityChangedMessage), global::VNerve.Bilibili.Live.PopularityChangedMessage.Parser, new[]{ "Popularity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.LiveStatusChangedMessage), global::VNerve.Bilibili.Live.LiveStatusChangedMessage.Parser, new[]{ "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.LiveStatusChangedMessage), global::VNerve.Bilibili.Live.LiveStatusChangedMessage.Parser, new[]{ "Status", "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomInfoChangedMessage), global::VNerve.Bilibili.Live.RoomInfoChangedMessage.Parser, new[]{ "BaseInfo", "BackgroundUrl", "SkinId", "Admin" }, new[]{ "Changed" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomBaseInfo), global::VNerve.Bilibili.Live.RoomBaseInfo.Parser, new[]{ "Title", "AreaId", "AreaName", "ParentAreaId", "ParentAreaName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomAdminInfo), global::VNerve.Bilibili.Live.RoomAdminInfo.Parser, new[]{ "Uid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomLockedMessage), global::VNerve.Bilibili.Live.RoomLockedMessage.Parser, new[]{ "LockedUntil" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomWarningMessage), global::VNerve.Bilibili.Live.RoomWarningMessage.Parser, new[]{ "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomWarningMessage), global::VNerve.Bilibili.Live.RoomWarningMessage.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.RoomLimitedMessage), global::VNerve.Bilibili.Live.RoomLimitedMessage.Parser, new[]{ "Type", "DelayRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.SuperChatDeleteMessage), global::VNerve.Bilibili.Live.SuperChatDeleteMessage.Parser, new[]{ "Id" }, null, null, null, null)
           }));
@@ -133,8 +133,8 @@ namespace VNerve.Bilibili.Live {
         case PayloadOneofCase.RoomLimited:
           RoomLimited = other.RoomLimited.Clone();
           break;
-        case PayloadOneofCase.SuperchatRemove:
-          SuperchatRemove = other.SuperchatRemove.Clone();
+        case PayloadOneofCase.SuperchatDelete:
+          SuperchatDelete = other.SuperchatDelete.Clone();
           break;
       }
 
@@ -234,14 +234,14 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
-    /// <summary>Field number for the "superchat_remove" field.</summary>
-    public const int SuperchatRemoveFieldNumber = 21;
+    /// <summary>Field number for the "superchat_delete" field.</summary>
+    public const int SuperchatDeleteFieldNumber = 21;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::VNerve.Bilibili.Live.SuperChatDeleteMessage SuperchatRemove {
-      get { return payloadCase_ == PayloadOneofCase.SuperchatRemove ? (global::VNerve.Bilibili.Live.SuperChatDeleteMessage) payload_ : null; }
+    public global::VNerve.Bilibili.Live.SuperChatDeleteMessage SuperchatDelete {
+      get { return payloadCase_ == PayloadOneofCase.SuperchatDelete ? (global::VNerve.Bilibili.Live.SuperChatDeleteMessage) payload_ : null; }
       set {
         payload_ = value;
-        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.SuperchatRemove;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.SuperchatDelete;
       }
     }
 
@@ -256,7 +256,7 @@ namespace VNerve.Bilibili.Live {
       RoomLocked = 18,
       RoomWarning = 19,
       RoomLimited = 20,
-      SuperchatRemove = 21,
+      SuperchatDelete = 21,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -291,7 +291,7 @@ namespace VNerve.Bilibili.Live {
       if (!object.Equals(RoomLocked, other.RoomLocked)) return false;
       if (!object.Equals(RoomWarning, other.RoomWarning)) return false;
       if (!object.Equals(RoomLimited, other.RoomLimited)) return false;
-      if (!object.Equals(SuperchatRemove, other.SuperchatRemove)) return false;
+      if (!object.Equals(SuperchatDelete, other.SuperchatDelete)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -307,7 +307,7 @@ namespace VNerve.Bilibili.Live {
       if (payloadCase_ == PayloadOneofCase.RoomLocked) hash ^= RoomLocked.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.RoomWarning) hash ^= RoomWarning.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.RoomLimited) hash ^= RoomLimited.GetHashCode();
-      if (payloadCase_ == PayloadOneofCase.SuperchatRemove) hash ^= SuperchatRemove.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.SuperchatDelete) hash ^= SuperchatDelete.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -354,9 +354,9 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(162, 1);
         output.WriteMessage(RoomLimited);
       }
-      if (payloadCase_ == PayloadOneofCase.SuperchatRemove) {
+      if (payloadCase_ == PayloadOneofCase.SuperchatDelete) {
         output.WriteRawTag(170, 1);
-        output.WriteMessage(SuperchatRemove);
+        output.WriteMessage(SuperchatDelete);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -390,8 +390,8 @@ namespace VNerve.Bilibili.Live {
       if (payloadCase_ == PayloadOneofCase.RoomLimited) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoomLimited);
       }
-      if (payloadCase_ == PayloadOneofCase.SuperchatRemove) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SuperchatRemove);
+      if (payloadCase_ == PayloadOneofCase.SuperchatDelete) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SuperchatDelete);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -450,11 +450,11 @@ namespace VNerve.Bilibili.Live {
           }
           RoomLimited.MergeFrom(other.RoomLimited);
           break;
-        case PayloadOneofCase.SuperchatRemove:
-          if (SuperchatRemove == null) {
-            SuperchatRemove = new global::VNerve.Bilibili.Live.SuperChatDeleteMessage();
+        case PayloadOneofCase.SuperchatDelete:
+          if (SuperchatDelete == null) {
+            SuperchatDelete = new global::VNerve.Bilibili.Live.SuperChatDeleteMessage();
           }
-          SuperchatRemove.MergeFrom(other.SuperchatRemove);
+          SuperchatDelete.MergeFrom(other.SuperchatDelete);
           break;
       }
 
@@ -538,11 +538,11 @@ namespace VNerve.Bilibili.Live {
           }
           case 170: {
             global::VNerve.Bilibili.Live.SuperChatDeleteMessage subBuilder = new global::VNerve.Bilibili.Live.SuperChatDeleteMessage();
-            if (payloadCase_ == PayloadOneofCase.SuperchatRemove) {
-              subBuilder.MergeFrom(SuperchatRemove);
+            if (payloadCase_ == PayloadOneofCase.SuperchatDelete) {
+              subBuilder.MergeFrom(SuperchatDelete);
             }
             input.ReadMessage(subBuilder);
-            SuperchatRemove = subBuilder;
+            SuperchatDelete = subBuilder;
             break;
           }
         }
@@ -706,6 +706,7 @@ namespace VNerve.Bilibili.Live {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LiveStatusChangedMessage(LiveStatusChangedMessage other) : this() {
       status_ = other.status_;
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -725,6 +726,17 @@ namespace VNerve.Bilibili.Live {
       }
     }
 
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 2;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LiveStatusChangedMessage);
@@ -739,6 +751,7 @@ namespace VNerve.Bilibili.Live {
         return true;
       }
       if (Status != other.Status) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -746,6 +759,7 @@ namespace VNerve.Bilibili.Live {
     public override int GetHashCode() {
       int hash = 1;
       if (Status != global::VNerve.Bilibili.Live.LiveStatus.Preparing) hash ^= Status.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -763,6 +777,10 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(8);
         output.WriteEnum((int) Status);
       }
+      if (Message.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Message);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -773,6 +791,9 @@ namespace VNerve.Bilibili.Live {
       int size = 0;
       if (Status != global::VNerve.Bilibili.Live.LiveStatus.Preparing) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -788,6 +809,9 @@ namespace VNerve.Bilibili.Live {
       if (other.Status != global::VNerve.Bilibili.Live.LiveStatus.Preparing) {
         Status = other.Status;
       }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -801,6 +825,10 @@ namespace VNerve.Bilibili.Live {
             break;
           case 8: {
             Status = (global::VNerve.Bilibili.Live.LiveStatus) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Message = input.ReadString();
             break;
           }
         }
@@ -1162,12 +1190,12 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "parent_area_name" field.</summary>
     public const int ParentAreaNameFieldNumber = 5;
-    private uint parentAreaName_;
+    private string parentAreaName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint ParentAreaName {
+    public string ParentAreaName {
       get { return parentAreaName_; }
       set {
-        parentAreaName_ = value;
+        parentAreaName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1199,7 +1227,7 @@ namespace VNerve.Bilibili.Live {
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (AreaName.Length != 0) hash ^= AreaName.GetHashCode();
       if (ParentAreaId != 0) hash ^= ParentAreaId.GetHashCode();
-      if (ParentAreaName != 0) hash ^= ParentAreaName.GetHashCode();
+      if (ParentAreaName.Length != 0) hash ^= ParentAreaName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1229,9 +1257,9 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(32);
         output.WriteUInt32(ParentAreaId);
       }
-      if (ParentAreaName != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(ParentAreaName);
+      if (ParentAreaName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ParentAreaName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1253,8 +1281,8 @@ namespace VNerve.Bilibili.Live {
       if (ParentAreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ParentAreaId);
       }
-      if (ParentAreaName != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ParentAreaName);
+      if (ParentAreaName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParentAreaName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1279,7 +1307,7 @@ namespace VNerve.Bilibili.Live {
       if (other.ParentAreaId != 0) {
         ParentAreaId = other.ParentAreaId;
       }
-      if (other.ParentAreaName != 0) {
+      if (other.ParentAreaName.Length != 0) {
         ParentAreaName = other.ParentAreaName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1309,8 +1337,8 @@ namespace VNerve.Bilibili.Live {
             ParentAreaId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            ParentAreaName = input.ReadUInt32();
+          case 42: {
+            ParentAreaName = input.ReadString();
             break;
           }
         }
@@ -1595,7 +1623,7 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RoomWarningMessage(RoomWarningMessage other) : this() {
-      reason_ = other.reason_;
+      message_ = other.message_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1604,14 +1632,14 @@ namespace VNerve.Bilibili.Live {
       return new RoomWarningMessage(this);
     }
 
-    /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 1;
-    private string reason_ = "";
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Reason {
-      get { return reason_; }
+    public string Message {
+      get { return message_; }
       set {
-        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1628,14 +1656,14 @@ namespace VNerve.Bilibili.Live {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Reason != other.Reason) return false;
+      if (Message != other.Message) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1649,9 +1677,9 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Reason.Length != 0) {
+      if (Message.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Reason);
+        output.WriteString(Message);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1661,8 +1689,8 @@ namespace VNerve.Bilibili.Live {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Reason.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1675,8 +1703,8 @@ namespace VNerve.Bilibili.Live {
       if (other == null) {
         return;
       }
-      if (other.Reason.Length != 0) {
-        Reason = other.Reason;
+      if (other.Message.Length != 0) {
+        Message = other.Message;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1690,7 +1718,7 @@ namespace VNerve.Bilibili.Live {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Reason = input.ReadString();
+            Message = input.ReadString();
             break;
           }
         }
@@ -1892,11 +1920,11 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_id_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> id_ = new pbc::RepeatedField<uint>();
+    private static readonly pb::FieldCodec<ulong> _repeated_id_codec
+        = pb::FieldCodec.ForUInt64(10);
+    private readonly pbc::RepeatedField<ulong> id_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<uint> Id {
+    public pbc::RepeatedField<ulong> Id {
       get { return id_; }
     }
 

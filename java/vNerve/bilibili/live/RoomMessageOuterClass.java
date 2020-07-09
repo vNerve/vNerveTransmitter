@@ -252,19 +252,19 @@ public final class RoomMessageOuterClass {
     vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessageOrBuilder getRoomLimitedOrBuilder();
 
     /**
-     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
-     * @return Whether the superchatRemove field is set.
+     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
+     * @return Whether the superchatDelete field is set.
      */
-    boolean hasSuperchatRemove();
+    boolean hasSuperchatDelete();
     /**
-     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
-     * @return The superchatRemove.
+     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
+     * @return The superchatDelete.
      */
-    vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatRemove();
+    vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatDelete();
     /**
-     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      */
-    vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatRemoveOrBuilder();
+    vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatDeleteOrBuilder();
 
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomMessage.PayloadCase getPayloadCase();
   }
@@ -474,7 +474,7 @@ public final class RoomMessageOuterClass {
       ROOM_LOCKED(18),
       ROOM_WARNING(19),
       ROOM_LIMITED(20),
-      SUPERCHAT_REMOVE(21),
+      SUPERCHAT_DELETE(21),
       PAYLOAD_NOT_SET(0);
       private final int value;
       private PayloadCase(int value) {
@@ -499,7 +499,7 @@ public final class RoomMessageOuterClass {
           case 18: return ROOM_LOCKED;
           case 19: return ROOM_WARNING;
           case 20: return ROOM_LIMITED;
-          case 21: return SUPERCHAT_REMOVE;
+          case 21: return SUPERCHAT_DELETE;
           case 0: return PAYLOAD_NOT_SET;
           default: return null;
         }
@@ -721,28 +721,28 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage.getDefaultInstance();
     }
 
-    public static final int SUPERCHAT_REMOVE_FIELD_NUMBER = 21;
+    public static final int SUPERCHAT_DELETE_FIELD_NUMBER = 21;
     /**
-     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
-     * @return Whether the superchatRemove field is set.
+     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
+     * @return Whether the superchatDelete field is set.
      */
-    public boolean hasSuperchatRemove() {
+    public boolean hasSuperchatDelete() {
       return payloadCase_ == 21;
     }
     /**
-     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
-     * @return The superchatRemove.
+     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
+     * @return The superchatDelete.
      */
-    public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatRemove() {
+    public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatDelete() {
       if (payloadCase_ == 21) {
          return (vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) payload_;
       }
       return vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance();
     }
     /**
-     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+     * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      */
-    public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatRemoveOrBuilder() {
+    public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatDeleteOrBuilder() {
       if (payloadCase_ == 21) {
          return (vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) payload_;
       }
@@ -883,8 +883,8 @@ public final class RoomMessageOuterClass {
               .equals(other.getRoomLimited())) return false;
           break;
         case 21:
-          if (!getSuperchatRemove()
-              .equals(other.getSuperchatRemove())) return false;
+          if (!getSuperchatDelete()
+              .equals(other.getSuperchatDelete())) return false;
           break;
         case 0:
         default:
@@ -932,8 +932,8 @@ public final class RoomMessageOuterClass {
           hash = (53 * hash) + getRoomLimited().hashCode();
           break;
         case 21:
-          hash = (37 * hash) + SUPERCHAT_REMOVE_FIELD_NUMBER;
-          hash = (53 * hash) + getSuperchatRemove().hashCode();
+          hash = (37 * hash) + SUPERCHAT_DELETE_FIELD_NUMBER;
+          hash = (53 * hash) + getSuperchatDelete().hashCode();
           break;
         case 0:
         default:
@@ -1152,10 +1152,10 @@ public final class RoomMessageOuterClass {
           }
         }
         if (payloadCase_ == 21) {
-          if (superchatRemoveBuilder_ == null) {
+          if (superchatDeleteBuilder_ == null) {
             result.payload_ = payload_;
           } else {
-            result.payload_ = superchatRemoveBuilder_.build();
+            result.payload_ = superchatDeleteBuilder_.build();
           }
         }
         result.payloadCase_ = payloadCase_;
@@ -1239,8 +1239,8 @@ public final class RoomMessageOuterClass {
             mergeRoomLimited(other.getRoomLimited());
             break;
           }
-          case SUPERCHAT_REMOVE: {
-            mergeSuperchatRemove(other.getSuperchatRemove());
+          case SUPERCHAT_DELETE: {
+            mergeSuperchatDelete(other.getSuperchatDelete());
             break;
           }
           case PAYLOAD_NOT_SET: {
@@ -2288,66 +2288,66 @@ public final class RoomMessageOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder> superchatRemoveBuilder_;
+          vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder> superchatDeleteBuilder_;
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
-       * @return Whether the superchatRemove field is set.
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
+       * @return Whether the superchatDelete field is set.
        */
-      public boolean hasSuperchatRemove() {
+      public boolean hasSuperchatDelete() {
         return payloadCase_ == 21;
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
-       * @return The superchatRemove.
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
+       * @return The superchatDelete.
        */
-      public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatRemove() {
-        if (superchatRemoveBuilder_ == null) {
+      public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatDelete() {
+        if (superchatDeleteBuilder_ == null) {
           if (payloadCase_ == 21) {
             return (vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) payload_;
           }
           return vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance();
         } else {
           if (payloadCase_ == 21) {
-            return superchatRemoveBuilder_.getMessage();
+            return superchatDeleteBuilder_.getMessage();
           }
           return vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance();
         }
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
-      public Builder setSuperchatRemove(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage value) {
-        if (superchatRemoveBuilder_ == null) {
+      public Builder setSuperchatDelete(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage value) {
+        if (superchatDeleteBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           payload_ = value;
           onChanged();
         } else {
-          superchatRemoveBuilder_.setMessage(value);
+          superchatDeleteBuilder_.setMessage(value);
         }
         payloadCase_ = 21;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
-      public Builder setSuperchatRemove(
+      public Builder setSuperchatDelete(
           vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder builderForValue) {
-        if (superchatRemoveBuilder_ == null) {
+        if (superchatDeleteBuilder_ == null) {
           payload_ = builderForValue.build();
           onChanged();
         } else {
-          superchatRemoveBuilder_.setMessage(builderForValue.build());
+          superchatDeleteBuilder_.setMessage(builderForValue.build());
         }
         payloadCase_ = 21;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
-      public Builder mergeSuperchatRemove(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage value) {
-        if (superchatRemoveBuilder_ == null) {
+      public Builder mergeSuperchatDelete(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage value) {
+        if (superchatDeleteBuilder_ == null) {
           if (payloadCase_ == 21 &&
               payload_ != vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance()) {
             payload_ = vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.newBuilder((vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) payload_)
@@ -2358,18 +2358,18 @@ public final class RoomMessageOuterClass {
           onChanged();
         } else {
           if (payloadCase_ == 21) {
-            superchatRemoveBuilder_.mergeFrom(value);
+            superchatDeleteBuilder_.mergeFrom(value);
           }
-          superchatRemoveBuilder_.setMessage(value);
+          superchatDeleteBuilder_.setMessage(value);
         }
         payloadCase_ = 21;
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
-      public Builder clearSuperchatRemove() {
-        if (superchatRemoveBuilder_ == null) {
+      public Builder clearSuperchatDelete() {
+        if (superchatDeleteBuilder_ == null) {
           if (payloadCase_ == 21) {
             payloadCase_ = 0;
             payload_ = null;
@@ -2380,22 +2380,22 @@ public final class RoomMessageOuterClass {
             payloadCase_ = 0;
             payload_ = null;
           }
-          superchatRemoveBuilder_.clear();
+          superchatDeleteBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
-      public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder getSuperchatRemoveBuilder() {
-        return getSuperchatRemoveFieldBuilder().getBuilder();
+      public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder getSuperchatDeleteBuilder() {
+        return getSuperchatDeleteFieldBuilder().getBuilder();
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
-      public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatRemoveOrBuilder() {
-        if ((payloadCase_ == 21) && (superchatRemoveBuilder_ != null)) {
-          return superchatRemoveBuilder_.getMessageOrBuilder();
+      public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatDeleteOrBuilder() {
+        if ((payloadCase_ == 21) && (superchatDeleteBuilder_ != null)) {
+          return superchatDeleteBuilder_.getMessageOrBuilder();
         } else {
           if (payloadCase_ == 21) {
             return (vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) payload_;
@@ -2404,16 +2404,16 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
-       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;</code>
+       * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder> 
-          getSuperchatRemoveFieldBuilder() {
-        if (superchatRemoveBuilder_ == null) {
+          getSuperchatDeleteFieldBuilder() {
+        if (superchatDeleteBuilder_ == null) {
           if (!(payloadCase_ == 21)) {
             payload_ = vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance();
           }
-          superchatRemoveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          superchatDeleteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder>(
                   (vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage) payload_,
                   getParentForChildren(),
@@ -2422,7 +2422,7 @@ public final class RoomMessageOuterClass {
         }
         payloadCase_ = 21;
         onChanged();;
-        return superchatRemoveBuilder_;
+        return superchatDeleteBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2977,6 +2977,18 @@ public final class RoomMessageOuterClass {
      * @return The status.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.LiveStatus getStatus();
+
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    java.lang.String getMessage();
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    com.google.protobuf.ByteString
+        getMessageBytes();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.LiveStatusChangedMessage}
@@ -2992,6 +3004,7 @@ public final class RoomMessageOuterClass {
     }
     private LiveStatusChangedMessage() {
       status_ = 0;
+      message_ = "";
     }
 
     @java.lang.Override
@@ -3028,6 +3041,12 @@ public final class RoomMessageOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              message_ = s;
               break;
             }
             default: {
@@ -3081,6 +3100,42 @@ public final class RoomMessageOuterClass {
       return result == null ? vNerve.bilibili.live.RoomMessageOuterClass.LiveStatus.UNRECOGNIZED : result;
     }
 
+    public static final int MESSAGE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object message_;
+    /**
+     * <code>string message = 2;</code>
+     * @return The message.
+     */
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        message_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message = 2;</code>
+     * @return The bytes for message.
+     */
+    public com.google.protobuf.ByteString
+        getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        message_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3098,6 +3153,9 @@ public final class RoomMessageOuterClass {
       if (status_ != vNerve.bilibili.live.RoomMessageOuterClass.LiveStatus.PREPARING.getNumber()) {
         output.writeEnum(1, status_);
       }
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3110,6 +3168,9 @@ public final class RoomMessageOuterClass {
       if (status_ != vNerve.bilibili.live.RoomMessageOuterClass.LiveStatus.PREPARING.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, status_);
+      }
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3127,6 +3188,8 @@ public final class RoomMessageOuterClass {
       vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage other = (vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage) obj;
 
       if (status_ != other.status_) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3140,6 +3203,8 @@ public final class RoomMessageOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3275,6 +3340,8 @@ public final class RoomMessageOuterClass {
         super.clear();
         status_ = 0;
 
+        message_ = "";
+
         return this;
       }
 
@@ -3302,6 +3369,7 @@ public final class RoomMessageOuterClass {
       public vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage buildPartial() {
         vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage result = new vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage(this);
         result.status_ = status_;
+        result.message_ = message_;
         onBuilt();
         return result;
       }
@@ -3352,6 +3420,10 @@ public final class RoomMessageOuterClass {
         if (other == vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage.getDefaultInstance()) return this;
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3430,6 +3502,82 @@ public final class RoomMessageOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object message_ = "";
+      /**
+       * <code>string message = 2;</code>
+       * @return The message.
+       */
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          message_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return The bytes for message.
+       */
+      public com.google.protobuf.ByteString
+          getMessageBytes() {
+        java.lang.Object ref = message_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          message_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        message_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessage() {
+        
+        message_ = getDefaultInstance().getMessage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message = 2;</code>
+       * @param value The bytes for message to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        message_ = value;
         onChanged();
         return this;
       }
@@ -4780,10 +4928,16 @@ public final class RoomMessageOuterClass {
     int getParentAreaId();
 
     /**
-     * <code>uint32 parent_area_name = 5;</code>
+     * <code>string parent_area_name = 5;</code>
      * @return The parentAreaName.
      */
-    int getParentAreaName();
+    java.lang.String getParentAreaName();
+    /**
+     * <code>string parent_area_name = 5;</code>
+     * @return The bytes for parentAreaName.
+     */
+    com.google.protobuf.ByteString
+        getParentAreaNameBytes();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.RoomBaseInfo}
@@ -4800,6 +4954,7 @@ public final class RoomMessageOuterClass {
     private RoomBaseInfo() {
       title_ = "";
       areaName_ = "";
+      parentAreaName_ = "";
     }
 
     @java.lang.Override
@@ -4854,9 +5009,10 @@ public final class RoomMessageOuterClass {
               parentAreaId_ = input.readUInt32();
               break;
             }
-            case 40: {
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              parentAreaName_ = input.readUInt32();
+              parentAreaName_ = s;
               break;
             }
             default: {
@@ -4984,13 +5140,39 @@ public final class RoomMessageOuterClass {
     }
 
     public static final int PARENT_AREA_NAME_FIELD_NUMBER = 5;
-    private int parentAreaName_;
+    private volatile java.lang.Object parentAreaName_;
     /**
-     * <code>uint32 parent_area_name = 5;</code>
+     * <code>string parent_area_name = 5;</code>
      * @return The parentAreaName.
      */
-    public int getParentAreaName() {
-      return parentAreaName_;
+    public java.lang.String getParentAreaName() {
+      java.lang.Object ref = parentAreaName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        parentAreaName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string parent_area_name = 5;</code>
+     * @return The bytes for parentAreaName.
+     */
+    public com.google.protobuf.ByteString
+        getParentAreaNameBytes() {
+      java.lang.Object ref = parentAreaName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        parentAreaName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5019,8 +5201,8 @@ public final class RoomMessageOuterClass {
       if (parentAreaId_ != 0) {
         output.writeUInt32(4, parentAreaId_);
       }
-      if (parentAreaName_ != 0) {
-        output.writeUInt32(5, parentAreaName_);
+      if (!getParentAreaNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, parentAreaName_);
       }
       unknownFields.writeTo(output);
     }
@@ -5045,9 +5227,8 @@ public final class RoomMessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(4, parentAreaId_);
       }
-      if (parentAreaName_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, parentAreaName_);
+      if (!getParentAreaNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, parentAreaName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5072,8 +5253,8 @@ public final class RoomMessageOuterClass {
           .equals(other.getAreaName())) return false;
       if (getParentAreaId()
           != other.getParentAreaId()) return false;
-      if (getParentAreaName()
-          != other.getParentAreaName()) return false;
+      if (!getParentAreaName()
+          .equals(other.getParentAreaName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5094,7 +5275,7 @@ public final class RoomMessageOuterClass {
       hash = (37 * hash) + PARENT_AREA_ID_FIELD_NUMBER;
       hash = (53 * hash) + getParentAreaId();
       hash = (37 * hash) + PARENT_AREA_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getParentAreaName();
+      hash = (53 * hash) + getParentAreaName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5236,7 +5417,7 @@ public final class RoomMessageOuterClass {
 
         parentAreaId_ = 0;
 
-        parentAreaName_ = 0;
+        parentAreaName_ = "";
 
         return this;
       }
@@ -5331,8 +5512,9 @@ public final class RoomMessageOuterClass {
         if (other.getParentAreaId() != 0) {
           setParentAreaId(other.getParentAreaId());
         }
-        if (other.getParentAreaName() != 0) {
-          setParentAreaName(other.getParentAreaName());
+        if (!other.getParentAreaName().isEmpty()) {
+          parentAreaName_ = other.parentAreaName_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5575,32 +5757,78 @@ public final class RoomMessageOuterClass {
         return this;
       }
 
-      private int parentAreaName_ ;
+      private java.lang.Object parentAreaName_ = "";
       /**
-       * <code>uint32 parent_area_name = 5;</code>
+       * <code>string parent_area_name = 5;</code>
        * @return The parentAreaName.
        */
-      public int getParentAreaName() {
-        return parentAreaName_;
+      public java.lang.String getParentAreaName() {
+        java.lang.Object ref = parentAreaName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          parentAreaName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>uint32 parent_area_name = 5;</code>
+       * <code>string parent_area_name = 5;</code>
+       * @return The bytes for parentAreaName.
+       */
+      public com.google.protobuf.ByteString
+          getParentAreaNameBytes() {
+        java.lang.Object ref = parentAreaName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          parentAreaName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string parent_area_name = 5;</code>
        * @param value The parentAreaName to set.
        * @return This builder for chaining.
        */
-      public Builder setParentAreaName(int value) {
-        
+      public Builder setParentAreaName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         parentAreaName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 parent_area_name = 5;</code>
+       * <code>string parent_area_name = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearParentAreaName() {
         
-        parentAreaName_ = 0;
+        parentAreaName_ = getDefaultInstance().getParentAreaName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string parent_area_name = 5;</code>
+       * @param value The bytes for parentAreaName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParentAreaNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        parentAreaName_ = value;
         onChanged();
         return this;
       }
@@ -6763,16 +6991,16 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string reason = 1;</code>
-     * @return The reason.
+     * <code>string message = 1;</code>
+     * @return The message.
      */
-    java.lang.String getReason();
+    java.lang.String getMessage();
     /**
-     * <code>string reason = 1;</code>
-     * @return The bytes for reason.
+     * <code>string message = 1;</code>
+     * @return The bytes for message.
      */
     com.google.protobuf.ByteString
-        getReasonBytes();
+        getMessageBytes();
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.RoomWarningMessage}
@@ -6787,7 +7015,7 @@ public final class RoomMessageOuterClass {
       super(builder);
     }
     private RoomWarningMessage() {
-      reason_ = "";
+      message_ = "";
     }
 
     @java.lang.Override
@@ -6823,7 +7051,7 @@ public final class RoomMessageOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              reason_ = s;
+              message_ = s;
               break;
             }
             default: {
@@ -6858,36 +7086,36 @@ public final class RoomMessageOuterClass {
               vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage.class, vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage.Builder.class);
     }
 
-    public static final int REASON_FIELD_NUMBER = 1;
-    private volatile java.lang.Object reason_;
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object message_;
     /**
-     * <code>string reason = 1;</code>
-     * @return The reason.
+     * <code>string message = 1;</code>
+     * @return The message.
      */
-    public java.lang.String getReason() {
-      java.lang.Object ref = reason_;
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        reason_ = s;
+        message_ = s;
         return s;
       }
     }
     /**
-     * <code>string reason = 1;</code>
-     * @return The bytes for reason.
+     * <code>string message = 1;</code>
+     * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
-        getReasonBytes() {
-      java.lang.Object ref = reason_;
+        getMessageBytes() {
+      java.lang.Object ref = message_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        reason_ = b;
+        message_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -6908,8 +7136,8 @@ public final class RoomMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getReasonBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reason_);
+      if (!getMessageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
       unknownFields.writeTo(output);
     }
@@ -6920,8 +7148,8 @@ public final class RoomMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getReasonBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reason_);
+      if (!getMessageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6938,8 +7166,8 @@ public final class RoomMessageOuterClass {
       }
       vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage other = (vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage) obj;
 
-      if (!getReason()
-          .equals(other.getReason())) return false;
+      if (!getMessage()
+          .equals(other.getMessage())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6951,8 +7179,8 @@ public final class RoomMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + REASON_FIELD_NUMBER;
-      hash = (53 * hash) + getReason().hashCode();
+      hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessage().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7086,7 +7314,7 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        reason_ = "";
+        message_ = "";
 
         return this;
       }
@@ -7114,7 +7342,7 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage buildPartial() {
         vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage result = new vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage(this);
-        result.reason_ = reason_;
+        result.message_ = message_;
         onBuilt();
         return result;
       }
@@ -7163,8 +7391,8 @@ public final class RoomMessageOuterClass {
 
       public Builder mergeFrom(vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage other) {
         if (other == vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage.getDefaultInstance()) return this;
-        if (!other.getReason().isEmpty()) {
-          reason_ = other.reason_;
+        if (!other.getMessage().isEmpty()) {
+          message_ = other.message_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -7196,78 +7424,78 @@ public final class RoomMessageOuterClass {
         return this;
       }
 
-      private java.lang.Object reason_ = "";
+      private java.lang.Object message_ = "";
       /**
-       * <code>string reason = 1;</code>
-       * @return The reason.
+       * <code>string message = 1;</code>
+       * @return The message.
        */
-      public java.lang.String getReason() {
-        java.lang.Object ref = reason_;
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          reason_ = s;
+          message_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string reason = 1;</code>
-       * @return The bytes for reason.
+       * <code>string message = 1;</code>
+       * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
-          getReasonBytes() {
-        java.lang.Object ref = reason_;
+          getMessageBytes() {
+        java.lang.Object ref = message_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          reason_ = b;
+          message_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string reason = 1;</code>
-       * @param value The reason to set.
+       * <code>string message = 1;</code>
+       * @param value The message to set.
        * @return This builder for chaining.
        */
-      public Builder setReason(
+      public Builder setMessage(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        reason_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string reason = 1;</code>
+       * <code>string message = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearReason() {
+      public Builder clearMessage() {
         
-        reason_ = getDefaultInstance().getReason();
+        message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
       }
       /**
-       * <code>string reason = 1;</code>
-       * @param value The bytes for reason to set.
+       * <code>string message = 1;</code>
+       * @param value The bytes for message to set.
        * @return This builder for chaining.
        */
-      public Builder setReasonBytes(
+      public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        reason_ = value;
+        message_ = value;
         onChanged();
         return this;
       }
@@ -7963,21 +8191,21 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated uint32 id = 1;</code>
+     * <code>repeated uint64 id = 1;</code>
      * @return A list containing the id.
      */
-    java.util.List<java.lang.Integer> getIdList();
+    java.util.List<java.lang.Long> getIdList();
     /**
-     * <code>repeated uint32 id = 1;</code>
+     * <code>repeated uint64 id = 1;</code>
      * @return The count of id.
      */
     int getIdCount();
     /**
-     * <code>repeated uint32 id = 1;</code>
+     * <code>repeated uint64 id = 1;</code>
      * @param index The index of the element to return.
      * @return The id at the given index.
      */
-    int getId(int index);
+    long getId(int index);
   }
   /**
    * Protobuf type {@code vNerve.bilibili.live.SuperChatDeleteMessage}
@@ -7992,7 +8220,7 @@ public final class RoomMessageOuterClass {
       super(builder);
     }
     private SuperChatDeleteMessage() {
-      id_ = emptyIntList();
+      id_ = emptyLongList();
     }
 
     @java.lang.Override
@@ -8028,21 +8256,21 @@ public final class RoomMessageOuterClass {
               break;
             case 8: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                id_ = newIntList();
+                id_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              id_.addInt(input.readUInt32());
+              id_.addLong(input.readUInt64());
               break;
             }
             case 10: {
               int length = input.readRawVarint32();
               int limit = input.pushLimit(length);
               if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                id_ = newIntList();
+                id_ = newLongList();
                 mutable_bitField0_ |= 0x00000001;
               }
               while (input.getBytesUntilLimit() > 0) {
-                id_.addInt(input.readUInt32());
+                id_.addLong(input.readUInt64());
               }
               input.popLimit(limit);
               break;
@@ -8083,29 +8311,29 @@ public final class RoomMessageOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.IntList id_;
+    private com.google.protobuf.Internal.LongList id_;
     /**
-     * <code>repeated uint32 id = 1;</code>
+     * <code>repeated uint64 id = 1;</code>
      * @return A list containing the id.
      */
-    public java.util.List<java.lang.Integer>
+    public java.util.List<java.lang.Long>
         getIdList() {
       return id_;
     }
     /**
-     * <code>repeated uint32 id = 1;</code>
+     * <code>repeated uint64 id = 1;</code>
      * @return The count of id.
      */
     public int getIdCount() {
       return id_.size();
     }
     /**
-     * <code>repeated uint32 id = 1;</code>
+     * <code>repeated uint64 id = 1;</code>
      * @param index The index of the element to return.
      * @return The id at the given index.
      */
-    public int getId(int index) {
-      return id_.getInt(index);
+    public long getId(int index) {
+      return id_.getLong(index);
     }
     private int idMemoizedSerializedSize = -1;
 
@@ -8129,7 +8357,7 @@ public final class RoomMessageOuterClass {
         output.writeUInt32NoTag(idMemoizedSerializedSize);
       }
       for (int i = 0; i < id_.size(); i++) {
-        output.writeUInt32NoTag(id_.getInt(i));
+        output.writeUInt64NoTag(id_.getLong(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8144,7 +8372,7 @@ public final class RoomMessageOuterClass {
         int dataSize = 0;
         for (int i = 0; i < id_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(id_.getInt(i));
+            .computeUInt64SizeNoTag(id_.getLong(i));
         }
         size += dataSize;
         if (!getIdList().isEmpty()) {
@@ -8319,7 +8547,7 @@ public final class RoomMessageOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = emptyIntList();
+        id_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -8441,7 +8669,7 @@ public final class RoomMessageOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Internal.IntList id_ = emptyIntList();
+      private com.google.protobuf.Internal.LongList id_ = emptyLongList();
       private void ensureIdIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           id_ = mutableCopy(id_);
@@ -8449,60 +8677,60 @@ public final class RoomMessageOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @return A list containing the id.
        */
-      public java.util.List<java.lang.Integer>
+      public java.util.List<java.lang.Long>
           getIdList() {
         return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(id_) : id_;
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @return The count of id.
        */
       public int getIdCount() {
         return id_.size();
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @param index The index of the element to return.
        * @return The id at the given index.
        */
-      public int getId(int index) {
-        return id_.getInt(index);
+      public long getId(int index) {
+        return id_.getLong(index);
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @param index The index to set the value at.
        * @param value The id to set.
        * @return This builder for chaining.
        */
       public Builder setId(
-          int index, int value) {
+          int index, long value) {
         ensureIdIsMutable();
-        id_.setInt(index, value);
+        id_.setLong(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @param value The id to add.
        * @return This builder for chaining.
        */
-      public Builder addId(int value) {
+      public Builder addId(long value) {
         ensureIdIsMutable();
-        id_.addInt(value);
+        id_.addLong(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @param values The id to add.
        * @return This builder for chaining.
        */
       public Builder addAllId(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
+          java.lang.Iterable<? extends java.lang.Long> values) {
         ensureIdIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, id_);
@@ -8510,11 +8738,11 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 id = 1;</code>
+       * <code>repeated uint64 id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = emptyIntList();
+        id_ = emptyLongList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
@@ -8646,27 +8874,27 @@ public final class RoomMessageOuterClass {
       "\014room_warning\030\023 \001(\0132(.vNerve.bilibili.li" +
       "ve.RoomWarningMessageH\000\022@\n\014room_limited\030" +
       "\024 \001(\0132(.vNerve.bilibili.live.RoomLimited" +
-      "MessageH\000\022H\n\020superchat_remove\030\025 \001(\0132,.vN" +
+      "MessageH\000\022H\n\020superchat_delete\030\025 \001(\0132,.vN" +
       "erve.bilibili.live.SuperChatDeleteMessag" +
       "eH\000B\t\n\007payload\".\n\030PopularityChangedMessa" +
-      "ge\022\022\n\npopularity\030\001 \001(\r\"L\n\030LiveStatusChan" +
+      "ge\022\022\n\npopularity\030\001 \001(\r\"]\n\030LiveStatusChan" +
       "gedMessage\0220\n\006status\030\001 \001(\0162 .vNerve.bili" +
-      "bili.live.LiveStatus\"\277\001\n\026RoomInfoChanged" +
-      "Message\0227\n\tbase_info\030\001 \001(\0132\".vNerve.bili" +
-      "bili.live.RoomBaseInfoH\000\022\030\n\016background_u" +
-      "rl\030\002 \001(\tH\000\022\021\n\007skin_id\030\003 \001(\rH\000\0224\n\005admin\030\004" +
-      " \001(\0132#.vNerve.bilibili.live.RoomAdminInf" +
-      "oH\000B\t\n\007changed\"s\n\014RoomBaseInfo\022\r\n\005title\030" +
-      "\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022\021\n\tarea_name\030\003 \001(" +
-      "\t\022\026\n\016parent_area_id\030\004 \001(\r\022\030\n\020parent_area" +
-      "_name\030\005 \001(\r\"\034\n\rRoomAdminInfo\022\013\n\003uid\030\001 \003(" +
-      "\004\")\n\021RoomLockedMessage\022\024\n\014locked_until\030\001" +
-      " \001(\004\"$\n\022RoomWarningMessage\022\016\n\006reason\030\001 \001" +
-      "(\t\"7\n\022RoomLimitedMessage\022\014\n\004type\030\001 \001(\t\022\023" +
-      "\n\013delay_range\030\002 \001(\r\"$\n\026SuperChatDeleteMe" +
-      "ssage\022\n\n\002id\030\001 \003(\r*=\n\nLiveStatus\022\r\n\tPREPA" +
-      "RING\020\000\022\010\n\004LIVE\020\001\022\t\n\005ROUND\020\002\022\013\n\007CUT_OFF\020\003" +
-      "B\003\370\001\001b\006proto3"
+      "bili.live.LiveStatus\022\017\n\007message\030\002 \001(\t\"\277\001" +
+      "\n\026RoomInfoChangedMessage\0227\n\tbase_info\030\001 " +
+      "\001(\0132\".vNerve.bilibili.live.RoomBaseInfoH" +
+      "\000\022\030\n\016background_url\030\002 \001(\tH\000\022\021\n\007skin_id\030\003" +
+      " \001(\rH\000\0224\n\005admin\030\004 \001(\0132#.vNerve.bilibili." +
+      "live.RoomAdminInfoH\000B\t\n\007changed\"s\n\014RoomB" +
+      "aseInfo\022\r\n\005title\030\001 \001(\t\022\017\n\007area_id\030\002 \001(\r\022" +
+      "\021\n\tarea_name\030\003 \001(\t\022\026\n\016parent_area_id\030\004 \001" +
+      "(\r\022\030\n\020parent_area_name\030\005 \001(\t\"\034\n\rRoomAdmi" +
+      "nInfo\022\013\n\003uid\030\001 \003(\004\")\n\021RoomLockedMessage\022" +
+      "\024\n\014locked_until\030\001 \001(\004\"%\n\022RoomWarningMess" +
+      "age\022\017\n\007message\030\001 \001(\t\"7\n\022RoomLimitedMessa" +
+      "ge\022\014\n\004type\030\001 \001(\t\022\023\n\013delay_range\030\002 \001(\r\"$\n" +
+      "\026SuperChatDeleteMessage\022\n\n\002id\030\001 \003(\004*=\n\nL" +
+      "iveStatus\022\r\n\tPREPARING\020\000\022\010\n\004LIVE\020\001\022\t\n\005RO" +
+      "UND\020\002\022\013\n\007CUT_OFF\020\003B\003\370\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8678,7 +8906,7 @@ public final class RoomMessageOuterClass {
     internal_static_vNerve_bilibili_live_RoomMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_RoomMessage_descriptor,
-        new java.lang.String[] { "RoomId", "UserMessage", "PopularityChange", "LiveStatus", "InfoChange", "RoomLocked", "RoomWarning", "RoomLimited", "SuperchatRemove", "Payload", });
+        new java.lang.String[] { "RoomId", "UserMessage", "PopularityChange", "LiveStatus", "InfoChange", "RoomLocked", "RoomWarning", "RoomLimited", "SuperchatDelete", "Payload", });
     internal_static_vNerve_bilibili_live_PopularityChangedMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_vNerve_bilibili_live_PopularityChangedMessage_fieldAccessorTable = new
@@ -8690,7 +8918,7 @@ public final class RoomMessageOuterClass {
     internal_static_vNerve_bilibili_live_LiveStatusChangedMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_LiveStatusChangedMessage_descriptor,
-        new java.lang.String[] { "Status", });
+        new java.lang.String[] { "Status", "Message", });
     internal_static_vNerve_bilibili_live_RoomInfoChangedMessage_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_vNerve_bilibili_live_RoomInfoChangedMessage_fieldAccessorTable = new
@@ -8720,7 +8948,7 @@ public final class RoomMessageOuterClass {
     internal_static_vNerve_bilibili_live_RoomWarningMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_RoomWarningMessage_descriptor,
-        new java.lang.String[] { "Reason", });
+        new java.lang.String[] { "Message", });
     internal_static_vNerve_bilibili_live_RoomLimitedMessage_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_vNerve_bilibili_live_RoomLimitedMessage_fieldAccessorTable = new

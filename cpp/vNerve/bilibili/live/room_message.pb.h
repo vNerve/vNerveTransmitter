@@ -187,7 +187,7 @@ class RoomMessage :
     kRoomLocked = 18,
     kRoomWarning = 19,
     kRoomLimited = 20,
-    kSuperchatRemove = 21,
+    kSuperchatDelete = 21,
     PAYLOAD_NOT_SET = 0,
   };
 
@@ -283,7 +283,7 @@ class RoomMessage :
     kRoomLockedFieldNumber = 18,
     kRoomWarningFieldNumber = 19,
     kRoomLimitedFieldNumber = 20,
-    kSuperchatRemoveFieldNumber = 21,
+    kSuperchatDeleteFieldNumber = 21,
   };
   // uint32 room_id = 1;
   void clear_room_id();
@@ -420,23 +420,23 @@ class RoomMessage :
       ::vNerve::bilibili::live::RoomLimitedMessage* room_limited);
   ::vNerve::bilibili::live::RoomLimitedMessage* unsafe_arena_release_room_limited();
 
-  // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
-  bool has_superchat_remove() const;
+  // .vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;
+  bool has_superchat_delete() const;
   private:
-  bool _internal_has_superchat_remove() const;
+  bool _internal_has_superchat_delete() const;
   public:
-  void clear_superchat_remove();
-  const ::vNerve::bilibili::live::SuperChatDeleteMessage& superchat_remove() const;
-  ::vNerve::bilibili::live::SuperChatDeleteMessage* release_superchat_remove();
-  ::vNerve::bilibili::live::SuperChatDeleteMessage* mutable_superchat_remove();
-  void set_allocated_superchat_remove(::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove);
+  void clear_superchat_delete();
+  const ::vNerve::bilibili::live::SuperChatDeleteMessage& superchat_delete() const;
+  ::vNerve::bilibili::live::SuperChatDeleteMessage* release_superchat_delete();
+  ::vNerve::bilibili::live::SuperChatDeleteMessage* mutable_superchat_delete();
+  void set_allocated_superchat_delete(::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_delete);
   private:
-  const ::vNerve::bilibili::live::SuperChatDeleteMessage& _internal_superchat_remove() const;
-  ::vNerve::bilibili::live::SuperChatDeleteMessage* _internal_mutable_superchat_remove();
+  const ::vNerve::bilibili::live::SuperChatDeleteMessage& _internal_superchat_delete() const;
+  ::vNerve::bilibili::live::SuperChatDeleteMessage* _internal_mutable_superchat_delete();
   public:
-  void unsafe_arena_set_allocated_superchat_remove(
-      ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove);
-  ::vNerve::bilibili::live::SuperChatDeleteMessage* unsafe_arena_release_superchat_remove();
+  void unsafe_arena_set_allocated_superchat_delete(
+      ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_delete);
+  ::vNerve::bilibili::live::SuperChatDeleteMessage* unsafe_arena_release_superchat_delete();
 
   void clear_payload();
   PayloadCase payload_case() const;
@@ -450,7 +450,7 @@ class RoomMessage :
   void set_has_room_locked();
   void set_has_room_warning();
   void set_has_room_limited();
-  void set_has_superchat_remove();
+  void set_has_superchat_delete();
 
   inline bool has_payload() const;
   inline void clear_has_payload();
@@ -469,7 +469,7 @@ class RoomMessage :
     ::vNerve::bilibili::live::RoomLockedMessage* room_locked_;
     ::vNerve::bilibili::live::RoomWarningMessage* room_warning_;
     ::vNerve::bilibili::live::RoomLimitedMessage* room_limited_;
-    ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove_;
+    ::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_delete_;
   } payload_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -755,8 +755,34 @@ class LiveStatusChangedMessage :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kMessageFieldNumber = 2,
     kStatusFieldNumber = 1,
   };
+  // string message = 2;
+  void clear_message();
+  const std::string& message() const;
+  void set_message(const std::string& value);
+  void set_message(std::string&& value);
+  void set_message(const char* value);
+  void set_message(const char* value, size_t size);
+  std::string* mutable_message();
+  std::string* release_message();
+  void set_allocated_message(std::string* message);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_message();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_message(
+      std::string* message);
+  private:
+  const std::string& _internal_message() const;
+  void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
+  public:
+
   // .vNerve.bilibili.live.LiveStatus status = 1;
   void clear_status();
   ::vNerve::bilibili::live::LiveStatus status() const;
@@ -774,6 +800,7 @@ class LiveStatusChangedMessage :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
@@ -1154,9 +1181,9 @@ class RoomBaseInfo :
   enum : int {
     kTitleFieldNumber = 1,
     kAreaNameFieldNumber = 3,
+    kParentAreaNameFieldNumber = 5,
     kAreaIdFieldNumber = 2,
     kParentAreaIdFieldNumber = 4,
-    kParentAreaNameFieldNumber = 5,
   };
   // string title = 1;
   void clear_title();
@@ -1208,6 +1235,31 @@ class RoomBaseInfo :
   std::string* _internal_mutable_area_name();
   public:
 
+  // string parent_area_name = 5;
+  void clear_parent_area_name();
+  const std::string& parent_area_name() const;
+  void set_parent_area_name(const std::string& value);
+  void set_parent_area_name(std::string&& value);
+  void set_parent_area_name(const char* value);
+  void set_parent_area_name(const char* value, size_t size);
+  std::string* mutable_parent_area_name();
+  std::string* release_parent_area_name();
+  void set_allocated_parent_area_name(std::string* parent_area_name);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_parent_area_name();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_parent_area_name(
+      std::string* parent_area_name);
+  private:
+  const std::string& _internal_parent_area_name() const;
+  void _internal_set_parent_area_name(const std::string& value);
+  std::string* _internal_mutable_parent_area_name();
+  public:
+
   // uint32 area_id = 2;
   void clear_area_id();
   ::PROTOBUF_NAMESPACE_ID::uint32 area_id() const;
@@ -1226,15 +1278,6 @@ class RoomBaseInfo :
   void _internal_set_parent_area_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
-  // uint32 parent_area_name = 5;
-  void clear_parent_area_name();
-  ::PROTOBUF_NAMESPACE_ID::uint32 parent_area_name() const;
-  void set_parent_area_name(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_parent_area_name() const;
-  void _internal_set_parent_area_name(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  public:
-
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.RoomBaseInfo)
  private:
   class _Internal;
@@ -1245,9 +1288,9 @@ class RoomBaseInfo :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr title_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr area_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr parent_area_name_;
   ::PROTOBUF_NAMESPACE_ID::uint32 area_id_;
   ::PROTOBUF_NAMESPACE_ID::uint32 parent_area_id_;
-  ::PROTOBUF_NAMESPACE_ID::uint32 parent_area_name_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 };
@@ -1695,31 +1738,31 @@ class RoomWarningMessage :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kReasonFieldNumber = 1,
+    kMessageFieldNumber = 1,
   };
-  // string reason = 1;
-  void clear_reason();
-  const std::string& reason() const;
-  void set_reason(const std::string& value);
-  void set_reason(std::string&& value);
-  void set_reason(const char* value);
-  void set_reason(const char* value, size_t size);
-  std::string* mutable_reason();
-  std::string* release_reason();
-  void set_allocated_reason(std::string* reason);
+  // string message = 1;
+  void clear_message();
+  const std::string& message() const;
+  void set_message(const std::string& value);
+  void set_message(std::string&& value);
+  void set_message(const char* value);
+  void set_message(const char* value, size_t size);
+  std::string* mutable_message();
+  std::string* release_message();
+  void set_allocated_message(std::string* message);
   GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
   "    string fields are deprecated and will be removed in a"
   "    future release.")
-  std::string* unsafe_arena_release_reason();
+  std::string* unsafe_arena_release_message();
   GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
   "    string fields are deprecated and will be removed in a"
   "    future release.")
-  void unsafe_arena_set_allocated_reason(
-      std::string* reason);
+  void unsafe_arena_set_allocated_message(
+      std::string* message);
   private:
-  const std::string& _internal_reason() const;
-  void _internal_set_reason(const std::string& value);
-  std::string* _internal_mutable_reason();
+  const std::string& _internal_message() const;
+  void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
   public:
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.RoomWarningMessage)
@@ -1730,7 +1773,7 @@ class RoomWarningMessage :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reason_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
 };
@@ -2042,26 +2085,26 @@ class SuperChatDeleteMessage :
   enum : int {
     kIdFieldNumber = 1,
   };
-  // repeated uint32 id = 1;
+  // repeated uint64 id = 1;
   int id_size() const;
   private:
   int _internal_id_size() const;
   public:
   void clear_id();
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_id(int index) const;
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_id(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
       _internal_id() const;
-  void _internal_add_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+  void _internal_add_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
       _internal_mutable_id();
   public:
-  ::PROTOBUF_NAMESPACE_ID::uint32 id(int index) const;
-  void set_id(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value);
-  void add_id(::PROTOBUF_NAMESPACE_ID::uint32 value);
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+  ::PROTOBUF_NAMESPACE_ID::uint64 id(int index) const;
+  void set_id(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value);
+  void add_id(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
       id() const;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
       mutable_id();
 
   // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.SuperChatDeleteMessage)
@@ -2072,7 +2115,7 @@ class SuperChatDeleteMessage :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 > id_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 > id_;
   mutable std::atomic<int> _id_cached_byte_size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_vNerve_2fbilibili_2flive_2froom_5fmessage_2eproto;
@@ -2618,78 +2661,78 @@ inline ::vNerve::bilibili::live::RoomLimitedMessage* RoomMessage::mutable_room_l
   return _internal_mutable_room_limited();
 }
 
-// .vNerve.bilibili.live.SuperChatDeleteMessage superchat_remove = 21;
-inline bool RoomMessage::_internal_has_superchat_remove() const {
-  return payload_case() == kSuperchatRemove;
+// .vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;
+inline bool RoomMessage::_internal_has_superchat_delete() const {
+  return payload_case() == kSuperchatDelete;
 }
-inline bool RoomMessage::has_superchat_remove() const {
-  return _internal_has_superchat_remove();
+inline bool RoomMessage::has_superchat_delete() const {
+  return _internal_has_superchat_delete();
 }
-inline void RoomMessage::set_has_superchat_remove() {
-  _oneof_case_[0] = kSuperchatRemove;
+inline void RoomMessage::set_has_superchat_delete() {
+  _oneof_case_[0] = kSuperchatDelete;
 }
-inline void RoomMessage::clear_superchat_remove() {
-  if (_internal_has_superchat_remove()) {
+inline void RoomMessage::clear_superchat_delete() {
+  if (_internal_has_superchat_delete()) {
     if (GetArenaNoVirtual() == nullptr) {
-      delete payload_.superchat_remove_;
+      delete payload_.superchat_delete_;
     }
     clear_has_payload();
   }
 }
-inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::release_superchat_remove() {
-  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.RoomMessage.superchat_remove)
-  if (_internal_has_superchat_remove()) {
+inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::release_superchat_delete() {
+  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.RoomMessage.superchat_delete)
+  if (_internal_has_superchat_delete()) {
     clear_has_payload();
-      ::vNerve::bilibili::live::SuperChatDeleteMessage* temp = payload_.superchat_remove_;
+      ::vNerve::bilibili::live::SuperChatDeleteMessage* temp = payload_.superchat_delete_;
     if (GetArenaNoVirtual() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
-    payload_.superchat_remove_ = nullptr;
+    payload_.superchat_delete_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::vNerve::bilibili::live::SuperChatDeleteMessage& RoomMessage::_internal_superchat_remove() const {
-  return _internal_has_superchat_remove()
-      ? *payload_.superchat_remove_
+inline const ::vNerve::bilibili::live::SuperChatDeleteMessage& RoomMessage::_internal_superchat_delete() const {
+  return _internal_has_superchat_delete()
+      ? *payload_.superchat_delete_
       : *reinterpret_cast< ::vNerve::bilibili::live::SuperChatDeleteMessage*>(&::vNerve::bilibili::live::_SuperChatDeleteMessage_default_instance_);
 }
-inline const ::vNerve::bilibili::live::SuperChatDeleteMessage& RoomMessage::superchat_remove() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomMessage.superchat_remove)
-  return _internal_superchat_remove();
+inline const ::vNerve::bilibili::live::SuperChatDeleteMessage& RoomMessage::superchat_delete() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomMessage.superchat_delete)
+  return _internal_superchat_delete();
 }
-inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::unsafe_arena_release_superchat_remove() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.RoomMessage.superchat_remove)
-  if (_internal_has_superchat_remove()) {
+inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::unsafe_arena_release_superchat_delete() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.RoomMessage.superchat_delete)
+  if (_internal_has_superchat_delete()) {
     clear_has_payload();
-    ::vNerve::bilibili::live::SuperChatDeleteMessage* temp = payload_.superchat_remove_;
-    payload_.superchat_remove_ = nullptr;
+    ::vNerve::bilibili::live::SuperChatDeleteMessage* temp = payload_.superchat_delete_;
+    payload_.superchat_delete_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void RoomMessage::unsafe_arena_set_allocated_superchat_remove(::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_remove) {
+inline void RoomMessage::unsafe_arena_set_allocated_superchat_delete(::vNerve::bilibili::live::SuperChatDeleteMessage* superchat_delete) {
   clear_payload();
-  if (superchat_remove) {
-    set_has_superchat_remove();
-    payload_.superchat_remove_ = superchat_remove;
+  if (superchat_delete) {
+    set_has_superchat_delete();
+    payload_.superchat_delete_ = superchat_delete;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.RoomMessage.superchat_remove)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.RoomMessage.superchat_delete)
 }
-inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::_internal_mutable_superchat_remove() {
-  if (!_internal_has_superchat_remove()) {
+inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::_internal_mutable_superchat_delete() {
+  if (!_internal_has_superchat_delete()) {
     clear_payload();
-    set_has_superchat_remove();
-    payload_.superchat_remove_ = CreateMaybeMessage< ::vNerve::bilibili::live::SuperChatDeleteMessage >(
+    set_has_superchat_delete();
+    payload_.superchat_delete_ = CreateMaybeMessage< ::vNerve::bilibili::live::SuperChatDeleteMessage >(
         GetArenaNoVirtual());
   }
-  return payload_.superchat_remove_;
+  return payload_.superchat_delete_;
 }
-inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::mutable_superchat_remove() {
-  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.RoomMessage.superchat_remove)
-  return _internal_mutable_superchat_remove();
+inline ::vNerve::bilibili::live::SuperChatDeleteMessage* RoomMessage::mutable_superchat_delete() {
+  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.RoomMessage.superchat_delete)
+  return _internal_mutable_superchat_delete();
 }
 
 inline bool RoomMessage::has_payload() const {
@@ -2747,6 +2790,88 @@ inline void LiveStatusChangedMessage::_internal_set_status(::vNerve::bilibili::l
 inline void LiveStatusChangedMessage::set_status(::vNerve::bilibili::live::LiveStatus value) {
   _internal_set_status(value);
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.LiveStatusChangedMessage.status)
+}
+
+// string message = 2;
+inline void LiveStatusChangedMessage::clear_message() {
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline const std::string& LiveStatusChangedMessage::message() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+  return _internal_message();
+}
+inline void LiveStatusChangedMessage::set_message(const std::string& value) {
+  _internal_set_message(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+}
+inline std::string* LiveStatusChangedMessage::mutable_message() {
+  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+  return _internal_mutable_message();
+}
+inline const std::string& LiveStatusChangedMessage::_internal_message() const {
+  return message_.Get();
+}
+inline void LiveStatusChangedMessage::_internal_set_message(const std::string& value) {
+  
+  message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
+}
+inline void LiveStatusChangedMessage::set_message(std::string&& value) {
+  
+  message_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+}
+inline void LiveStatusChangedMessage::set_message(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_char:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+}
+inline void LiveStatusChangedMessage::set_message(const char* value,
+    size_t size) {
+  
+  message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_pointer:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+}
+inline std::string* LiveStatusChangedMessage::_internal_mutable_message() {
+  
+  return message_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline std::string* LiveStatusChangedMessage::release_message() {
+  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+  
+  return message_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline void LiveStatusChangedMessage::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    
+  } else {
+    
+  }
+  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+}
+inline std::string* LiveStatusChangedMessage::unsafe_arena_release_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.LiveStatusChangedMessage.message)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != nullptr);
+  
+  return message_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
+}
+inline void LiveStatusChangedMessage::unsafe_arena_set_allocated_message(
+    std::string* message) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != nullptr);
+  if (message != nullptr) {
+    
+  } else {
+    
+  }
+  message_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      message, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.LiveStatusChangedMessage.message)
 }
 
 // -------------------------------------------------------------------
@@ -3282,24 +3407,86 @@ inline void RoomBaseInfo::set_parent_area_id(::PROTOBUF_NAMESPACE_ID::uint32 val
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.RoomBaseInfo.parent_area_id)
 }
 
-// uint32 parent_area_name = 5;
+// string parent_area_name = 5;
 inline void RoomBaseInfo::clear_parent_area_name() {
-  parent_area_name_ = 0u;
+  parent_area_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 RoomBaseInfo::_internal_parent_area_name() const {
-  return parent_area_name_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::uint32 RoomBaseInfo::parent_area_name() const {
+inline const std::string& RoomBaseInfo::parent_area_name() const {
   // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
   return _internal_parent_area_name();
 }
-inline void RoomBaseInfo::_internal_set_parent_area_name(::PROTOBUF_NAMESPACE_ID::uint32 value) {
-  
-  parent_area_name_ = value;
-}
-inline void RoomBaseInfo::set_parent_area_name(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void RoomBaseInfo::set_parent_area_name(const std::string& value) {
   _internal_set_parent_area_name(value);
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+}
+inline std::string* RoomBaseInfo::mutable_parent_area_name() {
+  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+  return _internal_mutable_parent_area_name();
+}
+inline const std::string& RoomBaseInfo::_internal_parent_area_name() const {
+  return parent_area_name_.Get();
+}
+inline void RoomBaseInfo::_internal_set_parent_area_name(const std::string& value) {
+  
+  parent_area_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
+}
+inline void RoomBaseInfo::set_parent_area_name(std::string&& value) {
+  
+  parent_area_name_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+}
+inline void RoomBaseInfo::set_parent_area_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  parent_area_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_char:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+}
+inline void RoomBaseInfo::set_parent_area_name(const char* value,
+    size_t size) {
+  
+  parent_area_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_pointer:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+}
+inline std::string* RoomBaseInfo::_internal_mutable_parent_area_name() {
+  
+  return parent_area_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline std::string* RoomBaseInfo::release_parent_area_name() {
+  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+  
+  return parent_area_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline void RoomBaseInfo::set_allocated_parent_area_name(std::string* parent_area_name) {
+  if (parent_area_name != nullptr) {
+    
+  } else {
+    
+  }
+  parent_area_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), parent_area_name,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+}
+inline std::string* RoomBaseInfo::unsafe_arena_release_parent_area_name() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != nullptr);
+  
+  return parent_area_name_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
+}
+inline void RoomBaseInfo::unsafe_arena_set_allocated_parent_area_name(
+    std::string* parent_area_name) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != nullptr);
+  if (parent_area_name != nullptr) {
+    
+  } else {
+    
+  }
+  parent_area_name_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      parent_area_name, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.RoomBaseInfo.parent_area_name)
 }
 
 // -------------------------------------------------------------------
@@ -3381,86 +3568,86 @@ inline void RoomLockedMessage::set_locked_until(::PROTOBUF_NAMESPACE_ID::uint64 
 
 // RoomWarningMessage
 
-// string reason = 1;
-inline void RoomWarningMessage::clear_reason() {
-  reason_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+// string message = 1;
+inline void RoomWarningMessage::clear_message() {
+  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
-inline const std::string& RoomWarningMessage::reason() const {
-  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomWarningMessage.reason)
-  return _internal_reason();
+inline const std::string& RoomWarningMessage::message() const {
+  // @@protoc_insertion_point(field_get:vNerve.bilibili.live.RoomWarningMessage.message)
+  return _internal_message();
 }
-inline void RoomWarningMessage::set_reason(const std::string& value) {
-  _internal_set_reason(value);
-  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.RoomWarningMessage.reason)
+inline void RoomWarningMessage::set_message(const std::string& value) {
+  _internal_set_message(value);
+  // @@protoc_insertion_point(field_set:vNerve.bilibili.live.RoomWarningMessage.message)
 }
-inline std::string* RoomWarningMessage::mutable_reason() {
-  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.RoomWarningMessage.reason)
-  return _internal_mutable_reason();
+inline std::string* RoomWarningMessage::mutable_message() {
+  // @@protoc_insertion_point(field_mutable:vNerve.bilibili.live.RoomWarningMessage.message)
+  return _internal_mutable_message();
 }
-inline const std::string& RoomWarningMessage::_internal_reason() const {
-  return reason_.Get();
+inline const std::string& RoomWarningMessage::_internal_message() const {
+  return message_.Get();
 }
-inline void RoomWarningMessage::_internal_set_reason(const std::string& value) {
+inline void RoomWarningMessage::_internal_set_message(const std::string& value) {
   
-  reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
+  message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
 }
-inline void RoomWarningMessage::set_reason(std::string&& value) {
+inline void RoomWarningMessage::set_message(std::string&& value) {
   
-  reason_.Set(
+  message_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
-  // @@protoc_insertion_point(field_set_rvalue:vNerve.bilibili.live.RoomWarningMessage.reason)
+  // @@protoc_insertion_point(field_set_rvalue:vNerve.bilibili.live.RoomWarningMessage.message)
 }
-inline void RoomWarningMessage::set_reason(const char* value) {
+inline void RoomWarningMessage::set_message(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
-  // @@protoc_insertion_point(field_set_char:vNerve.bilibili.live.RoomWarningMessage.reason)
+  // @@protoc_insertion_point(field_set_char:vNerve.bilibili.live.RoomWarningMessage.message)
 }
-inline void RoomWarningMessage::set_reason(const char* value,
+inline void RoomWarningMessage::set_message(const char* value,
     size_t size) {
   
-  reason_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
-  // @@protoc_insertion_point(field_set_pointer:vNerve.bilibili.live.RoomWarningMessage.reason)
+  // @@protoc_insertion_point(field_set_pointer:vNerve.bilibili.live.RoomWarningMessage.message)
 }
-inline std::string* RoomWarningMessage::_internal_mutable_reason() {
+inline std::string* RoomWarningMessage::_internal_mutable_message() {
   
-  return reason_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  return message_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
-inline std::string* RoomWarningMessage::release_reason() {
-  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.RoomWarningMessage.reason)
+inline std::string* RoomWarningMessage::release_message() {
+  // @@protoc_insertion_point(field_release:vNerve.bilibili.live.RoomWarningMessage.message)
   
-  return reason_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  return message_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
-inline void RoomWarningMessage::set_allocated_reason(std::string* reason) {
-  if (reason != nullptr) {
+inline void RoomWarningMessage::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
     
   } else {
     
   }
-  reason_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), reason,
+  message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message,
       GetArenaNoVirtual());
-  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomWarningMessage.reason)
+  // @@protoc_insertion_point(field_set_allocated:vNerve.bilibili.live.RoomWarningMessage.message)
 }
-inline std::string* RoomWarningMessage::unsafe_arena_release_reason() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.RoomWarningMessage.reason)
+inline std::string* RoomWarningMessage::unsafe_arena_release_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:vNerve.bilibili.live.RoomWarningMessage.message)
   GOOGLE_DCHECK(GetArenaNoVirtual() != nullptr);
   
-  return reason_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+  return message_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
-inline void RoomWarningMessage::unsafe_arena_set_allocated_reason(
-    std::string* reason) {
+inline void RoomWarningMessage::unsafe_arena_set_allocated_message(
+    std::string* message) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != nullptr);
-  if (reason != nullptr) {
+  if (message != nullptr) {
     
   } else {
     
   }
-  reason_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      reason, GetArenaNoVirtual());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.RoomWarningMessage.reason)
+  message_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      message, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:vNerve.bilibili.live.RoomWarningMessage.message)
 }
 
 // -------------------------------------------------------------------
@@ -3573,7 +3760,7 @@ inline void RoomLimitedMessage::set_delay_range(::PROTOBUF_NAMESPACE_ID::uint32 
 
 // SuperChatDeleteMessage
 
-// repeated uint32 id = 1;
+// repeated uint64 id = 1;
 inline int SuperChatDeleteMessage::_internal_id_size() const {
   return id_.size();
 }
@@ -3583,38 +3770,38 @@ inline int SuperChatDeleteMessage::id_size() const {
 inline void SuperChatDeleteMessage::clear_id() {
   id_.Clear();
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatDeleteMessage::_internal_id(int index) const {
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SuperChatDeleteMessage::_internal_id(int index) const {
   return id_.Get(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint32 SuperChatDeleteMessage::id(int index) const {
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SuperChatDeleteMessage::id(int index) const {
   // @@protoc_insertion_point(field_get:vNerve.bilibili.live.SuperChatDeleteMessage.id)
   return _internal_id(index);
 }
-inline void SuperChatDeleteMessage::set_id(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void SuperChatDeleteMessage::set_id(int index, ::PROTOBUF_NAMESPACE_ID::uint64 value) {
   id_.Set(index, value);
   // @@protoc_insertion_point(field_set:vNerve.bilibili.live.SuperChatDeleteMessage.id)
 }
-inline void SuperChatDeleteMessage::_internal_add_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void SuperChatDeleteMessage::_internal_add_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   id_.Add(value);
 }
-inline void SuperChatDeleteMessage::add_id(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+inline void SuperChatDeleteMessage::add_id(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_add_id(value);
   // @@protoc_insertion_point(field_add:vNerve.bilibili.live.SuperChatDeleteMessage.id)
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 SuperChatDeleteMessage::_internal_id() const {
   return id_;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >&
 SuperChatDeleteMessage::id() const {
   // @@protoc_insertion_point(field_list:vNerve.bilibili.live.SuperChatDeleteMessage.id)
   return _internal_id();
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
 SuperChatDeleteMessage::_internal_mutable_id() {
   return &id_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint64 >*
 SuperChatDeleteMessage::mutable_id() {
   // @@protoc_insertion_point(field_mutable_list:vNerve.bilibili.live.SuperChatDeleteMessage.id)
   return _internal_mutable_id();

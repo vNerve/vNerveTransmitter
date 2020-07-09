@@ -6438,10 +6438,10 @@ public final class UserMessageOuterClass {
         getMessageBytes();
 
     /**
-     * <code>uint32 id = 3;</code>
+     * <code>uint64 id = 3;</code>
      * @return The id.
      */
-    int getId();
+    long getId();
 
     /**
      * <code>string token = 4;</code>
@@ -6540,7 +6540,7 @@ public final class UserMessageOuterClass {
             }
             case 24: {
 
-              id_ = input.readUInt32();
+              id_ = input.readUInt64();
               break;
             }
             case 34: {
@@ -6643,12 +6643,12 @@ public final class UserMessageOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 3;
-    private int id_;
+    private long id_;
     /**
-     * <code>uint32 id = 3;</code>
+     * <code>uint64 id = 3;</code>
      * @return The id.
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
@@ -6755,8 +6755,8 @@ public final class UserMessageOuterClass {
       if (!getMessageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
-      if (id_ != 0) {
-        output.writeUInt32(3, id_);
+      if (id_ != 0L) {
+        output.writeUInt64(3, id_);
       }
       if (!getTokenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, token_);
@@ -6788,9 +6788,9 @@ public final class UserMessageOuterClass {
       if (!getMessageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
       }
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, id_);
+          .computeUInt64Size(3, id_);
       }
       if (!getTokenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, token_);
@@ -6860,7 +6860,8 @@ public final class UserMessageOuterClass {
       hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
       hash = (53 * hash) + getMessage().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken().hashCode();
       hash = (37 * hash) + PRICE_CNY_FIELD_NUMBER;
@@ -7010,7 +7011,7 @@ public final class UserMessageOuterClass {
         super.clear();
         message_ = "";
 
-        id_ = 0;
+        id_ = 0L;
 
         token_ = "";
 
@@ -7110,7 +7111,7 @@ public final class UserMessageOuterClass {
           message_ = other.message_;
           onChanged();
         }
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
         if (!other.getToken().isEmpty()) {
@@ -7237,32 +7238,32 @@ public final class UserMessageOuterClass {
         return this;
       }
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>uint32 id = 3;</code>
+       * <code>uint64 id = 3;</code>
        * @return The id.
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>uint32 id = 3;</code>
+       * <code>uint64 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 id = 3;</code>
+       * <code>uint64 id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
@@ -10883,7 +10884,7 @@ public final class UserMessageOuterClass {
       "\001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030\001 \001(\t\022>" +
       "\n\014lottery_type\030\002 \001(\0162(.vNerve.bilibili.l" +
       "ive.LotteryDanmakuType\"\245\001\n\020SuperChatMess" +
-      "age\022\017\n\007message\030\001 \001(\t\022\n\n\002id\030\003 \001(\r\022\r\n\005toke" +
+      "age\022\017\n\007message\030\001 \001(\t\022\n\n\002id\030\003 \001(\004\022\r\n\005toke" +
       "n\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\nprice_coin" +
       "\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r\022\022\n\nstar" +
       "t_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftM" +

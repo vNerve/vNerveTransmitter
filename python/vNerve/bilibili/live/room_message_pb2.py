@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='vNerve.bilibili.live',
   syntax='proto3',
   serialized_options=b'\370\001\001',
-  serialized_pb=b'\n\'vNerve/bilibili/live/room_message.proto\x12\x14vNerve.bilibili.live\x1a\'vNerve/bilibili/live/user_message.proto\"\xcb\x04\n\x0bRoomMessage\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x39\n\x0cuser_message\x18\x02 \x01(\x0b\x32!.vNerve.bilibili.live.UserMessageH\x00\x12K\n\x11popularity_change\x18\x03 \x01(\x0b\x32..vNerve.bilibili.live.PopularityChangedMessageH\x00\x12\x45\n\x0blive_status\x18\x10 \x01(\x0b\x32..vNerve.bilibili.live.LiveStatusChangedMessageH\x00\x12\x43\n\x0binfo_change\x18\x11 \x01(\x0b\x32,.vNerve.bilibili.live.RoomInfoChangedMessageH\x00\x12>\n\x0broom_locked\x18\x12 \x01(\x0b\x32\'.vNerve.bilibili.live.RoomLockedMessageH\x00\x12@\n\x0croom_warning\x18\x13 \x01(\x0b\x32(.vNerve.bilibili.live.RoomWarningMessageH\x00\x12@\n\x0croom_limited\x18\x14 \x01(\x0b\x32(.vNerve.bilibili.live.RoomLimitedMessageH\x00\x12H\n\x10superchat_remove\x18\x15 \x01(\x0b\x32,.vNerve.bilibili.live.SuperChatDeleteMessageH\x00\x42\t\n\x07payload\".\n\x18PopularityChangedMessage\x12\x12\n\npopularity\x18\x01 \x01(\r\"L\n\x18LiveStatusChangedMessage\x12\x30\n\x06status\x18\x01 \x01(\x0e\x32 .vNerve.bilibili.live.LiveStatus\"\xbf\x01\n\x16RoomInfoChangedMessage\x12\x37\n\tbase_info\x18\x01 \x01(\x0b\x32\".vNerve.bilibili.live.RoomBaseInfoH\x00\x12\x18\n\x0e\x62\x61\x63kground_url\x18\x02 \x01(\tH\x00\x12\x11\n\x07skin_id\x18\x03 \x01(\rH\x00\x12\x34\n\x05\x61\x64min\x18\x04 \x01(\x0b\x32#.vNerve.bilibili.live.RoomAdminInfoH\x00\x42\t\n\x07\x63hanged\"s\n\x0cRoomBaseInfo\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0f\n\x07\x61rea_id\x18\x02 \x01(\r\x12\x11\n\tarea_name\x18\x03 \x01(\t\x12\x16\n\x0eparent_area_id\x18\x04 \x01(\r\x12\x18\n\x10parent_area_name\x18\x05 \x01(\r\"\x1c\n\rRoomAdminInfo\x12\x0b\n\x03uid\x18\x01 \x03(\x04\")\n\x11RoomLockedMessage\x12\x14\n\x0clocked_until\x18\x01 \x01(\x04\"$\n\x12RoomWarningMessage\x12\x0e\n\x06reason\x18\x01 \x01(\t\"7\n\x12RoomLimitedMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65lay_range\x18\x02 \x01(\r\"$\n\x16SuperChatDeleteMessage\x12\n\n\x02id\x18\x01 \x03(\r*=\n\nLiveStatus\x12\r\n\tPREPARING\x10\x00\x12\x08\n\x04LIVE\x10\x01\x12\t\n\x05ROUND\x10\x02\x12\x0b\n\x07\x43UT_OFF\x10\x03\x42\x03\xf8\x01\x01\x62\x06proto3'
+  serialized_pb=b'\n\'vNerve/bilibili/live/room_message.proto\x12\x14vNerve.bilibili.live\x1a\'vNerve/bilibili/live/user_message.proto\"\xcb\x04\n\x0bRoomMessage\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x39\n\x0cuser_message\x18\x02 \x01(\x0b\x32!.vNerve.bilibili.live.UserMessageH\x00\x12K\n\x11popularity_change\x18\x03 \x01(\x0b\x32..vNerve.bilibili.live.PopularityChangedMessageH\x00\x12\x45\n\x0blive_status\x18\x10 \x01(\x0b\x32..vNerve.bilibili.live.LiveStatusChangedMessageH\x00\x12\x43\n\x0binfo_change\x18\x11 \x01(\x0b\x32,.vNerve.bilibili.live.RoomInfoChangedMessageH\x00\x12>\n\x0broom_locked\x18\x12 \x01(\x0b\x32\'.vNerve.bilibili.live.RoomLockedMessageH\x00\x12@\n\x0croom_warning\x18\x13 \x01(\x0b\x32(.vNerve.bilibili.live.RoomWarningMessageH\x00\x12@\n\x0croom_limited\x18\x14 \x01(\x0b\x32(.vNerve.bilibili.live.RoomLimitedMessageH\x00\x12H\n\x10superchat_delete\x18\x15 \x01(\x0b\x32,.vNerve.bilibili.live.SuperChatDeleteMessageH\x00\x42\t\n\x07payload\".\n\x18PopularityChangedMessage\x12\x12\n\npopularity\x18\x01 \x01(\r\"]\n\x18LiveStatusChangedMessage\x12\x30\n\x06status\x18\x01 \x01(\x0e\x32 .vNerve.bilibili.live.LiveStatus\x12\x0f\n\x07message\x18\x02 \x01(\t\"\xbf\x01\n\x16RoomInfoChangedMessage\x12\x37\n\tbase_info\x18\x01 \x01(\x0b\x32\".vNerve.bilibili.live.RoomBaseInfoH\x00\x12\x18\n\x0e\x62\x61\x63kground_url\x18\x02 \x01(\tH\x00\x12\x11\n\x07skin_id\x18\x03 \x01(\rH\x00\x12\x34\n\x05\x61\x64min\x18\x04 \x01(\x0b\x32#.vNerve.bilibili.live.RoomAdminInfoH\x00\x42\t\n\x07\x63hanged\"s\n\x0cRoomBaseInfo\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0f\n\x07\x61rea_id\x18\x02 \x01(\r\x12\x11\n\tarea_name\x18\x03 \x01(\t\x12\x16\n\x0eparent_area_id\x18\x04 \x01(\r\x12\x18\n\x10parent_area_name\x18\x05 \x01(\t\"\x1c\n\rRoomAdminInfo\x12\x0b\n\x03uid\x18\x01 \x03(\x04\")\n\x11RoomLockedMessage\x12\x14\n\x0clocked_until\x18\x01 \x01(\x04\"%\n\x12RoomWarningMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\"7\n\x12RoomLimitedMessage\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65lay_range\x18\x02 \x01(\r\"$\n\x16SuperChatDeleteMessage\x12\n\n\x02id\x18\x01 \x03(\x04*=\n\nLiveStatus\x12\r\n\tPREPARING\x10\x00\x12\x08\n\x04LIVE\x10\x01\x12\t\n\x05ROUND\x10\x02\x12\x0b\n\x07\x43UT_OFF\x10\x03\x42\x03\xf8\x01\x01\x62\x06proto3'
   ,
   dependencies=[vNerve_dot_bilibili_dot_live_dot_user__message__pb2.DESCRIPTOR,])
 
@@ -49,8 +49,8 @@ _LIVESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1339,
-  serialized_end=1400,
+  serialized_start=1357,
+  serialized_end=1418,
 )
 _sym_db.RegisterEnumDescriptor(_LIVESTATUS)
 
@@ -126,7 +126,7 @@ _ROOMMESSAGE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='superchat_remove', full_name='vNerve.bilibili.live.RoomMessage.superchat_remove', index=8,
+      name='superchat_delete', full_name='vNerve.bilibili.live.RoomMessage.superchat_delete', index=8,
       number=21, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -197,6 +197,13 @@ _LIVESTATUSCHANGEDMESSAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='vNerve.bilibili.live.LiveStatusChangedMessage.message', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -210,7 +217,7 @@ _LIVESTATUSCHANGEDMESSAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=744,
-  serialized_end=820,
+  serialized_end=837,
 )
 
 
@@ -264,8 +271,8 @@ _ROOMINFOCHANGEDMESSAGE = _descriptor.Descriptor(
       name='changed', full_name='vNerve.bilibili.live.RoomInfoChangedMessage.changed',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=823,
-  serialized_end=1014,
+  serialized_start=840,
+  serialized_end=1031,
 )
 
 
@@ -306,8 +313,8 @@ _ROOMBASEINFO = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='parent_area_name', full_name='vNerve.bilibili.live.RoomBaseInfo.parent_area_name', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -323,8 +330,8 @@ _ROOMBASEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1016,
-  serialized_end=1131,
+  serialized_start=1033,
+  serialized_end=1148,
 )
 
 
@@ -354,8 +361,8 @@ _ROOMADMININFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1133,
-  serialized_end=1161,
+  serialized_start=1150,
+  serialized_end=1178,
 )
 
 
@@ -385,8 +392,8 @@ _ROOMLOCKEDMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1163,
-  serialized_end=1204,
+  serialized_start=1180,
+  serialized_end=1221,
 )
 
 
@@ -398,7 +405,7 @@ _ROOMWARNINGMESSAGE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='reason', full_name='vNerve.bilibili.live.RoomWarningMessage.reason', index=0,
+      name='message', full_name='vNerve.bilibili.live.RoomWarningMessage.message', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -416,8 +423,8 @@ _ROOMWARNINGMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1206,
-  serialized_end=1242,
+  serialized_start=1223,
+  serialized_end=1260,
 )
 
 
@@ -454,8 +461,8 @@ _ROOMLIMITEDMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1244,
-  serialized_end=1299,
+  serialized_start=1262,
+  serialized_end=1317,
 )
 
 
@@ -468,7 +475,7 @@ _SUPERCHATDELETEMESSAGE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='vNerve.bilibili.live.SuperChatDeleteMessage.id', index=0,
-      number=1, type=13, cpp_type=3, label=3,
+      number=1, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -485,8 +492,8 @@ _SUPERCHATDELETEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1301,
-  serialized_end=1337,
+  serialized_start=1319,
+  serialized_end=1355,
 )
 
 _ROOMMESSAGE.fields_by_name['user_message'].message_type = vNerve_dot_bilibili_dot_live_dot_user__message__pb2._USERMESSAGE
@@ -496,7 +503,7 @@ _ROOMMESSAGE.fields_by_name['info_change'].message_type = _ROOMINFOCHANGEDMESSAG
 _ROOMMESSAGE.fields_by_name['room_locked'].message_type = _ROOMLOCKEDMESSAGE
 _ROOMMESSAGE.fields_by_name['room_warning'].message_type = _ROOMWARNINGMESSAGE
 _ROOMMESSAGE.fields_by_name['room_limited'].message_type = _ROOMLIMITEDMESSAGE
-_ROOMMESSAGE.fields_by_name['superchat_remove'].message_type = _SUPERCHATDELETEMESSAGE
+_ROOMMESSAGE.fields_by_name['superchat_delete'].message_type = _SUPERCHATDELETEMESSAGE
 _ROOMMESSAGE.oneofs_by_name['payload'].fields.append(
   _ROOMMESSAGE.fields_by_name['user_message'])
 _ROOMMESSAGE.fields_by_name['user_message'].containing_oneof = _ROOMMESSAGE.oneofs_by_name['payload']
@@ -519,8 +526,8 @@ _ROOMMESSAGE.oneofs_by_name['payload'].fields.append(
   _ROOMMESSAGE.fields_by_name['room_limited'])
 _ROOMMESSAGE.fields_by_name['room_limited'].containing_oneof = _ROOMMESSAGE.oneofs_by_name['payload']
 _ROOMMESSAGE.oneofs_by_name['payload'].fields.append(
-  _ROOMMESSAGE.fields_by_name['superchat_remove'])
-_ROOMMESSAGE.fields_by_name['superchat_remove'].containing_oneof = _ROOMMESSAGE.oneofs_by_name['payload']
+  _ROOMMESSAGE.fields_by_name['superchat_delete'])
+_ROOMMESSAGE.fields_by_name['superchat_delete'].containing_oneof = _ROOMMESSAGE.oneofs_by_name['payload']
 _LIVESTATUSCHANGEDMESSAGE.fields_by_name['status'].enum_type = _LIVESTATUS
 _ROOMINFOCHANGEDMESSAGE.fields_by_name['base_info'].message_type = _ROOMBASEINFO
 _ROOMINFOCHANGEDMESSAGE.fields_by_name['admin'].message_type = _ROOMADMININFO

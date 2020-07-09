@@ -52,7 +52,7 @@ namespace VNerve.Bilibili.Live {
             "Cg5EYW5tYWt1TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJEj4KDGxvdHRlcnlf",
             "dHlwZRgCIAEoDjIoLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkxvdHRlcnlEYW5t",
             "YWt1VHlwZSKlAQoQU3VwZXJDaGF0TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJ",
-            "EgoKAmlkGAMgASgNEg0KBXRva2VuGAQgASgJEhEKCXByaWNlX2NueRgFIAEo",
+            "EgoKAmlkGAMgASgEEg0KBXRva2VuGAQgASgJEhEKCXByaWNlX2NueRgFIAEo",
             "DRISCgpwcmljZV9jb2luGAYgASgNEhgKEGxhc3RpbmdfdGltZV9zZWMYByAB",
             "KA0SEgoKc3RhcnRfdGltZRgIIAEoBBIQCghlbmRfdGltZRgJIAEoBCKEAQoL",
             "R2lmdE1lc3NhZ2USDwoHaXNfZ29sZBgBIAEoCBISCgp0b3RhbF9jb2luGAIg",
@@ -1567,9 +1567,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 3;
-    private uint id_;
+    private ulong id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Id {
+    public ulong Id {
       get { return id_; }
       set {
         id_ = value;
@@ -1670,7 +1670,7 @@ namespace VNerve.Bilibili.Live {
     public override int GetHashCode() {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Id != 0UL) hash ^= Id.GetHashCode();
       if (Token.Length != 0) hash ^= Token.GetHashCode();
       if (PriceCny != 0) hash ^= PriceCny.GetHashCode();
       if (PriceCoin != 0) hash ^= PriceCoin.GetHashCode();
@@ -1694,9 +1694,9 @@ namespace VNerve.Bilibili.Live {
         output.WriteRawTag(10);
         output.WriteString(Message);
       }
-      if (Id != 0) {
+      if (Id != 0UL) {
         output.WriteRawTag(24);
-        output.WriteUInt32(Id);
+        output.WriteUInt64(Id);
       }
       if (Token.Length != 0) {
         output.WriteRawTag(34);
@@ -1733,8 +1733,8 @@ namespace VNerve.Bilibili.Live {
       if (Message.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
       }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      if (Id != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Id);
       }
       if (Token.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
@@ -1768,7 +1768,7 @@ namespace VNerve.Bilibili.Live {
       if (other.Message.Length != 0) {
         Message = other.Message;
       }
-      if (other.Id != 0) {
+      if (other.Id != 0UL) {
         Id = other.Id;
       }
       if (other.Token.Length != 0) {
@@ -1805,7 +1805,7 @@ namespace VNerve.Bilibili.Live {
             break;
           }
           case 24: {
-            Id = input.ReadUInt32();
+            Id = input.ReadUInt64();
             break;
           }
           case 34: {

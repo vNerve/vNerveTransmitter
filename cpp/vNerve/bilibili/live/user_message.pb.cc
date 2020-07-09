@@ -394,7 +394,7 @@ const char descriptor_table_protodef_vNerve_2fbilibili_2flive_2fuser_5fmessage_2
   "\001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030\001 \001(\t\022>"
   "\n\014lottery_type\030\002 \001(\0162(.vNerve.bilibili.l"
   "ive.LotteryDanmakuType\"\245\001\n\020SuperChatMess"
-  "age\022\017\n\007message\030\001 \001(\t\022\n\n\002id\030\003 \001(\r\022\r\n\005toke"
+  "age\022\017\n\007message\030\001 \001(\t\022\n\n\002id\030\003 \001(\004\022\r\n\005toke"
   "n\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\nprice_coin"
   "\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r\022\022\n\nstar"
   "t_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftM"
@@ -2480,8 +2480,8 @@ SuperChatMessage::SuperChatMessage(const SuperChatMessage& from)
       GetArenaNoVirtual());
   }
   ::memcpy(&id_, &from.id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&end_time_) -
-    reinterpret_cast<char*>(&id_)) + sizeof(end_time_));
+    static_cast<size_t>(reinterpret_cast<char*>(&lasting_time_sec_) -
+    reinterpret_cast<char*>(&id_)) + sizeof(lasting_time_sec_));
   // @@protoc_insertion_point(copy_constructor:vNerve.bilibili.live.SuperChatMessage)
 }
 
@@ -2490,8 +2490,8 @@ void SuperChatMessage::SharedCtor() {
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&end_time_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(end_time_));
+      reinterpret_cast<char*>(&lasting_time_sec_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(lasting_time_sec_));
 }
 
 SuperChatMessage::~SuperChatMessage() {
@@ -2529,8 +2529,8 @@ void SuperChatMessage::Clear() {
   message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&end_time_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(end_time_));
+      reinterpret_cast<char*>(&lasting_time_sec_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(lasting_time_sec_));
   _internal_metadata_.Clear();
 }
 
@@ -2551,7 +2551,7 @@ const char* SuperChatMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint32 id = 3;
+      // uint64 id = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
@@ -2638,10 +2638,10 @@ failure:
         1, this->_internal_message(), target);
   }
 
-  // uint32 id = 3;
+  // uint64 id = 3;
   if (this->id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_id(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->_internal_id(), target);
   }
 
   // string token = 4;
@@ -2714,10 +2714,10 @@ size_t SuperChatMessage::ByteSizeLong() const {
         this->_internal_token());
   }
 
-  // uint32 id = 3;
+  // uint64 id = 3;
   if (this->id() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
         this->_internal_id());
   }
 
@@ -2735,13 +2735,6 @@ size_t SuperChatMessage::ByteSizeLong() const {
         this->_internal_price_coin());
   }
 
-  // uint32 lasting_time_sec = 7;
-  if (this->lasting_time_sec() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
-        this->_internal_lasting_time_sec());
-  }
-
   // uint64 start_time = 8;
   if (this->start_time() != 0) {
     total_size += 1 +
@@ -2754,6 +2747,13 @@ size_t SuperChatMessage::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
         this->_internal_end_time());
+  }
+
+  // uint32 lasting_time_sec = 7;
+  if (this->lasting_time_sec() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_lasting_time_sec());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2802,14 +2802,14 @@ void SuperChatMessage::MergeFrom(const SuperChatMessage& from) {
   if (from.price_coin() != 0) {
     _internal_set_price_coin(from._internal_price_coin());
   }
-  if (from.lasting_time_sec() != 0) {
-    _internal_set_lasting_time_sec(from._internal_lasting_time_sec());
-  }
   if (from.start_time() != 0) {
     _internal_set_start_time(from._internal_start_time());
   }
   if (from.end_time() != 0) {
     _internal_set_end_time(from._internal_end_time());
+  }
+  if (from.lasting_time_sec() != 0) {
+    _internal_set_lasting_time_sec(from._internal_lasting_time_sec());
   }
 }
 
@@ -2841,9 +2841,9 @@ void SuperChatMessage::InternalSwap(SuperChatMessage* other) {
   swap(id_, other->id_);
   swap(price_cny_, other->price_cny_);
   swap(price_coin_, other->price_coin_);
-  swap(lasting_time_sec_, other->lasting_time_sec_);
   swap(start_time_, other->start_time_);
   swap(end_time_, other->end_time_);
+  swap(lasting_time_sec_, other->lasting_time_sec_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SuperChatMessage::GetMetadata() const {

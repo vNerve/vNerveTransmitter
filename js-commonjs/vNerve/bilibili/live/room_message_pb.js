@@ -260,7 +260,7 @@ proto.vNerve.bilibili.live.RoomMessage.PayloadCase = {
   ROOM_LOCKED: 18,
   ROOM_WARNING: 19,
   ROOM_LIMITED: 20,
-  SUPERCHAT_REMOVE: 21
+  SUPERCHAT_DELETE: 21
 };
 
 /**
@@ -309,7 +309,7 @@ proto.vNerve.bilibili.live.RoomMessage.toObject = function(includeInstance, msg)
     roomLocked: (f = msg.getRoomLocked()) && proto.vNerve.bilibili.live.RoomLockedMessage.toObject(includeInstance, f),
     roomWarning: (f = msg.getRoomWarning()) && proto.vNerve.bilibili.live.RoomWarningMessage.toObject(includeInstance, f),
     roomLimited: (f = msg.getRoomLimited()) && proto.vNerve.bilibili.live.RoomLimitedMessage.toObject(includeInstance, f),
-    superchatRemove: (f = msg.getSuperchatRemove()) && proto.vNerve.bilibili.live.SuperChatDeleteMessage.toObject(includeInstance, f)
+    superchatDelete: (f = msg.getSuperchatDelete()) && proto.vNerve.bilibili.live.SuperChatDeleteMessage.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -388,7 +388,7 @@ proto.vNerve.bilibili.live.RoomMessage.deserializeBinaryFromReader = function(ms
     case 21:
       var value = new proto.vNerve.bilibili.live.SuperChatDeleteMessage;
       reader.readMessage(value,proto.vNerve.bilibili.live.SuperChatDeleteMessage.deserializeBinaryFromReader);
-      msg.setSuperchatRemove(value);
+      msg.setSuperchatDelete(value);
       break;
     default:
       reader.skipField();
@@ -482,7 +482,7 @@ proto.vNerve.bilibili.live.RoomMessage.serializeBinaryToWriter = function(messag
       proto.vNerve.bilibili.live.RoomLimitedMessage.serializeBinaryToWriter
     );
   }
-  f = message.getSuperchatRemove();
+  f = message.getSuperchatDelete();
   if (f != null) {
     writer.writeMessage(
       21,
@@ -771,10 +771,10 @@ proto.vNerve.bilibili.live.RoomMessage.prototype.hasRoomLimited = function() {
 
 
 /**
- * optional SuperChatDeleteMessage superchat_remove = 21;
+ * optional SuperChatDeleteMessage superchat_delete = 21;
  * @return {?proto.vNerve.bilibili.live.SuperChatDeleteMessage}
  */
-proto.vNerve.bilibili.live.RoomMessage.prototype.getSuperchatRemove = function() {
+proto.vNerve.bilibili.live.RoomMessage.prototype.getSuperchatDelete = function() {
   return /** @type{?proto.vNerve.bilibili.live.SuperChatDeleteMessage} */ (
     jspb.Message.getWrapperField(this, proto.vNerve.bilibili.live.SuperChatDeleteMessage, 21));
 };
@@ -784,7 +784,7 @@ proto.vNerve.bilibili.live.RoomMessage.prototype.getSuperchatRemove = function()
  * @param {?proto.vNerve.bilibili.live.SuperChatDeleteMessage|undefined} value
  * @return {!proto.vNerve.bilibili.live.RoomMessage} returns this
 */
-proto.vNerve.bilibili.live.RoomMessage.prototype.setSuperchatRemove = function(value) {
+proto.vNerve.bilibili.live.RoomMessage.prototype.setSuperchatDelete = function(value) {
   return jspb.Message.setOneofWrapperField(this, 21, proto.vNerve.bilibili.live.RoomMessage.oneofGroups_[0], value);
 };
 
@@ -793,8 +793,8 @@ proto.vNerve.bilibili.live.RoomMessage.prototype.setSuperchatRemove = function(v
  * Clears the message field making it undefined.
  * @return {!proto.vNerve.bilibili.live.RoomMessage} returns this
  */
-proto.vNerve.bilibili.live.RoomMessage.prototype.clearSuperchatRemove = function() {
-  return this.setSuperchatRemove(undefined);
+proto.vNerve.bilibili.live.RoomMessage.prototype.clearSuperchatDelete = function() {
+  return this.setSuperchatDelete(undefined);
 };
 
 
@@ -802,7 +802,7 @@ proto.vNerve.bilibili.live.RoomMessage.prototype.clearSuperchatRemove = function
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.vNerve.bilibili.live.RoomMessage.prototype.hasSuperchatRemove = function() {
+proto.vNerve.bilibili.live.RoomMessage.prototype.hasSuperchatDelete = function() {
   return jspb.Message.getField(this, 21) != null;
 };
 
@@ -969,7 +969,8 @@ proto.vNerve.bilibili.live.LiveStatusChangedMessage.prototype.toObject = functio
  */
 proto.vNerve.bilibili.live.LiveStatusChangedMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, 0)
+    status: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    message: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -1010,6 +1011,10 @@ proto.vNerve.bilibili.live.LiveStatusChangedMessage.deserializeBinaryFromReader 
       var value = /** @type {!proto.vNerve.bilibili.live.LiveStatus} */ (reader.readEnum());
       msg.setStatus(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMessage(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1046,6 +1051,13 @@ proto.vNerve.bilibili.live.LiveStatusChangedMessage.serializeBinaryToWriter = fu
       f
     );
   }
+  f = message.getMessage();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -1064,6 +1076,24 @@ proto.vNerve.bilibili.live.LiveStatusChangedMessage.prototype.getStatus = functi
  */
 proto.vNerve.bilibili.live.LiveStatusChangedMessage.prototype.setStatus = function(value) {
   return jspb.Message.setProto3EnumField(this, 1, value);
+};
+
+
+/**
+ * optional string message = 2;
+ * @return {string}
+ */
+proto.vNerve.bilibili.live.LiveStatusChangedMessage.prototype.getMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.vNerve.bilibili.live.LiveStatusChangedMessage} returns this
+ */
+proto.vNerve.bilibili.live.LiveStatusChangedMessage.prototype.setMessage = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1429,7 +1459,7 @@ proto.vNerve.bilibili.live.RoomBaseInfo.toObject = function(includeInstance, msg
     areaId: jspb.Message.getFieldWithDefault(msg, 2, 0),
     areaName: jspb.Message.getFieldWithDefault(msg, 3, ""),
     parentAreaId: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    parentAreaName: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    parentAreaName: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -1483,7 +1513,7 @@ proto.vNerve.bilibili.live.RoomBaseInfo.deserializeBinaryFromReader = function(m
       msg.setParentAreaId(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readUint32());
+      var value = /** @type {string} */ (reader.readString());
       msg.setParentAreaName(value);
       break;
     default:
@@ -1544,8 +1574,8 @@ proto.vNerve.bilibili.live.RoomBaseInfo.serializeBinaryToWriter = function(messa
     );
   }
   f = message.getParentAreaName();
-  if (f !== 0) {
-    writer.writeUint32(
+  if (f.length > 0) {
+    writer.writeString(
       5,
       f
     );
@@ -1626,20 +1656,20 @@ proto.vNerve.bilibili.live.RoomBaseInfo.prototype.setParentAreaId = function(val
 
 
 /**
- * optional uint32 parent_area_name = 5;
- * @return {number}
+ * optional string parent_area_name = 5;
+ * @return {string}
  */
 proto.vNerve.bilibili.live.RoomBaseInfo.prototype.getParentAreaName = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
- * @param {number} value
+ * @param {string} value
  * @return {!proto.vNerve.bilibili.live.RoomBaseInfo} returns this
  */
 proto.vNerve.bilibili.live.RoomBaseInfo.prototype.setParentAreaName = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -1961,7 +1991,7 @@ proto.vNerve.bilibili.live.RoomWarningMessage.prototype.toObject = function(opt_
  */
 proto.vNerve.bilibili.live.RoomWarningMessage.toObject = function(includeInstance, msg) {
   var f, obj = {
-    reason: jspb.Message.getFieldWithDefault(msg, 1, "")
+    message: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -2000,7 +2030,7 @@ proto.vNerve.bilibili.live.RoomWarningMessage.deserializeBinaryFromReader = func
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setReason(value);
+      msg.setMessage(value);
       break;
     default:
       reader.skipField();
@@ -2031,7 +2061,7 @@ proto.vNerve.bilibili.live.RoomWarningMessage.prototype.serializeBinary = functi
  */
 proto.vNerve.bilibili.live.RoomWarningMessage.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getReason();
+  f = message.getMessage();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -2042,10 +2072,10 @@ proto.vNerve.bilibili.live.RoomWarningMessage.serializeBinaryToWriter = function
 
 
 /**
- * optional string reason = 1;
+ * optional string message = 1;
  * @return {string}
  */
-proto.vNerve.bilibili.live.RoomWarningMessage.prototype.getReason = function() {
+proto.vNerve.bilibili.live.RoomWarningMessage.prototype.getMessage = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -2054,7 +2084,7 @@ proto.vNerve.bilibili.live.RoomWarningMessage.prototype.getReason = function() {
  * @param {string} value
  * @return {!proto.vNerve.bilibili.live.RoomWarningMessage} returns this
  */
-proto.vNerve.bilibili.live.RoomWarningMessage.prototype.setReason = function(value) {
+proto.vNerve.bilibili.live.RoomWarningMessage.prototype.setMessage = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2296,7 +2326,7 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {!Array<number>} */ (reader.readPackedUint32());
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint64());
       msg.setIdList(value);
       break;
     default:
@@ -2330,7 +2360,7 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.serializeBinaryToWriter = func
   var f = undefined;
   f = message.getIdList();
   if (f.length > 0) {
-    writer.writePackedUint32(
+    writer.writePackedUint64(
       1,
       f
     );
@@ -2339,7 +2369,7 @@ proto.vNerve.bilibili.live.SuperChatDeleteMessage.serializeBinaryToWriter = func
 
 
 /**
- * repeated uint32 id = 1;
+ * repeated uint64 id = 1;
  * @return {!Array<number>}
  */
 proto.vNerve.bilibili.live.SuperChatDeleteMessage.prototype.getIdList = function() {
