@@ -16,7 +16,7 @@ message RoomMessage {
     RoomLockedMessage room_locked = 18;
     RoomWarningMessage room_warning = 19;
     RoomLimitedMessage room_limited = 20;
-    SuperChatDeleteMessage superchat_remove = 21;
+    SuperChatDeleteMessage superchat_delete = 21;
   }
 }
 
@@ -26,6 +26,7 @@ message PopularityChangedMessage {
 
 message LiveStatusChangedMessage {
   LiveStatus status = 1;
+  string message = 2;
 }
 
 enum LiveStatus {
@@ -51,7 +52,7 @@ message RoomBaseInfo {
   uint32 area_id = 2;
   string area_name = 3;
   uint32 parent_area_id = 4;
-  uint32 parent_area_name = 5;
+  string parent_area_name = 5;
 }
 
 message RoomAdminInfo {
@@ -63,7 +64,7 @@ message RoomLockedMessage {
 }
 
 message RoomWarningMessage {
-  string reason = 1;
+  string message = 1;
 }
 
 message RoomLimitedMessage {
@@ -72,5 +73,5 @@ message RoomLimitedMessage {
 }
 
 message SuperChatDeleteMessage {
-  repeated uint32 id = 1;
+  repeated uint64 id = 1;
 }
