@@ -58,6 +58,13 @@ message UserInfo {
   bool regular_user = 13;
 }
 
+// 直播间老爷等级
+enum LiveVipLevel {
+  NO_VIP = 0;      // 无老爷
+  MONTHLY_VIP = 1; // 月费老爷
+  YEARLY_VIP = 2;  // 年费老爷（SVIP）
+}
+
 // 直播勋章信息
 message MedalInfo {
   string medal_name = 1;      // 勋章名称
@@ -68,11 +75,16 @@ message MedalInfo {
   uint32 streamer_roomid = 6; // 勋章对应主播直播间 ID
 }
 
-// 直播间老爷等级
-enum LiveVipLevel {
-  NO_VIP = 0;      // 无老爷
-  MONTHLY_VIP = 1; // 月费老爷
-  YEARLY_VIP = 2;  // 年费老爷（SVIP）
+/**
+  舰队等级
+
+  注意：三个等级和原始数据结构中的等级数据相反！
+*/
+enum GuardLevel {
+  NO_GUARD = 0;  // 无舰队
+  LEVEL1 = 1;    // 舰长
+  LEVEL2 = 2;    // 提督
+  LEVEL3 = 3;    // 总督
 }
 
 /**
@@ -90,6 +102,21 @@ enum LotteryDanmakuType {
   NO_LOTTERY = 0;         // 非抽奖/节奏风暴
   STORM = 1;              // 节奏风暴
   LOTTERY = 2;            // 抽奖
+}
+
+/**
+  礼物消息
+
+  提供的额外 UserInfo 字段 : avatar_url
+*/
+message GiftMessage {
+  bool is_gold = 1;                 // 是否为金瓜子
+  uint32 total_coin = 2;            // 礼物总瓜子数
+
+  uint32 gift_id = 3;               // 礼物 ID
+  string gift_name = 4;             // 礼物名称
+  uint32 single_price_coin_raw = 5; // 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+  uint32 count = 6;                 // 礼物数目
 }
 
 /**
@@ -112,21 +139,6 @@ message SuperChatMessage {
 }
 
 /**
-  礼物消息
-
-  提供的额外 UserInfo 字段 : avatar_url
-*/
-message GiftMessage {
-  bool is_gold = 1;                 // 是否为金瓜子
-  uint32 total_coin = 2;            // 礼物总瓜子数
-
-  uint32 gift_id = 3;               // 礼物 ID
-  string gift_name = 4;             // 礼物名称
-  uint32 single_price_coin_raw = 5; // 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
-  uint32 count = 6;                 // 礼物数目
-}
-
-/**
   欢迎老爷
 
   提供的额外 UserInfo 字段 : admin（有效性存疑）
@@ -145,15 +157,16 @@ message WelcomeGuardMessage {
 }
 
 /**
-  舰队等级
+  大航海/上舰
 
-  注意：三个等级和原始数据结构中的等级数据相反！
+  提供的额外 UserInfo 字段 : guard_level
 */
-enum GuardLevel {
-  NO_GUARD = 0;  // 无舰队
-  LEVEL1 = 1;    // 舰长
-  LEVEL2 = 2;    // 提督
-  LEVEL3 = 3;    // 总督
+message NewGuardMessage {
+  GuardLevel level = 1;                  // 舰队等级
+  uint32 total_coin = 2;                 // 总瓜子金额
+  uint32 count = 3;                      // 上舰时间，以 duration_level 为单位（月或周）
+  GuardDurationLevel duration_level = 4; // 上舰时长类型，可能为月或周
+  GuardBuyType buy_type = 5;             // 上舰操作类型，可能为新加入或续费
 }
 
 /**
@@ -172,19 +185,6 @@ enum GuardDurationLevel {
   NO_DURATION = 0;   // 未知
   MONTHLY_GUARD = 1; // 按月
   WEEKLY_GUARD = 2;  // 按周
-}
-
-/**
-  大航海/上舰
-
-  提供的额外 UserInfo 字段 : guard_level
-*/
-message NewGuardMessage {
-  GuardLevel level = 1;                  // 舰队等级
-  uint32 total_coin = 2;                 // 总瓜子金额
-  uint32 count = 3;                      // 上舰时间，以 duration_level 为单位（月或周）
-  GuardDurationLevel duration_level = 4; // 上舰时长类型，可能为月或周
-  GuardBuyType buy_type = 5;             // 上舰操作类型，可能为新加入或续费
 }
 
 /**
