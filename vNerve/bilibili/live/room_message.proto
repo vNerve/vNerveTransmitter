@@ -5,73 +5,106 @@ package vNerve.bilibili.live;
 option cc_enable_arenas = true;
 
 import "vNerve/bilibili/live/user_message.proto";
-
+/**
+  BiLive 所有消息的根消息
+*/
 message RoomMessage {
-  uint32 room_id = 1;
+  uint32 room_id = 1; /// 本消息对应的直播间号
   oneof payload {
-    UserMessage user_message = 2;
+    UserMessage user_message = 2;                   // 所有由用户引起的消息
+    /**
+      直播间人气值更新
+
+      此消息每房间约一分钟发送一条。
+    */
     PopularityChangedMessage popularity_change = 3;
-    LiveStatusChangedMessage live_status = 16;
-    RoomInfoChangedMessage info_change = 17;
-    RoomLockedMessage room_locked = 18;
-    RoomWarningMessage room_warning = 19;
-    RoomLimitedMessage room_limited = 20;
-    SuperChatDeleteMessage superchat_delete = 21;
+    LiveStatusChangedMessage live_status = 16;      // 直播间上下播
+    RoomInfoChangedMessage info_change = 17;        // 直播间信息变更（包括房管）
+    RoomLockedMessage room_locked = 18;             // 直播间被封禁/锁定
+    RoomWarningMessage room_warning = 19;           // 直播间被警告
+    RoomLimitedMessage room_limited = 20;           // 直播间受限（版权等）
+    SuperChatDeleteMessage superchat_delete = 21;   // 删除 Super Chat（房管操作）
   }
 }
 
+/// 直播间人气值更新
 message PopularityChangedMessage {
+  /**
+    新的人气值
+
+    在未开播的时候人气值恒为 1。
+  */
   uint32 popularity = 1;
 }
 
+/**
+  直播间上下播状态
+
+  可能多次发送！下游应用需要自行进行状态锁操作
+*/
 message LiveStatusChangedMessage {
-  LiveStatus status = 1;
-  string message = 2;
+  LiveStatus status = 1;  // 新的开播状态
+  string message = 2;     // 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
 }
 
+/// 直播间上下播状态
 enum LiveStatus {
-  PREPARING = 0;
-  LIVE = 1;
-  ROUND = 2;
-  CUT_OFF = 3;
+  PREPARING = 0; // 下播
+  LIVE = 1;      // 上播
+  ROUND = 2;     // 轮播（亦应该视为下播）
+  CUT_OFF = 3;   // 被切断 // TODO: 被切断时候是否有 PREPARING?
 }
 
+/**
+  直播间信息变更
+
+  下游应用需要根据 oneof changed 的状态确定何种信息被变更。
+*/
 message RoomInfoChangedMessage {
   oneof changed {
-    RoomBaseInfo base_info = 1;
-    string background_url = 2;
-    uint32 skin_id = 3;
-    RoomAdminInfo admin = 4;
-    // RoomShieldInfo shield_info = 5;
+    RoomBaseInfo base_info = 1; // 直播间标题与分区
+    string background_url = 2;  // 直播间背景图
+    uint32 skin_id = 3;         // 直播间皮肤
+    RoomAdminInfo admin = 4;    // 直播间房管列表
   }
 }
 
+/// 直播间基础信息，包含标题、分区等
 message RoomBaseInfo {
-  string title = 1;
+  string title = 1;            // 直播间标题
 
-  uint32 area_id = 2;
-  string area_name = 3;
-  uint32 parent_area_id = 4;
-  string parent_area_name = 5;
+  uint32 area_id = 2;          // 分区 ID
+  string area_name = 3;        // 分区名
+  uint32 parent_area_id = 4;   // 大分区 ID
+  string parent_area_name = 5; // 大分区名
 }
 
+/// 直播间房管列表信息
 message RoomAdminInfo {
-  repeated uint64 uid = 1;
+  repeated uint64 uid = 1;     // 所有房管的 UID
 }
 
+/// 直播间被锁定/封禁
 message RoomLockedMessage {
-  uint64 locked_until = 1;
+  uint64 locked_until = 1;     // 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
 }
 
+/// 直播间被警告
 message RoomWarningMessage {
-  string message = 1;
+  string message = 1;          // 警告的信息
 }
 
+/**
+  直播间受限，发生情况尚不明
+
+  可能在播放带版权的内容时出现，亦可能进入某些特殊分区（放映厅等）时候出现。
+*/
 message RoomLimitedMessage {
-  string type = 1;
-  uint32 delay_range = 2;
+  string type = 1;            // 源 JSON 中的 type 字段
+  uint32 delay_range = 2;     // 源 JSON 中的 delay_range 字段
 }
 
+/// 删除 Super Chat 消息，通常由房管发出
 message SuperChatDeleteMessage {
-  repeated uint64 id = 1;
+  repeated uint64 id = 1;     // 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
 }

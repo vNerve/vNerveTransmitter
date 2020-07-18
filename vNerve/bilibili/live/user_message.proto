@@ -4,128 +4,195 @@ package vNerve.bilibili.live;
 
 option cc_enable_arenas = true;
 
+/**
+  所有由用户产生的消息
+
+  注意，在处理 `payload` 之前，您可能先需要从 `user` 获取该消息对应的用户！
+*/
 message UserMessage {
-  UserInfo user = 1;
+  UserInfo user = 1;                       // 该消息对应的用户。优先处理！
   oneof payload {
-    DanmakuMessage danmaku = 2;
-    GiftMessage gift = 3;
-    SuperChatMessage super_chat = 4;
-    NewGuardMessage new_guard = 5;
-    WelcomeVIPMessage welcome_vip = 6;
-    WelcomeGuardMessage welcome_guard = 7;
-    UserBlockedMessage user_blocked = 16;
+    DanmakuMessage danmaku = 2;            // 弹幕消息
+    GiftMessage gift = 3;                  // 礼物消息
+    SuperChatMessage super_chat = 4;       // Super Chat 醒目留言
+    NewGuardMessage new_guard = 5;         // 新的大航海会员（舰长）
+    WelcomeVIPMessage welcome_vip = 6;     // 欢迎老爷
+    WelcomeGuardMessage welcome_guard = 7; // 欢迎舰长
+    UserBlockedMessage user_blocked = 16;  // 用户被禁言
   }
 }
 
+/**
+  与消息对应的用户信息
+
+  注意：**`User` 类型中仅有 `uid` 保证在所有消息中均可用**。
+  大部分消息中 `name` 可用。
+  其他字段的可用情况会在下面的文档中标明，若未标明则表示此消息中 `user` 对应字段没有数据。
+*/
 message UserInfo {
-  uint64 uid = 1;
-  string name = 2;
-  string avatar_url = 3;
+  uint64 uid = 1;                      // 消息对应的用户主站 UID。所有消息中均可用
+  string name = 2;                     // 消息对应用户主站昵称。大部分消息中可用
+  string avatar_url = 3;               // 用户头像 URL
 
-  int32 user_level = 4;
-  fixed32 user_level_border_color = 5;
+  int32 user_level = 4;                // 用户直播 UL 等级
+  fixed32 user_level_border_color = 5; // 用户直播等级边框颜色，RGB
 
-  oneof admin_optional {
+  oneof admin_optional {               // 用户是否为直播间房管。请根据本字段是否为 NONE 判断值是否有效！
     bool admin = 6;
   }
-  oneof main_vip_optional {
+  oneof main_vip_optional {            // 用户是否为主站大会员。请根据本字段是否为 NONE 判断值是否有效！
     bool main_vip = 7;
   }
-  LiveVipLevel live_vip_level = 8;
+  LiveVipLevel live_vip_level = 8;     // 用户直播老爷等级
 
-  string title = 9;
-  MedalInfo medal = 10;
-  GuardLevel guard_level = 11;
+  string title = 9;                    // 用户头衔 ID  （形如title-287-1）
+  MedalInfo medal = 10;                // 用户直播勋章信息
+  GuardLevel guard_level = 11;         // 用户大航海等级
 
-  bool phone_verified = 12;
+  bool phone_verified = 12;            // 用户手机是否认证
+  /**
+    用户是否为正式会员
+
+    不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+  */
   bool regular_user = 13;
 }
 
+// 直播勋章信息
 message MedalInfo {
-  string medal_name = 1;
-  uint32 medal_level = 2;
-  fixed32 medal_color = 3;
-  uint64 streamer_uid = 4;
-  string streamer_name = 5;
-  uint32 streamer_roomid = 6;
+  string medal_name = 1;      // 勋章名称
+  uint32 medal_level = 2;     // 勋章等级
+  fixed32 medal_color = 3;    // 勋章颜色，RGB
+  uint64 streamer_uid = 4;    // 勋章对应主播的 UID
+  string streamer_name = 5;   // 勋章对应主播主站昵称
+  uint32 streamer_roomid = 6; // 勋章对应主播直播间 ID
 }
 
+// 直播间老爷等级
 enum LiveVipLevel {
-  NO_VIP = 0;
-  MONTHLY_VIP = 1;
-  YEARLY_VIP = 2;
+  NO_VIP = 0;      // 无老爷
+  MONTHLY_VIP = 1; // 月费老爷
+  YEARLY_VIP = 2;  // 年费老爷（SVIP）
 }
 
+/**
+  弹幕消息
+
+  提供的额外 UserInfo 字段：admin, live_vip_level, user_level_border_color, title, medal, guard_level, phone_verified, regular_user
+*/
 message DanmakuMessage {
-  string message = 1;
-  LotteryDanmakuType lottery_type = 2;
+  string message = 1;                  // 弹幕内容
+  LotteryDanmakuType lottery_type = 2; // 是否为抽奖/节奏风暴弹幕
 }
 
+// 弹幕是否抽奖/节奏风暴弹幕
 enum LotteryDanmakuType {
-  NO_LOTTERY = 0;
-  STORM = 1;
-  LOTTERY = 2;
+  NO_LOTTERY = 0;         // 非抽奖/节奏风暴
+  STORM = 1;              // 节奏风暴
+  LOTTERY = 2;            // 抽奖
 }
 
+/**
+  Super Chat - 醒目留言
+
+  提供的额外 UserInfo 字段 : avatar_url, admin, user_level, user_level_border_color, admin, live_vip_level, title, medal, guard_level
+*/
 message SuperChatMessage {
-  string message = 1;
+  string message = 1;          // Super Chat 内容
 
-  uint64 id = 3;
-  string token = 4;
+  uint64 id = 3;               // Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+  string token = 4;            // Super Chat Token，作用未知
 
-  uint32 price_cny = 5;
-  uint32 price_coin = 6;
+  uint32 price_cny = 5;        // 人民币形式价格
+  uint32 price_coin = 6;       // 瓜子形式价格
 
-  uint32 lasting_time_sec = 7;
-  uint64 start_time = 8;
-  uint64 end_time = 9;
+  uint32 lasting_time_sec = 7; // 持续显示在页面顶部时间，以秒为单位
+  uint64 start_time = 8;       // 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+  uint64 end_time = 9;         // 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
 }
 
+/**
+  礼物消息
+
+  提供的额外 UserInfo 字段 : avatar_url
+*/
 message GiftMessage {
-  bool is_gold = 1;
-  uint32 total_coin = 2;
+  bool is_gold = 1;                 // 是否为金瓜子
+  uint32 total_coin = 2;            // 礼物总瓜子数
 
-  uint32 gift_id = 3;
-  string gift_name = 4;
-  uint32 single_price_coin_raw = 5;
-  uint32 count = 6;
+  uint32 gift_id = 3;               // 礼物 ID
+  string gift_name = 4;             // 礼物名称
+  uint32 single_price_coin_raw = 5; // 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+  uint32 count = 6;                 // 礼物数目
 }
 
+/**
+  欢迎老爷
+
+  提供的额外 UserInfo 字段 : admin（有效性存疑）
+*/
 message WelcomeVIPMessage {
-  LiveVipLevel level = 1;
+  LiveVipLevel level = 1;   // 老爷等级
 }
 
+/**
+  欢迎舰长
+
+  提供的额外 UserInfo 字段 : guard_level
+*/
 message WelcomeGuardMessage {
-  GuardLevel level = 1;
+  GuardLevel level = 1;     // 舰队等级
 }
 
+/**
+  舰队等级
+
+  注意：三个等级和原始数据结构中的等级数据相反！
+*/
 enum GuardLevel {
-  NO_GUARD = 0;
-  LEVEL1 = 1;
-  LEVEL2 = 2;
-  LEVEL3 = 3;
+  NO_GUARD = 0;  // 无舰队
+  LEVEL1 = 1;    // 舰长
+  LEVEL2 = 2;    // 提督
+  LEVEL3 = 3;    // 总督
 }
 
+/**
+  判断上舰操作是续费还是新加入
+*/
 enum GuardBuyType {
-  NO_TYPE = 0;
-  BUY = 1;
-  RENEW = 2;
+  NO_TYPE = 0;   // 未知
+  BUY = 1;       // 新加入
+  RENEW = 2;     // 续费
 }
 
+/**
+  判断上舰操作是按月还是按周
+*/
 enum GuardDurationLevel {
-  NO_DURATION = 0;
-  MONTHLY_GUARD = 1;
-  WEEKLY_GUARD = 2;
+  NO_DURATION = 0;   // 未知
+  MONTHLY_GUARD = 1; // 按月
+  WEEKLY_GUARD = 2;  // 按周
 }
 
+/**
+  大航海/上舰
+
+  提供的额外 UserInfo 字段 : guard_level
+*/
 message NewGuardMessage {
-  GuardLevel level = 1;
-  uint32 total_coin = 2;
-  uint32 count = 3;
-  GuardDurationLevel duration_level = 4;
-  GuardBuyType buy_type = 5;
+  GuardLevel level = 1;                  // 舰队等级
+  uint32 total_coin = 2;                 // 总瓜子金额
+  uint32 count = 3;                      // 上舰时间，以 duration_level 为单位（月或周）
+  GuardDurationLevel duration_level = 4; // 上舰时长类型，可能为月或周
+  GuardBuyType buy_type = 5;             // 上舰操作类型，可能为新加入或续费
 }
 
+/**
+  用户被禁言
+
+  提供的额外 UserInfo 字段 : 无
+  User 的 name 字段不可用
+*/
 message UserBlockedMessage {
   // Just empty.
 }
