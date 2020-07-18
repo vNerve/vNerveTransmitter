@@ -75,16 +75,35 @@ namespace VNerve.Bilibili.Live {
 
   }
   #region Enums
+  /// <summary>
+  //// 直播间上下播状态
+  /// </summary>
   public enum LiveStatus {
+    /// <summary>
+    /// 下播
+    /// </summary>
     [pbr::OriginalName("PREPARING")] Preparing = 0,
+    /// <summary>
+    /// 上播
+    /// </summary>
     [pbr::OriginalName("LIVE")] Live = 1,
+    /// <summary>
+    /// 轮播（亦应该视为下播）
+    /// </summary>
     [pbr::OriginalName("ROUND")] Round = 2,
+    /// <summary>
+    /// 被切断 // TODO: 被切断时候是否有 PREPARING?
+    /// </summary>
     [pbr::OriginalName("CUT_OFF")] CutOff = 3,
   }
 
   #endregion
 
   #region Messages
+  /// <summary>
+  ///*
+  ///BiLive 所有消息的根消息
+  /// </summary>
   public sealed partial class RoomMessage : pb::IMessage<RoomMessage> {
     private static readonly pb::MessageParser<RoomMessage> _parser = new pb::MessageParser<RoomMessage>(() => new RoomMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -149,6 +168,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "room_id" field.</summary>
     public const int RoomIdFieldNumber = 1;
     private uint roomId_;
+    /// <summary>
+    //// 本消息对应的直播间号
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint RoomId {
       get { return roomId_; }
@@ -159,6 +181,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "user_message" field.</summary>
     public const int UserMessageFieldNumber = 2;
+    /// <summary>
+    /// 所有由用户引起的消息
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.UserMessage UserMessage {
       get { return payloadCase_ == PayloadOneofCase.UserMessage ? (global::VNerve.Bilibili.Live.UserMessage) payload_ : null; }
@@ -170,6 +195,12 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "popularity_change" field.</summary>
     public const int PopularityChangeFieldNumber = 3;
+    /// <summary>
+    ///*
+    ///直播间人气值更新
+    ///
+    ///此消息每房间约一分钟发送一条。
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.PopularityChangedMessage PopularityChange {
       get { return payloadCase_ == PayloadOneofCase.PopularityChange ? (global::VNerve.Bilibili.Live.PopularityChangedMessage) payload_ : null; }
@@ -181,6 +212,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "live_status" field.</summary>
     public const int LiveStatusFieldNumber = 16;
+    /// <summary>
+    /// 直播间上下播
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.LiveStatusChangedMessage LiveStatus {
       get { return payloadCase_ == PayloadOneofCase.LiveStatus ? (global::VNerve.Bilibili.Live.LiveStatusChangedMessage) payload_ : null; }
@@ -192,6 +226,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "info_change" field.</summary>
     public const int InfoChangeFieldNumber = 17;
+    /// <summary>
+    /// 直播间信息变更（包括房管）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.RoomInfoChangedMessage InfoChange {
       get { return payloadCase_ == PayloadOneofCase.InfoChange ? (global::VNerve.Bilibili.Live.RoomInfoChangedMessage) payload_ : null; }
@@ -203,6 +240,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "room_locked" field.</summary>
     public const int RoomLockedFieldNumber = 18;
+    /// <summary>
+    /// 直播间被封禁/锁定
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.RoomLockedMessage RoomLocked {
       get { return payloadCase_ == PayloadOneofCase.RoomLocked ? (global::VNerve.Bilibili.Live.RoomLockedMessage) payload_ : null; }
@@ -214,6 +254,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "room_warning" field.</summary>
     public const int RoomWarningFieldNumber = 19;
+    /// <summary>
+    /// 直播间被警告
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.RoomWarningMessage RoomWarning {
       get { return payloadCase_ == PayloadOneofCase.RoomWarning ? (global::VNerve.Bilibili.Live.RoomWarningMessage) payload_ : null; }
@@ -225,6 +268,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "room_limited" field.</summary>
     public const int RoomLimitedFieldNumber = 20;
+    /// <summary>
+    /// 直播间受限（版权等）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.RoomLimitedMessage RoomLimited {
       get { return payloadCase_ == PayloadOneofCase.RoomLimited ? (global::VNerve.Bilibili.Live.RoomLimitedMessage) payload_ : null; }
@@ -236,6 +282,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "superchat_delete" field.</summary>
     public const int SuperchatDeleteFieldNumber = 21;
+    /// <summary>
+    /// 删除 Super Chat（房管操作）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.SuperChatDeleteMessage SuperchatDelete {
       get { return payloadCase_ == PayloadOneofCase.SuperchatDelete ? (global::VNerve.Bilibili.Live.SuperChatDeleteMessage) payload_ : null; }
@@ -551,6 +600,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  //// 直播间人气值更新
+  /// </summary>
   public sealed partial class PopularityChangedMessage : pb::IMessage<PopularityChangedMessage> {
     private static readonly pb::MessageParser<PopularityChangedMessage> _parser = new pb::MessageParser<PopularityChangedMessage>(() => new PopularityChangedMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -588,6 +640,12 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "popularity" field.</summary>
     public const int PopularityFieldNumber = 1;
     private uint popularity_;
+    /// <summary>
+    ///*
+    ///新的人气值
+    ///
+    ///在未开播的时候人气值恒为 1。
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Popularity {
       get { return popularity_; }
@@ -680,6 +738,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///直播间上下播状态
+  ///
+  ///可能多次发送！下游应用需要自行进行状态锁操作
+  /// </summary>
   public sealed partial class LiveStatusChangedMessage : pb::IMessage<LiveStatusChangedMessage> {
     private static readonly pb::MessageParser<LiveStatusChangedMessage> _parser = new pb::MessageParser<LiveStatusChangedMessage>(() => new LiveStatusChangedMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -718,6 +782,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 1;
     private global::VNerve.Bilibili.Live.LiveStatus status_ = global::VNerve.Bilibili.Live.LiveStatus.Preparing;
+    /// <summary>
+    /// 新的开播状态
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.LiveStatus Status {
       get { return status_; }
@@ -729,6 +796,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 2;
     private string message_ = "";
+    /// <summary>
+    /// 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
@@ -837,6 +907,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///直播间信息变更
+  ///
+  ///下游应用需要根据 oneof changed 的状态确定何种信息被变更。
+  /// </summary>
   public sealed partial class RoomInfoChangedMessage : pb::IMessage<RoomInfoChangedMessage> {
     private static readonly pb::MessageParser<RoomInfoChangedMessage> _parser = new pb::MessageParser<RoomInfoChangedMessage>(() => new RoomInfoChangedMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -887,6 +963,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "base_info" field.</summary>
     public const int BaseInfoFieldNumber = 1;
+    /// <summary>
+    /// 直播间标题与分区
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.RoomBaseInfo BaseInfo {
       get { return changedCase_ == ChangedOneofCase.BaseInfo ? (global::VNerve.Bilibili.Live.RoomBaseInfo) changed_ : null; }
@@ -898,6 +977,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "background_url" field.</summary>
     public const int BackgroundUrlFieldNumber = 2;
+    /// <summary>
+    /// 直播间背景图
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string BackgroundUrl {
       get { return changedCase_ == ChangedOneofCase.BackgroundUrl ? (string) changed_ : ""; }
@@ -909,6 +991,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "skin_id" field.</summary>
     public const int SkinIdFieldNumber = 3;
+    /// <summary>
+    /// 直播间皮肤
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint SkinId {
       get { return changedCase_ == ChangedOneofCase.SkinId ? (uint) changed_ : 0; }
@@ -921,7 +1006,7 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "admin" field.</summary>
     public const int AdminFieldNumber = 4;
     /// <summary>
-    /// RoomShieldInfo shield_info = 5;
+    /// 直播间房管列表
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.RoomAdminInfo Admin {
@@ -1106,6 +1191,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  //// 直播间基础信息，包含标题、分区等
+  /// </summary>
   public sealed partial class RoomBaseInfo : pb::IMessage<RoomBaseInfo> {
     private static readonly pb::MessageParser<RoomBaseInfo> _parser = new pb::MessageParser<RoomBaseInfo>(() => new RoomBaseInfo());
     private pb::UnknownFieldSet _unknownFields;
@@ -1147,6 +1235,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "title" field.</summary>
     public const int TitleFieldNumber = 1;
     private string title_ = "";
+    /// <summary>
+    /// 直播间标题
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Title {
       get { return title_; }
@@ -1158,6 +1249,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "area_id" field.</summary>
     public const int AreaIdFieldNumber = 2;
     private uint areaId_;
+    /// <summary>
+    /// 分区 ID
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint AreaId {
       get { return areaId_; }
@@ -1169,6 +1263,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "area_name" field.</summary>
     public const int AreaNameFieldNumber = 3;
     private string areaName_ = "";
+    /// <summary>
+    /// 分区名
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AreaName {
       get { return areaName_; }
@@ -1180,6 +1277,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "parent_area_id" field.</summary>
     public const int ParentAreaIdFieldNumber = 4;
     private uint parentAreaId_;
+    /// <summary>
+    /// 大分区 ID
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint ParentAreaId {
       get { return parentAreaId_; }
@@ -1191,6 +1291,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "parent_area_name" field.</summary>
     public const int ParentAreaNameFieldNumber = 5;
     private string parentAreaName_ = "";
+    /// <summary>
+    /// 大分区名
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ParentAreaName {
       get { return parentAreaName_; }
@@ -1347,6 +1450,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  //// 直播间房管列表信息
+  /// </summary>
   public sealed partial class RoomAdminInfo : pb::IMessage<RoomAdminInfo> {
     private static readonly pb::MessageParser<RoomAdminInfo> _parser = new pb::MessageParser<RoomAdminInfo>(() => new RoomAdminInfo());
     private pb::UnknownFieldSet _unknownFields;
@@ -1386,6 +1492,9 @@ namespace VNerve.Bilibili.Live {
     private static readonly pb::FieldCodec<ulong> _repeated_uid_codec
         = pb::FieldCodec.ForUInt64(10);
     private readonly pbc::RepeatedField<ulong> uid_ = new pbc::RepeatedField<ulong>();
+    /// <summary>
+    /// 所有房管的 UID
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> Uid {
       get { return uid_; }
@@ -1469,6 +1578,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  //// 直播间被锁定/封禁
+  /// </summary>
   public sealed partial class RoomLockedMessage : pb::IMessage<RoomLockedMessage> {
     private static readonly pb::MessageParser<RoomLockedMessage> _parser = new pb::MessageParser<RoomLockedMessage>(() => new RoomLockedMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -1506,6 +1618,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "locked_until" field.</summary>
     public const int LockedUntilFieldNumber = 1;
     private ulong lockedUntil_;
+    /// <summary>
+    /// 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong LockedUntil {
       get { return lockedUntil_; }
@@ -1598,6 +1713,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  //// 直播间被警告
+  /// </summary>
   public sealed partial class RoomWarningMessage : pb::IMessage<RoomWarningMessage> {
     private static readonly pb::MessageParser<RoomWarningMessage> _parser = new pb::MessageParser<RoomWarningMessage>(() => new RoomWarningMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -1635,6 +1753,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
     private string message_ = "";
+    /// <summary>
+    /// 警告的信息
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
@@ -1727,6 +1848,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///直播间受限，发生情况尚不明
+  ///
+  ///可能在播放带版权的内容时出现，亦可能进入某些特殊分区（放映厅等）时候出现。
+  /// </summary>
   public sealed partial class RoomLimitedMessage : pb::IMessage<RoomLimitedMessage> {
     private static readonly pb::MessageParser<RoomLimitedMessage> _parser = new pb::MessageParser<RoomLimitedMessage>(() => new RoomLimitedMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -1765,6 +1892,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
     private string type_ = "";
+    /// <summary>
+    /// 源 JSON 中的 type 字段
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Type {
       get { return type_; }
@@ -1776,6 +1906,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "delay_range" field.</summary>
     public const int DelayRangeFieldNumber = 2;
     private uint delayRange_;
+    /// <summary>
+    /// 源 JSON 中的 delay_range 字段
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint DelayRange {
       get { return delayRange_; }
@@ -1884,6 +2017,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  //// 删除 Super Chat 消息，通常由房管发出
+  /// </summary>
   public sealed partial class SuperChatDeleteMessage : pb::IMessage<SuperChatDeleteMessage> {
     private static readonly pb::MessageParser<SuperChatDeleteMessage> _parser = new pb::MessageParser<SuperChatDeleteMessage>(() => new SuperChatDeleteMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -1923,6 +2059,9 @@ namespace VNerve.Bilibili.Live {
     private static readonly pb::FieldCodec<ulong> _repeated_id_codec
         = pb::FieldCodec.ForUInt64(10);
     private readonly pbc::RepeatedField<ulong> id_ = new pbc::RepeatedField<ulong>();
+    /// <summary>
+    /// 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<ulong> Id {
       get { return id_; }

@@ -15,23 +15,43 @@ public final class RoomMessageOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   *&#47; 直播间上下播状态
+   * </pre>
+   *
    * Protobuf enum {@code vNerve.bilibili.live.LiveStatus}
    */
   public enum LiveStatus
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * 下播
+     * </pre>
+     *
      * <code>PREPARING = 0;</code>
      */
     PREPARING(0),
     /**
+     * <pre>
+     * 上播
+     * </pre>
+     *
      * <code>LIVE = 1;</code>
      */
     LIVE(1),
     /**
+     * <pre>
+     * 轮播（亦应该视为下播）
+     * </pre>
+     *
      * <code>ROUND = 2;</code>
      */
     ROUND(2),
     /**
+     * <pre>
+     * 被切断 // TODO: 被切断时候是否有 PREPARING?
+     * </pre>
+     *
      * <code>CUT_OFF = 3;</code>
      */
     CUT_OFF(3),
@@ -39,18 +59,34 @@ public final class RoomMessageOuterClass {
     ;
 
     /**
+     * <pre>
+     * 下播
+     * </pre>
+     *
      * <code>PREPARING = 0;</code>
      */
     public static final int PREPARING_VALUE = 0;
     /**
+     * <pre>
+     * 上播
+     * </pre>
+     *
      * <code>LIVE = 1;</code>
      */
     public static final int LIVE_VALUE = 1;
     /**
+     * <pre>
+     * 轮播（亦应该视为下播）
+     * </pre>
+     *
      * <code>ROUND = 2;</code>
      */
     public static final int ROUND_VALUE = 2;
     /**
+     * <pre>
+     * 被切断 // TODO: 被切断时候是否有 PREPARING?
+     * </pre>
+     *
      * <code>CUT_OFF = 3;</code>
      */
     public static final int CUT_OFF_VALUE = 3;
@@ -141,127 +177,233 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     *&#47; 本消息对应的直播间号
+     * </pre>
+     *
      * <code>uint32 room_id = 1;</code>
      * @return The roomId.
      */
     int getRoomId();
 
     /**
+     * <pre>
+     * 所有由用户引起的消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
      * @return Whether the userMessage field is set.
      */
     boolean hasUserMessage();
     /**
+     * <pre>
+     * 所有由用户引起的消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
      * @return The userMessage.
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserMessage getUserMessage();
     /**
+     * <pre>
+     * 所有由用户引起的消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserMessageOrBuilder getUserMessageOrBuilder();
 
     /**
+     * <pre>
+     **
+     *直播间人气值更新
+     *此消息每房间约一分钟发送一条。
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
      * @return Whether the popularityChange field is set.
      */
     boolean hasPopularityChange();
     /**
+     * <pre>
+     **
+     *直播间人气值更新
+     *此消息每房间约一分钟发送一条。
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
      * @return The popularityChange.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage getPopularityChange();
     /**
+     * <pre>
+     **
+     *直播间人气值更新
+     *此消息每房间约一分钟发送一条。
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessageOrBuilder getPopularityChangeOrBuilder();
 
     /**
+     * <pre>
+     * 直播间上下播
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
      * @return Whether the liveStatus field is set.
      */
     boolean hasLiveStatus();
     /**
+     * <pre>
+     * 直播间上下播
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
      * @return The liveStatus.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage getLiveStatus();
     /**
+     * <pre>
+     * 直播间上下播
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessageOrBuilder getLiveStatusOrBuilder();
 
     /**
+     * <pre>
+     * 直播间信息变更（包括房管）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
      * @return Whether the infoChange field is set.
      */
     boolean hasInfoChange();
     /**
+     * <pre>
+     * 直播间信息变更（包括房管）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
      * @return The infoChange.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage getInfoChange();
     /**
+     * <pre>
+     * 直播间信息变更（包括房管）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessageOrBuilder getInfoChangeOrBuilder();
 
     /**
+     * <pre>
+     * 直播间被封禁/锁定
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
      * @return Whether the roomLocked field is set.
      */
     boolean hasRoomLocked();
     /**
+     * <pre>
+     * 直播间被封禁/锁定
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
      * @return The roomLocked.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage getRoomLocked();
     /**
+     * <pre>
+     * 直播间被封禁/锁定
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessageOrBuilder getRoomLockedOrBuilder();
 
     /**
+     * <pre>
+     * 直播间被警告
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
      * @return Whether the roomWarning field is set.
      */
     boolean hasRoomWarning();
     /**
+     * <pre>
+     * 直播间被警告
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
      * @return The roomWarning.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage getRoomWarning();
     /**
+     * <pre>
+     * 直播间被警告
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessageOrBuilder getRoomWarningOrBuilder();
 
     /**
+     * <pre>
+     * 直播间受限（版权等）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
      * @return Whether the roomLimited field is set.
      */
     boolean hasRoomLimited();
     /**
+     * <pre>
+     * 直播间受限（版权等）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
      * @return The roomLimited.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage getRoomLimited();
     /**
+     * <pre>
+     * 直播间受限（版权等）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessageOrBuilder getRoomLimitedOrBuilder();
 
     /**
+     * <pre>
+     * 删除 Super Chat（房管操作）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      * @return Whether the superchatDelete field is set.
      */
     boolean hasSuperchatDelete();
     /**
+     * <pre>
+     * 删除 Super Chat（房管操作）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      * @return The superchatDelete.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage getSuperchatDelete();
     /**
+     * <pre>
+     * 删除 Super Chat（房管操作）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatDeleteOrBuilder();
@@ -269,6 +411,11 @@ public final class RoomMessageOuterClass {
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomMessage.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   **
+   *BiLive 所有消息的根消息
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomMessage}
    */
   public  static final class RoomMessage extends
@@ -518,6 +665,10 @@ public final class RoomMessageOuterClass {
     public static final int ROOM_ID_FIELD_NUMBER = 1;
     private int roomId_;
     /**
+     * <pre>
+     *&#47; 本消息对应的直播间号
+     * </pre>
+     *
      * <code>uint32 room_id = 1;</code>
      * @return The roomId.
      */
@@ -527,6 +678,10 @@ public final class RoomMessageOuterClass {
 
     public static final int USER_MESSAGE_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * 所有由用户引起的消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
      * @return Whether the userMessage field is set.
      */
@@ -534,6 +689,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * 所有由用户引起的消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
      * @return The userMessage.
      */
@@ -544,6 +703,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.UserMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 所有由用户引起的消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserMessageOrBuilder getUserMessageOrBuilder() {
@@ -555,6 +718,12 @@ public final class RoomMessageOuterClass {
 
     public static final int POPULARITY_CHANGE_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     **
+     *直播间人气值更新
+     *此消息每房间约一分钟发送一条。
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
      * @return Whether the popularityChange field is set.
      */
@@ -562,6 +731,12 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 3;
     }
     /**
+     * <pre>
+     **
+     *直播间人气值更新
+     *此消息每房间约一分钟发送一条。
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
      * @return The popularityChange.
      */
@@ -572,6 +747,12 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     **
+     *直播间人气值更新
+     *此消息每房间约一分钟发送一条。
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessageOrBuilder getPopularityChangeOrBuilder() {
@@ -583,6 +764,10 @@ public final class RoomMessageOuterClass {
 
     public static final int LIVE_STATUS_FIELD_NUMBER = 16;
     /**
+     * <pre>
+     * 直播间上下播
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
      * @return Whether the liveStatus field is set.
      */
@@ -590,6 +775,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 16;
     }
     /**
+     * <pre>
+     * 直播间上下播
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
      * @return The liveStatus.
      */
@@ -600,6 +789,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 直播间上下播
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessageOrBuilder getLiveStatusOrBuilder() {
@@ -611,6 +804,10 @@ public final class RoomMessageOuterClass {
 
     public static final int INFO_CHANGE_FIELD_NUMBER = 17;
     /**
+     * <pre>
+     * 直播间信息变更（包括房管）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
      * @return Whether the infoChange field is set.
      */
@@ -618,6 +815,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 17;
     }
     /**
+     * <pre>
+     * 直播间信息变更（包括房管）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
      * @return The infoChange.
      */
@@ -628,6 +829,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 直播间信息变更（包括房管）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessageOrBuilder getInfoChangeOrBuilder() {
@@ -639,6 +844,10 @@ public final class RoomMessageOuterClass {
 
     public static final int ROOM_LOCKED_FIELD_NUMBER = 18;
     /**
+     * <pre>
+     * 直播间被封禁/锁定
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
      * @return Whether the roomLocked field is set.
      */
@@ -646,6 +855,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 18;
     }
     /**
+     * <pre>
+     * 直播间被封禁/锁定
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
      * @return The roomLocked.
      */
@@ -656,6 +869,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 直播间被封禁/锁定
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessageOrBuilder getRoomLockedOrBuilder() {
@@ -667,6 +884,10 @@ public final class RoomMessageOuterClass {
 
     public static final int ROOM_WARNING_FIELD_NUMBER = 19;
     /**
+     * <pre>
+     * 直播间被警告
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
      * @return Whether the roomWarning field is set.
      */
@@ -674,6 +895,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 19;
     }
     /**
+     * <pre>
+     * 直播间被警告
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
      * @return The roomWarning.
      */
@@ -684,6 +909,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 直播间被警告
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessageOrBuilder getRoomWarningOrBuilder() {
@@ -695,6 +924,10 @@ public final class RoomMessageOuterClass {
 
     public static final int ROOM_LIMITED_FIELD_NUMBER = 20;
     /**
+     * <pre>
+     * 直播间受限（版权等）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
      * @return Whether the roomLimited field is set.
      */
@@ -702,6 +935,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 20;
     }
     /**
+     * <pre>
+     * 直播间受限（版权等）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
      * @return The roomLimited.
      */
@@ -712,6 +949,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 直播间受限（版权等）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessageOrBuilder getRoomLimitedOrBuilder() {
@@ -723,6 +964,10 @@ public final class RoomMessageOuterClass {
 
     public static final int SUPERCHAT_DELETE_FIELD_NUMBER = 21;
     /**
+     * <pre>
+     * 删除 Super Chat（房管操作）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      * @return Whether the superchatDelete field is set.
      */
@@ -730,6 +975,10 @@ public final class RoomMessageOuterClass {
       return payloadCase_ == 21;
     }
     /**
+     * <pre>
+     * 删除 Super Chat（房管操作）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      * @return The superchatDelete.
      */
@@ -740,6 +989,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 删除 Super Chat（房管操作）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatDeleteOrBuilder() {
@@ -1034,6 +1287,11 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *BiLive 所有消息的根消息
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomMessage}
      */
     public static final class Builder extends
@@ -1293,6 +1551,10 @@ public final class RoomMessageOuterClass {
 
       private int roomId_ ;
       /**
+       * <pre>
+       *&#47; 本消息对应的直播间号
+       * </pre>
+       *
        * <code>uint32 room_id = 1;</code>
        * @return The roomId.
        */
@@ -1300,6 +1562,10 @@ public final class RoomMessageOuterClass {
         return roomId_;
       }
       /**
+       * <pre>
+       *&#47; 本消息对应的直播间号
+       * </pre>
+       *
        * <code>uint32 room_id = 1;</code>
        * @param value The roomId to set.
        * @return This builder for chaining.
@@ -1311,6 +1577,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       *&#47; 本消息对应的直播间号
+       * </pre>
+       *
        * <code>uint32 room_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1324,6 +1594,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserMessage, vNerve.bilibili.live.UserMessageOuterClass.UserMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserMessageOrBuilder> userMessageBuilder_;
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        * @return Whether the userMessage field is set.
        */
@@ -1331,6 +1605,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        * @return The userMessage.
        */
@@ -1348,6 +1626,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       public Builder setUserMessage(vNerve.bilibili.live.UserMessageOuterClass.UserMessage value) {
@@ -1364,6 +1646,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       public Builder setUserMessage(
@@ -1378,6 +1664,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       public Builder mergeUserMessage(vNerve.bilibili.live.UserMessageOuterClass.UserMessage value) {
@@ -1400,6 +1690,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       public Builder clearUserMessage() {
@@ -1419,12 +1713,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserMessage.Builder getUserMessageBuilder() {
         return getUserMessageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserMessageOrBuilder getUserMessageOrBuilder() {
@@ -1438,6 +1740,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 所有由用户引起的消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserMessage user_message = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1462,6 +1768,12 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage, vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessageOrBuilder> popularityChangeBuilder_;
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        * @return Whether the popularityChange field is set.
        */
@@ -1469,6 +1781,12 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 3;
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        * @return The popularityChange.
        */
@@ -1486,6 +1804,12 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       public Builder setPopularityChange(vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage value) {
@@ -1502,6 +1826,12 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       public Builder setPopularityChange(
@@ -1516,6 +1846,12 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       public Builder mergePopularityChange(vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage value) {
@@ -1538,6 +1874,12 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       public Builder clearPopularityChange() {
@@ -1557,12 +1899,24 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessage.Builder getPopularityChangeBuilder() {
         return getPopularityChangeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.PopularityChangedMessageOrBuilder getPopularityChangeOrBuilder() {
@@ -1576,6 +1930,12 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       **
+       *直播间人气值更新
+       *此消息每房间约一分钟发送一条。
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.PopularityChangedMessage popularity_change = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1600,6 +1960,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage, vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessageOrBuilder> liveStatusBuilder_;
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        * @return Whether the liveStatus field is set.
        */
@@ -1607,6 +1971,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 16;
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        * @return The liveStatus.
        */
@@ -1624,6 +1992,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       public Builder setLiveStatus(vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage value) {
@@ -1640,6 +2012,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       public Builder setLiveStatus(
@@ -1654,6 +2030,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       public Builder mergeLiveStatus(vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage value) {
@@ -1676,6 +2056,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       public Builder clearLiveStatus() {
@@ -1695,12 +2079,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessage.Builder getLiveStatusBuilder() {
         return getLiveStatusFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.LiveStatusChangedMessageOrBuilder getLiveStatusOrBuilder() {
@@ -1714,6 +2106,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间上下播
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatusChangedMessage live_status = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1738,6 +2134,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage, vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessageOrBuilder> infoChangeBuilder_;
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        * @return Whether the infoChange field is set.
        */
@@ -1745,6 +2145,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 17;
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        * @return The infoChange.
        */
@@ -1762,6 +2166,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       public Builder setInfoChange(vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage value) {
@@ -1778,6 +2186,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       public Builder setInfoChange(
@@ -1792,6 +2204,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       public Builder mergeInfoChange(vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage value) {
@@ -1814,6 +2230,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       public Builder clearInfoChange() {
@@ -1833,12 +2253,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage.Builder getInfoChangeBuilder() {
         return getInfoChangeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessageOrBuilder getInfoChangeOrBuilder() {
@@ -1852,6 +2280,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间信息变更（包括房管）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomInfoChangedMessage info_change = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1876,6 +2308,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage, vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessageOrBuilder> roomLockedBuilder_;
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        * @return Whether the roomLocked field is set.
        */
@@ -1883,6 +2319,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 18;
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        * @return The roomLocked.
        */
@@ -1900,6 +2340,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       public Builder setRoomLocked(vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage value) {
@@ -1916,6 +2360,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       public Builder setRoomLocked(
@@ -1930,6 +2378,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       public Builder mergeRoomLocked(vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage value) {
@@ -1952,6 +2404,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       public Builder clearRoomLocked() {
@@ -1971,12 +2427,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessage.Builder getRoomLockedBuilder() {
         return getRoomLockedFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomLockedMessageOrBuilder getRoomLockedOrBuilder() {
@@ -1990,6 +2454,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间被封禁/锁定
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLockedMessage room_locked = 18;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2014,6 +2482,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage, vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessageOrBuilder> roomWarningBuilder_;
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        * @return Whether the roomWarning field is set.
        */
@@ -2021,6 +2493,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 19;
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        * @return The roomWarning.
        */
@@ -2038,6 +2514,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       public Builder setRoomWarning(vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage value) {
@@ -2054,6 +2534,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       public Builder setRoomWarning(
@@ -2068,6 +2552,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       public Builder mergeRoomWarning(vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage value) {
@@ -2090,6 +2578,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       public Builder clearRoomWarning() {
@@ -2109,12 +2601,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessage.Builder getRoomWarningBuilder() {
         return getRoomWarningFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomWarningMessageOrBuilder getRoomWarningOrBuilder() {
@@ -2128,6 +2628,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间被警告
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomWarningMessage room_warning = 19;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2152,6 +2656,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage, vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessageOrBuilder> roomLimitedBuilder_;
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        * @return Whether the roomLimited field is set.
        */
@@ -2159,6 +2667,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 20;
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        * @return The roomLimited.
        */
@@ -2176,6 +2688,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       public Builder setRoomLimited(vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage value) {
@@ -2192,6 +2708,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       public Builder setRoomLimited(
@@ -2206,6 +2726,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       public Builder mergeRoomLimited(vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage value) {
@@ -2228,6 +2752,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       public Builder clearRoomLimited() {
@@ -2247,12 +2775,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessage.Builder getRoomLimitedBuilder() {
         return getRoomLimitedFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomLimitedMessageOrBuilder getRoomLimitedOrBuilder() {
@@ -2266,6 +2802,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间受限（版权等）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomLimitedMessage room_limited = 20;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2290,6 +2830,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder, vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder> superchatDeleteBuilder_;
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        * @return Whether the superchatDelete field is set.
        */
@@ -2297,6 +2841,10 @@ public final class RoomMessageOuterClass {
         return payloadCase_ == 21;
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        * @return The superchatDelete.
        */
@@ -2314,6 +2862,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       public Builder setSuperchatDelete(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage value) {
@@ -2330,6 +2882,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       public Builder setSuperchatDelete(
@@ -2344,6 +2900,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       public Builder mergeSuperchatDelete(vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage value) {
@@ -2366,6 +2926,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       public Builder clearSuperchatDelete() {
@@ -2385,12 +2949,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessage.Builder getSuperchatDeleteBuilder() {
         return getSuperchatDeleteFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.SuperChatDeleteMessageOrBuilder getSuperchatDeleteOrBuilder() {
@@ -2404,6 +2976,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 删除 Super Chat（房管操作）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatDeleteMessage superchat_delete = 21;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2482,12 +3058,22 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     **
+     *新的人气值
+     *在未开播的时候人气值恒为 1。
+     * </pre>
+     *
      * <code>uint32 popularity = 1;</code>
      * @return The popularity.
      */
     int getPopularity();
   }
   /**
+   * <pre>
+   *&#47; 直播间人气值更新
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.PopularityChangedMessage}
    */
   public  static final class PopularityChangedMessage extends
@@ -2572,6 +3158,12 @@ public final class RoomMessageOuterClass {
     public static final int POPULARITY_FIELD_NUMBER = 1;
     private int popularity_;
     /**
+     * <pre>
+     **
+     *新的人气值
+     *在未开播的时候人气值恒为 1。
+     * </pre>
+     *
      * <code>uint32 popularity = 1;</code>
      * @return The popularity.
      */
@@ -2735,6 +3327,10 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     *&#47; 直播间人气值更新
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.PopularityChangedMessage}
      */
     public static final class Builder extends
@@ -2883,6 +3479,12 @@ public final class RoomMessageOuterClass {
 
       private int popularity_ ;
       /**
+       * <pre>
+       **
+       *新的人气值
+       *在未开播的时候人气值恒为 1。
+       * </pre>
+       *
        * <code>uint32 popularity = 1;</code>
        * @return The popularity.
        */
@@ -2890,6 +3492,12 @@ public final class RoomMessageOuterClass {
         return popularity_;
       }
       /**
+       * <pre>
+       **
+       *新的人气值
+       *在未开播的时候人气值恒为 1。
+       * </pre>
+       *
        * <code>uint32 popularity = 1;</code>
        * @param value The popularity to set.
        * @return This builder for chaining.
@@ -2901,6 +3509,12 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       **
+       *新的人气值
+       *在未开播的时候人气值恒为 1。
+       * </pre>
+       *
        * <code>uint32 popularity = 1;</code>
        * @return This builder for chaining.
        */
@@ -2968,22 +3582,38 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 新的开播状态
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * 新的开播状态
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
      * @return The status.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.LiveStatus getStatus();
 
     /**
+     * <pre>
+     * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return The message.
      */
     java.lang.String getMessage();
     /**
+     * <pre>
+     * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return The bytes for message.
      */
@@ -2991,6 +3621,12 @@ public final class RoomMessageOuterClass {
         getMessageBytes();
   }
   /**
+   * <pre>
+   **
+   *直播间上下播状态
+   *可能多次发送！下游应用需要自行进行状态锁操作
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.LiveStatusChangedMessage}
    */
   public  static final class LiveStatusChangedMessage extends
@@ -3084,6 +3720,10 @@ public final class RoomMessageOuterClass {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * 新的开播状态
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -3091,6 +3731,10 @@ public final class RoomMessageOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * 新的开播状态
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
      * @return The status.
      */
@@ -3103,6 +3747,10 @@ public final class RoomMessageOuterClass {
     public static final int MESSAGE_FIELD_NUMBER = 2;
     private volatile java.lang.Object message_;
     /**
+     * <pre>
+     * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return The message.
      */
@@ -3119,6 +3767,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return The bytes for message.
      */
@@ -3301,6 +3953,12 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *直播间上下播状态
+     *可能多次发送！下游应用需要自行进行状态锁操作
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.LiveStatusChangedMessage}
      */
     public static final class Builder extends
@@ -3456,6 +4114,10 @@ public final class RoomMessageOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * 新的开播状态
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -3463,6 +4125,10 @@ public final class RoomMessageOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * 新的开播状态
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -3473,6 +4139,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 新的开播状态
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
        * @return The status.
        */
@@ -3482,6 +4152,10 @@ public final class RoomMessageOuterClass {
         return result == null ? vNerve.bilibili.live.RoomMessageOuterClass.LiveStatus.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 新的开播状态
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -3496,6 +4170,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 新的开播状态
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveStatus status = 1;</code>
        * @return This builder for chaining.
        */
@@ -3508,6 +4186,10 @@ public final class RoomMessageOuterClass {
 
       private java.lang.Object message_ = "";
       /**
+       * <pre>
+       * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+       * </pre>
+       *
        * <code>string message = 2;</code>
        * @return The message.
        */
@@ -3524,6 +4206,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+       * </pre>
+       *
        * <code>string message = 2;</code>
        * @return The bytes for message.
        */
@@ -3541,6 +4227,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+       * </pre>
+       *
        * <code>string message = 2;</code>
        * @param value The message to set.
        * @return This builder for chaining.
@@ -3556,6 +4246,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+       * </pre>
+       *
        * <code>string message = 2;</code>
        * @return This builder for chaining.
        */
@@ -3566,6 +4260,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 被切断直播的时候的消息，仅在 status == CUT_OFF 时可用
+       * </pre>
+       *
        * <code>string message = 2;</code>
        * @param value The bytes for message to set.
        * @return This builder for chaining.
@@ -3639,26 +4337,46 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 直播间标题与分区
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
      * @return Whether the baseInfo field is set.
      */
     boolean hasBaseInfo();
     /**
+     * <pre>
+     * 直播间标题与分区
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
      * @return The baseInfo.
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo getBaseInfo();
     /**
+     * <pre>
+     * 直播间标题与分区
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
      */
     vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfoOrBuilder getBaseInfoOrBuilder();
 
     /**
+     * <pre>
+     * 直播间背景图
+     * </pre>
+     *
      * <code>string background_url = 2;</code>
      * @return The backgroundUrl.
      */
     java.lang.String getBackgroundUrl();
     /**
+     * <pre>
+     * 直播间背景图
+     * </pre>
+     *
      * <code>string background_url = 2;</code>
      * @return The bytes for backgroundUrl.
      */
@@ -3666,6 +4384,10 @@ public final class RoomMessageOuterClass {
         getBackgroundUrlBytes();
 
     /**
+     * <pre>
+     * 直播间皮肤
+     * </pre>
+     *
      * <code>uint32 skin_id = 3;</code>
      * @return The skinId.
      */
@@ -3673,7 +4395,7 @@ public final class RoomMessageOuterClass {
 
     /**
      * <pre>
-     * RoomShieldInfo shield_info = 5;
+     * 直播间房管列表
      * </pre>
      *
      * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -3682,7 +4404,7 @@ public final class RoomMessageOuterClass {
     boolean hasAdmin();
     /**
      * <pre>
-     * RoomShieldInfo shield_info = 5;
+     * 直播间房管列表
      * </pre>
      *
      * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -3691,7 +4413,7 @@ public final class RoomMessageOuterClass {
     vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo getAdmin();
     /**
      * <pre>
-     * RoomShieldInfo shield_info = 5;
+     * 直播间房管列表
      * </pre>
      *
      * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -3701,6 +4423,12 @@ public final class RoomMessageOuterClass {
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomInfoChangedMessage.ChangedCase getChangedCase();
   }
   /**
+   * <pre>
+   **
+   *直播间信息变更
+   *下游应用需要根据 oneof changed 的状态确定何种信息被变更。
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomInfoChangedMessage}
    */
   public  static final class RoomInfoChangedMessage extends
@@ -3863,6 +4591,10 @@ public final class RoomMessageOuterClass {
 
     public static final int BASE_INFO_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * 直播间标题与分区
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
      * @return Whether the baseInfo field is set.
      */
@@ -3870,6 +4602,10 @@ public final class RoomMessageOuterClass {
       return changedCase_ == 1;
     }
     /**
+     * <pre>
+     * 直播间标题与分区
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
      * @return The baseInfo.
      */
@@ -3880,6 +4616,10 @@ public final class RoomMessageOuterClass {
       return vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 直播间标题与分区
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
      */
     public vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfoOrBuilder getBaseInfoOrBuilder() {
@@ -3891,6 +4631,10 @@ public final class RoomMessageOuterClass {
 
     public static final int BACKGROUND_URL_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * 直播间背景图
+     * </pre>
+     *
      * <code>string background_url = 2;</code>
      * @return The backgroundUrl.
      */
@@ -3912,6 +4656,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 直播间背景图
+     * </pre>
+     *
      * <code>string background_url = 2;</code>
      * @return The bytes for backgroundUrl.
      */
@@ -3936,6 +4684,10 @@ public final class RoomMessageOuterClass {
 
     public static final int SKIN_ID_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * 直播间皮肤
+     * </pre>
+     *
      * <code>uint32 skin_id = 3;</code>
      * @return The skinId.
      */
@@ -3949,7 +4701,7 @@ public final class RoomMessageOuterClass {
     public static final int ADMIN_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * RoomShieldInfo shield_info = 5;
+     * 直播间房管列表
      * </pre>
      *
      * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -3960,7 +4712,7 @@ public final class RoomMessageOuterClass {
     }
     /**
      * <pre>
-     * RoomShieldInfo shield_info = 5;
+     * 直播间房管列表
      * </pre>
      *
      * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -3974,7 +4726,7 @@ public final class RoomMessageOuterClass {
     }
     /**
      * <pre>
-     * RoomShieldInfo shield_info = 5;
+     * 直播间房管列表
      * </pre>
      *
      * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4201,6 +4953,12 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *直播间信息变更
+     *下游应用需要根据 oneof changed 的状态确定何种信息被变更。
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomInfoChangedMessage}
      */
     public static final class Builder extends
@@ -4405,6 +5163,10 @@ public final class RoomMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo, vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo.Builder, vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfoOrBuilder> baseInfoBuilder_;
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        * @return Whether the baseInfo field is set.
        */
@@ -4412,6 +5174,10 @@ public final class RoomMessageOuterClass {
         return changedCase_ == 1;
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        * @return The baseInfo.
        */
@@ -4429,6 +5195,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       public Builder setBaseInfo(vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo value) {
@@ -4445,6 +5215,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       public Builder setBaseInfo(
@@ -4459,6 +5233,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       public Builder mergeBaseInfo(vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo value) {
@@ -4481,6 +5259,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       public Builder clearBaseInfo() {
@@ -4500,12 +5282,20 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfo.Builder getBaseInfoBuilder() {
         return getBaseInfoFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       public vNerve.bilibili.live.RoomMessageOuterClass.RoomBaseInfoOrBuilder getBaseInfoOrBuilder() {
@@ -4519,6 +5309,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间标题与分区
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.RoomBaseInfo base_info = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4541,6 +5335,10 @@ public final class RoomMessageOuterClass {
       }
 
       /**
+       * <pre>
+       * 直播间背景图
+       * </pre>
+       *
        * <code>string background_url = 2;</code>
        * @return The backgroundUrl.
        */
@@ -4562,6 +5360,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间背景图
+       * </pre>
+       *
        * <code>string background_url = 2;</code>
        * @return The bytes for backgroundUrl.
        */
@@ -4584,6 +5386,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间背景图
+       * </pre>
+       *
        * <code>string background_url = 2;</code>
        * @param value The backgroundUrl to set.
        * @return This builder for chaining.
@@ -4599,6 +5405,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间背景图
+       * </pre>
+       *
        * <code>string background_url = 2;</code>
        * @return This builder for chaining.
        */
@@ -4611,6 +5421,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间背景图
+       * </pre>
+       *
        * <code>string background_url = 2;</code>
        * @param value The bytes for backgroundUrl to set.
        * @return This builder for chaining.
@@ -4628,6 +5442,10 @@ public final class RoomMessageOuterClass {
       }
 
       /**
+       * <pre>
+       * 直播间皮肤
+       * </pre>
+       *
        * <code>uint32 skin_id = 3;</code>
        * @return The skinId.
        */
@@ -4638,6 +5456,10 @@ public final class RoomMessageOuterClass {
         return 0;
       }
       /**
+       * <pre>
+       * 直播间皮肤
+       * </pre>
+       *
        * <code>uint32 skin_id = 3;</code>
        * @param value The skinId to set.
        * @return This builder for chaining.
@@ -4649,6 +5471,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间皮肤
+       * </pre>
+       *
        * <code>uint32 skin_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -4665,7 +5491,7 @@ public final class RoomMessageOuterClass {
           vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo, vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfo.Builder, vNerve.bilibili.live.RoomMessageOuterClass.RoomAdminInfoOrBuilder> adminBuilder_;
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4676,7 +5502,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4697,7 +5523,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4717,7 +5543,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4735,7 +5561,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4761,7 +5587,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4784,7 +5610,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4794,7 +5620,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4811,7 +5637,7 @@ public final class RoomMessageOuterClass {
       }
       /**
        * <pre>
-       * RoomShieldInfo shield_info = 5;
+       * 直播间房管列表
        * </pre>
        *
        * <code>.vNerve.bilibili.live.RoomAdminInfo admin = 4;</code>
@@ -4892,11 +5718,19 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 直播间标题
+     * </pre>
+     *
      * <code>string title = 1;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * 直播间标题
+     * </pre>
+     *
      * <code>string title = 1;</code>
      * @return The bytes for title.
      */
@@ -4904,17 +5738,29 @@ public final class RoomMessageOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * 分区 ID
+     * </pre>
+     *
      * <code>uint32 area_id = 2;</code>
      * @return The areaId.
      */
     int getAreaId();
 
     /**
+     * <pre>
+     * 分区名
+     * </pre>
+     *
      * <code>string area_name = 3;</code>
      * @return The areaName.
      */
     java.lang.String getAreaName();
     /**
+     * <pre>
+     * 分区名
+     * </pre>
+     *
      * <code>string area_name = 3;</code>
      * @return The bytes for areaName.
      */
@@ -4922,17 +5768,29 @@ public final class RoomMessageOuterClass {
         getAreaNameBytes();
 
     /**
+     * <pre>
+     * 大分区 ID
+     * </pre>
+     *
      * <code>uint32 parent_area_id = 4;</code>
      * @return The parentAreaId.
      */
     int getParentAreaId();
 
     /**
+     * <pre>
+     * 大分区名
+     * </pre>
+     *
      * <code>string parent_area_name = 5;</code>
      * @return The parentAreaName.
      */
     java.lang.String getParentAreaName();
     /**
+     * <pre>
+     * 大分区名
+     * </pre>
+     *
      * <code>string parent_area_name = 5;</code>
      * @return The bytes for parentAreaName.
      */
@@ -4940,6 +5798,10 @@ public final class RoomMessageOuterClass {
         getParentAreaNameBytes();
   }
   /**
+   * <pre>
+   *&#47; 直播间基础信息，包含标题、分区等
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomBaseInfo}
    */
   public  static final class RoomBaseInfo extends
@@ -5050,6 +5912,10 @@ public final class RoomMessageOuterClass {
     public static final int TITLE_FIELD_NUMBER = 1;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * 直播间标题
+     * </pre>
+     *
      * <code>string title = 1;</code>
      * @return The title.
      */
@@ -5066,6 +5932,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 直播间标题
+     * </pre>
+     *
      * <code>string title = 1;</code>
      * @return The bytes for title.
      */
@@ -5086,6 +5956,10 @@ public final class RoomMessageOuterClass {
     public static final int AREA_ID_FIELD_NUMBER = 2;
     private int areaId_;
     /**
+     * <pre>
+     * 分区 ID
+     * </pre>
+     *
      * <code>uint32 area_id = 2;</code>
      * @return The areaId.
      */
@@ -5096,6 +5970,10 @@ public final class RoomMessageOuterClass {
     public static final int AREA_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object areaName_;
     /**
+     * <pre>
+     * 分区名
+     * </pre>
+     *
      * <code>string area_name = 3;</code>
      * @return The areaName.
      */
@@ -5112,6 +5990,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 分区名
+     * </pre>
+     *
      * <code>string area_name = 3;</code>
      * @return The bytes for areaName.
      */
@@ -5132,6 +6014,10 @@ public final class RoomMessageOuterClass {
     public static final int PARENT_AREA_ID_FIELD_NUMBER = 4;
     private int parentAreaId_;
     /**
+     * <pre>
+     * 大分区 ID
+     * </pre>
+     *
      * <code>uint32 parent_area_id = 4;</code>
      * @return The parentAreaId.
      */
@@ -5142,6 +6028,10 @@ public final class RoomMessageOuterClass {
     public static final int PARENT_AREA_NAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object parentAreaName_;
     /**
+     * <pre>
+     * 大分区名
+     * </pre>
+     *
      * <code>string parent_area_name = 5;</code>
      * @return The parentAreaName.
      */
@@ -5158,6 +6048,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 大分区名
+     * </pre>
+     *
      * <code>string parent_area_name = 5;</code>
      * @return The bytes for parentAreaName.
      */
@@ -5372,6 +6266,10 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     *&#47; 直播间基础信息，包含标题、分区等
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomBaseInfo}
      */
     public static final class Builder extends
@@ -5547,6 +6445,10 @@ public final class RoomMessageOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * 直播间标题
+       * </pre>
+       *
        * <code>string title = 1;</code>
        * @return The title.
        */
@@ -5563,6 +6465,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间标题
+       * </pre>
+       *
        * <code>string title = 1;</code>
        * @return The bytes for title.
        */
@@ -5580,6 +6486,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 直播间标题
+       * </pre>
+       *
        * <code>string title = 1;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -5595,6 +6505,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间标题
+       * </pre>
+       *
        * <code>string title = 1;</code>
        * @return This builder for chaining.
        */
@@ -5605,6 +6519,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 直播间标题
+       * </pre>
+       *
        * <code>string title = 1;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -5623,6 +6541,10 @@ public final class RoomMessageOuterClass {
 
       private int areaId_ ;
       /**
+       * <pre>
+       * 分区 ID
+       * </pre>
+       *
        * <code>uint32 area_id = 2;</code>
        * @return The areaId.
        */
@@ -5630,6 +6552,10 @@ public final class RoomMessageOuterClass {
         return areaId_;
       }
       /**
+       * <pre>
+       * 分区 ID
+       * </pre>
+       *
        * <code>uint32 area_id = 2;</code>
        * @param value The areaId to set.
        * @return This builder for chaining.
@@ -5641,6 +6567,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 分区 ID
+       * </pre>
+       *
        * <code>uint32 area_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -5653,6 +6583,10 @@ public final class RoomMessageOuterClass {
 
       private java.lang.Object areaName_ = "";
       /**
+       * <pre>
+       * 分区名
+       * </pre>
+       *
        * <code>string area_name = 3;</code>
        * @return The areaName.
        */
@@ -5669,6 +6603,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 分区名
+       * </pre>
+       *
        * <code>string area_name = 3;</code>
        * @return The bytes for areaName.
        */
@@ -5686,6 +6624,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 分区名
+       * </pre>
+       *
        * <code>string area_name = 3;</code>
        * @param value The areaName to set.
        * @return This builder for chaining.
@@ -5701,6 +6643,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 分区名
+       * </pre>
+       *
        * <code>string area_name = 3;</code>
        * @return This builder for chaining.
        */
@@ -5711,6 +6657,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 分区名
+       * </pre>
+       *
        * <code>string area_name = 3;</code>
        * @param value The bytes for areaName to set.
        * @return This builder for chaining.
@@ -5729,6 +6679,10 @@ public final class RoomMessageOuterClass {
 
       private int parentAreaId_ ;
       /**
+       * <pre>
+       * 大分区 ID
+       * </pre>
+       *
        * <code>uint32 parent_area_id = 4;</code>
        * @return The parentAreaId.
        */
@@ -5736,6 +6690,10 @@ public final class RoomMessageOuterClass {
         return parentAreaId_;
       }
       /**
+       * <pre>
+       * 大分区 ID
+       * </pre>
+       *
        * <code>uint32 parent_area_id = 4;</code>
        * @param value The parentAreaId to set.
        * @return This builder for chaining.
@@ -5747,6 +6705,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 大分区 ID
+       * </pre>
+       *
        * <code>uint32 parent_area_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -5759,6 +6721,10 @@ public final class RoomMessageOuterClass {
 
       private java.lang.Object parentAreaName_ = "";
       /**
+       * <pre>
+       * 大分区名
+       * </pre>
+       *
        * <code>string parent_area_name = 5;</code>
        * @return The parentAreaName.
        */
@@ -5775,6 +6741,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 大分区名
+       * </pre>
+       *
        * <code>string parent_area_name = 5;</code>
        * @return The bytes for parentAreaName.
        */
@@ -5792,6 +6762,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 大分区名
+       * </pre>
+       *
        * <code>string parent_area_name = 5;</code>
        * @param value The parentAreaName to set.
        * @return This builder for chaining.
@@ -5807,6 +6781,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 大分区名
+       * </pre>
+       *
        * <code>string parent_area_name = 5;</code>
        * @return This builder for chaining.
        */
@@ -5817,6 +6795,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 大分区名
+       * </pre>
+       *
        * <code>string parent_area_name = 5;</code>
        * @param value The bytes for parentAreaName to set.
        * @return This builder for chaining.
@@ -5890,16 +6872,28 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 所有房管的 UID
+     * </pre>
+     *
      * <code>repeated uint64 uid = 1;</code>
      * @return A list containing the uid.
      */
     java.util.List<java.lang.Long> getUidList();
     /**
+     * <pre>
+     * 所有房管的 UID
+     * </pre>
+     *
      * <code>repeated uint64 uid = 1;</code>
      * @return The count of uid.
      */
     int getUidCount();
     /**
+     * <pre>
+     * 所有房管的 UID
+     * </pre>
+     *
      * <code>repeated uint64 uid = 1;</code>
      * @param index The index of the element to return.
      * @return The uid at the given index.
@@ -5907,6 +6901,10 @@ public final class RoomMessageOuterClass {
     long getUid(int index);
   }
   /**
+   * <pre>
+   *&#47; 直播间房管列表信息
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomAdminInfo}
    */
   public  static final class RoomAdminInfo extends
@@ -6012,6 +7010,10 @@ public final class RoomMessageOuterClass {
     public static final int UID_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.LongList uid_;
     /**
+     * <pre>
+     * 所有房管的 UID
+     * </pre>
+     *
      * <code>repeated uint64 uid = 1;</code>
      * @return A list containing the uid.
      */
@@ -6020,6 +7022,10 @@ public final class RoomMessageOuterClass {
       return uid_;
     }
     /**
+     * <pre>
+     * 所有房管的 UID
+     * </pre>
+     *
      * <code>repeated uint64 uid = 1;</code>
      * @return The count of uid.
      */
@@ -6027,6 +7033,10 @@ public final class RoomMessageOuterClass {
       return uid_.size();
     }
     /**
+     * <pre>
+     * 所有房管的 UID
+     * </pre>
+     *
      * <code>repeated uint64 uid = 1;</code>
      * @param index The index of the element to return.
      * @return The uid at the given index.
@@ -6209,6 +7219,10 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     *&#47; 直播间房管列表信息
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomAdminInfo}
      */
     public static final class Builder extends
@@ -6376,6 +7390,10 @@ public final class RoomMessageOuterClass {
          }
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @return A list containing the uid.
        */
@@ -6385,6 +7403,10 @@ public final class RoomMessageOuterClass {
                  java.util.Collections.unmodifiableList(uid_) : uid_;
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @return The count of uid.
        */
@@ -6392,6 +7414,10 @@ public final class RoomMessageOuterClass {
         return uid_.size();
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @param index The index of the element to return.
        * @return The uid at the given index.
@@ -6400,6 +7426,10 @@ public final class RoomMessageOuterClass {
         return uid_.getLong(index);
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @param index The index to set the value at.
        * @param value The uid to set.
@@ -6413,6 +7443,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @param value The uid to add.
        * @return This builder for chaining.
@@ -6424,6 +7458,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @param values The uid to add.
        * @return This builder for chaining.
@@ -6437,6 +7475,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 所有房管的 UID
+       * </pre>
+       *
        * <code>repeated uint64 uid = 1;</code>
        * @return This builder for chaining.
        */
@@ -6504,12 +7546,20 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
+     * </pre>
+     *
      * <code>uint64 locked_until = 1;</code>
      * @return The lockedUntil.
      */
     long getLockedUntil();
   }
   /**
+   * <pre>
+   *&#47; 直播间被锁定/封禁
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomLockedMessage}
    */
   public  static final class RoomLockedMessage extends
@@ -6594,6 +7644,10 @@ public final class RoomMessageOuterClass {
     public static final int LOCKED_UNTIL_FIELD_NUMBER = 1;
     private long lockedUntil_;
     /**
+     * <pre>
+     * 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
+     * </pre>
+     *
      * <code>uint64 locked_until = 1;</code>
      * @return The lockedUntil.
      */
@@ -6758,6 +7812,10 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     *&#47; 直播间被锁定/封禁
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomLockedMessage}
      */
     public static final class Builder extends
@@ -6906,6 +7964,10 @@ public final class RoomMessageOuterClass {
 
       private long lockedUntil_ ;
       /**
+       * <pre>
+       * 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
+       * </pre>
+       *
        * <code>uint64 locked_until = 1;</code>
        * @return The lockedUntil.
        */
@@ -6913,6 +7975,10 @@ public final class RoomMessageOuterClass {
         return lockedUntil_;
       }
       /**
+       * <pre>
+       * 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
+       * </pre>
+       *
        * <code>uint64 locked_until = 1;</code>
        * @param value The lockedUntil to set.
        * @return This builder for chaining.
@@ -6924,6 +7990,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 封禁持续到的时间，为 UNIX 时间戳(UTC+8)
+       * </pre>
+       *
        * <code>uint64 locked_until = 1;</code>
        * @return This builder for chaining.
        */
@@ -6991,11 +8061,19 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 警告的信息
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The message.
      */
     java.lang.String getMessage();
     /**
+     * <pre>
+     * 警告的信息
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
@@ -7003,6 +8081,10 @@ public final class RoomMessageOuterClass {
         getMessageBytes();
   }
   /**
+   * <pre>
+   *&#47; 直播间被警告
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomWarningMessage}
    */
   public  static final class RoomWarningMessage extends
@@ -7089,6 +8171,10 @@ public final class RoomMessageOuterClass {
     public static final int MESSAGE_FIELD_NUMBER = 1;
     private volatile java.lang.Object message_;
     /**
+     * <pre>
+     * 警告的信息
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The message.
      */
@@ -7105,6 +8191,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 警告的信息
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
@@ -7277,6 +8367,10 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     *&#47; 直播间被警告
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomWarningMessage}
      */
     public static final class Builder extends
@@ -7426,6 +8520,10 @@ public final class RoomMessageOuterClass {
 
       private java.lang.Object message_ = "";
       /**
+       * <pre>
+       * 警告的信息
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return The message.
        */
@@ -7442,6 +8540,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 警告的信息
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return The bytes for message.
        */
@@ -7459,6 +8561,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 警告的信息
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @param value The message to set.
        * @return This builder for chaining.
@@ -7474,6 +8580,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 警告的信息
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return This builder for chaining.
        */
@@ -7484,6 +8594,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 警告的信息
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @param value The bytes for message to set.
        * @return This builder for chaining.
@@ -7557,11 +8671,19 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 源 JSON 中的 type 字段
+     * </pre>
+     *
      * <code>string type = 1;</code>
      * @return The type.
      */
     java.lang.String getType();
     /**
+     * <pre>
+     * 源 JSON 中的 type 字段
+     * </pre>
+     *
      * <code>string type = 1;</code>
      * @return The bytes for type.
      */
@@ -7569,12 +8691,22 @@ public final class RoomMessageOuterClass {
         getTypeBytes();
 
     /**
+     * <pre>
+     * 源 JSON 中的 delay_range 字段
+     * </pre>
+     *
      * <code>uint32 delay_range = 2;</code>
      * @return The delayRange.
      */
     int getDelayRange();
   }
   /**
+   * <pre>
+   **
+   *直播间受限，发生情况尚不明
+   *可能在播放带版权的内容时出现，亦可能进入某些特殊分区（放映厅等）时候出现。
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.RoomLimitedMessage}
    */
   public  static final class RoomLimitedMessage extends
@@ -7666,6 +8798,10 @@ public final class RoomMessageOuterClass {
     public static final int TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object type_;
     /**
+     * <pre>
+     * 源 JSON 中的 type 字段
+     * </pre>
+     *
      * <code>string type = 1;</code>
      * @return The type.
      */
@@ -7682,6 +8818,10 @@ public final class RoomMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 源 JSON 中的 type 字段
+     * </pre>
+     *
      * <code>string type = 1;</code>
      * @return The bytes for type.
      */
@@ -7702,6 +8842,10 @@ public final class RoomMessageOuterClass {
     public static final int DELAY_RANGE_FIELD_NUMBER = 2;
     private int delayRange_;
     /**
+     * <pre>
+     * 源 JSON 中的 delay_range 字段
+     * </pre>
+     *
      * <code>uint32 delay_range = 2;</code>
      * @return The delayRange.
      */
@@ -7875,6 +9019,12 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *直播间受限，发生情况尚不明
+     *可能在播放带版权的内容时出现，亦可能进入某些特殊分区（放映厅等）时候出现。
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.RoomLimitedMessage}
      */
     public static final class Builder extends
@@ -8030,6 +9180,10 @@ public final class RoomMessageOuterClass {
 
       private java.lang.Object type_ = "";
       /**
+       * <pre>
+       * 源 JSON 中的 type 字段
+       * </pre>
+       *
        * <code>string type = 1;</code>
        * @return The type.
        */
@@ -8046,6 +9200,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 源 JSON 中的 type 字段
+       * </pre>
+       *
        * <code>string type = 1;</code>
        * @return The bytes for type.
        */
@@ -8063,6 +9221,10 @@ public final class RoomMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 源 JSON 中的 type 字段
+       * </pre>
+       *
        * <code>string type = 1;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -8078,6 +9240,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 源 JSON 中的 type 字段
+       * </pre>
+       *
        * <code>string type = 1;</code>
        * @return This builder for chaining.
        */
@@ -8088,6 +9254,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 源 JSON 中的 type 字段
+       * </pre>
+       *
        * <code>string type = 1;</code>
        * @param value The bytes for type to set.
        * @return This builder for chaining.
@@ -8106,6 +9276,10 @@ public final class RoomMessageOuterClass {
 
       private int delayRange_ ;
       /**
+       * <pre>
+       * 源 JSON 中的 delay_range 字段
+       * </pre>
+       *
        * <code>uint32 delay_range = 2;</code>
        * @return The delayRange.
        */
@@ -8113,6 +9287,10 @@ public final class RoomMessageOuterClass {
         return delayRange_;
       }
       /**
+       * <pre>
+       * 源 JSON 中的 delay_range 字段
+       * </pre>
+       *
        * <code>uint32 delay_range = 2;</code>
        * @param value The delayRange to set.
        * @return This builder for chaining.
@@ -8124,6 +9302,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 源 JSON 中的 delay_range 字段
+       * </pre>
+       *
        * <code>uint32 delay_range = 2;</code>
        * @return This builder for chaining.
        */
@@ -8191,16 +9373,28 @@ public final class RoomMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+     * </pre>
+     *
      * <code>repeated uint64 id = 1;</code>
      * @return A list containing the id.
      */
     java.util.List<java.lang.Long> getIdList();
     /**
+     * <pre>
+     * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+     * </pre>
+     *
      * <code>repeated uint64 id = 1;</code>
      * @return The count of id.
      */
     int getIdCount();
     /**
+     * <pre>
+     * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+     * </pre>
+     *
      * <code>repeated uint64 id = 1;</code>
      * @param index The index of the element to return.
      * @return The id at the given index.
@@ -8208,6 +9402,10 @@ public final class RoomMessageOuterClass {
     long getId(int index);
   }
   /**
+   * <pre>
+   *&#47; 删除 Super Chat 消息，通常由房管发出
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.SuperChatDeleteMessage}
    */
   public  static final class SuperChatDeleteMessage extends
@@ -8313,6 +9511,10 @@ public final class RoomMessageOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.LongList id_;
     /**
+     * <pre>
+     * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+     * </pre>
+     *
      * <code>repeated uint64 id = 1;</code>
      * @return A list containing the id.
      */
@@ -8321,6 +9523,10 @@ public final class RoomMessageOuterClass {
       return id_;
     }
     /**
+     * <pre>
+     * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+     * </pre>
+     *
      * <code>repeated uint64 id = 1;</code>
      * @return The count of id.
      */
@@ -8328,6 +9534,10 @@ public final class RoomMessageOuterClass {
       return id_.size();
     }
     /**
+     * <pre>
+     * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+     * </pre>
+     *
      * <code>repeated uint64 id = 1;</code>
      * @param index The index of the element to return.
      * @return The id at the given index.
@@ -8510,6 +9720,10 @@ public final class RoomMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     *&#47; 删除 Super Chat 消息，通常由房管发出
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.SuperChatDeleteMessage}
      */
     public static final class Builder extends
@@ -8677,6 +9891,10 @@ public final class RoomMessageOuterClass {
          }
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @return A list containing the id.
        */
@@ -8686,6 +9904,10 @@ public final class RoomMessageOuterClass {
                  java.util.Collections.unmodifiableList(id_) : id_;
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @return The count of id.
        */
@@ -8693,6 +9915,10 @@ public final class RoomMessageOuterClass {
         return id_.size();
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @param index The index of the element to return.
        * @return The id at the given index.
@@ -8701,6 +9927,10 @@ public final class RoomMessageOuterClass {
         return id_.getLong(index);
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @param index The index to set the value at.
        * @param value The id to set.
@@ -8714,6 +9944,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @param value The id to add.
        * @return This builder for chaining.
@@ -8725,6 +9959,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @param values The id to add.
        * @return This builder for chaining.
@@ -8738,6 +9976,10 @@ public final class RoomMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 删除的所有 Super Chat 的 ID，对应 SuperChatMessage 中的 id 字段
+       * </pre>
+       *
        * <code>repeated uint64 id = 1;</code>
        * @return This builder for chaining.
        */

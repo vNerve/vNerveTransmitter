@@ -15,19 +15,35 @@ public final class UserMessageOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * 直播间老爷等级
+   * </pre>
+   *
    * Protobuf enum {@code vNerve.bilibili.live.LiveVipLevel}
    */
   public enum LiveVipLevel
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * 无老爷
+     * </pre>
+     *
      * <code>NO_VIP = 0;</code>
      */
     NO_VIP(0),
     /**
+     * <pre>
+     * 月费老爷
+     * </pre>
+     *
      * <code>MONTHLY_VIP = 1;</code>
      */
     MONTHLY_VIP(1),
     /**
+     * <pre>
+     * 年费老爷（SVIP）
+     * </pre>
+     *
      * <code>YEARLY_VIP = 2;</code>
      */
     YEARLY_VIP(2),
@@ -35,14 +51,26 @@ public final class UserMessageOuterClass {
     ;
 
     /**
+     * <pre>
+     * 无老爷
+     * </pre>
+     *
      * <code>NO_VIP = 0;</code>
      */
     public static final int NO_VIP_VALUE = 0;
     /**
+     * <pre>
+     * 月费老爷
+     * </pre>
+     *
      * <code>MONTHLY_VIP = 1;</code>
      */
     public static final int MONTHLY_VIP_VALUE = 1;
     /**
+     * <pre>
+     * 年费老爷（SVIP）
+     * </pre>
+     *
      * <code>YEARLY_VIP = 2;</code>
      */
     public static final int YEARLY_VIP_VALUE = 2;
@@ -128,136 +156,45 @@ public final class UserMessageOuterClass {
   }
 
   /**
-   * Protobuf enum {@code vNerve.bilibili.live.LotteryDanmakuType}
-   */
-  public enum LotteryDanmakuType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>NO_LOTTERY = 0;</code>
-     */
-    NO_LOTTERY(0),
-    /**
-     * <code>STORM = 1;</code>
-     */
-    STORM(1),
-    /**
-     * <code>LOTTERY = 2;</code>
-     */
-    LOTTERY(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>NO_LOTTERY = 0;</code>
-     */
-    public static final int NO_LOTTERY_VALUE = 0;
-    /**
-     * <code>STORM = 1;</code>
-     */
-    public static final int STORM_VALUE = 1;
-    /**
-     * <code>LOTTERY = 2;</code>
-     */
-    public static final int LOTTERY_VALUE = 2;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static LotteryDanmakuType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static LotteryDanmakuType forNumber(int value) {
-      switch (value) {
-        case 0: return NO_LOTTERY;
-        case 1: return STORM;
-        case 2: return LOTTERY;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<LotteryDanmakuType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        LotteryDanmakuType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<LotteryDanmakuType>() {
-            public LotteryDanmakuType findValueByNumber(int number) {
-              return LotteryDanmakuType.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return vNerve.bilibili.live.UserMessageOuterClass.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final LotteryDanmakuType[] VALUES = values();
-
-    public static LotteryDanmakuType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private LotteryDanmakuType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:vNerve.bilibili.live.LotteryDanmakuType)
-  }
-
-  /**
+   * <pre>
+   **
+   *舰队等级
+   *注意：三个等级和原始数据结构中的等级数据相反！
+   * </pre>
+   *
    * Protobuf enum {@code vNerve.bilibili.live.GuardLevel}
    */
   public enum GuardLevel
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * 无舰队
+     * </pre>
+     *
      * <code>NO_GUARD = 0;</code>
      */
     NO_GUARD(0),
     /**
+     * <pre>
+     * 舰长
+     * </pre>
+     *
      * <code>LEVEL1 = 1;</code>
      */
     LEVEL1(1),
     /**
+     * <pre>
+     * 提督
+     * </pre>
+     *
      * <code>LEVEL2 = 2;</code>
      */
     LEVEL2(2),
     /**
+     * <pre>
+     * 总督
+     * </pre>
+     *
      * <code>LEVEL3 = 3;</code>
      */
     LEVEL3(3),
@@ -265,18 +202,34 @@ public final class UserMessageOuterClass {
     ;
 
     /**
+     * <pre>
+     * 无舰队
+     * </pre>
+     *
      * <code>NO_GUARD = 0;</code>
      */
     public static final int NO_GUARD_VALUE = 0;
     /**
+     * <pre>
+     * 舰长
+     * </pre>
+     *
      * <code>LEVEL1 = 1;</code>
      */
     public static final int LEVEL1_VALUE = 1;
     /**
+     * <pre>
+     * 提督
+     * </pre>
+     *
      * <code>LEVEL2 = 2;</code>
      */
     public static final int LEVEL2_VALUE = 2;
     /**
+     * <pre>
+     * 总督
+     * </pre>
+     *
      * <code>LEVEL3 = 3;</code>
      */
     public static final int LEVEL3_VALUE = 3;
@@ -336,7 +289,7 @@ public final class UserMessageOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return vNerve.bilibili.live.UserMessageOuterClass.getDescriptor().getEnumTypes().get(2);
+      return vNerve.bilibili.live.UserMessageOuterClass.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final GuardLevel[] VALUES = values();
@@ -363,19 +316,177 @@ public final class UserMessageOuterClass {
   }
 
   /**
+   * <pre>
+   * 弹幕是否抽奖/节奏风暴弹幕
+   * </pre>
+   *
+   * Protobuf enum {@code vNerve.bilibili.live.LotteryDanmakuType}
+   */
+  public enum LotteryDanmakuType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * 非抽奖/节奏风暴
+     * </pre>
+     *
+     * <code>NO_LOTTERY = 0;</code>
+     */
+    NO_LOTTERY(0),
+    /**
+     * <pre>
+     * 节奏风暴
+     * </pre>
+     *
+     * <code>STORM = 1;</code>
+     */
+    STORM(1),
+    /**
+     * <pre>
+     * 抽奖
+     * </pre>
+     *
+     * <code>LOTTERY = 2;</code>
+     */
+    LOTTERY(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * 非抽奖/节奏风暴
+     * </pre>
+     *
+     * <code>NO_LOTTERY = 0;</code>
+     */
+    public static final int NO_LOTTERY_VALUE = 0;
+    /**
+     * <pre>
+     * 节奏风暴
+     * </pre>
+     *
+     * <code>STORM = 1;</code>
+     */
+    public static final int STORM_VALUE = 1;
+    /**
+     * <pre>
+     * 抽奖
+     * </pre>
+     *
+     * <code>LOTTERY = 2;</code>
+     */
+    public static final int LOTTERY_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LotteryDanmakuType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static LotteryDanmakuType forNumber(int value) {
+      switch (value) {
+        case 0: return NO_LOTTERY;
+        case 1: return STORM;
+        case 2: return LOTTERY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LotteryDanmakuType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LotteryDanmakuType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LotteryDanmakuType>() {
+            public LotteryDanmakuType findValueByNumber(int number) {
+              return LotteryDanmakuType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return vNerve.bilibili.live.UserMessageOuterClass.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final LotteryDanmakuType[] VALUES = values();
+
+    public static LotteryDanmakuType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LotteryDanmakuType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:vNerve.bilibili.live.LotteryDanmakuType)
+  }
+
+  /**
+   * <pre>
+   **
+   *判断上舰操作是续费还是新加入
+   * </pre>
+   *
    * Protobuf enum {@code vNerve.bilibili.live.GuardBuyType}
    */
   public enum GuardBuyType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * 未知
+     * </pre>
+     *
      * <code>NO_TYPE = 0;</code>
      */
     NO_TYPE(0),
     /**
+     * <pre>
+     * 新加入
+     * </pre>
+     *
      * <code>BUY = 1;</code>
      */
     BUY(1),
     /**
+     * <pre>
+     * 续费
+     * </pre>
+     *
      * <code>RENEW = 2;</code>
      */
     RENEW(2),
@@ -383,14 +494,26 @@ public final class UserMessageOuterClass {
     ;
 
     /**
+     * <pre>
+     * 未知
+     * </pre>
+     *
      * <code>NO_TYPE = 0;</code>
      */
     public static final int NO_TYPE_VALUE = 0;
     /**
+     * <pre>
+     * 新加入
+     * </pre>
+     *
      * <code>BUY = 1;</code>
      */
     public static final int BUY_VALUE = 1;
     /**
+     * <pre>
+     * 续费
+     * </pre>
+     *
      * <code>RENEW = 2;</code>
      */
     public static final int RENEW_VALUE = 2;
@@ -476,19 +599,36 @@ public final class UserMessageOuterClass {
   }
 
   /**
+   * <pre>
+   **
+   *判断上舰操作是按月还是按周
+   * </pre>
+   *
    * Protobuf enum {@code vNerve.bilibili.live.GuardDurationLevel}
    */
   public enum GuardDurationLevel
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * 未知
+     * </pre>
+     *
      * <code>NO_DURATION = 0;</code>
      */
     NO_DURATION(0),
     /**
+     * <pre>
+     * 按月
+     * </pre>
+     *
      * <code>MONTHLY_GUARD = 1;</code>
      */
     MONTHLY_GUARD(1),
     /**
+     * <pre>
+     * 按周
+     * </pre>
+     *
      * <code>WEEKLY_GUARD = 2;</code>
      */
     WEEKLY_GUARD(2),
@@ -496,14 +636,26 @@ public final class UserMessageOuterClass {
     ;
 
     /**
+     * <pre>
+     * 未知
+     * </pre>
+     *
      * <code>NO_DURATION = 0;</code>
      */
     public static final int NO_DURATION_VALUE = 0;
     /**
+     * <pre>
+     * 按月
+     * </pre>
+     *
      * <code>MONTHLY_GUARD = 1;</code>
      */
     public static final int MONTHLY_GUARD_VALUE = 1;
     /**
+     * <pre>
+     * 按周
+     * </pre>
+     *
      * <code>WEEKLY_GUARD = 2;</code>
      */
     public static final int WEEKLY_GUARD_VALUE = 2;
@@ -593,121 +745,217 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 该消息对应的用户。优先处理！
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
      * @return Whether the user field is set.
      */
     boolean hasUser();
     /**
+     * <pre>
+     * 该消息对应的用户。优先处理！
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
      * @return The user.
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserInfo getUser();
     /**
+     * <pre>
+     * 该消息对应的用户。优先处理！
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserInfoOrBuilder getUserOrBuilder();
 
     /**
+     * <pre>
+     * 弹幕消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
      * @return Whether the danmaku field is set.
      */
     boolean hasDanmaku();
     /**
+     * <pre>
+     * 弹幕消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
      * @return The danmaku.
      */
     vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage getDanmaku();
     /**
+     * <pre>
+     * 弹幕消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessageOrBuilder getDanmakuOrBuilder();
 
     /**
+     * <pre>
+     * 礼物消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
      * @return Whether the gift field is set.
      */
     boolean hasGift();
     /**
+     * <pre>
+     * 礼物消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
      * @return The gift.
      */
     vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getGift();
     /**
+     * <pre>
+     * 礼物消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.GiftMessageOrBuilder getGiftOrBuilder();
 
     /**
+     * <pre>
+     * Super Chat 醒目留言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
      * @return Whether the superChat field is set.
      */
     boolean hasSuperChat();
     /**
+     * <pre>
+     * Super Chat 醒目留言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
      * @return The superChat.
      */
     vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage getSuperChat();
     /**
+     * <pre>
+     * Super Chat 醒目留言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessageOrBuilder getSuperChatOrBuilder();
 
     /**
+     * <pre>
+     * 新的大航海会员（舰长）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
      * @return Whether the newGuard field is set.
      */
     boolean hasNewGuard();
     /**
+     * <pre>
+     * 新的大航海会员（舰长）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
      * @return The newGuard.
      */
     vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage getNewGuard();
     /**
+     * <pre>
+     * 新的大航海会员（舰长）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessageOrBuilder getNewGuardOrBuilder();
 
     /**
+     * <pre>
+     * 欢迎老爷
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
      * @return Whether the welcomeVip field is set.
      */
     boolean hasWelcomeVip();
     /**
+     * <pre>
+     * 欢迎老爷
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
      * @return The welcomeVip.
      */
     vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage getWelcomeVip();
     /**
+     * <pre>
+     * 欢迎老爷
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessageOrBuilder getWelcomeVipOrBuilder();
 
     /**
+     * <pre>
+     * 欢迎舰长
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
      * @return Whether the welcomeGuard field is set.
      */
     boolean hasWelcomeGuard();
     /**
+     * <pre>
+     * 欢迎舰长
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
      * @return The welcomeGuard.
      */
     vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage getWelcomeGuard();
     /**
+     * <pre>
+     * 欢迎舰长
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessageOrBuilder getWelcomeGuardOrBuilder();
 
     /**
+     * <pre>
+     * 用户被禁言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return Whether the userBlocked field is set.
      */
     boolean hasUserBlocked();
     /**
+     * <pre>
+     * 用户被禁言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return The userBlocked.
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage getUserBlocked();
     /**
+     * <pre>
+     * 用户被禁言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder();
@@ -715,6 +963,12 @@ public final class UserMessageOuterClass {
     public vNerve.bilibili.live.UserMessageOuterClass.UserMessage.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   **
+   *所有由用户产生的消息
+   *注意，在处理 `payload` 之前，您可能先需要从 `user` 获取该消息对应的用户！
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.UserMessage}
    */
   public  static final class UserMessage extends
@@ -956,6 +1210,10 @@ public final class UserMessageOuterClass {
     public static final int USER_FIELD_NUMBER = 1;
     private vNerve.bilibili.live.UserMessageOuterClass.UserInfo user_;
     /**
+     * <pre>
+     * 该消息对应的用户。优先处理！
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
      * @return Whether the user field is set.
      */
@@ -963,6 +1221,10 @@ public final class UserMessageOuterClass {
       return user_ != null;
     }
     /**
+     * <pre>
+     * 该消息对应的用户。优先处理！
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
      * @return The user.
      */
@@ -970,6 +1232,10 @@ public final class UserMessageOuterClass {
       return user_ == null ? vNerve.bilibili.live.UserMessageOuterClass.UserInfo.getDefaultInstance() : user_;
     }
     /**
+     * <pre>
+     * 该消息对应的用户。优先处理！
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserInfoOrBuilder getUserOrBuilder() {
@@ -978,6 +1244,10 @@ public final class UserMessageOuterClass {
 
     public static final int DANMAKU_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * 弹幕消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
      * @return Whether the danmaku field is set.
      */
@@ -985,6 +1255,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 2;
     }
     /**
+     * <pre>
+     * 弹幕消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
      * @return The danmaku.
      */
@@ -995,6 +1269,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 弹幕消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessageOrBuilder getDanmakuOrBuilder() {
@@ -1006,6 +1284,10 @@ public final class UserMessageOuterClass {
 
     public static final int GIFT_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * 礼物消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
      * @return Whether the gift field is set.
      */
@@ -1013,6 +1295,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 3;
     }
     /**
+     * <pre>
+     * 礼物消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
      * @return The gift.
      */
@@ -1023,6 +1309,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 礼物消息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.GiftMessageOrBuilder getGiftOrBuilder() {
@@ -1034,6 +1324,10 @@ public final class UserMessageOuterClass {
 
     public static final int SUPER_CHAT_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Super Chat 醒目留言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
      * @return Whether the superChat field is set.
      */
@@ -1041,6 +1335,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 4;
     }
     /**
+     * <pre>
+     * Super Chat 醒目留言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
      * @return The superChat.
      */
@@ -1051,6 +1349,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Super Chat 醒目留言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessageOrBuilder getSuperChatOrBuilder() {
@@ -1062,6 +1364,10 @@ public final class UserMessageOuterClass {
 
     public static final int NEW_GUARD_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * 新的大航海会员（舰长）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
      * @return Whether the newGuard field is set.
      */
@@ -1069,6 +1375,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 5;
     }
     /**
+     * <pre>
+     * 新的大航海会员（舰长）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
      * @return The newGuard.
      */
@@ -1079,6 +1389,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 新的大航海会员（舰长）
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessageOrBuilder getNewGuardOrBuilder() {
@@ -1090,6 +1404,10 @@ public final class UserMessageOuterClass {
 
     public static final int WELCOME_VIP_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * 欢迎老爷
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
      * @return Whether the welcomeVip field is set.
      */
@@ -1097,6 +1415,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 6;
     }
     /**
+     * <pre>
+     * 欢迎老爷
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
      * @return The welcomeVip.
      */
@@ -1107,6 +1429,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 欢迎老爷
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessageOrBuilder getWelcomeVipOrBuilder() {
@@ -1118,6 +1444,10 @@ public final class UserMessageOuterClass {
 
     public static final int WELCOME_GUARD_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * 欢迎舰长
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
      * @return Whether the welcomeGuard field is set.
      */
@@ -1125,6 +1455,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 7;
     }
     /**
+     * <pre>
+     * 欢迎舰长
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
      * @return The welcomeGuard.
      */
@@ -1135,6 +1469,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 欢迎舰长
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessageOrBuilder getWelcomeGuardOrBuilder() {
@@ -1146,6 +1484,10 @@ public final class UserMessageOuterClass {
 
     public static final int USER_BLOCKED_FIELD_NUMBER = 16;
     /**
+     * <pre>
+     * 用户被禁言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return Whether the userBlocked field is set.
      */
@@ -1153,6 +1495,10 @@ public final class UserMessageOuterClass {
       return payloadCase_ == 16;
     }
     /**
+     * <pre>
+     * 用户被禁言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      * @return The userBlocked.
      */
@@ -1163,6 +1509,10 @@ public final class UserMessageOuterClass {
       return vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * 用户被禁言
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder() {
@@ -1447,6 +1797,12 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *所有由用户产生的消息
+     *注意，在处理 `payload` 之前，您可能先需要从 `user` 获取该消息对应的用户！
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.UserMessage}
      */
     public static final class Builder extends
@@ -1705,6 +2061,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserInfo, vNerve.bilibili.live.UserMessageOuterClass.UserInfo.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserInfoOrBuilder> userBuilder_;
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        * @return Whether the user field is set.
        */
@@ -1712,6 +2072,10 @@ public final class UserMessageOuterClass {
         return userBuilder_ != null || user_ != null;
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        * @return The user.
        */
@@ -1723,6 +2087,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       public Builder setUser(vNerve.bilibili.live.UserMessageOuterClass.UserInfo value) {
@@ -1739,6 +2107,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       public Builder setUser(
@@ -1753,6 +2125,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       public Builder mergeUser(vNerve.bilibili.live.UserMessageOuterClass.UserInfo value) {
@@ -1771,6 +2147,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       public Builder clearUser() {
@@ -1785,6 +2165,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserInfo.Builder getUserBuilder() {
@@ -1793,6 +2177,10 @@ public final class UserMessageOuterClass {
         return getUserFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserInfoOrBuilder getUserOrBuilder() {
@@ -1804,6 +2192,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 该消息对应的用户。优先处理！
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserInfo user = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1823,6 +2215,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage, vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessageOrBuilder> danmakuBuilder_;
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        * @return Whether the danmaku field is set.
        */
@@ -1830,6 +2226,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 2;
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        * @return The danmaku.
        */
@@ -1847,6 +2247,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       public Builder setDanmaku(vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage value) {
@@ -1863,6 +2267,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       public Builder setDanmaku(
@@ -1877,6 +2285,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       public Builder mergeDanmaku(vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage value) {
@@ -1899,6 +2311,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       public Builder clearDanmaku() {
@@ -1918,12 +2334,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessage.Builder getDanmakuBuilder() {
         return getDanmakuFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.DanmakuMessageOrBuilder getDanmakuOrBuilder() {
@@ -1937,6 +2361,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 弹幕消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.DanmakuMessage danmaku = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1961,6 +2389,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.GiftMessage, vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.GiftMessageOrBuilder> giftBuilder_;
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        * @return Whether the gift field is set.
        */
@@ -1968,6 +2400,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 3;
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        * @return The gift.
        */
@@ -1985,6 +2421,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       public Builder setGift(vNerve.bilibili.live.UserMessageOuterClass.GiftMessage value) {
@@ -2001,6 +2441,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       public Builder setGift(
@@ -2015,6 +2459,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       public Builder mergeGift(vNerve.bilibili.live.UserMessageOuterClass.GiftMessage value) {
@@ -2037,6 +2485,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       public Builder clearGift() {
@@ -2056,12 +2508,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.Builder getGiftBuilder() {
         return getGiftFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.GiftMessageOrBuilder getGiftOrBuilder() {
@@ -2075,6 +2535,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 礼物消息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GiftMessage gift = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2099,6 +2563,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage, vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessageOrBuilder> superChatBuilder_;
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        * @return Whether the superChat field is set.
        */
@@ -2106,6 +2574,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 4;
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        * @return The superChat.
        */
@@ -2123,6 +2595,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       public Builder setSuperChat(vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage value) {
@@ -2139,6 +2615,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       public Builder setSuperChat(
@@ -2153,6 +2633,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       public Builder mergeSuperChat(vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage value) {
@@ -2175,6 +2659,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       public Builder clearSuperChat() {
@@ -2194,12 +2682,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessage.Builder getSuperChatBuilder() {
         return getSuperChatFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.SuperChatMessageOrBuilder getSuperChatOrBuilder() {
@@ -2213,6 +2709,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Super Chat 醒目留言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.SuperChatMessage super_chat = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2237,6 +2737,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage, vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessageOrBuilder> newGuardBuilder_;
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        * @return Whether the newGuard field is set.
        */
@@ -2244,6 +2748,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 5;
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        * @return The newGuard.
        */
@@ -2261,6 +2769,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       public Builder setNewGuard(vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage value) {
@@ -2277,6 +2789,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       public Builder setNewGuard(
@@ -2291,6 +2807,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       public Builder mergeNewGuard(vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage value) {
@@ -2313,6 +2833,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       public Builder clearNewGuard() {
@@ -2332,12 +2856,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessage.Builder getNewGuardBuilder() {
         return getNewGuardFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.NewGuardMessageOrBuilder getNewGuardOrBuilder() {
@@ -2351,6 +2883,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 新的大航海会员（舰长）
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.NewGuardMessage new_guard = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2375,6 +2911,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage, vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessageOrBuilder> welcomeVipBuilder_;
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        * @return Whether the welcomeVip field is set.
        */
@@ -2382,6 +2922,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 6;
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        * @return The welcomeVip.
        */
@@ -2399,6 +2943,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       public Builder setWelcomeVip(vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage value) {
@@ -2415,6 +2963,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       public Builder setWelcomeVip(
@@ -2429,6 +2981,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       public Builder mergeWelcomeVip(vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage value) {
@@ -2451,6 +3007,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       public Builder clearWelcomeVip() {
@@ -2470,12 +3030,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessage.Builder getWelcomeVipBuilder() {
         return getWelcomeVipFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.WelcomeVIPMessageOrBuilder getWelcomeVipOrBuilder() {
@@ -2489,6 +3057,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 欢迎老爷
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeVIPMessage welcome_vip = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2513,6 +3085,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage, vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessageOrBuilder> welcomeGuardBuilder_;
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        * @return Whether the welcomeGuard field is set.
        */
@@ -2520,6 +3096,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 7;
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        * @return The welcomeGuard.
        */
@@ -2537,6 +3117,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       public Builder setWelcomeGuard(vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage value) {
@@ -2553,6 +3137,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       public Builder setWelcomeGuard(
@@ -2567,6 +3155,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       public Builder mergeWelcomeGuard(vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage value) {
@@ -2589,6 +3181,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       public Builder clearWelcomeGuard() {
@@ -2608,12 +3204,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessage.Builder getWelcomeGuardBuilder() {
         return getWelcomeGuardFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.WelcomeGuardMessageOrBuilder getWelcomeGuardOrBuilder() {
@@ -2627,6 +3231,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 欢迎舰长
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.WelcomeGuardMessage welcome_guard = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2651,6 +3259,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage, vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder, vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder> userBlockedBuilder_;
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        * @return Whether the userBlocked field is set.
        */
@@ -2658,6 +3270,10 @@ public final class UserMessageOuterClass {
         return payloadCase_ == 16;
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        * @return The userBlocked.
        */
@@ -2675,6 +3291,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder setUserBlocked(vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage value) {
@@ -2691,6 +3311,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder setUserBlocked(
@@ -2705,6 +3329,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder mergeUserBlocked(vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage value) {
@@ -2727,6 +3355,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public Builder clearUserBlocked() {
@@ -2746,12 +3378,20 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessage.Builder getUserBlockedBuilder() {
         return getUserBlockedFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.UserBlockedMessageOrBuilder getUserBlockedOrBuilder() {
@@ -2765,6 +3405,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户被禁言
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.UserBlockedMessage user_blocked = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2843,17 +3487,29 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 消息对应的用户主站 UID。所有消息中均可用
+     * </pre>
+     *
      * <code>uint64 uid = 1;</code>
      * @return The uid.
      */
     long getUid();
 
     /**
+     * <pre>
+     * 消息对应用户主站昵称。大部分消息中可用
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * 消息对应用户主站昵称。大部分消息中可用
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -2861,11 +3517,19 @@ public final class UserMessageOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * 用户头像 URL
+     * </pre>
+     *
      * <code>string avatar_url = 3;</code>
      * @return The avatarUrl.
      */
     java.lang.String getAvatarUrl();
     /**
+     * <pre>
+     * 用户头像 URL
+     * </pre>
+     *
      * <code>string avatar_url = 3;</code>
      * @return The bytes for avatarUrl.
      */
@@ -2873,12 +3537,20 @@ public final class UserMessageOuterClass {
         getAvatarUrlBytes();
 
     /**
+     * <pre>
+     * 用户直播 UL 等级
+     * </pre>
+     *
      * <code>int32 user_level = 4;</code>
      * @return The userLevel.
      */
     int getUserLevel();
 
     /**
+     * <pre>
+     * 用户直播等级边框颜色，RGB
+     * </pre>
+     *
      * <code>fixed32 user_level_border_color = 5;</code>
      * @return The userLevelBorderColor.
      */
@@ -2897,22 +3569,38 @@ public final class UserMessageOuterClass {
     boolean getMainVip();
 
     /**
+     * <pre>
+     * 用户直播老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
      * @return The enum numeric value on the wire for liveVipLevel.
      */
     int getLiveVipLevelValue();
     /**
+     * <pre>
+     * 用户直播老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
      * @return The liveVipLevel.
      */
     vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getLiveVipLevel();
 
     /**
+     * <pre>
+     * 用户头衔 ID  （形如title-287-1）
+     * </pre>
+     *
      * <code>string title = 9;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
+     * <pre>
+     * 用户头衔 ID  （形如title-287-1）
+     * </pre>
+     *
      * <code>string title = 9;</code>
      * @return The bytes for title.
      */
@@ -2920,38 +3608,68 @@ public final class UserMessageOuterClass {
         getTitleBytes();
 
     /**
+     * <pre>
+     * 用户直播勋章信息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
      * @return Whether the medal field is set.
      */
     boolean hasMedal();
     /**
+     * <pre>
+     * 用户直播勋章信息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
      * @return The medal.
      */
     vNerve.bilibili.live.UserMessageOuterClass.MedalInfo getMedal();
     /**
+     * <pre>
+     * 用户直播勋章信息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
      */
     vNerve.bilibili.live.UserMessageOuterClass.MedalInfoOrBuilder getMedalOrBuilder();
 
     /**
+     * <pre>
+     * 用户大航海等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
      * @return The enum numeric value on the wire for guardLevel.
      */
     int getGuardLevelValue();
     /**
+     * <pre>
+     * 用户大航海等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
      * @return The guardLevel.
      */
     vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getGuardLevel();
 
     /**
+     * <pre>
+     * 用户手机是否认证
+     * </pre>
+     *
      * <code>bool phone_verified = 12;</code>
      * @return The phoneVerified.
      */
     boolean getPhoneVerified();
 
     /**
+     * <pre>
+     **
+     *用户是否为正式会员
+     *不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+     * </pre>
+     *
      * <code>bool regular_user = 13;</code>
      * @return The regularUser.
      */
@@ -2962,6 +3680,14 @@ public final class UserMessageOuterClass {
     public vNerve.bilibili.live.UserMessageOuterClass.UserInfo.MainVipOptionalCase getMainVipOptionalCase();
   }
   /**
+   * <pre>
+   **
+   *与消息对应的用户信息
+   *注意：**`User` 类型中仅有 `uid` 保证在所有消息中均可用**。
+   *大部分消息中 `name` 可用。
+   *其他字段的可用情况会在下面的文档中标明，若未标明则表示此消息中 `user` 对应字段没有数据。
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.UserInfo}
    */
   public  static final class UserInfo extends
@@ -3202,6 +3928,10 @@ public final class UserMessageOuterClass {
     public static final int UID_FIELD_NUMBER = 1;
     private long uid_;
     /**
+     * <pre>
+     * 消息对应的用户主站 UID。所有消息中均可用
+     * </pre>
+     *
      * <code>uint64 uid = 1;</code>
      * @return The uid.
      */
@@ -3212,6 +3942,10 @@ public final class UserMessageOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * 消息对应用户主站昵称。大部分消息中可用
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -3228,6 +3962,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 消息对应用户主站昵称。大部分消息中可用
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -3248,6 +3986,10 @@ public final class UserMessageOuterClass {
     public static final int AVATAR_URL_FIELD_NUMBER = 3;
     private volatile java.lang.Object avatarUrl_;
     /**
+     * <pre>
+     * 用户头像 URL
+     * </pre>
+     *
      * <code>string avatar_url = 3;</code>
      * @return The avatarUrl.
      */
@@ -3264,6 +4006,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 用户头像 URL
+     * </pre>
+     *
      * <code>string avatar_url = 3;</code>
      * @return The bytes for avatarUrl.
      */
@@ -3284,6 +4030,10 @@ public final class UserMessageOuterClass {
     public static final int USER_LEVEL_FIELD_NUMBER = 4;
     private int userLevel_;
     /**
+     * <pre>
+     * 用户直播 UL 等级
+     * </pre>
+     *
      * <code>int32 user_level = 4;</code>
      * @return The userLevel.
      */
@@ -3294,6 +4044,10 @@ public final class UserMessageOuterClass {
     public static final int USER_LEVEL_BORDER_COLOR_FIELD_NUMBER = 5;
     private int userLevelBorderColor_;
     /**
+     * <pre>
+     * 用户直播等级边框颜色，RGB
+     * </pre>
+     *
      * <code>fixed32 user_level_border_color = 5;</code>
      * @return The userLevelBorderColor.
      */
@@ -3328,6 +4082,10 @@ public final class UserMessageOuterClass {
     public static final int LIVE_VIP_LEVEL_FIELD_NUMBER = 8;
     private int liveVipLevel_;
     /**
+     * <pre>
+     * 用户直播老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
      * @return The enum numeric value on the wire for liveVipLevel.
      */
@@ -3335,6 +4093,10 @@ public final class UserMessageOuterClass {
       return liveVipLevel_;
     }
     /**
+     * <pre>
+     * 用户直播老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
      * @return The liveVipLevel.
      */
@@ -3347,6 +4109,10 @@ public final class UserMessageOuterClass {
     public static final int TITLE_FIELD_NUMBER = 9;
     private volatile java.lang.Object title_;
     /**
+     * <pre>
+     * 用户头衔 ID  （形如title-287-1）
+     * </pre>
+     *
      * <code>string title = 9;</code>
      * @return The title.
      */
@@ -3363,6 +4129,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 用户头衔 ID  （形如title-287-1）
+     * </pre>
+     *
      * <code>string title = 9;</code>
      * @return The bytes for title.
      */
@@ -3383,6 +4153,10 @@ public final class UserMessageOuterClass {
     public static final int MEDAL_FIELD_NUMBER = 10;
     private vNerve.bilibili.live.UserMessageOuterClass.MedalInfo medal_;
     /**
+     * <pre>
+     * 用户直播勋章信息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
      * @return Whether the medal field is set.
      */
@@ -3390,6 +4164,10 @@ public final class UserMessageOuterClass {
       return medal_ != null;
     }
     /**
+     * <pre>
+     * 用户直播勋章信息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
      * @return The medal.
      */
@@ -3397,6 +4175,10 @@ public final class UserMessageOuterClass {
       return medal_ == null ? vNerve.bilibili.live.UserMessageOuterClass.MedalInfo.getDefaultInstance() : medal_;
     }
     /**
+     * <pre>
+     * 用户直播勋章信息
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
      */
     public vNerve.bilibili.live.UserMessageOuterClass.MedalInfoOrBuilder getMedalOrBuilder() {
@@ -3406,6 +4188,10 @@ public final class UserMessageOuterClass {
     public static final int GUARD_LEVEL_FIELD_NUMBER = 11;
     private int guardLevel_;
     /**
+     * <pre>
+     * 用户大航海等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
      * @return The enum numeric value on the wire for guardLevel.
      */
@@ -3413,6 +4199,10 @@ public final class UserMessageOuterClass {
       return guardLevel_;
     }
     /**
+     * <pre>
+     * 用户大航海等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
      * @return The guardLevel.
      */
@@ -3425,6 +4215,10 @@ public final class UserMessageOuterClass {
     public static final int PHONE_VERIFIED_FIELD_NUMBER = 12;
     private boolean phoneVerified_;
     /**
+     * <pre>
+     * 用户手机是否认证
+     * </pre>
+     *
      * <code>bool phone_verified = 12;</code>
      * @return The phoneVerified.
      */
@@ -3435,6 +4229,12 @@ public final class UserMessageOuterClass {
     public static final int REGULAR_USER_FIELD_NUMBER = 13;
     private boolean regularUser_;
     /**
+     * <pre>
+     **
+     *用户是否为正式会员
+     *不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+     * </pre>
+     *
      * <code>bool regular_user = 13;</code>
      * @return The regularUser.
      */
@@ -3765,6 +4565,14 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *与消息对应的用户信息
+     *注意：**`User` 类型中仅有 `uid` 保证在所有消息中均可用**。
+     *大部分消息中 `name` 可用。
+     *其他字段的可用情况会在下面的文档中标明，若未标明则表示此消息中 `user` 对应字段没有数据。
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.UserInfo}
      */
     public static final class Builder extends
@@ -4044,6 +4852,10 @@ public final class UserMessageOuterClass {
 
       private long uid_ ;
       /**
+       * <pre>
+       * 消息对应的用户主站 UID。所有消息中均可用
+       * </pre>
+       *
        * <code>uint64 uid = 1;</code>
        * @return The uid.
        */
@@ -4051,6 +4863,10 @@ public final class UserMessageOuterClass {
         return uid_;
       }
       /**
+       * <pre>
+       * 消息对应的用户主站 UID。所有消息中均可用
+       * </pre>
+       *
        * <code>uint64 uid = 1;</code>
        * @param value The uid to set.
        * @return This builder for chaining.
@@ -4062,6 +4878,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 消息对应的用户主站 UID。所有消息中均可用
+       * </pre>
+       *
        * <code>uint64 uid = 1;</code>
        * @return This builder for chaining.
        */
@@ -4074,6 +4894,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * 消息对应用户主站昵称。大部分消息中可用
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -4090,6 +4914,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 消息对应用户主站昵称。大部分消息中可用
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -4107,6 +4935,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 消息对应用户主站昵称。大部分消息中可用
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -4122,6 +4954,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 消息对应用户主站昵称。大部分消息中可用
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -4132,6 +4968,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 消息对应用户主站昵称。大部分消息中可用
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -4150,6 +4990,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object avatarUrl_ = "";
       /**
+       * <pre>
+       * 用户头像 URL
+       * </pre>
+       *
        * <code>string avatar_url = 3;</code>
        * @return The avatarUrl.
        */
@@ -4166,6 +5010,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户头像 URL
+       * </pre>
+       *
        * <code>string avatar_url = 3;</code>
        * @return The bytes for avatarUrl.
        */
@@ -4183,6 +5031,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户头像 URL
+       * </pre>
+       *
        * <code>string avatar_url = 3;</code>
        * @param value The avatarUrl to set.
        * @return This builder for chaining.
@@ -4198,6 +5050,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户头像 URL
+       * </pre>
+       *
        * <code>string avatar_url = 3;</code>
        * @return This builder for chaining.
        */
@@ -4208,6 +5064,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户头像 URL
+       * </pre>
+       *
        * <code>string avatar_url = 3;</code>
        * @param value The bytes for avatarUrl to set.
        * @return This builder for chaining.
@@ -4226,6 +5086,10 @@ public final class UserMessageOuterClass {
 
       private int userLevel_ ;
       /**
+       * <pre>
+       * 用户直播 UL 等级
+       * </pre>
+       *
        * <code>int32 user_level = 4;</code>
        * @return The userLevel.
        */
@@ -4233,6 +5097,10 @@ public final class UserMessageOuterClass {
         return userLevel_;
       }
       /**
+       * <pre>
+       * 用户直播 UL 等级
+       * </pre>
+       *
        * <code>int32 user_level = 4;</code>
        * @param value The userLevel to set.
        * @return This builder for chaining.
@@ -4244,6 +5112,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播 UL 等级
+       * </pre>
+       *
        * <code>int32 user_level = 4;</code>
        * @return This builder for chaining.
        */
@@ -4256,6 +5128,10 @@ public final class UserMessageOuterClass {
 
       private int userLevelBorderColor_ ;
       /**
+       * <pre>
+       * 用户直播等级边框颜色，RGB
+       * </pre>
+       *
        * <code>fixed32 user_level_border_color = 5;</code>
        * @return The userLevelBorderColor.
        */
@@ -4263,6 +5139,10 @@ public final class UserMessageOuterClass {
         return userLevelBorderColor_;
       }
       /**
+       * <pre>
+       * 用户直播等级边框颜色，RGB
+       * </pre>
+       *
        * <code>fixed32 user_level_border_color = 5;</code>
        * @param value The userLevelBorderColor to set.
        * @return This builder for chaining.
@@ -4274,6 +5154,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播等级边框颜色，RGB
+       * </pre>
+       *
        * <code>fixed32 user_level_border_color = 5;</code>
        * @return This builder for chaining.
        */
@@ -4354,6 +5238,10 @@ public final class UserMessageOuterClass {
 
       private int liveVipLevel_ = 0;
       /**
+       * <pre>
+       * 用户直播老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
        * @return The enum numeric value on the wire for liveVipLevel.
        */
@@ -4361,6 +5249,10 @@ public final class UserMessageOuterClass {
         return liveVipLevel_;
       }
       /**
+       * <pre>
+       * 用户直播老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
        * @param value The enum numeric value on the wire for liveVipLevel to set.
        * @return This builder for chaining.
@@ -4371,6 +5263,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
        * @return The liveVipLevel.
        */
@@ -4380,6 +5276,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 用户直播老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
        * @param value The liveVipLevel to set.
        * @return This builder for chaining.
@@ -4394,6 +5294,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel live_vip_level = 8;</code>
        * @return This builder for chaining.
        */
@@ -4406,6 +5310,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object title_ = "";
       /**
+       * <pre>
+       * 用户头衔 ID  （形如title-287-1）
+       * </pre>
+       *
        * <code>string title = 9;</code>
        * @return The title.
        */
@@ -4422,6 +5330,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户头衔 ID  （形如title-287-1）
+       * </pre>
+       *
        * <code>string title = 9;</code>
        * @return The bytes for title.
        */
@@ -4439,6 +5351,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户头衔 ID  （形如title-287-1）
+       * </pre>
+       *
        * <code>string title = 9;</code>
        * @param value The title to set.
        * @return This builder for chaining.
@@ -4454,6 +5370,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户头衔 ID  （形如title-287-1）
+       * </pre>
+       *
        * <code>string title = 9;</code>
        * @return This builder for chaining.
        */
@@ -4464,6 +5384,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户头衔 ID  （形如title-287-1）
+       * </pre>
+       *
        * <code>string title = 9;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
@@ -4484,6 +5408,10 @@ public final class UserMessageOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           vNerve.bilibili.live.UserMessageOuterClass.MedalInfo, vNerve.bilibili.live.UserMessageOuterClass.MedalInfo.Builder, vNerve.bilibili.live.UserMessageOuterClass.MedalInfoOrBuilder> medalBuilder_;
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        * @return Whether the medal field is set.
        */
@@ -4491,6 +5419,10 @@ public final class UserMessageOuterClass {
         return medalBuilder_ != null || medal_ != null;
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        * @return The medal.
        */
@@ -4502,6 +5434,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       public Builder setMedal(vNerve.bilibili.live.UserMessageOuterClass.MedalInfo value) {
@@ -4518,6 +5454,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       public Builder setMedal(
@@ -4532,6 +5472,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       public Builder mergeMedal(vNerve.bilibili.live.UserMessageOuterClass.MedalInfo value) {
@@ -4550,6 +5494,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       public Builder clearMedal() {
@@ -4564,6 +5512,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.MedalInfo.Builder getMedalBuilder() {
@@ -4572,6 +5524,10 @@ public final class UserMessageOuterClass {
         return getMedalFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       public vNerve.bilibili.live.UserMessageOuterClass.MedalInfoOrBuilder getMedalOrBuilder() {
@@ -4583,6 +5539,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 用户直播勋章信息
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.MedalInfo medal = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4601,6 +5561,10 @@ public final class UserMessageOuterClass {
 
       private int guardLevel_ = 0;
       /**
+       * <pre>
+       * 用户大航海等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
        * @return The enum numeric value on the wire for guardLevel.
        */
@@ -4608,6 +5572,10 @@ public final class UserMessageOuterClass {
         return guardLevel_;
       }
       /**
+       * <pre>
+       * 用户大航海等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
        * @param value The enum numeric value on the wire for guardLevel to set.
        * @return This builder for chaining.
@@ -4618,6 +5586,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户大航海等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
        * @return The guardLevel.
        */
@@ -4627,6 +5599,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 用户大航海等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
        * @param value The guardLevel to set.
        * @return This builder for chaining.
@@ -4641,6 +5617,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户大航海等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel guard_level = 11;</code>
        * @return This builder for chaining.
        */
@@ -4653,6 +5633,10 @@ public final class UserMessageOuterClass {
 
       private boolean phoneVerified_ ;
       /**
+       * <pre>
+       * 用户手机是否认证
+       * </pre>
+       *
        * <code>bool phone_verified = 12;</code>
        * @return The phoneVerified.
        */
@@ -4660,6 +5644,10 @@ public final class UserMessageOuterClass {
         return phoneVerified_;
       }
       /**
+       * <pre>
+       * 用户手机是否认证
+       * </pre>
+       *
        * <code>bool phone_verified = 12;</code>
        * @param value The phoneVerified to set.
        * @return This builder for chaining.
@@ -4671,6 +5659,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 用户手机是否认证
+       * </pre>
+       *
        * <code>bool phone_verified = 12;</code>
        * @return This builder for chaining.
        */
@@ -4683,6 +5675,12 @@ public final class UserMessageOuterClass {
 
       private boolean regularUser_ ;
       /**
+       * <pre>
+       **
+       *用户是否为正式会员
+       *不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+       * </pre>
+       *
        * <code>bool regular_user = 13;</code>
        * @return The regularUser.
        */
@@ -4690,6 +5688,12 @@ public final class UserMessageOuterClass {
         return regularUser_;
       }
       /**
+       * <pre>
+       **
+       *用户是否为正式会员
+       *不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+       * </pre>
+       *
        * <code>bool regular_user = 13;</code>
        * @param value The regularUser to set.
        * @return This builder for chaining.
@@ -4701,6 +5705,12 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       **
+       *用户是否为正式会员
+       *不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+       * </pre>
+       *
        * <code>bool regular_user = 13;</code>
        * @return This builder for chaining.
        */
@@ -4768,11 +5778,19 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 勋章名称
+     * </pre>
+     *
      * <code>string medal_name = 1;</code>
      * @return The medalName.
      */
     java.lang.String getMedalName();
     /**
+     * <pre>
+     * 勋章名称
+     * </pre>
+     *
      * <code>string medal_name = 1;</code>
      * @return The bytes for medalName.
      */
@@ -4780,29 +5798,49 @@ public final class UserMessageOuterClass {
         getMedalNameBytes();
 
     /**
+     * <pre>
+     * 勋章等级
+     * </pre>
+     *
      * <code>uint32 medal_level = 2;</code>
      * @return The medalLevel.
      */
     int getMedalLevel();
 
     /**
+     * <pre>
+     * 勋章颜色，RGB
+     * </pre>
+     *
      * <code>fixed32 medal_color = 3;</code>
      * @return The medalColor.
      */
     int getMedalColor();
 
     /**
+     * <pre>
+     * 勋章对应主播的 UID
+     * </pre>
+     *
      * <code>uint64 streamer_uid = 4;</code>
      * @return The streamerUid.
      */
     long getStreamerUid();
 
     /**
+     * <pre>
+     * 勋章对应主播主站昵称
+     * </pre>
+     *
      * <code>string streamer_name = 5;</code>
      * @return The streamerName.
      */
     java.lang.String getStreamerName();
     /**
+     * <pre>
+     * 勋章对应主播主站昵称
+     * </pre>
+     *
      * <code>string streamer_name = 5;</code>
      * @return The bytes for streamerName.
      */
@@ -4810,12 +5848,20 @@ public final class UserMessageOuterClass {
         getStreamerNameBytes();
 
     /**
+     * <pre>
+     * 勋章对应主播直播间 ID
+     * </pre>
+     *
      * <code>uint32 streamer_roomid = 6;</code>
      * @return The streamerRoomid.
      */
     int getStreamerRoomid();
   }
   /**
+   * <pre>
+   * 直播勋章信息
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.MedalInfo}
    */
   public  static final class MedalInfo extends
@@ -4929,6 +5975,10 @@ public final class UserMessageOuterClass {
     public static final int MEDAL_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object medalName_;
     /**
+     * <pre>
+     * 勋章名称
+     * </pre>
+     *
      * <code>string medal_name = 1;</code>
      * @return The medalName.
      */
@@ -4945,6 +5995,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 勋章名称
+     * </pre>
+     *
      * <code>string medal_name = 1;</code>
      * @return The bytes for medalName.
      */
@@ -4965,6 +6019,10 @@ public final class UserMessageOuterClass {
     public static final int MEDAL_LEVEL_FIELD_NUMBER = 2;
     private int medalLevel_;
     /**
+     * <pre>
+     * 勋章等级
+     * </pre>
+     *
      * <code>uint32 medal_level = 2;</code>
      * @return The medalLevel.
      */
@@ -4975,6 +6033,10 @@ public final class UserMessageOuterClass {
     public static final int MEDAL_COLOR_FIELD_NUMBER = 3;
     private int medalColor_;
     /**
+     * <pre>
+     * 勋章颜色，RGB
+     * </pre>
+     *
      * <code>fixed32 medal_color = 3;</code>
      * @return The medalColor.
      */
@@ -4985,6 +6047,10 @@ public final class UserMessageOuterClass {
     public static final int STREAMER_UID_FIELD_NUMBER = 4;
     private long streamerUid_;
     /**
+     * <pre>
+     * 勋章对应主播的 UID
+     * </pre>
+     *
      * <code>uint64 streamer_uid = 4;</code>
      * @return The streamerUid.
      */
@@ -4995,6 +6061,10 @@ public final class UserMessageOuterClass {
     public static final int STREAMER_NAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object streamerName_;
     /**
+     * <pre>
+     * 勋章对应主播主站昵称
+     * </pre>
+     *
      * <code>string streamer_name = 5;</code>
      * @return The streamerName.
      */
@@ -5011,6 +6081,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 勋章对应主播主站昵称
+     * </pre>
+     *
      * <code>string streamer_name = 5;</code>
      * @return The bytes for streamerName.
      */
@@ -5031,6 +6105,10 @@ public final class UserMessageOuterClass {
     public static final int STREAMER_ROOMID_FIELD_NUMBER = 6;
     private int streamerRoomid_;
     /**
+     * <pre>
+     * 勋章对应主播直播间 ID
+     * </pre>
+     *
      * <code>uint32 streamer_roomid = 6;</code>
      * @return The streamerRoomid.
      */
@@ -5248,6 +6326,10 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * 直播勋章信息
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.MedalInfo}
      */
     public static final class Builder extends
@@ -5428,6 +6510,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object medalName_ = "";
       /**
+       * <pre>
+       * 勋章名称
+       * </pre>
+       *
        * <code>string medal_name = 1;</code>
        * @return The medalName.
        */
@@ -5444,6 +6530,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 勋章名称
+       * </pre>
+       *
        * <code>string medal_name = 1;</code>
        * @return The bytes for medalName.
        */
@@ -5461,6 +6551,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 勋章名称
+       * </pre>
+       *
        * <code>string medal_name = 1;</code>
        * @param value The medalName to set.
        * @return This builder for chaining.
@@ -5476,6 +6570,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章名称
+       * </pre>
+       *
        * <code>string medal_name = 1;</code>
        * @return This builder for chaining.
        */
@@ -5486,6 +6584,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章名称
+       * </pre>
+       *
        * <code>string medal_name = 1;</code>
        * @param value The bytes for medalName to set.
        * @return This builder for chaining.
@@ -5504,6 +6606,10 @@ public final class UserMessageOuterClass {
 
       private int medalLevel_ ;
       /**
+       * <pre>
+       * 勋章等级
+       * </pre>
+       *
        * <code>uint32 medal_level = 2;</code>
        * @return The medalLevel.
        */
@@ -5511,6 +6617,10 @@ public final class UserMessageOuterClass {
         return medalLevel_;
       }
       /**
+       * <pre>
+       * 勋章等级
+       * </pre>
+       *
        * <code>uint32 medal_level = 2;</code>
        * @param value The medalLevel to set.
        * @return This builder for chaining.
@@ -5522,6 +6632,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章等级
+       * </pre>
+       *
        * <code>uint32 medal_level = 2;</code>
        * @return This builder for chaining.
        */
@@ -5534,6 +6648,10 @@ public final class UserMessageOuterClass {
 
       private int medalColor_ ;
       /**
+       * <pre>
+       * 勋章颜色，RGB
+       * </pre>
+       *
        * <code>fixed32 medal_color = 3;</code>
        * @return The medalColor.
        */
@@ -5541,6 +6659,10 @@ public final class UserMessageOuterClass {
         return medalColor_;
       }
       /**
+       * <pre>
+       * 勋章颜色，RGB
+       * </pre>
+       *
        * <code>fixed32 medal_color = 3;</code>
        * @param value The medalColor to set.
        * @return This builder for chaining.
@@ -5552,6 +6674,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章颜色，RGB
+       * </pre>
+       *
        * <code>fixed32 medal_color = 3;</code>
        * @return This builder for chaining.
        */
@@ -5564,6 +6690,10 @@ public final class UserMessageOuterClass {
 
       private long streamerUid_ ;
       /**
+       * <pre>
+       * 勋章对应主播的 UID
+       * </pre>
+       *
        * <code>uint64 streamer_uid = 4;</code>
        * @return The streamerUid.
        */
@@ -5571,6 +6701,10 @@ public final class UserMessageOuterClass {
         return streamerUid_;
       }
       /**
+       * <pre>
+       * 勋章对应主播的 UID
+       * </pre>
+       *
        * <code>uint64 streamer_uid = 4;</code>
        * @param value The streamerUid to set.
        * @return This builder for chaining.
@@ -5582,6 +6716,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章对应主播的 UID
+       * </pre>
+       *
        * <code>uint64 streamer_uid = 4;</code>
        * @return This builder for chaining.
        */
@@ -5594,6 +6732,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object streamerName_ = "";
       /**
+       * <pre>
+       * 勋章对应主播主站昵称
+       * </pre>
+       *
        * <code>string streamer_name = 5;</code>
        * @return The streamerName.
        */
@@ -5610,6 +6752,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 勋章对应主播主站昵称
+       * </pre>
+       *
        * <code>string streamer_name = 5;</code>
        * @return The bytes for streamerName.
        */
@@ -5627,6 +6773,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 勋章对应主播主站昵称
+       * </pre>
+       *
        * <code>string streamer_name = 5;</code>
        * @param value The streamerName to set.
        * @return This builder for chaining.
@@ -5642,6 +6792,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章对应主播主站昵称
+       * </pre>
+       *
        * <code>string streamer_name = 5;</code>
        * @return This builder for chaining.
        */
@@ -5652,6 +6806,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章对应主播主站昵称
+       * </pre>
+       *
        * <code>string streamer_name = 5;</code>
        * @param value The bytes for streamerName to set.
        * @return This builder for chaining.
@@ -5670,6 +6828,10 @@ public final class UserMessageOuterClass {
 
       private int streamerRoomid_ ;
       /**
+       * <pre>
+       * 勋章对应主播直播间 ID
+       * </pre>
+       *
        * <code>uint32 streamer_roomid = 6;</code>
        * @return The streamerRoomid.
        */
@@ -5677,6 +6839,10 @@ public final class UserMessageOuterClass {
         return streamerRoomid_;
       }
       /**
+       * <pre>
+       * 勋章对应主播直播间 ID
+       * </pre>
+       *
        * <code>uint32 streamer_roomid = 6;</code>
        * @param value The streamerRoomid to set.
        * @return This builder for chaining.
@@ -5688,6 +6854,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 勋章对应主播直播间 ID
+       * </pre>
+       *
        * <code>uint32 streamer_roomid = 6;</code>
        * @return This builder for chaining.
        */
@@ -5755,11 +6925,19 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 弹幕内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The message.
      */
     java.lang.String getMessage();
     /**
+     * <pre>
+     * 弹幕内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
@@ -5767,17 +6945,31 @@ public final class UserMessageOuterClass {
         getMessageBytes();
 
     /**
+     * <pre>
+     * 是否为抽奖/节奏风暴弹幕
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
      * @return The enum numeric value on the wire for lotteryType.
      */
     int getLotteryTypeValue();
     /**
+     * <pre>
+     * 是否为抽奖/节奏风暴弹幕
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
      * @return The lotteryType.
      */
     vNerve.bilibili.live.UserMessageOuterClass.LotteryDanmakuType getLotteryType();
   }
   /**
+   * <pre>
+   **
+   *弹幕消息
+   *提供的额外 UserInfo 字段：admin, live_vip_level, user_level_border_color, title, medal, guard_level, phone_verified, regular_user
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.DanmakuMessage}
    */
   public  static final class DanmakuMessage extends
@@ -5871,6 +7063,10 @@ public final class UserMessageOuterClass {
     public static final int MESSAGE_FIELD_NUMBER = 1;
     private volatile java.lang.Object message_;
     /**
+     * <pre>
+     * 弹幕内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The message.
      */
@@ -5887,6 +7083,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * 弹幕内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
@@ -5907,6 +7107,10 @@ public final class UserMessageOuterClass {
     public static final int LOTTERY_TYPE_FIELD_NUMBER = 2;
     private int lotteryType_;
     /**
+     * <pre>
+     * 是否为抽奖/节奏风暴弹幕
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
      * @return The enum numeric value on the wire for lotteryType.
      */
@@ -5914,6 +7118,10 @@ public final class UserMessageOuterClass {
       return lotteryType_;
     }
     /**
+     * <pre>
+     * 是否为抽奖/节奏风暴弹幕
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
      * @return The lotteryType.
      */
@@ -6088,6 +7296,12 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *弹幕消息
+     *提供的额外 UserInfo 字段：admin, live_vip_level, user_level_border_color, title, medal, guard_level, phone_verified, regular_user
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.DanmakuMessage}
      */
     public static final class Builder extends
@@ -6243,6 +7457,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object message_ = "";
       /**
+       * <pre>
+       * 弹幕内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return The message.
        */
@@ -6259,6 +7477,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 弹幕内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return The bytes for message.
        */
@@ -6276,6 +7498,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * 弹幕内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @param value The message to set.
        * @return This builder for chaining.
@@ -6291,6 +7517,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 弹幕内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return This builder for chaining.
        */
@@ -6301,6 +7531,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 弹幕内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @param value The bytes for message to set.
        * @return This builder for chaining.
@@ -6319,6 +7553,10 @@ public final class UserMessageOuterClass {
 
       private int lotteryType_ = 0;
       /**
+       * <pre>
+       * 是否为抽奖/节奏风暴弹幕
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
        * @return The enum numeric value on the wire for lotteryType.
        */
@@ -6326,6 +7564,10 @@ public final class UserMessageOuterClass {
         return lotteryType_;
       }
       /**
+       * <pre>
+       * 是否为抽奖/节奏风暴弹幕
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
        * @param value The enum numeric value on the wire for lotteryType to set.
        * @return This builder for chaining.
@@ -6336,6 +7578,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 是否为抽奖/节奏风暴弹幕
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
        * @return The lotteryType.
        */
@@ -6345,6 +7591,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.LotteryDanmakuType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 是否为抽奖/节奏风暴弹幕
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
        * @param value The lotteryType to set.
        * @return This builder for chaining.
@@ -6359,6 +7609,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 是否为抽奖/节奏风暴弹幕
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LotteryDanmakuType lottery_type = 2;</code>
        * @return This builder for chaining.
        */
@@ -6421,16 +7675,1079 @@ public final class UserMessageOuterClass {
 
   }
 
+  public interface GiftMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:vNerve.bilibili.live.GiftMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 是否为金瓜子
+     * </pre>
+     *
+     * <code>bool is_gold = 1;</code>
+     * @return The isGold.
+     */
+    boolean getIsGold();
+
+    /**
+     * <pre>
+     * 礼物总瓜子数
+     * </pre>
+     *
+     * <code>uint32 total_coin = 2;</code>
+     * @return The totalCoin.
+     */
+    int getTotalCoin();
+
+    /**
+     * <pre>
+     * 礼物 ID
+     * </pre>
+     *
+     * <code>uint32 gift_id = 3;</code>
+     * @return The giftId.
+     */
+    int getGiftId();
+
+    /**
+     * <pre>
+     * 礼物名称
+     * </pre>
+     *
+     * <code>string gift_name = 4;</code>
+     * @return The giftName.
+     */
+    java.lang.String getGiftName();
+    /**
+     * <pre>
+     * 礼物名称
+     * </pre>
+     *
+     * <code>string gift_name = 4;</code>
+     * @return The bytes for giftName.
+     */
+    com.google.protobuf.ByteString
+        getGiftNameBytes();
+
+    /**
+     * <pre>
+     * 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+     * </pre>
+     *
+     * <code>uint32 single_price_coin_raw = 5;</code>
+     * @return The singlePriceCoinRaw.
+     */
+    int getSinglePriceCoinRaw();
+
+    /**
+     * <pre>
+     * 礼物数目
+     * </pre>
+     *
+     * <code>uint32 count = 6;</code>
+     * @return The count.
+     */
+    int getCount();
+  }
+  /**
+   * <pre>
+   **
+   *礼物消息
+   *提供的额外 UserInfo 字段 : avatar_url
+   * </pre>
+   *
+   * Protobuf type {@code vNerve.bilibili.live.GiftMessage}
+   */
+  public  static final class GiftMessage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:vNerve.bilibili.live.GiftMessage)
+      GiftMessageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GiftMessage.newBuilder() to construct.
+    private GiftMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GiftMessage() {
+      giftName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GiftMessage();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GiftMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              isGold_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              totalCoin_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+
+              giftId_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              giftName_ = s;
+              break;
+            }
+            case 40: {
+
+              singlePriceCoinRaw_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+
+              count_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.class, vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.Builder.class);
+    }
+
+    public static final int IS_GOLD_FIELD_NUMBER = 1;
+    private boolean isGold_;
+    /**
+     * <pre>
+     * 是否为金瓜子
+     * </pre>
+     *
+     * <code>bool is_gold = 1;</code>
+     * @return The isGold.
+     */
+    public boolean getIsGold() {
+      return isGold_;
+    }
+
+    public static final int TOTAL_COIN_FIELD_NUMBER = 2;
+    private int totalCoin_;
+    /**
+     * <pre>
+     * 礼物总瓜子数
+     * </pre>
+     *
+     * <code>uint32 total_coin = 2;</code>
+     * @return The totalCoin.
+     */
+    public int getTotalCoin() {
+      return totalCoin_;
+    }
+
+    public static final int GIFT_ID_FIELD_NUMBER = 3;
+    private int giftId_;
+    /**
+     * <pre>
+     * 礼物 ID
+     * </pre>
+     *
+     * <code>uint32 gift_id = 3;</code>
+     * @return The giftId.
+     */
+    public int getGiftId() {
+      return giftId_;
+    }
+
+    public static final int GIFT_NAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object giftName_;
+    /**
+     * <pre>
+     * 礼物名称
+     * </pre>
+     *
+     * <code>string gift_name = 4;</code>
+     * @return The giftName.
+     */
+    public java.lang.String getGiftName() {
+      java.lang.Object ref = giftName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        giftName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 礼物名称
+     * </pre>
+     *
+     * <code>string gift_name = 4;</code>
+     * @return The bytes for giftName.
+     */
+    public com.google.protobuf.ByteString
+        getGiftNameBytes() {
+      java.lang.Object ref = giftName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        giftName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SINGLE_PRICE_COIN_RAW_FIELD_NUMBER = 5;
+    private int singlePriceCoinRaw_;
+    /**
+     * <pre>
+     * 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+     * </pre>
+     *
+     * <code>uint32 single_price_coin_raw = 5;</code>
+     * @return The singlePriceCoinRaw.
+     */
+    public int getSinglePriceCoinRaw() {
+      return singlePriceCoinRaw_;
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 6;
+    private int count_;
+    /**
+     * <pre>
+     * 礼物数目
+     * </pre>
+     *
+     * <code>uint32 count = 6;</code>
+     * @return The count.
+     */
+    public int getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (isGold_ != false) {
+        output.writeBool(1, isGold_);
+      }
+      if (totalCoin_ != 0) {
+        output.writeUInt32(2, totalCoin_);
+      }
+      if (giftId_ != 0) {
+        output.writeUInt32(3, giftId_);
+      }
+      if (!getGiftNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, giftName_);
+      }
+      if (singlePriceCoinRaw_ != 0) {
+        output.writeUInt32(5, singlePriceCoinRaw_);
+      }
+      if (count_ != 0) {
+        output.writeUInt32(6, count_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (isGold_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, isGold_);
+      }
+      if (totalCoin_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, totalCoin_);
+      }
+      if (giftId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, giftId_);
+      }
+      if (!getGiftNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, giftName_);
+      }
+      if (singlePriceCoinRaw_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, singlePriceCoinRaw_);
+      }
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, count_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof vNerve.bilibili.live.UserMessageOuterClass.GiftMessage)) {
+        return super.equals(obj);
+      }
+      vNerve.bilibili.live.UserMessageOuterClass.GiftMessage other = (vNerve.bilibili.live.UserMessageOuterClass.GiftMessage) obj;
+
+      if (getIsGold()
+          != other.getIsGold()) return false;
+      if (getTotalCoin()
+          != other.getTotalCoin()) return false;
+      if (getGiftId()
+          != other.getGiftId()) return false;
+      if (!getGiftName()
+          .equals(other.getGiftName())) return false;
+      if (getSinglePriceCoinRaw()
+          != other.getSinglePriceCoinRaw()) return false;
+      if (getCount()
+          != other.getCount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IS_GOLD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsGold());
+      hash = (37 * hash) + TOTAL_COIN_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalCoin();
+      hash = (37 * hash) + GIFT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGiftId();
+      hash = (37 * hash) + GIFT_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getGiftName().hashCode();
+      hash = (37 * hash) + SINGLE_PRICE_COIN_RAW_FIELD_NUMBER;
+      hash = (53 * hash) + getSinglePriceCoinRaw();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(vNerve.bilibili.live.UserMessageOuterClass.GiftMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     **
+     *礼物消息
+     *提供的额外 UserInfo 字段 : avatar_url
+     * </pre>
+     *
+     * Protobuf type {@code vNerve.bilibili.live.GiftMessage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:vNerve.bilibili.live.GiftMessage)
+        vNerve.bilibili.live.UserMessageOuterClass.GiftMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.class, vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.Builder.class);
+      }
+
+      // Construct using vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        isGold_ = false;
+
+        totalCoin_ = 0;
+
+        giftId_ = 0;
+
+        giftName_ = "";
+
+        singlePriceCoinRaw_ = 0;
+
+        count_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
+      }
+
+      @java.lang.Override
+      public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getDefaultInstanceForType() {
+        return vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage build() {
+        vNerve.bilibili.live.UserMessageOuterClass.GiftMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage buildPartial() {
+        vNerve.bilibili.live.UserMessageOuterClass.GiftMessage result = new vNerve.bilibili.live.UserMessageOuterClass.GiftMessage(this);
+        result.isGold_ = isGold_;
+        result.totalCoin_ = totalCoin_;
+        result.giftId_ = giftId_;
+        result.giftName_ = giftName_;
+        result.singlePriceCoinRaw_ = singlePriceCoinRaw_;
+        result.count_ = count_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof vNerve.bilibili.live.UserMessageOuterClass.GiftMessage) {
+          return mergeFrom((vNerve.bilibili.live.UserMessageOuterClass.GiftMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(vNerve.bilibili.live.UserMessageOuterClass.GiftMessage other) {
+        if (other == vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.getDefaultInstance()) return this;
+        if (other.getIsGold() != false) {
+          setIsGold(other.getIsGold());
+        }
+        if (other.getTotalCoin() != 0) {
+          setTotalCoin(other.getTotalCoin());
+        }
+        if (other.getGiftId() != 0) {
+          setGiftId(other.getGiftId());
+        }
+        if (!other.getGiftName().isEmpty()) {
+          giftName_ = other.giftName_;
+          onChanged();
+        }
+        if (other.getSinglePriceCoinRaw() != 0) {
+          setSinglePriceCoinRaw(other.getSinglePriceCoinRaw());
+        }
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (vNerve.bilibili.live.UserMessageOuterClass.GiftMessage) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean isGold_ ;
+      /**
+       * <pre>
+       * 是否为金瓜子
+       * </pre>
+       *
+       * <code>bool is_gold = 1;</code>
+       * @return The isGold.
+       */
+      public boolean getIsGold() {
+        return isGold_;
+      }
+      /**
+       * <pre>
+       * 是否为金瓜子
+       * </pre>
+       *
+       * <code>bool is_gold = 1;</code>
+       * @param value The isGold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsGold(boolean value) {
+        
+        isGold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 是否为金瓜子
+       * </pre>
+       *
+       * <code>bool is_gold = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsGold() {
+        
+        isGold_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int totalCoin_ ;
+      /**
+       * <pre>
+       * 礼物总瓜子数
+       * </pre>
+       *
+       * <code>uint32 total_coin = 2;</code>
+       * @return The totalCoin.
+       */
+      public int getTotalCoin() {
+        return totalCoin_;
+      }
+      /**
+       * <pre>
+       * 礼物总瓜子数
+       * </pre>
+       *
+       * <code>uint32 total_coin = 2;</code>
+       * @param value The totalCoin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalCoin(int value) {
+        
+        totalCoin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 礼物总瓜子数
+       * </pre>
+       *
+       * <code>uint32 total_coin = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalCoin() {
+        
+        totalCoin_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int giftId_ ;
+      /**
+       * <pre>
+       * 礼物 ID
+       * </pre>
+       *
+       * <code>uint32 gift_id = 3;</code>
+       * @return The giftId.
+       */
+      public int getGiftId() {
+        return giftId_;
+      }
+      /**
+       * <pre>
+       * 礼物 ID
+       * </pre>
+       *
+       * <code>uint32 gift_id = 3;</code>
+       * @param value The giftId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGiftId(int value) {
+        
+        giftId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 礼物 ID
+       * </pre>
+       *
+       * <code>uint32 gift_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGiftId() {
+        
+        giftId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object giftName_ = "";
+      /**
+       * <pre>
+       * 礼物名称
+       * </pre>
+       *
+       * <code>string gift_name = 4;</code>
+       * @return The giftName.
+       */
+      public java.lang.String getGiftName() {
+        java.lang.Object ref = giftName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          giftName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 礼物名称
+       * </pre>
+       *
+       * <code>string gift_name = 4;</code>
+       * @return The bytes for giftName.
+       */
+      public com.google.protobuf.ByteString
+          getGiftNameBytes() {
+        java.lang.Object ref = giftName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          giftName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 礼物名称
+       * </pre>
+       *
+       * <code>string gift_name = 4;</code>
+       * @param value The giftName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGiftName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        giftName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 礼物名称
+       * </pre>
+       *
+       * <code>string gift_name = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGiftName() {
+        
+        giftName_ = getDefaultInstance().getGiftName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 礼物名称
+       * </pre>
+       *
+       * <code>string gift_name = 4;</code>
+       * @param value The bytes for giftName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGiftNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        giftName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int singlePriceCoinRaw_ ;
+      /**
+       * <pre>
+       * 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+       * </pre>
+       *
+       * <code>uint32 single_price_coin_raw = 5;</code>
+       * @return The singlePriceCoinRaw.
+       */
+      public int getSinglePriceCoinRaw() {
+        return singlePriceCoinRaw_;
+      }
+      /**
+       * <pre>
+       * 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+       * </pre>
+       *
+       * <code>uint32 single_price_coin_raw = 5;</code>
+       * @param value The singlePriceCoinRaw to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSinglePriceCoinRaw(int value) {
+        
+        singlePriceCoinRaw_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+       * </pre>
+       *
+       * <code>uint32 single_price_coin_raw = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSinglePriceCoinRaw() {
+        
+        singlePriceCoinRaw_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <pre>
+       * 礼物数目
+       * </pre>
+       *
+       * <code>uint32 count = 6;</code>
+       * @return The count.
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <pre>
+       * 礼物数目
+       * </pre>
+       *
+       * <code>uint32 count = 6;</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 礼物数目
+       * </pre>
+       *
+       * <code>uint32 count = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:vNerve.bilibili.live.GiftMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.GiftMessage)
+    private static final vNerve.bilibili.live.UserMessageOuterClass.GiftMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new vNerve.bilibili.live.UserMessageOuterClass.GiftMessage();
+    }
+
+    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GiftMessage>
+        PARSER = new com.google.protobuf.AbstractParser<GiftMessage>() {
+      @java.lang.Override
+      public GiftMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GiftMessage(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GiftMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GiftMessage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SuperChatMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:vNerve.bilibili.live.SuperChatMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Super Chat 内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The message.
      */
     java.lang.String getMessage();
     /**
+     * <pre>
+     * Super Chat 内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
@@ -6438,17 +8755,29 @@ public final class UserMessageOuterClass {
         getMessageBytes();
 
     /**
+     * <pre>
+     * Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+     * </pre>
+     *
      * <code>uint64 id = 3;</code>
      * @return The id.
      */
     long getId();
 
     /**
+     * <pre>
+     * Super Chat Token，作用未知
+     * </pre>
+     *
      * <code>string token = 4;</code>
      * @return The token.
      */
     java.lang.String getToken();
     /**
+     * <pre>
+     * Super Chat Token，作用未知
+     * </pre>
+     *
      * <code>string token = 4;</code>
      * @return The bytes for token.
      */
@@ -6456,36 +8785,62 @@ public final class UserMessageOuterClass {
         getTokenBytes();
 
     /**
+     * <pre>
+     * 人民币形式价格
+     * </pre>
+     *
      * <code>uint32 price_cny = 5;</code>
      * @return The priceCny.
      */
     int getPriceCny();
 
     /**
+     * <pre>
+     * 瓜子形式价格
+     * </pre>
+     *
      * <code>uint32 price_coin = 6;</code>
      * @return The priceCoin.
      */
     int getPriceCoin();
 
     /**
+     * <pre>
+     * 持续显示在页面顶部时间，以秒为单位
+     * </pre>
+     *
      * <code>uint32 lasting_time_sec = 7;</code>
      * @return The lastingTimeSec.
      */
     int getLastingTimeSec();
 
     /**
+     * <pre>
+     * 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+     * </pre>
+     *
      * <code>uint64 start_time = 8;</code>
      * @return The startTime.
      */
     long getStartTime();
 
     /**
+     * <pre>
+     * 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+     * </pre>
+     *
      * <code>uint64 end_time = 9;</code>
      * @return The endTime.
      */
     long getEndTime();
   }
   /**
+   * <pre>
+   **
+   *Super Chat - 醒目留言
+   *提供的额外 UserInfo 字段 : avatar_url, admin, user_level, user_level_border_color, admin, live_vip_level, title, medal, guard_level
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.SuperChatMessage}
    */
   public  static final class SuperChatMessage extends
@@ -6609,6 +8964,10 @@ public final class UserMessageOuterClass {
     public static final int MESSAGE_FIELD_NUMBER = 1;
     private volatile java.lang.Object message_;
     /**
+     * <pre>
+     * Super Chat 内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The message.
      */
@@ -6625,6 +8984,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Super Chat 内容
+     * </pre>
+     *
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
@@ -6645,6 +9008,10 @@ public final class UserMessageOuterClass {
     public static final int ID_FIELD_NUMBER = 3;
     private long id_;
     /**
+     * <pre>
+     * Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+     * </pre>
+     *
      * <code>uint64 id = 3;</code>
      * @return The id.
      */
@@ -6655,6 +9022,10 @@ public final class UserMessageOuterClass {
     public static final int TOKEN_FIELD_NUMBER = 4;
     private volatile java.lang.Object token_;
     /**
+     * <pre>
+     * Super Chat Token，作用未知
+     * </pre>
+     *
      * <code>string token = 4;</code>
      * @return The token.
      */
@@ -6671,6 +9042,10 @@ public final class UserMessageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Super Chat Token，作用未知
+     * </pre>
+     *
      * <code>string token = 4;</code>
      * @return The bytes for token.
      */
@@ -6691,6 +9066,10 @@ public final class UserMessageOuterClass {
     public static final int PRICE_CNY_FIELD_NUMBER = 5;
     private int priceCny_;
     /**
+     * <pre>
+     * 人民币形式价格
+     * </pre>
+     *
      * <code>uint32 price_cny = 5;</code>
      * @return The priceCny.
      */
@@ -6701,6 +9080,10 @@ public final class UserMessageOuterClass {
     public static final int PRICE_COIN_FIELD_NUMBER = 6;
     private int priceCoin_;
     /**
+     * <pre>
+     * 瓜子形式价格
+     * </pre>
+     *
      * <code>uint32 price_coin = 6;</code>
      * @return The priceCoin.
      */
@@ -6711,6 +9094,10 @@ public final class UserMessageOuterClass {
     public static final int LASTING_TIME_SEC_FIELD_NUMBER = 7;
     private int lastingTimeSec_;
     /**
+     * <pre>
+     * 持续显示在页面顶部时间，以秒为单位
+     * </pre>
+     *
      * <code>uint32 lasting_time_sec = 7;</code>
      * @return The lastingTimeSec.
      */
@@ -6721,6 +9108,10 @@ public final class UserMessageOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 8;
     private long startTime_;
     /**
+     * <pre>
+     * 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+     * </pre>
+     *
      * <code>uint64 start_time = 8;</code>
      * @return The startTime.
      */
@@ -6731,6 +9122,10 @@ public final class UserMessageOuterClass {
     public static final int END_TIME_FIELD_NUMBER = 9;
     private long endTime_;
     /**
+     * <pre>
+     * 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+     * </pre>
+     *
      * <code>uint64 end_time = 9;</code>
      * @return The endTime.
      */
@@ -6972,6 +9367,12 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *Super Chat - 醒目留言
+     *提供的额外 UserInfo 字段 : avatar_url, admin, user_level, user_level_border_color, admin, live_vip_level, title, medal, guard_level
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.SuperChatMessage}
      */
     public static final class Builder extends
@@ -7164,6 +9565,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object message_ = "";
       /**
+       * <pre>
+       * Super Chat 内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return The message.
        */
@@ -7180,6 +9585,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Super Chat 内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return The bytes for message.
        */
@@ -7197,6 +9606,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Super Chat 内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @param value The message to set.
        * @return This builder for chaining.
@@ -7212,6 +9625,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat 内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @return This builder for chaining.
        */
@@ -7222,6 +9639,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat 内容
+       * </pre>
+       *
        * <code>string message = 1;</code>
        * @param value The bytes for message to set.
        * @return This builder for chaining.
@@ -7240,6 +9661,10 @@ public final class UserMessageOuterClass {
 
       private long id_ ;
       /**
+       * <pre>
+       * Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+       * </pre>
+       *
        * <code>uint64 id = 3;</code>
        * @return The id.
        */
@@ -7247,6 +9672,10 @@ public final class UserMessageOuterClass {
         return id_;
       }
       /**
+       * <pre>
+       * Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+       * </pre>
+       *
        * <code>uint64 id = 3;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -7258,6 +9687,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+       * </pre>
+       *
        * <code>uint64 id = 3;</code>
        * @return This builder for chaining.
        */
@@ -7270,6 +9703,10 @@ public final class UserMessageOuterClass {
 
       private java.lang.Object token_ = "";
       /**
+       * <pre>
+       * Super Chat Token，作用未知
+       * </pre>
+       *
        * <code>string token = 4;</code>
        * @return The token.
        */
@@ -7286,6 +9723,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Super Chat Token，作用未知
+       * </pre>
+       *
        * <code>string token = 4;</code>
        * @return The bytes for token.
        */
@@ -7303,6 +9744,10 @@ public final class UserMessageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Super Chat Token，作用未知
+       * </pre>
+       *
        * <code>string token = 4;</code>
        * @param value The token to set.
        * @return This builder for chaining.
@@ -7318,6 +9763,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat Token，作用未知
+       * </pre>
+       *
        * <code>string token = 4;</code>
        * @return This builder for chaining.
        */
@@ -7328,6 +9777,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Super Chat Token，作用未知
+       * </pre>
+       *
        * <code>string token = 4;</code>
        * @param value The bytes for token to set.
        * @return This builder for chaining.
@@ -7346,6 +9799,10 @@ public final class UserMessageOuterClass {
 
       private int priceCny_ ;
       /**
+       * <pre>
+       * 人民币形式价格
+       * </pre>
+       *
        * <code>uint32 price_cny = 5;</code>
        * @return The priceCny.
        */
@@ -7353,6 +9810,10 @@ public final class UserMessageOuterClass {
         return priceCny_;
       }
       /**
+       * <pre>
+       * 人民币形式价格
+       * </pre>
+       *
        * <code>uint32 price_cny = 5;</code>
        * @param value The priceCny to set.
        * @return This builder for chaining.
@@ -7364,6 +9825,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 人民币形式价格
+       * </pre>
+       *
        * <code>uint32 price_cny = 5;</code>
        * @return This builder for chaining.
        */
@@ -7376,6 +9841,10 @@ public final class UserMessageOuterClass {
 
       private int priceCoin_ ;
       /**
+       * <pre>
+       * 瓜子形式价格
+       * </pre>
+       *
        * <code>uint32 price_coin = 6;</code>
        * @return The priceCoin.
        */
@@ -7383,6 +9852,10 @@ public final class UserMessageOuterClass {
         return priceCoin_;
       }
       /**
+       * <pre>
+       * 瓜子形式价格
+       * </pre>
+       *
        * <code>uint32 price_coin = 6;</code>
        * @param value The priceCoin to set.
        * @return This builder for chaining.
@@ -7394,6 +9867,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 瓜子形式价格
+       * </pre>
+       *
        * <code>uint32 price_coin = 6;</code>
        * @return This builder for chaining.
        */
@@ -7406,6 +9883,10 @@ public final class UserMessageOuterClass {
 
       private int lastingTimeSec_ ;
       /**
+       * <pre>
+       * 持续显示在页面顶部时间，以秒为单位
+       * </pre>
+       *
        * <code>uint32 lasting_time_sec = 7;</code>
        * @return The lastingTimeSec.
        */
@@ -7413,6 +9894,10 @@ public final class UserMessageOuterClass {
         return lastingTimeSec_;
       }
       /**
+       * <pre>
+       * 持续显示在页面顶部时间，以秒为单位
+       * </pre>
+       *
        * <code>uint32 lasting_time_sec = 7;</code>
        * @param value The lastingTimeSec to set.
        * @return This builder for chaining.
@@ -7424,6 +9909,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 持续显示在页面顶部时间，以秒为单位
+       * </pre>
+       *
        * <code>uint32 lasting_time_sec = 7;</code>
        * @return This builder for chaining.
        */
@@ -7436,6 +9925,10 @@ public final class UserMessageOuterClass {
 
       private long startTime_ ;
       /**
+       * <pre>
+       * 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+       * </pre>
+       *
        * <code>uint64 start_time = 8;</code>
        * @return The startTime.
        */
@@ -7443,6 +9936,10 @@ public final class UserMessageOuterClass {
         return startTime_;
       }
       /**
+       * <pre>
+       * 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+       * </pre>
+       *
        * <code>uint64 start_time = 8;</code>
        * @param value The startTime to set.
        * @return This builder for chaining.
@@ -7454,6 +9951,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+       * </pre>
+       *
        * <code>uint64 start_time = 8;</code>
        * @return This builder for chaining.
        */
@@ -7466,6 +9967,10 @@ public final class UserMessageOuterClass {
 
       private long endTime_ ;
       /**
+       * <pre>
+       * 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+       * </pre>
+       *
        * <code>uint64 end_time = 9;</code>
        * @return The endTime.
        */
@@ -7473,6 +9978,10 @@ public final class UserMessageOuterClass {
         return endTime_;
       }
       /**
+       * <pre>
+       * 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+       * </pre>
+       *
        * <code>uint64 end_time = 9;</code>
        * @param value The endTime to set.
        * @return This builder for chaining.
@@ -7484,6 +9993,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+       * </pre>
+       *
        * <code>uint64 end_time = 9;</code>
        * @return This builder for chaining.
        */
@@ -7546,929 +10059,36 @@ public final class UserMessageOuterClass {
 
   }
 
-  public interface GiftMessageOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:vNerve.bilibili.live.GiftMessage)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>bool is_gold = 1;</code>
-     * @return The isGold.
-     */
-    boolean getIsGold();
-
-    /**
-     * <code>uint32 total_coin = 2;</code>
-     * @return The totalCoin.
-     */
-    int getTotalCoin();
-
-    /**
-     * <code>uint32 gift_id = 3;</code>
-     * @return The giftId.
-     */
-    int getGiftId();
-
-    /**
-     * <code>string gift_name = 4;</code>
-     * @return The giftName.
-     */
-    java.lang.String getGiftName();
-    /**
-     * <code>string gift_name = 4;</code>
-     * @return The bytes for giftName.
-     */
-    com.google.protobuf.ByteString
-        getGiftNameBytes();
-
-    /**
-     * <code>uint32 single_price_coin_raw = 5;</code>
-     * @return The singlePriceCoinRaw.
-     */
-    int getSinglePriceCoinRaw();
-
-    /**
-     * <code>uint32 count = 6;</code>
-     * @return The count.
-     */
-    int getCount();
-  }
-  /**
-   * Protobuf type {@code vNerve.bilibili.live.GiftMessage}
-   */
-  public  static final class GiftMessage extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:vNerve.bilibili.live.GiftMessage)
-      GiftMessageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GiftMessage.newBuilder() to construct.
-    private GiftMessage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GiftMessage() {
-      giftName_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GiftMessage();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GiftMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              isGold_ = input.readBool();
-              break;
-            }
-            case 16: {
-
-              totalCoin_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-
-              giftId_ = input.readUInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              giftName_ = s;
-              break;
-            }
-            case 40: {
-
-              singlePriceCoinRaw_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-
-              count_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.class, vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.Builder.class);
-    }
-
-    public static final int IS_GOLD_FIELD_NUMBER = 1;
-    private boolean isGold_;
-    /**
-     * <code>bool is_gold = 1;</code>
-     * @return The isGold.
-     */
-    public boolean getIsGold() {
-      return isGold_;
-    }
-
-    public static final int TOTAL_COIN_FIELD_NUMBER = 2;
-    private int totalCoin_;
-    /**
-     * <code>uint32 total_coin = 2;</code>
-     * @return The totalCoin.
-     */
-    public int getTotalCoin() {
-      return totalCoin_;
-    }
-
-    public static final int GIFT_ID_FIELD_NUMBER = 3;
-    private int giftId_;
-    /**
-     * <code>uint32 gift_id = 3;</code>
-     * @return The giftId.
-     */
-    public int getGiftId() {
-      return giftId_;
-    }
-
-    public static final int GIFT_NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object giftName_;
-    /**
-     * <code>string gift_name = 4;</code>
-     * @return The giftName.
-     */
-    public java.lang.String getGiftName() {
-      java.lang.Object ref = giftName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        giftName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string gift_name = 4;</code>
-     * @return The bytes for giftName.
-     */
-    public com.google.protobuf.ByteString
-        getGiftNameBytes() {
-      java.lang.Object ref = giftName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        giftName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int SINGLE_PRICE_COIN_RAW_FIELD_NUMBER = 5;
-    private int singlePriceCoinRaw_;
-    /**
-     * <code>uint32 single_price_coin_raw = 5;</code>
-     * @return The singlePriceCoinRaw.
-     */
-    public int getSinglePriceCoinRaw() {
-      return singlePriceCoinRaw_;
-    }
-
-    public static final int COUNT_FIELD_NUMBER = 6;
-    private int count_;
-    /**
-     * <code>uint32 count = 6;</code>
-     * @return The count.
-     */
-    public int getCount() {
-      return count_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (isGold_ != false) {
-        output.writeBool(1, isGold_);
-      }
-      if (totalCoin_ != 0) {
-        output.writeUInt32(2, totalCoin_);
-      }
-      if (giftId_ != 0) {
-        output.writeUInt32(3, giftId_);
-      }
-      if (!getGiftNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, giftName_);
-      }
-      if (singlePriceCoinRaw_ != 0) {
-        output.writeUInt32(5, singlePriceCoinRaw_);
-      }
-      if (count_ != 0) {
-        output.writeUInt32(6, count_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (isGold_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isGold_);
-      }
-      if (totalCoin_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, totalCoin_);
-      }
-      if (giftId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, giftId_);
-      }
-      if (!getGiftNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, giftName_);
-      }
-      if (singlePriceCoinRaw_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, singlePriceCoinRaw_);
-      }
-      if (count_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, count_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof vNerve.bilibili.live.UserMessageOuterClass.GiftMessage)) {
-        return super.equals(obj);
-      }
-      vNerve.bilibili.live.UserMessageOuterClass.GiftMessage other = (vNerve.bilibili.live.UserMessageOuterClass.GiftMessage) obj;
-
-      if (getIsGold()
-          != other.getIsGold()) return false;
-      if (getTotalCoin()
-          != other.getTotalCoin()) return false;
-      if (getGiftId()
-          != other.getGiftId()) return false;
-      if (!getGiftName()
-          .equals(other.getGiftName())) return false;
-      if (getSinglePriceCoinRaw()
-          != other.getSinglePriceCoinRaw()) return false;
-      if (getCount()
-          != other.getCount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_GOLD_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsGold());
-      hash = (37 * hash) + TOTAL_COIN_FIELD_NUMBER;
-      hash = (53 * hash) + getTotalCoin();
-      hash = (37 * hash) + GIFT_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getGiftId();
-      hash = (37 * hash) + GIFT_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getGiftName().hashCode();
-      hash = (37 * hash) + SINGLE_PRICE_COIN_RAW_FIELD_NUMBER;
-      hash = (53 * hash) + getSinglePriceCoinRaw();
-      hash = (37 * hash) + COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + getCount();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(vNerve.bilibili.live.UserMessageOuterClass.GiftMessage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code vNerve.bilibili.live.GiftMessage}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:vNerve.bilibili.live.GiftMessage)
-        vNerve.bilibili.live.UserMessageOuterClass.GiftMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.class, vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.Builder.class);
-      }
-
-      // Construct using vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        isGold_ = false;
-
-        totalCoin_ = 0;
-
-        giftId_ = 0;
-
-        giftName_ = "";
-
-        singlePriceCoinRaw_ = 0;
-
-        count_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return vNerve.bilibili.live.UserMessageOuterClass.internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
-      }
-
-      @java.lang.Override
-      public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getDefaultInstanceForType() {
-        return vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage build() {
-        vNerve.bilibili.live.UserMessageOuterClass.GiftMessage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage buildPartial() {
-        vNerve.bilibili.live.UserMessageOuterClass.GiftMessage result = new vNerve.bilibili.live.UserMessageOuterClass.GiftMessage(this);
-        result.isGold_ = isGold_;
-        result.totalCoin_ = totalCoin_;
-        result.giftId_ = giftId_;
-        result.giftName_ = giftName_;
-        result.singlePriceCoinRaw_ = singlePriceCoinRaw_;
-        result.count_ = count_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof vNerve.bilibili.live.UserMessageOuterClass.GiftMessage) {
-          return mergeFrom((vNerve.bilibili.live.UserMessageOuterClass.GiftMessage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(vNerve.bilibili.live.UserMessageOuterClass.GiftMessage other) {
-        if (other == vNerve.bilibili.live.UserMessageOuterClass.GiftMessage.getDefaultInstance()) return this;
-        if (other.getIsGold() != false) {
-          setIsGold(other.getIsGold());
-        }
-        if (other.getTotalCoin() != 0) {
-          setTotalCoin(other.getTotalCoin());
-        }
-        if (other.getGiftId() != 0) {
-          setGiftId(other.getGiftId());
-        }
-        if (!other.getGiftName().isEmpty()) {
-          giftName_ = other.giftName_;
-          onChanged();
-        }
-        if (other.getSinglePriceCoinRaw() != 0) {
-          setSinglePriceCoinRaw(other.getSinglePriceCoinRaw());
-        }
-        if (other.getCount() != 0) {
-          setCount(other.getCount());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        vNerve.bilibili.live.UserMessageOuterClass.GiftMessage parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (vNerve.bilibili.live.UserMessageOuterClass.GiftMessage) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private boolean isGold_ ;
-      /**
-       * <code>bool is_gold = 1;</code>
-       * @return The isGold.
-       */
-      public boolean getIsGold() {
-        return isGold_;
-      }
-      /**
-       * <code>bool is_gold = 1;</code>
-       * @param value The isGold to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsGold(boolean value) {
-        
-        isGold_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_gold = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsGold() {
-        
-        isGold_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int totalCoin_ ;
-      /**
-       * <code>uint32 total_coin = 2;</code>
-       * @return The totalCoin.
-       */
-      public int getTotalCoin() {
-        return totalCoin_;
-      }
-      /**
-       * <code>uint32 total_coin = 2;</code>
-       * @param value The totalCoin to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTotalCoin(int value) {
-        
-        totalCoin_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 total_coin = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTotalCoin() {
-        
-        totalCoin_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int giftId_ ;
-      /**
-       * <code>uint32 gift_id = 3;</code>
-       * @return The giftId.
-       */
-      public int getGiftId() {
-        return giftId_;
-      }
-      /**
-       * <code>uint32 gift_id = 3;</code>
-       * @param value The giftId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGiftId(int value) {
-        
-        giftId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 gift_id = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGiftId() {
-        
-        giftId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object giftName_ = "";
-      /**
-       * <code>string gift_name = 4;</code>
-       * @return The giftName.
-       */
-      public java.lang.String getGiftName() {
-        java.lang.Object ref = giftName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          giftName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string gift_name = 4;</code>
-       * @return The bytes for giftName.
-       */
-      public com.google.protobuf.ByteString
-          getGiftNameBytes() {
-        java.lang.Object ref = giftName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          giftName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string gift_name = 4;</code>
-       * @param value The giftName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGiftName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        giftName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string gift_name = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearGiftName() {
-        
-        giftName_ = getDefaultInstance().getGiftName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string gift_name = 4;</code>
-       * @param value The bytes for giftName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setGiftNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        giftName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int singlePriceCoinRaw_ ;
-      /**
-       * <code>uint32 single_price_coin_raw = 5;</code>
-       * @return The singlePriceCoinRaw.
-       */
-      public int getSinglePriceCoinRaw() {
-        return singlePriceCoinRaw_;
-      }
-      /**
-       * <code>uint32 single_price_coin_raw = 5;</code>
-       * @param value The singlePriceCoinRaw to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSinglePriceCoinRaw(int value) {
-        
-        singlePriceCoinRaw_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 single_price_coin_raw = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSinglePriceCoinRaw() {
-        
-        singlePriceCoinRaw_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int count_ ;
-      /**
-       * <code>uint32 count = 6;</code>
-       * @return The count.
-       */
-      public int getCount() {
-        return count_;
-      }
-      /**
-       * <code>uint32 count = 6;</code>
-       * @param value The count to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCount(int value) {
-        
-        count_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 count = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCount() {
-        
-        count_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:vNerve.bilibili.live.GiftMessage)
-    }
-
-    // @@protoc_insertion_point(class_scope:vNerve.bilibili.live.GiftMessage)
-    private static final vNerve.bilibili.live.UserMessageOuterClass.GiftMessage DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new vNerve.bilibili.live.UserMessageOuterClass.GiftMessage();
-    }
-
-    public static vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GiftMessage>
-        PARSER = new com.google.protobuf.AbstractParser<GiftMessage>() {
-      @java.lang.Override
-      public GiftMessage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GiftMessage(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<GiftMessage> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GiftMessage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public vNerve.bilibili.live.UserMessageOuterClass.GiftMessage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface WelcomeVIPMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:vNerve.bilibili.live.WelcomeVIPMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
+     * <pre>
+     * 老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
      * @return The level.
      */
     vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel getLevel();
   }
   /**
+   * <pre>
+   **
+   *欢迎老爷
+   *提供的额外 UserInfo 字段 : admin（有效性存疑）
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.WelcomeVIPMessage}
    */
   public  static final class WelcomeVIPMessage extends
@@ -8555,6 +10175,10 @@ public final class UserMessageOuterClass {
     public static final int LEVEL_FIELD_NUMBER = 1;
     private int level_;
     /**
+     * <pre>
+     * 老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
@@ -8562,6 +10186,10 @@ public final class UserMessageOuterClass {
       return level_;
     }
     /**
+     * <pre>
+     * 老爷等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
      * @return The level.
      */
@@ -8726,6 +10354,12 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *欢迎老爷
+     *提供的额外 UserInfo 字段 : admin（有效性存疑）
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.WelcomeVIPMessage}
      */
     public static final class Builder extends
@@ -8874,6 +10508,10 @@ public final class UserMessageOuterClass {
 
       private int level_ = 0;
       /**
+       * <pre>
+       * 老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
        * @return The enum numeric value on the wire for level.
        */
@@ -8881,6 +10519,10 @@ public final class UserMessageOuterClass {
         return level_;
       }
       /**
+       * <pre>
+       * 老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
@@ -8891,6 +10533,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
        * @return The level.
        */
@@ -8900,6 +10546,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.LiveVipLevel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
        * @param value The level to set.
        * @return This builder for chaining.
@@ -8914,6 +10564,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 老爷等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.LiveVipLevel level = 1;</code>
        * @return This builder for chaining.
        */
@@ -8981,17 +10635,31 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The level.
      */
     vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getLevel();
   }
   /**
+   * <pre>
+   **
+   *欢迎舰长
+   *提供的额外 UserInfo 字段 : guard_level
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.WelcomeGuardMessage}
    */
   public  static final class WelcomeGuardMessage extends
@@ -9078,6 +10746,10 @@ public final class UserMessageOuterClass {
     public static final int LEVEL_FIELD_NUMBER = 1;
     private int level_;
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
@@ -9085,6 +10757,10 @@ public final class UserMessageOuterClass {
       return level_;
     }
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The level.
      */
@@ -9249,6 +10925,12 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *欢迎舰长
+     *提供的额外 UserInfo 字段 : guard_level
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.WelcomeGuardMessage}
      */
     public static final class Builder extends
@@ -9397,6 +11079,10 @@ public final class UserMessageOuterClass {
 
       private int level_ = 0;
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return The enum numeric value on the wire for level.
        */
@@ -9404,6 +11090,10 @@ public final class UserMessageOuterClass {
         return level_;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
@@ -9414,6 +11104,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return The level.
        */
@@ -9423,6 +11117,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @param value The level to set.
        * @return This builder for chaining.
@@ -9437,6 +11135,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return This builder for chaining.
        */
@@ -9504,51 +11206,89 @@ public final class UserMessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
     int getLevelValue();
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The level.
      */
     vNerve.bilibili.live.UserMessageOuterClass.GuardLevel getLevel();
 
     /**
+     * <pre>
+     * 总瓜子金额
+     * </pre>
+     *
      * <code>uint32 total_coin = 2;</code>
      * @return The totalCoin.
      */
     int getTotalCoin();
 
     /**
+     * <pre>
+     * 上舰时间，以 duration_level 为单位（月或周）
+     * </pre>
+     *
      * <code>uint32 count = 3;</code>
      * @return The count.
      */
     int getCount();
 
     /**
+     * <pre>
+     * 上舰时长类型，可能为月或周
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
      * @return The enum numeric value on the wire for durationLevel.
      */
     int getDurationLevelValue();
     /**
+     * <pre>
+     * 上舰时长类型，可能为月或周
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
      * @return The durationLevel.
      */
     vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel getDurationLevel();
 
     /**
+     * <pre>
+     * 上舰操作类型，可能为新加入或续费
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
      * @return The enum numeric value on the wire for buyType.
      */
     int getBuyTypeValue();
     /**
+     * <pre>
+     * 上舰操作类型，可能为新加入或续费
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
      * @return The buyType.
      */
     vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType getBuyType();
   }
   /**
+   * <pre>
+   **
+   *大航海/上舰
+   *提供的额外 UserInfo 字段 : guard_level
+   * </pre>
+   *
    * Protobuf type {@code vNerve.bilibili.live.NewGuardMessage}
    */
   public  static final class NewGuardMessage extends
@@ -9659,6 +11399,10 @@ public final class UserMessageOuterClass {
     public static final int LEVEL_FIELD_NUMBER = 1;
     private int level_;
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The enum numeric value on the wire for level.
      */
@@ -9666,6 +11410,10 @@ public final class UserMessageOuterClass {
       return level_;
     }
     /**
+     * <pre>
+     * 舰队等级
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
      * @return The level.
      */
@@ -9678,6 +11426,10 @@ public final class UserMessageOuterClass {
     public static final int TOTAL_COIN_FIELD_NUMBER = 2;
     private int totalCoin_;
     /**
+     * <pre>
+     * 总瓜子金额
+     * </pre>
+     *
      * <code>uint32 total_coin = 2;</code>
      * @return The totalCoin.
      */
@@ -9688,6 +11440,10 @@ public final class UserMessageOuterClass {
     public static final int COUNT_FIELD_NUMBER = 3;
     private int count_;
     /**
+     * <pre>
+     * 上舰时间，以 duration_level 为单位（月或周）
+     * </pre>
+     *
      * <code>uint32 count = 3;</code>
      * @return The count.
      */
@@ -9698,6 +11454,10 @@ public final class UserMessageOuterClass {
     public static final int DURATION_LEVEL_FIELD_NUMBER = 4;
     private int durationLevel_;
     /**
+     * <pre>
+     * 上舰时长类型，可能为月或周
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
      * @return The enum numeric value on the wire for durationLevel.
      */
@@ -9705,6 +11465,10 @@ public final class UserMessageOuterClass {
       return durationLevel_;
     }
     /**
+     * <pre>
+     * 上舰时长类型，可能为月或周
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
      * @return The durationLevel.
      */
@@ -9717,6 +11481,10 @@ public final class UserMessageOuterClass {
     public static final int BUY_TYPE_FIELD_NUMBER = 5;
     private int buyType_;
     /**
+     * <pre>
+     * 上舰操作类型，可能为新加入或续费
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
      * @return The enum numeric value on the wire for buyType.
      */
@@ -9724,6 +11492,10 @@ public final class UserMessageOuterClass {
       return buyType_;
     }
     /**
+     * <pre>
+     * 上舰操作类型，可能为新加入或续费
+     * </pre>
+     *
      * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
      * @return The buyType.
      */
@@ -9930,6 +11702,12 @@ public final class UserMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     **
+     *大航海/上舰
+     *提供的额外 UserInfo 字段 : guard_level
+     * </pre>
+     *
      * Protobuf type {@code vNerve.bilibili.live.NewGuardMessage}
      */
     public static final class Builder extends
@@ -10102,6 +11880,10 @@ public final class UserMessageOuterClass {
 
       private int level_ = 0;
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return The enum numeric value on the wire for level.
        */
@@ -10109,6 +11891,10 @@ public final class UserMessageOuterClass {
         return level_;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @param value The enum numeric value on the wire for level to set.
        * @return This builder for chaining.
@@ -10119,6 +11905,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return The level.
        */
@@ -10128,6 +11918,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardLevel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @param value The level to set.
        * @return This builder for chaining.
@@ -10142,6 +11936,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 舰队等级
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardLevel level = 1;</code>
        * @return This builder for chaining.
        */
@@ -10154,6 +11952,10 @@ public final class UserMessageOuterClass {
 
       private int totalCoin_ ;
       /**
+       * <pre>
+       * 总瓜子金额
+       * </pre>
+       *
        * <code>uint32 total_coin = 2;</code>
        * @return The totalCoin.
        */
@@ -10161,6 +11963,10 @@ public final class UserMessageOuterClass {
         return totalCoin_;
       }
       /**
+       * <pre>
+       * 总瓜子金额
+       * </pre>
+       *
        * <code>uint32 total_coin = 2;</code>
        * @param value The totalCoin to set.
        * @return This builder for chaining.
@@ -10172,6 +11978,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 总瓜子金额
+       * </pre>
+       *
        * <code>uint32 total_coin = 2;</code>
        * @return This builder for chaining.
        */
@@ -10184,6 +11994,10 @@ public final class UserMessageOuterClass {
 
       private int count_ ;
       /**
+       * <pre>
+       * 上舰时间，以 duration_level 为单位（月或周）
+       * </pre>
+       *
        * <code>uint32 count = 3;</code>
        * @return The count.
        */
@@ -10191,6 +12005,10 @@ public final class UserMessageOuterClass {
         return count_;
       }
       /**
+       * <pre>
+       * 上舰时间，以 duration_level 为单位（月或周）
+       * </pre>
+       *
        * <code>uint32 count = 3;</code>
        * @param value The count to set.
        * @return This builder for chaining.
@@ -10202,6 +12020,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 上舰时间，以 duration_level 为单位（月或周）
+       * </pre>
+       *
        * <code>uint32 count = 3;</code>
        * @return This builder for chaining.
        */
@@ -10214,6 +12036,10 @@ public final class UserMessageOuterClass {
 
       private int durationLevel_ = 0;
       /**
+       * <pre>
+       * 上舰时长类型，可能为月或周
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
        * @return The enum numeric value on the wire for durationLevel.
        */
@@ -10221,6 +12047,10 @@ public final class UserMessageOuterClass {
         return durationLevel_;
       }
       /**
+       * <pre>
+       * 上舰时长类型，可能为月或周
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
        * @param value The enum numeric value on the wire for durationLevel to set.
        * @return This builder for chaining.
@@ -10231,6 +12061,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 上舰时长类型，可能为月或周
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
        * @return The durationLevel.
        */
@@ -10240,6 +12074,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardDurationLevel.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 上舰时长类型，可能为月或周
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
        * @param value The durationLevel to set.
        * @return This builder for chaining.
@@ -10254,6 +12092,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 上舰时长类型，可能为月或周
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardDurationLevel duration_level = 4;</code>
        * @return This builder for chaining.
        */
@@ -10266,6 +12108,10 @@ public final class UserMessageOuterClass {
 
       private int buyType_ = 0;
       /**
+       * <pre>
+       * 上舰操作类型，可能为新加入或续费
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
        * @return The enum numeric value on the wire for buyType.
        */
@@ -10273,6 +12119,10 @@ public final class UserMessageOuterClass {
         return buyType_;
       }
       /**
+       * <pre>
+       * 上舰操作类型，可能为新加入或续费
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
        * @param value The enum numeric value on the wire for buyType to set.
        * @return This builder for chaining.
@@ -10283,6 +12133,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 上舰操作类型，可能为新加入或续费
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
        * @return The buyType.
        */
@@ -10292,6 +12146,10 @@ public final class UserMessageOuterClass {
         return result == null ? vNerve.bilibili.live.UserMessageOuterClass.GuardBuyType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * 上舰操作类型，可能为新加入或续费
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
        * @param value The buyType to set.
        * @return This builder for chaining.
@@ -10306,6 +12164,10 @@ public final class UserMessageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 上舰操作类型，可能为新加入或续费
+       * </pre>
+       *
        * <code>.vNerve.bilibili.live.GuardBuyType buy_type = 5;</code>
        * @return This builder for chaining.
        */
@@ -10374,7 +12236,10 @@ public final class UserMessageOuterClass {
   }
   /**
    * <pre>
-   * Just empty.
+   **
+   *用户被禁言
+   *提供的额外 UserInfo 字段 : 无
+   *User 的 name 字段不可用
    * </pre>
    *
    * Protobuf type {@code vNerve.bilibili.live.UserBlockedMessage}
@@ -10599,7 +12464,10 @@ public final class UserMessageOuterClass {
     }
     /**
      * <pre>
-     * Just empty.
+     **
+     *用户被禁言
+     *提供的额外 UserInfo 字段 : 无
+     *User 的 name 字段不可用
      * </pre>
      *
      * Protobuf type {@code vNerve.bilibili.live.UserBlockedMessage}
@@ -10815,15 +12683,15 @@ public final class UserMessageOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_bilibili_live_DanmakuMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_vNerve_bilibili_live_SuperChatMessage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_vNerve_bilibili_live_GiftMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_vNerve_bilibili_live_SuperChatMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_vNerve_bilibili_live_WelcomeVIPMessage_descriptor;
   private static final 
@@ -10883,15 +12751,15 @@ public final class UserMessageOuterClass {
       "treamer_name\030\005 \001(\t\022\027\n\017streamer_roomid\030\006 " +
       "\001(\r\"a\n\016DanmakuMessage\022\017\n\007message\030\001 \001(\t\022>" +
       "\n\014lottery_type\030\002 \001(\0162(.vNerve.bilibili.l" +
-      "ive.LotteryDanmakuType\"\245\001\n\020SuperChatMess" +
-      "age\022\017\n\007message\030\001 \001(\t\022\n\n\002id\030\003 \001(\004\022\r\n\005toke" +
-      "n\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(\r\022\022\n\nprice_coin" +
-      "\030\006 \001(\r\022\030\n\020lasting_time_sec\030\007 \001(\r\022\022\n\nstar" +
-      "t_time\030\010 \001(\004\022\020\n\010end_time\030\t \001(\004\"\204\001\n\013GiftM" +
-      "essage\022\017\n\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 " +
-      "\001(\r\022\017\n\007gift_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022" +
-      "\035\n\025single_price_coin_raw\030\005 \001(\r\022\r\n\005count\030" +
-      "\006 \001(\r\"F\n\021WelcomeVIPMessage\0221\n\005level\030\001 \001(" +
+      "ive.LotteryDanmakuType\"\204\001\n\013GiftMessage\022\017" +
+      "\n\007is_gold\030\001 \001(\010\022\022\n\ntotal_coin\030\002 \001(\r\022\017\n\007g" +
+      "ift_id\030\003 \001(\r\022\021\n\tgift_name\030\004 \001(\t\022\035\n\025singl" +
+      "e_price_coin_raw\030\005 \001(\r\022\r\n\005count\030\006 \001(\r\"\245\001" +
+      "\n\020SuperChatMessage\022\017\n\007message\030\001 \001(\t\022\n\n\002i" +
+      "d\030\003 \001(\004\022\r\n\005token\030\004 \001(\t\022\021\n\tprice_cny\030\005 \001(" +
+      "\r\022\022\n\nprice_coin\030\006 \001(\r\022\030\n\020lasting_time_se" +
+      "c\030\007 \001(\r\022\022\n\nstart_time\030\010 \001(\004\022\020\n\010end_time\030" +
+      "\t \001(\004\"F\n\021WelcomeVIPMessage\0221\n\005level\030\001 \001(" +
       "\0162\".vNerve.bilibili.live.LiveVipLevel\"F\n" +
       "\023WelcomeGuardMessage\022/\n\005level\030\001 \001(\0162 .vN" +
       "erve.bilibili.live.GuardLevel\"\335\001\n\017NewGua" +
@@ -10902,10 +12770,10 @@ public final class UserMessageOuterClass {
       "4\n\010buy_type\030\005 \001(\0162\".vNerve.bilibili.live" +
       ".GuardBuyType\"\024\n\022UserBlockedMessage*;\n\014L" +
       "iveVipLevel\022\n\n\006NO_VIP\020\000\022\017\n\013MONTHLY_VIP\020\001" +
-      "\022\016\n\nYEARLY_VIP\020\002*<\n\022LotteryDanmakuType\022\016" +
-      "\n\nNO_LOTTERY\020\000\022\t\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*>" +
-      "\n\nGuardLevel\022\014\n\010NO_GUARD\020\000\022\n\n\006LEVEL1\020\001\022\n" +
-      "\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003*/\n\014GuardBuyType\022\013" +
+      "\022\016\n\nYEARLY_VIP\020\002*>\n\nGuardLevel\022\014\n\010NO_GUA" +
+      "RD\020\000\022\n\n\006LEVEL1\020\001\022\n\n\006LEVEL2\020\002\022\n\n\006LEVEL3\020\003" +
+      "*<\n\022LotteryDanmakuType\022\016\n\nNO_LOTTERY\020\000\022\t" +
+      "\n\005STORM\020\001\022\013\n\007LOTTERY\020\002*/\n\014GuardBuyType\022\013" +
       "\n\007NO_TYPE\020\000\022\007\n\003BUY\020\001\022\t\n\005RENEW\020\002*J\n\022Guard" +
       "DurationLevel\022\017\n\013NO_DURATION\020\000\022\021\n\rMONTHL" +
       "Y_GUARD\020\001\022\020\n\014WEEKLY_GUARD\020\002B\003\370\001\001b\006proto3"
@@ -10938,18 +12806,18 @@ public final class UserMessageOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_DanmakuMessage_descriptor,
         new java.lang.String[] { "Message", "LotteryType", });
-    internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_vNerve_bilibili_live_SuperChatMessage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor,
-        new java.lang.String[] { "Message", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime", });
     internal_static_vNerve_bilibili_live_GiftMessage_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_vNerve_bilibili_live_GiftMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vNerve_bilibili_live_GiftMessage_descriptor,
         new java.lang.String[] { "IsGold", "TotalCoin", "GiftId", "GiftName", "SinglePriceCoinRaw", "Count", });
+    internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_vNerve_bilibili_live_SuperChatMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_vNerve_bilibili_live_SuperChatMessage_descriptor,
+        new java.lang.String[] { "Message", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime", });
     internal_static_vNerve_bilibili_live_WelcomeVIPMessage_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_vNerve_bilibili_live_WelcomeVIPMessage_fieldAccessorTable = new

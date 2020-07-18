@@ -51,13 +51,13 @@ namespace VNerve.Bilibili.Live {
             "dHJlYW1lcl9uYW1lGAUgASgJEhcKD3N0cmVhbWVyX3Jvb21pZBgGIAEoDSJh",
             "Cg5EYW5tYWt1TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJEj4KDGxvdHRlcnlf",
             "dHlwZRgCIAEoDjIoLnZOZXJ2ZS5iaWxpYmlsaS5saXZlLkxvdHRlcnlEYW5t",
-            "YWt1VHlwZSKlAQoQU3VwZXJDaGF0TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJ",
+            "YWt1VHlwZSKEAQoLR2lmdE1lc3NhZ2USDwoHaXNfZ29sZBgBIAEoCBISCgp0",
+            "b3RhbF9jb2luGAIgASgNEg8KB2dpZnRfaWQYAyABKA0SEQoJZ2lmdF9uYW1l",
+            "GAQgASgJEh0KFXNpbmdsZV9wcmljZV9jb2luX3JhdxgFIAEoDRINCgVjb3Vu",
+            "dBgGIAEoDSKlAQoQU3VwZXJDaGF0TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJ",
             "EgoKAmlkGAMgASgEEg0KBXRva2VuGAQgASgJEhEKCXByaWNlX2NueRgFIAEo",
             "DRISCgpwcmljZV9jb2luGAYgASgNEhgKEGxhc3RpbmdfdGltZV9zZWMYByAB",
-            "KA0SEgoKc3RhcnRfdGltZRgIIAEoBBIQCghlbmRfdGltZRgJIAEoBCKEAQoL",
-            "R2lmdE1lc3NhZ2USDwoHaXNfZ29sZBgBIAEoCBISCgp0b3RhbF9jb2luGAIg",
-            "ASgNEg8KB2dpZnRfaWQYAyABKA0SEQoJZ2lmdF9uYW1lGAQgASgJEh0KFXNp",
-            "bmdsZV9wcmljZV9jb2luX3JhdxgFIAEoDRINCgVjb3VudBgGIAEoDSJGChFX",
+            "KA0SEgoKc3RhcnRfdGltZRgIIAEoBBIQCghlbmRfdGltZRgJIAEoBCJGChFX",
             "ZWxjb21lVklQTWVzc2FnZRIxCgVsZXZlbBgBIAEoDjIiLnZOZXJ2ZS5iaWxp",
             "YmlsaS5saXZlLkxpdmVWaXBMZXZlbCJGChNXZWxjb21lR3VhcmRNZXNzYWdl",
             "Ei8KBWxldmVsGAEgASgOMiAudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRM",
@@ -67,22 +67,22 @@ namespace VNerve.Bilibili.Live {
             "dk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmREdXJhdGlvbkxldmVsEjQKCGJ1",
             "eV90eXBlGAUgASgOMiIudk5lcnZlLmJpbGliaWxpLmxpdmUuR3VhcmRCdXlU",
             "eXBlIhQKElVzZXJCbG9ja2VkTWVzc2FnZSo7CgxMaXZlVmlwTGV2ZWwSCgoG",
-            "Tk9fVklQEAASDwoLTU9OVEhMWV9WSVAQARIOCgpZRUFSTFlfVklQEAIqPAoS",
-            "TG90dGVyeURhbm1ha3VUeXBlEg4KCk5PX0xPVFRFUlkQABIJCgVTVE9STRAB",
-            "EgsKB0xPVFRFUlkQAio+CgpHdWFyZExldmVsEgwKCE5PX0dVQVJEEAASCgoG",
-            "TEVWRUwxEAESCgoGTEVWRUwyEAISCgoGTEVWRUwzEAMqLwoMR3VhcmRCdXlU",
+            "Tk9fVklQEAASDwoLTU9OVEhMWV9WSVAQARIOCgpZRUFSTFlfVklQEAIqPgoK",
+            "R3VhcmRMZXZlbBIMCghOT19HVUFSRBAAEgoKBkxFVkVMMRABEgoKBkxFVkVM",
+            "MhACEgoKBkxFVkVMMxADKjwKEkxvdHRlcnlEYW5tYWt1VHlwZRIOCgpOT19M",
+            "T1RURVJZEAASCQoFU1RPUk0QARILCgdMT1RURVJZEAIqLwoMR3VhcmRCdXlU",
             "eXBlEgsKB05PX1RZUEUQABIHCgNCVVkQARIJCgVSRU5FVxACKkoKEkd1YXJk",
             "RHVyYXRpb25MZXZlbBIPCgtOT19EVVJBVElPThAAEhEKDU1PTlRITFlfR1VB",
             "UkQQARIQCgxXRUVLTFlfR1VBUkQQAkID+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardLevel), typeof(global::VNerve.Bilibili.Live.GuardBuyType), typeof(global::VNerve.Bilibili.Live.GuardDurationLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::VNerve.Bilibili.Live.LiveVipLevel), typeof(global::VNerve.Bilibili.Live.GuardLevel), typeof(global::VNerve.Bilibili.Live.LotteryDanmakuType), typeof(global::VNerve.Bilibili.Live.GuardBuyType), typeof(global::VNerve.Bilibili.Live.GuardDurationLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserMessage), global::VNerve.Bilibili.Live.UserMessage.Parser, new[]{ "User", "Danmaku", "Gift", "SuperChat", "NewGuard", "WelcomeVip", "WelcomeGuard", "UserBlocked" }, new[]{ "Payload" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.UserInfo), global::VNerve.Bilibili.Live.UserInfo.Parser, new[]{ "Uid", "Name", "AvatarUrl", "UserLevel", "UserLevelBorderColor", "Admin", "MainVip", "LiveVipLevel", "Title", "Medal", "GuardLevel", "PhoneVerified", "RegularUser" }, new[]{ "AdminOptional", "MainVipOptional" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.MedalInfo), global::VNerve.Bilibili.Live.MedalInfo.Parser, new[]{ "MedalName", "MedalLevel", "MedalColor", "StreamerUid", "StreamerName", "StreamerRoomid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.DanmakuMessage), global::VNerve.Bilibili.Live.DanmakuMessage.Parser, new[]{ "Message", "LotteryType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.SuperChatMessage), global::VNerve.Bilibili.Live.SuperChatMessage.Parser, new[]{ "Message", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.GiftMessage), global::VNerve.Bilibili.Live.GiftMessage.Parser, new[]{ "IsGold", "TotalCoin", "GiftId", "GiftName", "SinglePriceCoinRaw", "Count" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.SuperChatMessage), global::VNerve.Bilibili.Live.SuperChatMessage.Parser, new[]{ "Message", "Id", "Token", "PriceCny", "PriceCoin", "LastingTimeSec", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeVIPMessage), global::VNerve.Bilibili.Live.WelcomeVIPMessage.Parser, new[]{ "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.WelcomeGuardMessage), global::VNerve.Bilibili.Live.WelcomeGuardMessage.Parser, new[]{ "Level" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::VNerve.Bilibili.Live.NewGuardMessage), global::VNerve.Bilibili.Live.NewGuardMessage.Parser, new[]{ "Level", "TotalCoin", "Count", "DurationLevel", "BuyType" }, null, null, null, null),
@@ -93,40 +93,114 @@ namespace VNerve.Bilibili.Live {
 
   }
   #region Enums
+  /// <summary>
+  /// 直播间老爷等级
+  /// </summary>
   public enum LiveVipLevel {
+    /// <summary>
+    /// 无老爷
+    /// </summary>
     [pbr::OriginalName("NO_VIP")] NoVip = 0,
+    /// <summary>
+    /// 月费老爷
+    /// </summary>
     [pbr::OriginalName("MONTHLY_VIP")] MonthlyVip = 1,
+    /// <summary>
+    /// 年费老爷（SVIP）
+    /// </summary>
     [pbr::OriginalName("YEARLY_VIP")] YearlyVip = 2,
   }
 
-  public enum LotteryDanmakuType {
-    [pbr::OriginalName("NO_LOTTERY")] NoLottery = 0,
-    [pbr::OriginalName("STORM")] Storm = 1,
-    [pbr::OriginalName("LOTTERY")] Lottery = 2,
-  }
-
+  /// <summary>
+  ///*
+  ///舰队等级
+  ///
+  ///注意：三个等级和原始数据结构中的等级数据相反！
+  /// </summary>
   public enum GuardLevel {
+    /// <summary>
+    /// 无舰队
+    /// </summary>
     [pbr::OriginalName("NO_GUARD")] NoGuard = 0,
+    /// <summary>
+    /// 舰长
+    /// </summary>
     [pbr::OriginalName("LEVEL1")] Level1 = 1,
+    /// <summary>
+    /// 提督
+    /// </summary>
     [pbr::OriginalName("LEVEL2")] Level2 = 2,
+    /// <summary>
+    /// 总督
+    /// </summary>
     [pbr::OriginalName("LEVEL3")] Level3 = 3,
   }
 
+  /// <summary>
+  /// 弹幕是否抽奖/节奏风暴弹幕
+  /// </summary>
+  public enum LotteryDanmakuType {
+    /// <summary>
+    /// 非抽奖/节奏风暴
+    /// </summary>
+    [pbr::OriginalName("NO_LOTTERY")] NoLottery = 0,
+    /// <summary>
+    /// 节奏风暴
+    /// </summary>
+    [pbr::OriginalName("STORM")] Storm = 1,
+    /// <summary>
+    /// 抽奖
+    /// </summary>
+    [pbr::OriginalName("LOTTERY")] Lottery = 2,
+  }
+
+  /// <summary>
+  ///*
+  ///判断上舰操作是续费还是新加入
+  /// </summary>
   public enum GuardBuyType {
+    /// <summary>
+    /// 未知
+    /// </summary>
     [pbr::OriginalName("NO_TYPE")] NoType = 0,
+    /// <summary>
+    /// 新加入
+    /// </summary>
     [pbr::OriginalName("BUY")] Buy = 1,
+    /// <summary>
+    /// 续费
+    /// </summary>
     [pbr::OriginalName("RENEW")] Renew = 2,
   }
 
+  /// <summary>
+  ///*
+  ///判断上舰操作是按月还是按周
+  /// </summary>
   public enum GuardDurationLevel {
+    /// <summary>
+    /// 未知
+    /// </summary>
     [pbr::OriginalName("NO_DURATION")] NoDuration = 0,
+    /// <summary>
+    /// 按月
+    /// </summary>
     [pbr::OriginalName("MONTHLY_GUARD")] MonthlyGuard = 1,
+    /// <summary>
+    /// 按周
+    /// </summary>
     [pbr::OriginalName("WEEKLY_GUARD")] WeeklyGuard = 2,
   }
 
   #endregion
 
   #region Messages
+  /// <summary>
+  ///*
+  ///所有由用户产生的消息
+  ///
+  ///注意，在处理 `payload` 之前，您可能先需要从 `user` 获取该消息对应的用户！
+  /// </summary>
   public sealed partial class UserMessage : pb::IMessage<UserMessage> {
     private static readonly pb::MessageParser<UserMessage> _parser = new pb::MessageParser<UserMessage>(() => new UserMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -188,6 +262,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "user" field.</summary>
     public const int UserFieldNumber = 1;
     private global::VNerve.Bilibili.Live.UserInfo user_;
+    /// <summary>
+    /// 该消息对应的用户。优先处理！
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.UserInfo User {
       get { return user_; }
@@ -198,6 +275,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "danmaku" field.</summary>
     public const int DanmakuFieldNumber = 2;
+    /// <summary>
+    /// 弹幕消息
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.DanmakuMessage Danmaku {
       get { return payloadCase_ == PayloadOneofCase.Danmaku ? (global::VNerve.Bilibili.Live.DanmakuMessage) payload_ : null; }
@@ -209,6 +289,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "gift" field.</summary>
     public const int GiftFieldNumber = 3;
+    /// <summary>
+    /// 礼物消息
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.GiftMessage Gift {
       get { return payloadCase_ == PayloadOneofCase.Gift ? (global::VNerve.Bilibili.Live.GiftMessage) payload_ : null; }
@@ -220,6 +303,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "super_chat" field.</summary>
     public const int SuperChatFieldNumber = 4;
+    /// <summary>
+    /// Super Chat 醒目留言
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.SuperChatMessage SuperChat {
       get { return payloadCase_ == PayloadOneofCase.SuperChat ? (global::VNerve.Bilibili.Live.SuperChatMessage) payload_ : null; }
@@ -231,6 +317,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "new_guard" field.</summary>
     public const int NewGuardFieldNumber = 5;
+    /// <summary>
+    /// 新的大航海会员（舰长）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.NewGuardMessage NewGuard {
       get { return payloadCase_ == PayloadOneofCase.NewGuard ? (global::VNerve.Bilibili.Live.NewGuardMessage) payload_ : null; }
@@ -242,6 +331,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "welcome_vip" field.</summary>
     public const int WelcomeVipFieldNumber = 6;
+    /// <summary>
+    /// 欢迎老爷
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.WelcomeVIPMessage WelcomeVip {
       get { return payloadCase_ == PayloadOneofCase.WelcomeVip ? (global::VNerve.Bilibili.Live.WelcomeVIPMessage) payload_ : null; }
@@ -253,6 +345,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "welcome_guard" field.</summary>
     public const int WelcomeGuardFieldNumber = 7;
+    /// <summary>
+    /// 欢迎舰长
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.WelcomeGuardMessage WelcomeGuard {
       get { return payloadCase_ == PayloadOneofCase.WelcomeGuard ? (global::VNerve.Bilibili.Live.WelcomeGuardMessage) payload_ : null; }
@@ -264,6 +359,9 @@ namespace VNerve.Bilibili.Live {
 
     /// <summary>Field number for the "user_blocked" field.</summary>
     public const int UserBlockedFieldNumber = 16;
+    /// <summary>
+    /// 用户被禁言
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.UserBlockedMessage UserBlocked {
       get { return payloadCase_ == PayloadOneofCase.UserBlocked ? (global::VNerve.Bilibili.Live.UserBlockedMessage) payload_ : null; }
@@ -560,6 +658,14 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///与消息对应的用户信息
+  ///
+  ///注意：**`User` 类型中仅有 `uid` 保证在所有消息中均可用**。
+  ///大部分消息中 `name` 可用。
+  ///其他字段的可用情况会在下面的文档中标明，若未标明则表示此消息中 `user` 对应字段没有数据。
+  /// </summary>
   public sealed partial class UserInfo : pb::IMessage<UserInfo> {
     private static readonly pb::MessageParser<UserInfo> _parser = new pb::MessageParser<UserInfo>(() => new UserInfo());
     private pb::UnknownFieldSet _unknownFields;
@@ -619,6 +725,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "uid" field.</summary>
     public const int UidFieldNumber = 1;
     private ulong uid_;
+    /// <summary>
+    /// 消息对应的用户主站 UID。所有消息中均可用
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong Uid {
       get { return uid_; }
@@ -630,6 +739,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
+    /// <summary>
+    /// 消息对应用户主站昵称。大部分消息中可用
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
@@ -641,6 +753,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "avatar_url" field.</summary>
     public const int AvatarUrlFieldNumber = 3;
     private string avatarUrl_ = "";
+    /// <summary>
+    /// 用户头像 URL
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AvatarUrl {
       get { return avatarUrl_; }
@@ -652,6 +767,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "user_level" field.</summary>
     public const int UserLevelFieldNumber = 4;
     private int userLevel_;
+    /// <summary>
+    /// 用户直播 UL 等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int UserLevel {
       get { return userLevel_; }
@@ -663,6 +781,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "user_level_border_color" field.</summary>
     public const int UserLevelBorderColorFieldNumber = 5;
     private uint userLevelBorderColor_;
+    /// <summary>
+    /// 用户直播等级边框颜色，RGB
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint UserLevelBorderColor {
       get { return userLevelBorderColor_; }
@@ -696,6 +817,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "live_vip_level" field.</summary>
     public const int LiveVipLevelFieldNumber = 8;
     private global::VNerve.Bilibili.Live.LiveVipLevel liveVipLevel_ = global::VNerve.Bilibili.Live.LiveVipLevel.NoVip;
+    /// <summary>
+    /// 用户直播老爷等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.LiveVipLevel LiveVipLevel {
       get { return liveVipLevel_; }
@@ -707,6 +831,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "title" field.</summary>
     public const int TitleFieldNumber = 9;
     private string title_ = "";
+    /// <summary>
+    /// 用户头衔 ID  （形如title-287-1）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Title {
       get { return title_; }
@@ -718,6 +845,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "medal" field.</summary>
     public const int MedalFieldNumber = 10;
     private global::VNerve.Bilibili.Live.MedalInfo medal_;
+    /// <summary>
+    /// 用户直播勋章信息
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.MedalInfo Medal {
       get { return medal_; }
@@ -729,6 +859,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "guard_level" field.</summary>
     public const int GuardLevelFieldNumber = 11;
     private global::VNerve.Bilibili.Live.GuardLevel guardLevel_ = global::VNerve.Bilibili.Live.GuardLevel.NoGuard;
+    /// <summary>
+    /// 用户大航海等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.GuardLevel GuardLevel {
       get { return guardLevel_; }
@@ -740,6 +873,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "phone_verified" field.</summary>
     public const int PhoneVerifiedFieldNumber = 12;
     private bool phoneVerified_;
+    /// <summary>
+    /// 用户手机是否认证
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PhoneVerified {
       get { return phoneVerified_; }
@@ -751,6 +887,12 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "regular_user" field.</summary>
     public const int RegularUserFieldNumber = 13;
     private bool regularUser_;
+    /// <summary>
+    ///*
+    ///用户是否为正式会员
+    ///
+    ///不可靠！目前对此字段缺乏分析（原始值对应info[2][5]），尽量不要基于这个值判断！
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RegularUser {
       get { return regularUser_; }
@@ -1087,6 +1229,9 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  /// 直播勋章信息
+  /// </summary>
   public sealed partial class MedalInfo : pb::IMessage<MedalInfo> {
     private static readonly pb::MessageParser<MedalInfo> _parser = new pb::MessageParser<MedalInfo>(() => new MedalInfo());
     private pb::UnknownFieldSet _unknownFields;
@@ -1129,6 +1274,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "medal_name" field.</summary>
     public const int MedalNameFieldNumber = 1;
     private string medalName_ = "";
+    /// <summary>
+    /// 勋章名称
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MedalName {
       get { return medalName_; }
@@ -1140,6 +1288,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "medal_level" field.</summary>
     public const int MedalLevelFieldNumber = 2;
     private uint medalLevel_;
+    /// <summary>
+    /// 勋章等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint MedalLevel {
       get { return medalLevel_; }
@@ -1151,6 +1302,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "medal_color" field.</summary>
     public const int MedalColorFieldNumber = 3;
     private uint medalColor_;
+    /// <summary>
+    /// 勋章颜色，RGB
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint MedalColor {
       get { return medalColor_; }
@@ -1162,6 +1316,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "streamer_uid" field.</summary>
     public const int StreamerUidFieldNumber = 4;
     private ulong streamerUid_;
+    /// <summary>
+    /// 勋章对应主播的 UID
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong StreamerUid {
       get { return streamerUid_; }
@@ -1173,6 +1330,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "streamer_name" field.</summary>
     public const int StreamerNameFieldNumber = 5;
     private string streamerName_ = "";
+    /// <summary>
+    /// 勋章对应主播主站昵称
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StreamerName {
       get { return streamerName_; }
@@ -1184,6 +1344,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "streamer_roomid" field.</summary>
     public const int StreamerRoomidFieldNumber = 6;
     private uint streamerRoomid_;
+    /// <summary>
+    /// 勋章对应主播直播间 ID
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint StreamerRoomid {
       get { return streamerRoomid_; }
@@ -1356,6 +1519,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///弹幕消息
+  ///
+  ///提供的额外 UserInfo 字段：admin, live_vip_level, user_level_border_color, title, medal, guard_level, phone_verified, regular_user
+  /// </summary>
   public sealed partial class DanmakuMessage : pb::IMessage<DanmakuMessage> {
     private static readonly pb::MessageParser<DanmakuMessage> _parser = new pb::MessageParser<DanmakuMessage>(() => new DanmakuMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -1394,6 +1563,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
     private string message_ = "";
+    /// <summary>
+    /// 弹幕内容
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
@@ -1405,6 +1577,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "lottery_type" field.</summary>
     public const int LotteryTypeFieldNumber = 2;
     private global::VNerve.Bilibili.Live.LotteryDanmakuType lotteryType_ = global::VNerve.Bilibili.Live.LotteryDanmakuType.NoLottery;
+    /// <summary>
+    /// 是否为抽奖/节奏风暴弹幕
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.LotteryDanmakuType LotteryType {
       get { return lotteryType_; }
@@ -1513,6 +1688,305 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///礼物消息
+  ///
+  ///提供的额外 UserInfo 字段 : avatar_url
+  /// </summary>
+  public sealed partial class GiftMessage : pb::IMessage<GiftMessage> {
+    private static readonly pb::MessageParser<GiftMessage> _parser = new pb::MessageParser<GiftMessage>(() => new GiftMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GiftMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::VNerve.Bilibili.Live.UserMessageReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GiftMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GiftMessage(GiftMessage other) : this() {
+      isGold_ = other.isGold_;
+      totalCoin_ = other.totalCoin_;
+      giftId_ = other.giftId_;
+      giftName_ = other.giftName_;
+      singlePriceCoinRaw_ = other.singlePriceCoinRaw_;
+      count_ = other.count_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GiftMessage Clone() {
+      return new GiftMessage(this);
+    }
+
+    /// <summary>Field number for the "is_gold" field.</summary>
+    public const int IsGoldFieldNumber = 1;
+    private bool isGold_;
+    /// <summary>
+    /// 是否为金瓜子
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsGold {
+      get { return isGold_; }
+      set {
+        isGold_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_coin" field.</summary>
+    public const int TotalCoinFieldNumber = 2;
+    private uint totalCoin_;
+    /// <summary>
+    /// 礼物总瓜子数
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint TotalCoin {
+      get { return totalCoin_; }
+      set {
+        totalCoin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gift_id" field.</summary>
+    public const int GiftIdFieldNumber = 3;
+    private uint giftId_;
+    /// <summary>
+    /// 礼物 ID
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint GiftId {
+      get { return giftId_; }
+      set {
+        giftId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gift_name" field.</summary>
+    public const int GiftNameFieldNumber = 4;
+    private string giftName_ = "";
+    /// <summary>
+    /// 礼物名称
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string GiftName {
+      get { return giftName_; }
+      set {
+        giftName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "single_price_coin_raw" field.</summary>
+    public const int SinglePriceCoinRawFieldNumber = 5;
+    private uint singlePriceCoinRaw_;
+    /// <summary>
+    /// 单个礼物的价格。某些情况下礼物价格可能打折，此时本字段为未打折的价格。
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint SinglePriceCoinRaw {
+      get { return singlePriceCoinRaw_; }
+      set {
+        singlePriceCoinRaw_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "count" field.</summary>
+    public const int CountFieldNumber = 6;
+    private uint count_;
+    /// <summary>
+    /// 礼物数目
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint Count {
+      get { return count_; }
+      set {
+        count_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GiftMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GiftMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IsGold != other.IsGold) return false;
+      if (TotalCoin != other.TotalCoin) return false;
+      if (GiftId != other.GiftId) return false;
+      if (GiftName != other.GiftName) return false;
+      if (SinglePriceCoinRaw != other.SinglePriceCoinRaw) return false;
+      if (Count != other.Count) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IsGold != false) hash ^= IsGold.GetHashCode();
+      if (TotalCoin != 0) hash ^= TotalCoin.GetHashCode();
+      if (GiftId != 0) hash ^= GiftId.GetHashCode();
+      if (GiftName.Length != 0) hash ^= GiftName.GetHashCode();
+      if (SinglePriceCoinRaw != 0) hash ^= SinglePriceCoinRaw.GetHashCode();
+      if (Count != 0) hash ^= Count.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (IsGold != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IsGold);
+      }
+      if (TotalCoin != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(TotalCoin);
+      }
+      if (GiftId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GiftId);
+      }
+      if (GiftName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(GiftName);
+      }
+      if (SinglePriceCoinRaw != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SinglePriceCoinRaw);
+      }
+      if (Count != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Count);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (IsGold != false) {
+        size += 1 + 1;
+      }
+      if (TotalCoin != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalCoin);
+      }
+      if (GiftId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GiftId);
+      }
+      if (GiftName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GiftName);
+      }
+      if (SinglePriceCoinRaw != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SinglePriceCoinRaw);
+      }
+      if (Count != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GiftMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IsGold != false) {
+        IsGold = other.IsGold;
+      }
+      if (other.TotalCoin != 0) {
+        TotalCoin = other.TotalCoin;
+      }
+      if (other.GiftId != 0) {
+        GiftId = other.GiftId;
+      }
+      if (other.GiftName.Length != 0) {
+        GiftName = other.GiftName;
+      }
+      if (other.SinglePriceCoinRaw != 0) {
+        SinglePriceCoinRaw = other.SinglePriceCoinRaw;
+      }
+      if (other.Count != 0) {
+        Count = other.Count;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            IsGold = input.ReadBool();
+            break;
+          }
+          case 16: {
+            TotalCoin = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            GiftId = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            GiftName = input.ReadString();
+            break;
+          }
+          case 40: {
+            SinglePriceCoinRaw = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            Count = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///*
+  ///Super Chat - 醒目留言
+  ///
+  ///提供的额外 UserInfo 字段 : avatar_url, admin, user_level, user_level_border_color, admin, live_vip_level, title, medal, guard_level
+  /// </summary>
   public sealed partial class SuperChatMessage : pb::IMessage<SuperChatMessage> {
     private static readonly pb::MessageParser<SuperChatMessage> _parser = new pb::MessageParser<SuperChatMessage>(() => new SuperChatMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -1521,7 +1995,7 @@ namespace VNerve.Bilibili.Live {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::VNerve.Bilibili.Live.UserMessageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::VNerve.Bilibili.Live.UserMessageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1557,6 +2031,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 1;
     private string message_ = "";
+    /// <summary>
+    /// Super Chat 内容
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
       get { return message_; }
@@ -1568,6 +2045,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 3;
     private ulong id_;
+    /// <summary>
+    /// Super Chat ID，与删除 Super Chat 消息中的 ID 对应
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong Id {
       get { return id_; }
@@ -1579,6 +2059,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "token" field.</summary>
     public const int TokenFieldNumber = 4;
     private string token_ = "";
+    /// <summary>
+    /// Super Chat Token，作用未知
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Token {
       get { return token_; }
@@ -1590,6 +2073,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "price_cny" field.</summary>
     public const int PriceCnyFieldNumber = 5;
     private uint priceCny_;
+    /// <summary>
+    /// 人民币形式价格
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint PriceCny {
       get { return priceCny_; }
@@ -1601,6 +2087,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "price_coin" field.</summary>
     public const int PriceCoinFieldNumber = 6;
     private uint priceCoin_;
+    /// <summary>
+    /// 瓜子形式价格
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint PriceCoin {
       get { return priceCoin_; }
@@ -1612,6 +2101,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "lasting_time_sec" field.</summary>
     public const int LastingTimeSecFieldNumber = 7;
     private uint lastingTimeSec_;
+    /// <summary>
+    /// 持续显示在页面顶部时间，以秒为单位
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint LastingTimeSec {
       get { return lastingTimeSec_; }
@@ -1623,6 +2115,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 8;
     private ulong startTime_;
+    /// <summary>
+    /// 开始显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong StartTime {
       get { return startTime_; }
@@ -1634,6 +2129,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 9;
     private ulong endTime_;
+    /// <summary>
+    /// 结束显示在页面顶部的时间，UNIX 时间戳（UTC+8）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong EndTime {
       get { return endTime_; }
@@ -1838,275 +2336,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
-  public sealed partial class GiftMessage : pb::IMessage<GiftMessage> {
-    private static readonly pb::MessageParser<GiftMessage> _parser = new pb::MessageParser<GiftMessage>(() => new GiftMessage());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GiftMessage> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::VNerve.Bilibili.Live.UserMessageReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GiftMessage() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GiftMessage(GiftMessage other) : this() {
-      isGold_ = other.isGold_;
-      totalCoin_ = other.totalCoin_;
-      giftId_ = other.giftId_;
-      giftName_ = other.giftName_;
-      singlePriceCoinRaw_ = other.singlePriceCoinRaw_;
-      count_ = other.count_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GiftMessage Clone() {
-      return new GiftMessage(this);
-    }
-
-    /// <summary>Field number for the "is_gold" field.</summary>
-    public const int IsGoldFieldNumber = 1;
-    private bool isGold_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsGold {
-      get { return isGold_; }
-      set {
-        isGold_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "total_coin" field.</summary>
-    public const int TotalCoinFieldNumber = 2;
-    private uint totalCoin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint TotalCoin {
-      get { return totalCoin_; }
-      set {
-        totalCoin_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gift_id" field.</summary>
-    public const int GiftIdFieldNumber = 3;
-    private uint giftId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint GiftId {
-      get { return giftId_; }
-      set {
-        giftId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gift_name" field.</summary>
-    public const int GiftNameFieldNumber = 4;
-    private string giftName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string GiftName {
-      get { return giftName_; }
-      set {
-        giftName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "single_price_coin_raw" field.</summary>
-    public const int SinglePriceCoinRawFieldNumber = 5;
-    private uint singlePriceCoinRaw_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint SinglePriceCoinRaw {
-      get { return singlePriceCoinRaw_; }
-      set {
-        singlePriceCoinRaw_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 6;
-    private uint count_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Count {
-      get { return count_; }
-      set {
-        count_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GiftMessage);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GiftMessage other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (IsGold != other.IsGold) return false;
-      if (TotalCoin != other.TotalCoin) return false;
-      if (GiftId != other.GiftId) return false;
-      if (GiftName != other.GiftName) return false;
-      if (SinglePriceCoinRaw != other.SinglePriceCoinRaw) return false;
-      if (Count != other.Count) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (IsGold != false) hash ^= IsGold.GetHashCode();
-      if (TotalCoin != 0) hash ^= TotalCoin.GetHashCode();
-      if (GiftId != 0) hash ^= GiftId.GetHashCode();
-      if (GiftName.Length != 0) hash ^= GiftName.GetHashCode();
-      if (SinglePriceCoinRaw != 0) hash ^= SinglePriceCoinRaw.GetHashCode();
-      if (Count != 0) hash ^= Count.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (IsGold != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsGold);
-      }
-      if (TotalCoin != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TotalCoin);
-      }
-      if (GiftId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(GiftId);
-      }
-      if (GiftName.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(GiftName);
-      }
-      if (SinglePriceCoinRaw != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SinglePriceCoinRaw);
-      }
-      if (Count != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Count);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (IsGold != false) {
-        size += 1 + 1;
-      }
-      if (TotalCoin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalCoin);
-      }
-      if (GiftId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GiftId);
-      }
-      if (GiftName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(GiftName);
-      }
-      if (SinglePriceCoinRaw != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SinglePriceCoinRaw);
-      }
-      if (Count != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GiftMessage other) {
-      if (other == null) {
-        return;
-      }
-      if (other.IsGold != false) {
-        IsGold = other.IsGold;
-      }
-      if (other.TotalCoin != 0) {
-        TotalCoin = other.TotalCoin;
-      }
-      if (other.GiftId != 0) {
-        GiftId = other.GiftId;
-      }
-      if (other.GiftName.Length != 0) {
-        GiftName = other.GiftName;
-      }
-      if (other.SinglePriceCoinRaw != 0) {
-        SinglePriceCoinRaw = other.SinglePriceCoinRaw;
-      }
-      if (other.Count != 0) {
-        Count = other.Count;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            IsGold = input.ReadBool();
-            break;
-          }
-          case 16: {
-            TotalCoin = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            GiftId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            GiftName = input.ReadString();
-            break;
-          }
-          case 40: {
-            SinglePriceCoinRaw = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            Count = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
+  /// <summary>
+  ///*
+  ///欢迎老爷
+  ///
+  ///提供的额外 UserInfo 字段 : admin（有效性存疑）
+  /// </summary>
   public sealed partial class WelcomeVIPMessage : pb::IMessage<WelcomeVIPMessage> {
     private static readonly pb::MessageParser<WelcomeVIPMessage> _parser = new pb::MessageParser<WelcomeVIPMessage>(() => new WelcomeVIPMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -2144,6 +2379,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
     private global::VNerve.Bilibili.Live.LiveVipLevel level_ = global::VNerve.Bilibili.Live.LiveVipLevel.NoVip;
+    /// <summary>
+    /// 老爷等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.LiveVipLevel Level {
       get { return level_; }
@@ -2236,6 +2474,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///欢迎舰长
+  ///
+  ///提供的额外 UserInfo 字段 : guard_level
+  /// </summary>
   public sealed partial class WelcomeGuardMessage : pb::IMessage<WelcomeGuardMessage> {
     private static readonly pb::MessageParser<WelcomeGuardMessage> _parser = new pb::MessageParser<WelcomeGuardMessage>(() => new WelcomeGuardMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -2273,6 +2517,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
     private global::VNerve.Bilibili.Live.GuardLevel level_ = global::VNerve.Bilibili.Live.GuardLevel.NoGuard;
+    /// <summary>
+    /// 舰队等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.GuardLevel Level {
       get { return level_; }
@@ -2365,6 +2612,12 @@ namespace VNerve.Bilibili.Live {
 
   }
 
+  /// <summary>
+  ///*
+  ///大航海/上舰
+  ///
+  ///提供的额外 UserInfo 字段 : guard_level
+  /// </summary>
   public sealed partial class NewGuardMessage : pb::IMessage<NewGuardMessage> {
     private static readonly pb::MessageParser<NewGuardMessage> _parser = new pb::MessageParser<NewGuardMessage>(() => new NewGuardMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -2406,6 +2659,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
     private global::VNerve.Bilibili.Live.GuardLevel level_ = global::VNerve.Bilibili.Live.GuardLevel.NoGuard;
+    /// <summary>
+    /// 舰队等级
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.GuardLevel Level {
       get { return level_; }
@@ -2417,6 +2673,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "total_coin" field.</summary>
     public const int TotalCoinFieldNumber = 2;
     private uint totalCoin_;
+    /// <summary>
+    /// 总瓜子金额
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint TotalCoin {
       get { return totalCoin_; }
@@ -2428,6 +2687,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "count" field.</summary>
     public const int CountFieldNumber = 3;
     private uint count_;
+    /// <summary>
+    /// 上舰时间，以 duration_level 为单位（月或周）
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public uint Count {
       get { return count_; }
@@ -2439,6 +2701,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "duration_level" field.</summary>
     public const int DurationLevelFieldNumber = 4;
     private global::VNerve.Bilibili.Live.GuardDurationLevel durationLevel_ = global::VNerve.Bilibili.Live.GuardDurationLevel.NoDuration;
+    /// <summary>
+    /// 上舰时长类型，可能为月或周
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.GuardDurationLevel DurationLevel {
       get { return durationLevel_; }
@@ -2450,6 +2715,9 @@ namespace VNerve.Bilibili.Live {
     /// <summary>Field number for the "buy_type" field.</summary>
     public const int BuyTypeFieldNumber = 5;
     private global::VNerve.Bilibili.Live.GuardBuyType buyType_ = global::VNerve.Bilibili.Live.GuardBuyType.NoType;
+    /// <summary>
+    /// 上舰操作类型，可能为新加入或续费
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::VNerve.Bilibili.Live.GuardBuyType BuyType {
       get { return buyType_; }
@@ -2607,7 +2875,11 @@ namespace VNerve.Bilibili.Live {
   }
 
   /// <summary>
-  /// Just empty.
+  ///*
+  ///用户被禁言
+  ///
+  ///提供的额外 UserInfo 字段 : 无
+  ///User 的 name 字段不可用
   /// </summary>
   public sealed partial class UserBlockedMessage : pb::IMessage<UserBlockedMessage> {
     private static readonly pb::MessageParser<UserBlockedMessage> _parser = new pb::MessageParser<UserBlockedMessage>(() => new UserBlockedMessage());
