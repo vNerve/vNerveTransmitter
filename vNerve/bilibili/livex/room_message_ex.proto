@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package vNerve.bilibili.livex;
+import "vNerve/bilibili/live/room_message.proto";
+
+message RoomMessageEx {
+  uint32 room_id = 1;
+  oneof payload {
+    RoomExtraInfoChangedMessage extra_info_change = 2;
+  }
+}
+
+message RoomExtraInfoChangedMessage {
+  vNerve.bilibili.live.LiveStatus live_status = 1;
+  string title = 3;
+  string area = 4;
+  string cover = 5;
+  uint64 start_live_time = 16;
+}
