@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package vNerve.analyst.bilibili.live;
+
+message BiLiveStatistic {
+  uint32 room_id = 1;
+  uint64 start = 2;
+  uint64 end = 3;
+
+  uint32 max_popularity = 4;
+  uint32 last_popularity = 5;
+  uint32 gold_coin = 6;
+  uint32 silver_coin = 7;
+
+  string title = 8;
+  string area = 9;
+  string cover = 10;
+
+  BiLiveStatisticType type = 11;
+
+  repeated uint64 real_danmaku_users = 16;
+  repeated uint64 lottery_danmaku_users = 17;
+  map<uint64, uint32> gold_users_and_coin = 18;
+  map<uint64, uint32> silver_users_and_coin = 19;
+  repeated uint64 participated_users = 20;
+}
+
+enum BiLiveStatisticType {
+  SLICE = 0;
+  SESSION = 1;
+}
